@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <p>Page is working!</p>
+    <p>Current time: <span id="time"></span></p>
+    <button onclick="document.getElementById('time').textContent = new Date().toLocaleTimeString()">
+        Update Time
+    </button>
+</body>
+</html>
