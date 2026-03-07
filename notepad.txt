@@ -76,6 +76,12 @@ firm analyses - look at the projects folder in Desktop
 
 READ PAPERS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+This is where i will have a real time tracking of the papers ive been reading with time stamps etc.
+
+FINANCIAL MODELS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+excel models, monte carlo models (python?), industry analyses, corporate analyses, DCFs etc.
+
 
 
 
