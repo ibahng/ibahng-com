@@ -9,6 +9,7 @@ test.pdf
 *.out
 *.synctex.gz
 *.toc
+*.synctex(busy)
 
 
 
