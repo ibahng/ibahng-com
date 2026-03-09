@@ -3,8 +3,7 @@ NOTES ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 LAW =============================================
  - Intellectual Property
 
-ECONOMICS =======================================
- - 
+ECONOMICS ======================================= 
 
 FINANCE & MARKETS ===============================
   - Accounting
@@ -70,17 +69,21 @@ CCR-CCL Axes in PDAC
 
 GITHUB REPOS & PROJECTS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-dotfiles
-finflux
+REPOS
+  dotfiles
+  finflux
+  *financial valuation model repo? - monte carlo, DCF, LBO, COMPS, etc.
+
+EXCEL FILES
+  excel models, monte carlo models (python?), industry analyses, corporate analyses, DCFs etc.
+  
+
 firm analyses - look at the projects folder in Desktop
 
 READ PAPERS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is where i will have a real time tracking of the papers ive been reading with time stamps etc.
 
-FINANCIAL MODELS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-excel models, monte carlo models (python?), industry analyses, corporate analyses, DCFs etc.
 
 
 
@@ -88,6 +91,9 @@ excel models, monte carlo models (python?), industry analyses, corporate analyse
 
 
 
+
+need to find a place to put
+- BMC: 7_Portfolio_Management
 
 
 
