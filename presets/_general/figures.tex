@@ -40,3 +40,27 @@
     \label{#8}%
   \end{figure}%
 }
+
+\newcommand{\pgfig}[4]{%
+  \begin{figure}[H]
+    \centering
+    \scalebox{#4}{
+      \begin{tikzpicture}
+        #1
+      \end{tikzpicture}
+    }
+    \caption{#2}
+    \label{#3}
+  \end{figure}
+}
+
+\newcommand{\axispresets}[0]{
+  tick align=outside,
+  clip=false,
+  grid=major,
+  grid style={dashed, gray!30},
+  axis lines=left,
+}
+
+
+

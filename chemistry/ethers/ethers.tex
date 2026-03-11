@@ -15,11 +15,43 @@
 
   Ethers are a class of organic compounds characterized by an oxygen atom bonded to two alkyl or aryl groups. Their general formula is R—O—R', where R and R' can be the same (symmetrical ether) or different (unsymmetrical ether). Here is a simple example of an ether: dimethyl ether.
 
-  \myfig{0.2}{ethers_figures/dimethyl_ether}{Dimethyl Ether Structure}{fig:dimethyl_ether}
+  \reactionfig{
+    \scheme{
+      \chemfig{
+        [:0]\ce{^{\textcolor{Blue}{δ^+}}CH3}
+        -[:30]\textcolor{Red}{\ce{O^{δ^-}}}
+        -[:-30]\ce{CH3^{\textcolor{Blue}{δ^+}}}
+      }
+    }
+  }{Dimethyl ether structure}{filler1}{1.2}
 
   In the context of nomenclature, the larger group is defined as the stem and other half is called an alkoxy substituent. Take a look at the following compounds.
 
-  \myfig{0.6}{ethers_figures/ether_examples}{Ether Nomenclature Examples}{fig:ether_examples}
+  \reactionfig{
+    \scheme{
+      \chemfig{
+        [:0]\ce{H3C}
+        -[:30]
+        -[:-30]
+        -[:30]\textcolor{Red}{O}
+        -[:-30]
+        -[:30]\ce{CH3}
+      }
+      \qquad\qquad
+      \chemfig{
+        [:30]*6(-----
+        (
+        -[:180]\textcolor{Red}{O}
+        -[:120]
+        -[:180]
+        (-[:120]\ce{H3C})
+        -[:-135]
+        -[:180]\ce{H3C}
+        )
+        -)
+      }
+    }
+  }{Ether nomenclature examples}{filler2}{0.8}
 
   The respective names of each compound are the following
 
@@ -29,11 +61,63 @@
 
   Now let's get into ether synthesis. The primary way chemists make \textbf{asymetrical} ethers is through the \textbf{WILLIAMSON ETHER SYNTHESIS} method. This method uses an alkoxide \ce{R{'}O-} as its Nu, thus works best when attacking unhindered primary \ce{R-X} because hindered, secondary, or tertiary \ce{R-X} will switch over to the E2 mechanism and result in an unintended product.
 
-  \bce{\ce{R_{prim}-X + R{'}O- ->[SN{2}] R-O-R{'}}}
+  \bce{\ce{R_{prim}-X + R{'}O- ->[\snt] R-O-R{'}}}
 
   It's important to note here that the if the desired product is asymetrical, the choice of cooresponding R groups paired with the halogen and oxygen atom is important because a tertiary or secondary haloalkane pared with a primary alkoxide will lead to E2 whereas the opposite combination will undergo SN2 (\textit{the desired method}).
 
-  \myfig{0.65}{ethers_figures/ether_will_retro}{Williamson Ether Synthesis Retrosynthesis}{fig:ether_will_retro}
+  \doublereactionfig{
+    \scheme{
+      \chemfig{
+        [:0]
+        -[:60]
+        (-[:120])
+        -[:0]\textcolor{Red}{\ce{O-}}
+      }
+      \+
+      \chemfig{
+        [:0]
+        -[:30]
+        -[:-30]\textcolor{Green}{Br}
+      }
+      \arrow{->[
+        \footnotesize\chemfig{
+          [:0]\ce{H3C}
+          -[:0]S
+          (=[:90]O)
+          -[:0]\ce{CH3}
+        }
+      ][85\%]}
+      \chemfig{
+        [:0]
+        -[:60]
+        (-[:120])
+        -[:0]\textcolor{Red}{\ce{O}}
+        -[:60]
+        -[:0]
+      }
+    }
+  }{
+    \scheme{
+      \chemname{
+        \chemfig{
+          [:0]
+          -[:60]
+          (-[:120])
+          -[:0]\textcolor{Green}{Br}
+        }
+      }{\textit{secondary central carbon}}
+      \+
+      \chemfig{
+        [:0]
+        -[:30]
+        -[:-30]\textcolor{Red}{\ce{O-}}
+      }
+      \arrow{->}
+      \chemfig{
+        \text{\textit{E2 Reaction}}
+      }
+    }
+  }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{0.9}
 
   In order to create ethers for \ce{R_{sec/tert}X}, we use the protonated version of alkoxides (a.k.a. alcohol) to make the Nu less basic and consequently undergo SN1 or E1 rather than E2. This is simply the \textbf{ALCOHOLYSIS OF \ce{R_{sec/tert}X}}.
 
