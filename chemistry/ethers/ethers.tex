@@ -121,19 +121,148 @@
 
   In order to create ethers for \ce{R_{sec/tert}X}, we use the protonated version of alkoxides (a.k.a. alcohol) to make the Nu less basic and consequently undergo SN1 or E1 rather than E2. This is simply the \textbf{ALCOHOLYSIS OF \ce{R_{sec/tert}X}}.
 
-  \myfig{0.6}{ethers_figures/ether_alcoholysis}{Alcoholysis of Alkyl Halides}{fig:ether_alcoholysis}
+  \reactionfig{
+    \scheme{
+      \chemfig{
+        [:0]\ce{H3C}
+        -[:0]C
+        (-[:90]\ce{CH3})
+        (-[:-90]\ce{CH3})
+        -[:0]\textcolor{Green}{\ce{Cl}}
+      }
+      \+
+      \chemfig{
+        \textcolor{Red}{\ce{CH3O}}\ce{H}
+      }
+      \arrow{<=>}
+      \chemfig{
+        [:0]\ce{H3C}
+        -[:0]C
+        (-[:90]\ce{CH3})
+        (-[:-90]\ce{CH3})
+        -[:0]\textcolor{Red}{\ce{OCH3}}
+      }
+      \+
+      \chemfig{
+        [:0]\ce{H}\textcolor{Green}{\ce{Cl}}
+      }
+    }
+  }{Alcoholysis of \ce{R_{sec/tert}X}}{fig:filler4}{0.9}
 
   While potential E1 reactions are still an issue that results in unintended products, we can minimize this by carrying out the reaction in lower temperatures.
 
   So far, we've looked at \textbf{intermolecular} ether synthesis reactions. Now we introduce \textbf{INTRAMOLECULAR WILLIAMSON ETHER SYNTHESIS} (a.k.a. \textbf{cyclic ether formation}). These form in the same way as the intermolecular equivalent has done.
 
-  \myfig{0.7}{ethers_figures/ether_ring_formation}{Intramolecular Williamson Ether Synthesis}{fig:ether_ring_formation}
+  \doublereactionfig{
+    \scheme{
+      \chemfig{
+        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{CH2CH2}\textcolor{Green}{Br}
+      }
+      \+
+      \chemfig{
+        \textcolor{Red}{\ce{HO-}}
+      }
+      \arrow{->}
+      \chemfig{
+        *3(-
+        \textcolor{Red}{O}
+        --)
+      }
+      \+
+      \chemfig{
+        \textcolor{Green}{\ce{Br-}}
+      }
+      \+
+      \chemfig{
+        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
+      }
+    }
+  }{
+    \scheme{
+      \chemfig{
+        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{(CH2)4CH2}\textcolor{Green}{Br}
+      }
+      \+
+      \chemfig{
+        \textcolor{Red}{\ce{HO-}}
+      }
+      \arrow{->}
+      \chemfig{
+        *6(---
+        \textcolor{Red}{O}
+        ---)
+      }
+      \+
+      \chemfig{
+        \textcolor{Green}{\ce{Br-}}
+      }
+      \+
+      \chemfig{
+        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
+      }
+    }
+  }{Intramolecular Williamson ether synthesis}{fig:filler5}{0.9}
 
   \textbf{Intramolecular are particularly favorable over intermolecular} because [1] it does not lower entropy and [2] highly diluted concentrations of the relevant alcohol do not effect it as much because the reaction is occurring with itself.
   
   Mechanistically speaking, this reaction occurs via a backside attack with inversion, prepared by the rearrangement to a less stable rotamer if needed.
 
-  \myfig{0.9}{ethers_figures/ether_inversion}{Backside Attack and Inversion in Cyclic Ether Formation}{fig:ether_inversion}
+  \reactionfig{
+    \scheme{
+      \chemname{
+        \chemfig{
+          [:0]\ce{H3C}
+          -[:60]C
+          (<:[:100]H)
+          (<[:170]Br)
+          -[:0]C
+          (<[:-80]H)
+          (<:[:-10]H)
+          -[:60]\ce{OH}
+        }
+      }{\textit{most stable rotamer, but unsuitable for \snt}}
+      \arrow{<=>[\textit{rotation}][]}
+      \chemfig{
+        [:0]Br
+        -[:60]C
+        (<:[:100]\ce{H3C})
+        (<[:170]H)
+        -[:0]C
+        (<[:-80]H)
+        (<:[:-10]H)
+        -[:60]\ce{OH}
+      }
+      \arrow{->[THF, \ce{K2CO3}][]}
+      \chemfig{
+        [:0]@{bromine}\textcolor{Green}{Br}
+        -[@{bond}:60,,,,Green]@{carbon}C
+        (<:[:100]\ce{H3C})
+        (<[:170]H)
+        -[:0]C
+        (<[:-80]H)
+        (<:[:-10]H)
+        -[:60]@{oxygen}\textcolor{Red}{\ce{O-}}
+      }
+      \arrow{->[84\%][]}
+      \chemfig{
+        [:90]*3(
+        C
+        (<[:-80]H)
+        (<:[:-20]H)
+        -
+        \textcolor{Red}{O}
+        -
+        C
+        (<[:-100]H)
+        (<:[:-160]\ce{H3C})
+        -)
+      }
+      \chemmovearrow{
+        \reactionfigarrow{oxygen}{180}{carbon}{30}{Red} 
+        \reactionfigarrow{bond}{0}{bromine}{-30}{Red} 
+      }
+    }
+  }{Backside attack and inversion in cyclic ether formation}{fig:filler6}{0.8}
 
   It's important to keep in mind that the relative rates of ring closure depend on the trade off between $\Delta H$ (\textit{ring strain}) and $\Delta S$ (\textit{lining up}) in the various transition states. Here is the ranking of ether ring formation speeds by ring size.
 
