@@ -3,16 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Placeholder Title</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Ingyu's Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Test Page</h1>
-    <p>Page is working!</p>
-    <p>Current time: <span id="time"></span></p>
-    <button onclick="document.getElementById('time').textContent = new Date().toLocaleTimeString()">
-        Update Time
-    </button>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="site-label">Personal Knowledge Base</p>
+      <h1 class="site-title">Ingyu's Notes</h1>
+      <p class="site-subtitle">A collection of lecture notes and learning materials</p>
+    </div>
+  </header>
+
+  <main class="notes-grid">
+    <a href="chemistry/chemistry.pdf" class="note-card">
+      <span class="card-icon">⚗️</span>
+      <h2 class="card-title">Chemistry</h2>
+      <p class="card-desc">Organic chemistry, thermodynamics, equilibrium, and more</p>
+    </a>
+
+    <a href="biology/biology.pdf" class="note-card">
+      <span class="card-icon">🧬</span>
+      <h2 class="card-title">Biology</h2>
+      <p class="card-desc">Cell biology, genetics, evolution, ecology</p>
+    </a>
+
+    <a href="physics/physics.pdf" class="note-card">
+      <span class="card-icon">⚛️</span>
+      <h2 class="card-title">Physics</h2>
+      <p class="card-desc">Mechanics, electromagnetism, thermodynamics</p>
+    </a>
+
+    <a href="biochemistry/biochemistry.pdf" class="note-card">
+      <span class="card-icon">🔬</span>
+      <h2 class="card-title">Biochemistry</h2>
+      <p class="card-desc">Molecular biology, metabolic pathways</p>
+    </a>
+
+    <a href="math/math.pdf" class="note-card">
+      <span class="card-icon">∫</span>
+      <h2 class="card-title">Math</h2>
+      <p class="card-desc">Calculus, linear algebra, statistics</p>
+    </a>
+
+    <a href="law/law.pdf" class="note-card">
+      <span class="card-icon">⚖️</span>
+      <h2 class="card-title">Law</h2>
+      <p class="card-desc">Legal principles and case studies</p>
+    </a>
+
+    <a href="pharmaceuticals/pharmaceuticals.pdf" class="note-card">
+      <span class="card-icon">💊</span>
+      <h2 class="card-title">Pharmaceuticals</h2>
+      <p class="card-desc">Drug mechanisms and pharmacology</p>
+    </a>
+
+    <a href="finance_markets/finance_markets.pdf" class="note-card">
+      <span class="card-icon">📈</span>
+      <h2 class="card-title">Finance & Markets</h2>
+      <p class="card-desc">Market analysis and financial principles</p>
+    </a>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with intention</p>
+  </footer>
 </body>
 </html>
