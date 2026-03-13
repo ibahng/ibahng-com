@@ -13,357 +13,428 @@
 
 \section{Ether Synthesis}
 
-  Ethers are a class of organic compounds characterized by an oxygen atom bonded to two alkyl or aryl groups. Their general formula is R—O—R', where R and R' can be the same (symmetrical ether) or different (unsymmetrical ether). Here is a simple example of an ether: dimethyl ether.
+  \begin{definition}{Ethers}
+ 
+    Ethers are a class of organic compounds characterized by an oxygen bonded to two alkyl or aryl groups. Their general formula is R—O—R', where $R = R'$ (symmetrical ether) or $R \neq R'$ (asymmetrical ether).
 
-  \reactionfig{
-    \scheme{
-      \chemfig{
-        [:0]\ce{^{\textcolor{Blue}{δ^+}}CH3}
-        -[:30]\textcolor{Red}{\ce{O^{δ^-}}}
-        -[:-30]\ce{CH3^{\textcolor{Blue}{δ^+}}}
-      }
-    }
-  }{Dimethyl ether structure}{filler1}{1.2}
-
-  In the context of nomenclature, the larger group is defined as the stem and other half is called an alkoxy substituent. Take a look at the following compounds.
-
-  \reactionfig{
-    \scheme{
-      \chemfig{
-        [:0]\ce{H3C}
-        -[:30]
-        -[:-30]
-        -[:30]\textcolor{Red}{O}
-        -[:-30]
-        -[:30]\ce{CH3}
-      }
-      \qquad\qquad
-      \chemfig{
-        [:30]*6(-----
-        (
-        -[:180]\textcolor{Red}{O}
-        -[:120]
-        -[:180]
-        (-[:120]\ce{H3C})
-        -[:-135]
-        -[:180]\ce{H3C}
-        )
-        -)
-      }
-    }
-  }{Ether nomenclature examples}{filler2}{0.8}
-
-  The respective names of each compound are the following
-
-  \[
-      \text{1-Ethoxypropane}\qquad\qquad\text{(2-Methylbutoxy)cyclohexane}
-  \]
-
-  Now let's get into ether synthesis. The primary way chemists make \textbf{asymetrical} ethers is through the \textbf{WILLIAMSON ETHER SYNTHESIS} method. This method uses an alkoxide \ce{R{'}O-} as its Nu, thus works best when attacking unhindered primary \ce{R-X} because hindered, secondary, or tertiary \ce{R-X} will switch over to the E2 mechanism and result in an unintended product.
-
-  \bce{\ce{R_{prim}-X + R{'}O- ->[\snt] R-O-R{'}}}
-
-  It's important to note here that the if the desired product is asymetrical, the choice of cooresponding R groups paired with the halogen and oxygen atom is important because a tertiary or secondary haloalkane pared with a primary alkoxide will lead to E2 whereas the opposite combination will undergo SN2 (\textit{the desired method}).
-
-  \doublereactionfig{
-    \scheme{
-      \chemfig{
-        [:0]
-        -[:60]
-        (-[:120])
-        -[:0]\textcolor{Red}{\ce{O-}}
-      }
-      \+
-      \chemfig{
-        [:0]
-        -[:30]
-        -[:-30]\textcolor{Green}{Br}
-      }
-      \arrow{->[
-        \footnotesize\chemfig{
-          [:0]\ce{H3C}
-          -[:0]S
-          (=[:90]O)
-          -[:0]\ce{CH3}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]\ce{^{\textcolor{Blue}{δ^+}}CH3}
+          -[:30]\textcolor{Red}{\ce{O^{δ^-}}}
+          -[:-30]\ce{CH3^{\textcolor{Blue}{δ^+}}}
         }
-      ][85\%]}
-      \chemfig{
-        [:0]
-        -[:60]
-        (-[:120])
-        -[:0]\textcolor{Red}{\ce{O}}
-        -[:60]
-        -[:0]
       }
-    }
-  }{
-    \scheme{
-      \chemname{
+    }{Dimethyl ether structure}{filler1}{1.2}
+
+  \end{definition}
+
+  \begin{core}{Williamson Ether Synthesis}
+   
+    \textbf{Williamson ether synthesis} is the primary way chemists make asymmetrical ethers. This method uses an alkoxide \ce{R{'}O-} as its nucleophile, thus works best when attacking non-β-branched primary \ce{R-X}s because β-branched, secondary, or tertiary \ce{R-X}s will unintendedly use the E2 mechanism.
+
+    \bce{\ce{R_{prim}-X + R{'}O- ->[\snt] R-O-R{'}}}
+
+    It's important to note that the if the desired product is asymmetrical, the choice of corresponding R groups of the haloalkane and alkoxdide is important because a tertiary or secondary haloalkane paired with a primary alkoxide will lead to E2 whereas the opposite combination will undergo \snt (\textit{the desired method}).
+
+    \doublereactionfig{
+      \scheme{
         \chemfig{
           [:0]
           -[:60]
           (-[:120])
-          -[:0]\textcolor{Green}{Br}
+          -[:0]\textcolor{Red}{\ce{O-}}
         }
-      }{\textit{secondary central carbon}}
-      \+
-      \chemfig{
-        [:0]
-        -[:30]
-        -[:-30]\textcolor{Red}{\ce{O-}}
+        \+
+        \chemfig{
+          [:0]
+          -[:30]
+          -[:-30]\textcolor{Green}{Br}
+        }
+        \arrow{->[
+          \footnotesize\chemfig{
+            [:0]\ce{H3C}
+            -[:0]S
+            (=[:90]O)
+            -[:0]\ce{CH3}
+          }
+        ][85\%]}
+        \chemfig{
+          [:0]
+          -[:60]
+          (-[:120])
+          -[:0]\textcolor{Red}{\ce{O}}
+          -[:60]
+          -[:0]
+        }
       }
-      \arrow{->}
-      \chemfig{
-        \text{\textit{E2 Reaction}}
+    }{
+      \scheme{
+        \chemname{
+          \chemfig{
+            [:0]
+            -[:60]
+            (-[:120])
+            -[:0]\textcolor{Green}{Br}
+          }
+        }{\textit{secondary central carbon}}
+        \+
+        \chemfig{
+          [:0]
+          -[:30]
+          -[:-30]\textcolor{Red}{\ce{O-}}
+        }
+        \arrow{->}
+        \chemfig{
+          \text{\textit{E2 Reaction}}
+        }
       }
-    }
-  }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{0.9}
+    }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{0.9}
 
-  In order to create ethers for \ce{R_{sec/tert}X}, we use the protonated version of alkoxides (a.k.a. alcohol) to make the Nu less basic and consequently undergo SN1 or E1 rather than E2. This is simply the \textbf{ALCOHOLYSIS OF \ce{R_{sec/tert}X}}.
-
-  \reactionfig{
-    \scheme{
-      \chemfig{
-        [:0]\ce{H3C}
-        -[:0]C
-        (-[:90]\ce{CH3})
-        (-[:-90]\ce{CH3})
-        -[:0]\textcolor{Green}{\ce{Cl}}
-      }
-      \+
-      \chemfig{
-        \textcolor{Red}{\ce{CH3O}}\ce{H}
-      }
-      \arrow{<=>}
-      \chemfig{
-        [:0]\ce{H3C}
-        -[:0]C
-        (-[:90]\ce{CH3})
-        (-[:-90]\ce{CH3})
-        -[:0]\textcolor{Red}{\ce{OCH3}}
-      }
-      \+
-      \chemfig{
-        [:0]\ce{H}\textcolor{Green}{\ce{Cl}}
-      }
-    }
-  }{Alcoholysis of \ce{R_{sec/tert}X}}{fig:filler4}{0.9}
-
-  While potential E1 reactions are still an issue that results in unintended products, we can minimize this by carrying out the reaction in lower temperatures.
-
-  So far, we've looked at \textbf{intermolecular} ether synthesis reactions. Now we introduce \textbf{INTRAMOLECULAR WILLIAMSON ETHER SYNTHESIS} (a.k.a. \textbf{cyclic ether formation}). These form in the same way as the intermolecular equivalent has done.
-
-  \doublereactionfig{
-    \scheme{
-      \chemfig{
-        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{CH2CH2}\textcolor{Green}{Br}
-      }
-      \+
-      \chemfig{
-        \textcolor{Red}{\ce{HO-}}
-      }
-      \arrow{->}
-      \chemfig{
-        *3(-
-        \textcolor{Red}{O}
-        --)
-      }
-      \+
-      \chemfig{
-        \textcolor{Green}{\ce{Br-}}
-      }
-      \+
-      \chemfig{
-        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
-      }
-    }
-  }{
-    \scheme{
-      \chemfig{
-        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{(CH2)4CH2}\textcolor{Green}{Br}
-      }
-      \+
-      \chemfig{
-        \textcolor{Red}{\ce{HO-}}
-      }
-      \arrow{->}
-      \chemfig{
-        *6(---
-        \textcolor{Red}{O}
-        ---)
-      }
-      \+
-      \chemfig{
-        \textcolor{Green}{\ce{Br-}}
-      }
-      \+
-      \chemfig{
-        \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
-      }
-    }
-  }{Intramolecular Williamson ether synthesis}{fig:filler5}{0.9}
-
-  \textbf{Intramolecular are particularly favorable over intermolecular} because [1] it does not lower entropy and [2] highly diluted concentrations of the relevant alcohol do not effect it as much because the reaction is occurring with itself.
+  \end{core}
   
-  Mechanistically speaking, this reaction occurs via a backside attack with inversion, prepared by the rearrangement to a less stable rotamer if needed.
+  \begin{core}{Alcoholysis of \ce{R_{sec/tert}X}}
+    
+    For \ce{R_{sec/tert}}X haloalkanes, chemists use the protonated version of alkoxides (alcohol) to make the nucleophile less basic and consequently undergo \sno or E1 rather than E2.
 
-  \reactionfig{
-    \scheme{
-      \chemname{
+    \reactionfig{
+      \scheme{
         \chemfig{
           [:0]\ce{H3C}
+          -[:0]C
+          (-[:90]\ce{CH3})
+          (-[:-90]\ce{CH3})
+          -[:0]\textcolor{Green}{\ce{Cl}}
+        }
+        \+
+        \chemfig{
+          \textcolor{Red}{\ce{CH3O}}\ce{H}
+        }
+        \arrow{<=>}
+        \chemfig{
+          [:0]\ce{H3C}
+          -[:0]C
+          (-[:90]\ce{CH3})
+          (-[:-90]\ce{CH3})
+          -[:0]\textcolor{Red}{\ce{OCH3}}
+        }
+        \+
+        \chemfig{
+          [:0]\ce{H}\textcolor{Green}{\ce{Cl}}
+        }
+      }
+    }{Alcoholysis of \ce{R_{sec/tert}X}}{fig:filler4}{0.9}
+
+    While E1 reactions still remain an unintended pathway, chemists minimize this by carrying out the reaction in lower temperatures.
+
+  \end{core}
+
+  \begin{core}{Intramolecular Williamson Ether Synthesis (Cyclic Ether Formation)}
+
+    So far, we've looked at only \textbf{intermolecular} ether synthesis reactions. \textbf{Intramolecular} ether synthesis (\textit{or cyclic ether formation} works in the same way as the intermolecular equivalent does.
+
+    \doublereactionfig{
+      \scheme{
+        \chemfig{
+          \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{CH2CH2}\textcolor{Green}{Br}
+        }
+        \+
+        \chemfig{
+          \textcolor{Red}{\ce{HO-}}
+        }
+        \arrow{->}
+        \chemfig{
+          *3(-
+          \textcolor{Red}{O}
+          --)
+        }
+        \+
+        \chemfig{
+          \textcolor{Green}{\ce{Br-}}
+        }
+        \+
+        \chemfig{
+          \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
+        }
+      }
+    }{
+      \scheme{
+        \chemfig{
+          \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{O}}\ce{(CH2)4CH2}\textcolor{Green}{Br}
+        }
+        \+
+        \chemfig{
+          \textcolor{Red}{\ce{HO-}}
+        }
+        \arrow{->}
+        \chemfig{
+          *6(---
+          \textcolor{Red}{O}
+          ---)
+        }
+        \+
+        \chemfig{
+          \textcolor{Green}{\ce{Br-}}
+        }
+        \+
+        \chemfig{
+          \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
+        }
+      }
+    }{Intramolecular Williamson ether synthesis}{fig:filler5}{0.9}
+
+    \textbf{Intramolecular are particularly favorable over intermolecular ether synthesis} because [1] it does not lower entropy and [2] highly diluted concentrations of the relevant alcohol do not effect it as much because the reaction is occurring with itself.
+
+    Mechanistically, this reaction occurs via a backside attack with inversion, prepared by the rearrangement of a less stable rotamer if needed.
+
+    \reactionfig{
+      \scheme{
+        \chemname{
+          \chemfig{
+            [:0]\ce{H3C}
+            -[:60]C
+            (<:[:100]H)
+            (<[:170]Br)
+            -[:0]C
+            (<[:-80]H)
+            (<:[:-10]H)
+            -[:60]\ce{OH}
+          }
+        }{\textit{most stable rotamer, but unsuitable for \snt}}
+        \arrow{<=>[\textit{rotation}][]}
+        \chemfig{
+          [:0]Br
           -[:60]C
-          (<:[:100]H)
-          (<[:170]Br)
+          (<:[:100]\ce{H3C})
+          (<[:170]H)
           -[:0]C
           (<[:-80]H)
           (<:[:-10]H)
           -[:60]\ce{OH}
         }
-      }{\textit{most stable rotamer, but unsuitable for \snt}}
-      \arrow{<=>[\textit{rotation}][]}
-      \chemfig{
-        [:0]Br
-        -[:60]C
-        (<:[:100]\ce{H3C})
-        (<[:170]H)
-        -[:0]C
-        (<[:-80]H)
-        (<:[:-10]H)
-        -[:60]\ce{OH}
+        \arrow{->[THF, \ce{K2CO3}][]}
+        \chemfig{
+          [:0]@{bromine}\textcolor{Green}{Br}
+          -[@{bond}:60,,,,Green]@{carbon}C
+          (<:[:100]\ce{H3C})
+          (<[:170]H)
+          -[:0]C
+          (<[:-80]H)
+          (<:[:-10]H)
+          -[:60]@{oxygen}\textcolor{Red}{\ce{O-}}
+        }
+        \arrow{->[84\%][]}
+        \chemfig{
+          [:90]*3(
+          C
+          (<[:-80]H)
+          (<:[:-20]H)
+          -
+          \textcolor{Red}{O}
+          -
+          C
+          (<[:-100]H)
+          (<:[:-160]\ce{H3C})
+          -)
+        }
+        \chemmovearrow{
+          \reactionfigarrow{oxygen}{180}{carbon}{30}{Red} 
+          \reactionfigarrow{bond}{0}{bromine}{-30}{Red} 
+        }
       }
-      \arrow{->[THF, \ce{K2CO3}][]}
-      \chemfig{
-        [:0]@{bromine}\textcolor{Green}{Br}
-        -[@{bond}:60,,,,Green]@{carbon}C
-        (<:[:100]\ce{H3C})
-        (<[:170]H)
-        -[:0]C
-        (<[:-80]H)
-        (<:[:-10]H)
-        -[:60]@{oxygen}\textcolor{Red}{\ce{O-}}
-      }
-      \arrow{->[84\%][]}
-      \chemfig{
-        [:90]*3(
-        C
-        (<[:-80]H)
-        (<:[:-20]H)
-        -
-        \textcolor{Red}{O}
-        -
-        C
-        (<[:-100]H)
-        (<:[:-160]\ce{H3C})
-        -)
+    }{Backside attack and inversion in cyclic ether formation}{fig:filler6}{0.7}
+
+    The relative rates of ring closure depend on the trade off between ΔH (\textit{ring strain}) and ΔS (\textit{lining up}) in the various transition states. The following is the ranking of ether ring formation speeds by ring size.
+
+    \[
+      3 > 5 \geq 6 > 4 \geq 7 > 8
+    \]
+
+    Reaction speed does not directly correspond to ring size. Although one might expect a linear relationship, the trend is more nuanced: 3-membered rings react fastest owing to the close proximity of the bonding atoms, 4-membered rings are the slowest, and 6-membered rings are surprisingly fast again due to favorable atomic geometry. In summary, this ordering stems from competing ΔH and ΔS contributions across the transition states of each ring size, rather than any simple geometric trend.
+
+    \doublereactionfig{
+      \scheme{
+        \chemname{
+          \chemfig{
+            [:0]@{l1}\textcolor{Green}{L}
+            -[@{b1}:30,,,,Green]@{carbon1}
+            -[:-30]
+            -[:30]@{o1}\textcolor{Red}{O}
+          }
+        }{\textcolor{Red}{super fast}}
+        \qquad\qquad
+        \chemname{
+          \chemfig{
+            [:0]@{l2}\textcolor{Green}{L}
+            -[@{b2}:30,,,,Green]@{c2}
+            -[:-30]
+            -[:30]
+            -[:90]@{o2}\textcolor{Red}{O}
+          }
+        }{\textcolor{Red}{fast}}
       }
       \chemmovearrow{
-        \reactionfigarrow{oxygen}{180}{carbon}{30}{Red} 
-        \reactionfigarrow{bond}{0}{bromine}{-30}{Red} 
+        \reactionfigarrow{o1}{135}{carbon1}{45}{Red}
+        \reactionfigarrow{b1}{120}{l1}{150}{Red}
+        \reactionfigarrow{o2}{210}{c2}{45}{Red}
+        \reactionfigarrow{b2}{120}{l2}{150}{Red}
       }
-    }
-  }{Backside attack and inversion in cyclic ether formation}{fig:filler6}{0.8}
+    }{
+      \scheme{
+        \chemname{
+          \chemfig{
+            [:0]@{l1}\textcolor{Green}{L}
+            -[@{b1}:30,,,,Green]@{carbon1}
+            -[:-30]
+            -[:30]
+            -[:90]
+            -[:150]@{o1}\textcolor{Red}{O}
+          }
+        }{\textcolor{Red}{fast}}
+        \qquad\qquad
+        \chemname{
+          \chemfig{
+            [:0]@{l2}\textcolor{Green}{L}
+            -[@{b2}:30,,,,Green]@{c2}
+            -[:-30]
+            -[:30]
+            -[:90]
+            -[:150]
+            -[:-150]@{o2}\textcolor{Red}{O}
+          }
+        }{\textcolor{Red}{fast}}
+      }
+      \chemmovearrow{
+        \reactionfigarrow{o1}{-120}{carbon1}{90}{Red}
+        \reactionfigarrow{b1}{120}{l1}{150}{Red}
+        \reactionfigarrow{o2}{-90}{c2}{90}{Red}
+        \reactionfigarrow{b2}{120}{l2}{150}{Red}
+      }
+    }{Relative rates of ring closure}{fig:filler7}{0.8}
 
-  It's important to keep in mind that the relative rates of ring closure depend on the trade off between $\Delta H$ (\textit{ring strain}) and $\Delta S$ (\textit{lining up}) in the various transition states. Here is the ranking of ether ring formation speeds by ring size.
+  \end{core} 
 
-  \[
-      3 > 5 \geq 6 > 4 \geq 7 > 8
-  \]
-  
-  Notice how it does not nessecarily coorespond directly to ring size. For instance, a 3 membered ring is the fastest because of the proximity of the bonding atoms. A 4 membered ring is slow because of the distance between the atoms. However, a 6 membered ring is again fast because its arrangement decreases the distance between the atoms relative to the 4 membered ring. The nuances and detailed understanding behind this ordering is unnessecary to know for the purposes of this course. It's sufficient to just realize that it's due to the trade offs between $\Delta H$ and $\Delta S$ of the various transitions states across ring sizes.
+  \begin{core}{Symmetrical Ether Synthesis via Alcohols}
+    
+    Ethers can also be formed by \textbf{alcohols and \ce{H+} through \snt and/or \sno} depending on the R groups. Chemists specifically use this technique to form symmetrical ethers because and alcohol mixure would otherwise produce a slurry of different ether product.
+    \bce{\ce{2R-OH ->[H2SO4][-H2O] R-O-R}}
 
-  \myfig{0.35}{ethers_figures/ether_ring_ranks}{Relative Rates of Ring Closure}{fig:ether_ring_ranks}
+    For \ce{R_{prim}-OH}, this mechanism works via \snt due to minimal steric hinderance.
 
-  Ethers can also be formed by \textbf{alcohols and \ce{H^+} through SN2 and/or SN1} depending on the R groups in question. This is specifically done to form \textbf{symmetrical} ethers because an alcohol mixture would produce all possible combinations rather than one specific product.
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          R
+          @{oxygen1}\textcolor{Red}{O}
+          H
+        }
+        \qquad
+        \qquad
+        \chemfig{
+          [:0,,,,Green]@{rgroup}\textcolor{Black}{R}
+          -[@{bond}:0]@{oxygen2}\textcolor{Green}{O}
+          (-[:-60]\textcolor{Green}{H})
+          -[:60]\textcolor{Green}{H}
+        }
+      }
+      \chemmovearrow{
+        \reactionfigarrow{oxygen1}{45}{rgroup}{90}{Red}
+        \reactionfigarrow{bond}{-120}{oxygen2}{-100}{Red}
+      }
+    }{Symmetrical ether formation via \snt}{fig:filler8}{1}
 
-  \bce{\ce{2R-OH ->[H2SO4][-H2O] R-O-R}}
+    When dealing with \ce{R_{sec/tert}-OH}, this mechanism shifts to \sno.
 
-  For \ce{R_{prim}-OH}, the mechanism works via SN2 because there is minimal steric hinderance.
+    \myfig{1.0}{ethers_figures/ether_sn1}{Symmetrical Ether Formation via SN1}{fig:ether_sn1}
 
-  \myfig{0.35}{ethers_figures/ether_sn2}{Symmetrical Ether Formation via SN2}{fig:ether_sn2}
+  \end{core} 
 
-  When dealing with \ce{R_{sec/tert}-OH}, the mechanism shifts to SN1.
+  \begin{core}[label=core:tbu]{Asymmetrical Ether Synthesis (\textit{Tetrabutyl Scenario})}
+    
+    However, a unique alcohol combination that preferentially forms an asymetrical ether is an \textbf{unhindered \ce{ROH} and tetrabutyl mixture}.
 
-  \myfig{1.0}{ethers_figures/ether_sn1}{Symmetrical Ether Formation via SN1}{fig:ether_sn1}
+    \myfig{0.52}{ethers_figures/ether_tbu}{Asymmetrical Ether Formation with t-Butyl Group}{fig:ether_tbu}
 
-  However, a case where a combination of alcohols in an acidic solution preferentially form an asymetrical ether is an \textbf{unhindered \ce{ROH} and tetrabutyl scenario}.
+    The \ce{ROH} preferentially attacks readily avaliable t-Bu cations (\textit{due to hyperconjugation}) via \sno. And while the t-Bu cation could be attacked by another t-Bu alcohol molecule, steric hinderance makes this interaction less likely to occur compared to the smaller, less sterically hindered \ce{ROH}.
 
-  \myfig{0.52}{ethers_figures/ether_tbu}{Asymmetrical Ether Formation with t-Butyl Group}{fig:ether_tbu}
+    In the laboratory, t-Bu is used for \textbf{"protection"} of other alcohols by forming these t-Bu ethers.
 
-  This reaction holds a preference for the \ce{ROH} attacking the tetrabutyl cation via SN1 because the t-Bu cation forms extremely quick due to the high stablity as a result of hyperconjugation. It is also less likely for the unhindered \ce{ROH} to form a cation because it has lower levels of potential hyperconjugation. And while the t-Bu cation could be attacked by another bulky t-Bu alcohol molecule, steric hinderance makes this combination less likely to happen compared to the smaller, less sterically hindered \ce{ROH}.
-
-  In the laboratory, tetrabutyl is used for \textbf{"protection"} of other alcohols by forming the t-butyl ethers we have just learned about by removing the acidic H.
+  \end{core}
   
 \section{Ether Reactions}
 
   Let's go through a collection of different ether reactions.
 
-  (1) \ce{R_{prim}-O-R_{prim}} are quite unreactive. They are stable to bases, \ce{RLi}, \ce{RMgBr}, and dilute aqueous \ce{H^+}. However they are reactive under \ce{H^{+}X^{-}} exposure
+  \begin{core}{\ce{R_{prim}-O-R_{prim}} Reaction}
+    
+    \ce{R_{prim}-O-R_{prim}} are quite unreactive, exhibiting stability to bases, \ce{RLi}, \ce{RMgBr}, and dilute aqueous \ce{H+}. However they are reactive under \ce{H+X-} exposure.
 
-  \myfig{0.8}{ethers_figures/er_1}{Ether Cleavage with Hydrohalic Acids}{fig:er_1}
+    \myfig{0.8}{ethers_figures/er_1}{Ether Cleavage with Hydrohalic Acids}{fig:er_1}
 
-  (2) \ce{R_{prim}-O-R_{sec}} mixed ethers react either through SN1 or SN2 depending on the Nu strength (\textit{under acidic conditions}). When paired with a \textbf{good Nu}, the Nu attacks the \ce{R_{prim}} side carbon of the ether through SN2 to avoid the steric hinderance of the \ce{R_{sec}} side.
+  \end{core}
 
-  \myfig{0.65}{ethers_figures/er_2a}{Mixed Ether Reaction with Good Nucleophile (SN2)}{fig:er_2a}
+  \begin{core}{\ce{R_{prim}-O-R_{sec}} Reaction}
+    
+    \ce{R_{prim}-O-R_{sec}} ethers react either through \sno or \snt depending on the nucleophile strength (\textit{under acidic conditions}). When paired with a \textbf{good nucleophile}, the attack occurs on the \ce{R_{prim}} side carbon via \snt to avoid the steric hinderance of \ce{R_{sec}}.
 
-  When paired with a \textbf{poor Nu}, the Nu undergoes an SN1 reaction and attacks the the carbocation that forms on the \ce{R_{sec}} because a primary carbocation is too unstable to form in the first place.
+    \myfig{0.65}{ethers_figures/er_2a}{Mixed Ether Reaction with Good Nucleophile (SN2)}{fig:er_2a}
 
-  \myfig{0.65}{ethers_figures/er_2b}{Mixed Ether Reaction with Poor Nucleophile (SN1)}{fig:er_2b}
+    When paired with a \textbf{poor nucleophile}, an \sno reaction occurs at the carbocation of \ce{R_{sec}} (\textit{stabalized by hyperconjugation}).
 
-  (3) Tetrabutyl ether hydrolysis is the reverse of t-Bu ether formation we learned previously in \textbf{2.3.1 Ether Synthesis}. This reverse process is the "deprotection" of alcohol \ce{ROH} by t-Bu cation via acid. The resulting t-Bu cation, when exposed to heat undergoes E1 to exaporate into an alkene.
+    \myfig{0.65}{ethers_figures/er_2b}{Mixed Ether Reaction with Poor Nucleophile (SN1)}{fig:er_2b}
 
-  \myfig{0.65}{ethers_figures/er_3}{Hydrolysis and Deprotection of t-Butyl Ethers}{fig:er_3}
+  \end{core}
 
-  (4) Ether ring openings release ring strain by a \ce{Nu-} attacking directly one of the two C adjacent to the O. Keep in mind that this process is regioselective, meaning the SN2 occurs at the less hindered site of the two carbons.
+  \begin{core}{t-Bu Ether Hydrolysis}
 
-  \myfig{0.9}{ethers_figures/er_4a}{Regioselective Ether Ring Opening}{fig:er_4a}
+    t-Bu ether hydrolysis is the reverse of t-Bu ether formation covered in Core Concept \ref{core:tbu}. This reverse process is the "deprotection" of alcohol \ce{ROH} by the t-Bu cation via acid. The resulting t-Bu cation, when exposed to heat, undergoes E1 to exaporate into an alkene.
 
-  Many \ce{Nu-} will work. In this example, we show that ether ring openings are also regioselective and \textbf{stereocontrolled}.
+    \myfig{0.65}{ethers_figures/er_3}{Hydrolysis and Deprotection of t-Butyl Ethers}{fig:er_3}
+    
+  \end{core}
 
-  \myfig{0.4}{ethers_figures/er_4b}{Stereocontrolled Ether Ring Opening}{fig:er_4b}
+  \begin{core}{Ether Ring Opening}
+    
+    Ether ring openings release ring strain by a \ce{Nu-} attacking directly one of the two carbons adjacent to the oxygen. This is a regioselective process, meaning \snt occurs at the less hindered relevant carbon.
 
-  With \textbf{neutral Nu}, we need acidic conditions to activate the ether to a nucleophilic attack. This reaction WILL NOT OCCUR without \ce{H^+} present.
+    \myfig{0.9}{ethers_figures/er_4a}{Regioselective Ether Ring Opening}{fig:er_4a}
 
-  \myfig{0.45}{ethers_figures/er_4c}{Acid-Activated Ether Ring Opening with Neutral Nucleophile}{fig:er_4c}
+    Many \ce{Nu-} will work. The following example shows that ether ring openings are regioselective and also \textbf{stereocontrolled}.
 
-  One important aspect difference about this neutral Nu mechanism is that in asymmetrical ethers, the Nu is more regioselective to the more hindered side because the more substituted C is better at stabilizing a partial positive charge ($\delta$+) through hyperconjugation and inductive effects, thus the C-O bond on that side starts to "stretch" and weaken significantly. This is sort of an SN1 and SN2 hybrid scenario (SN2 because the Nu attack and L group departure happens simultaneously; SN1 because the partial positive is similar to a cation).
+    \myfig{0.4}{ethers_figures/er_4b}{Stereocontrolled Ether Ring Opening}{fig:er_4b}
 
-  \myfig{0.55}{ethers_figures/er_4d}{Regioselectivity in Acid-Catalyzed Ring Opening of Asymmetrical Ethers}{fig:er_4d}
+    With \textbf{neutral nucleophiles}, acidic conditions are required to activate the ether toward nucleophilic attack. Without \ce{H+}, the reaction will not occur.
+
+    \myfig{0.45}{ethers_figures/er_4c}{Acid-Activated Ether Ring Opening with Neutral Nucleophile}{fig:er_4c}
+    
+    One important distinction in the neutral nucleophile mechanism is regioselectivity towards the more hindered carbon. In asymmetrical ethers, the nucleophile preferentially attacks the more substituted carbon, as it better stabilizes the partial positive charge (δ$^+$) that develops through hyperconjugation and inductive effects---causing the C-O bond on that side to stretch and weaken. This gives the mechanism a hybrid \sno/\snt character: it resembles \snt in that nucleophile attack and leaving group departure occur simultaneously, yet resembles \sno in that the partial positive charge mimics a carbocation.
+
+    \myfig{0.55}{ethers_figures/er_4d}{Regioselectivity in Acid-Catalyzed Ring Opening of Asymmetrical Ethers}{fig:er_4d}
+
+  \end{core}
 
 \section{Sulfur Analogs: \textit{A Brief Lesson}}
 
-  Sulfur (S) is directly below oxygen (O) in the periodic table, thus is behaves very similarly to how oxygen would in the context of bonding.
+  \begin{definition}{Sulfur Analogs}
+    
+    Sulfur is directly below oxygen in the periodic table, and thus behaves very similarly.
 
-  The sulfur analogs of ROH are called alkane\textbf{thiols}. 
+    Thiols (\ce{RSH}) are \textbf{more acidic than alcohols} because the \ce{S-H} bond is weaker due to sulfur's higher-energy molecular orbitals. The lower electronegativity difference in \ce{S-H} compared to \ce{O-H} also results in \textbf{weaker hydrogen bonding}, making thiols less polar overall. \textit{This is illustrated by \ce{H2S}, which is a gas at 25$^\circ$C with a boiling point of $-60^\circ$C, in stark contrast to \ce{H2O}.} 
 
-  \myfig{0.4}{ethers_figures/sulfur_nomenclature1}{sulfer nomenclature 1}{fig:sulfur_nomenclature1}
+    Despite being less basic than \ce{RO-}, \ce{RS-} is a stronger nucleophile due to its greater \textbf{polarizability}---note that polarizability is distinct from polarity. Polarizability describes how easily an electron cloud can be distorted by an external force (covered in EXTERNAL REFERENCE). Larger atoms like sulfur are more polarizable than oxygen because their diffuse, loosely-held electron clouds are more easily deformed. This allows \ce{RS-} to stretch and distort toward an electrophile, enhancing its nucleophilicity despite its lower basicity.
 
-  The respective names of the above compounds are
+  \end{definition} 
 
-  \[
-      \text{methanethiol}\qquad\qquad\text{2-methyl-1-butanthiol}
-  \]
+  \begin{core}{Sulfur Reactivity}
+    
+    The better nucleophility of \ce{RS-} eliminates the issue of E2 reactions when paired with \ce{R_{sec}X} like \ce{RO-} has.
 
-  As substituients, sulfurs are called either mercapto (\ce{-SH}) or alkylthio (\ce{-SR}) groups. Keep in mind that the \ce{-OH} has priority over the \ce{-SH} when both are present in the same molecule.
+    \myfig{0.6}{ethers_figures/sulfur_e2_elimin}{sulfer e2 elimination}{fig:sulfere2_elim}
+    
+    Even neutral \ce{RSR{'}} readily undergoes \snt, whereas dimethyl ether (\ce{CH3OCH3}) does not react under the same conditions. When \ce{RSR{'}} attacks an \ce{RX}, the resulting sulfonium ion (\ce{R3S+}) becomes susceptible to attack by another nucleophile — the sulfide, once a good nucleophile, has now become a good leaving group, analogous to \ce{H2O}. This makes \textbf{sulfonium salts} (\ce{R3S+}) effective \textbf{alkylating agents}, meaning they can transfer an alkyl group to an incoming nucleophile.
 
-  \myfig{0.6}{ethers_figures/sulfur_nomenclature2}{sulfer nomenclature 2}{fig:sulfur_nomenclature2}
+    \myfig{0.75}{ethers_figures/sulfur_goodnul}{sulfer good nul}{fig:sulfer_goodnul}
 
-  The respective names of the above compounds are
-
-  \[
-      \text{2-mercaptoethan-1-ol}\qquad\qquad\text{methylthioethane}
-  \]
-
-  Moving on to characteristics, thiols are \textbf{more acidic than ROH} because the \ce{RS-H} bond is weaker (\textit{the molecular orbitals are at a higher level of energy}). This results in \textbf{less H-bonding than ROH} because the EN difference isn't as high as that of ROH. Consequently, thiols are less polar. \textit{\ce{H2S} is a gas at 25$^\circ$C (boiling point -60$^\circ$C).} 
-
-  However, although \ce{RS-} is less basic than \ce{RO-}, \ce{RS-} is still a better Nu because it is more \textbf{polarizable}. \textit{Mind that polarizable is different from being polar.} Polarizability describes how easily the \ce{e^-} cloud can be distorted by an outside force, a concept covered in \textit{2.1.1 Nucleophilic Substitution}. Generally larger elements like S (over O) are more polarizable because the size of its \ce{e^-} cloud results in greater "moldability" compared to the smaller \ce{e^-} cloud of O. Because \ce{S} isn't held in a tight, rigid sphere by the nucleus, it can stretch and distort toward the electrophile, making \ce{RS-} a better Nu.
-
-  This better nucleophility (in comparison to \ce{RO-}) eliminates the issue of E2 reactions when paired with \ce{R_{sec}X} like \ce{ROH} has.
-
-  \myfig{0.6}{ethers_figures/sulfur_e2_elimin}{sulfer e2 elimination}{fig:sulfere2_elim}
-
-  Even neutral \ce{RSR{'}} undergo SN2 (like \ce{NH3}, \ce{PR3}) whereas dimethyl ether (\ce{CH3OCH3}) has no reaction. Notice how if the \ce{RSR{'}} nucleophilically attacks an \ce{RX}, the resulting \ce{R3S+} is susceptible to an attack by a different nucleophile. \textit{The neutral \ce{RSR{'}} that was once a good nucleophile has become a good leaving group, like \ce{H2O}.} This makes these compounds or \textbf{sulfonium salts} (\ce{R3S+}) good \textbf{alkylating agents}, which is a compound capable of transferring an alkyl group to another molecule, namely a Nu.
-
-  \myfig{0.75}{ethers_figures/sulfur_goodnul}{sulfer good nul}{fig:sulfer_goodnul}
+  \end{core}
 
 \end{document}
