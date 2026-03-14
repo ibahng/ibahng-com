@@ -24,93 +24,192 @@
 
 \input{../../presets/_general/startup}
 
-\section{Kinetic Molecular Theory and Ideal Gas Laws}
+\section{Kinetic Molecular Theory}
 
-  The \textbf{Kinetic Molecular Theory (KMT)} describes the behavior of gases based on the following postulates:
+  \begin{core}{Kinetic Molecular Theory}
 
-  1. The \textbf{size of the molecules is tiny} relative to containers
+    The \textbf{Kinetic Molecular Theory (KMT)} describes the behavior of gases based on the following postulates:
 
-  2. The molecules \textbf{move in a straight line} within the container
+    \begin{enumerate}
+      \item Particles \textbf{move in straight lines} until they hit something
+      \item The particles themselves are so small compared to the sapce between them that their \textbf{individaul volume is considered zero}
+      \item Particles \textbf{don't stick together or push each other away}
+      \item When particles hit each other or the walls of the container, they \textbf{don't lose energy as heat}
+    \end{enumerate}
 
-  3. Collisions are \textbf{elastic} (\textit{molecules bounce off each other with no loss of energy})
+    Its primary purpose is to provide a \textbf{theoretical model} that explains the macroscopic properties of matter (things we can measure, like pressure, volume, and temperature) based on the microscopic motion of individual atoms and molecules.
 
-  In the following content, we will eventually derive the \textbf{Ideal Gas Law}:
-  
-  \[
-  PV = nRT
-  \]
+  \end{core}
+ 
+  \begin{core}{Maxwell-Boltzmann Distribution}
 
-  Here, P is pressure, V is volume, n is the number of moles (\textit{of gas}), R is the ideal gas constant, and T is temperature in Kelvin.
+    The \textbf{Maxwell-Boltzmann distribution} describes the distribution of molecular speeds in a gas sample at a given temperature. As \text{temperature} increases, distribution broadens, indicating a wider range of molecular speeds.
 
-  The \textbf{Maxwell-Boltzmann distribution} describes the distribution of molecular speeds in a gas sample at a given temperature (T). As \text{temperature} increases, the distribution broadens, indicating a wider range of molecular speeds.
+    \pgfig{
+      \begin{axis}
+        [
+          width=12cm, height=9cm,
+          xlabel={Particle velocities},
+          ylabel={Number of particles},
+          xmin=0, xmax=5,
+          ymin=0, ymax=1.1,
+          axis lines=left,
+          xtick=\empty,
+          ytick=\empty,
+          tick style={draw=none},
+          every axis plot/.append style={smooth, thick, samples=100, domain=0:5},
+          \axispresets
+        ]
 
-  \myfig{0.4}{gases_figures/maxwell_plot1}{maxwell plot 1}{fig:maxplot1}
+        \addplot[dashed, very thick]
+          {x^2 * exp(-x^2 / 0.3) * 9};
+        \node at (axis cs:0.9, 1.08) {$T_1$};
 
-  P is the force per unit area (F/A) exerted by gas molecules colliding with the walls of the container. This depends on (1) the frequency of collisions and (2) the energy of the collisions which is represented by the kinetic energy equation
+        \addplot[dotted, very thick]
+          {(x/1.5)^2 * exp(-(x/1.5)^2 / 0.5) * 4};
+        \node at (axis cs:1.3, 0.85) {$T_2$};
 
-  \[
-  KE = \frac{1}{2}mv^2
-  \]
+        \addplot[solid, very thick]
+          {(x/2)^2 * exp(-(x/2)^2 / 0.9) * 1.4};
+        \node at (axis cs:2.1, 0.58) {$T_3$};
 
-  where m is the mass of the gas molecule and v is its velocity.
+      \end{axis}
+    }{Maxwell-Boltzmann distribution (\textit{particle velocities vs number of particles})}{fig:maxplot}{0.9}
 
-  When we combine these concepts, we find that an increase in T would either cause an increase in P (\textit{because the molecules collide with container walls more frequently}) or an increase in V (\textit{in order to maintain the same frequency of collisions or P}). P and V therefore have an \textbf{inverse relationship}.
+    Pressure (P) is the force per unit area (F/A) exerted by gas molecules colliding with the container walls, and depends on both the frequency and energy of those collisions. Consequently, an increase in T will either raise P through more frequent collisions, or increase V to maintain the same collision frequency---reflecting the \textbf{inverse relationship} between P and V. The proportional relationship between P and T is known as \textbf{Gay-Lussac's Law}, while the inverse relationship between V and P is known as \textbf{Boyle's Law}.
 
-  \begin{definition}[placeholder]
-      The proportional relationship between P and T is called \textbf{Gay-Lussac's Law}
-      
-      The inverse relationship between V and P is called \textbf{Boyle's Law}
-  \end{definition}
-      
-  Another version of the Maxwell-Boltzmann distribution shows us relationship between speed and gas molecule mass under constant T.
+    At the same temperature, molecules of different masses share the same average kinetic energy---meaning lighter molecules move faster than heavier ones. Consequently, the volume of an ideal gas is directly proportional to $n$ regardless of the identity of the gas, which is known as \textbf{Avogadro's Law}.
 
-  \myfig{0.7}{gases_figures/maxwell_plot2}{maxwell plot 2}{fig:maxplot2}
+    \pgfig{
+      \begin{axis}
+        [
+          width=13cm, height=8cm,
+          xlabel={Molecular speed (m/s)},
+          ylabel={Fraction of molecules within 10 m/s of indicated speed},
+          xmin=0, xmax=3500,
+          ymin=0, ymax=0.0035,
+          xtick=\empty,
+          ytick=\empty,
+          tick style={draw=none},
+          every axis plot/.append style={smooth, very thick, samples=300, domain=0:3500},
+          legend pos=north east,
+          legend style={draw=none},
+          \axispresets
+        ]
 
-  At the same T, every gas molecule has the same average KE \textbf{independent of their masses}, thus the velocities of lighter gases are higher than those of heavier ones.
+        \addplot[Red, very thick]
+          {(4/sqrt(pi)) * (x^2 / 340^3) * exp(-(x/393)^2)};
+        \addlegendentry{$\mathrm{O_2}$}
 
-  As such, the V of an ideal gas is directly proportional to n (\# of moles of gas) \textbf{regardless of the identity of the gas} -- this is called \textbf{Avogadro's Law}.
+        \addplot[Yellow, very thick]
+        {(4/sqrt(pi)) * ((x/1.2)^2 / 400^3) * exp(-(x/(422 * 1.2))^2)};
+        \addlegendentry{$\mathrm{N_2}$}
 
-  Now, combining all these relationships, we rearrive at the Ideal Gas Law: 
+        \addplot[Blue, very thick]
+          {(4/sqrt(pi)) * ((x/1.5)^2 / 530^3) * exp(-(x/(556 * 1.5))^2)};
+        \addlegendentry{$\mathrm{H_2O}$}
 
-  \[
-  PV = nRT
-  \]
+        \addplot[Green, very thick]
+          {(4/sqrt(pi)) * (x^2 / 1254^3) * exp(-(x/1254)^2)};
+        \addlegendentry{$\mathrm{He}$}
 
-  Here, R is the ideal gas constant determined experimentally to be $0.0821\ \mathrm{L\cdot atm\,(mol\cdot K)^{-1}}$.
+        \addplot[Orange, very thick]
+          {(4/sqrt(pi)) * (x^2 / 1774^3) * exp(-(x/1774)^2)};
+        \addlegendentry{$\mathrm{H_2}$}
 
-  A commonly used standard set of conditions for ideal gases is \textbf{STP (Standard Temperature and Pressure)}, where 
-  
-  1. T = 273 K (0°C)
+      \end{axis}
+    }{Molecular speeds of various molecules at the same temperature}{fig:filler}{1}
 
-  2. P = 1 atm
+  \end{core}      
 
-  3. 1 mole of an ideal gas (n) occupies 22.4 L (V).
+  \begin{core}{Ideal Gas Law \& STP}
+
+    The relationships derived from the Maxwell-Boltzmann distribution---Gay-Lussac's Law ($P \propto T$), Boyle's Law ($P \propto \frac{1}{V}$), and Avogadro's Law ($V \propto n$)---can be unified into a single expression known as the \textbf{Ideal Gas Law}:
+    \[
+      PV = nRT
+    \]
+
+    where P is pressure, V is volume, n is the number of moles of gas, T is temperature in Kelvin, and R is the ideal gas constant, determined experimentally to be $0.0821\ \mathrm{L \cdot atm\ (mol \cdot K)^{-1}}$.
+
+    A useful reference point for ideal gas calculations is \textbf{Standard Temperature and Pressure (STP)}, defined as $T = 273\ \mathrm{K}$, $P = 1\ \mathrm{atm}$, under which one mole of an ideal gas occupies exactly $22.4\ \mathrm{L}$.
+
+  \end{core}
 
 \section{Real Gases}
 
-  In reality, no gas is truly ideal and thus the Ideal Gas Law only approximates the behavior of real gases under certain conditions (e.g., low P and high T). The reasons for this are:
+  \begin{core}{Real Gas Conditions}
 
-  1. \textbf{Gas molecules have finite V} -- at high P, the V occupied by gas molecules becomes significant compared to the total V of the container
+    No gas is truly ideal, and the Ideal Gas Law only approximates real gas behavior under certain conditions (e.g., low $P$ and high $T$). The two primary sources of deviation are:
 
-  2. \textbf{IMFs exist between gas molecules} -- at low T, the KE of gas molecules decreases, making IMFs more significant and cause deviations from ideal behavior. This leads to condensation.
+    \begin{enumerate}
+      \item \textbf{Gas molecules have finite volume}---at high P, the volume occupied by the molecules themselves becomes significant relative to the total container volume, violating the ideal assumption of point-like particles.
+      \item \textbf{Intermolecular forces (IMFs) exist between gas molecules}---at low T, the kinetic energy of molecules decreases, making attractive IMFs increasingly significant. When the average KE falls below the threshold needed to overcome these forces, molecules become captured and held together, transitioning first from gas to liquid (\textbf{condensation}) and eventually from liquid to solid as KE decreases further.
+    \end{enumerate}
 
-  \begin{definition}[placeholder]
-      \textbf{Condensation} is a process in which gas molecules come together to form a liquid. It occurs when the average KE of the molecules decreases enough that it can no longer overcome the attractive IMFs, allowing the molecules to become "captured" and held together in a liquid state. This stretches into liquid to solid phase changes as well when the KE decreases further.
-  \end{definition}
+    \pgfig{
+      \begin{axis}
+        [
+          width=12cm, height=9cm,
+          xlabel={Volume},
+          ylabel={Pressure},
+          xmin=0, xmax=10,
+          ymin=0, ymax=10,
+          xtick=\empty,
+          ytick=\empty,
+          tick style={draw=none},
+          legend style={draw=none},
+          every axis plot/.append style={thick, samples=300},
+          \axispresets
+        ]
 
-  \myfig{0.7}{gases_figures/real_gases}{real gases}{fig:realgases}
-  
-  Because of these deviations, the \textbf{Van der Waals equation} was developed to better describe the behavior of real gases:
+        % Liquid branch (steep left side, coming down to bubble point)
+        \addplot[black, thick, domain=1:2.5, samples=100]
+          {4.1 + 1.2*(x-2.5)^2 - 1.0*(x-2.5)};
 
-  \[
-  \left( P + \frac{an^2}{V^2} \right) (V - nb) = nRT
-  \]
+        % Flat two-phase region (bubble point to dew point)
+        \addplot[black, thick, domain=2.5:6]
+          {4.1};
 
-  $\frac{an^2}{V^2}$ corrects for \textbf{the impact of IMFs between gas molecules}. Molecules near the wall are pulled inward by neighoring molecules, reducing the effective P measured experimentally. Thus, we add this term to the measured P to get the true P.
-  
-  $nb$ corrects for \textbf{the finite volume occupied by gas molecules} since the ideal gas law assumes all molecules have virtually no V.
+        % Vapor branch (right side, gently curving down from dew point)
+        \addplot[black, thick, domain=6:9, samples=100]
+          {4.1 + 80/(x+2) - 80/8};
 
-  The constants a and b are specific to each gas and must be determined experimentally.
-  
+        % Labels
+        \node at (axis cs:1.8, 8.5) {Liquid};
+        \node at (axis cs:4.25, 7.5) {Bubble Point};
+        \node at (axis cs:4.25, 2.5) {Dew Point};
+        \node at (axis cs:4.12, 4.5) {Vapor + Liquid};
+        \node at (axis cs:9, 2.5) {Vapor};
+        \node at (axis cs:5, 9.5) {$T = \mathrm{Constant}$};
+
+        % Annotation arrows to bubble point
+        \draw[->, thin] (axis cs:3.8, 7) -- (axis cs:2.6, 4.3);
+
+        % Annotation arrow to dew point
+        \draw[->, thin] (axis cs:4.25, 2.8) -- (axis cs:5.9, 3.9);
+
+      \end{axis}
+    }{PV Isotherm Diagram}{fig:pv-isotherm}{1}
+
+  \end{core}
+
+  \begin{core}{Van der Waals Equation}
+      
+    To account for the deviations of real gases, the \textbf{Van der Waals equation} modifies the Ideal Gas Law as follows:
+    \[
+      \left( P + \frac{an^2}{V^2} \right)(V - nb) = nRT
+    \]
+
+    The two correction terms each address one source of non-ideal behavior:
+
+    \begin{enumerate}
+      \item $\dfrac{an^2}{V^2}$ corrects for \textbf{IMFs between gas molecules}. Molecules near the container wall are pulled inward by neighboring molecules, reducing the experimentally measured P below its true value. This term is therefore added to the measured P to recover the true pressure.
+      \item $nb$ corrects for \textbf{the finite volume of gas molecules}, subtracting the volume physically occupied by the molecules themselves from the total container volume---an assumption the Ideal Gas Law neglects entirely.
+    \end{enumerate}
+
+    The constants $a$ and $b$ are unique to each gas and must be determined experimentally. 
+
+  \end{core}
+
 \end{document}
 
