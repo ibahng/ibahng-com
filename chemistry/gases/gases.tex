@@ -31,11 +31,16 @@
     The \textbf{Kinetic Molecular Theory (KMT)} describes the behavior of gases based on the following postulates:
 
     \begin{enumerate}
-      \item Particles \textbf{move in straight lines} until they hit something
-      \item The particles themselves are so small compared to the sapce between them that their \textbf{individaul volume is considered zero}
+
+
+\item Particles \textbf{move in straight lines} until they hit something
+
+\item The particles themselves are so small compared to the sapce between them that their \textbf{individaul volume is considered zero}
       \item Particles \textbf{don't stick together or push each other away}
-      \item When particles hit each other or the walls of the container, they \textbf{don't lose energy as heat}
-    \end{enumerate}
+
+\item When particles hit each other or the walls of the container, they \textbf{don't lose energy as heat}
+    
+\end{enumerate}
 
     Its primary purpose is to provide a \textbf{theoretical model} that explains the macroscopic properties of matter (things we can measure, like pressure, volume, and temperature) based on the microscopic motion of individual atoms and molecules.
 
@@ -76,9 +81,9 @@
       \end{axis}
     }{Maxwell-Boltzmann distribution (\textit{particle velocities vs number of particles})}{fig:maxplot}{0.9}
 
-    Pressure (P) is the force per unit area (F/A) exerted by gas molecules colliding with the container walls, and depends on both the frequency and energy of those collisions. Consequently, an increase in T will either raise P through more frequent collisions, or increase V to maintain the same collision frequency---reflecting the \textbf{inverse relationship} between P and V. The proportional relationship between P and T is known as \textbf{Gay-Lussac's Law}, while the inverse relationship between V and P is known as \textbf{Boyle's Law}.
+    Pressure (P) is the force per unit area (F/A) exerted by gas molecules colliding with the container walls, and depends on both the frequency and energy of those collisions. Consequently, an increase in T will either raise P through more frequent collisions, or increase V to maintain the same collision frequency --- reflecting the \textbf{inverse relationship} between P and V. The proportional relationship between P and T is known as \textbf{Gay-Lussac's Law}, while the inverse relationship between V and P is known as \textbf{Boyle's Law}.
 
-    At the same temperature, molecules of different masses share the same average kinetic energy---meaning lighter molecules move faster than heavier ones. Consequently, the volume of an ideal gas is directly proportional to $n$ regardless of the identity of the gas, which is known as \textbf{Avogadro's Law}.
+    At the same temperature, molecules of different masses share the same average kinetic energy --- meaning lighter molecules move faster than heavier ones. Consequently, the volume of an ideal gas is directly proportional to $n$ regardless of the identity of the gas, which is known as \textbf{Avogadro's Law}.
 
     \pgfig{
       \begin{axis}
@@ -124,7 +129,7 @@
 
   \begin{core}{Ideal Gas Law \& STP}
 
-    The relationships derived from the Maxwell-Boltzmann distribution---Gay-Lussac's Law ($P \propto T$), Boyle's Law ($P \propto \frac{1}{V}$), and Avogadro's Law ($V \propto n$)---can be unified into a single expression known as the \textbf{Ideal Gas Law}:
+    The relationships derived from the Maxwell-Boltzmann distribution --- Gay-Lussac's Law ($P \propto T$), Boyle's Law ($P \propto \frac{1}{V}$), and Avogadro's Law ($V \propto n$) --- can be unified into a single expression known as the \textbf{Ideal Gas Law}:
     \[
       PV = nRT
     \]
@@ -142,9 +147,13 @@
     No gas is truly ideal, and the Ideal Gas Law only approximates real gas behavior under certain conditions (e.g., low $P$ and high $T$). The two primary sources of deviation are:
 
     \begin{enumerate}
-      \item \textbf{Gas molecules have finite volume}---at high P, the volume occupied by the molecules themselves becomes significant relative to the total container volume, violating the ideal assumption of point-like particles.
-      \item \textbf{Intermolecular forces (IMFs) exist between gas molecules}---at low T, the kinetic energy of molecules decreases, making attractive IMFs increasingly significant. When the average KE falls below the threshold needed to overcome these forces, molecules become captured and held together, transitioning first from gas to liquid (\textbf{condensation}) and eventually from liquid to solid as KE decreases further.
-    \end{enumerate}
+
+
+\item \textbf{Gas molecules have finite volume} --- at high P, the volume occupied by the molecules themselves becomes significant relative to the total container volume, violating the ideal assumption of point-like particles.
+
+\item \textbf{Intermolecular forces (IMFs) exist between gas molecules} --- at low T, the kinetic energy of molecules decreases, making attractive IMFs increasingly significant. When the average KE falls below the threshold needed to overcome these forces, molecules become captured and held together, transitioning first from gas to liquid (\textbf{condensation}) and eventually from liquid to solid as KE decreases further.
+    
+\end{enumerate}
 
     \pgfig{
       \begin{axis}
@@ -203,9 +212,13 @@
     The two correction terms each address one source of non-ideal behavior:
 
     \begin{enumerate}
-      \item $\dfrac{an^2}{V^2}$ corrects for \textbf{IMFs between gas molecules}. Molecules near the container wall are pulled inward by neighboring molecules, reducing the experimentally measured P below its true value. This term is therefore added to the measured P to recover the true pressure.
-      \item $nb$ corrects for \textbf{the finite volume of gas molecules}, subtracting the volume physically occupied by the molecules themselves from the total container volume---an assumption the Ideal Gas Law neglects entirely.
-    \end{enumerate}
+
+
+\item $\dfrac{an^2}{V^2}$ corrects for \textbf{IMFs between gas molecules}. Molecules near the container wall are pulled inward by neighboring molecules, reducing the experimentally measured P below its true value. This term is therefore added to the measured P to recover the true pressure.
+
+\item $nb$ corrects for \textbf{the finite volume of gas molecules}, subtracting the volume physically occupied by the molecules themselves from the total container volume --- an assumption the Ideal Gas Law neglects entirely.
+    
+\end{enumerate}
 
     The constants $a$ and $b$ are unique to each gas and must be determined experimentally. 
 

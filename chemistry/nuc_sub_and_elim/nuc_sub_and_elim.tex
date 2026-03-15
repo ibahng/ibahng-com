@@ -26,237 +26,279 @@
 
 \section{Nucleophilic Substitution}
 
-  After generating a haloalkane compound via radical halogenation, the next step is to substitute that halogen with a different atom/molecule of our choosing. One of the methods we can use to carry this out is nucleophilic substitution.
+  After generating a haloalkane compound via radical halogenation (\textit{as covered in \href{../radical_halogenation/radical_halogenation.pdf}{Radical Halogenation}}), the next step is to substitute that halogen with a different atom/molecule of our choosing. One of the methods we can use to carry this out is nucleophilic substitution.
 
-  \textbf{Nucleophilic substitution} is a fundamental class of organic reactions where an \ce{e^-} rich species, called a \textbf{nucleophile (N)}, "attacks" a molecule and replaces a specific group, known as the \textbf{leaving group (L)}. Here, the leaving group would usually be the halogen. The specific atom that is being attacked is called the \textbf{electrophile (E)}.
+  \begin{core}{Nucleophilic Substitution}
+   
+    \textbf{Nucleophilic substitution} is a fundamental class of organic reactions where an \ce{e^-} rich species, called a \textbf{nucleophile (Nu)}, attacks an electron-deficient atom called the \textbf{electrophile (E)}, displacing a specific group known as the \textbf{leaving group (L)}, which departs with the bonding electron pair. Halogens are common leaving groups due to their electronegativity and ability to stabilise the negative charge upon departure.
 
-  Nucleophilic substitution can be categorized into \textbf{bimolecular (SN2)} and \textbf{unimolecular (SN1)} nucleophilic substitution. Let's first cover SN2 reactions.
+  \end{core}
 
-  Like its name suggests, SN2 reactions are \textbf{bimolecular} reactions, meaning that both R-L and N are present in the transition state of the reaction, making the rate of the reaction determined by both [N] and [R-L]. Here is an example of a chemical equation of methyl chloride (\ce{CH3Cl}) undergoing SN2 reaction with a hydroxyl ion (\ce{OH-}).
+  Nucleophilic substitution can be categorized into \snt and \sno.
 
-  \myfig{0.5}{nuc_sub_and_elim_figures/sn2_equation}{sn2 equation}{fig:sn2eq}
+  \begin{core}{\snt}
+    
+    \snt reactions are \textbf{bimolecular}, meaning that both the leaving group and nucleophile are present in the transition state and making the reaction rate dependent on both [Nu] and [E-L]. The following is a chemical reaction of \ce{CH3Cl} undergoing \snt reaction with \ce{OH-}.
 
-  Here, Cl is the leaving group and \ce{OH-} is the nucleophile. And when we look at the reaction from a 3D perspective, we see the following outline interaction.
-  
-  \myfig{0.65}{nuc_sub_and_elim_figures/sn2_shell}{sn2 shell}{fig:sn2shell}
+    \myfig{0.5}{nuc_sub_and_elim_figures/sn2_equation}{sn2 equation}{fig:sn2eq}
 
-  It's important to keep in mind that SN2 reaction occurs in \textbf{one step} (bond making/breaking occurs simultaneously), meaning there are no intermediates such as those we have seen in the two step propagation of radical halogenation. As such, the energy diagram of SN2 reactions only consists of one hill and is exothermic when the Nu is a more favorable attachment over L, a topic we will discuss below. \textit{L is denoted as X in the figure below.}
-  
-  \myfig{0.35}{nuc_sub_and_elim_figures/sn2_energy_diagram}{sn2 energy diagram}{fig:sn23diagram}
- 
-  A result of reaction being one step is \textbf{stereospecificity} or, in other words, there is ALWAYS an inversion. A couple of points to keep in mind is that [1] inversion does not always imply a shift between the R and S configuration, [2] molecules show structural retention by two SN2 reactions (a.k.a. double inversion), [3] performing SN2 on only one chiral center of a molecule with two chiral centers will result is a diastereoisomer (a non-mirror-image stereoisomer), and [4] if you start with a \textbf{racemate} (50/50 mix of R/S enantiomers), SN2 will invert all of them, resulting in products that remain racemates. All of these points are intuitive with a bit of thinking about the structural consequences of the SN2 mechanism, but may not be so obvious at first glance.
+    Here, Cl is the leaving group and \ce{OH-} is the nucleophile. From a 3D point of view, we see the following outline interaction.
 
-  Before we move onto SN1 reactions, let's take some time to define what makes a \textbf{"good" leaving group and nucleophile}.
+    \myfig{0.65}{nuc_sub_and_elim_figures/sn2_shell}{sn2 shell}{fig:sn2shell}
 
-  There are two factors that determined whether a LEAVING GROUP is good: \textbf{electronegativity} and \textbf{orbital size}. In the context of EN, a good L is also a weak base \ce{A-}, which can accomodate an extra \ce{e^-} well (\textbf{are stable with an extra \ce{e^-}}) because they are highly electronegative. In the context of orbital size (OS), a larger OS element is more inclined to dissociate because of its relatively weak bond because their molecular bonding orbital occur at higher levels compared to elements with smaller OS. Thus better L groups appear as you go from left to right ($\rightarrow$) and from top to bottom ($\downarrow$) within the periodic table.
+    It is important to note that \snt reactions occur in \textbf{one step}, where bond making and breaking occur simultaneously, meaning there are no intermediates --- unlike the two step propagation of radical halogenation (EXTERNAL REFERENCE TO RAD HAL). Consequently, the energy diagram consists of a single hill and is exothermic when the nucleophile is a more favorable attachment than the leaving group. \textit{L is denoted as X in the figure below.}
 
-  \myfig{0.3}{nuc_sub_and_elim_figures/L_ptable}{l ptable}{fig:lptable}
+    \myfig{0.35}{nuc_sub_and_elim_figures/sn2_energy_diagram}{sn2 energy diagram}{fig:sn23diagram}
 
-  Let's compare down the periodic table for halogens.
+    A result of the reaction being one step is \textbf{stereospecificity} --- there is \textit{always} an inversion. A few key consequences of this are worth keeping in mind:
 
-  \[
+    \begin{enumerate}
+
+
+\item Inversion does not always imply a shift between the R and S configuration (EXTERNAL REFERENCE TO CONFORMATIONAL ANALYSIS)
+
+\item Two successive \snt reactions result in structural retention (double inversion)
+      \item Performing \snt on only one chiral center of a molecule with two chiral centers yields a diastereoisomer (a non-mirror-image stereoisomer)
+
+\item Starting with a \textbf{racemate} (a 50/50 mix of R and S enantiomers) will still yield a racemate, as all configurations are inverted
+    
+\end{enumerate}
+
+    All of these points follow intuitively from the structural consequences of the \snt mechanism, though they may not be immediately obvious.
+
+  \end{core}  
+
+  Before exploring \sno reactions, it is worth establishing what defines a \textbf{"good" leaving group and nucleophile}, as this governs the outcome of both mechanisms.
+
+  \begin{core}{Leaving Group Quality}
+
+    There are two factors that determine whether a leaving group is good: \textbf{electronegativity} and \textbf{orbital size}. Regarding electronegativity, a good leaving group is also a weak base \ce{A-} --- one that is stable with an extra \ce{e^-} due to its high electronegativity. Regarding orbital size, a larger orbital size element forms relatively weaker bonds, as its molecular bonding orbitals occur at higher energy levels compared to smaller elements, making it more inclined to dissociate. Together, these two factors mean that better leaving groups appear moving left to right ($\rightarrow$) and top to bottom ($\downarrow$) across the periodic table.
+
+    \myfig{0.3}{nuc_sub_and_elim_figures/L_ptable}{l ptable}{fig:lptable}
+
+    Comparing down the periodic table for halogens:
+    \[
       \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
-  \]
+    \]
 
-  The best leaving group would be I because its OS is the largest. In fact, I is such a good leaving group that it won't even participate in radical halogenation like we have seen previously. So in practice, I is not used. On the opposite end, F has the smallest OS, thus it has a much stronger bond because its bonding interactions are done through lower level orbitals, making it a much worse leaving group.
+    \ce{I-} is the best leaving group due to its large orbital size and correspondingly weak bond. Notably, \ce{I-} is such a great leaving group that it does not even participate in radical halogenation, making it impractical in that context. \ce{F-}, on the other hand, has the smallest orbital size, forming much stronger bonds through lower energy orbitals, making it the poorest leaving group of the halogens.
 
-  When we compare across the periodic table (row 2) we see
-
-  \[
+    Comparing across the periodic table (\textit{row 2}):
+    \[
       \ce{-CH3} < \ce{-NH2} < \ce{-OH} < \ce{-F}
-  \]
+    \]
 
-  The best leaving group would be F due to its greater electronegativity relative to O, N, and C. As discuessed previously, this is because the leaving group must be able to be stable with and accomadate an extra \ce{e^-} when leaving the electrophile. In practice, \ce{F-} is still a poor leaving group compared to other leaving groups across the entire periodic table, \ce{HO-} is exceedingly poor, and \ce{NH2-} and \ce{CH3-} do not leave at all.
+    Here, \ce{F-} is the best leaving group due to its greater electronegativity relative to O, N, and C, allowing it to better stabilise the extra \ce{e^-} upon departure. In practice however, \ce{F-} remains a poor leaving group relative to the broader periodic table, \ce{HO-} is exceedingly poor, and \ce{NH2-} and \ce{CH3-} do not leave at all.
 
-  In the context of multiatomic L groups, an important factor that increases their leaving abilty is \textbf{resonance} (a.k.a. $\pi$ conjugation). Recall the delocalization of \ce{e^-}s in an adjacent system of p orbitals. The ability to absorb excess charge increases as the L's ability to delocalize \ce{e^-}s increases. \textit{A larger delocalization system makes the L a weaker base also.}
+    For \textbf{polyatomic} leaving groups, \textbf{resonance} (π conjugation) plays an important additional role. The ability to delocalise \ce{e^-}s across an adjacent p orbital system allows the leaving group to absorb excess charge more effectively --- a larger delocalization system not only stabilises the extra charge but also weakens the leaving group's basicity, making it a better leaving group overall.
 
-  
-  \myfig{0.6}{nuc_sub_and_elim_figures/L_delocalization}{l delocalization}{fig:ldelocalization}
+    \myfig{0.6}{nuc_sub_and_elim_figures/L_delocalization}{l delocalization}{fig:ldelocalization}
 
-  Now let's move onto NUCLEOPHILES. 
+  \end{core}
 
-  Better nucleophilicity depends on four different factors: charge-basicity (for some atoms), basicity, solvation, and polaizability. Let's go through these factors one at a time.
+  \begin{core}{Nucleophile Quality}
 
-  \textbf{Charge-basicity} refers the favorability of an anion (compared to its cooresponding neutral state) to want to form a bond with a cation in order to delocalize its net negative charge.
+    Nucleophilicity depends on four factors: \textbf{charge-basicity}, \textbf{basicity}, \textbf{solvation}, and \textbf{polarizability}.
 
-  \[
-      \ce{OH-} > \ce{H2O}\qquad\qquad\ce{NH2-} > \ce{NH3}\qquad\qquad\ce{SO4^{2-}} > \ce{ROSO3-}
-  \]
+    \begin{enumerate}
 
-  \textbf{Basicity} is referring specifically to how much the nucleophile wants to share an \ce{e^-} (\textit{and thus bond}) with the electrophile. This is analogous to how it wants to share and \ce{e^-} and bond with \ce{H^+}. Thus elements become more nucleophilic as its electronegativity decreases (\textit{from right to left of the periodic table})
 
-  \[
-      \ce{H3N} > \ce{H2O}\qquad\qquad\ce{H2N-} > \ce{HO-}\qquad\qquad\ce{HO-} > \ce{F-}
-  \]
+\item \textbf{Charge-basicity} refers to the greater tendency of an anion, relative to its neutral counterpart, to form a bond with a cation in order to delocalise its net negative charge.
+      \[
+        \ce{OH-} > \ce{H2O}\qquad\qquad\ce{NH2-} > \ce{NH3}\qquad\qquad\ce{SO4^{2-}} > \ce{ROSO3-}
+      \]
 
-  \textbf{Solvation} refers to the ability of the surrounding solvent to impede the Nu ability to bind with the E. In polar \textbf{protic solvents} (solvents like water or ethanol that have O-H and N-H bonds) can form strong hydrogen bonds with the Nu, effectively "handcuffing" the Nu from interacting with E. Larger molecules tend to have lower charge densities because they possess a larger \ce{e^-} cloud, which makes the "pull" they exert on solvent molecules much weaker and thus they are better Nu than smaller elements. 
+      \item \textbf{Basicity} refers to how readily the nucleophile donates \ce{e^-} density to the electrophile --- analogous to how it would donate to \ce{H+}. As electronegativity decreases moving right to left across the periodic table, nucleophilicity increases accordingly.
+      \[
+        \ce{H3N} > \ce{H2O}\qquad\qquad\ce{H2N-} > \ce{HO-}\qquad\qquad\ce{HO-} > \ce{F-}
+      \]
 
-  \[
-      \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
-  \]
+      \item \textbf{Solvation} refers to the ability of the surrounding solvent to impede the nucleophile's ability to attack the electrophile. In \textbf{polar protic solvents} (\textit{such as water or ethanol, which contain O-H and N-H bonds}), strong hydrogen bonds effectively "handcuff" the nucleophile. Larger nucleophiles are less susceptible to this because their diffuse \ce{e^-} clouds result in lower charge densities, weakening the solvent's grip.
+      \[
+        \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
+      \]
 
-  In the case of polar \textbf{aprotic solvents} (solvents that are still polar but lack O-H and N-H bonds), the molecules cannot form strong hydrogen bonds, hence the Nu is much less impeded from interacting with the E. Thus the trend completely reverses to follow basicity like we have covered previously.
-  
-  \[
-      \ce{I-} < \ce{Br-} < \ce{Cl-} < \ce{F-}
-  \]
+      In \textbf{polar aprotic solvents} (\textit{polar solvents lacking O-H and N-H bonds}), hydrogen bonding is absent and the nucleophile is largely unimpeded. The trend therefore reverses to reflect intrinsic basicity.
+      \[
+        \ce{I-} < \ce{Br-} < \ce{Cl-} < \ce{F-}
+      \]
 
-  \textit{Mind that still in the grand scheme of things, \ce{F-} is still a weak base, it does not compare to other bases towards the left of it on the periodic table like \ce{OH-} or \ce{NH2-}. It is simply a better base than larger elements like \ce{I-}.}
+      \textit{Note that \ce{F-} remains a weak base in the grand scheme --- it is simply less solvated than \ce{I-} in protic solvents, and does not compare to stronger bases such as \ce{OH-} or \ce{NH2-}.}
 
-  \textbf{Polarizability} refers to the large, more diffused, and more polarizable \ce{e^-} clouds of larger elements. These characteristics allows for more effective orbital overlap in the SN2 transition state compared to smaller elements. Thus
+      \item \textbf{Polarizability} refers to the large, diffuse \ce{e^-} clouds of heavier elements, which allow for more effective orbital overlap in the \snt transition state.
+      \[
+        \ce{H2O} < \ce{H2S} < \ce{H2Se} \qquad\text{or}\qquad \ce{(CH3)3N} < \ce{(CH3)3P}
+      \]
+    
+\end{enumerate}
 
-  \[
-      \ce{H2O} < \ce{H2S} < \ce{H2Se} \qquad\text{or}\qquad \ce{(CH3)3N} < \ce{(CH3)3P}
-  \]
+    Nucleophilicity arises from a complex interplay of these factors. At its core, it is driven by \textbf{basicity}, which governs the horizontal periodic trend --- atoms become less electronegative and more willing to donate \ce{e^-} density moving left. The vertical trend, however, is governed by the solvent. In \textbf{polar protic solvents}, smaller nucleophiles such as \ce{F-} are heavily solvated, making larger, less-impeded ions like \ce{I-} the stronger attackers. In \textbf{polar aprotic solvents}, these hydrogen-bonding impediments are absent, allowing the intrinsically more basic smaller ions to reassert themselves as the stronger nucleophiles. \textbf{Polarizability} provides larger elements an additional advantage in \snt transition states, as their more diffuse \ce{e^-} clouds can begin overlapping with the electrophilic carbon's orbital from a greater distance.
 
-  Nucleophilic ability tends to have a much more complex interplay of factors. To help digest, here is a quick summary of the points we've covered.
+    \myfig{0.35}{nuc_sub_and_elim_figures/Nu_ptable}{nuptable}{fig:nuptable}
 
-  \myfig{0.35}{nuc_sub_and_elim_figures/Nu_ptable}{nuptable}{fig:nuptable}
 
-  At the core, nucleophilicity is driven by \textbf{basicity}, which explains the horizontal periodic trend: as you move to the left, atoms become less EN and more willing to donate their \ce{e^-} density. However, the vertical trend is dictated by the "Solvent Switch." In \textbf{polar protic solvents} (like water or alcohols), smaller nucleophiles like F- are heavily "handcuffed" by a dense cage of hydrogen bonds, making larger, less-solvated ions like I- the superior attackers. Conversely, in \textbf{polar aprotic solvents} (like DMSO or acetone), these hydrogen-bonding "impediments" are absent, allowing the "naked" and inherently more basic smaller ions to regain their status as the strongest nucleophiles. Beyond basicity and solvation, \textbf{polarizability} gives larger elements a natural advantage in SN2 transition states, as their large, "squishy" electron clouds can distort and begin overlapping with the electrophilic carbon's orbital from a greater distance.
+  \end{core}
 
-  \textbf{Steric effects} are a factor that must be considered for both Nu and L. Steric effects refer to the \ce{e^-} \ce{e^-} repulsion that exist between the Nu/L and the surrounding 3 groups bonded to the target E. 
-  
-  \myfig{0.7}{nuc_sub_and_elim_figures/sterics}{sterics}{fig:sterics}
+  \begin{core}{Steric Effects on Nucleophilic and Leavin Group Ability}
+    
+    \textbf{Steric effects} must be considered for both the nucleophile and leaving group. Steric effects arise from \ce{e^-} \ce{e^-} repulsion between the nucleophile or leaving group and the three substituents bonded to the target electrophile.
 
-  As a consequence of this repulsion, \textbf{leaving groups are better when they are larger} (because the repulsion is working towards pushing the L away from the E) and \textbf{nucleophiles are better when they are smaller} (because the repulsions impede its ability to attack the E as shown in the figure above).
+    \myfig{0.7}{nuc_sub_and_elim_figures/sterics}{sterics}{fig:sterics}
 
-  This steric hinderance is often the greatest when the added groups are directly on the electrophile (the target carbon, $\alpha$) and less impactful when added on farther neighboring atoms ($\beta$, $\gamma$, $\delta$, etc.)
-  
-  \myfig{0.8}{nuc_sub_and_elim_figures/alpha_beta_branching}{alpha beta branching}{fig:abbranching}
+    As a consequence, \textbf{leaving groups are better when larger}, as the repulsion assists their departure, while \textbf{nucleophiles are better when smaller}, as bulk impedes their approach. This steric hindrance is greatest when substituents are directly on the electrophilic carbon (α) and diminishes with distance (β, γ, δ, etc.).
 
-  Okay, now let's move onto SN1 reactions. Like its name suggests, SN1 reaction are \textbf{unimolecular} reactions where the rate is solely determined by [R-L]. 
-  
-  \[
-      rate = k[\ce{R-L}]
-  \]
-  
-  Unlike SN2, SN1 happens through a series of distinct steps.
-  
-  Let us look at the outline mechanism of an SN1 reaction.
+    \myfig{0.8}{nuc_sub_and_elim_figures/alpha_beta_branching}{alpha beta branching}{fig:abbranching}
 
-  \myfig{0.7}{nuc_sub_and_elim_figures/sn1}{sn1}{fig:sn1}
- 
-  The very first step---the spontaneous dissociation of L from the electrophile---is the \textbf{rate limiting step} because it is highly unfavorable (although it does happen in miniscule amounts at Eq). This makes it the bottleneck of the reaction. This is followed by the nucleophilic attack of either side of the $sp^2$ hybridized electrophile's perpendicular p orbitals.
+  \end{core}
 
-  There are a few points that should be kept in mind regarding SN1 reactions based on its mechanism.
+  \begin{core}{\sno}
 
-  Firstly, as shown in the figure, the nucleophilic attack is \textbf{not stereospecific}. A pure cis (or trans) reactant pool will result in a cis/trans mix of products when put through an SN1. In practice, \textbf{slight inversion} is observed due to the lingering presence of the leaving group around the carbocation p orbital via ionic attraction, leading to a brief physical blockade for the nucleophile.
+    \sno reactions are \textbf{unimolecular}, meaning the reaction rate is solely determined by [\ce{R-L}].
+    \[
+      \text{reaction rate} = k[\ce{R-L}]
+    \]
 
-  Secondly, because the reaction rate is only limited by the formation of the $sp^2$ hybridized carbocation, the \textbf{rate increases with a better leaving group}. Thus
+    Unlike \snt, \sno proceeds through a series of distinct steps.
 
-  \[
-      \ce{-Cl} < \ce{-Br} < \ce{-I} < \ce{-O3SR}
-  \]
+    \myfig{0.7}{nuc_sub_and_elim_figures/sn1}{sn1}{fig:sn1}
 
-  Thirdly, unlike SN2 reactions, \textbf{SN1 reactions accelerates with increasing polarity of solvents} (best with protic solvents). This is becasue as the leaving group (\ce{L-}) begins to depart, polar solvent molecules swarm it, forming a stable "cage" through hydrogen bonding. This "solvation" stabilizes the leaving group, making it much easier for it to leave in the first place.
+    The first step --- spontaneous dissociation of the leaving group from the electrophile --- is the \textbf{rate limiting step}, as it is highly unfavourable, forming only trace amounts of carbocation at equilibrium. This makes it the bottleneck of the reaction, after which the nucleophile attacks either face of the $sp^2$ hybridised electrophile's perpendicular p orbitals.
 
-  \myfig{0.7}{nuc_sub_and_elim_figures/sn1_solvent}{sn1 solvent}{fig:sn1solvent}
+    Several important consequences follow from this mechanism.
 
-  \textit{Notice that the previous two points are based on the same concept of improving the leaving ability of the L group to accelerate the SN1 reaction rate.}
-  
-  Lastly, the \textbf{product detemining steps occur after the "bottleneck"}---the formation of the carbocation. The dominant product within a solution of multiple potential nucleophiles is chosen through \textbf{competition}. The best nucleophile will bond with the intermediate to form the dominant product. For instance, take the scenario of having a mixture of NaCl and NaI in a solution of acetone.
+    \begin{enumerate}
 
-  \myfig{0.7}{nuc_sub_and_elim_figures/sn1_nu_competition}{sn1 nu competition}{fig:sn1nucomp}
 
-  \textit{Notice that the overall reaction rate is identical across all paths because it is solely dependent on the departure of the leaving group, which is constant across all three of the reactions above. And because the solvent is aprotic, Cl is a better Nu than I.}
+\item \sno nucleophilic attack is \textbf{not stereospecific}. A stereochemically pure reactant pool will yield a mixture of stereoisomers upon \sno. In practice, \textbf{slight inversion} is observed due to the transient physical blockade created by the lingering leaving group, which remains in proximity to the carbocation p orbital through ionic attraction.
 
-  So... what makes SN1 possible? Afterall, its overall function is essentially identical to SN2. So why would a system favor SN1 over SN2 or vice versa? Two reasons.
-  
-  (1) $\alpha$-branching slows down competing SN2 reactions (\textit{recall that due to steric hinderance, it is virtually impossible for a nucleophile to approach a tertiary electrophile in an SN2 manner})
+\item Because the rate is limited solely by carbocation formation, the \textbf{rate increases with a better leaving group}.
+      \[
+        \ce{-Cl} < \ce{-Br} < \ce{-I} < \ce{-O3SR}
+      \]
+      \item \textbf{\sno is accelerated by increasingly polar solvents}, particularly polar protic solvents. As the leaving group begins to depart, polar solvent molecules stabilise it through hydrogen bonding, effectively lowering the energy barrier for its departure.
 
-  (2) $\alpha$-branched carbocations are stabilized by hyperconjugation with neighboring molecular orbitals
-  
-  \myfig{0.75}{nuc_sub_and_elim_figures/sn1_sn2}{sn1 sn2}{fig:sn1sn2}
+      \myfig{0.7}{nuc_sub_and_elim_figures/sn1_solvent}{sn1 solvent}{fig:sn1solvent}
 
-  Here is a table nicely summarizing SN1 and SN2 reaction favorabilities across different target molecules. \textit{Notice that the favorabilties when R is secondary depends heavily on factors like solvent and type of Nu/L rather than inherently favoring one over the other}.
+      \item \textbf{Product-determining steps occur after the bottleneck}. Once the carbocation intermediate forms, the dominant product is determined by nucleophilic competition --- the strongest nucleophile in solution will attack preferentially. Consider, for instance, a mixture of NaCl and NaI in acetone.
 
-  \begin{center}
-  \begin{tabularx}{\textwidth}{lXX}
-  \hline
-  R & SN1 & SN2 \\
-  \hline
-  \ce{CH3} & \textbf{Not observed} (methyl cation too high energy) & \textbf{Frequent} (fast with good Nu/L) \\
-  Primary & \textbf{Not observed} (primary carbocation too high energy) & \textbf{Frequent} (fast with good Nu/L, slow when $\beta$ branching present) \\
-  Secondary & \textbf{Relatively slow} (best with good L in polar protic solvents) & \textbf{Relatively slow} (best with high concentrations of good Nu in polar aprotic solvents) \\
-  Tertiary & \textbf{Frequent} (particularly fast in polar, protic solvents and good L) & \textbf{Extremely slow} \\
-  \hline
-  \end{tabularx}
-  \end{center}
+      \myfig{0.7}{nuc_sub_and_elim_figures/sn1_nu_competition}{sn1 nu competition}{fig:sn1nucomp}
+    
+\end{enumerate}
+
+    Here, the overall reaction rate is identical across all paths, as it depends solely on the departure of the leaving group (\textit{regardless of the nucleophile identity}). Because acetone is a aprotic solvent, the \ce{Cl-} product will be favored under a mixture of \ce{Cl-} and \ce{I-} because \ce{Cl-} is a stronger nucleophile than \ce{I-} is.
+
+  \end{core}
+
+  \begin{core}{Competition between \snt and \sno}
+    
+    This raises an important question --- if \sno and \snt ultimately achieve the same outcome, what drives a system to favour one over the other? Two factors determine this.
+
+    \begin{enumerate}
+
+
+\item α-branching disfavours \snt by sterically impeding nucleophilic approach, making it virtually impossible for a nucleophile to attack a tertiary electrophile in an \snt fashion.
+
+\item α-branched carbocations are stabilised by hyperconjugation with neighbouring molecular orbitals, lowering the energy of the rate-limiting step and making \sno viable.
+    
+\end{enumerate}
+
+    \myfig{0.75}{nuc_sub_and_elim_figures/sn1_sn2}{sn1 sn2}{fig:sn1sn2}
+
+    The table below summarises the conditions favouring \sno and \snt across different substrate classes. \textit{Note that secondary R substrates do not inherently favour either mechanism --- the outcome depends heavily on solvent and the nature of the nucleophile and leaving group.}
+
+    \begin{center}
+      \begin{tabularx}{\textwidth}{lXX}
+        \hline
+        R & \sno & \snt \\
+        \hline
+        \ce{CH3} & \textbf{Not observed} (methyl cation too high energy) & \textbf{Frequent} (fast with good Nu/L) \\
+        Primary & \textbf{Not observed} (primary carbocation too high energy) & \textbf{Frequent} (fast with good Nu/L, slow when $\beta$ branching present) \\
+        Secondary & \textbf{Relatively slow} (best with good L in polar protic solvents) & \textbf{Relatively slow} (best with high concentrations of good Nu in polar aprotic solvents) \\
+        Tertiary & \textbf{Frequent} (particularly fast in polar, protic solvents and good L) & \textbf{Extremely slow} \\
+        \hline
+      \end{tabularx}
+    \end{center}
+
+  \end{core}
+
 
 \section{Elimination}
-
-  While substitution reactions were about replacing one group with another, \textbf{elimination} reactions are about \textbf{removal}. In an elimination reaction, a molecule loses two atoms or groups (typically a L group and a hydrogen atom) to form a new $\pi$ bond, resulting in an alkene.
-
-  There are two types of elimination reactions: E1 and E2. Let's first look at E1. 
-
-  In SN1, after the formation of a carbocation, the \ce{Nu-} can ALSO act as a base (\ce{B-}), affecting the deprotonation of a neighboring alkyl. \textit{Mind that this scenario would not work in methane because of the absence of a neighboring alkyl.} This results in the formation of a $\pi$ bonded alkene over the course of \textbf{two distinct steps} (\textit{just like SN1}).
-   
-  \myfig{0.8}{nuc_sub_and_elim_figures/e1}{e1}{fig:e1}
-
-  Here the rate determining step is the same as that of SN1 and thus E1 is also a first-order reaction where its rate is only determined by [R-L]. Here is a closer look at the deprotonation step to help visualize the orbtial shifts that occur.
   
-  \myfig{}{nuc_sub_and_elim_figures/e1_deprotonation}{e1 deprotonation}{fig:e1depro}
+  \begin{core}{Elimination} 
 
-  And because the deprotonation step can occur to any neighboring $\beta$ C-H, E1 gives us a mixture of alkanes under all of its possible scenarios (\textit{except for a primary carbocation without a $\gamma$ C}). Notice that rotation around the $\pi$ bond leads to different stereoisomers.
-  
-  \myfig{0.8}{nuc_sub_and_elim_figures/e1_mixture}{e1 mixture}{fig:e1mix}
-  
-  It's important to note that both SN1 and E1 share the exact same rate-determining step: the spontaneous departure of the leaving group to form a carbocation. By the time the carbocation will undergo substitution or elimination, the L group has already departed and is out of the picture. This makes the ratio of \textbf{SN1 to E1 product independent of L}.
+    While substitution reactions involve replacing one group with another, \textbf{elimination} reactions involve \textbf{removal} --- specifically, the loss of a leaving group and an adjacent hydrogen to form a new π bond, yielding an alkene. Like nucleophilic substitution, elimination reactions are classified into two types: E1 and E2.
 
-  In that regard, there must be a way to predict a carbocation's preference between an SN1 and E1 reaction. This ratio is difficult to predict, but generally more E1 products are formed when 
+  \end{core}
 
-  (1) \textbf{Higher T} because entropy of elimination is positive: HRL + B is converted to R + L + BH. 
+  \begin{core}{Elimination 1 (E1)}
 
-  (2) The E1/SN1 ratio increases in favor of E1 when using a \textbf{poor nucleophile}. This is because SN1 requires the reagent to form a new carbon-Nu bond, necessitating higher nucleophilic 'strength.' E1 is less sensitive to this because the reagent acts as a base, simply plucking a \ce{H^+} from the molecule's exterior rather than attempting to integrate into the molecular framework.
+    Following carbocation formation in \sno, the nucleophile can alternatively act as a base (\ce{B-}), deprotonating a neighbouring alkyl group to yield a π bonded alkene over two distinct steps. \textit{Note that this pathway requires a neighbouring alkyl group and is therefore not possible for methane.}
 
-  But what about \textbf{strong bases}?
+    \myfig{0.8}{nuc_sub_and_elim_figures/e1}{e1}{fig:e1}
 
-  Strong bases attack the R-L \textbf{directly} at the $\beta$ C-H. This is the \textbf{E2} mechanism, which is faster than SN1/E1 and also faster than SN2, if sterically hindered by $\alpha$ or $\beta$ branching. E2 simply does each distinct step done in E1 simultaneously.
- 
-  \myfig{0.9}{nuc_sub_and_elim_figures/e2_ts}{e2 ts}{fig:e2ts}
+    The rate-determining step is identical to that of \sno, making E1 a first-order reaction whose rate depends solely on \ce{[R-L]}. A closer look at the deprotonation step is provided below.
 
-  Here are a few important points about E2 reactions:
+    \myfig{}{nuc_sub_and_elim_figures/e1_deprotonation}{e1 deprotonation}{fig:e1depro}
 
-  Unlike E1 reactions, E2 reactions are \textbf{second order} because the transition state depends on both the R-L and the cooresponding strong base (B).
+    Since deprotonation can occur at any neighbouring β C-H, E1 generally yields a mixture of alkenes across all possible pathways. Rotation around the resulting π bond gives rise to different stereoisomers.
 
-  \[
+    \myfig{0.8}{nuc_sub_and_elim_figures/e1_mixture}{e1 mixture}{fig:e1mix}
+
+    Crucially, \sno and E1 share the exact same rate-determining step --- spontaneous departure of the leaving group to form a carbocation. Since the leaving group has already departed by the time the carbocation partitions between substitution and elimination, the \textbf{\sno to E1 product ratio is independent of L}.
+
+    The ratio between E1 and \sno products is difficult to predict precisely, but E1 is generally favoured under two conditions.
+
+    \begin{enumerate}
+
+
+\item \textbf{Higher temperature}, as elimination carries a positive entropy change: \ce{HRL + B -> R + L + BH}.
+
+\item A \textbf{poor nucleophile}, as \sno requires the reagent to form a new C-Nu bond, demanding greater nucleophilic strength. E1 is less sensitive to this since the reagent acts purely as a base, abstracting a surface \ce{H+} rather than integrating into the molecular framework.
+
+    
+\end{enumerate}
+
+    But what about \textbf{strong bases}?
+
+  \end{core}
+
+  \begin{core}{Elimination 2 (E2)}
+
+    Strong bases attack \ce{R-L} \textbf{directly} at the β C-H, constituting the E2 mechanism. E2 is faster than \sno/E1 and faster than \snt when sterically hindered by α or β branching, as it condenses the distinct steps of E1 into a single concerted process.
+
+    \myfig{0.9}{nuc_sub_and_elim_figures/e2_ts}{e2 ts}{fig:e2ts}
+
+    Unlike E1, E2 is \textbf{second order} because the transition state involves both the substrate and the base.
+    \[
       Rate = k[\ce{R-L}][\ce{B-}]
-  \]
+    \]
 
-  As such, a better L group and stronger B will accelerate the reaction as well.
-
-  \[
+    Consequently, a better leaving group and a stronger base both accelerate the reaction.
+    \[
       \ce{RCl} < \ce{RBr} < \ce{RI}
-  \]
+    \]
 
-  \ce{e^-} withdrawing neighbors within the target molecule will accelerate E2 reactions because they make the target H more acidic by "hogging" its \ce{e^-} density.
-  
-  \myfig{0.5}{nuc_sub_and_elim_figures/e2_en}{e2 en}{fig:e2en}
+    Additionally, electron-withdrawing substituents within the substrate accelerate E2 by increasing the acidity of the target β C-H through withdrawal of its \ce{e^-} density.
 
-  Lastly, the E2 reaction is stereospecific. One diasteromer of RL will give \textbf{only one} stereoisomer of the alkane product. For instance, an RR and SS mixture will only give one product.
+    \myfig{0.5}{nuc_sub_and_elim_figures/e2_en}{e2 en}{fig:e2en}
 
-  \myfig{0.6}{nuc_sub_and_elim_figures/rrss}{rrss}{fig:rrss}
+    E2 is also \textbf{stereospecific} --- a given diastereomer of \ce{R-L} yields only one stereoisomer of the alkene product. For instance, an RR/SS mixture yields exclusively one product, while an RS/SR mixture yields exclusively another.
 
-  On the other hand, an RS and SR mixture will also give one product but a different one from the RR and SS mixture.
-  
-  \myfig{0.6}{nuc_sub_and_elim_figures/rssr}{rssr}{fig:rssr}
+    \myfig{0.6}{nuc_sub_and_elim_figures/rrss}{rrss}{fig:rrss}
 
-  In E2 reactions, the \ce{H^+} and L group departure happens simultaneously to form a consequent $\pi$ bond, thus the initial positions of the \ce{H^+} and L groups must be coplanar to allow the alignment of subsequent p orbitals. This can happen in one of two ways: \textbf{anti}-periplanar geometry (\textit{a.k.a. trans}) or \textbf{syn}-periplanar geometry (\textit{a.k.a. cis}).
+    \myfig{0.6}{nuc_sub_and_elim_figures/rssr}{rssr}{fig:rssr}
 
-  In the case where the relevant C-C bond is freely able to rotate, it will preferentially be the case that it arranges itself in a anti-periplanar geometry because it minimizes steric hinderance between the L group and the \ce{H-B} transitionary complex.
+    This stereospecificity arises because \ce{H+} and L depart simultaneously, requiring their initial positions to be coplanar to permit proper p orbital alignment in the forming $\pi$ bond. This coplanarity can be achieved through either \textbf{anti}-periplanar (\textit{trans}) or \textbf{syn}-periplanar (\textit{cis}) geometry. When the relevant C-C bond can rotate freely, anti-periplanar geometry is strongly preferred as it minimises steric repulsion between the leaving group and the \ce{H-B} transition complex.
 
-  What about cases where the C-C bond is not freely able to rotate? such as cycloalkanes?
- 
-  \myfig{0.65}{nuc_sub_and_elim_figures/anti_syn}{anti syn}{fig:antisyn}
+    In cases where free rotation is restricted --- such as in cycloalkanes --- syn-periplanar geometry must be adopted instead. This proceeds at a slower rate due to the increased steric hindrance between the leaving group and the \ce{H-B} transition complex. 
 
-  The reaction proceeds but at a much slower rate due to steric hinderance between the L group and the \ce{H-B} transitionary complex.
+    \myfig{0.65}{nuc_sub_and_elim_figures/anti_syn}{anti syn}{fig:antisyn}
 
-  In comparison to SN2 reactions, E2 will be ensured when SN2 is slowed or shut down due to $\alpha$ carbon steric hinderance
+  \end{core}
   
 \section{Competition}
 
-  So far, we have learned the mechanics and different characteristics of SN2, SN1, E1, and E2 reactions. Generally, they can be all be simultaneously possible across many overlapping scenarios, thus all four reactions are in competition with one another in a given reaction environment. Here is a table organizing this situation.
+  Having established the mechanics and characteristics of \snt, \sno, E1, and E2 reactions, it is important to recognise that all four pathways can be simultaneously possible across many overlapping conditions --- and thus compete with one another in a given reaction environment. The table below organises these competing factors.
 
   \begin{table}[H]
   \centering
@@ -274,29 +316,43 @@
   \end{tabularx}
   \end{table}
 
-  There are 3 core factors that affect the competition between SN and E.
+  \begin{core}{Factors of Competition between \snt, \sno, E1, and E2}
 
-  (1) Base strength of the nucleophile
+    Three core factors govern the competition between substitution and elimination.
 
-  (2) Steric hinderance around the reacting carbon
+    \begin{enumerate}
 
-  (3) Steric hinderance around the nucleophile when the nucleophile is a strong base
 
-  Let's analyze across each row of the table.
+\item The base strength of the nucleophile
 
-  \textbf{PRIMARY UNHINDERED/BRANCHED:} Firstly, under poor Nu circumstances, E1 nor SN1 are possible due to insufficient hyperconjugation to maintain a carbocation. SN2 nor E2 also do not work because their rate determining step is dependent on the strength of the Nu. From the "Weakly basic, good Nu" to "Strongly basic, hindered Nu", the main determining factor is hinderance either along the haloalkane itself (via $\beta$ branching) or the nucleophile (either via being a physically large or made large through solvation in protic solvents). The more hindered, E2 is preferred over SN2.
+\item Steric hindrance around the reacting carbon
 
-  \textbf{SECONDARY:} From here, hyperconjugation is large enough to support the carbocation state, thus SN1 and E1 are possible under poor Nu conditions. However, E1 is more dominant because its easier for a Nu to pluck a single \ce{H^+} rather than and integrate into the haloalkane structure. For the rest of the scenarios, the haloalkane is already sterically hindered, thus the system would much rather do an E2, however it will prefer SN2 if the Nu is weakly basic enough to be uncapable of riping the \ce{H^+} off of the relevant carbon as the E2 transition state depends on this ability of the Nu/base.
+      \item Steric hindrance around the nucleophile, particularly when it is a strong base
 
-  \textbf{TERTIARY:} Due to high steric hinderance, the possibility of SN2 reactions are completely shut down, thus under weakly basic, good Nu conditions, SN1 will reign supreme. In strongly basic Nu conditions, E2 still dominates like it has done in even secondary haloalkane conditions. Under poor Nu conditions, the SN1 to E1 ratio starts to even out compared to the secondary conditions. This is because the intermediate carbocation is much more stable relative to the secondary version, thus it takes much less activation energy for the SN1 reaction to occur.
+    
+\end{enumerate}
 
-  Generally speaking, rather than memorizing each of these scenarios and their cooresponding dominant mechanism, it's helpful to start with SN2 as a starting point and ask yourself the following questions.
-  
-  (1) Is the Nu or haloalkane hindered? \textit{If yes, the SN2 reaction is likely not favored.}
+    \textbf{Primary substrates:} Under poor nucleophile conditions, neither E1 nor \sno are viable due to insufficient hyperconjugation to sustain a carbocation, and neither \snt nor E2 proceed effectively as both depend on nucleophile strength. Moving from weakly basic to strongly hindered nucleophile conditions, the dominant factor becomes steric hindrance --- whether along the haloalkane itself via β branching, or around the nucleophile through size or solvation in protic solvents. As hindrance increases, E2 is progressively favoured over \snt.
 
-  (2) Is the Nu strongly basic? \textit{If yes, E2. If no, SN1/E1.}
+    \textbf{Secondary substrates:} Hyperconjugation is sufficient to support carbocation formation, making \sno and E1 viable under poor nucleophile conditions. E1 tends to dominate over \sno here, as abstracting a β \ce{H+} is less demanding than integrating a nucleophile into the molecular framework. For stronger nucleophile conditions, the inherent steric hindrance of the secondary substrate generally drives the system toward E2, though \snt remains competitive when the nucleophile is weakly basic --- insufficiently basic to abstract the β \ce{H+} required by the E2 transition state.
 
-  However, keep in mind that there are other nuancial factors to consider such as absence of E1 preference for weakly basic, good Nu conditions.
+    \textbf{Tertiary substrates:} Steric hindrance completely shuts down \snt, making \sno dominant under weakly basic, good nucleophile conditions. E2 dominates under strongly basic conditions, as it does for secondary substrates. Under poor nucleophile conditions, the \sno to E1 ratio becomes more balanced relative to secondary substrates --- the greater stability of the tertiary carbocation lowers the activation energy for \sno, allowing it to compete more effectively with E1.
+
+    Generally speaking, rather than memorizing each of these scenarios and their cooresponding dominant mechanism, it's helpful to start with \snt as a starting point and ask yourself the following questions.
+
+    \begin{enumerate}
+
+
+\item Is the nucleophile or haloalkane hindered? \textit{If yes, the \snt reaction is likely not favored.}
+
+\item Is the nucleophile strongly basic? \textit{If yes, E2. If no, \sno/E1.}
+
+    
+\end{enumerate}
+
+    However, keep in mind that there are other nuancial factors to consider such as absence of E1 preference for weakly basic, good nucleophile conditions.
+
+  \end{core}
   
 \end{document}
 

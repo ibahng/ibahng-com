@@ -26,7 +26,7 @@
 
 \section{Ether Synthesis}
 
-  \begin{definition}{Ethers}
+  \begin{core}{Ethers}
  
     Ethers are a class of organic compounds characterized by an oxygen bonded to two alkyl or aryl groups. Their general formula is R—O—R', where $R = R'$ (symmetrical ether) or $R \neq R'$ (asymmetrical ether).
 
@@ -38,9 +38,9 @@
           -[:-30]\ce{CH3^{\textcolor{Blue}{δ^+}}}
         }
       }
-    }{Dimethyl ether structure}{filler1}{1.2}
+    }{Dimethyl ether structure}{filler1}{1.4}
 
-  \end{definition}
+  \end{core}
 
   \begin{core}{Williamson Ether Synthesis}
    
@@ -102,7 +102,7 @@
           \text{\textit{E2 Reaction}}
         }
       }
-    }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{0.9}
+    }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{1.1}
 
   \end{core}
   
@@ -136,7 +136,7 @@
           [:0]\ce{H}\textcolor{Green}{\ce{Cl}}
         }
       }
-    }{Alcoholysis of \ce{R_{sec/tert}X}}{fig:filler4}{0.9}
+    }{Alcoholysis of \ce{R_{sec/tert}X}}{fig:filler4}{0.8}
 
     While E1 reactions still remain an unintended pathway, chemists minimize this by carrying out the reaction in lower temperatures.
 
@@ -181,7 +181,7 @@
         }
         \arrow{->}
         \chemfig{
-          *6(---
+          *6(--- 
           \textcolor{Red}{O}
           ---)
         }
@@ -194,7 +194,7 @@
           \textcolor{Blue}{\ce{H}}\textcolor{Red}{\ce{OH}}
         }
       }
-    }{Intramolecular Williamson ether synthesis}{fig:filler5}{0.9}
+    }{Intramolecular Williamson ether synthesis}{fig:filler5}{1.0}
 
     \textbf{Intramolecular are particularly favorable over intermolecular ether synthesis} because [1] it does not lower entropy and [2] highly diluted concentrations of the relevant alcohol do not effect it as much because the reaction is occurring with itself.
 
@@ -406,7 +406,7 @@
         \reactionfigarrow{bond2}{-135}{oxygen2}{-150}{Red}
         \reactionfigarrow{oxygen2}{30}{carbon1}{180}{Red}
       }
-    }{Symmetrical ether formation via \sno}{fig:filler9}{1}
+    }{Symmetrical ether formation via \sno}{fig:filler9}{0.95}
 
   \end{core} 
 
@@ -569,7 +569,50 @@
 
     When paired with a \textbf{poor nucleophile}, an \sno reaction occurs at the carbocation of \ce{R_{sec}} (\textit{stabalized by hyperconjugation}).
 
-    \myfig{0.65}{ethers_figures/er_2b}{Mixed Ether Reaction with Poor Nucleophile (SN1)}{fig:er_2b}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]
+          -[:30]
+          (-[:90])
+          -[:-30]\textcolor{Red}{O}
+          -[:30]
+          -[:-30]
+        }
+        \arrow{->[\textcolor{Blue}{\ce{H+}, \ce{H2}}\textcolor{Red}{O}][\textit{Poor Nu}]}
+        \chemfig{
+          [:0,,,,Green]
+          -[:30,,,,Black]
+          (-[:90,,,,Black])
+          -[@{bond}:-30]@{oxygen}\textcolor{Green}{\pcharge{-30}{O}}
+          (-[:-90]\textcolor{Green}{H})
+          -[:30]
+          -[:-30]
+        }
+        \arrow{->[][
+          \footnotesize\chemfig{
+            [:0,,,,Green]\textcolor{Green}{HO}
+            -[:30]
+            -[:-30]
+          }
+        ]}
+        \chemfig{
+          [:0]
+          -[:60]\pcharge{0}{}
+          -[:120]
+        }
+        \arrow{->[\textcolor{Blue}{\ce{H2}}\textcolor{Red}{O}][-\ce{H+}]}
+        \chemfig{
+          [:0]
+          -[:60]
+          (-[:0]\textcolor{Red}{O}H)
+          -[:120]
+        }
+      }
+      \chemmovearrow{
+        \reactionfigarrow{bond}{60}{oxygen}{90}{Red}
+      }
+    }{Mixed ether reaction with poor nucleophile (\sno)}{fig:filler13}{0.8}
 
   \end{core}
 
@@ -577,25 +620,143 @@
 
     t-Bu ether hydrolysis is the reverse of t-Bu ether formation covered in Core Concept \ref{core:tbu}. This reverse process is the "deprotection" of alcohol \ce{ROH} by the t-Bu cation via acid. The resulting t-Bu cation, when exposed to heat, undergoes E1 to exaporate into an alkene.
 
-    \myfig{0.65}{ethers_figures/er_3}{Hydrolysis and Deprotection of t-Butyl Ethers}{fig:er_3}
-    
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]R
+          -[:0]\textcolor{Red}{O}
+          -[:60]
+          (-[:150])
+          (-[:-30])
+          -[:60]
+        }
+        \arrow{->[\ce{H+}][]}
+        \chemfig{
+          [:0]\textcolor{Green}{R}
+          -[:0,,,,Green]@{oxygen}\textcolor{Green}{\pcharge{-120}{O}}
+          (-[:-60,,,,Green]\textcolor{Green}{H})
+          -[@{bond}:60]
+          (-[:150])
+          (-[:-30])
+          -[:60]
+        }
+        \arrow{->[][]}
+        \chemfig{
+          \textcolor{Green}{ROH}
+        }
+        \+
+        \chemfig{
+          [:0]
+          -[:30]\pcharge{150}{}
+          (-[:90])
+          -[:-30]
+        }
+        \arrow{->[Δ][-\ce{H+}]}
+        \chemname{
+          \chemfig{
+            [:0]
+            -[:60]
+            (=[:0])
+            -[:120]
+          }
+        }{Gas}
+      }
+      \chemmovearrow{
+        \reactionfigarrow{bond}{-30}{oxygen}{-20}{Red}
+      }
+    }{Hydrolysis and deprotection of t-Butyl ethers}{fig:filler14}{0.8}
+ 
   \end{core}
 
   \begin{core}{Ether Ring Opening}
     
     Ether ring openings release ring strain by a \ce{Nu-} attacking directly one of the two carbons adjacent to the oxygen. This is a regioselective process, meaning \snt occurs at the less hindered relevant carbon.
 
-    \myfig{0.9}{ethers_figures/er_4a}{Regioselective Ether Ring Opening}{fig:er_4a}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]\textcolor{Red}{\ce{CH3O}}
+          -[:60]\textcolor{Blue}{C}
+          (<:[:100,,,,Blue]\textcolor{Blue}{H})
+          (<[:170,,,,Blue]\textcolor{Blue}{H})
+          -[:0]\textcolor{Green}{C}
+          (<[:-80,,,,Green]\textcolor{Green}{\ce{CH3}})
+          (<:[:-10,,,,Green]\textcolor{Green}{\ce{CH3}})
+          -[:60]O\textcolor{Blue}{H}
+        }
+        \qquad
+        \qquad
+        \arrow{<-[\textcolor{Red}{\ce{CH3O-}}, \ce{CH3O}\textcolor{Blue}{H}][left carbon]}
+        \qquad
+        \chemfig{
+          [:-150]*3(
+          O
+          -C
+          (<:[:-170,,,,Blue]\textcolor{Blue}{H})
+          (<[:-100,,,,Blue]\textcolor{Blue}{H})
+          -C
+          (<:[:-10,,,,Green]\textcolor{Green}{\ce{CH3}})
+          (<[:-80,,,,Green]\textcolor{Green}{\ce{CH3}})
+          -
+          )
+        }
+        \qquad
+        \qquad
+        \arrow{-/>[\textcolor{Red}{\ce{CH3O-}}, \ce{CH3O}\textcolor{Blue}{H}][right carbon]}
+        \qquad
+        \chemfig{
+          [:0]\textcolor{Blue}{H}O
+          -[:-60]\textcolor{Blue}{C}
+          (<:[:-170,,,,Blue]\textcolor{Blue}{H})
+          (<[:-100,,,,Blue]\textcolor{Blue}{H})
+          -[:0]\textcolor{Green}{C}
+          (<:[:80,,,,Green]\textcolor{Green}{\ce{CH3}})
+          (<[:10,,,,Green]\textcolor{Green}{\ce{CH3}})
+          -[:-60,,,,Red]\textcolor{Red}{\ce{OCH3}}
+        }
+      }
+    }{Regioselective ether ring opening}{fig:filler15}{0.8}
 
     Many \ce{Nu-} will work. The following example shows that ether ring openings are regioselective and also \textbf{stereocontrolled}.
 
-    \myfig{0.4}{ethers_figures/er_4b}{Stereocontrolled Ether Ring Opening}{fig:er_4b}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          *6(--@{carbon}
+          *3(
+          (<:[:-50]H)
+          <\textcolor{Green}{O}>
+          (<:[:50]\ce{CH3})
+          -) 
+          ----)
+        }
+        \qquad
+        \arrow{->[
+          \chemfig{
+            @{rgroup}\textcolor{Red}{\ce{CH3}}Li
+          }
+        ][or \textcolor{Red}{\ce{CH3}}MgBr]}
+        \qquad
+        \chemfig{
+          *6(--
+          (<:[:-50]\textcolor{Red}{\ce{CH3}})
+          (<[:10]H)
+          -
+          (<:[:-10]\ce{CH3})
+          (<[:50]\textcolor{Green}{\ce{OH}})
+          ---)
+        }
+      }
+      \chemmovearrow{
+        \reactionfigarrow{rgroup}{180}{carbon}{-100}{Red}
+      }
+    }{Stereocontrolled ether ring opening}{fig:filler16}{0.8}
 
     With \textbf{neutral nucleophiles}, acidic conditions are required to activate the ether toward nucleophilic attack. Without \ce{H+}, the reaction will not occur.
 
     \myfig{0.45}{ethers_figures/er_4c}{Acid-Activated Ether Ring Opening with Neutral Nucleophile}{fig:er_4c}
     
-    One important distinction in the neutral nucleophile mechanism is regioselectivity towards the more hindered carbon. In asymmetrical ethers, the nucleophile preferentially attacks the more substituted carbon, as it better stabilizes the partial positive charge (δ$^+$) that develops through hyperconjugation and inductive effects---causing the C-O bond on that side to stretch and weaken. This gives the mechanism a hybrid \sno/\snt character: it resembles \snt in that nucleophile attack and leaving group departure occur simultaneously, yet resembles \sno in that the partial positive charge mimics a carbocation.
+    One important distinction in the neutral nucleophile mechanism is regioselectivity towards the more hindered carbon. In asymmetrical ethers, the nucleophile preferentially attacks the more substituted carbon, as it better stabilizes the partial positive charge (δ$^+$) that develops through hyperconjugation and inductive effects --- causing the C-O bond on that side to stretch and weaken. This gives the mechanism a hybrid \sno/\snt character: it resembles \snt in that nucleophile attack and leaving group departure occur simultaneously, yet resembles \sno in that the partial positive charge mimics a carbocation.
 
     \myfig{0.55}{ethers_figures/er_4d}{Regioselectivity in Acid-Catalyzed Ring Opening of Asymmetrical Ethers}{fig:er_4d}
 
@@ -603,15 +764,15 @@
 
 \section{Sulfur Analogs: \textit{A Brief Lesson}}
 
-  \begin{definition}{Sulfur Analogs}
+  \begin{core}{Sulfur Analogs}
     
     Sulfur is directly below oxygen in the periodic table, and thus behaves very similarly.
 
     Thiols (\ce{RSH}) are \textbf{more acidic than alcohols} because the \ce{S-H} bond is weaker due to sulfur's higher-energy molecular orbitals. The lower electronegativity difference in \ce{S-H} compared to \ce{O-H} also results in \textbf{weaker hydrogen bonding}, making thiols less polar overall. \textit{This is illustrated by \ce{H2S}, which is a gas at 25$^\circ$C with a boiling point of $-60^\circ$C, in stark contrast to \ce{H2O}.} 
 
-    Despite being less basic than \ce{RO-}, \ce{RS-} is a stronger nucleophile due to its greater \textbf{polarizability}---note that polarizability is distinct from polarity. Polarizability describes how easily an electron cloud can be distorted by an external force (covered in EXTERNAL LABEL PLACEHOLDER TO NUC SUB AND ELIM FILE). Larger atoms like sulfur are more polarizable than oxygen because their diffuse, loosely-held electron clouds are more easily deformed. This allows \ce{RS-} to stretch and distort toward an electrophile, enhancing its nucleophilicity despite its lower basicity.
+    Despite being less basic than \ce{RO-}, \ce{RS-} is a stronger nucleophile due to its greater \textbf{polarizability} --- note that polarizability is distinct from polarity. Polarizability describes how easily an electron cloud can be distorted by an external force (covered in EXTERNAL LABEL PLACEHOLDER TO NUC SUB AND ELIM FILE). Larger atoms like sulfur are more polarizable than oxygen because their diffuse, loosely-held electron clouds are more easily deformed. This allows \ce{RS-} to stretch and distort toward an electrophile, enhancing its nucleophilicity despite its lower basicity.
 
-  \end{definition} 
+  \end{core} 
 
   \begin{core}{Sulfur Reactivity}
     
