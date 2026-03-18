@@ -1,5 +1,6 @@
 node_modules/
 notepad.txt
+scrap.txt
 test.tex
 test.pdf
 *.aux
