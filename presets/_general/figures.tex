@@ -54,13 +54,24 @@
   \end{figure}
 }
 
-\newcommand{\axispresets}[0]{
-  tick align=outside,
+\newcommand{\axispresetsone}[0]{
   clip=false,
   grid=major,
   grid style={dashed, gray!30},
   axis lines=left,
 }
+
+\newcommand{\axispresetstwo}[0]{
+  clip=false,
+  axis lines=left,
+}
+
+\newcommand{\pgfiglabel}[2]{
+  \node at (axis cs:#1) {#2};
+}
+
+
+
 
 
 

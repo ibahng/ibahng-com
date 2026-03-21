@@ -64,7 +64,7 @@
         \reactionfigarrow{oxygen}{60}{carbon}{120}{Red}
         \reactionfigarrow{bond}{100}{chlorine}{80}{Red}
       }
-    }{\snt equation}{fig:filler1}{1.0}
+    }{\snt equation}{fig:filler1}{1.2}
 
     Here, Cl is the leaving group and \ce{OH-} is the nucleophile. From a 3D point of view, we see the following outline interaction.
 
@@ -102,22 +102,22 @@
         \reactionfigarrow{nucleophile}{60}{electrophile}{180}{Red}
         \reactionfigarrow{bond}{100}{leaving}{80}{Red}
       }
-    }{\snt mechanism reaction}{fig:filler2}{0.9}
+    }{\snt mechanism reaction}{fig:filler2}{1.0}
 
-    It is important to note that \snt reactions occur in \textbf{one step}, where bond making and breaking occur simultaneously, meaning there are no intermediates --- unlike the two step propagation of radical halogenation (EXTERNAL REFERENCE TO RAD HAL). Consequently, the energy diagram consists of a single hill and is exothermic when the nucleophile is a more favorable attachment than the leaving group. \textit{L is denoted as X in the figure below.}
+    It is important to note that \snt reactions occur in \textbf{one step}, where bond making and breaking occur simultaneously, meaning there are no intermediates --- unlike the two-step propagation of radical halogenation (EXTERNAL REFERENCE TO RAD HAL). Consequently, the energy diagram consists of a single hill and is exothermic when the nucleophile is a more favorable attachment than the leaving group. \textit{L is denoted as X in the figure below.}
 
     \pgfig{
       \begin{axis}[
-          width=7cm,
-          height=7cm,
-          xmin=-4, xmax=4,
-          ymin=-0.3, ymax=1.4,
-          xtick=\empty,
-          ytick=\empty,
-          xlabel={},
-          ylabel={},
-          axis line style={thick},
-          \axispresets
+        width=7cm,
+        height=7cm,
+        xmin=-4, xmax=4,
+        ymin=-0.3, ymax=1.4,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={},
+        ylabel={},
+        axis line style={thick},
+        \axispresetsone
       ]
 
       % energy curve — gaussian-like hill
@@ -152,7 +152,7 @@
       \node[cyan!70!blue, font=\small, align=center] at (axis cs:2.8, 0.75) {single\\transition\\state};
 
       \end{axis}
-    }{\snt energy diagram}{fig:filler3}{1.0}
+    }{\snt energy diagram}{fig:filler3}{0.8}
 
     A result of the reaction being one step is \textbf{stereospecificity} --- there is \textit{always} an inversion. A few key consequences of this are worth keeping in mind:
 
@@ -205,7 +205,7 @@
       \ce{-CH3} < \ce{-NH2} < \ce{-OH} < \ce{-F}
     \]
 
-    Here, \ce{F-} is the best leaving group due to its greater electronegativity relative to O, N, and C, allowing it to better stabilise the extra \ce{e^-} upon departure. In practice however, \ce{F-} remains a poor leaving group relative to the broader periodic table, \ce{HO-} is exceedingly poor, and \ce{NH2-} and \ce{CH3-} do not leave at all.
+    Here, \ce{F-} is the best leaving group due to its greater electronegativity relative to O, N, and C, allowing it to better stabilise the extra \ce{e^-} upon departure. In practice, however, \ce{F-} remains a poor leaving group relative to the broader periodic table, \ce{HO-} is exceedingly poor, and \ce{NH2-} and \ce{CH3-} do not leave at all.
 
     For \textbf{polyatomic} leaving groups, \textbf{resonance} (π conjugation) plays an important additional role. The ability to delocalise \ce{e^-}s across an adjacent p orbital system allows the leaving group to absorb excess charge more effectively --- a larger delocalization system not only stabilises the extra charge but also weakens the leaving group's basicity, making it a better leaving group overall.
 
@@ -451,7 +451,7 @@
       }
     }{\sno mechanism}{fig:filler10}{0.9}
 
-    The first step --- spontaneous dissociation of the leaving group from the electrophile --- is the \textbf{rate limiting step}, as it is highly unfavourable, forming only trace amounts of carbocation at equilibrium. This makes it the bottleneck of the reaction, after which the nucleophile attacks either face of the $sp^2$ hybridised electrophile's perpendicular p orbitals.
+    The first step --- spontaneous dissociation of the leaving group from the electrophile --- is the \textbf{rate limiting step}, as it is highly unfavourable, forming only trace amounts of carbocations at equilibrium. This makes it the bottleneck of the reaction, after which the nucleophile attacks either face of the $sp^2$-hybridised electrophile's perpendicular p orbitals.
 
     Several important consequences follow from this mechanism.
 
@@ -507,11 +507,82 @@
             \textcolor{Blue}{1}
           }
         }
-      }{Relative \sno reaction rates in polar solvents}{fig:filler11}{0.9}      
+      }{Relative \sno reaction rates in polar solvents}{fig:filler11}{1.0}      
 
       \item \textbf{Product-determining steps occur after the bottleneck}. Once the carbocation intermediate forms, the dominant product is determined by nucleophilic competition --- the strongest nucleophile in solution will attack preferentially. Consider, for instance, a mixture of NaCl and NaI in acetone.
 
-      \myfig{0.7}{nuc_sub_and_elim_figures/sn1_nu_competition}{sn1 nu competition}{fig:sn1nucomp}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]A
+            -[:30]\textcolor{Blue}{C}
+            (<[:-80]B)
+            (<:[:-30]C)
+            -[@{bond}:90,,,,Green]@{bromine}\textcolor{Green}{Br}
+          }
+          \arrow{->[][\textcolor{Blue}{$k_1$}]}
+          \chemfig{
+            [:0]A
+            -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+            (<:[:30]C)
+            <[:-30]B
+          }
+          \arrow(bb--xx)[45]
+          \chemfig{
+            [:0]A
+            -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+            (<:[:30]C)
+            <[:-30]B
+          }
+          \arrow{->[Na\textcolor{Red}{Cl}][acetone]}
+          \chemfig{
+            [:0]A
+            -[:30]\textcolor{Blue}{C}
+            (<[:-80]B)
+            (<:[:-30]C)
+            -[:90,,,,Red]\textcolor{Red}{Cl}
+          }
+          \qquad
+          \textcolor{Blue}{$k_1$}
+          \arrow(@bb--yy)
+          \chemfig{
+            [:0]A
+            -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+            (<:[:30]C)
+            <[:-30]B
+          }
+          \arrow{->[Na\textcolor{Red}{I}][acetone]}
+          \chemfig{
+            [:0]A
+            -[:30]\textcolor{Blue}{C}
+            (<[:-80]B)
+            (<:[:-30]C)
+            -[:90,,,,Red]\textcolor{Red}{I}
+          }
+          \qquad
+          \textcolor{Blue}{$k_1$}
+          \arrow(@bb--zz)[-45]
+          \chemfig{
+            [:0]A
+            -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+            (<:[:30]C)
+            <[:-30]B
+          }
+          \arrow{->[Na\textcolor{Red}{Cl} \& Na\textcolor{Red}{I}][acetone]}
+          \chemfig{
+            [:0]A
+            -[:30]\textcolor{Blue}{C}
+            (<[:-80]B)
+            (<:[:-30]C)
+            -[:90,,,,Red]\textcolor{Red}{Cl}
+          }
+          \qquad
+          \textcolor{Blue}{$k_1$}
+        }
+        \chemmovearrow{
+          \reactionfigarrow{bond}{10}{bromine}{30}{Red}
+        }
+      }{\sno nucleophile competition; \textit{Cl is a better nucleophile than I, thus a mixture will result in the Cl product (bottom reaction)}}{fig:filler12}{1.0}
     
     \end{enumerate}
 
@@ -525,14 +596,15 @@
 
     \begin{enumerate}
 
+      \item α-branching disfavours \snt by sterically impeding nucleophilic approach, making it virtually impossible for a nucleophile to attack a tertiary electrophile in an \snt fashion.
 
-\item α-branching disfavours \snt by sterically impeding nucleophilic approach, making it virtually impossible for a nucleophile to attack a tertiary electrophile in an \snt fashion.
+      \item α-branched carbocations are stabilised by hyperconjugation with neighbouring molecular orbitals, lowering the energy of the rate-limiting step and making \sno viable.
+        
+    \end{enumerate}
 
-\item α-branched carbocations are stabilised by hyperconjugation with neighbouring molecular orbitals, lowering the energy of the rate-limiting step and making \sno viable.
-    
-\end{enumerate}
-
-    \myfig{0.75}{nuc_sub_and_elim_figures/sn1_sn2}{sn1 sn2}{fig:sn1sn2}
+    \[
+      \underbrace{\ce{H3C+ (methyl)} < \ce{H3CH2C+ (primary)}}_{\text{energetically inaccessible in solution}} < \underbrace{\ce{(H3C)2HC+ (secondary)} < \ce{(H3C)3C+ (tertiary)}}_{\text{only cations feasible in solution}}
+    \]
 
     The table below summarises the conditions favouring \sno and \snt across different substrate classes. \textit{Note that secondary R substrates do not inherently favour either mechanism --- the outcome depends heavily on solvent and the nature of the nucleophile and leaving group.}
 
@@ -564,15 +636,143 @@
 
     Following carbocation formation in \sno, the nucleophile can alternatively act as a base (\ce{B-}), deprotonating a neighbouring alkyl group to yield a π bonded alkene over two distinct steps. \textit{Note that this pathway requires a neighbouring alkyl group and is therefore not possible for methane.}
 
-    \myfig{0.8}{nuc_sub_and_elim_figures/e1}{e1}{fig:e1}
+    \vspace{10pt}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]H
+          -[:60]C
+          (<[:135])
+          (<:[:100])
+          -[:0]C
+          (<[:-80])
+          (<:[:-45])
+          -[@{bond}:60]@{leaving}\textcolor{Green}{L}
+        }
+        \arrow{->[][-\textcolor{Green}{\ce{L-}}]}
+        \chemfig{
+          [:0]@{hydrogen}\textcolor{Blue}{H}
+          -[:60,,,,Red]C
+          (<[:135])
+          (<:[:100])
+          -[:0]\pcharge{90}{C}
+          (<[:-30])
+          (<:[:30])
+        }
+        \arrow{->[
+          \chemfig{
+            @{base}\textcolor{Red}{\ce{B-}}
+          }
+        ][-\textcolor{Red}{B}\textcolor{Blue}{H}]}
+        \chemfig{
+          [:0]C
+          (<[:-150])
+          (<:[:150])
+          =[:0]C
+          (<[:-30])
+          (<:[:30])
+        }
+      }
+      \chemmovearrow{
+        \reactionfigarrow{bond}{150}{leaving}{100}{Red}
+        \reactionfigarrow{base}{180}{hydrogen}{-30}{Red}
+      }
+    }{E1 mechanism}{fig:filler13}{1.1}
 
     The rate-determining step is identical to that of \sno, making E1 a first-order reaction whose rate depends solely on \ce{[R-L]}. A closer look at the deprotonation step is provided below.
 
-    \myfig{}{nuc_sub_and_elim_figures/e1_deprotonation}{e1 deprotonation}{fig:e1depro}
+    \myfig{0.9}{nuc_sub_and_elim_figures/e1_deprotonation}{E1 deprotonation}{fig:e1depro} % KEEP
 
     Since deprotonation can occur at any neighbouring β C-H, E1 generally yields a mixture of alkenes across all possible pathways. Rotation around the resulting π bond gives rise to different stereoisomers.
 
-    \myfig{0.8}{nuc_sub_and_elim_figures/e1_mixture}{e1 mixture}{fig:e1mix}
+    \triplereactionfig{
+      \scheme{
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          -[:-30]
+          (-[:-120,,,,Red]\textcolor{Green}{Cl})
+          (-[:-60]\ce{CH3})
+          -[:30]
+          -[:-30]
+        }
+        \arrow{->[\ce{CH3}\textcolor{Red}{O}H][-\textcolor{Green}{\ce{Cl-}}]}
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]\textcolor{Blue}{C}
+          -[:-30]\pcharge{90}{}
+          (-[:-90]\textcolor{Blue}{C})
+          -[:30]\textcolor{Blue}{C}
+          -[:-30]
+        }
+        \arrow{->[\ce{CH3}\textcolor{Red}{O}H][
+          \scriptsize\chemfig{
+            [:0]\ce{H3C}
+            -[:0]\pcharge{120}{O}
+            (-[:30,,,,Red]\textcolor{Blue}{H})
+            -[:-30]H
+          }
+        ]}
+      }
+    }{
+      \scheme{
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          -[:-30]
+          (=[:-90])
+          -[:30]
+          -[:-30]
+        }
+        \+
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          -[:-30]
+          (-[:-90])
+          =[:30]
+          -[:90]
+        }
+        \+
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          -[:-30]
+          (-[:-90])
+          =[:30]
+          -[:-30]
+        }
+      }
+    }{
+      \scheme{
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          =[:-30]
+          (
+          -[:-90]
+          -[:-30]
+          )
+          -[:30]
+        }
+        \+
+        \chemfig{
+          [:0]
+          -[:-30]
+          -[:30]
+          =[:-30]
+          (-[:-90])
+          -[:30]
+          -[:-30]
+        }
+      }
+    }{filler caption}{fig:filler14}{0.9}
 
     Crucially, \sno and E1 share the exact same rate-determining step --- spontaneous departure of the leaving group to form a carbocation. Since the leaving group has already departed by the time the carbocation partitions between substitution and elimination, the \textbf{\sno to E1 product ratio is independent of L}.
 
@@ -580,13 +780,11 @@
 
     \begin{enumerate}
 
+      \item \textbf{Higher temperature}, as elimination carries a positive entropy change: \ce{HRL + B -> R + L + BH}.
 
-\item \textbf{Higher temperature}, as elimination carries a positive entropy change: \ce{HRL + B -> R + L + BH}.
-
-\item A \textbf{poor nucleophile}, as \sno requires the reagent to form a new C-Nu bond, demanding greater nucleophilic strength. E1 is less sensitive to this since the reagent acts purely as a base, abstracting a surface \ce{H+} rather than integrating into the molecular framework.
-
-    
-\end{enumerate}
+      \item A \textbf{poor nucleophile}, as \sno requires the reagent to form a new C-Nu bond, demanding greater nucleophilic strength. E1 is less sensitive to this since the reagent acts purely as a base, abstracting a surface \ce{H+} rather than integrating into the molecular framework.
+        
+    \end{enumerate}
 
     But what about \textbf{strong bases}?
 
@@ -596,7 +794,7 @@
 
     Strong bases attack \ce{R-L} \textbf{directly} at the β C-H, constituting the E2 mechanism. E2 is faster than \sno/E1 and faster than \snt when sterically hindered by α or β branching, as it condenses the distinct steps of E1 into a single concerted process.
 
-    \myfig{0.9}{nuc_sub_and_elim_figures/e2_ts}{e2 ts}{fig:e2ts}
+    \myfig{0.9}{nuc_sub_and_elim_figures/e2_ts}{E2 transition state}{fig:e2ts} % KEEP
 
     Unlike E1, E2 is \textbf{second order} because the transition state involves both the substrate and the base.
     \[
@@ -610,19 +808,164 @@
 
     Additionally, electron-withdrawing substituents within the substrate accelerate E2 by increasing the acidity of the target β C-H through withdrawal of its \ce{e^-} density.
 
-    \myfig{0.5}{nuc_sub_and_elim_figures/e2_en}{e2 en}{fig:e2en}
+    \reactionfig{
+      \scheme{
+        \text{the EN from F makes \textcolor{Blue}{H} more acidic}
+        \qquad
+        \chemfig{
+          [:0]\textcolor{Blue}{\ce{H^{\textcolor{Red}{δ-}}}}
+          -[:-60]C
+          (<[:-100]\ce{F^{\textcolor{Red}{δ-}}})
+          (<:[:-150]\ce{F^{\textcolor{Red}{δ-}}})
+          -[:0]C
+          (<:[:80]R)
+          (<[:30]R)
+          -[:-60]\textcolor{Green}{Br}
+        }
+      }
+    }{E2 hydrogen acidity amplification}{fig:filler15}{1.0}
 
     E2 is also \textbf{stereospecific} --- a given diastereomer of \ce{R-L} yields only one stereoisomer of the alkene product. For instance, an RR/SS mixture yields exclusively one product, while an RS/SR mixture yields exclusively another.
 
-    \myfig{0.6}{nuc_sub_and_elim_figures/rrss}{rrss}{fig:rrss}
-
-    \myfig{0.6}{nuc_sub_and_elim_figures/rssr}{rssr}{fig:rssr}
+    \doublereactionfig{
+      \scheme{
+        \raisebox{1cm}{
+          \chemfig{
+            [:0]\textcolor{Blue}{H}
+            -[:-60]
+            (<[:-100])
+            (
+            <:[:-150,,,,Red]
+            -[:150,,,,Red]
+            )
+            -[:0]
+            (<[:30,,,,Red])
+            (<:[:80]H)
+            -[:-60]\textcolor{Green}{Br}
+          }
+        }
+        \quad
+        \text{OR}
+        \quad
+        \raisebox{-1cm}{
+          \chemfig{
+            [:0]\textcolor{Blue}{H}
+            -[:60]
+            (<[:100])
+            (
+            <:[:150,,,,Red]
+            -[:-150,,,,Red]
+            )
+            -[:0]
+            (<:[:-80]H)
+            (<[:-30,,,,Red])
+            -[:60]\textcolor{Green}{Br}
+          }
+        }
+        \arrow{->[Base][-\textcolor{Blue}{H}\textcolor{Green}{Br}]}
+        \chemfig{
+          [:0]
+          (
+          <:[:150,,,,Red]
+          -[:180,,,,Red]
+          )
+          (<[:-150])
+          =[:0]
+          (<:[:30]H)
+          (<[:-30,,,,Red])
+        }
+      }
+    }{
+      \scheme{
+        \raisebox{1cm}{
+          \chemfig{
+            [:0]\textcolor{Blue}{H}
+            -[:-60]
+            (<:[:-150])
+            (
+            <[:-100,,,,Red]
+            -[:-150,,,,Red]
+            )
+            -[:0]
+            (<[:30,,,,Red])
+            (<:[:80]H)
+            -[:-60]\textcolor{Green}{Br}
+          }
+        }
+        \quad
+        \text{OR}
+        \quad
+        \raisebox{-1cm}{
+          \chemfig{
+            [:0]\textcolor{Blue}{H}
+            -[:60]
+            (<:[:150])
+            (
+            <[:100,,,,Red]
+            -[:150,,,,Red]
+            )
+            -[:0]
+            (<:[:-80]H)
+            (<[:-30,,,,Red])
+            -[:60]\textcolor{Green}{Br}
+          }
+        }
+        \arrow{->[Base][-\textcolor{Blue}{H}\textcolor{Green}{Br}]}
+        \chemfig{
+          [:0]
+          (
+          <[:-150,,,,Red]
+          -[:180,,,,Red]
+          )
+          (<:[:150])
+          =[:0]
+          (<:[:30]H)
+          (<[:-30,,,,Red])
+        }
+      }
+    }{Stereospecific E2 outcomes; \textit{RR (top left), SS (top right), SR (bottom left), RS (bottom right)}}{fig:filler16}{0.9}
 
     This stereospecificity arises because \ce{H+} and L depart simultaneously, requiring their initial positions to be coplanar to permit proper p orbital alignment in the forming $\pi$ bond. This coplanarity can be achieved through either \textbf{anti}-periplanar (\textit{trans}) or \textbf{syn}-periplanar (\textit{cis}) geometry. When the relevant C-C bond can rotate freely, anti-periplanar geometry is strongly preferred as it minimises steric repulsion between the leaving group and the \ce{H-B} transition complex.
 
     In cases where free rotation is restricted --- such as in cycloalkanes --- syn-periplanar geometry must be adopted instead. This proceeds at a slower rate due to the increased steric hindrance between the leaving group and the \ce{H-B} transition complex. 
 
-    \myfig{0.65}{nuc_sub_and_elim_figures/anti_syn}{anti syn}{fig:antisyn}
+    \doublereactionfig{
+      \scheme{
+        \chemfig{
+          *4(-
+          (<[:-10]\ce{CH3})
+          (<:[:-40,,,,Blue]\textcolor{Blue}{H})
+          -
+          (<[:10,,,,Green]\textcolor{Green}{Br})
+          (<:[:40]H)
+          --)
+        }
+        \arrow{->[\textcolor{Purple}{anti E2}][\textcolor{Red}{fast}]}
+        \chemfig{
+          *4(-
+          (-[:-45]\ce{CH3})
+          =--)
+        }
+      }
+    }{
+      \scheme{
+        \chemfig{
+          *4(-
+          (<[:-10,,,,Blue]\textcolor{Blue}{H})
+          (<:[:-40]\ce{CH3})
+          -
+          (<[:10,,,,Green]\textcolor{Green}{Br})
+          (<:[:40]H)
+          --)
+        }
+        \arrow{->[\textcolor{Purple}{syn E2}][\textcolor{Red}{slow}]}
+        \chemfig{
+          *4(-
+          (-[:-45]\ce{CH3})
+          =--)
+        }
+      }
+    }{Anti and syn-periplaner E2 reaction rates}{fig:filler18}{1.0}
 
   \end{core}
   
@@ -652,15 +995,13 @@
 
     \begin{enumerate}
 
+      \item The base strength of the nucleophile
 
-\item The base strength of the nucleophile
-
-\item Steric hindrance around the reacting carbon
+      \item Steric hindrance around the reacting carbon
 
       \item Steric hindrance around the nucleophile, particularly when it is a strong base
-
-    
-\end{enumerate}
+        
+    \end{enumerate}
 
     \textbf{Primary substrates:} Under poor nucleophile conditions, neither E1 nor \sno are viable due to insufficient hyperconjugation to sustain a carbocation, and neither \snt nor E2 proceed effectively as both depend on nucleophile strength. Moving from weakly basic to strongly hindered nucleophile conditions, the dominant factor becomes steric hindrance --- whether along the haloalkane itself via β branching, or around the nucleophile through size or solvation in protic solvents. As hindrance increases, E2 is progressively favoured over \snt.
 
@@ -668,17 +1009,15 @@
 
     \textbf{Tertiary substrates:} Steric hindrance completely shuts down \snt, making \sno dominant under weakly basic, good nucleophile conditions. E2 dominates under strongly basic conditions, as it does for secondary substrates. Under poor nucleophile conditions, the \sno to E1 ratio becomes more balanced relative to secondary substrates --- the greater stability of the tertiary carbocation lowers the activation energy for \sno, allowing it to compete more effectively with E1.
 
-    Generally speaking, rather than memorizing each of these scenarios and their corresponding dominant mechanism, it's helpful to start with \snt as a starting point and ask yourself the following questions.
+    Generally speaking, rather than memorizing each of these scenarios and their corresponding dominant mechanism, it's helpful to use \snt as a starting point and ask yourself the following questions.
 
     \begin{enumerate}
 
+      \item Is the nucleophile or haloalkane hindered? \textit{If yes, the \snt reaction is likely not favored.}
 
-\item Is the nucleophile or haloalkane hindered? \textit{If yes, the \snt reaction is likely not favored.}
-
-\item Is the nucleophile strongly basic? \textit{If yes, E2. If no, \sno/E1.}
-
-    
-\end{enumerate}
+      \item Is the nucleophile strongly basic? \textit{If yes, E2. If no, \sno/E1.}
+        
+    \end{enumerate}
 
     However, keep in mind that there are other nuanced factors to consider such as absence of E1 preference for weakly basic, good nucleophile conditions.
 

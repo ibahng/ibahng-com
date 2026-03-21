@@ -39,7 +39,7 @@
 
   \end{core}
 
-  \begin{core}{Production Possibilities Curve}
+  \begin{core}[label=core:ppc]{Production Possibilities Curve}
 
     The \textbf{Production Possibilities Curve (PPC)} illustrates the maximum combinations of two goods that an economy can produce given its available resources and technology. 
 
@@ -53,9 +53,27 @@
 
     \end{enumerate}
 
-    < PLOT OF PRODUCTION POSSIBILTIES CURVE >
+    \pgfig{
+      \begin{axis}[
+        \econplot{Good A}{Good B}
+        \axispresetstwo
+      ]
 
-    The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (FIGURE REFERENCE) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
+      \addplot[domain=0:8.5, samples=100, thick] {sqrt(8.5^2 - x^2)};
+
+      % Point inside the circle (underallocation)
+      \node[circle, fill=black, inner sep=2pt, label=below:{Underallocation}] at (axis cs:3,3) {};
+
+      % Point on the circle (efficient)
+      \node[circle, fill=black, inner sep=2pt, label={[xshift=-15pt]below:{Efficient}}] at (axis cs:6,6.02) {};
+
+      % Point outside the circle (overheating)
+      \node[circle, fill=black, inner sep=2pt, label=below:{Overheating}] at (axis cs:7,9) {};
+
+      \end{axis} 
+    }{Production possibilities curve}{fig:ppc}{1}
+
+    The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (\autoref{fig:ppc}) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
 
     Shifts in the PPC represent economic growth or decline. \textbf{Outward shifts indicate economic growth}, resulting from increases in available resources, improvements in technology, or enhancements in human capital. On the other hand, \textbf{inward shifts indicate economic decline}, potentially from natural disasters, war, or resource depletion.
 
@@ -71,9 +89,20 @@
 
   \begin{core}{Demand}
 
-    \textbf{Demand} represents the quantity of a good that consumers are willing and able to purchase at various prices during a given time period. The \textbf{Law of Demand} states an inverse relationship between price and quantity demanded: as prices rise, quantity demanded falls, and vice versa. This relationship reflects both the \textbf{substitution effect} (consumers shift to cheaper alternatives) and the \textbf{income effect} (higher prices reduce purchasing power).
+    \textbf{Demand} represents the quantity of a good that consumers are willing and able to purchase at various prices during a given time period. The \textbf{Law of Demand} states an inverse relationship between price and quantity demanded: as prices rise, quantity demanded falls, and vice versa. This relationship reflects both the \textbf{substitution effect} (\textit{consumers shift to cheaper alternatives}) and the \textbf{income effect} (\textit{higher prices reduce purchasing power}).
 
-    < PLOT OF DEMAND GRAPH >
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+
+      \pgfiglabel{10,2}{Demand}
+
+      \end{axis} 
+    }{Demand curve}{fig:demand}{1}
 
     The determinants of demand, factors that can cause the entire demand curve to shift, include:
 
@@ -97,7 +126,18 @@
 
     \textbf{Supply} represents the quantity of a good that producers are willing and able to offer for sale at various prices. The \textbf{Law of Supply} indicates a direct relationship between price and quantity supplied: higher prices incentivize producers to increase production.
 
-    < PLOT OF SUPPLY GRAPH >
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \upslope{0}
+
+      \pgfiglabel{10,8}{Supply}
+
+      \end{axis} 
+    }{Supply curve}{fig:supply}{1}
 
     Determinants of supply include:
 
@@ -121,7 +161,31 @@
 
     \textbf{Market Equilibrium} occurs where the supply and demand curves intersect. At this point, the quantity supplied equals the quantity demanded, and the market clears. The equilibrium price and quantity are determined automatically through the price mechanism without external intervention. Correspondingly, adjustments in equilibrium price occur when supply and demand curve shifts.
 
-    < PLOT OF MARKET EQUILIBRIUM >
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+      \pgfiglabel{10,2}{Demand}
+
+      \upslope{0}
+      \pgfiglabel{10,8}{Supply}
+
+      % Dot at intersection
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+      % Vertical dashed line from dot to x-axis
+      \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+      \pgfiglabel{2.5, 5.8}{$P_{eq}$}
+
+      % Horizontal dashed line from dot to y-axis
+      \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+      \pgfiglabel{6,2}{$Q_{eq}$}
+
+      \end{axis} 
+    }{Market equilibrium}{fig:equilibrium}{1}
 
   \end{core}
 
@@ -129,9 +193,32 @@
 
     The \textbf{Circular Flow of Income} illustrates how goods, services, and money flow between \textbf{households} and \textbf{firms} in an economy. Firms produce goods and services using factors of production provided by households and, in exchange, pay households wages, rent, interest, and profits. Households then use this income to purchase goods and services from firms, completing the circular flow.
 
-    < FIGURE OF THE CIRCULAR FLOW OF INCOME >
+    \pgfig{
+      [
+        box/.style={rectangle, draw, thick, minimum width=3cm, minimum height=2cm, align=center},
+        arrow/.style={->, very thick, >=stealth},
+        curve/.style={very thick, >=stealth}
+      ]
+      
+      % Boxes for Households and Firms
+      \node[box] (households) at (0,0) {HOUSEHOLDS};
+      \node[box] (firms) at (8,0) {FIRMS};
+      
+      % Top curved arrow (Goods and services)
+      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services} (households.north);
+      
+      % Upper middle curved arrow (Consumer expenditure)
+      \draw[arrow, bend right=25] (households.south east) to node[below, sloped, pos=0.5] {Consumer expenditure} (firms.south west);
+      
+      % Lower middle curved arrow (Wages, rent, dividends)
+      \draw[arrow, bend right=25] (firms.north west) to node[above, sloped, pos=0.5] {Wages, rent, dividends} (households.north east);
+      
+      % Bottom curved arrow (Factors for production)
+      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production} (firms.south);
+      
+    }{Circular flow of income}{fig:circular}{1.0}
 
-    This model (FIGURE REFERENCE) illustrates the interdependence between sectors of the economy and forms the basis for measuring aggregate economic activity through Gross Domestic Product (CORE CONCEPT REFERENCE).
+    This model (\autoref{fig:circular}) illustrates the interdependence between sectors of the economy and forms the basis for measuring aggregate economic activity through Gross Domestic Product (\autoref{core:gdp}).
 
   \end{core}
 
@@ -141,7 +228,7 @@
 
   \subsection{Gross Domestic Product}
 
-    \begin{core}{Gross Domestic Product}
+  \begin{core}[label=core:gdp]{Gross Domestic Product}
 
       \textbf{Gross Domestic Product (GDP)} represents the total market value of all \textbf{final} goods and services produced within a country's borders during a specific time period, typically one year or one quarter. GDP does not include the following items.
 
@@ -163,11 +250,34 @@
 
     \begin{core}{Economic Cycles}
 
-      The \textbf{business cycle} represents fluctuations in economic activity around the long-term growth trend. The cycle comprises four phases: expansion (real GDP rising), peak (the highest point of economic activity), recession (real GDP falling), and trough (the lowest point).
+      The \textbf{business cycle} represents fluctuations in economic activity around the long-term growth trend. The cycle comprises four phases: expansion (\textit{real GDP rising}), peak (\textit{the highest point of economic activity}), recession (\textit{real GDP falling}), and trough (\textit{the lowest point}).
 
-      < PLOT OF ACTUAL GDP TO POTENTIAL GDP >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Time}{Real GDP}
+          \axispresetstwo
+        ]
 
-      As shown in FIGURE REFERENCE, the \textbf{output gap} measures the difference between actual GDP and potential GDP (\textit{the level of GDP that would exist if all resources were fully utilized}). A positive output gap indicates the economy is operating above its sustainable capacity, while a negative output gap indicates underutilization of resources.
+        % Wavy business cycle line
+        \addplot[domain=0:9.5, samples=200, thick, smooth] 
+          {3 + 0.4*x + 0.8*sin(deg(2*x))};
+        
+        % Trend line (dotted)
+        \addplot[domain=0:9.5, samples=2, thick, dotted] 
+          {3 + 0.4*x};
+        
+        % Expansion bracket
+        \draw[thick, |-|] (axis cs:2,6.5) -- (axis cs:4,6.5) 
+          node[midway, above] {Expansion};
+        
+        % Recession bracket
+        \draw[thick, |-|] (axis cs:4.2,3) -- (axis cs:5.5,3) 
+          node[midway, below] {Recession};
+
+        \end{axis} 
+      }{Business cycles}{fig:cycle}{1}
+
+      As shown in \autoref{fig:cycle}, the \textbf{output gap} measures the difference between actual GDP and potential GDP (\textit{the level of GDP that would exist if all resources were fully utilized}). A positive output gap indicates the economy is operating above its sustainable capacity, while a negative output gap indicates underutilization of resources.
 
       Economists typically define a \textbf{recession} as two consecutive quarters of negative real GDP growth, though the National Bureau of Economic Research uses more comprehensive criteria.
 
@@ -175,7 +285,7 @@
 
     GDP can be calculated through multiple approach that would yield equivalent results
 
-    \begin{core}{Calculating GDP (\textit{Expenditures Approach})}
+    \begin{core}[label=core:exp]{Calculating GDP (\textit{Expenditures Approach})}
 
       The \textbf{expenditures approach}---the most common approach---sums all spending on final goods and services.
       \[
@@ -200,9 +310,9 @@
 
     \end{core}
 
-    \begin{core}{Net Domestic Product (NDP)}
+    \begin{core}[label=core:ndp]{Net Domestic Product (NDP)}
 
-      \textbf{Net domestic product (NDP)} is GDP but accounts for the depreciation of capital goods. Its calculation takes the same method as the expenditures approach (CORE CONCEPT REFERENCE), but substitutes gross investment with net investment. \textbf{Net investment (I$_n$)} is gross investment minus depreciation (\textit{the decrease in value of capital goods over time}).
+      \textbf{Net domestic product (NDP)} is GDP but accounts for the depreciation of capital goods. Its calculation takes the same method as the expenditures approach (\autoref{core:exp}), but substitutes gross investment with net investment. \textbf{Net investment (I$_n$)} is gross investment minus depreciation (\textit{the decrease in value of capital goods over time}).
 
       While GDP is the headline figure mainstream media usually follows, NDP is a more honest figure because it measures only the investment used for additional growth on the existing captial base, excluding the portion that goes into simply replacing worn down captial.
 
@@ -240,17 +350,17 @@
 
         \item GDP does not capture changes in \textbf{environmental quality}, \textbf{income inequality}, or \textbf{social conditions}. A country with high GDP may also have significant pollution, income disparity, or social unrest.
 
-        \item GDP does not account for \textbf{depreciation}, which overstates true economic welfare. NDP, as outlined in CORE CONCEPT REFERENCE, accounts for this inaccuracy.
+        \item GDP does not account for \textbf{depreciation}, which overstates true economic welfare. NDP, as outlined in \autoref{core:ndp}, accounts for this inaccuracy.
 
       \end{enumerate}
 
     \end{core}
 
-    \begin{core}{Economic Growth} % BOOKMARK =======================================================
+    \begin{core}{Economic Growth}
 
       \textbf{Economic Growth} refers to a sustained increase in real GDP per capita (\textit{per person}) over time, representing the expansion of an economy's productive capacity and living standards.
 
-      Long-run economic growth is represented by rightward shifts in the long-run aggregate supply curve (CORE CONCEPT REFERENCE) and outward shifts in the PPC (CORE CONCEPT REFERENCE). The aggregate production function expresses total output as a function of capital stock and human capital.
+      Long-run economic growth is represented by rightward shifts in the long-run aggregate supply curve (\autoref{core:lras}) and outward shifts in the PPC (\autoref{core:ppc}). The aggregate production function expresses total output as a function of capital stock and human capital.
       \[
         Y = A \cdot f(L, K, H, N)
       \]
@@ -283,7 +393,7 @@
 
         \item \textbf{Technological advancement}
 
-        \item \textbf{Increases in the labor force participation rate} (CORE CONCEPT REFERENCE)
+        \item \textbf{Increases in the labor force participation rate} (\autoref{core:lfpr})
 
       \end{enumerate}
 
@@ -293,7 +403,7 @@
 
   The \textbf{labor market} provides crucial information about employment, unemployment, and the economy's productive capacity.
 
-    \begin{core}{Labor Force Participation Rate}
+  \begin{core}[label=core:lfpr]{Labor Force Participation Rate}
 
       The \textbf{labor force participation rate} (LFPR) measures the proportion of the working-age population actively in the labor market. It is calculated by the following equation. 
       \[
@@ -304,7 +414,7 @@
 
     \end{core}
 
-    \begin{core}{Unemployment Rate}
+    \begin{core}{Unemployment Rate (U-3)}
 
       The \textbf{unemployment rate} (\textit{or also called the U-3 rate}) measures the proportion of unemployed persons to the total labor force. This is a major headline statistic that all news outlets, economists, investors, etc. follow.
       \[
@@ -329,11 +439,11 @@
 
       \end{enumerate}
 
-      The \textbf{natural rate of unemployment} (NRU) equals the sum of frictional and structural unemployment. It represents the unemployment rate when the economy is at full employment, consistent with stable inflation.
+      The \textbf{natural rate of unemployment (NRU)} equals the sum of frictional and structural unemployment. It represents the unemployment rate when the economy is at full employment, consistent with stable inflation.
 
     \end{core}
 
-    \begin{core}{Underemployment}
+    \begin{core}{Underemployment (U-6)}
 
       The \textbf{underemployment rate} (\textit{also known as the U-6 rate}) represents the proportion of unemployed and underemployed persons to the total labor force. Underemployed persons consists of \textbf{marginally attached workers} (people who want a job and have looked for one in the last 12 months, but not in the last 4 weeks) and \textbf{part-time workers for economic reasons} (people who want full-time work (35+ hours) but are working part-time because their hours were cut or they cannot find a full-time position).
       \[
@@ -342,6 +452,26 @@
 
       \textit{Many economists argue that the U-6 rate provides a much more accurate picture of "labor underutilization" because it includes people who are technically working but are struggling.}
  
+    \end{core}
+
+    \begin{core}{Other Indicators}
+
+      The following are other important labor market indicators.
+
+      \begin{enumerate}
+
+        \item \textbf{Nonfarm Payrolls}: The change in the number of employed workers excluding farm workers, private household employees, and nonprofit employees. This is the primary gauge of labor market strength.
+
+        \item \textbf{Quits Rate}: The number of employees who voluntarily left their jobs during the reporting period, divided by total employment. A higher quits rate indicates worker confidence in finding better opportunities, signaling a strong labor market.
+
+        \item \textbf{Jobs Opening Rate}: The number of job openings at the end of the reporting period, divided by the sum of employment and job openings. This measures employer demand for labor and is a leading indicator of future hiring and wage growth.
+
+        \item \textbf{Average Hourly Earnings}: The average gross hourly wages paid to nonfarm private employees, excluding government workers. Changes in this measure signal wage inflation pressures and are watched closely as a component of labor costs.
+
+        \item \textbf{Initial Claims}: The number of new unemployment insurance claims filed by recently unemployed workers. Lower initial claims indicate a stronger labor market, while rising claims may signal economic weakening.
+
+      \end{enumerate}
+
     \end{core}
 
   \subsection{Inflation}
@@ -354,16 +484,18 @@
 
     Inflation is primarily kept track of by the following two statistics.
 
-    \begin{core}{Consumer Price Index}
+    \begin{core}{Price Indices}
 
       The \textbf{Consumer Price Index (CPI)} is an inflationary measure which tracks the cost of a market basket of goods and services purchased by a typical consumer. This figure is a highly tracked statistic by new outlets and investors.
       \[
         \text{CPI} = \frac{\text{Cost of market basket in current prices}}{\text{Cost of market basket in base period prices}} \times 100
       \]
 
-      This creates an index where the base period equals 100.
+      The \textbf{Producer Price Index (PPI)} measures the average change over time in selling prices received by domestic producers for their output. Unlike the CPI, which tracks prices from the consumer perspective, the PPI reflects inflation from the producer's viewpoint. The PPI serves as a \textbf{leading indicator} of consumer inflation because cost changes at the producer level are eventually passed downstream to consumers. While less prominent in popular media than the CPI, the PPI remains a closely monitored inflation gauge among economists and policymakers.
 
-      \textit{For the U.S., this figure is maintained by the Bureau of Labor Statistics (BLS) and is the main inflation figure used by the U.S. government for administrative and legal purposes.}
+      Both the CPI and PPI have \textbf{core} versions---\textbf{core CPI} and \textbf{core PPI}---which exclude food and energy prices from their calculations. These components are omitted because they exhibit high volatility driven by natural factors (\textit{such as weather and crop yields}) and geopolitical events (\textit{such as oil supply disruptions}). By excluding these volatile elements, core measures provide smoother, more stable trends compared to their raw counterparts.
+
+      \textit{For the U.S., these figures are maintained by the Bureau of Labor Statistics (BLS) and are the main inflation figures used by the U.S. government for administrative and legal purposes.}
 
     \end{core}
 
@@ -371,7 +503,9 @@
 
       The \textbf{Personal Consumption Expenditures (PCE)} index is another inflation index that captures a broader range of consumer spending and accounts for substitution effects. This inflation measure is also another highly tracked statistic.
 
-      \textit{For the U.S. this figure is maintained by Bureau of Economic Analysis and is the preferred inflation gauge for the Federal Reserve in the context of setting the Federal Reserve Rate (CORE CONCEPT REFERENCE).}
+      Like price indices, the PCE index also has a core version for the same reasons.
+
+      \textit{For the U.S. this figure is maintained by Bureau of Economic Analysis and is the preferred inflation gauge for the Federal Reserve in the context of setting the Federal Funds Rate (\autoref{core:ffr}).}
 
     \end{core}
 
@@ -395,9 +529,9 @@
 
     \begin{core}{Nominal versus Real Variables}
 
-      \textbf{Nominal variables} are measured in current dollars and are not adjusted for inflation. Examples include nominal GDP (\textit{measured in current prices}) and nominal interest rates (\textit{the stated rate without inflation adjustment}).
+      \textbf{Nominal variables} are measured in current dollars and are not adjusted for inflation. Examples include \textbf{nominal GDP} (\textit{measured in current prices}) and nominal interest rates (\textit{the stated rate without inflation adjustment}).
 
-      \textbf{Real variables} are adjusted for inflation and reflect actual purchasing power. Real GDP uses constant base-year prices. For instance, the following is the equation for \textbf{real interest rate}.
+      \textbf{Real variables} are adjusted for inflation and reflect actual purchasing power. \textbf{Real GDP} uses constant base-year prices. For instance, the following is the equation for \textbf{real interest rate}.
       \[
         \text{Real Interest Rate} = \text{Nominal Interest Rate} - \text{Inflation Rate}
       \]
@@ -418,7 +552,7 @@
 
     \end{core}
 
-  \subsection{Housing} % IN PROGRESS ===============================================================
+    \subsection{Housing}
 
     Housing indicators provide valuable insights into the broader economic outlook. These statistics are closely watched because of housing's unique role in the economy.
 
@@ -430,49 +564,107 @@
 
     \end{core}
 
-    \begin{core}{Housing Starts}
+    \begin{core}{Housing Indicators}
 
-      Housing starts (the number of new residential construction projects beginning) and existing home sales provide timely signals about consumer confidence and economic momentum.
+      The following are the major housing indicators followed by economists
+
+      \begin{enumerate}
+
+        \item \textbf{Housing Starts}: The number of new residential construction projects that have begun during the reporting period. This is one of the first indicators to decline at the onset of a recession and one of the last to recover, making it a reliable leading indicator of economic trends.
+
+        \item \textbf{New Housing Sales}: The number of newly constructed homes with a signed sales contract. New home sales represent a smaller portion of the market than existing sales but are considered a leading indicator because they reflect consumer confidence in the economy and housing market.
+
+        \item \textbf{Existing Housing Sales}: The number of previously constructed homes with a completed transaction. Existing home sales make up the majority of housing market activity and reflect the supply side of the market, including homeowner decisions to sell.
+
+        \item \textbf{Mortgage Rates}: The interest rates charged on home loans, most commonly tracked for 30-year and 15-year fixed-rate mortgages. Mortgage rates directly affect housing affordability and demand, with lower rates typically stimulating home purchases and higher rates slowing the market.
+
+      \end{enumerate}
+
+    \end{core}    
+
+  \subsection{Sentiment Indicators}
+
+    \begin{core}{Economic Sentiment}
+
+        \textbf{Economic Sentiment} is a composite indicator that measures the overall "mood" or optimism of an economy. It is a \textbf{leading indicator}, meaning it often predicts changes in GDP before they occur.
+
+        Sentiment is typically subdivided into two primary pillars:
+
+        \begin{itemize}
+
+            \item \textbf{Business Confidence:} Measures the expectations of firm managers regarding production, order books, and inventory levels. It predicts future Investment (I).
+
+            \item \textbf{Consumer Confidence:} Measures households' plans for major purchases and their outlook on personal finances. It predicts future Consumption (C).
+
+        \end{itemize}
 
     \end{core}
 
-  \subsection{Sentiment and Confidence Indicators} % IN PROGRESS ===================================
+    \begin{core}{Key Consumer Sentiment Indicators}
 
-    \begin{core}{Business Confidence}
+      \textbf{University of Michigan Consumer Sentiment}: A monthly survey of at least 500 households that measures consumers' attitudes toward current and expected financial conditions, including their assessment of present economic conditions and their expectations for the future. Readings greater than 50 indicate positive consumer sentiment and typically signal stronger future consumer spending.
 
-      \textbf{Business confidence} reflects firms' expectations about future demand and profitability.
+      \textbf{Conference Board Consumer Confidence}: A monthly survey of approximately 3,000 households that assesses consumer attitudes toward business conditions, employment, and income. The index comprises two components: the present situation index (\textit{current economic conditions}) and the expectations index (\textit{short-term outlook for business conditions, employment, and income}).
 
-    \end{core}
+      \textbf{University of Michigan Inflation Expectations}: A survey-based measure of consumers' expectations for inflation over the next one to five years. These expectations directly influence wage demands, pricing decisions, and actual inflation outcomes, making this a closely watched indicator for monetary policy.
 
-    \begin{core}{Institute for Supply Management Purchasing Managers' Index}
+    \end{core} 
 
-      The Institute for Supply Management (ISM) publishes the Purchasing Managers' Index (PMI), the most widely followed indicator of U.S. manufacturing activity.
-      
-      A PMI above 50 indicates expansion in the manufacturing sector and general economic optimism. A PMI below 50 indicates contraction and pessimism. The strong correlation between the PMI and GDP growth makes it a valuable leading indicator.
+    \begin{core}{Key Business Sentiment Indicators}
 
-    \end{core}
+      \textbf{ISM Manufacturing PMI}: A monthly survey of purchasing managers at over 300 manufacturing firms conducted by the Institute for Supply Management. The PMI summarizes whether business conditions have improved, stayed the same, or worsened. A reading above 50 indicates expansion, while below 50 indicates contraction. The PMI is one of the most reliable leading indicators of economic activity.
 
-    \begin{core}{University of Michigan Consumer Sentiment Index}
-
-      Consumer sentiment surveys, such as the University of Michigan Consumer Sentiment Index, measure household confidence about future economic conditions and their financial situations.
+      \textbf{NFIB Small Business Optimism}: A monthly survey of small business owners conducted by the National Federation of Independent Business that measures their expectations for the economy, hiring plans, capital expenditure plans, and earnings. Small businesses are significant employers, making this index a useful gauge of labor market and economic conditions.
 
     \end{core}
 
-  \subsection{Economic Calendar and Indicator Releases} % IN PROGRESS ==============================
 
-    % NOTE: organize this list extensively later
+  \subsection{Economic Calendar and Indicator Releases}
 
-    Economic data releases follow predictable schedules, allowing markets to anticipate and react to new information. Key releases include:
+    Economic data releases follow predictable schedules, allowing markets to anticipate and react to new information. The following table organizes key indicators from each category.
 
-    Inflation indicators: CPI (monthly), PCE (monthly), Producer Price Index (monthly), and inflation expectations surveys.
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{p{2.5cm} p{5cm} p{5cm}}
+        \hline
+        \hline
+        \textbf{Category} & \textbf{Indicator} & \textbf{} \\
+        \hline
+        GDP & \href{https://fred.stlouisfed.org/series/GDP}{Nominal GDP} & \href{https://fred.stlouisfed.org/series/A939RC0Q052SBEA}{Nominal GDP per capita} \\
+            & \href{https://fred.stlouisfed.org/series/GDPC1}{Real GDP} & \href{https://fred.stlouisfed.org/series/A939RX0Q048SBEA}{Real GDP per capita} \\
+        \hline
+        Inflation & \href{https://www.investing.com/economic-calendar/cpi-733}{CPI} & \href{https://tradingeconomics.com/united-states/producer-prices-change}{PPI} \\
+                   & \href{https://tradingeconomics.com/united-states/pce-price-index-annual-change}{PCE} & \\
+        \hline
+        Labor Market & \href{https://tradingeconomics.com/united-states/unemployment-rate}{U-3 Rate} & \href{https://tradingeconomics.com/united-states/u6-unemployment-rate}{U-6 Rate} \\
+                        & \href{https://tradingeconomics.com/united-states/labor-force-participation-rate}{Participation Rate} & \href{https://tradingeconomics.com/united-states/non-farm-payrolls}{Nonfarm Payrolls} \\
+                        & \href{https://tradingeconomics.com/united-states/job-quits-rate}{Quits Rate} & \href{https://tradingeconomics.com/united-states/job-offers}{Jobs Opening Rate} \\
+                        & \href{https://tradingeconomics.com/united-states/average-hourly-earnings}{Average Hourly Earnings} & \href{https://tradingeconomics.com/united-states/jobless-claims}{Initial Claims} \\
+        \hline
+        Housing & \href{https://tradingeconomics.com/united-states/housing-starts}{Housing Starts} & \href{https://tradingeconomics.com/united-states/new-home-sales}{New Housing Sales} \\
+                  & \href{https://tradingeconomics.com/united-states/existing-home-sales}{Existing Housing Sales} & \href{https://tradingeconomics.com/united-states/30-year-mortgage-rate}{30-Year Mortgage Rate} \\
+                  & \href{https://tradingeconomics.com/united-states/15-year-mortgage-rate}{15-Year Mortgage Rate} & \\
+        \hline
+        Sentiment & \href{https://tradingeconomics.com/united-states/business-confidence}{ISM Manufacturing PMI} & \href{https://tradingeconomics.com/united-states/consumer-confidence}{UMich Consumer Sentiment} \\
+                     & \href{https://www.investing.com/economic-calendar/cb-consumer-confidence-48}{CB Consumer Confidence} & \href{https://tradingeconomics.com/united-states/michigan-inflation-expectations}{UMich Inflation Expectations} \\
+                     & \href{https://tradingeconomics.com/united-states/nfib-business-optimism-index}{NFIB Small Business Optimism} & \\
+        \hline
+        Other & \href{https://finance.yahoo.com/quote/%5EVIX/}{VIX} & \href{https://finance.yahoo.com/quote/DX-Y.NYB/}{Dollar Index} \\
+                & \href{https://fred.stlouisfed.org/series/FEDFUNDS}{Federal Funds Rate} & \\
+        \hline
+        \hline
+      \end{tabular}
+      \caption{Key economic indicators by category}
+      \label{tab:economic_indicators}
+    \end{table}
 
-    Labor market indicators: Unemployment rate (monthly), nonfarm payrolls (monthly), labor force participation rate, and various measures of underemployment (U-6).
+    \begin{core}{World Economic Calendar}
 
-    Confidence indicators: PMI (monthly), consumer sentiment (preliminary and final releases).
+        The \textbf{world economic calendar} is a comprehensive schedule of economic indicator releases (such as GDP, CPI, and employment data) and central bank meetings throughout the year. 
 
-    Housing indicators: Housing starts, building permits, and existing/new home sales.
+        It is the primary tool used by investors and policymakers to track \textbf{market expectations} versus \textbf{actual results}. Discrepancies between the "forecast" and the "actual" data typically drive volatility in global currency and stock markets.
 
-    These indicators provide the foundation for macroeconomic analysis and policy formulation.
+    \end{core}    
 
 \section{Macroeconomic Relationships}
 
@@ -484,7 +676,17 @@
 
       \textbf{Aggregate Demand (AD)} represents the total quantity of goods and services demanded in the economy at different price levels.
 
-      < PLOT OF AD CURVE >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,2}{AD}
+
+        \end{axis} 
+      }{Aggregate demand curve}{fig:ad}{1}
 
       The AD curve slopes downward for three reasons:
 
@@ -514,9 +716,9 @@
 
     \end{core}
 
-    \begin{core}{The Multiplier Effect}
+    \begin{core}[label=core:mpcs]{The Multiplier Effect}
 
-      An initial change in spending creates a larger final change in GDP through the multiplier effect. To understand why this is, we introduce two new concepts: the \textbf{Marginal Propensity to Consume or MPC} (the fraction of additional disposable income that households spend) and the \textbf{Marginal Propensity to Save (MPS)} (the fraction of additional household income that housholds save). Thus, 
+      An initial change in spending creates a larger final change in GDP through the multiplier effect. To understand why this is, we introduce two new concepts: the \textbf{Marginal Propensity to Consume or MPC} (the fraction of additional disposable income that households spend) and the \textbf{Marginal Propensity to Save (MPS)} (the fraction of additional household income that households save). Thus, 
       \[
         \text{MPC} + \text{MPS} = 1
       \]
@@ -538,9 +740,19 @@
 
       \textbf{Short-Run Aggregate Supply (SRAS)} represents the total output firms are willing to produce at different price levels in the short run, when some input costs (\textit{particularly wages}) are fixed.
 
-      < PLOT OF SRAS >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
 
-      The SRAS curve slopes upward because higher price levels increase profitability when input costs are \textbf{sticky}. Firms respond to higher prices by increasing production to capture additional profits in the near future until productions cost adjust.
+        \upslope{0}
+        \pgfiglabel{10,8}{SRAS}
+
+        \end{axis} 
+      }{Short-run aggregate supply}{fig:sras}{1}
+
+      The SRAS curve slopes upward because higher price levels increase profitability when input costs are \textbf{sticky}. Firms respond to higher prices by increasing production to capture additional profits in the near future until production costs adjust.
 
       The SRAS curve illustrates the short-run trade-off between inflation and unemployment. Points higher on the curve indicate economic boom conditions (\textit{low unemployment, high inflation}), while points lower on the curve indicate recessionary conditions (\textit{high unemployment, low inflation}).
 
@@ -548,11 +760,21 @@
 
     \end{core}
 
-    \begin{core}{Long-Run Aggregate Supply}
+    \begin{core}[label=core:lras]{Long-Run Aggregate Supply}
 
       \textbf{Long-Run Aggregate Supply (LRAS)} represents the economy's potential output when all input costs can fully adjust to price changes. In the long run, output is independent of the price level and equals potential GDP.
 
-      < PLOT OF LRAS >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \verticalslope{5}
+        \pgfiglabel{6.5,8}{LRAS}
+
+        \end{axis} 
+      }{Long-run aggregate supply}{fig:lras}{1}
 
     \end{core}
 
@@ -562,11 +784,73 @@
 
       \textbf{Demand-pull inflation} results from AD increasing beyond potential output, pushing the economy above its LRAS.
 
-      < PLOT OF DEMAND PULL INFLATION >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,6.5) {};
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
+        \pgfiglabel{1.5, 7}{$P_{n}$}
+
+        % Horizontal dashed line from dot to y-axis
+        \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:0,6.5); 
+        \pgfiglabel{5.8,2}{$Q_{n}$}
+
+        \draw[-stealth, thick] (axis cs:7,3.5) -- (axis cs:8,4.5);
+
+        \downslope{3}
+
+        \downslope{0}
+        \pgfiglabel{8,1}{AD}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{SRAS}
+
+        \verticalslope{5}
+        \pgfiglabel{6.5,9}{LRAS}
+
+        \end{axis} 
+      }{Demand pull inflation}{fig:dpi}{1}
 
       \textbf{Cost-push inflation} results from SRAS decreasing due to supply shocks, reducing output and raising prices simultaneously.
 
-      < PLOT OF COST PUSH INFLATION >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:3.5,6.5) {};
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:3.5,0);
+        \pgfiglabel{1.5, 7}{$P_{n}$}
+
+        % Horizontal dashed line from dot to y-axis
+        \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:0,6.5); 
+        \pgfiglabel{4.2,2}{$Q_{n}$}
+
+        \draw[-stealth, thick] (axis cs:7,7.5) -- (axis cs:6,8.5);
+
+        \upslope{3}
+
+        \downslope{0}
+        \pgfiglabel{8,1}{AD}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{SRAS}
+
+        \verticalslope{5}
+        \pgfiglabel{3.5,9}{LRAS}
+
+        \end{axis} 
+      }{Supply push inflation}{fig:spi}{1}
 
     \end{core}
 
@@ -574,7 +858,29 @@
 
       Without government intervention, the economy naturally adjusts to long-run equilibrium through wage and price flexibility. When output falls below potential (\textit{recessionary gap}), unemployment rises, wages decline, and production costs fall, shifting SRAS rightward until output returns to potential. When output exceeds potential (\textit{inflationary gap}), upward pressure on wages increases costs, shifting SRAS leftward.
 
-      < PLOT OF SELF ADJUSTMENT ALONG THE AD, SRAS, and LRAS >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \draw[-stealth, thick] (axis cs:6,8.5) -- (axis cs:7,7.5);
+        \draw[-stealth, thick] (axis cs:8.5,6) -- (axis cs:7.5,7);
+
+        \upslope{-3}
+        \upslope{3}
+
+        \downslope{0}
+        \pgfiglabel{8,1}{AD}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{SRAS}
+
+        \verticalslope{5}
+        \pgfiglabel{3.5,9}{LRAS}
+
+        \end{axis} 
+      }{Long-run self-adjustment or SRAS}{fig:adjustment}{1}
 
       This self-adjustment process explains why classical economists emphasized the economy's natural tendency toward full employment ($\text{U-3 Rate} = \text{NRU}$), though the adjustment process may be slow and painful.
 
@@ -584,11 +890,34 @@
 
       The \textbf{Phillips Curve} illustrates the short-run inverse relationship between unemployment and inflation. Lower unemployment corresponds to higher inflation, reflecting the short-run trade-off between economic activity and price stability.
 
-      < PLOT OF PHILLIPS CURVE >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Unemployment Rate}{Inflation Rate}
+          \axispresetstwo
+        ]
 
-      Movements along the SRAS correspond to movements along the Short-Run Phillips Curve (SRPC). Rightward shifts in SRAS shift the SRPC leftward (better outcomes for both unemployment and inflation).
+        \downslope{0}
+        \pgfiglabel{10,2}{SRPC}
+
+        \end{axis} 
+      }{Short-run phillips curve}{fig:srpc}{1}
+
+      Movements along the SRAS correspond to movements along the Short-Run Phillips Curve (SRPC). Rightward shifts in SRAS shift the SRPC leftward (\textit{better outcomes for both unemployment and inflation}). However, a leftward shift in the SRAS (\textit{supply push inflation}) causes a rightward shift in the SRPC, resulting in a phenomenon known as \textbf{stagflation}---a period characterized by simultaneous increases in both unemployment and inflation.
 
       In the long run, the economy returns to the natural rate of unemployment regardless of inflation, making the Long-Run Phillips Curve vertical.
+
+      \pgfig{
+        \begin{axis}[
+          \econplot{Unemployment Rate}{Inflation Rate}
+          \axispresetstwo
+        ]
+
+        \verticalslope{5}
+        \pgfiglabel{3.5,9}{LRPC}
+
+        \end{axis} 
+      }{Long-run phillips curve}{fig:lrpc}{1}
+
 
     \end{core}
 
@@ -655,7 +984,23 @@
 
       \end{itemize}
 
-      < DIAGRAM OF MONEY SUPPLY >
+      \pgfig{
+        % M2 - Outermost ellipse
+        \draw[thick] (0,0) ellipse (6cm and 2cm);
+        \node at (4.0,1) {\textbf{M2}};
+        \node[align=center] at (4.0,0) {Less liquid money\\such as savings\\accounts};
+        
+        % M1 - Middle ellipse
+        \draw[thick] (-1.5,0) ellipse (3.5cm and 1.5cm);
+        \node at (-0.3,1) {\textbf{M1}};
+        \node[align=center, text width=3cm] at (-0.5,-0.2) {Checkable deposits not held in reserve and travelers' checks};
+        
+        % M0 - Inner circle
+        \draw[thick] (-3.5,0) circle (1.0cm);
+        \node at (-3.5,0.7) {\textbf{M0}};
+        \node[align=center] at (-3.5,-0.3) {Amount\\printed};
+        
+      }{Diagram of money supply}{fig:msupply}{1.0}
 
       These aggregates reflect different degrees of liquidity, with broader measures (\textit{M2}) capturing more forms of money that can be relatively easily converted to cash.
 
@@ -665,7 +1010,27 @@
 
       The money market determines the equilibrium nominal interest rate through the interaction of money supply and money demand. The money supply curve is vertical (\textit{set by the central bank}), while money demand slopes downward (\textit{higher interest rates increase the opportunity cost of holding money}).
 
-      < PLOT OF MONEY MARKET >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity of Money Held}{Nominal Interest Rate}
+          \axispresetstwo
+        ]
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+        \pgfiglabel{2, 5.5}{r}
+
+        \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+        \pgfiglabel{5.8,2}{M1}
+
+        \verticalslope{5}
+        \pgfiglabel{5,10.5}{S}
+
+        \downslope{0}
+        \pgfiglabel{10,2}{D}
+
+        \end{axis} 
+      }{Money market}{fig:mmarket}{1}
 
       Factors affecting money demand include price levels (\textit{higher prices require more money for transactions}), national income (\textit{higher income increases transactions}), and technology affecting liquidity.
 
@@ -685,7 +1050,7 @@
         \text{ΔMoney Supply} = \text{Excess Reserves} \times \frac{1}{rr}
       \]
 
-      As these loans are spent and redeposited into other banks, the process repeats across the banking system, mathematically expanding a single initial deposit into a much larger total increase in the money supply. We have seen this same pattern with the multiplier effect in the context of MPC and MPS (CORE CONCEPT REFERENCE). With a 20\% RRR, an initial deposit of \$1,000 can ultimately support \$5,000 in total deposits.
+      As these loans are spent and redeposited into other banks, the process repeats across the banking system, mathematically expanding a single initial deposit into a much larger total increase in the money supply. We have seen this same pattern with the multiplier effect in the context of MPC and MPS (\autoref{core:mpcs}). With a 20\% RRR, an initial deposit of \$1,000 can ultimately support \$5,000 in total deposits.
 
     \end{core}
 
@@ -693,9 +1058,33 @@
 
       The loanable funds market determines the real interest rate through the supply of funds (\textit{savings}) and demand for funds (\textit{investment}). With higher real interest rates, the supply of loanable funds increases (\textit{encouraging saving}) and the demand decreases (\textit{discouraging borrowing for investment}).
 
-      < PLOT OF LOANABLE FUNDS GRAPH >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity of Loanable Funds}{Real Interest Rate}
+          \axispresetstwo
+        ]
 
-      The position of these curves reflects national saving behavior, government borrowing, and investment profitability expectations.
+        \downslope{0}
+        \pgfiglabel{10,2}{D}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{S}
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+        \pgfiglabel{2.5, 5.8}{r}
+
+        % Horizontal dashed line from dot to y-axis
+        \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+        \pgfiglabel{6,2}{Q}
+
+        \end{axis} 
+      }{Loanable funds}{fig:lfunds}{1}
+
+      The position of these curves reflects national saving behavior (S), government borrowing (D), and investment profitability (D) expectations.
 
     \end{core}
 
@@ -706,15 +1095,15 @@
         I = \text{National Savings} = Y - C - G = \underbrace{(Y - T - C)}_{\text{Private Saving}} + \underbrace{(T - G)}_{\text{Public Saving}} 
       \]
 
-      As the above equations shows nicely, private saving is simply houshold income (Y) after taxes (T) and private consumption (C) and public saving (\textit{or the government saving}) its tax revenue (T) after accounting for its spending (G). 
+      As the above equations shows nicely, private saving is simply household income (Y) after taxes (T) and private consumption (C) and public saving (\textit{or the government saving}) its tax revenue (T) after accounting for its spending (G). 
 
-      In an \textbf{open economy}, the relationship between savings and investment changes because a country is no longer limited to its own internal resources. It can interact with the the rest of the world and must consider net capital outflow (NCO).
+      In an \textbf{open economy}, the relationship between savings and investment changes because a country is no longer limited to its own internal resources. It can interact with the rest of the world and must consider net capital outflow (NCO).
 
       \[
         \text{National Savings} = I + NCO
       \]
 
-      Net Capital Outflow (NCO) measures the net flow of funds being invested abroad, calculated by the following equation.
+      \textbf{Net Capital Outflow (NCO)} measures the net flow of funds being invested abroad, calculated by the following equation.
       \[
         \text{NCO} = \text{Domestic purchase of foreign assets} - \text{Foreign purchase of domestic assets}
       \]
@@ -739,7 +1128,7 @@
 
       \end{itemize}
 
-      Keep in mind that the initial impact of fiscal policy is multiplied through the multiplier effect (CORE CONCEPT REFERENCE), meaning the ultimate change in GDP exceeds the initial fiscal impulse.
+      Keep in mind that the initial impact of fiscal policy is multiplied through the multiplier effect (\autoref{core:mpcs}), meaning the ultimate change in GDP exceeds the initial fiscal impulse.
 
     \end{core}
 
@@ -795,15 +1184,15 @@
 
     \begin{core}{Monetary Policy Tool (\textit{Required Reserve Ratio})}
 
-      Changes in the \textbf{required reserve ratio (RRR)} affect banks' lending capacity. Lowering the RRR expands the money supply and raising it contracts the money supply. Keep in mind that the ultimate change in money supply is amplified due to the multiplier effect in fractional reserve banking (CORE CONCEPT REFERENCE).
+      Changes in the \textbf{required reserve ratio (RRR)} affect banks' lending capacity. Lowering the RRR expands the money supply and raising it contracts the money supply. Keep in mind that the ultimate change in money supply is amplified due to the multiplier effect in fractional reserve banking (\autoref{core:mpcs}).
 
-      Historically, the RRR was set by the Federal Reserve and publicly announced. However, as of March 2020 (\textit{COVID pandemic}), the Fed reduced the RRR to 0\% for all deposits, effectively eliminating it as an active policy tool (LINK TO WEBSITE - https://www.federalreserve.gov/monetarypolicy/reservereq.htm ).
+      Historically, the RRR was set by the Federal Reserve and publicly announced. However, as of March 2020 (\textit{COVID pandemic}), \href{https://www.federalreserve.gov/monetarypolicy/reservereq.htm}{the Fed reduced the RRR to 0\%} for all deposits, effectively eliminating it as an active policy tool.
 
       In contrast, some central banks (\textit{such as the People's Bank of China}) continue to actively adjust reserve requirements as a monetary policy tool.
 
     \end{core}
 
-    \begin{core}{Monetary Policy Tool (\textit{Discount Rate, Interest on Reserves, and Federal Funds Rate})}
+    \begin{core}[label=core:ffr]{Monetary Policy Tool (\textit{Discount Rate, Interest on Reserves, and Federal Funds Rate})}
 
       The \textbf{discount rate} is the interest rate banks pay to borrow from the central bank. Consequently, no bank would ever rationally borrow from another commercial bank with a higher interest rate than the discount rate. Thus, lowering the discount rate encourages borrowing because it effectively acts as the ceiling for all other interest rates; raising it has the opposite effect. 
 
@@ -811,7 +1200,7 @@
 
       Through lowering and raising these two figures, the central bank can effectively manage short-term rates across the economy, influencing the level of economic activity as a result. This target rate range is called the \textbf{Federal Reserve Rate (FFR)}.
 
-      < PLOT OF FFR >
+      \myfig{}{macroeconomics_figures/ffrgraph.png}{Federal funds rate (July 1954 - February 2026)}{fig:ffrgraph}
 
       \textit{The FFR serves as the primary benchmark for the global financial system, effectively anchoring the interest rates for all other types of borrowing. To maintain economic stability, the \textbf{Federal Open Market Committee (FOMC)} meets eight times annually to evaluate and adjust the FFR target.}
 
@@ -827,7 +1216,7 @@
 
     \begin{core}{Current Account}
 
-      The \textbf{current account} measures the net balance of \textbf{value} into a country in the form of goods, services, income, and transfers (\textit{cross border value flows}). It essentially represents a nation's short-term economic transactions.
+      The \textbf{current account} measures the net balance of \textbf{value} flow into a country in the form of goods, services, income, and transfers. It essentially represents a nation's short-term economic transactions.
 
       A current account deficit means a country is importing more than it exports and is a net borrower from abroad. A surplus indicates the opposite.
 
@@ -837,33 +1226,48 @@
 
     \begin{core}{Capital (Financial) Account}
 
-      The \textbf{capital (financial) account} records the net change in national ownership of assets. It reflects how a country finances the items in its current account or where it invests its current account surplus.      
+      The \textbf{capital (financial) account} records the net change in national ownership of assets. It reflects how a country finances the items in its current account or where it invests its current account surplus. When a country imports in a good with the value of 100, there must be an export of assets (\textit{usually currency}) of the same value of 100.
+
+      A capital account deficit means a country is gaining more assets than is losing. A surplus indicates the opposite.
 
       \textit{It's helpful to think of the capital account as a country's wallet.}
 
     \end{core}
 
-    In theory, the current account and capital account sum to zero: a current account deficit must be financed by a capital account surplus (net borrowing from abroad).
+    In theory, the current account and capital account sum to zero: a current account deficit must be financed by a capital account surplus (\textit{net borrowing from abroad}).
 
   \subsection{Exchange Rates}
 
     \begin{core}{Exchange Rates}
 
-      The \textbf{exchange rate} represents the price of one currency in terms of another. Currency \textbf{appreciation} means a currency becomes more valuable relative to another, and \textbf{depreciation} means it becomes less valuable.
+      The \textbf{exchange rate} represents the price of one currency in terms of another. Currency \textbf{appreciation} means a currency becomes more valuable relative to another, and \textbf{depreciation} means it becomes less valuable. The following is the foreign exchange market graph for the USD/EUR pair.
 
-      < PLOT OF EXCHANGE RATE GRAPH >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity of USD}{EUR/USD (Price of USD)}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,2}{D of USD}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{S of USD}
+
+        \end{axis} 
+      }{USD/EUR currency market}{fig:usdeur}{1}
 
       Like other markets, exchange rates are determined by supply and demand. Factors affecting currency demand include the following.
 
       \begin{itemize}
 
-        \item relative interest rates (\textit{higher rates attract investors towards assets that are bought via that currency})
+        \item Relative interest rates (\textit{higher rates attract investors towards assets that are bought via that currency})
 
-        \item relative price levels (\textit{lower prices increase global economy competitiveness})
+        \item Relative price levels (\textit{lower prices increase global economy competitiveness})
 
-        \item relative national income (\textit{higher income increases imports and currency demand})
+        \item Relative national income (\textit{higher income increases imports and currency demand})
 
-        \item tariffs (\textit{tariffs reduce import demand}).
+        \item Rariffs (\textit{tariffs reduce import demand}).
 
       \end{itemize}
 
@@ -875,7 +1279,7 @@
 
       These capital flows continue until real interest rates equalize across countries, implying that in integrated capital markets, real interest rates should converge globally.
 
-      In practice, real interest rates do not perfectly converge due to the following. Consequently, the RIRP condition serves rather as a long-run tedency than a constant state of equilibrium.
+      In practice, real interest rates do not perfectly converge due to the following. Consequently, the RIRP condition serves rather as a long-run tendency than a constant state of equilibrium.
 
       \begin{itemize}
 

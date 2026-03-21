@@ -5,3 +5,36 @@
 \input{../../presets/_general/code}
 \input{../../presets/_general/other}
 
+
+\newcommand{\econplot}[2]{
+  width=6cm,
+  height=6cm,
+  xmin=0, xmax=10,
+  ymin=0, ymax=10,
+  xtick=\empty,
+  ytick=\empty,
+  xticklabels=\empty,
+  yticklabels=\empty, 
+  xtick style={draw=none},    % ← Add this
+  ytick style={draw=none},    % ← Add this
+  xlabel={#1},
+  ylabel={#2},
+  axis line style={thick},
+}
+
+\newcommand{\upslope}[1]{
+  \def\linepos{#1}
+  \addplot[domain=0.5:9.5, samples=100, thick, restrict y to domain=0.5:9.5] {x + \linepos}; 
+}
+
+\newcommand{\downslope}[1]{
+  \def\linepos{#1}
+  \addplot[domain=0.5:9.5, samples=100, thick, restrict y to domain=0.5:9.5] {-x + 10 + \linepos}; 
+}
+
+\newcommand{\verticalslope}[1]{
+  \draw[thick] (axis cs:#1,0.5) -- (axis cs:#1,9.5);
+}
+
+
+
