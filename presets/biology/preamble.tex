@@ -5,10 +5,84 @@
 \input{../../presets/_general/code}
 \input{../../presets/_general/other}
 
+\usepackage{chemfig}
 \usepackage[version=4]{mhchem}
 
 \newcommand{\bce}[1]{
   \hspace{7mm}{#1}
 }
 
+\newcommand{\reactionfig}[4]{
+    \begin{figure}[H]
+    \centering
+    \scalebox{#4}{
+    #1
+    }
+    \caption{#2}
+    \label{#3}
+    \end{figure}
+}
+
+\newcommand{\doublereactionfig}[5]{
+    \begin{figure}[H]
+    \centering
+    \begin{minipage}{\textwidth}
+    \centering
+    \scalebox{#5}{
+    #1
+    }
+    \end{minipage}
+
+    \vspace{2.5em}
+
+    \begin{minipage}{\textwidth}
+    \centering
+    \scalebox{#5}{
+    #2
+    }
+    \end{minipage}
+
+    \caption{#3}
+    \label{#4}
+    \end{figure}
+}
+
+\newcommand{\triplereactionfig}[6]{
+    \begin{figure}[H]
+    \centering
+    \begin{minipage}{\textwidth}
+    \centering
+    \scalebox{#6}{
+    #1
+    }
+    \end{minipage}
+
+    \vspace{2.5em}
+
+    \begin{minipage}{\textwidth}
+    \centering
+    \scalebox{#6}{
+    #2
+    }
+    \end{minipage}
+
+    \vspace{2.5em}
+
+    \begin{minipage}{\textwidth}
+    \centering
+    \scalebox{#6}{
+    #3
+    }
+    \end{minipage}
+
+    \caption{#4}
+    \label{#5}
+    \end{figure}
+}
+
+\newcommand{\scheme}[1]{
+  \schemestart
+    #1
+  \schemestop
+}
 

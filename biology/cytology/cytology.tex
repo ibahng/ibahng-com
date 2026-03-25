@@ -17,41 +17,230 @@
 
     \begin{core}{Polymers \$ Monomers}
 
-      Large carbohydrates, proteins, and nucleic acids are classified as \textbf{macromolecules} due to their large size. These molecules are typically chain-like structures known as \textbf{polymers}. Polymers are composed of many smaller repeating subunits called \textbf{monomers}.
+      Large carbohydrates, proteins, and nucleic acids are classified as \textbf{macromolecules} due to their enormous molecular size. These macromolecules exist as chain-like structures known as \textbf{polymers}, which are built from many smaller repeating subunits called \textbf{monomers}.
 
     \end{core}
 
     \begin{core}{Dehydration \& Hydrolysis Reactions}
 
-      Polymers can be assembled and disassembled through \textbf{dehydration (condensation) reactions} and \textbf{hydrolysis reactions}, respectively. In a dehydration reaction, two monomers are covalently linked through the \textbf{removal of a water molecule}, forming a new bond between them. In contrast, a hydrolysis reaction breaks a covalent bond within a polymer by the \textbf{addition of a water molecule}, thereby separating it into monomers.
+      Cells can both assemble and disassemble polymers through two complementary chemical processes: \textbf{dehydration (condensation) reactions} and \textbf{hydrolysis reactions}. During dehydration reactions, two monomers become covalently linked through the \textbf{removal of a water molecule}, creating a new bond that extends the polymer chain. Conversely, hydrolysis reactions break these covalent bonds by the \textbf{addition of a water molecule}, splitting polymers back into their constituent monomers.
 
-      \myfig{0.6}{cytology_figures/dehy_hydro}{caption}{fig:fig1}
+      \bce{\text{(\textit{Dehydration Synthesis})} \ce{A-OH + HO-B -> A-O-B + H2O}}
+
+      \bce{\text{(\textit{Hydrolysis})} \ce{A-O-B + H2O -> A-OH + B-OH}}
 
     \end{core}
 
   \subsection{Carbohydrates}
 
-    \begin{core}{Carbohydrates}
+    \textbf{Carbohydrates} are sugars that function both as a primary source of energy and as structural materials for cells. The simplest carbohydrates are \textbf{monosaccharides}, which generally have molecular formulas that are multiples of \ce{CH2O}. 
 
-      (1) \textbf{Carbohydrates} are sugars that function both as a primary source of energy and as structural materials for cells. The simplest carbohydrates are \textbf{monosaccharides}, which generally have molecular formulas that are multiples of \ce{CH2O}. 
+    \begin{core}{Monosaccharides}
 
       One of the most well-known monosaccharides is \textbf{glucose} (\ce{C6H12O6}), a key energy source in cellular respiration.
 
-      \myfig{0.15}{cytology_figures/glucose}{caption}{fig:fig2}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:90]*6(
+            (-[:-90]OH)
+            -
+            (-[:-90]OH)
+            -O
+            -
+            (-[:90]\ce{CH2OH})
+            -
+            (-[:-90]OH)
+            -
+            (-[:90]OH)
+            -
+            )
+          }
+        }
+      }{Glucose}{fig:filler1}{0.6}
 
-      Other monosaccharides include \textbf{fructose} and \textbf{galactose}, which are structural isomers of glucose (they share the same molecular formula but differ in the arrangement of their atoms). Additionally, monosaccharides can exist in both \textbf{linear} and \textbf{ring} forms, with the ring form predominating in aqueous solutions. The linear forms of several monosaccharides (including glucose) are shown below.
+      Other monosaccharides include \textbf{fructose} and \textbf{galactose}, which are structural isomers of glucose (\textit{they share the same molecular formula but differ in the arrangement of their atoms}).
 
-      \myfig{0.8}{cytology_figures/linear_monosacc}{caption}{fig:fig3}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:90]*5(
+            (-[:120]OH)
+            -
+            (-[:-60]\ce{CH2OH})
+            -O
+            -
+            (-[:120]\ce{CH2OH})
+            (-[:-120]OH)
+            -
+            (-[:-90]OH)
+            -)
+          }
+          \qquad\qquad
+          \chemfig{
+            [:90]*6(
+            (-[:-90]OH)
+            -
+            (-[:90]OH)
+            -O
+            -
+            (-[:90]\ce{CH2OH})
+            -
+            (-[:90]OH)
+            -
+            (-[:90]OH)
+            -
+            )
+          }
+        }
+      }{Fructose (\textit{left}) and galactose (\textit{right})}{fig:filler2}{0.6}
 
-      When two monosaccharides are joined by a glycosidic linkage--—a covalent bond formed through a dehydration reaction—--they form a \textbf{disaccharide}. For example, glucose and fructose combine to form \textbf{sucrose}, commonly known as table sugar.
+      Additionally, monosaccharides can exist in both \textbf{linear} and \textbf{ring} forms, though the ring form predominates in aqueous solutions. The linear forms of several common monosaccharides (\textit{including glucose}) are shown below.
 
-      \myfig{0.35}{cytology_figures/sucrose}{caption}{fig:fig4}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]C
+            (=[:30]O)
+            (-[:150]H)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]H
+          }
+          \qquad
+          \chemfig{
+            [:0]H
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (=[:0]O)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]H
+          }
+          \qquad
+          \chemfig{
+            [:0]C
+            (=[:30]O)
+            (-[:150]H)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]H
+          }
+          \qquad
+          \chemfig{
+            [:0]C
+            (=[:30]O)
+            (-[:150]H)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]H
+          }
+          \qquad
+          \chemfig{
+            [:0]C
+            (=[:30]O)
+            (-[:150]H)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]OH)
+            (-[:0]H)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]C
+            (-[:180]H)
+            (-[:0]OH)
+            -[:-90]H
+          }
+        }
+      }{Monosaccharides (\textit{glyceraldehyde, dihydroxyacetone, glyceraldehyde, ribose, glucose})}{fig:filler3}{0.7}
 
-      When many monosaccharides are linked together through glycosidic bonds, they form \textbf{polysaccharides}. Some polysaccharides function as energy storage molecules and can be hydrolyzed into monosaccharides as needed by the cell. Others serve structural roles.
+    \end{core}
 
-      For example, \textbf{starch} is a storage polysaccharide in plants, whereas \textbf{glycogen} functions as a storage polysaccharide in animals. In contrast, \textbf{cellulose} is a structural polysaccharide that constitutes the primary component of plant cell walls.
+    \begin{core}{Polysaccharides}
 
-      \myfig{0.5}{cytology_figures/polysacc}{caption}{fig:fig5}
+      When two monosaccharides are joined by a glycosidic linkage---a covalent bond formed through a dehydration reaction---they form a \textbf{disaccharide}. For example, the monosaccharides glucose and fructose combine to form \textbf{sucrose}, commonly known as table sugar.
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:90]*6(
+            (-[:-90]OH)
+            -
+            (
+            -[:-30]O
+            -[:-17]*5(
+            (-[:90]\ce{CH2OH})
+            -
+            (-[:-90]OH)
+            -
+            (-[:120]OH)
+            -
+            (-[:-60]\ce{CH2OH})
+            -
+            O
+            -)
+            )
+            -O
+            -
+            (-[:90]\ce{CH2OH})
+            -
+            (-[:-90]OH)
+            -
+            (-[:90]OH)
+            -
+            )
+          }
+        }
+      }{Sucrose (\textit{disaccharide})}{fig:filler4}{0.7}
+
+      When many monosaccharides are linked together through glycosidic bonds, they form \textbf{polysaccharides}. These large polymers serve two primary biological roles: some function as energy storage molecules that can be hydrolyzed into monosaccharides when the cell requires fuel, while others provide structural support.
+
+      For example, \textbf{starch} serves as the main storage polysaccharide in plants, whereas \textbf{glycogen} fulfills this same role in animals. In contrast, \textbf{cellulose} is a structural polysaccharide that constitutes the primary component of plant cell walls, providing rigidity and protection (CORE CONCEPT REFERENCE).
+
+      % \reactionfig{ IN PROGRESS
+      %   \chemfig{
+      %     \ce{Sugar}
+      %   }
+      %   \qquad
+      %   \chemfig{
+      %     [:0]
+      %     -[:30]
+      %   }
+      %   \qquad
+      %   \chemfig{
+      %     [:0]
+      %     -[:30]
+      %   }
+      % }{Monosaccharides, disaccharides, polysaccharides}{fig:filler5}{0.9}
+
+      \myfig{0.5}{cytology_figures/polysacc}{caption}{fig:fig5} % CHANGE
 
     \end{core}
 
@@ -59,11 +248,19 @@
 
     \begin{core}{Lipids}
 
-      (2) \textbf{Lipids} are the one major class of large biological molecules that do not form true polymers. They are largely \textbf{hydrophobic} (water-fearing) molecules composed primarily of hydrocarbons, which contain nonpolar covalent bonds. The most biologically important lipids include \textbf{fats}, \textbf{phospholipids}, and \textbf{steroids}.
+      \textbf{Lipids} are the one major class of large biological molecules that do not form true polymers. They are largely \textbf{hydrophobic} (water-fearing) molecules composed primarily of hydrocarbons, which contain nonpolar covalent bonds. The most biologically important lipids include \textbf{fats}, \textbf{phospholipids}, and \textbf{steroids}.
+
+    \end{core}
+
+    \begin{core}{Fats}
 
       \textbf{Fats} are constructed from two types of smaller molecules: \textbf{glycerol} and \textbf{fatty acids}. A \textbf{fatty acid} consists of a long hydrocarbon chain, typically 16 or 18 carbon atoms in length, with a carboxyl group at one end. \textbf{Glycerol} is a three-carbon alcohol with a hydroxyl group attached to each carbon. When three fatty acids are linked to one glycerol molecule through ester linkages (via dehydration reactions), the resulting molecule is called a \textbf{triglyceride} or \textbf{triacylglycerol}.
 
-      \myfig{0.5}{cytology_figures/triglyceride}{caption}{fig:fig6}
+      \myfig{0.5}{cytology_figures/triglyceride}{caption}{fig:fig6} % CHANGE
+
+    \end{core}
+
+    \begin{core}{Phospholipids}
 
       \textbf{Phospholipids} are major structural components of cell membranes. Like fats, they consist of a glycerol backbone; however, only two of glycerol's hydroxyl groups are linked to fatty acids, while the third is bonded to a phosphate group. 
 
@@ -72,14 +269,18 @@
       \myfig{0.55}{cytology_figures/phospholipid}{caption}{fig:fig7}
 
       \begin{definition}
-        In the diagram above, one of the fatty acid tails contains a double bond, meaning it is \textbf{unsaturated}. This double bond introduces a kink in the hydrocarbon chain. The kink prevents adjacent phospholipids from packing tightly together, thereby increasing membrane fluidity. \\
+        In the diagram above, one of the fatty acid tails contains a double bond, meaning it is \textbf{unsaturated}. This double bond introduces a kink in the hydrocarbon chain. The kink prevents adjacent phospholipids from packing tightly together, thereby increasing membrane fluidity. \\ REFERNCE TO MEMBRANE CONCEPT
 
         Membrane fluidity is essential for proper cellular function, as it enables the lateral movement of proteins within the lipid bilayer and allows the membrane to remain flexible.
       \end{definition}
 
+    \end{core}
+
+    \begin{core}{Steriods}
+
       \textbf{Steroids} are lipids characterized by a carbon skeleton composed of four fused rings. Different steroids vary based on the functional groups attached to this core ring structure. An important steroid in animals is \textbf{cholesterol}, which serves as a component of cell membranes and as a precursor to other steroids that perform diverse functions in the body. The structure of cholesterol is shown below.
 
-      \myfig{0.35}{cytology_figures/cholesterol}{caption}{fig:fig8}
+      \myfig{0.35}{cytology_figures/cholesterol}{caption}{fig:fig8} % CHANGE
 
     \end{core}
 
@@ -87,11 +288,19 @@
 
     \begin{core}{Proteins}
 
-      (3) \textbf{Proteins} account for more than 50\% of the dry mass of most cells and carry out a vast array of functions within organisms. They are polymers composed of \textbf{amino acids}, the monomeric building blocks of proteins. Each amino acid is an organic molecule containing both an amino group and a carboxyl group, along with a distinctive side chain (R group). 
+      \textbf{Proteins} account for more than 50\% of the dry mass of most cells and carry out a vast array of functions within organisms. They are polymers composed of \textbf{amino acids}, the monomeric building blocks of proteins. Each amino acid is an organic molecule containing both an amino group and a carboxyl group, along with a distinctive side chain (R group). 
+
+    \end{core}
+
+    \begin{core}{Amino Acids}
 
       There are 20 standard amino acids commonly incorporated into proteins, and the chemical properties of their R groups largely determine the structure and function of the resulting protein.
 
-      \myfig{0.2}{cytology_figures/amino_acid}{caption}{fig:fig9}
+      \myfig{0.2}{cytology_figures/amino_acid}{caption}{fig:fig9} % CHANGE
+
+    \end{core}
+
+    \begin{core}{Protein Structure Hierarchy}
 
       Proteins perform a wide range of functions, including catalyzing biochemical reactions (\textbf{enzymes}), providing structural support, facilitating cell signaling, and transporting molecules. A protein is a polymer of amino acids linked by \textbf{peptide bonds}, and its specific function is determined by its precise three-dimensional structure. This structure is organized into four hierarchical levels: primary, secondary, tertiary, and quaternary structure.
 
@@ -119,9 +328,13 @@
 
     \begin{core}{Nucleic Acids}
 
-      (4) \textbf{Nucleic Acids} store, transmit, and help express hereditary information. They are polymers composed of monomers called \textbf{nucleotides}.
+      \textbf{Nucleic Acids} store, transmit, and help express hereditary information. They are polymers composed of monomers called \textbf{nucleotides}.
 
-      \myfig{0.3}{cytology_figures/nucleotide}{caption}{fig:fig14}
+      \myfig{0.3}{cytology_figures/nucleotide}{caption}{fig:fig14} % CHANGE
+
+    \end{core}
+
+    \begin{core}{Deoxyribonucleic Acids (DNA) \& Ribonucleic Acid (RNA)}
 
       When nucleotides are linked together through \textbf{phosphodiester bonds} (formed via dehydration reactions), they create a polynucleotide chain. This chain consists of a repeating sugar-phosphate backbone with nitrogenous bases projecting outward. Depending on whether the sugar contains a hydroxyl group or only a hydrogen atom at the 2' carbon, nucleic acids are classified as either \textbf{deoxyribonucleic acid (DNA)} or \textbf{ribonucleic acid (RNA)}.
 
@@ -309,992 +522,1102 @@
 
     \end{core}
 
-\section{Membrane Structure and Function}
+% \section{Membrane Structure and Function}
 
-  \subsection{Membrane Basics}
+%   \subsection{Membrane Basics}
 
-    \begin{core}{Phospholipid Bilayer}
+%     \begin{core}{Phospholipid Bilayer}
 
-      The cell membrane is a critical component of all cells, acting as a selective barrier that regulates the movement of substances in and out of the cell. Its fundamental structure is the \textbf{phospholipid bilayer}, composed of two layers of phospholipids with hydrophilic (water-attracting) heads facing outward and hydrophobic (water-repelling) tails facing inward, making the phospholipids \textbf{amphipathic}.
+%       The cell membrane is a critical component of all cells, acting as a selective barrier that regulates the movement of substances in and out of the cell. Its fundamental structure is the \textbf{phospholipid bilayer}, composed of two layers of phospholipids with hydrophilic (water-attracting) heads facing outward and hydrophobic (water-repelling) tails facing inward, making the phospholipids \textbf{amphipathic}.
 
-      \myfig{0.6}{cytology_figures/bilayer}{caption}{fig:fig37}
+%       \myfig{0.6}{cytology_figures/bilayer}{caption}{fig:fig37}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Fluid Mosaic Model}
+%     \begin{core}{Fluid Mosaic Model}
 
-      The \textbf{fluid mosaic model} describes the cell membrane as a dynamic, fluid structure with various proteins embedded within the phospholipid bilayer, forming a complex mosaic.
+%       The \textbf{fluid mosaic model} describes the cell membrane as a dynamic, fluid structure with various proteins embedded within the phospholipid bilayer, forming a complex mosaic.
 
-      \myfig{0.95}{cytology_figures/fluid_model}{caption}{fig:fig38}
+%       \myfig{0.95}{cytology_figures/fluid_model}{caption}{fig:fig38}
 
-      We describe the membrane as a \textbf{fluid} structure because the phospholipids and proteins can move laterally within the bilayer, similar to icebergs floating in the sea. This fluidity is due to the \textbf{unsaturated nature} of the hydrocarbon tails and the \textbf{presence of cholesterol} in the animal cell membrane, which prevents the phospholipids from packing too closely together.
+%       We describe the membrane as a \textbf{fluid} structure because the phospholipids and proteins can move laterally within the bilayer, similar to icebergs floating in the sea. This fluidity is due to the \textbf{unsaturated nature} of the hydrocarbon tails and the \textbf{presence of cholesterol} in the animal cell membrane, which prevents the phospholipids from packing too closely together.
 
-      \myfig{0.5}{cytology_figures/fluid_reason}{caption}{fig:fig39}
+%       \myfig{0.5}{cytology_figures/fluid_reason}{caption}{fig:fig39}
 
-      Proteins within the membrane serve various functions, including transport, enzymatic activity, signal transduction, cell-cell recognition, intercellular joining, and cytoskeleton-ECM attachment, among others.
+%       Proteins within the membrane serve various functions, including transport, enzymatic activity, signal transduction, cell-cell recognition, intercellular joining, and cytoskeleton-ECM attachment, among others.
 
-      \myfig{0.8}{cytology_figures/membrane_functions}{caption}{fig:fig40}
+%       \myfig{0.8}{cytology_figures/membrane_functions}{caption}{fig:fig40}
 
-      Another important type of molecule found on the cell membrane is \textbf{carbohydrates}, which are covalently bonded to lipids (forming \textbf{glycolipids}) or to proteins (forming \textbf{glycoproteins}). These carbohydrate-containing molecules play a crucial role in \textbf{cell-cell recognition and communication}.
+%       Another important type of molecule found on the cell membrane is \textbf{carbohydrates}, which are covalently bonded to lipids (forming \textbf{glycolipids}) or to proteins (forming \textbf{glycoproteins}). These carbohydrate-containing molecules play a crucial role in \textbf{cell-cell recognition and communication}.
 
-      Now let's shift to the topic of \textbf{permeability} of the cell membrane. The cell membrane is \textbf{selectively permeable}, meaning it allows certain substances to pass through while restricting others. Small nonpolar molecules, such as \ce{O2} and \ce{CO2}, can easily diffuse across the lipid bilayer. In contrast, larger polar molecules and ions require specific transport proteins to facilitate their movement across the membrane due to their hydrophilic nature.
+%       Now let's shift to the topic of \textbf{permeability} of the cell membrane. The cell membrane is \textbf{selectively permeable}, meaning it allows certain substances to pass through while restricting others. Small nonpolar molecules, such as \ce{O2} and \ce{CO2}, can easily diffuse across the lipid bilayer. In contrast, larger polar molecules and ions require specific transport proteins to facilitate their movement across the membrane due to their hydrophilic nature.
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Passive and Active Transport}
+%   \subsection{Passive and Active Transport}
 
-    There are two main categories of transport: \textbf{passive transport} and \textbf{active transport}.
+%     There are two main categories of transport: \textbf{passive transport} and \textbf{active transport}.
 
-    \textbf{PASSIVE TRANSPORT} is the movement of substances across the membrane \textbf{without the input of energy}.
+%     \textbf{PASSIVE TRANSPORT} is the movement of substances across the membrane \textbf{without the input of energy}.
 
-    \begin{core}{Passive Transport (\textit{Simple Diffusion})}
+%     \begin{core}{Passive Transport (\textit{Simple Diffusion})}
 
-      Passive transport that \textbf{does not require the help of membrane proteins} is called \textbf{simple diffusion}, in which substances move down their concentration gradient (from high to low concentration) until equilibrium is reached, as with the \ce{O2} and \ce{CO2} mentioned earlier.
+%       Passive transport that \textbf{does not require the help of membrane proteins} is called \textbf{simple diffusion}, in which substances move down their concentration gradient (from high to low concentration) until equilibrium is reached, as with the \ce{O2} and \ce{CO2} mentioned earlier.
 
-      \myfig{0.6}{cytology_figures/simple}{caption}{fig:fig41}
+%       \myfig{0.6}{cytology_figures/simple}{caption}{fig:fig41}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Tonicity}
+%     \begin{core}{Tonicity}
 
-      \textbf{Tonicity} describes the ability of a surrounding solution to cause a cell to gain or lose water. When a solution is \textbf{hypotonic}, \textbf{isotonic}, or \textbf{hypertonic} relative to the cell, it has a lower, equal, or higher concentration of solutes compared to the inside of the cell, respectively. Consequently, the \textbf{cell gains water} when placed in a hypotonic solution to balance the concentration inside the cell with that of the solution. Conversely, the \textbf{cell loses water} when placed in a hypertonic solution. In any case, the cell will always tend to reach isotonicity.\\
+%       \textbf{Tonicity} describes the ability of a surrounding solution to cause a cell to gain or lose water. When a solution is \textbf{hypotonic}, \textbf{isotonic}, or \textbf{hypertonic} relative to the cell, it has a lower, equal, or higher concentration of solutes compared to the inside of the cell, respectively. Consequently, the \textbf{cell gains water} when placed in a hypotonic solution to balance the concentration inside the cell with that of the solution. Conversely, the \textbf{cell loses water} when placed in a hypertonic solution. In any case, the cell will always tend to reach isotonicity.\\
 
-      A consequence of this is that animal cells, which lack cell walls, can become \textbf{lysed} (burst) in a hypotonic solution due to excessive water intake. Plant cells, however, are protected from bursting by their rigid cell walls. Instead, they become \textbf{turgid} (firm) in hypotonic solutions, which is beneficial for structural support. Conversely, in a hypertonic solution, both animal and plant cells lose water and shrink; plant cells undergo \textbf{plasmolysis}, where the cell membrane pulls away from the cell wall.
+%       A consequence of this is that animal cells, which lack cell walls, can become \textbf{lysed} (burst) in a hypotonic solution due to excessive water intake. Plant cells, however, are protected from bursting by their rigid cell walls. Instead, they become \textbf{turgid} (firm) in hypotonic solutions, which is beneficial for structural support. Conversely, in a hypertonic solution, both animal and plant cells lose water and shrink; plant cells undergo \textbf{plasmolysis}, where the cell membrane pulls away from the cell wall.
 
-      \myfig{0.8}{cytology_figures/tonicity}{caption}{fig:fig42}
+%       \myfig{0.8}{cytology_figures/tonicity}{caption}{fig:fig42}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Passive Transport (\textit{Facilitated Diffusion, Channel Proteins, and Carrier Proteins})}
+%     \begin{core}{Passive Transport (\textit{Facilitated Diffusion, Channel Proteins, and Carrier Proteins})}
 
-      Passive transport that \textbf{does require the help of membrane proteins} is called \textbf{facilitated diffusion}. This process allows specific molecules, such as glucose and ions, to cross the membrane with the assistance of transport proteins, still moving down their concentration gradient and requiring no input of energy.
+%       Passive transport that \textbf{does require the help of membrane proteins} is called \textbf{facilitated diffusion}. This process allows specific molecules, such as glucose and ions, to cross the membrane with the assistance of transport proteins, still moving down their concentration gradient and requiring no input of energy.
 
-      Facilitated diffusion occurs through two main types of transport proteins: \textbf{channel proteins} and \textbf{carrier proteins}.
+%       Facilitated diffusion occurs through two main types of transport proteins: \textbf{channel proteins} and \textbf{carrier proteins}.
 
-      \textbf{Channel proteins} provide hydrophilic channels that allow specific ions or molecules to pass through the membrane. A common example is an \textbf{aquaporin}, which facilitates the rapid transport of water molecules. Another example is an \textbf{ion channel}, which permits the passage of specific ions such as \ce{Na+} or \ce{K+}. Many ion channels function as \textbf{gated channels}, opening or closing in response to a stimulus, such as a chemical signal or electrical charge. We explore these ion channels in \textit{4.1 Cellular Signaling}.
+%       \textbf{Channel proteins} provide hydrophilic channels that allow specific ions or molecules to pass through the membrane. A common example is an \textbf{aquaporin}, which facilitates the rapid transport of water molecules. Another example is an \textbf{ion channel}, which permits the passage of specific ions such as \ce{Na+} or \ce{K+}. Many ion channels function as \textbf{gated channels}, opening or closing in response to a stimulus, such as a chemical signal or electrical charge. We explore these ion channels in \textit{4.1 Cellular Signaling}.
 
-      \textbf{Carrier proteins} bind to specific molecules and undergo conformational changes to transport them across the membrane. A common example is the glucose transporter, which facilitates the movement of glucose into cells.
+%       \textbf{Carrier proteins} bind to specific molecules and undergo conformational changes to transport them across the membrane. A common example is the glucose transporter, which facilitates the movement of glucose into cells.
 
-      \myfig{0.45}{cytology_figures/facilitated}{caption}{fig:fig43}
+%       \myfig{0.45}{cytology_figures/facilitated}{caption}{fig:fig43}
 
-      The main difference between channel and carrier proteins is that channel proteins form \textbf{open pores} for molecules to pass through, whereas carrier proteins undergo \textbf{conformational changes} to transport specific molecules across the membrane. \textbf{As a result, carrier proteins are more selective and generally slower than channel proteins.}
+%       The main difference between channel and carrier proteins is that channel proteins form \textbf{open pores} for molecules to pass through, whereas carrier proteins undergo \textbf{conformational changes} to transport specific molecules across the membrane. \textbf{As a result, carrier proteins are more selective and generally slower than channel proteins.}
 
-    \end{core}
+%     \end{core}
     
-    Now, moving on to \textbf{ACTIVE TRANSPORT}, which is the movement of substances across the membrane \textbf{with the input of energy} (usually in the form of ATP). Active transport allows cells to maintain concentration gradients that differ from their surroundings (\textit{the movement of substances against their concentration gradient}). The proteins involved in active transport are all \textbf{carrier proteins}. Here are a few classic examples.
+%     Now, moving on to \textbf{ACTIVE TRANSPORT}, which is the movement of substances across the membrane \textbf{with the input of energy} (usually in the form of ATP). Active transport allows cells to maintain concentration gradients that differ from their surroundings (\textit{the movement of substances against their concentration gradient}). The proteins involved in active transport are all \textbf{carrier proteins}. Here are a few classic examples.
 
-    \begin{core}{Sodium-Potassium Pump}
+%     \begin{core}{Sodium-Potassium Pump}
 
-      (1) The \textbf{sodium-potassium pump} is a well-studied example of active transport. It uses ATP to move three \ce{Na+} ions out of the cell and two \ce{K+} ions into the cell \textbf{against} their respective concentration gradients. 
+%       (1) The \textbf{sodium-potassium pump} is a well-studied example of active transport. It uses ATP to move three \ce{Na+} ions out of the cell and two \ce{K+} ions into the cell \textbf{against} their respective concentration gradients. 
 
-      This pump is essential for maintaining the resting \textbf{membrane potential} in animal cells. Membrane potential is the voltage difference across a membrane, resulting from the unequal distribution of ions on either side. It acts like a battery that can be used to perform work in other cellular activities. The chemical force (concentration gradient) and electrical force (membrane potential) together constitute the \textbf{electrochemical gradient}, which influences the movement of ions across the membrane (\textit{note that this does not apply to uncharged molecules like glucose}).
+%       This pump is essential for maintaining the resting \textbf{membrane potential} in animal cells. Membrane potential is the voltage difference across a membrane, resulting from the unequal distribution of ions on either side. It acts like a battery that can be used to perform work in other cellular activities. The chemical force (concentration gradient) and electrical force (membrane potential) together constitute the \textbf{electrochemical gradient}, which influences the movement of ions across the membrane (\textit{note that this does not apply to uncharged molecules like glucose}).
 
-      Thus, an ion diffuses not simply down its concentration gradient, but more accurately down its electrochemical gradient.
+%       Thus, an ion diffuses not simply down its concentration gradient, but more accurately down its electrochemical gradient.
 
-      \myfig{0.65}{cytology_figures/na_k_pump}{caption}{fig:fig44}
+%       \myfig{0.65}{cytology_figures/na_k_pump}{caption}{fig:fig44}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Proton (\ce{H+}) Pump}
+%     \begin{core}{Proton (\ce{H+}) Pump}
 
-      (2) The \textbf{proton pump} is another classic example of active transport. It actively transports \ce{H+} ions (protons) out of the cell, creating a proton gradient across the membrane. This gradient can then drive various cellular processes, such as ATP synthesis in mitochondria (covered in \textit{Chapter 3 Cellular Energetics}).
+%       (2) The \textbf{proton pump} is another classic example of active transport. It actively transports \ce{H+} ions (protons) out of the cell, creating a proton gradient across the membrane. This gradient can then drive various cellular processes, such as ATP synthesis in mitochondria (covered in \textit{Chapter 3 Cellular Energetics}).
 
-      \myfig{0.45}{cytology_figures/proton_pump}{caption}{fig:fig45}
+%       \myfig{0.45}{cytology_figures/proton_pump}{caption}{fig:fig45}
 
-      So far, we have seen mechanisms of active transport that involve the direct use of ATP to move substances against their concentration gradients. However, there is another type of active transport called \textbf{cotransport}, in which a transport protein couples the "downhill" diffusion of one substance to the "uphill" transport of another substance against its own concentration gradient.
+%       So far, we have seen mechanisms of active transport that involve the direct use of ATP to move substances against their concentration gradients. However, there is another type of active transport called \textbf{cotransport}, in which a transport protein couples the "downhill" diffusion of one substance to the "uphill" transport of another substance against its own concentration gradient.
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Sucrose-Proton Cotransporter}
+%     \begin{core}{Sucrose-Proton Cotransporter}
 
-      (3) An example of cotransport is the \textbf{sucrose \ce{H+} cotransporter} in plant cells. This protein uses the energy stored in the proton gradient (created by the proton pump) to transport sucrose into the cell against its concentration gradient, while simultaneously allowing \ce{H+} ions to move down their electrochemical gradient.
+%       (3) An example of cotransport is the \textbf{sucrose \ce{H+} cotransporter} in plant cells. This protein uses the energy stored in the proton gradient (created by the proton pump) to transport sucrose into the cell against its concentration gradient, while simultaneously allowing \ce{H+} ions to move down their electrochemical gradient.
 
-      \myfig{0.5}{cytology_figures/cotransport}{caption}{fig:fig46}
+%       \myfig{0.5}{cytology_figures/cotransport}{caption}{fig:fig46}
 
-    \end{core}
+%     \end{core}
 
-    We have now gone through the mechanisms of passive and active transport, which are the main ways substances move across the cell membrane. However, larger molecules, such as proteins and polysaccharides, cannot pass through the membrane via these smaller, protein-regulated transport methods. Instead, they are moved via \textbf{bulk transport}, which involves the transport of large particles or macromolecules across the membrane in vesicles. There are two main types of bulk transport: \textbf{exocytosis} (out of the cell) and \textbf{endocytosis} (into the cell).
+%     We have now gone through the mechanisms of passive and active transport, which are the main ways substances move across the cell membrane. However, larger molecules, such as proteins and polysaccharides, cannot pass through the membrane via these smaller, protein-regulated transport methods. Instead, they are moved via \textbf{bulk transport}, which involves the transport of large particles or macromolecules across the membrane in vesicles. There are two main types of bulk transport: \textbf{exocytosis} (out of the cell) and \textbf{endocytosis} (into the cell).
 
-  \subsection{Exocytosis and Endocytosis}
+%   \subsection{Exocytosis and Endocytosis}
 
-    \begin{core}{Exocytosis}
+%     \begin{core}{Exocytosis}
 
-      \textbf{EXOCYTOSIS} occurs when an inner vesicle fuses with the plasma membrane, releasing its contents outside the cell. This process is commonly used to secrete proteins (\textit{after being processed in the Golgi apparatus}), such as hormones and enzymes, and to expel waste materials.
+%       \textbf{EXOCYTOSIS} occurs when an inner vesicle fuses with the plasma membrane, releasing its contents outside the cell. This process is commonly used to secrete proteins (\textit{after being processed in the Golgi apparatus}), such as hormones and enzymes, and to expel waste materials.
 
-      \myfig{0.4}{cytology_figures/exocytosis}{caption}{fig:fig47}
+%       \myfig{0.4}{cytology_figures/exocytosis}{caption}{fig:fig47}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Endocytosis}
+%     \begin{core}{Endocytosis}
 
-      \textbf{ENDOCYTOSIS} occurs when the cell takes in macromolecules by forming vesicles from the plasma membrane. There are three main types of endocytosis: \textbf{phagocytosis}, \textbf{pinocytosis}, and \textbf{receptor-mediated endocytosis}.
+%       \textbf{ENDOCYTOSIS} occurs when the cell takes in macromolecules by forming vesicles from the plasma membrane. There are three main types of endocytosis: \textbf{phagocytosis}, \textbf{pinocytosis}, and \textbf{receptor-mediated endocytosis}.
 
-      (1) In \textbf{phagocytosis} ("\textit{cellular eating}"), the cell engulfs a large particle or even another cell by extending pseudopodia around it, forming a food vacuole. \textit{The food vacuole then fuses with a lysosome for digestion, as described in \textit{2.1 A Tour of the Cell}.}
+%       (1) In \textbf{phagocytosis} ("\textit{cellular eating}"), the cell engulfs a large particle or even another cell by extending pseudopodia around it, forming a food vacuole. \textit{The food vacuole then fuses with a lysosome for digestion, as described in \textit{2.1 A Tour of the Cell}.}
 
-      (2) In \textbf{pinocytosis} ("\textit{cellular drinking}"), the cell takes in extracellular fluid and its dissolved solutes by forming small vesicles. This process is nonspecific, meaning the cell engulfs whatever solutes are present in the extracellular fluid.
+%       (2) In \textbf{pinocytosis} ("\textit{cellular drinking}"), the cell takes in extracellular fluid and its dissolved solutes by forming small vesicles. This process is nonspecific, meaning the cell engulfs whatever solutes are present in the extracellular fluid.
 
-      (3) In \textbf{receptor-mediated endocytosis}, the cell uses specific receptor proteins on its surface to bind particular molecules (ligands) in the extracellular fluid. Once the receptors are bound to their ligands, the plasma membrane folds inward, forming a vesicle that brings the ligands into the cell. This process allows the cell to selectively take in specific substances, such as cholesterol or certain hormones.
+%       (3) In \textbf{receptor-mediated endocytosis}, the cell uses specific receptor proteins on its surface to bind particular molecules (ligands) in the extracellular fluid. Once the receptors are bound to their ligands, the plasma membrane folds inward, forming a vesicle that brings the ligands into the cell. This process allows the cell to selectively take in specific substances, such as cholesterol or certain hormones.
 
-      Here is a visual representation of all three types of endocytosis side-by-side for comparison.
+%       Here is a visual representation of all three types of endocytosis side-by-side for comparison.
 
-      \myfig{0.75}{cytology_figures/endocytosis}{caption}{fig:fig48}
+%       \myfig{0.75}{cytology_figures/endocytosis}{caption}{fig:fig48}
 
-    \end{core}
+%     \end{core}
 
-\section{Metabolism}
+% \section{Metabolism}
 
-  \subsection{Catabolism \& Anabolism}
+%   \subsection{Catabolism \& Anabolism}
 
-    \begin{core}{Metabolism, Catabolism, and Anabolism}
+%     \begin{core}{Metabolism, Catabolism, and Anabolism}
 
-      \textbf{Metabolism} encompasses all the chemical reactions that occur within a living organism to sustain life. A metabolic pathway is a specific sequence of chemical reactions that transforms one or more substances into an end product, typically with the assistance of \textbf{enzymes}.
+%       \textbf{Metabolism} encompasses all the chemical reactions that occur within a living organism to sustain life. A metabolic pathway is a specific sequence of chemical reactions that transforms one or more substances into an end product, typically with the assistance of \textbf{enzymes}.
 
-      \myfig{0.5}{cytology_figures/metabolism}{caption}{fig:fig49}
+%       \myfig{0.5}{cytology_figures/metabolism}{caption}{fig:fig49}
 
-      These reactions and pathways can be broadly categorized into two types: \textbf{catabolic pathways} and \textbf{anabolic pathways}.
+%       These reactions and pathways can be broadly categorized into two types: \textbf{catabolic pathways} and \textbf{anabolic pathways}.
 
-      Catabolic pathways involve the \textbf{breakdown} of complex molecules into simpler ones, releasing energy in the process. An example of a catabolic pathway is cellular respiration, in which glucose is broken down to generate ATP.
+%       Catabolic pathways involve the \textbf{breakdown} of complex molecules into simpler ones, releasing energy in the process. An example of a catabolic pathway is cellular respiration, in which glucose is broken down to generate ATP.
 
-      Anabolic pathways, on the other hand, involve the \textbf{synthesis} of complex molecules from simpler ones and require an input of energy. An example of an anabolic pathway is photosynthesis, in which plants use sunlight to convert carbon dioxide and water into glucose.
+%       Anabolic pathways, on the other hand, involve the \textbf{synthesis} of complex molecules from simpler ones and require an input of energy. An example of an anabolic pathway is photosynthesis, in which plants use sunlight to convert carbon dioxide and water into glucose.
 
-      \myfig{0.55}{cytology_figures/catabolic_anabolic}{caption}{fig:fig50}
+%       \myfig{0.55}{cytology_figures/catabolic_anabolic}{caption}{fig:fig50}
 
-      Generally speaking, catabolic pathways release energy that can be used to drive anabolic pathways. \textit{But what exactly is energy?}
+%       Generally speaking, catabolic pathways release energy that can be used to drive anabolic pathways. \textit{But what exactly is energy?}
 
-    \end{core}  
+%     \end{core}  
     
-  \subsection{Energy}
+%   \subsection{Energy}
 
-    \begin{core}{Energy}
+%     \begin{core}{Energy}
 
-      \textbf{Energy} is the capacity to do work or cause change. In biological systems, energy exists in various forms: \textbf{kinetic energy} (the energy of motion) and \textbf{potential energy} (stored energy). In broader contexts, we also define \textbf{thermal energy} (a type of kinetic energy associated with the random movement of atoms or molecules) and \textbf{chemical energy} (a type of potential energy stored in the bonds of molecules).
+%       \textbf{Energy} is the capacity to do work or cause change. In biological systems, energy exists in various forms: \textbf{kinetic energy} (the energy of motion) and \textbf{potential energy} (stored energy). In broader contexts, we also define \textbf{thermal energy} (a type of kinetic energy associated with the random movement of atoms or molecules) and \textbf{chemical energy} (a type of potential energy stored in the bonds of molecules).
 
-    \end{core}
+%     \end{core}
 
-    Across energy transfers within any system (including biological systems), we must consider the \textbf{laws of thermodynamics}, which provide the fundamental framework for understanding how energy flows and is converted between different forms.
+%     Across energy transfers within any system (including biological systems), we must consider the \textbf{laws of thermodynamics}, which provide the fundamental framework for understanding how energy flows and is converted between different forms.
 
-    \begin{core}{First Law of Thermodynamics}
+%     \begin{core}{First Law of Thermodynamics}
 
-      The \textbf{first law of thermodynamics}, also known as the \textbf{law of energy conservation}, states that energy cannot be created or destroyed in an isolated system; it can only be transformed from one form to another. In biological systems, this means that although energy changes form (e.g., from chemical energy in food to kinetic energy in muscle contraction), the total amount of energy is conserved.
+%       The \textbf{first law of thermodynamics}, also known as the \textbf{law of energy conservation}, states that energy cannot be created or destroyed in an isolated system; it can only be transformed from one form to another. In biological systems, this means that although energy changes form (e.g., from chemical energy in food to kinetic energy in muscle contraction), the total amount of energy is conserved.
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Second Law of Thermodynamics}
+%     \begin{core}{Second Law of Thermodynamics}
 
-      The \textbf{second law of thermodynamics} states that in any energy transfer or transformation, the \textbf{total entropy of an isolated system increases over time}. Entropy can be understood as a measure of energy dispersal or randomness. In biological processes, this means that energy transformations are never 100\% efficient: some energy becomes dispersed as heat, increasing the entropy of the surroundings even if local biological order is maintained.
+%       The \textbf{second law of thermodynamics} states that in any energy transfer or transformation, the \textbf{total entropy of an isolated system increases over time}. Entropy can be understood as a measure of energy dispersal or randomness. In biological processes, this means that energy transformations are never 100\% efficient: some energy becomes dispersed as heat, increasing the entropy of the surroundings even if local biological order is maintained.
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Gibbs Free Energy}
+%     \begin{core}{Gibbs Free Energy}
 
-      To quantify energy changes during chemical reactions, we use the concept of \textbf{Gibbs free energy} (G). The change in Gibbs free energy (\(\Delta G\)) during a reaction indicates whether the reaction is \textbf{spontaneous} (thermodynamically favorable) or \textbf{non-spontaneous} (thermodynamically unfavorable) under constant temperature and pressure.
+%       To quantify energy changes during chemical reactions, we use the concept of \textbf{Gibbs free energy} (G). The change in Gibbs free energy (\(\Delta G\)) during a reaction indicates whether the reaction is \textbf{spontaneous} (thermodynamically favorable) or \textbf{non-spontaneous} (thermodynamically unfavorable) under constant temperature and pressure.
 
-      When $\Delta G$ is negative, the reaction is \textbf{spontaneous} and can proceed without a continuous input of external energy. Such reactions are called \textbf{exergonic reactions} because they release free energy, which can be harnessed to perform work on the surroundings.
+%       When $\Delta G$ is negative, the reaction is \textbf{spontaneous} and can proceed without a continuous input of external energy. Such reactions are called \textbf{exergonic reactions} because they release free energy, which can be harnessed to perform work on the surroundings.
 
-      \myfig{0.6}{cytology_figures/exergonic}{caption}{fig:fig51}
+%       \myfig{0.6}{cytology_figures/exergonic}{caption}{fig:fig51}
 
-      Conversely, when $\Delta G$ is positive, the reaction is \textbf{non-spontaneous} (thermodynamically unfavorable) and requires an input of energy to proceed. These reactions are called \textbf{endergonic reactions} because they absorb free energy from their surroundings.
+%       Conversely, when $\Delta G$ is positive, the reaction is \textbf{non-spontaneous} (thermodynamically unfavorable) and requires an input of energy to proceed. These reactions are called \textbf{endergonic reactions} because they absorb free energy from their surroundings.
 
-      \myfig{0.6}{cytology_figures/endergonic}{caption}{fig:fig52}
+%       \myfig{0.6}{cytology_figures/endergonic}{caption}{fig:fig52}
 
-    \end{core}
+%     \end{core}
 
-    Although these explanations of free energy and entropy are simplified and do not capture their full thermodynamic rigor, they are sufficient for understanding their roles in biology. For a more rigorous treatment of these concepts, please refer to \textit{Introductory Chemistry Chapter 3 Thermodynamics}.
+%     Although these explanations of free energy and entropy are simplified and do not capture their full thermodynamic rigor, they are sufficient for understanding their roles in biology. For a more rigorous treatment of these concepts, please refer to \textit{Introductory Chemistry Chapter 3 Thermodynamics}.
 
-  \subsection{Energy Coupling \& ATP}
+%   \subsection{Energy Coupling \& ATP}
 
-    \begin{core}{Types of Work}
+%     \begin{core}{Types of Work}
 
-      Now, returning to metabolism in the context of the cell: the cell performs three main types of work. [1] \textbf{Chemical work} involves driving endergonic reactions that would not occur spontaneously, such as the synthesis of polymers from monomers. [2] \textbf{Transport work} involves pumping substances across membranes against their electrochemical gradients. [3] \textbf{Mechanical work} includes processes such as the beating of cilia or the contraction of muscle cells.
+%       Now, returning to metabolism in the context of the cell: the cell performs three main types of work. [1] \textbf{Chemical work} involves driving endergonic reactions that would not occur spontaneously, such as the synthesis of polymers from monomers. [2] \textbf{Transport work} involves pumping substances across membranes against their electrochemical gradients. [3] \textbf{Mechanical work} includes processes such as the beating of cilia or the contraction of muscle cells.
 
-      \myfig{0.45}{cytology_figures/work_types}{caption}{fig:fig53}
+%       \myfig{0.45}{cytology_figures/work_types}{caption}{fig:fig53}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Energy Coupling}
+%     \begin{core}{Energy Coupling}
 
-      The cell carries out these “uphill” processes by coupling them to “downhill” reactions that release free energy. This \textbf{energy coupling} is primarily mediated by \textbf{adenosine triphosphate} (ATP), which serves as the cell's main energy currency. We have briefly encountered this molecule previously in \textit{1.2 Carbon and the Molecular Diversity of Life}.
+%       The cell carries out these “uphill” processes by coupling them to “downhill” reactions that release free energy. This \textbf{energy coupling} is primarily mediated by \textbf{adenosine triphosphate} (ATP), which serves as the cell's main energy currency. We have briefly encountered this molecule previously in \textit{1.2 Carbon and the Molecular Diversity of Life}.
 
-      \myfig{0.5}{cytology_figures/atp}{caption}{fig:fig54}
+%       \myfig{0.5}{cytology_figures/atp}{caption}{fig:fig54}
 
-      The hydrolysis of ATP to \textbf{adenosine diphosphate} (ADP) and an inorganic phosphate ($P_i$) is an exergonic reaction that releases free energy, which can be used to drive endergonic reactions in the cell.
+%       The hydrolysis of ATP to \textbf{adenosine diphosphate} (ADP) and an inorganic phosphate ($P_i$) is an exergonic reaction that releases free energy, which can be used to drive endergonic reactions in the cell.
 
-      \bce{\ce{ATP + H2O -> ADP + P_i}}\hspace{5mm}\(\Delta G = -7.3 \text{ kcal/mol}\)
+%       \bce{\ce{ATP + H2O -> ADP + P_i}}\hspace{5mm}\(\Delta G = -7.3 \text{ kcal/mol}\)
 
-      Reactions that are net endergonic when considered in isolation can be made overall exergonic by coupling them to the hydrolysis of ATP. This is often achieved through \textbf{phosphorylation}, in which a phosphate group from ATP is transferred to a reactant (forming a phosphorylated intermediate), thereby increasing its reactivity.
+%       Reactions that are net endergonic when considered in isolation can be made overall exergonic by coupling them to the hydrolysis of ATP. This is often achieved through \textbf{phosphorylation}, in which a phosphate group from ATP is transferred to a reactant (forming a phosphorylated intermediate), thereby increasing its reactivity.
 
-      For instance, consider the synthesis of glutamine from glutamic acid and ammonia, which is endergonic when occurring on its own.
+%       For instance, consider the synthesis of glutamine from glutamic acid and ammonia, which is endergonic when occurring on its own.
 
-      \myfig{0.6}{cytology_figures/glu_1}{caption}{fig:fig55}
+%       \myfig{0.6}{cytology_figures/glu_1}{caption}{fig:fig55}
 
-      When ATP enters the picture, it first phosphorylates glutamic acid, forming a phosphorylated intermediate. This activated intermediate is more reactive and can then react with ammonia to form glutamine. Because the endergonic step is coupled to ATP hydrolysis, the overall coupled reaction becomes exergonic.
+%       When ATP enters the picture, it first phosphorylates glutamic acid, forming a phosphorylated intermediate. This activated intermediate is more reactive and can then react with ammonia to form glutamine. Because the endergonic step is coupled to ATP hydrolysis, the overall coupled reaction becomes exergonic.
 
-      \myfig{0.7}{cytology_figures/glu_2}{caption}{fig:fig56}
+%       \myfig{0.7}{cytology_figures/glu_2}{caption}{fig:fig56}
 
-      Adding the two reactions together (glutamine synthesis and ATP hydrolysis) yields an overall negative \(\Delta G\), indicating that the coupled reaction is thermodynamically spontaneous.
+%       Adding the two reactions together (glutamine synthesis and ATP hydrolysis) yields an overall negative \(\Delta G\), indicating that the coupled reaction is thermodynamically spontaneous.
 
-      \myfig{0.65}{cytology_figures/glu_3}{caption}{fig:fig57}
+%       \myfig{0.65}{cytology_figures/glu_3}{caption}{fig:fig57}
 
-    \end{core}
+%     \end{core}
 
-    Because ATP is continuously consumed throughout the cell to power various processes, it is essential that the cell regenerates ATP from ADP and \ce{P_i}. Since the hydrolysis of ATP is exergonic, \textbf{the regeneration of ATP from ADP and \ce{P_i} is an endergonic process} that requires an input of free energy. In most eukaryotic cells, this energy is primarily supplied by \textbf{cellular respiration}, which we will explore in \textit{3.2 Cellular Respiration}.
+%     Because ATP is continuously consumed throughout the cell to power various processes, it is essential that the cell regenerates ATP from ADP and \ce{P_i}. Since the hydrolysis of ATP is exergonic, \textbf{the regeneration of ATP from ADP and \ce{P_i} is an endergonic process} that requires an input of free energy. In most eukaryotic cells, this energy is primarily supplied by \textbf{cellular respiration}, which we will explore in \textit{3.2 Cellular Respiration}.
 
-    \myfig{0.5}{cytology_figures/atp_cycle}{caption}{fig:fig58}
+%     \myfig{0.5}{cytology_figures/atp_cycle}{caption}{fig:fig58}
 
-  \subsection{Reaction Rate \& Enzymes}
+%   \subsection{Reaction Rate \& Enzymes}
 
-    \begin{core}{Reaction Rates \& Enzymes}
+%     \begin{core}{Reaction Rates \& Enzymes}
 
-      So far, we have discussed metabolism in terms of whether biological reactions are energetically favorable (\textit{spontaneous}) or unfavorable (\textit{non-spontaneous}). However, we have not yet considered the \textbf{rate at which these reactions occur}.
+%       So far, we have discussed metabolism in terms of whether biological reactions are energetically favorable (\textit{spontaneous}) or unfavorable (\textit{non-spontaneous}). However, we have not yet considered the \textbf{rate at which these reactions occur}.
 
-      Even if a reaction is thermodynamically spontaneous, it may proceed so slowly that it is effectively negligible on a biological timescale. This is where \textbf{enzymes} play a critical role.
+%       Even if a reaction is thermodynamically spontaneous, it may proceed so slowly that it is effectively negligible on a biological timescale. This is where \textbf{enzymes} play a critical role.
 
-      For a reaction to proceed, reactant molecules must first overcome an energy barrier known as the \textbf{activation energy} ($E_A$). This energy corresponds to the formation of a high-energy transition state, in which existing bonds are partially broken and new bonds are partially formed.
+%       For a reaction to proceed, reactant molecules must first overcome an energy barrier known as the \textbf{activation energy} ($E_A$). This energy corresponds to the formation of a high-energy transition state, in which existing bonds are partially broken and new bonds are partially formed.
 
-      \myfig{0.5}{cytology_figures/reaction_energy}{caption}{fig:fig59}
+%       \myfig{0.5}{cytology_figures/reaction_energy}{caption}{fig:fig59}
 
-      Enzymes \textbf{lower the activation energy of a reaction}, allowing it to proceed at a much \textbf{faster rate} without being consumed in the process. They accomplish this by \textbf{stabilizing the transition state}, the high-energy configuration between reactants and products in which bonds are partially broken and partially formed.
+%       Enzymes \textbf{lower the activation energy of a reaction}, allowing it to proceed at a much \textbf{faster rate} without being consumed in the process. They accomplish this by \textbf{stabilizing the transition state}, the high-energy configuration between reactants and products in which bonds are partially broken and partially formed.
 
-      \myfig{0.5}{cytology_figures/reaction_energy2}{caption}{fig:fig60}
+%       \myfig{0.5}{cytology_figures/reaction_energy2}{caption}{fig:fig60}
 
-    \end{core}    
+%     \end{core}    
 
-  \subsection{Enzyme Mechanisms}
+%   \subsection{Enzyme Mechanisms}
 
-    The reactant upon which an enzyme acts is called its \textbf{substrate}. The enzyme binds its substrate (or substrates, if multiple reactants are involved), forming an \textbf{enzyme--substrate complex}. Within this complex, the enzyme facilitates the conversion of the substrate into the product(s) of the reaction.
+%     The reactant upon which an enzyme acts is called its \textbf{substrate}. The enzyme binds its substrate (or substrates, if multiple reactants are involved), forming an \textbf{enzyme--substrate complex}. Within this complex, the enzyme facilitates the conversion of the substrate into the product(s) of the reaction.
 
-    The overall process can be summarized as follows
+%     The overall process can be summarized as follows
 
-    \bce{\ce{Enzyme + Substrate -> Enzyme-Substrate Complex -> Enzyme + Product}}
+%     \bce{\ce{Enzyme + Substrate -> Enzyme-Substrate Complex -> Enzyme + Product}}
 
-    The specificity of an enzyme for its substrate is determined by the shape and chemical properties of its \textbf{active site}, the region where the substrate binds. The active site creates a unique microenvironment that facilitates the conversion of substrate to product. Enzymes are \textbf{highly specific}, meaning that each enzyme typically catalyzes a particular reaction and acts on a specific substrate (or closely related substrates).
+%     The specificity of an enzyme for its substrate is determined by the shape and chemical properties of its \textbf{active site}, the region where the substrate binds. The active site creates a unique microenvironment that facilitates the conversion of substrate to product. Enzymes are \textbf{highly specific}, meaning that each enzyme typically catalyzes a particular reaction and acts on a specific substrate (or closely related substrates).
 
-    When the substrate binds to the active site, weak interactions (such as hydrogen bonds, ionic interactions, and van der Waals forces) between the enzyme and substrate induce a slight conformational change in the enzyme. This adjustment allows the active site to fit more snugly around the substrate and stabilize the transition state. This phenomenon is known as \textbf{induced fit}.
+%     When the substrate binds to the active site, weak interactions (such as hydrogen bonds, ionic interactions, and van der Waals forces) between the enzyme and substrate induce a slight conformational change in the enzyme. This adjustment allows the active site to fit more snugly around the substrate and stabilize the transition state. This phenomenon is known as \textbf{induced fit}.
 
-    \myfig{0.5}{cytology_figures/enzyme_substrate}{caption}{fig:fig61}
+%     \myfig{0.5}{cytology_figures/enzyme_substrate}{caption}{fig:fig61}
 
-    Each enzyme has its own \textbf{optimal conditions}, typically defined by a specific range of pH, temperature, and other environmental factors at which the enzyme functions most efficiently. In humans, many enzymes operate optimally at approximately 35--40$^\circ$C and within a pH range of 6--8, though there are important exceptions. For example, pepsin, a digestive enzyme in the stomach, functions most effectively at the highly acidic pH found in that environment. Outside their optimal ranges, enzymes may lose their functional three-dimensional structure and become \textbf{denatured}, resulting in reduced or lost catalytic activity.
+%     Each enzyme has its own \textbf{optimal conditions}, typically defined by a specific range of pH, temperature, and other environmental factors at which the enzyme functions most efficiently. In humans, many enzymes operate optimally at approximately 35--40$^\circ$C and within a pH range of 6--8, though there are important exceptions. For example, pepsin, a digestive enzyme in the stomach, functions most effectively at the highly acidic pH found in that environment. Outside their optimal ranges, enzymes may lose their functional three-dimensional structure and become \textbf{denatured}, resulting in reduced or lost catalytic activity.
 
-    Many enzymes also require nonprotein helpers to carry out catalysis. These molecules are called \textbf{cofactors}. Cofactors may be inorganic, such as metal ions like iron or zinc, or organic. Organic cofactors are referred to as \textbf{coenzymes}. Many vitamins are nutritionally important because they function as coenzymes or as precursors from which coenzymes are synthesized.
+%     Many enzymes also require nonprotein helpers to carry out catalysis. These molecules are called \textbf{cofactors}. Cofactors may be inorganic, such as metal ions like iron or zinc, or organic. Organic cofactors are referred to as \textbf{coenzymes}. Many vitamins are nutritionally important because they function as coenzymes or as precursors from which coenzymes are synthesized.
 
-    \myfig{0.4}{cytology_figures/cofactor}{caption}{fig:fig62}
+%     \myfig{0.4}{cytology_figures/cofactor}{caption}{fig:fig62}
 
-    Enzymes can also be \textbf{inhibited} by certain substances, reducing or blocking their ability to catalyze a reaction. Enzyme inhibition is commonly categorized as \textbf{competitive} or \textbf{noncompetitive}.
+%     Enzymes can also be \textbf{inhibited} by certain substances, reducing or blocking their ability to catalyze a reaction. Enzyme inhibition is commonly categorized as \textbf{competitive} or \textbf{noncompetitive}.
 
-    \begin{core}{Competitive Inhibition}
+%     \begin{core}{Competitive Inhibition}
 
-      \textbf{Competitive inhibitors} resemble the substrate and compete for binding at the enzyme's active site. By occupying the active site, they prevent the substrate from binding and being converted into product.
+%       \textbf{Competitive inhibitors} resemble the substrate and compete for binding at the enzyme's active site. By occupying the active site, they prevent the substrate from binding and being converted into product.
 
-      \myfig{0.6}{cytology_figures/competitive}{caption}{fig:fig63}
+%       \myfig{0.6}{cytology_figures/competitive}{caption}{fig:fig63}
       
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Noncompetitive Inhibition}
+%     \begin{core}{Noncompetitive Inhibition}
 
-      On the other hand, \textbf{noncompetitive inhibitors} bind to a site other than the active site (an allosteric site), rather than binding to the substrate itself. This binding alters the enzyme's conformation in a way that reduces or prevents its catalytic activity, even if the substrate is still able to bind.
+%       On the other hand, \textbf{noncompetitive inhibitors} bind to a site other than the active site (an allosteric site), rather than binding to the substrate itself. This binding alters the enzyme's conformation in a way that reduces or prevents its catalytic activity, even if the substrate is still able to bind.
 
-      \myfig{0.5}{cytology_figures/noncompetitive}{caption}{fig:fig64}
+%       \myfig{0.5}{cytology_figures/noncompetitive}{caption}{fig:fig64}
 
-      Most enzyme inhibitors are \textbf{reversible}, meaning they bind noncovalently and can dissociate from the enzyme, allowing normal enzymatic activity to resume once the inhibitor is removed. In contrast, \textbf{irreversible inhibitors} typically bind covalently or otherwise permanently inactivate the enzyme. Many toxins and poisons act as irreversible enzyme inhibitors.
+%       Most enzyme inhibitors are \textbf{reversible}, meaning they bind noncovalently and can dissociate from the enzyme, allowing normal enzymatic activity to resume once the inhibitor is removed. In contrast, \textbf{irreversible inhibitors} typically bind covalently or otherwise permanently inactivate the enzyme. Many toxins and poisons act as irreversible enzyme inhibitors.
 
-      Unregulated, simultaneous activity of all metabolic pathways would lead to metabolic imbalance. Therefore, enzymes are \textbf{regulated} so that their activity can be precisely controlled in response to the cell's needs and environmental conditions. One major mechanism of regulation is \textbf{allosteric regulation}, in which the binding of a regulatory molecule at one site on a protein affects the protein's function at a separate site. This interaction can either activate or inhibit the enzyme's activity.
+%       Unregulated, simultaneous activity of all metabolic pathways would lead to metabolic imbalance. Therefore, enzymes are \textbf{regulated} so that their activity can be precisely controlled in response to the cell's needs and environmental conditions. One major mechanism of regulation is \textbf{allosteric regulation}, in which the binding of a regulatory molecule at one site on a protein affects the protein's function at a separate site. This interaction can either activate or inhibit the enzyme's activity.
 
-      \myfig{0.5}{cytology_figures/allosteric}{caption}{fig:fig65}
+%       \myfig{0.5}{cytology_figures/allosteric}{caption}{fig:fig65}
 
-      In another form of allosteric activation, the binding of a substrate molecule to one active site in a multisubunit enzyme increases the activity at other active sites within the same enzyme. This phenomenon is known as \textbf{cooperativity}.
+%       In another form of allosteric activation, the binding of a substrate molecule to one active site in a multisubunit enzyme increases the activity at other active sites within the same enzyme. This phenomenon is known as \textbf{cooperativity}.
 
-      \myfig{0.5}{cytology_figures/cooperativity}{caption}{fig:fig66}
+%       \myfig{0.5}{cytology_figures/cooperativity}{caption}{fig:fig66}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Feedback Inhibition}
+%     \begin{core}{Feedback Inhibition}
 
-      Now that we have seen how enzyme activity is regulated, an important mode of metabolic control is \textbf{feedback inhibition}. \textbf{Feedback inhibition} occurs when the end product of a metabolic pathway inhibits an enzyme involved earlier in that same pathway. This creates a self-regulating loop that helps maintain appropriate levels of the product, ensuring that the pathway operates efficiently (i.e., not producing too much or too little relative to the organism's needs).
+%       Now that we have seen how enzyme activity is regulated, an important mode of metabolic control is \textbf{feedback inhibition}. \textbf{Feedback inhibition} occurs when the end product of a metabolic pathway inhibits an enzyme involved earlier in that same pathway. This creates a self-regulating loop that helps maintain appropriate levels of the product, ensuring that the pathway operates efficiently (i.e., not producing too much or too little relative to the organism's needs).
 
-      An example of this process is seen in isoleucine synthesis, where the accumulation of isoleucine inhibits an early enzyme in its own biosynthetic pathway.
+%       An example of this process is seen in isoleucine synthesis, where the accumulation of isoleucine inhibits an early enzyme in its own biosynthetic pathway.
 
-      \myfig{0.65}{cytology_figures/feedback}{caption}{fig:fig67}
+%       \myfig{0.65}{cytology_figures/feedback}{caption}{fig:fig67}
 
-    \end{core}
+%     \end{core}
 
-\section{Cellular Respiration}
+% \section{Cellular Respiration}
 
-  \subsection{Respiration Basics} % THIS SECTION NEEDS EDITING ======================================
+%   \subsection{Respiration Basics} % THIS SECTION NEEDS EDITING ======================================
 
-    \begin{core}{Cellular Respiration}
+%     \begin{core}{Cellular Respiration}
 
-      \textbf{Cellular respiration} is the set of metabolic processes by which cells extract chemical energy from organic molecules and use it to synthesize ATP.
+%       \textbf{Cellular respiration} is the set of metabolic processes by which cells extract chemical energy from organic molecules and use it to synthesize ATP.
 
-    \end{core}
+%     \end{core}
 
-    It is broadly categorized into \textbf{aerobic respiration}, \textbf{anaerobic respiration}, and \textbf{fermentation}.
+%     It is broadly categorized into \textbf{aerobic respiration}, \textbf{anaerobic respiration}, and \textbf{fermentation}.
 
-    \begin{core}{Aerobic Respiration}
+%     \begin{core}{Aerobic Respiration}
 
-      \textbf{Aerobic respiration} is the most energetically efficient catabolic pathway in many organisms, in which oxygen serves as the final electron acceptor during the oxidation of organic fuels.
+%       \textbf{Aerobic respiration} is the most energetically efficient catabolic pathway in many organisms, in which oxygen serves as the final electron acceptor during the oxidation of organic fuels.
 
-      \myfig{0.7}{cytology_figures/aerobic}{caption}{fig:fig68}
+%       \myfig{0.7}{cytology_figures/aerobic}{caption}{fig:fig68}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Fermentation}
+%     \begin{core}{Fermentation}
 
-      \textbf{Fermentation} is the partial degradation of sugars or other organic molecules that occurs without the use of oxygen and without an electron transport chain.
+%       \textbf{Fermentation} is the partial degradation of sugars or other organic molecules that occurs without the use of oxygen and without an electron transport chain.
 
-      \myfig{0.55}{cytology_figures/fermentation}{caption}{fig:fig69}
+%       \myfig{0.55}{cytology_figures/fermentation}{caption}{fig:fig69}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Reduction-Oxidation Reactions}
+%     \begin{core}{Reduction-Oxidation Reactions}
 
-      The general mechanism underlying energy production in cellular respiration involves \textbf{redox (reduction--oxidation) reactions}, which entail the transfer of electrons between molecules. The \textbf{loss of electrons} (\ce{e^-}) by a substance is called \textbf{oxidation}, whereas the \textbf{gain of electrons} is called \textbf{reduction}. Consider the following simple, nonbiological example involving sodium and chlorine.
+%       The general mechanism underlying energy production in cellular respiration involves \textbf{redox (reduction--oxidation) reactions}, which entail the transfer of electrons between molecules. The \textbf{loss of electrons} (\ce{e^-}) by a substance is called \textbf{oxidation}, whereas the \textbf{gain of electrons} is called \textbf{reduction}. Consider the following simple, nonbiological example involving sodium and chlorine.
 
-      \myfig{0.4}{cytology_figures/nacl}{caption}{fig:fig70}
+%       \myfig{0.4}{cytology_figures/nacl}{caption}{fig:fig70}
 
-      Analogous to the reaction above, cellular respiration occurs in the following manner.
+%       Analogous to the reaction above, cellular respiration occurs in the following manner.
 
-      \myfig{0.55}{cytology_figures/redox}{caption}{fig:fig71}
+%       \myfig{0.55}{cytology_figures/redox}{caption}{fig:fig71}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Nicotinamide Adenine Dinucleotide (NADH)}
+%     \begin{core}{Nicotinamide Adenine Dinucleotide (NADH)}
 
-      This transfer of \ce{e^-}s occurs via the coenzymes \textbf{\ce{NAD+} (oxidized form) and \ce{NADH} (reduced form)}. \ce{NAD+} accepts electrons from substrates---often from H-C-OH groups---with the assistance of \textbf{dehydrogenase enzymes}, resulting in the oxidation of the substrate to C=O and the reduction of \ce{NAD+} to \ce{NADH} (along with the release of \ce{H^+}). 
+%       This transfer of \ce{e^-}s occurs via the coenzymes \textbf{\ce{NAD+} (oxidized form) and \ce{NADH} (reduced form)}. \ce{NAD+} accepts electrons from substrates---often from H-C-OH groups---with the assistance of \textbf{dehydrogenase enzymes}, resulting in the oxidation of the substrate to C=O and the reduction of \ce{NAD+} to \ce{NADH} (along with the release of \ce{H^+}). 
 
-      \myfig{0.55}{cytology_figures/nad}{caption}{fig:fig72}
+%       \myfig{0.55}{cytology_figures/nad}{caption}{fig:fig72}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Flavin Adenine Dinucleotide}
+%     \begin{core}{Flavin Adenine Dinucleotide}
 
-      Another important electron carrier is \textbf{FAD}, which functions similarly to \ce{NAD+} as an electron acceptor. Its reduced form, \ce{FADH2}, will also play a key role throughout cellular respiration. Keep these two molecules and their roles in mind as we examine each step of the respiration process.
+%       Another important electron carrier is \textbf{FAD}, which functions similarly to \ce{NAD+} as an electron acceptor. Its reduced form, \ce{FADH2}, will also play a key role throughout cellular respiration. Keep these two molecules and their roles in mind as we examine each step of the respiration process.
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Glycolysis, Pyruvate Oxidation, Citric Acid Cycle, and Oxidative Phosphorylation}
+%   \subsection{Glycolysis, Pyruvate Oxidation, Citric Acid Cycle, and Oxidative Phosphorylation}
     
-    Let us first examine the process of aerobic respiration, beginning with \textbf{glycolysis}, which takes place in the \textbf{cytoplasm}.
+%     Let us first examine the process of aerobic respiration, beginning with \textbf{glycolysis}, which takes place in the \textbf{cytoplasm}.
 
-    \begin{core}{Glycolysis}
+%     \begin{core}{Glycolysis}
 
-      \textbf{GLYCOLYSIS} literally means "sugar splitting," which accurately describes the process. Glucose, a 6-carbon sugar, is split into 2 3-carbon molecules called \textbf{pyruvate}. Glycolysis can be divided into two phases: [1] the Energy Investment Phase and [2] the Energy Payoff Phase.
+%       \textbf{GLYCOLYSIS} literally means "sugar splitting," which accurately describes the process. Glucose, a 6-carbon sugar, is split into 2 3-carbon molecules called \textbf{pyruvate}. Glycolysis can be divided into two phases: [1] the Energy Investment Phase and [2] the Energy Payoff Phase.
 
-      In the \textbf{energy investment phase}, 2 ATP are initially consumed to phosphorylate glucose and initiate the pathway. In the \textbf{energy payoff phase}, 4 ATP and 2 NADH are produced, along with 2 pyruvate and 2 \ce{H2O} molecules from the original glucose molecule. \textit{Although multiple stepwise reactions occur within each phase, we will not discuss them in detail here.}
+%       In the \textbf{energy investment phase}, 2 ATP are initially consumed to phosphorylate glucose and initiate the pathway. In the \textbf{energy payoff phase}, 4 ATP and 2 NADH are produced, along with 2 pyruvate and 2 \ce{H2O} molecules from the original glucose molecule. \textit{Although multiple stepwise reactions occur within each phase, we will not discuss them in detail here.}
 
-      \myfig{0.6}{cytology_figures/glycolysis}{caption}{fig:fig73}
+%       \myfig{0.6}{cytology_figures/glycolysis}{caption}{fig:fig73}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Pyruvate Oxidation}
+%     \begin{core}{Pyruvate Oxidation}
 
-      Afterward, \textbf{PYRUVATE OXIDATION} occurs. Pyruvate is transported into the \textbf{mitochondrial matrix} (the compartment enclosed by the inner mitochondrial membrane), where it is converted into a two-carbon compound called \textbf{acetyl-CoA}. This reaction is catalyzed by a multienzyme complex known as \textbf{pyruvate dehydrogenase}. During this process, \textbf{2 additional NADH are produced} (per glucose) as the two pyruvate molecules are oxidized to acetyl-CoA, with carbon released as \ce{CO2}.
+%       Afterward, \textbf{PYRUVATE OXIDATION} occurs. Pyruvate is transported into the \textbf{mitochondrial matrix} (the compartment enclosed by the inner mitochondrial membrane), where it is converted into a two-carbon compound called \textbf{acetyl-CoA}. This reaction is catalyzed by a multienzyme complex known as \textbf{pyruvate dehydrogenase}. During this process, \textbf{2 additional NADH are produced} (per glucose) as the two pyruvate molecules are oxidized to acetyl-CoA, with carbon released as \ce{CO2}.
 
-      \myfig{0.5}{cytology_figures/pyruvate_de}{caption}{fig:fig74}
+%       \myfig{0.5}{cytology_figures/pyruvate_de}{caption}{fig:fig74}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Citric Acid (Krebs) Cycle}
+%     \begin{core}{Citric Acid (Krebs) Cycle}
 
-      Acetyl-CoA then enters the \textbf{CITRIC ACID CYCLE} (also known as the \textbf{KREBS CYCLE}). The citric acid cycle is a series of reactions (\textit{each step mediated by a specific corresponding enzyme}) that further oxidizes the acetyl group of acetyl-CoA, releasing its carbons as \ce{CO2} and generating additional \ce{NADH} and \ce{FADH2}. The cycle also produces 1 ATP (or GTP) per acetyl-CoA, which corresponds to 1 ATP per pyruvate.
+%       Acetyl-CoA then enters the \textbf{CITRIC ACID CYCLE} (also known as the \textbf{KREBS CYCLE}). The citric acid cycle is a series of reactions (\textit{each step mediated by a specific corresponding enzyme}) that further oxidizes the acetyl group of acetyl-CoA, releasing its carbons as \ce{CO2} and generating additional \ce{NADH} and \ce{FADH2}. The cycle also produces 1 ATP (or GTP) per acetyl-CoA, which corresponds to 1 ATP per pyruvate.
 
-      \myfig{0.8}{cytology_figures/krebs}{caption}{fig:fig75}
+%       \myfig{0.8}{cytology_figures/krebs}{caption}{fig:fig75}
 
-      As shown above, the process regenerates the initial reactant, \textit{oxaloacetate}; hence, it is referred to as a \textbf{cycle}.
+%       As shown above, the process regenerates the initial reactant, \textit{oxaloacetate}; hence, it is referred to as a \textbf{cycle}.
 
-    \end{core}
+%     \end{core}
 
-    Thus far, with a bit of calculation, 1 glucose molecule has yielded:
+%     Thus far, with a bit of calculation, 1 glucose molecule has yielded:
 
-    \bce{Glycolysis $\rightarrow$ 2 ATP, 2 NADH}
+%     \bce{Glycolysis $\rightarrow$ 2 ATP, 2 NADH}
     
-    \bce{Pyruvate Oxidation $\rightarrow$ 2 NADH (\textit{one per pyruvate})}
+%     \bce{Pyruvate Oxidation $\rightarrow$ 2 NADH (\textit{one per pyruvate})}
     
-    \bce{Citric Acid Cycle $\rightarrow$ 6 NADH, 2 \ce{FADH2}, 2 ATP}
+%     \bce{Citric Acid Cycle $\rightarrow$ 6 NADH, 2 \ce{FADH2}, 2 ATP}
 
-    In total, this amounts to 10 NADH, 2 \ce{FADH2}, and 4 ATP produced. However, cellular respiration yields approximately 30--32 ATP per glucose overall.
+%     In total, this amounts to 10 NADH, 2 \ce{FADH2}, and 4 ATP produced. However, cellular respiration yields approximately 30--32 ATP per glucose overall.
 
-    \begin{core}{Oxidative Phosphorylation}
+%     \begin{core}{Oxidative Phosphorylation}
 
-      The majority of ATP is generated when NADH and \ce{FADH2} donate their electrons to the \textbf{electron transport chain}. This final stage is known as \textbf{OXIDATIVE PHOSPHORYLATION}.
+%       The majority of ATP is generated when NADH and \ce{FADH2} donate their electrons to the \textbf{electron transport chain}. This final stage is known as \textbf{OXIDATIVE PHOSPHORYLATION}.
 
-      \myfig{1}{cytology_figures/ox_phos}{caption}{fig:fig76}
+%       \myfig{1}{cytology_figures/ox_phos}{caption}{fig:fig76}
 
-      Within the mitochondrial matrix, \ce{NADH} and \ce{FADH2} are oxidized back to their respective forms, \ce{NAD+} and \ce{FAD}, releasing electrons (\ce{e^-}) and protons (\ce{H^+}). The electrons enter the \textbf{electron transport chain} (Complexes I, II, III, and IV), where they move through a series of carriers to progressively lower energy states before ultimately being transferred to \ce{O2} (hence \textbf{aerobic} respiration). Oxygen then combines with electrons and \ce{H^+} to form \ce{H2O} as a byproduct.
+%       Within the mitochondrial matrix, \ce{NADH} and \ce{FADH2} are oxidized back to their respective forms, \ce{NAD+} and \ce{FAD}, releasing electrons (\ce{e^-}) and protons (\ce{H^+}). The electrons enter the \textbf{electron transport chain} (Complexes I, II, III, and IV), where they move through a series of carriers to progressively lower energy states before ultimately being transferred to \ce{O2} (hence \textbf{aerobic} respiration). Oxygen then combines with electrons and \ce{H^+} to form \ce{H2O} as a byproduct.
 
-      The energy released during these electron transfers is used to pump \ce{H^+} from the matrix into the intermembrane space, creating an electrochemical gradient. \textbf{ATP synthase} then harnesses the energy stored in this gradient—--known as the \textbf{proton-motive force}—--as \ce{H^+} diffuse "downhill" back into the matrix, driving the phosphorylation of ADP to form ATP. 
+%       The energy released during these electron transfers is used to pump \ce{H^+} from the matrix into the intermembrane space, creating an electrochemical gradient. \textbf{ATP synthase} then harnesses the energy stored in this gradient—--known as the \textbf{proton-motive force}—--as \ce{H^+} diffuse "downhill" back into the matrix, driving the phosphorylation of ADP to form ATP. 
 
-      It is during this stage that the majority of ATP is produced, bringing the total yield to approximately 30--32 ATP per glucose.
+%       It is during this stage that the majority of ATP is produced, bringing the total yield to approximately 30--32 ATP per glucose.
 
-    \end{core}
+%     \end{core}
 
-    Ultimately, the chemical bond energy stored in glucose is transferred through multiple intermediate forms, with the final energy capture occurring in the formation of the bond between ADP and inorganic phosphate to produce ATP.
+%     Ultimately, the chemical bond energy stored in glucose is transferred through multiple intermediate forms, with the final energy capture occurring in the formation of the bond between ADP and inorganic phosphate to produce ATP.
 
-    \[
-      \text{glucose} \rightarrow \text{NADH} \rightarrow \text{ETC} \rightarrow \text{proton-motive force} \rightarrow \text{ATP}
-    \]
+%     \[
+%       \text{glucose} \rightarrow \text{NADH} \rightarrow \text{ETC} \rightarrow \text{proton-motive force} \rightarrow \text{ATP}
+%     \]
 
-  \subsection{Anaerobic Respiration \& Fermentation}
+%   \subsection{Anaerobic Respiration \& Fermentation}
     
-    Now, let us revisit respiration in the absence of oxygen, which can be divided into \textbf{fermentation} and \textbf{anaerobic respiration}.
+%     Now, let us revisit respiration in the absence of oxygen, which can be divided into \textbf{fermentation} and \textbf{anaerobic respiration}.
 
-    \begin{core}{Anaerobic Respiration}
+%     \begin{core}{Anaerobic Respiration}
 
-      \textbf{Anaerobic respiration} is carried out by certain prokaryotes and uses substances other than oxygen as the terminal electron acceptor in a similar energy-harvesting process—hence the term \textit{anaerobic}. In this pathway, the ETC is still utilized, which is a key feature that distinguishes anaerobic respiration from fermentation.
+%       \textbf{Anaerobic respiration} is carried out by certain prokaryotes and uses substances other than oxygen as the terminal electron acceptor in a similar energy-harvesting process—hence the term \textit{anaerobic}. In this pathway, the ETC is still utilized, which is a key feature that distinguishes anaerobic respiration from fermentation.
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Fermentation}
+%     \begin{core}{Fermentation}
 
-      \textbf{Fermentation} is the more relevant process for us. It is a partial degradation of sugars or other organic fuels that occurs without oxygen and without the use of the ETC. Essentially, fermentation consists of glycolysis followed by reactions that regenerate \ce{NAD+} by transferring electrons from \ce{NADH} to pyruvate or to derivatives of pyruvate. 
+%       \textbf{Fermentation} is the more relevant process for us. It is a partial degradation of sugars or other organic fuels that occurs without oxygen and without the use of the ETC. Essentially, fermentation consists of glycolysis followed by reactions that regenerate \ce{NAD+} by transferring electrons from \ce{NADH} to pyruvate or to derivatives of pyruvate. 
 
-      The only ATP produced is the net 2 ATP generated during glycolysis. \textit{As you can see, this is far less efficient than aerobic respiration.} Fermentation can be divided into \textbf{alcohol} fermentation and \textbf{lactic acid} fermentation.
+%       The only ATP produced is the net 2 ATP generated during glycolysis. \textit{As you can see, this is far less efficient than aerobic respiration.} Fermentation can be divided into \textbf{alcohol} fermentation and \textbf{lactic acid} fermentation.
 
-      In \textbf{ALCOHOL FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to ethanol. \textit{Yeast is a well-known example of an organism that performs this type of fermentation. For thousands of years, humans have used yeast in brewing and baking. The \ce{CO2} produced during alcohol fermentation by baker's yeast causes bread dough to rise.}
+%       In \textbf{ALCOHOL FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to ethanol. \textit{Yeast is a well-known example of an organism that performs this type of fermentation. For thousands of years, humans have used yeast in brewing and baking. The \ce{CO2} produced during alcohol fermentation by baker's yeast causes bread dough to rise.}
 
-      \myfig{0.6}{cytology_figures/alc}{caption}{fig:fig77}
+%       \myfig{0.6}{cytology_figures/alc}{caption}{fig:fig77}
 
-      In \textbf{LACTIC ACID FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to lactic acid. \textit{This type of fermentation occurs in humans when \ce{O2} is in short supply, such as during intense exercise.}
+%       In \textbf{LACTIC ACID FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to lactic acid. \textit{This type of fermentation occurs in humans when \ce{O2} is in short supply, such as during intense exercise.}
 
-      \myfig{0.6}{cytology_figures/lac}{caption}{fig:fig78}
+%       \myfig{0.6}{cytology_figures/lac}{caption}{fig:fig78}
 
-    \end{core}
+%     \end{core}
 
-    Fermentation, anaerobic respiration, and aerobic respiration are the three cellular pathways that produce ATP by harvesting the chemical energy stored in food. All three pathways begin with glycolysis, which oxidizes glucose (and other organic fuels) to pyruvate, yielding a net production of 2 ATP. Additionally, all three processes use \ce{NAD+} as the oxidizing agent that accepts electrons (\ce{e^-}) from food during glycolysis.
+%     Fermentation, anaerobic respiration, and aerobic respiration are the three cellular pathways that produce ATP by harvesting the chemical energy stored in food. All three pathways begin with glycolysis, which oxidizes glucose (and other organic fuels) to pyruvate, yielding a net production of 2 ATP. Additionally, all three processes use \ce{NAD+} as the oxidizing agent that accepts electrons (\ce{e^-}) from food during glycolysis.
 
-    The key differences among these pathways lie in the total amount of ATP produced and in the mechanisms by which \ce{NADH} is oxidized back to \ce{NAD+}.
+%     The key differences among these pathways lie in the total amount of ATP produced and in the mechanisms by which \ce{NADH} is oxidized back to \ce{NAD+}.
 
-\section{Photosynthesis}
+% \section{Photosynthesis}
 
-  \subsection{Photosynthesis Basics}
+%   \subsection{Photosynthesis Basics}
 
-    \begin{core}{Photosynthesis}
+%     \begin{core}{Photosynthesis}
 
-      \textbf{Photosynthesis} is the process by which the energy of sunlight is converted into chemical energy stored in sugars, ultimately nourishing nearly all life on Earth, either directly or indirectly.
+%       \textbf{Photosynthesis} is the process by which the energy of sunlight is converted into chemical energy stored in sugars, ultimately nourishing nearly all life on Earth, either directly or indirectly.
 
-      Just as cellular respiration takes place in the mitochondria, photosynthesis occurs in the \textbf{chloroplasts}. Its complex series of chemical reactions can be summarized by the following equation. Notice that it is, in many ways, the reverse of cellular respiration, except for the form of energy involved.
+%       Just as cellular respiration takes place in the mitochondria, photosynthesis occurs in the \textbf{chloroplasts}. Its complex series of chemical reactions can be summarized by the following equation. Notice that it is, in many ways, the reverse of cellular respiration, except for the form of energy involved.
 
-      \bce{\ce{6CO2 + 12H2O + \text{Light energy} -> C6H12O6 + 6O2 + 6H2O}}
+%       \bce{\ce{6CO2 + 12H2O + \text{Light energy} -> C6H12O6 + 6O2 + 6H2O}}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Autotrophs \$ Heterotrophs}
+%     \begin{core}{Autotrophs \$ Heterotrophs}
 
-      Within the biosphere, photosynthesis is carried out exclusively by \textbf{autotrophs}, organisms capable of producing their own organic food from inorganic substances and therefore not dependent on other living organisms for energy. In contrast, \textbf{heterotrophs} cannot synthesize their own food and must obtain energy by consuming organic compounds produced by autotrophs or by other heterotrophs.
+%       Within the biosphere, photosynthesis is carried out exclusively by \textbf{autotrophs}, organisms capable of producing their own organic food from inorganic substances and therefore not dependent on other living organisms for energy. In contrast, \textbf{heterotrophs} cannot synthesize their own food and must obtain energy by consuming organic compounds produced by autotrophs or by other heterotrophs.
 
-      \myfig{0.5}{cytology_figures/trophs}{caption}{fig:fig79}
+%       \myfig{0.5}{cytology_figures/trophs}{caption}{fig:fig79}
 
-      Consequently, the energy utilized by heterotrophs can, in nearly all cases, be traced back to photosynthesis performed by autotrophs.
+%       Consequently, the energy utilized by heterotrophs can, in nearly all cases, be traced back to photosynthesis performed by autotrophs.
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Light Reactions \& Calvin Cycle}
+%   \subsection{Light Reactions \& Calvin Cycle}
   
-    Photosynthesis occurs in two distinct stages: the \textbf{light reactions} and the \textbf{Calvin cycle}. Let us first examine the light reactions.
+%     Photosynthesis occurs in two distinct stages: the \textbf{light reactions} and the \textbf{Calvin cycle}. Let us first examine the light reactions.
 
-    \begin{core}{Light Reactions}
+%     \begin{core}{Light Reactions}
 
-      The \textbf{LIGHT REACTIONS} convert solar energy into chemical energy and take place in the \textbf{thylakoid membrane}. To understand the light reactions, it is important to have a basic understanding of light energy, wavelength, photons, and absorption. Please refer to \textit{Introductory Chemistry 4.1: Light}.
+%       The \textbf{LIGHT REACTIONS} convert solar energy into chemical energy and take place in the \textbf{thylakoid membrane}. To understand the light reactions, it is important to have a basic understanding of light energy, wavelength, photons, and absorption. Please refer to \textit{Introductory Chemistry 4.1: Light}.
 
-      The key molecules within chloroplasts that mediate the light reactions are photosynthetic pigments, most notably chlorophyll. Chlorophyll is a pigment that absorbs light energy and subsequently excites its \ce{e^-}. Chlorophyll can be categorized into \textbf{chlorophyll a} and \textbf{chlorophyll b}, while \textbf{carotenoids} function as accessory pigments. Among these, chlorophyll a is the primary light-capturing pigment that participates directly in the light reactions. Although each pigment has a slightly different absorption spectrum, their overall spectral patterns are similar.
+%       The key molecules within chloroplasts that mediate the light reactions are photosynthetic pigments, most notably chlorophyll. Chlorophyll is a pigment that absorbs light energy and subsequently excites its \ce{e^-}. Chlorophyll can be categorized into \textbf{chlorophyll a} and \textbf{chlorophyll b}, while \textbf{carotenoids} function as accessory pigments. Among these, chlorophyll a is the primary light-capturing pigment that participates directly in the light reactions. Although each pigment has a slightly different absorption spectrum, their overall spectral patterns are similar.
 
-      \myfig{0.4}{cytology_figures/absorption}{caption}{fig:fig80}
+%       \myfig{0.4}{cytology_figures/absorption}{caption}{fig:fig80}
 
-      As shown above, wavelengths corresponding to the color green are least absorbed and are therefore reflected or transmitted by the pigment molecules. This is why leaves typically appear green (and sometimes yellow), but rarely blue, purple, or red.
+%       As shown above, wavelengths corresponding to the color green are least absorbed and are therefore reflected or transmitted by the pigment molecules. This is why leaves typically appear green (and sometimes yellow), but rarely blue, purple, or red.
 
-      When a \ce{e^-} is excited to a higher potential energy (PE) level, it eventually falls back to its ground state, releasing energy as heat or light in the process.
+%       When a \ce{e^-} is excited to a higher potential energy (PE) level, it eventually falls back to its ground state, releasing energy as heat or light in the process.
 
-      \myfig{0.4}{cytology_figures/excited}{caption}{fig:fig81}
+%       \myfig{0.4}{cytology_figures/excited}{caption}{fig:fig81}
 
-      In chloroplasts, this energy is captured and funneled through \textbf{photosystems}. A photosystem consists of a \textbf{reaction-center complex}, which contains a pair of chlorophyll a molecules and a \textbf{primary \ce{e^-} acceptor}, surrounded by \textbf{light-harvesting complexes}.
+%       In chloroplasts, this energy is captured and funneled through \textbf{photosystems}. A photosystem consists of a \textbf{reaction-center complex}, which contains a pair of chlorophyll a molecules and a \textbf{primary \ce{e^-} acceptor}, surrounded by \textbf{light-harvesting complexes}.
 
-      \myfig{0.45}{cytology_figures/photosystem}{caption}{fig:fig82}
+%       \myfig{0.45}{cytology_figures/photosystem}{caption}{fig:fig82}
 
-      There are two types of photosystems: \textbf{Photosystem II (PS II)} and \textbf{Photosystem I (PS I)}. Together, they capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}.
+%       There are two types of photosystems: \textbf{Photosystem II (PS II)} and \textbf{Photosystem I (PS I)}. Together, they capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}.
 
-      Here is a step-by-step description of the light reactions mediated by these photosystems.
+%       Here is a step-by-step description of the light reactions mediated by these photosystems.
 
-      \myfig{1}{cytology_figures/light_r}{caption}{fig:fig83}
+%       \myfig{1}{cytology_figures/light_r}{caption}{fig:fig83}
 
-      (1) A photon of light strikes a pigment molecule within the light-harvesting complex of PS II, exciting one of its electrons to a higher energy level. As this \ce{e^-} returns to its ground state, the energy is transferred to a neighboring pigment molecule, exciting one of its electrons in turn. This energy transfer continues from pigment to pigment until it reaches the pair of chlorophyll a molecules in the reaction-center complex.
+%       (1) A photon of light strikes a pigment molecule within the light-harvesting complex of PS II, exciting one of its electrons to a higher energy level. As this \ce{e^-} returns to its ground state, the energy is transferred to a neighboring pigment molecule, exciting one of its electrons in turn. This energy transfer continues from pigment to pigment until it reaches the pair of chlorophyll a molecules in the reaction-center complex.
 
-      (2) The excited \ce{e^-} from the chlorophyll a pair in the reaction-center complex is then transferred to the primary \ce{e^-} acceptor. The reaction center replaces the lost electrons with electrons derived from the splitting of \ce{H2O} (a process catalyzed by an enzyme complex), producing \ce{O2} and \ce{H^+} as byproducts. The released \ce{H^+} contribute to the buildup of a proton gradient across the thylakoid membrane.
+%       (2) The excited \ce{e^-} from the chlorophyll a pair in the reaction-center complex is then transferred to the primary \ce{e^-} acceptor. The reaction center replaces the lost electrons with electrons derived from the splitting of \ce{H2O} (a process catalyzed by an enzyme complex), producing \ce{O2} and \ce{H^+} as byproducts. The released \ce{H^+} contribute to the buildup of a proton gradient across the thylakoid membrane.
 
-      (3) The excited \ce{e^-} in the primary \ce{e^-} acceptor of PS II is passed down an electron transport chain (ETC), similar to the process observed in oxidative phosphorylation during cellular respiration. As the electrons flow through a series of redox reactions toward the chlorophyll a pair of PS I, free energy is released and used to pump \ce{H^+} from the stroma into the thylakoid space. This further contributes to the buildup of a proton gradient across the thylakoid membrane.
+%       (3) The excited \ce{e^-} in the primary \ce{e^-} acceptor of PS II is passed down an electron transport chain (ETC), similar to the process observed in oxidative phosphorylation during cellular respiration. As the electrons flow through a series of redox reactions toward the chlorophyll a pair of PS I, free energy is released and used to pump \ce{H^+} from the stroma into the thylakoid space. This further contributes to the buildup of a proton gradient across the thylakoid membrane.
 
-      The resulting \ce{H^+} gradient drives ATP synthesis via ATP synthase through \textit{chemiosmosis}, powered by the proton-motive force.
+%       The resulting \ce{H^+} gradient drives ATP synthesis via ATP synthase through \textit{chemiosmosis}, powered by the proton-motive force.
 
-      (4) Light energy is then transferred to the PS I chlorophyll a pair in the same manner as before, exciting an electron that is subsequently passed to the primary \ce{e^-} acceptor of PS I. In this case, water splitting is not required to replace the lost electron, as it is replenished by the electron arriving from the PS II ETC.
+%       (4) Light energy is then transferred to the PS I chlorophyll a pair in the same manner as before, exciting an electron that is subsequently passed to the primary \ce{e^-} acceptor of PS I. In this case, water splitting is not required to replace the lost electron, as it is replenished by the electron arriving from the PS II ETC.
 
-      (5) The photoexcited electrons from PS I are then transferred through a second set of electron carriers and ultimately used to reduce \ce{NADP+} to \ce{NADPH} via \ce{NADP+} reductase. This reduction consumes \ce{H^+} in the stroma, further enhancing the proton gradient across the thylakoid membrane.
+%       (5) The photoexcited electrons from PS I are then transferred through a second set of electron carriers and ultimately used to reduce \ce{NADP+} to \ce{NADPH} via \ce{NADP+} reductase. This reduction consumes \ce{H^+} in the stroma, further enhancing the proton gradient across the thylakoid membrane.
 
-      Here is a more comprehensive figure illustrating the light reactions within the thylakoid membrane, highlighting the chemiosmotic generation of ATP.
+%       Here is a more comprehensive figure illustrating the light reactions within the thylakoid membrane, highlighting the chemiosmotic generation of ATP.
 
-      \myfig{1}{cytology_figures/light_r_complete}{caption}{fig:fig84}
+%       \myfig{1}{cytology_figures/light_r_complete}{caption}{fig:fig84}
 
-      In certain cases, photoexcited electrons follow an alternative pathway known as \textbf{cyclic \ce{e^-} flow}, which involves PS I but not PS II.
+%       In certain cases, photoexcited electrons follow an alternative pathway known as \textbf{cyclic \ce{e^-} flow}, which involves PS I but not PS II.
 
-      \myfig{0.5}{cytology_figures/light_r_cyclic}{caption}{fig:fig85}
+%       \myfig{0.5}{cytology_figures/light_r_cyclic}{caption}{fig:fig85}
 
-      As a result, the light reactions capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}, which are then utilized in the \textbf{Calvin cycle}. During this process, \ce{H2O} is split to maintain the proton gradient and to provide a continuous supply of electrons for PS II.
+%       As a result, the light reactions capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}, which are then utilized in the \textbf{Calvin cycle}. During this process, \ce{H2O} is split to maintain the proton gradient and to provide a continuous supply of electrons for PS II.
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Calvin Cycle}
+%     \begin{core}{Calvin Cycle}
 
-      We now turn to the \textbf{CALVIN CYCLE}, which takes place in the stroma and uses the chemical energy stored in ATP and \ce{NADPH} to reduce \ce{CO2} to sugar. Like the citric acid cycle, the Calvin cycle is regenerative, meaning that its starting molecule is regenerated as some molecules enter the cycle and others exit.
+%       We now turn to the \textbf{CALVIN CYCLE}, which takes place in the stroma and uses the chemical energy stored in ATP and \ce{NADPH} to reduce \ce{CO2} to sugar. Like the citric acid cycle, the Calvin cycle is regenerative, meaning that its starting molecule is regenerated as some molecules enter the cycle and others exit.
 
-      \myfig{0.8}{cytology_figures/calvin_cycle}{caption}{fig:fig86}
+%       \myfig{0.8}{cytology_figures/calvin_cycle}{caption}{fig:fig86}
 
-      The Calvin cycle occurs in three phases:
+%       The Calvin cycle occurs in three phases:
 
-      \textbf{PHASE 1 - CARBON FIXATION:} Three \ce{CO2} molecules are each attached to three 5-carbon sugars called ribulose-1,5-bisphosphate (RuBP), a reaction catalyzed by the enzyme \textbf{rubisco}. This produces three unstable 6-carbon intermediates, each of which immediately splits into two 3-carbon molecules called 3-phosphoglycerate (3-PGA).
+%       \textbf{PHASE 1 - CARBON FIXATION:} Three \ce{CO2} molecules are each attached to three 5-carbon sugars called ribulose-1,5-bisphosphate (RuBP), a reaction catalyzed by the enzyme \textbf{rubisco}. This produces three unstable 6-carbon intermediates, each of which immediately splits into two 3-carbon molecules called 3-phosphoglycerate (3-PGA).
 
-      \textbf{PHASE 2 - REDUCTION:} Each molecule of 3-phosphoglycerate receives an additional phosphate group from ATP, forming 1,3-bisphosphoglycerate. This intermediate is then reduced by \ce{NADPH} to glyceraldehyde-3-phosphate (G3P). Of the six G3P molecules produced, one exits the cycle as the net sugar output of the Calvin cycle.
+%       \textbf{PHASE 2 - REDUCTION:} Each molecule of 3-phosphoglycerate receives an additional phosphate group from ATP, forming 1,3-bisphosphoglycerate. This intermediate is then reduced by \ce{NADPH} to glyceraldehyde-3-phosphate (G3P). Of the six G3P molecules produced, one exits the cycle as the net sugar output of the Calvin cycle.
 
-      \textbf{PHASE 3 - REGENERATION OF RuBP:} The remaining five G3P molecules undergo a series of reactions that rearrange their carbon skeletons to regenerate the original three RuBP molecules. This regeneration phase requires the expenditure of three additional ATP molecules.
+%       \textbf{PHASE 3 - REGENERATION OF RuBP:} The remaining five G3P molecules undergo a series of reactions that rearrange their carbon skeletons to regenerate the original three RuBP molecules. This regeneration phase requires the expenditure of three additional ATP molecules.
 
-      As a result, the Calvin cycle consumes a total of 9 ATP and 6 \ce{NADPH} to produce one net G3P molecule. During this process, 9 ADP and 6 \ce{NADP+} molecules are generated, which are then returned to the light reactions to be re-energized and reused in subsequent cycles.
+%       As a result, the Calvin cycle consumes a total of 9 ATP and 6 \ce{NADPH} to produce one net G3P molecule. During this process, 9 ADP and 6 \ce{NADP+} molecules are generated, which are then returned to the light reactions to be re-energized and reused in subsequent cycles.
 
-    \end{core}  
+%     \end{core}  
 
-  \subsection{Photorespiration and Plant Adaptations}
+%   \subsection{Photorespiration and Plant Adaptations}
     
-    Over millions of years, plants have evolved mechanisms to overcome challenges associated with terrestrial life. One major challenge is balancing photosynthesis with the prevention of excessive water loss. The \ce{CO2} required for photosynthesis enters through leaf pores called stomata, which are also the primary sites of transpiration. 
+%     Over millions of years, plants have evolved mechanisms to overcome challenges associated with terrestrial life. One major challenge is balancing photosynthesis with the prevention of excessive water loss. The \ce{CO2} required for photosynthesis enters through leaf pores called stomata, which are also the primary sites of transpiration. 
 
-    On hot, dry days, many plants partially or completely close their stomata to conserve water. However, this also limits \ce{CO2} intake and leads to an accumulation of \ce{O2} within the leaf air spaces. Under these conditions, the enzyme rubisco binds \ce{O2} instead of \ce{CO2}, initiating a wasteful process known as \textbf{photorespiration}.
+%     On hot, dry days, many plants partially or completely close their stomata to conserve water. However, this also limits \ce{CO2} intake and leads to an accumulation of \ce{O2} within the leaf air spaces. Under these conditions, the enzyme rubisco binds \ce{O2} instead of \ce{CO2}, initiating a wasteful process known as \textbf{photorespiration}.
 
-    \begin{core}{C3 Plants}
+%     \begin{core}{C3 Plants}
 
-      The typical $C_3$ plant (named after the three-carbon first product of carbon fixation, 3-phosphoglycerate) produces less sugar on hot, dry days due to declining \ce{CO2} levels, which limits the Calvin cycle. Under these conditions, \ce{O2} competes with \ce{CO2} for the active site of rubisco, leading to \textbf{photorespiration}. This results in the formation of a 2-carbon compound (phosphoglycolate) that is eventually exported from the chloroplast. Photorespiration is inefficient: instead of producing sugar and ATP as in normal photosynthesis and cellular respiration, it consumes ATP and produces no net sugar. Consequently, $C_3$ plants are particularly vulnerable to prolonged hot, dry conditions. Over evolutionary time, plants have developed adaptations to minimize photorespiration.
+%       The typical $C_3$ plant (named after the three-carbon first product of carbon fixation, 3-phosphoglycerate) produces less sugar on hot, dry days due to declining \ce{CO2} levels, which limits the Calvin cycle. Under these conditions, \ce{O2} competes with \ce{CO2} for the active site of rubisco, leading to \textbf{photorespiration}. This results in the formation of a 2-carbon compound (phosphoglycolate) that is eventually exported from the chloroplast. Photorespiration is inefficient: instead of producing sugar and ATP as in normal photosynthesis and cellular respiration, it consumes ATP and produces no net sugar. Consequently, $C_3$ plants are particularly vulnerable to prolonged hot, dry conditions. Over evolutionary time, plants have developed adaptations to minimize photorespiration.
 
-    \end{core}
+%     \end{core}
     
-    \begin{core}{C4 Plants}
+%     \begin{core}{C4 Plants}
 
-      \textbf{$C_4$ plants} have evolved a mechanism to minimize photorespiration. On hot, dry days, $C_4$ plants only partially close their stomata, conserving water while still allowing some \ce{CO2} to enter. This \ce{CO2} is initially fixed into 4-carbon compounds by combining with phosphoenolpyruvate (PEP, a 3-carbon compound) in the \textbf{mesophyll cells} through the enzyme \textbf{PEP carboxylase}. This prevents the \ce{CO2} from simple diffusing back out of the cell like free \ce{CO2} would. These 4-carbon compounds are then transported to the \textbf{bundle-sheath cells}, where \ce{CO2} is released for use in the Calvin cycle, and PEP is regenerated to be reused in mesophyll cells. By concentrating \ce{CO2} around rubisco, $C_4$ plants ensure that rubisco preferentially binds \ce{CO2} rather than \ce{O2}, effectively reducing photorespiration.
+%       \textbf{$C_4$ plants} have evolved a mechanism to minimize photorespiration. On hot, dry days, $C_4$ plants only partially close their stomata, conserving water while still allowing some \ce{CO2} to enter. This \ce{CO2} is initially fixed into 4-carbon compounds by combining with phosphoenolpyruvate (PEP, a 3-carbon compound) in the \textbf{mesophyll cells} through the enzyme \textbf{PEP carboxylase}. This prevents the \ce{CO2} from simple diffusing back out of the cell like free \ce{CO2} would. These 4-carbon compounds are then transported to the \textbf{bundle-sheath cells}, where \ce{CO2} is released for use in the Calvin cycle, and PEP is regenerated to be reused in mesophyll cells. By concentrating \ce{CO2} around rubisco, $C_4$ plants ensure that rubisco preferentially binds \ce{CO2} rather than \ce{O2}, effectively reducing photorespiration.
 
-      \myfig{1}{cytology_figures/c4}{caption}{fig:fig87}
+%       \myfig{1}{cytology_figures/c4}{caption}{fig:fig87}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Crassulacean Acid Metabolism (CAM) Plants}
+%     \begin{core}{Crassulacean Acid Metabolism (CAM) Plants}
 
-      Another type of plant that uses an alternative pathway is \textbf{Crassulacean Acid Metabolism} or \textbf{CAM} plants. CAM plants open their stomata at night and close them during the day. This strategy conserves water during the hot, dry daytime, but limits \ce{CO2} uptake while the stomata are closed. To compensate, CAM plants fix \ce{CO2} at night into 4-carbon organic acids, which are stored in vacuoles. During the day, when the stomata are closed, the light reactions provide ATP and NADPH, and \ce{CO2} is released from the stored organic acids to drive the Calvin cycle in the chloroplasts, allowing sugar production to continue despite the stomatal closure.
+%       Another type of plant that uses an alternative pathway is \textbf{Crassulacean Acid Metabolism} or \textbf{CAM} plants. CAM plants open their stomata at night and close them during the day. This strategy conserves water during the hot, dry daytime, but limits \ce{CO2} uptake while the stomata are closed. To compensate, CAM plants fix \ce{CO2} at night into 4-carbon organic acids, which are stored in vacuoles. During the day, when the stomata are closed, the light reactions provide ATP and NADPH, and \ce{CO2} is released from the stored organic acids to drive the Calvin cycle in the chloroplasts, allowing sugar production to continue despite the stomatal closure.
 
-      Here is a comparison of $C_4$ and CAM plants.
+%       Here is a comparison of $C_4$ and CAM plants.
 
-      \myfig{0.6}{cytology_figures/c4_cam}{caption}{fig:fig88}
+%       \myfig{0.6}{cytology_figures/c4_cam}{caption}{fig:fig88}
 
-    \end{core}
+%     \end{core}
 
-\section{Cellular Signaling}
+% \section{Cellular Signaling}
 
-  \subsection{Paracrine \& Endocrine Signalling}
+%   \subsection{Paracrine \& Endocrine Signalling}
   
-    Cellular signalling is a complex process that enables cells to communicate with one another. It involves the exchange of information between cells through signalling molecules (\textbf{ligands}) and their receptors.
+%     Cellular signalling is a complex process that enables cells to communicate with one another. It involves the exchange of information between cells through signalling molecules (\textbf{ligands}) and their receptors.
     
-    \myfig{0.65}{cytology_figures/signaling}{caption}{fig:fig89}
+%     \myfig{0.65}{cytology_figures/signaling}{caption}{fig:fig89}
     
-    Cell communication is usually divided into two main categories: \textbf{paracrine} and \textbf{endocrine} signalling.
+%     Cell communication is usually divided into two main categories: \textbf{paracrine} and \textbf{endocrine} signalling.
 
-    \begin{core}{Paracrine Signalling}
+%     \begin{core}{Paracrine Signalling}
 
-      \textbf{PARACRINE} signalling is \textbf{local} communication between cells in which signalling molecules diffuse over short distances to influence nearby target cells. This is distinct from direct contact (\textbf{juxtacrine}) signalling, such as communication through intracellular junctions discussed in \textit{2.1 A Tour of the Cell}, where cells signal through physical contact rather than secreted ligands.
+%       \textbf{PARACRINE} signalling is \textbf{local} communication between cells in which signalling molecules diffuse over short distances to influence nearby target cells. This is distinct from direct contact (\textbf{juxtacrine}) signalling, such as communication through intracellular junctions discussed in \textit{2.1 A Tour of the Cell}, where cells signal through physical contact rather than secreted ligands.
 
-      \myfig{0.6}{cytology_figures/paracrine}{caption}{fig:fig90}
+%       \myfig{0.6}{cytology_figures/paracrine}{caption}{fig:fig90}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Endocrine}
+%     \begin{core}{Endocrine}
 
-      \textbf{ENDOCRINE} signalling (or \textbf{hormonal} signalling) is \textbf{long-distance} communication between cells in which specialized endocrine cells secrete hormones into the circulatory system. These hormones travel through the bloodstream to reach distant target cells that possess the appropriate receptors and respond to the signal.
+%       \textbf{ENDOCRINE} signalling (or \textbf{hormonal} signalling) is \textbf{long-distance} communication between cells in which specialized endocrine cells secrete hormones into the circulatory system. These hormones travel through the bloodstream to reach distant target cells that possess the appropriate receptors and respond to the signal.
 
-      \myfig{0.5}{cytology_figures/endocrine}{caption}{fig:fig91}
+%       \myfig{0.5}{cytology_figures/endocrine}{caption}{fig:fig91}
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Signal Reception, Transduction, and Response}
+%   \subsection{Signal Reception, Transduction, and Response}
     
-    Regardless of the type of cellular signalling, the communication process follows a general sequence of steps: (1) \textbf{signal reception}, (2) \textbf{signal transduction}, and (3) \textbf{cellular response}.
+%     Regardless of the type of cellular signalling, the communication process follows a general sequence of steps: (1) \textbf{signal reception}, (2) \textbf{signal transduction}, and (3) \textbf{cellular response}.
 
-    \begin{core}{Cell Communication (\textit{Signal Reception})}
+%     \begin{core}{Cell Communication (\textit{Signal Reception})}
 
-      (1) \textbf{SIGNAL RECEPTION} is the target cell's detection of a signalling molecule from outside the cell. This occurs through receptor proteins located either on the \textbf{cell surface} or \textbf{within the cell} (intracellular receptors).
+%       (1) \textbf{SIGNAL RECEPTION} is the target cell's detection of a signalling molecule from outside the cell. This occurs through receptor proteins located either on the \textbf{cell surface} or \textbf{within the cell} (intracellular receptors).
 
-      There are 3 major categories of cell-surface receptors.
+%       There are 3 major categories of cell-surface receptors.
 
-      \textbf{G Protein–Coupled Receptors} (\textbf{GPCRs}) are transmembrane receptors that, upon ligand binding, undergo a conformational change that activates an associated G protein. The activated G protein then regulates downstream target proteins, initiating an intracellular signalling cascade.
+%       \textbf{G Protein–Coupled Receptors} (\textbf{GPCRs}) are transmembrane receptors that, upon ligand binding, undergo a conformational change that activates an associated G protein. The activated G protein then regulates downstream target proteins, initiating an intracellular signalling cascade.
 
-      \myfig{0.6}{cytology_figures/gpcr}{caption}{fig:fig92}
+%       \myfig{0.6}{cytology_figures/gpcr}{caption}{fig:fig92}
 
-      \textbf{Receptor Tyrosine Kinases} (\textbf{RTKs}) are transmembrane receptors that, upon ligand binding, undergo dimerization and autophosphorylation of specific intracellular tyrosine residues. These phosphorylated tyrosines serve as docking sites for intracellular signalling proteins, leading to activation of downstream target pathways.
+%       \textbf{Receptor Tyrosine Kinases} (\textbf{RTKs}) are transmembrane receptors that, upon ligand binding, undergo dimerization and autophosphorylation of specific intracellular tyrosine residues. These phosphorylated tyrosines serve as docking sites for intracellular signalling proteins, leading to activation of downstream target pathways.
 
-      \myfig{0.6}{cytology_figures/rtk}{caption}{fig:fig93}
+%       \myfig{0.6}{cytology_figures/rtk}{caption}{fig:fig93}
 
-      \textbf{Ion Channel Receptors} are transmembrane receptors that, upon binding a ligand, undergo a conformational change to open or close an ion channel, allowing specific ions to flow across the membrane.
+%       \textbf{Ion Channel Receptors} are transmembrane receptors that, upon binding a ligand, undergo a conformational change to open or close an ion channel, allowing specific ions to flow across the membrane.
 
-      \myfig{0.55}{cytology_figures/ion_channel}{caption}{fig:fig94}
+%       \myfig{0.55}{cytology_figures/ion_channel}{caption}{fig:fig94}
 
-      Some receptors are also located and activated in the cytoplasm by signalling molecules that are either hydrophobic enough or small enough to cross the hydrophobic interior of the membrane. This is known as \textbf{intracellular signalling}.
+%       Some receptors are also located and activated in the cytoplasm by signalling molecules that are either hydrophobic enough or small enough to cross the hydrophobic interior of the membrane. This is known as \textbf{intracellular signalling}.
 
-      \myfig{0.5}{cytology_figures/intracellular}{caption}{fig:fig95}
+%       \myfig{0.5}{cytology_figures/intracellular}{caption}{fig:fig95}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Cell Communication (\textit{Signal Transduction})}
+%     \begin{core}{Cell Communication (\textit{Signal Transduction})}
 
-      (2) \textbf{SIGNAL TRANSDUCTION} is the process by which the cell converts an external signal into a form that can produce a specific cellular response. This may occur in a single step; however, more often signal transduction involves a \textbf{series of signalling interactions} between proteins (i.e., a \textbf{signal transduction pathway}) that function like a relay.
+%       (2) \textbf{SIGNAL TRANSDUCTION} is the process by which the cell converts an external signal into a form that can produce a specific cellular response. This may occur in a single step; however, more often signal transduction involves a \textbf{series of signalling interactions} between proteins (i.e., a \textbf{signal transduction pathway}) that function like a relay.
 
-      A major mechanism by which signal transduction pathways operate is through phosphorylation, forming what are known as \textbf{phosphorylation cascades}. In these cascades, one protein kinase phosphorylates a target protein, which then phosphorylates another protein, and so on. Proteins that phosphorylate other proteins are called \textbf{kinases} (as seen with \textit{RTKs}).
+%       A major mechanism by which signal transduction pathways operate is through phosphorylation, forming what are known as \textbf{phosphorylation cascades}. In these cascades, one protein kinase phosphorylates a target protein, which then phosphorylates another protein, and so on. Proteins that phosphorylate other proteins are called \textbf{kinases} (as seen with \textit{RTKs}).
 
-      \myfig{0.6}{cytology_figures/phos_cas}{caption}{fig:fig96}
+%       \myfig{0.6}{cytology_figures/phos_cas}{caption}{fig:fig96}
 
-      In the signalling cascades described above, only proteins are shown participating in signal transduction. However, not all components of signal transduction are proteins. Many pathways also involve small, nonprotein, water-soluble molecules or ions known as \textbf{second messengers}. The two most common second messengers are \textbf{cyclic adenosine monophosphate (cAMP)} and \textbf{\ce{Ca2+}}.
+%       In the signalling cascades described above, only proteins are shown participating in signal transduction. However, not all components of signal transduction are proteins. Many pathways also involve small, nonprotein, water-soluble molecules or ions known as \textbf{second messengers}. The two most common second messengers are \textbf{cyclic adenosine monophosphate (cAMP)} and \textbf{\ce{Ca2+}}.
 
-      \textbf{cAMP} is a small molecule derived from ATP by the enzyme \textbf{adenylyl cyclase}, which is embedded in the plasma membrane. Adenylyl cyclase is classically activated through GPCR-mediated signalling via G proteins. An increase in intracellular cAMP levels typically activates a serine/threonine kinase called \textbf{protein kinase A (PKA)}, which then phosphorylates downstream target proteins to produce a cellular response.
+%       \textbf{cAMP} is a small molecule derived from ATP by the enzyme \textbf{adenylyl cyclase}, which is embedded in the plasma membrane. Adenylyl cyclase is classically activated through GPCR-mediated signalling via G proteins. An increase in intracellular cAMP levels typically activates a serine/threonine kinase called \textbf{protein kinase A (PKA)}, which then phosphorylates downstream target proteins to produce a cellular response.
 
-      \myfig{0.55}{cytology_figures/camp}{caption}{fig:fig97}
+%       \myfig{0.55}{cytology_figures/camp}{caption}{fig:fig97}
 
-      \textbf{\ce{Ca2+}} is another second messenger that is even more widely used than cAMP. Although cells always contain some \ce{Ca2+}, the cytosolic concentration is normally much lower (approximately 10,000-fold lower) than the concentration outside the cell and within the endoplasmic reticulum (ER). This is because \ce{Ca2+} ions are actively transported out of the cell and into the ER. As a result, a small absolute increase in cytosolic \ce{Ca2+} produces a large relative change in its intracellular concentration.
+%       \textbf{\ce{Ca2+}} is another second messenger that is even more widely used than cAMP. Although cells always contain some \ce{Ca2+}, the cytosolic concentration is normally much lower (approximately 10,000-fold lower) than the concentration outside the cell and within the endoplasmic reticulum (ER). This is because \ce{Ca2+} ions are actively transported out of the cell and into the ER. As a result, a small absolute increase in cytosolic \ce{Ca2+} produces a large relative change in its intracellular concentration.
 
-      In response to certain signalling pathways, cytosolic \ce{Ca2+} levels rise, often through a mechanism that releases \ce{Ca2+} from the ER. This pathway commonly involves two additional second messengers—\textbf{DAG} and \textbf{IP$_3$}—which are generated when the membrane phospholipid PIP$_2$ is cleaved by \textbf{phospholipase C (PLC)}, typically downstream of GPCR activation. IP$_3$ diffuses through the cytosol and binds to receptors on the ER membrane, triggering \ce{Ca2+} release.
+%       In response to certain signalling pathways, cytosolic \ce{Ca2+} levels rise, often through a mechanism that releases \ce{Ca2+} from the ER. This pathway commonly involves two additional second messengers—\textbf{DAG} and \textbf{IP$_3$}—which are generated when the membrane phospholipid PIP$_2$ is cleaved by \textbf{phospholipase C (PLC)}, typically downstream of GPCR activation. IP$_3$ diffuses through the cytosol and binds to receptors on the ER membrane, triggering \ce{Ca2+} release.
 
-      \myfig{0.65}{cytology_figures/ca_ion}{caption}{fig:fig98}
+%       \myfig{0.65}{cytology_figures/ca_ion}{caption}{fig:fig98}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Cellular Response}
+%     \begin{core}{Cellular Response}
 
-      (3) \textbf{CELLULAR RESPONSE} is the final outcome of the signalling pathway within the target cell. Cellular responses can be broadly categorized into two types: \textbf{nuclear} and \textbf{cytoplasmic}.
+%       (3) \textbf{CELLULAR RESPONSE} is the final outcome of the signalling pathway within the target cell. Cellular responses can be broadly categorized into two types: \textbf{nuclear} and \textbf{cytoplasmic}.
 
-      \textbf{Nuclear responses} occur in the nucleus and typically involve the activation of transcription factors, which regulate gene expression and ultimately lead to the synthesis of specific proteins, a process we explore in \textit{Chapter 6 Gene Expression and Regulation}.
+%       \textbf{Nuclear responses} occur in the nucleus and typically involve the activation of transcription factors, which regulate gene expression and ultimately lead to the synthesis of specific proteins, a process we explore in \textit{Chapter 6 Gene Expression and Regulation}.
 
-      \textbf{Cytoplasmic responses} involve the regulation of existing protein activity rather than the synthesis of new proteins. These responses directly affect proteins that function \textbf{outside of the nucleus}.
+%       \textbf{Cytoplasmic responses} involve the regulation of existing protein activity rather than the synthesis of new proteins. These responses directly affect proteins that function \textbf{outside of the nucleus}.
 
-      \myfig{0.45}{cytology_figures/nuclear_cytoplasmic}{caption}{fig:fig99}
+%       \myfig{0.45}{cytology_figures/nuclear_cytoplasmic}{caption}{fig:fig99}
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Signal Regulation}
+%   \subsection{Signal Regulation}
     
-    Regardless of the response type, cellular signalling is not simply turned "on" or "off". Rather, the magnitude of the response can be regulated in several ways. Let us examine some of these mechanisms.
+%     Regardless of the response type, cellular signalling is not simply turned "on" or "off". Rather, the magnitude of the response can be regulated in several ways. Let us examine some of these mechanisms.
 
-    \begin{core}{Signal Amplification}
+%     \begin{core}{Signal Amplification}
 
-      \textbf{Signal Amplification:} Signalling cascades amplify the cell's response to a signal. At each catalytic step in the cascade, the number of activated molecules can greatly exceed the number activated in the previous step. For example, a single activated adenylyl cyclase enzyme can catalyze the formation of many cAMP molecules before it is deactivated. Consequently, multistep cascades can produce substantial amplification of the original signal, provided that each step involves enzymatic amplification.
+%       \textbf{Signal Amplification:} Signalling cascades amplify the cell's response to a signal. At each catalytic step in the cascade, the number of activated molecules can greatly exceed the number activated in the previous step. For example, a single activated adenylyl cyclase enzyme can catalyze the formation of many cAMP molecules before it is deactivated. Consequently, multistep cascades can produce substantial amplification of the original signal, provided that each step involves enzymatic amplification.
 
-      \myfig{0.6}{cytology_figures/amplification}{caption}{fig:fig100}
+%       \myfig{0.6}{cytology_figures/amplification}{caption}{fig:fig100}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Specificity and Coordination}
+%     \begin{core}{Specificity and Coordination}
 
-      \textbf{Specificity and Coordination:} Different cell types possess distinct sets of proteins, including receptors, relay molecules, and effector proteins. As a result, one cell type may respond to a particular ligand while another does not respond at all. A third cell type may respond to the same ligand but produce a different cellular response. In essence, a cell's response to a signal depends on its specific complement of receptor, signalling, and response proteins.
+%       \textbf{Specificity and Coordination:} Different cell types possess distinct sets of proteins, including receptors, relay molecules, and effector proteins. As a result, one cell type may respond to a particular ligand while another does not respond at all. A third cell type may respond to the same ligand but produce a different cellular response. In essence, a cell's response to a signal depends on its specific complement of receptor, signalling, and response proteins.
 
-      \myfig{0.5}{cytology_figures/specificity1}{caption}{fig:fig101}
+%       \myfig{0.5}{cytology_figures/specificity1}{caption}{fig:fig101}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Scaffolding Proteins}
+%     \begin{core}{Scaffolding Proteins}
 
-      \textbf{Scaffolding Proteins:} In many signalling pathways, efficiency is enhanced by scaffolding proteins—--large adaptor proteins that simultaneously bind multiple signalling components. By organizing these proteins into a functional complex, scaffolding proteins facilitate rapid and specific protein--protein interactions. In some cases, they stably assemble signalling complexes, reducing the dependence on random diffusion and increasing the speed and specificity of signal transmission.
+%       \textbf{Scaffolding Proteins:} In many signalling pathways, efficiency is enhanced by scaffolding proteins—--large adaptor proteins that simultaneously bind multiple signalling components. By organizing these proteins into a functional complex, scaffolding proteins facilitate rapid and specific protein--protein interactions. In some cases, they stably assemble signalling complexes, reducing the dependence on random diffusion and increasing the speed and specificity of signal transmission.
 
-      \myfig{0.45}{cytology_figures/scaffolding}{caption}{fig:fig102}
+%       \myfig{0.45}{cytology_figures/scaffolding}{caption}{fig:fig102}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Signal Termination}
+%     \begin{core}{Signal Termination}
 
-      \textbf{Signal Termination:} A signalling pathway is not normally locked in a permanently activated state. The ability of a cell to respond to new signals depends on the \textbf{reversibility} of the changes produced by prior signalling events. Various mechanisms actively terminate signalling pathways. For example, phosphodiesterases convert cAMP to AMP, thereby reducing second messenger levels, and the intrinsic GTPase activity of G proteins hydrolyzes GTP to GDP, inactivating the G protein.
+%       \textbf{Signal Termination:} A signalling pathway is not normally locked in a permanently activated state. The ability of a cell to respond to new signals depends on the \textbf{reversibility} of the changes produced by prior signalling events. Various mechanisms actively terminate signalling pathways. For example, phosphodiesterases convert cAMP to AMP, thereby reducing second messenger levels, and the intrinsic GTPase activity of G proteins hydrolyzes GTP to GDP, inactivating the G protein.
 
-    \end{core}  
+%     \end{core}  
 
-    A cellular response typically occurs when receptor activation (often proportional to the number of ligand-bound receptors) exceeds a threshold sufficient to initiate downstream signalling. Importantly, signal strength is usually graded rather than purely binary, meaning that the magnitude of the response can vary depending on the level of pathway activation.
+%     A cellular response typically occurs when receptor activation (often proportional to the number of ligand-bound receptors) exceeds a threshold sufficient to initiate downstream signalling. Importantly, signal strength is usually graded rather than purely binary, meaning that the magnitude of the response can vary depending on the level of pathway activation.
 
-    BRIEF TRANSITION INTO APOPTOSIS ==================================================================
+%     BRIEF TRANSITION INTO APOPTOSIS ==================================================================
 
-    \begin{core}{Apoptosis}
+%     \begin{core}{Apoptosis}
 
-      In unhealthy or abnormal cells, such as cancerous or infected cells, one or more signalling pathways may become disrupted. These pathways may be defective or permanently active, flooding the body with excessive signals that can be harmful. In such cases, particularly when a cell has reached the end of its functional lifespan or is severely damaged, it may undergo \textbf{apoptosis}.
+%       In unhealthy or abnormal cells, such as cancerous or infected cells, one or more signalling pathways may become disrupted. These pathways may be defective or permanently active, flooding the body with excessive signals that can be harmful. In such cases, particularly when a cell has reached the end of its functional lifespan or is severely damaged, it may undergo \textbf{apoptosis}.
 
-      \textbf{Apoptosis} is a programmed and \textbf{tightly regulated} process of cellular self-destruction that enables an organism to eliminate damaged, infected, or unnecessary cells. During apoptosis, enzymes fragment the DNA and dismantle organelles and other cytoplasmic components. The cell shrinks and forms membrane-bound blebs, and its contents are packaged into apoptotic bodies that are engulfed and digested by specialized phagocytic cells, leaving little to no trace. This highly controlled process prevents damage to neighboring cells that would otherwise occur if a cell were to rupture and release its contents uncontrollably, as in \textbf{necrosis}, which is an unregulated form of cell death.
+%       \textbf{Apoptosis} is a programmed and \textbf{tightly regulated} process of cellular self-destruction that enables an organism to eliminate damaged, infected, or unnecessary cells. During apoptosis, enzymes fragment the DNA and dismantle organelles and other cytoplasmic components. The cell shrinks and forms membrane-bound blebs, and its contents are packaged into apoptotic bodies that are engulfed and digested by specialized phagocytic cells, leaving little to no trace. This highly controlled process prevents damage to neighboring cells that would otherwise occur if a cell were to rupture and release its contents uncontrollably, as in \textbf{necrosis}, which is an unregulated form of cell death.
 
-      \myfig{0.5}{cytology_figures/apoptosis}{caption}{fig:fig103}
+%       \myfig{0.5}{cytology_figures/apoptosis}{caption}{fig:fig103}
 
-      The apoptotic pathway was first extensively studied in the nematode \textit{C. elegans}, a small soil worm. In these organisms (as shown in the above figure), the protein Ced-9 inhibits Ced-4 and Ced-3, which promote apoptosis. When a death signal activates a receptor at the cell surface, a signal transduction pathway leads to the inactivation of Ced-9. This releases its inhibition of Ced-4 and Ced-3, ultimately activating a cascade of \textbf{caspases} (cysteine proteases) that cleave specific cellular proteins and activate DNases responsible for DNA fragmentation, thereby executing apoptosis.
+%       The apoptotic pathway was first extensively studied in the nematode \textit{C. elegans}, a small soil worm. In these organisms (as shown in the above figure), the protein Ced-9 inhibits Ced-4 and Ced-3, which promote apoptosis. When a death signal activates a receptor at the cell surface, a signal transduction pathway leads to the inactivation of Ced-9. This releases its inhibition of Ced-4 and Ced-3, ultimately activating a cascade of \textbf{caspases} (cysteine proteases) that cleave specific cellular proteins and activate DNases responsible for DNA fragmentation, thereby executing apoptosis.
 
-      In humans and other mammals, several distinct pathways—--utilizing approximately 15 different caspases--—can mediate apoptosis. One major pathway involves proteins that promote the formation of pores in the mitochondrial outer membrane, a process known as mitochondrial outer membrane permeabilization (MOMP). This leads to the release of pro-apoptotic factors, such as cytochrome \textit{c}, which activate downstream caspases and drive the apoptotic cascade.
+%       In humans and other mammals, several distinct pathways—--utilizing approximately 15 different caspases--—can mediate apoptosis. One major pathway involves proteins that promote the formation of pores in the mitochondrial outer membrane, a process known as mitochondrial outer membrane permeabilization (MOMP). This leads to the release of pro-apoptotic factors, such as cytochrome \textit{c}, which activate downstream caspases and drive the apoptotic cascade.
 
-      These pathways employ proteins that are homologous to Ced-9, Ced-4, and Ced-3 in nematodes, reflecting the evolutionary conservation of the apoptotic machinery.
+%       These pathways employ proteins that are homologous to Ced-9, Ced-4, and Ced-3 in nematodes, reflecting the evolutionary conservation of the apoptotic machinery.
 
-    \end{core}    
+%     \end{core}    
 
-\section{Cell Division}
+% \section{Cell Division}
 
-  \subsection{DNA Organization and Replication}
+%   \subsection{DNA Organization and Replication}
 
-    The ability of organisms to produce more of their own kind is a defining characteristic of living systems. This capacity for reproduction, like all biological functions, has a cellular basis. The continuity of life depends on the reproduction of cells through \textbf{cell division}.
+%     The ability of organisms to produce more of their own kind is a defining characteristic of living systems. This capacity for reproduction, like all biological functions, has a cellular basis. The continuity of life depends on the reproduction of cells through \textbf{cell division}.
 
-    For cell division to occur, a cell must first grow and duplicate its cellular contents, effectively preparing two complete sets of materials before splitting. One of the most important components that must be replicated is the cell's genetic material (DNA). To understand this process, we must first examine how genetic material is organized within the cell.
+%     For cell division to occur, a cell must first grow and duplicate its cellular contents, effectively preparing two complete sets of materials before splitting. One of the most important components that must be replicated is the cell's genetic material (DNA). To understand this process, we must first examine how genetic material is organized within the cell.
 
-    \begin{core}{Chromosomes \& Chromatids}
+%     \begin{core}{Chromosomes \& Chromatids}
 
-      In eukaryotic cells, DNA exists as long double-helical molecules that are packaged with histone proteins into compact structures called \textbf{chromosomes}. For a major portion of species, each somatic cell contains two sets of chromosomes--—one inherited from each parent--—resulting in an even chromosome number. In humans, somatic cells contain 46 chromosomes (23 inherited from the father and 23 from the mother).
+%       In eukaryotic cells, DNA exists as long double-helical molecules that are packaged with histone proteins into compact structures called \textbf{chromosomes}. For a major portion of species, each somatic cell contains two sets of chromosomes--—one inherited from each parent--—resulting in an even chromosome number. In humans, somatic cells contain 46 chromosomes (23 inherited from the father and 23 from the mother).
 
-      \myfig{0.5}{cytology_figures/genome}{caption}{fig:fig104}
+%       \myfig{0.5}{cytology_figures/genome}{caption}{fig:fig104}
 
-      Before DNA replication, a human somatic cell contains 46 chromosomes. After replication, the chromosome number remains 46; however, each chromosome now consists of two identical \textbf{sister chromatids}, meaning there are 92 DNA molecules in total. The two sister chromatids are joined along their lengths by protein complexes called \textbf{cohesins}, a linkage known as sister chromatid cohesion. Each duplicated chromosome contains a single \textbf{centromere}, a region composed of repetitive DNA sequences where the sister chromatids are most tightly connected.
+%       Before DNA replication, a human somatic cell contains 46 chromosomes. After replication, the chromosome number remains 46; however, each chromosome now consists of two identical \textbf{sister chromatids}, meaning there are 92 DNA molecules in total. The two sister chromatids are joined along their lengths by protein complexes called \textbf{cohesins}, a linkage known as sister chromatid cohesion. Each duplicated chromosome contains a single \textbf{centromere}, a region composed of repetitive DNA sequences where the sister chromatids are most tightly connected.
 
-      \myfig{0.5}{cytology_figures/dup_chromo}{caption}{fig:fig105}
+%       \myfig{0.5}{cytology_figures/dup_chromo}{caption}{fig:fig105}
 
-      It is easy to become confused by the terminology. Chromosome number is defined by the \textbf{number of centromeres} present. Chromatid number, in contrast, refers to the number of individual DNA "sticks" visible. 
+%       It is easy to become confused by the terminology. Chromosome number is defined by the \textbf{number of centromeres} present. Chromatid number, in contrast, refers to the number of individual DNA "sticks" visible. 
 
-      Before DNA replication, a human somatic cell has 46 chromosomes and 46 chromatids. After replication, the chromosome number remains 46 (because there are still 46 centromeres), but there are now 92 chromatids, arranged as 46 pairs of sister chromatids joined at each centromere.
+%       Before DNA replication, a human somatic cell has 46 chromosomes and 46 chromatids. After replication, the chromosome number remains 46 (because there are still 46 centromeres), but there are now 92 chromatids, arranged as 46 pairs of sister chromatids joined at each centromere.
 
-      During cell division, the sister chromatids separate from one another. Once separated, they are no longer called sister chromatids; instead, each is considered an individual chromosome.
+%       During cell division, the sister chromatids separate from one another. Once separated, they are no longer called sister chromatids; instead, each is considered an individual chromosome.
 
-    \end{core}
+%     \end{core}
 
-  \subsection{Mitosis \& The Cell Cycle}
+%   \subsection{Mitosis \& The Cell Cycle}
    
-    \begin{core}{Cell Cycle}
+%     \begin{core}{Cell Cycle}
 
-      \textbf{The cell cycle} is the ordered sequence of events by which a cell grows, replicates its DNA, and divides into two daughter cells. Mitosis is just one part of the \textbf{cell cycle}, which consists of four distinct phases: \textbf{first gap (G1)}, \textbf{synthesis (S)}, \textbf{second gap (G2)}, and \textbf{mitosis and cytokinesis (M)}. 
+%       \textbf{The cell cycle} is the ordered sequence of events by which a cell grows, replicates its DNA, and divides into two daughter cells. Mitosis is just one part of the \textbf{cell cycle}, which consists of four distinct phases: \textbf{first gap (G1)}, \textbf{synthesis (S)}, \textbf{second gap (G2)}, and \textbf{mitosis and cytokinesis (M)}. 
 
-      \textbf{Interphase} is an umbrella term for all phases except mitosis (G1, S, and G2). Thus, the cell cycle is an alternating sequence of interphase and mitosis.
+%       \textbf{Interphase} is an umbrella term for all phases except mitosis (G1, S, and G2). Thus, the cell cycle is an alternating sequence of interphase and mitosis.
 
-      During all three phases of interphase, the cell grows by producing proteins and cytoplasmic organelles such as mitochondria and the endoplasmic reticulum. Duplication of the chromosomes, which is crucial for eventual cell division, occurs entirely during the S phase. 
+%       During all three phases of interphase, the cell grows by producing proteins and cytoplasmic organelles such as mitochondria and the endoplasmic reticulum. Duplication of the chromosomes, which is crucial for eventual cell division, occurs entirely during the S phase. 
 
-      Thus, a cell grows (G1), continues to grow while copying its chromosomes (S), grows further as it completes preparations for division (G2), and then divides (M). The resulting daughter cells may then enter the cycle again.
+%       Thus, a cell grows (G1), continues to grow while copying its chromosomes (S), grows further as it completes preparations for division (G2), and then divides (M). The resulting daughter cells may then enter the cycle again.
 
-      \myfig{0.65}{cytology_figures/cell_cycle}{caption}{fig:fig106}
+%       \myfig{0.65}{cytology_figures/cell_cycle}{caption}{fig:fig106}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Mitosis}
+%     \begin{core}{Mitosis}
 
-      The division of genetic material is called \textbf{mitosis}, and it is immediately followed by the division of the cytoplasm, known as \textbf{cytokinesis}. 
+%       The division of genetic material is called \textbf{mitosis}, and it is immediately followed by the division of the cytoplasm, known as \textbf{cytokinesis}. 
 
-      \textit{Note that this process is different from \textbf{meiosis}, a specialized type of cell division that produces gametes (sperm in males and eggs in females). We will learn about meiosis in 5.1 Sexual Life Cycles and Meiosis.}
+%       \textit{Note that this process is different from \textbf{meiosis}, a specialized type of cell division that produces gametes (sperm in males and eggs in females). We will learn about meiosis in 5.1 Sexual Life Cycles and Meiosis.}
 
-    \end{core}
+%     \end{core}
     
-    Mitosis can be divided into five phases: \textbf{prophase}, \textbf{prometaphase}, \textbf{metaphase}, \textbf{anaphase}, and \textbf{telophase \& cytokinesis}.
+%     Mitosis can be divided into five phases: \textbf{prophase}, \textbf{prometaphase}, \textbf{metaphase}, \textbf{anaphase}, and \textbf{telophase \& cytokinesis}.
 
-    \begin{core}{Mitosis (\textit{Prophase})}
+%     \begin{core}{Mitosis (\textit{Prophase})}
 
-      (1) \textbf{PROPHASE:} During prophase, chromatin fibers condense into discrete chromosomes, each consisting of two identical sister chromatids joined by cohesins at the centromere. Meanwhile, the \textbf{mitotic spindle} begins to form from two \textbf{centrosomes} (\textit{recall this organelle from 2.1 A Tour of the Cell}), which migrate toward opposite poles of the cell. Although a typical cell contains only one centrosome, it duplicates during interphase in preparation for mitosis. The \textbf{mitotic spindle} is a dynamic structure composed of microtubules and associated proteins. The radial arrays of shorter microtubules extending from each centrosome are called \textbf{asters}.
+%       (1) \textbf{PROPHASE:} During prophase, chromatin fibers condense into discrete chromosomes, each consisting of two identical sister chromatids joined by cohesins at the centromere. Meanwhile, the \textbf{mitotic spindle} begins to form from two \textbf{centrosomes} (\textit{recall this organelle from 2.1 A Tour of the Cell}), which migrate toward opposite poles of the cell. Although a typical cell contains only one centrosome, it duplicates during interphase in preparation for mitosis. The \textbf{mitotic spindle} is a dynamic structure composed of microtubules and associated proteins. The radial arrays of shorter microtubules extending from each centrosome are called \textbf{asters}.
 
-      \textit{For simplicity, we have referred to genetic material as chromosomes throughout these explanations. In reality, during interphase, DNA exists in a less condensed form known as chromatin within the nucleus.}
+%       \textit{For simplicity, we have referred to genetic material as chromosomes throughout these explanations. In reality, during interphase, DNA exists in a less condensed form known as chromatin within the nucleus.}
 
-      \myfig{0.3}{cytology_figures/prophase}{caption}{fig:fig107}
+%       \myfig{0.3}{cytology_figures/prophase}{caption}{fig:fig107}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Mitosis (\textit{Prometaphase})}
+%     \begin{core}{Mitosis (\textit{Prometaphase})}
 
-      (2) \textbf{PROMETAPHASE:} During prometaphase, the nuclear envelope fragments, allowing microtubules extending from each centrosome to invade the nuclear region. Some microtubules attach to \textbf{kinetochores} (protein structures that form at the centromere of each chromatid); these are called \textbf{kinetochore microtubules}. Other microtubules, known as \textbf{nonkinetochore microtubules}, interact with those from the opposite pole of the spindle, contributing to the elongation of the cell.
+%       (2) \textbf{PROMETAPHASE:} During prometaphase, the nuclear envelope fragments, allowing microtubules extending from each centrosome to invade the nuclear region. Some microtubules attach to \textbf{kinetochores} (protein structures that form at the centromere of each chromatid); these are called \textbf{kinetochore microtubules}. Other microtubules, known as \textbf{nonkinetochore microtubules}, interact with those from the opposite pole of the spindle, contributing to the elongation of the cell.
 
-      \myfig{0.3}{cytology_figures/prometaphase}{caption}{fig:fig108}
+%       \myfig{0.3}{cytology_figures/prometaphase}{caption}{fig:fig108}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Mitosis (\textit{Metaphase})}
+%     \begin{core}{Mitosis (\textit{Metaphase})}
 
-      (3) \textbf{METAPHASE:} By metaphase, the centrosomes are positioned at opposite poles of the cell, and all chromosomes have aligned at the \textbf{metaphase plate}, an imaginary plane equidistant from the two spindle poles.
+%       (3) \textbf{METAPHASE:} By metaphase, the centrosomes are positioned at opposite poles of the cell, and all chromosomes have aligned at the \textbf{metaphase plate}, an imaginary plane equidistant from the two spindle poles.
 
-      \myfig{0.3}{cytology_figures/metaphase}{caption}{fig:fig109}
+%       \myfig{0.3}{cytology_figures/metaphase}{caption}{fig:fig109}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Mitosis (\textit{Anaphase})}
+%     \begin{core}{Mitosis (\textit{Anaphase})}
 
-      (4) \textbf{ANAPHASE:} During anaphase, the cohesin proteins holding the sister chromatids together are cleaved, allowing the sister chromatids to separate. Once separated, they are considered individual daughter chromosomes and move toward opposite poles of the cell as the cell elongates.
+%       (4) \textbf{ANAPHASE:} During anaphase, the cohesin proteins holding the sister chromatids together are cleaved, allowing the sister chromatids to separate. Once separated, they are considered individual daughter chromosomes and move toward opposite poles of the cell as the cell elongates.
 
-      \myfig{0.35}{cytology_figures/anaphase}{caption}{fig:fig110}
+%       \myfig{0.35}{cytology_figures/anaphase}{caption}{fig:fig110}
 
-    \end{core}
+%     \end{core}
 
-    \begin{core}{Mitosis (\textit{Telophase \& Cytokinesis})}
+%     \begin{core}{Mitosis (\textit{Telophase \& Cytokinesis})}
 
-      (5) \textbf{TELOPHASE \& CYTOKINESIS:} During telophase, two daughter nuclei form as nuclear envelopes reassemble around each set of chromosomes. The chromosomes decondense back into chromatin, and the spindle microtubules depolymerize. Cytokinesis then divides the cytoplasm: in animal cells, a cleavage furrow forms and pinches the cell into two daughter cells.
+%       (5) \textbf{TELOPHASE \& CYTOKINESIS:} During telophase, two daughter nuclei form as nuclear envelopes reassemble around each set of chromosomes. The chromosomes decondense back into chromatin, and the spindle microtubules depolymerize. Cytokinesis then divides the cytoplasm: in animal cells, a cleavage furrow forms and pinches the cell into two daughter cells.
 
-      \myfig{0.3}{cytology_figures/telophase}{caption}{fig:fig111}
+%       \myfig{0.3}{cytology_figures/telophase}{caption}{fig:fig111}
 
-    \end{core}  
+%     \end{core}  
 
-  \subsection{Cell Cycle Control and Checkpoints}
+%   \subsection{Cell Cycle Control and Checkpoints}
     
-    Now that we have learned about mitosis, let us examine how the cell cycle is regulated. The sequential events of the cell cycle are directed by a distinct \textbf{cell cycle control system}, a cyclically operating set of regulatory molecules that both triggers and coordinates the key events of the cell cycle.
+%     Now that we have learned about mitosis, let us examine how the cell cycle is regulated. The sequential events of the cell cycle are directed by a distinct \textbf{cell cycle control system}, a cyclically operating set of regulatory molecules that both triggers and coordinates the key events of the cell cycle.
 
-    \begin{core}{Checkpoints}
+%     \begin{core}{Checkpoints}
 
-      A \textbf{checkpoint} in the cell cycle is a regulatory control point at which stop and go-ahead signals determine whether the cycle proceeds to the next phase. Three major checkpoints occur during the G1, G2, and M phases.
+%       A \textbf{checkpoint} in the cell cycle is a regulatory control point at which stop and go-ahead signals determine whether the cycle proceeds to the next phase. Three major checkpoints occur during the G1, G2, and M phases.
 
-      \myfig{0.6}{cytology_figures/checkpoint}{caption}{fig:fig112}
+%       \myfig{0.6}{cytology_figures/checkpoint}{caption}{fig:fig112}
 
-      The primary regulators that determine whether a cell passes a checkpoint are \textbf{cyclin-dependent kinases (Cdks)} and their corresponding \textbf{cyclins}. Cdks are only active when bound to a cyclin, which explains their name. The active cyclin-Cdk complexes are often referred to as \textbf{maturation-promoting factors (MPFs)}. 
+%       The primary regulators that determine whether a cell passes a checkpoint are \textbf{cyclin-dependent kinases (Cdks)} and their corresponding \textbf{cyclins}. Cdks are only active when bound to a cyclin, which explains their name. The active cyclin-Cdk complexes are often referred to as \textbf{maturation-promoting factors (MPFs)}. 
 
-      For example, when cyclins that accumulate during G2 bind to Cdk molecules, the resulting MPF complex becomes active and phosphorylates a variety of target proteins, thereby initiating mitosis.
+%       For example, when cyclins that accumulate during G2 bind to Cdk molecules, the resulting MPF complex becomes active and phosphorylates a variety of target proteins, thereby initiating mitosis.
 
-      \myfig{0.5}{cytology_figures/cdk}{caption}{fig:fig113}
+%       \myfig{0.5}{cytology_figures/cdk}{caption}{fig:fig113}
 
-      For many cells, the G1 checkpoint is the most critical control point. If a cell passes the G1 checkpoint, it will typically proceed through the remaining checkpoints and complete division. However, in the absence of a go-ahead signal, the cell may exit the cycle and enter a nondividing state called \textbf{G0}.
+%       For many cells, the G1 checkpoint is the most critical control point. If a cell passes the G1 checkpoint, it will typically proceed through the remaining checkpoints and complete division. However, in the absence of a go-ahead signal, the cell may exit the cycle and enter a nondividing state called \textbf{G0}.
 
-    \end{core}
+%     \end{core}
 
-    It is important to note that the frequency of cell division varies by cell type. For example, skin and hair follicle cells divide continuously throughout life, whereas liver cells retain the capacity to divide but normally remain in a quiescent state unless stimulated by injury.  
+%     It is important to note that the frequency of cell division varies by cell type. For example, skin and hair follicle cells divide continuously throughout life, whereas liver cells retain the capacity to divide but normally remain in a quiescent state unless stimulated by injury.  
 
-    \begin{core}{Growth Factors}
+%     \begin{core}{Growth Factors}
 
-      An important class of signaling molecules that promote cell division are \textbf{growth factors}. Some mammalian cells divide in culture only in the presence of their specific growth factors. For instance, \textbf{platelet-derived growth factor (PDGF)} is required to stimulate division in fibroblasts, a type of connective tissue cell.
+%       An important class of signaling molecules that promote cell division are \textbf{growth factors}. Some mammalian cells divide in culture only in the presence of their specific growth factors. For instance, \textbf{platelet-derived growth factor (PDGF)} is required to stimulate division in fibroblasts, a type of connective tissue cell.
 
-    \end{core}
+%     \end{core}
     
-    \begin{core}{Cancer}
+%     \begin{core}{Cancer}
 
-      Although most cells that acquire irreversible damage during the cell cycle undergo apoptosis to prevent harm to surrounding tissue, some cells evade apoptotic pathways and continue dividing. This loss of proper cell cycle control underlies the formation of \textbf{cancer} and represents a fundamental difference between normal and cancerous cells. Cancer cells may progress through the cell cycle without appropriate regulatory signals and can divide indefinitely in culture if provided with sufficient nutrients—--a property known as \textbf{transformation}.
+%       Although most cells that acquire irreversible damage during the cell cycle undergo apoptosis to prevent harm to surrounding tissue, some cells evade apoptotic pathways and continue dividing. This loss of proper cell cycle control underlies the formation of \textbf{cancer} and represents a fundamental difference between normal and cancerous cells. Cancer cells may progress through the cell cycle without appropriate regulatory signals and can divide indefinitely in culture if provided with sufficient nutrients—--a property known as \textbf{transformation}.
 
-    \end{core}
+%     \end{core}
  
-\section{Gene Expression}
+% \section{Gene Expression}
 
-  \subsection{Transcription}
+%   Intro text content.
 
-    RNA Polymerase: transcribes RNA from the template DNA strand from the 5 to 3 direction (downstream direction)
+%   \subsection{Transcription}
 
-    Promoter: the DNA sequences where RNA polymerase attaches and inititates transcription
+%     \begin{core}{RNA Polymerase}
 
-    Terminator: the DNA sequence that signals the end of transcription
+%       RNA Polymerase: transcribes RNA from the template DNA strand from the 5 to 3 direction (downstream direction)
 
-    Transcription Unit: the stretch of DNA downstream from the promoter that is transcribed into an RNA molecule
+%     \end{core}
 
-    Synthesis of RNA Transcript
+%     \begin{core}{Promoter, Transciption Unit, and Terminator}
 
-      Binding and initiation of transcription
-        Promoter: is the entire portion of DNA that serves as the starting region for transcription 
-        Starting Point: the nucleotide where RNA polymerase actually begin synthesizing mRNA          
-        TATA box: crucial promoter DNA sequence in forming the initiation complex
+%       Promoter: the DNA sequences where RNA polymerase attaches and inititates transcription
 
-        Transcription factors: a collection of proteins that help guide the binding of RNA polymerase and the initiation of transcription
+%       Terminator: the DNA sequence that signals the end of transcription
 
-        Transcription initiation complex: the whole complex of RNA polymerase and transcription factors bound to the promoter
+%       Transcription Unit: the stretch of DNA downstream from the promoter that is transcribed into an RNA molecule
 
-      Elongation of the RNA strand
-        As RNA polymerase moves along the DNA, it untwists the double helix, exposing about 10–20 DNA nucleotides at a time for pairing with RNA nucleotides
+%     \end{core}
 
-        A single gene can be transcribed simultaneously by sev- eral molecules of RNA polymerase following each other like trucks in a convoy
+%     Synthesis of RNA Transcript
 
-      Termination of Transcription
-        In bacteria, transcription proceeds through a terminator sequence in the DNA. The transcribed ter- minator (an RNA sequence) functions as the termination signal, causing the polymerase to detach from the DNA and release the transcript, which requires no further modifica- tion before translation.
+%     \begin{core}{Synthesis of RNA Transcript (\textit{Initiation})}
 
-        In eukaryotes, RNA polymerase II transcribes a sequence on the DNA called the polyadenylation signal sequence, which specifies a polyadenylation signal (AAUAAA) in the pre-mRNA. This is called a “signal” because once this stretch of six RNA nucleotides appears, it is immediately bound by certain proteins in the nucleus. Then, at a point about 10–35 nucleotides downstream from the AAUAAA, these proteins cut the RNA transcript free from the polymerase, releasing the pre-mRNA.
+%       Binding and initiation of transcription
+%       Promoter: is the entire portion of DNA that serves as the starting region for transcription 
+%       Starting Point: the nucleotide where RNA polymerase actually begin synthesizing mRNA          
+%       TATA box: crucial promoter DNA sequence in forming the initiation complex
 
-  \subsection{RNA Modification (Eukaryotes)}
+%       Transcription factors: a collection of proteins that help guide the binding of RNA polymerase and the initiation of transcription
 
-    RNA processing: the processing pre-mRNA goes through in eukaryotes because translation
+%       Transcription initiation complex: the whole complex of RNA polymerase and transcription factors bound to the promoter
 
-    Alteration of mRNA ends: adds 5 cap and poly A tail to 5 and 3 ends respectively
-      5 cap: modifed guanine nucleotide added to the 5 end
-      poly-A-tail: 50-250 adenine nucleotides added to the 3 end
+%     \end{core}
 
-    UTR = untranslated region
+%     \begin{core}{Synthesis of RNA Transcript (\textit{Elongation})}
 
-    5 cap --- 5 UTR --- start codon --- protein-coding segments --- stop codon --- 3 UTR (includes polyadenylation signal) --- poly-A-tail
+%       Elongation of the RNA strand
+%       As RNA polymerase moves along the DNA, it untwists the double helix, exposing about 10–20 DNA nucleotides at a time for pairing with RNA nucleotides
 
-    RNA Splicing: large portions of RNA transcript molecules are remove and the remaining portions reconnected
+%       A single gene can be transcribed simultaneously by sev- eral molecules of RNA polymerase following each other like trucks in a convoy
 
-      introns: noncoding segments of nucleic acid (INTervening sequences)
-      exons: eventually EXpressed sequences
-      Spliceosome: the large complex of proteins and small RNAs that remove the introns
-      ribozymes: RNA molecules that function also as enzymes (part of the splicosome)
-      Alternative RNA splicing: many genes are known to give rise to two or more different polypeptides, depending on which segments are treated as exons during RNA processing
-      Domains: discrete structural and functional regions of a protein (in many cases, different exons code for different domains of a protein)  
+%     \end{core}
 
-  \subsection{Translation}
+%     \begin{core}{Synthesis of RNA Transcript (\textit{Termination})}
 
-    Translation: the process of translating an RNA into a protein
+%       Termination of Transcription
+%       In bacteria, transcription proceeds through a terminator sequence in the DNA. The transcribed ter- minator (an RNA sequence) functions as the termination signal, causing the polymerase to detach from the DNA and release the transcript, which requires no further modifica- tion before translation.
 
-    codon: a sequence of 3 RNA molcules that code for a specific amino acid
+%       In eukaryotes, RNA polymerase II transcribes a sequence on the DNA called the polyadenylation signal sequence, which specifies a polyadenylation signal (AAUAAA) in the pre-mRNA. This is called a “signal” because once this stretch of six RNA nucleotides appears, it is immediately bound by certain proteins in the nucleus. Then, at a point about 10–35 nucleotides downstream from the AAUAAA, these proteins cut the RNA transcript free from the polymerase, releasing the pre-mRNA.
 
-    LOOK AT TABLE FOR CODON TO AMINO ACID
+%     \end{core}
 
-    tRNA: the RNA molecule that holds the cooresponding amino acid for a given codon
-      Amino acid attachment site
-      Anticodon for relevant 3 nucleotide sequence
+%   \subsection{RNA Modification}
 
-    aminoacyl-tRNA synthetases: a family of related enzymes that correctly match up tRNA molecules with thier amino acid
+%     \begin{core}{RNA Processing}
 
-    wobble: flexible base pairing at the third base of the codon allows some tRNAs to bind to more than one codon
+%       RNA processing: the processing pre-mRNA goes through in eukaryotes because translation
+
+%     \end{core}
     
-    ribosome: the organelle that translates the mRNA by pairing its codons with the cooresponding tRNA-amino acid molecule; consists of a large subunit and a small subunit
-      ribosomal RNA (rRNA): a component of each ribosomal subunit 
-      A site: holds the tRNA carrying the next amino acid to be added to the chain
-      P site: hold the tRNA carrying the growing polypeptide chain
-      E site: discharged tRNAs leave the ribosome from this site
+%     \begin{core}{Alteration of mRNA Ends}
 
-    Synthesis of a polypeptide
+%       Alteration of mRNA ends: adds 5 cap and poly A tail to 5 and 3 ends respectively
+%       5 cap: modifed guanine nucleotide added to the 5 end
+%       poly-A-tail: 50-250 adenine nucleotides added to the 3 end
 
-      Initiation
-        small ribosomal subunit binds to mRNA molecule and the inititor tRNA (anticodon UAC for the start codon AUG) binds to the corresponding mRNA codon
+%       UTR = untranslated region
 
-        large ribosomal subunit binds to small subunit with the help of initiation factors and GTP (energy)
+%       5 cap --- 5 UTR --- start codon --- protein-coding segments --- stop codon --- 3 UTR (includes polyadenylation signal) --- poly-A-tail
 
-      Elongation
-        the next tRNA comes in to the A site
-        the peptide chain from the P site tRNA is tranfered to the A site tRNA
-        P shifts to E, A shifts to P
-        E tRNA exits
+%     \end{core}
 
-        throughout this process GTP is used to push this progress forward
+%     \begin{core}{RNA Splicing}
 
-      Termination
-        When a ribosome reaches a stop codon on mRNA, the A site of ribosome accepts a release factor---a protein shaped like a tRNA
-        Release factor promotes hydrolysis of the bond between the tRNA in the P site and the last amino acids of the polypeptide
-        ribosomal subunits dissociates via hydrolysis
+%       RNA Splicing: large portions of RNA transcript molecules are remove and the remaining portions reconnected
 
-    Signal peptide: the singal that polypeptides destined for the ER are marked by 
-    Signal-recognition particle: a protein-RNA complex that escorts the signal peptide marked polypeptide to the ER
+%       introns: noncoding segments of nucleic acid (INTervening sequences)
+%       exons: eventually EXpressed sequences
+%       Spliceosome: the large complex of proteins and small RNAs that remove the introns
+%       ribozymes: RNA molecules that function also as enzymes (part of the splicosome)
 
-    Polyribosomes (polysomes): when one mRNA molcule has several ribosomes attached to it simultaneously to translate into polypeptidesA
-      this can happen in more bacteria and eukaryotes
+%     \end{core}
 
-    Bacteria lack compartmental organization, thus the poly ribosome can also be formed as the RNA is getting transcribed from the template DNA strand
+%     \begin{core}{Alternative RNA Splicing}
+
+%       Alternative RNA splicing: many genes are known to give rise to two or more different polypeptides, depending on which segments are treated as exons during RNA processing
+
+%     \end{core}
+
+%     \begin{core}{Domains}
+
+%       Domains: discrete structural and functional regions of a protein (in many cases, different exons code for different domains of a protein)  
+
+%     \end{core}
+
+%   \subsection{Translation}
+
+%     \begin{core}{Translation}
+
+%       Translation: the process of translating an RNA into a protein
+
+%     \end{core}
+
+%     \begin{core}{Codons \& tRNA}
+
+%       codon: a sequence of 3 RNA molcules that code for a specific amino acid
+
+%       LOOK AT TABLE FOR CODON TO AMINO ACID
+
+%     \end{core}
+
+%     \begin{core}{tRNAs}
+
+%       tRNA: the RNA molecule that holds the cooresponding amino acid for a given codon
+%       Amino acid attachment site
+%       Anticodon for relevant 3 nucleotide sequence
+
+%       aminoacyl-tRNA synthetases: a family of related enzymes that correctly match up tRNA molecules with thier amino acid
+
+%       wobble: flexible base pairing at the third base of the codon allows some tRNAs to bind to more than one codon
+
+%     \end{core}
+
+%     \begin{core}{Ribosomes}
+
+%       ribosome: the organelle that translates the mRNA by pairing its codons with the cooresponding tRNA-amino acid molecule; consists of a large subunit and a small subunit
+%       ribosomal RNA (rRNA): a component of each ribosomal subunit 
+%       A site: holds the tRNA carrying the next amino acid to be added to the chain
+%       P site: hold the tRNA carrying the growing polypeptide chain
+%       E site: discharged tRNAs leave the ribosome from this site
+
+%     \end{core}    
+
+%     Synthesis of a polypeptide
+
+%     \begin{core}{Synthesis of a Polypeptide (\textit{Initiation})}
+
+%       Initiation
+%       small ribosomal subunit binds to mRNA molecule and the inititor tRNA (anticodon UAC for the start codon AUG) binds to the corresponding mRNA codon
+
+%       large ribosomal subunit binds to small subunit with the help of initiation factors and GTP (energy)
+
+%     \end{core}
+
+%     \begin{core}{Synthesis of a Polypeptide (\textit{Elongation})}
+
+%       Elongation
+%       the next tRNA comes in to the A site
+%       the peptide chain from the P site tRNA is tranfered to the A site tRNA
+%       P shifts to E, A shifts to P
+%       E tRNA exits
+
+%       throughout this process GTP is used to push this progress forward
+
+%     \end{core}
+
+%     \begin{core}{Synthesis of a Polypeptide (\textit{Termination})}
+
+%       Termination
+%       When a ribosome reaches a stop codon on mRNA, the A site of ribosome accepts a release factor---a protein shaped like a tRNA
+%       Release factor promotes hydrolysis of the bond between the tRNA in the P site and the last amino acids of the polypeptide
+%       ribosomal subunits dissociates via hydrolysis
+
+%     \end{core}
+
+%     \begin{core}{Signal Peptides \& Signal Recognition Particles}
+
+%       Signal peptide: the singal that polypeptides destined for the ER are marked by 
+%       Signal-recognition particle: a protein-RNA complex that escorts the signal peptide marked polypeptide to the ER
+
+%     \end{core}
+
+%     \begin{core}{Polyribosomes}
+
+%       Polyribosomes (polysomes): when one mRNA molcule has several ribosomes attached to it simultaneously to translate into polypeptidesA
+%       this can happen in more bacteria and eukaryotes
+
+%       Bacteria lack compartmental organization, thus the poly ribosome can also be formed as the RNA is getting transcribed from the template DNA strand
+
+%     \end{core}
   
-  \subsection{Operons}
+%   \subsection{Operons}
 
-  Bacteria that can conserve resources and energy have an advantage, meaning it produces proteins for a specific case only when needed and doesn't when not needed.
+%     Bacteria that can conserve resources and energy have an advantage, meaning it produces proteins for a specific case only when needed and doesn't when not needed.
 
-  Operator: the on and off switch of a segment of DNA; this is positioned within the promoter
-    this controls the access of RNA polymerase to these genes
+%     \begin{core}{Operons}
 
-  Operon: the entire operator, promotor, gene constitution
+%       Operator: the on and off switch of a segment of DNA; this is positioned within the promoter
+%       this controls the access of RNA polymerase to these genes
 
-  Repressor: a protein that binds to the operator, preventing RNA polymerse from transcribing
-    This molecule is coded by its corresponding REGULATORY GENE
+%       Operon: the entire operator, promotor, gene constitution
 
-  Corepressor: a different protein from the repressor that binds to the repressor to activate it (in this case the lone repressor is defaultly inactive)
+%     \end{core}
 
-  Inducer: a different protein from the repressor that binds to the repressor to deactivate it (in this case the lone repressor is defaultly active)
-  
-  Positive gene regulation
-  cAMP: a small organic molecule that accumulates when glucose is scarce
-    when camp binds to a protein called CRP, it binds to the DNA and stimulates transcription of a gene
-    this is called an ACTIVATOR 
+%     \begin{core}{Repressors}
 
-  \subsection{Mutations}
+%       Repressor: a protein that binds to the operator, preventing RNA polymerse from transcribing
+%       This molecule is coded by its corresponding REGULATORY GENE
 
-  Mutations: a small error in the DNA that lead to good or bad effects on the individual
+%       Corepressor: a different protein from the repressor that binds to the repressor to activate it (in this case the lone repressor is defaultly inactive)
 
-  Small scale mutations (Point mutations): the differing ONE nucleotide
-    Substitutions (nucleotide pair substitution)
-      silent mutation: substitutions that have no effect on the encoding protein because the underlying amino acid for the mutated codon is the same
-      missense mutation: substitutions that change one amino acid to another (may or may not have a large effect)
-      nonsense mutation: substitution that changes a codon for an amino acid to a stop codon (BIG ISSUE)
-    Insertions and Deletions
-      frameshift mutation: a shift in the codon composition in a way that alters the reading from the genetic message (BIG ISSUE)
+%       Inducer: a different protein from the repressor that binds to the repressor to deactivate it (in this case the lone repressor is defaultly active)
 
-  Mutagen: physical or chemical agents that interact with DNA in ways that cause mutations (UV, X ways, burnt food)
+%     \end{core}
+
+%     \begin{core}{Gene Regulation}
+
+%       Positive gene regulation
+%       cAMP: a small organic molecule that accumulates when glucose is scarce
+%       when camp binds to a protein called CRP, it binds to the DNA and stimulates transcription of a gene
+%       this is called an ACTIVATOR 
+
+%     \end{core}  
+
+%   \subsection{Mutations}
+
+%     \begin{core}{Mutations}
+
+%       Mutations: a small error in the DNA that lead to good or bad effects on the individual
+
+%     \end{core}
+
+%     Small scale mutations (Point mutations): the differing ONE nucleotide
+
+%     \begin{core}{Point Mutations (\textit{Substitutions})}
+
+%       Substitutions (nucleotide pair substitution)
+%         silent mutation: substitutions that have no effect on the encoding protein because the underlying amino acid for the mutated codon is the same
+%         missense mutation: substitutions that change one amino acid to another (may or may not have a large effect)
+%         nonsense mutation: substitution that changes a codon for an amino acid to a stop codon (BIG ISSUE)
+
+%     \end{core}
+
+%     \begin{core}{Point Mutations (\textit{Insertions \& Deletions})}
+
+%       Insertions and Deletions
+%         frameshift mutation: a shift in the codon composition in a way that alters the reading from the genetic message (BIG ISSUE)
+
+%     \end{core}
+
+%     \begin{core}{Mutagens}
+
+%       Mutagen: physical or chemical agents that interact with DNA in ways that cause mutations (UV, X ways, burnt food)
+
+%     \end{core}
 
 \end{document}
 

@@ -43,6 +43,26 @@
 
     The \textbf{Production Possibilities Curve (PPC)} illustrates the maximum combinations of two goods that an economy can produce given its available resources and technology. 
 
+    \pgfig{
+      \begin{axis}[
+        \econplot{Good A}{Good B}
+        \axispresetstwo
+        ]
+
+        \addplot[domain=0:8.5, samples=100, thick] {sqrt(8.5^2 - x^2)};
+
+        % Point inside the circle (underallocation)
+        \node[circle, fill=black, inner sep=2pt, label=below:{Underallocation}] at (axis cs:3,3) {};
+
+        % Point on the circle (efficient)
+        \node[circle, fill=black, inner sep=2pt, label={[xshift=-15pt]below:{Efficient}}] at (axis cs:6,6.02) {};
+
+        % Point outside the circle (overheating)
+        \node[circle, fill=black, inner sep=2pt, label=below:{Overheating}] at (axis cs:7,9) {};
+
+      \end{axis} 
+    }{Production possibilities curve}{fig:ppc}{0.9}
+
     \begin{enumerate}
 
       \item Points \textbf{on the curve} represent efficient production where all resources are fully utilized. 
@@ -52,26 +72,6 @@
       \item Points \textbf{outside the curve}---although appearing unattainable---can occur temporarily during periods of economic overheating when resources are used beyond their sustainable capacity. However, this state is not sustainable and typically leads to inflation, resource depletion, or economic crisis.
 
     \end{enumerate}
-
-    \pgfig{
-      \begin{axis}[
-        \econplot{Good A}{Good B}
-        \axispresetstwo
-      ]
-
-      \addplot[domain=0:8.5, samples=100, thick] {sqrt(8.5^2 - x^2)};
-
-      % Point inside the circle (underallocation)
-      \node[circle, fill=black, inner sep=2pt, label=below:{Underallocation}] at (axis cs:3,3) {};
-
-      % Point on the circle (efficient)
-      \node[circle, fill=black, inner sep=2pt, label={[xshift=-15pt]below:{Efficient}}] at (axis cs:6,6.02) {};
-
-      % Point outside the circle (overheating)
-      \node[circle, fill=black, inner sep=2pt, label=below:{Overheating}] at (axis cs:7,9) {};
-
-      \end{axis} 
-    }{Production possibilities curve}{fig:ppc}{1}
 
     The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (\autoref{fig:ppc}) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
 
@@ -774,7 +774,7 @@
         \pgfiglabel{6.5,8}{LRAS}
 
         \end{axis} 
-      }{Long-run aggregate supply}{fig:lras}{1}
+      }{Long-run aggregate supply}{fig:lras}{0.85}
 
     \end{core}
 
@@ -815,7 +815,7 @@
         \pgfiglabel{6.5,9}{LRAS}
 
         \end{axis} 
-      }{Demand pull inflation}{fig:dpi}{1}
+      }{Demand pull inflation}{fig:dpi}{0.85}
 
       \textbf{Cost-push inflation} results from SRAS decreasing due to supply shocks, reducing output and raising prices simultaneously.
 
@@ -850,7 +850,7 @@
         \pgfiglabel{3.5,9}{LRAS}
 
         \end{axis} 
-      }{Supply push inflation}{fig:spi}{1}
+      }{Supply push inflation}{fig:spi}{0.85}
 
     \end{core}
 
@@ -916,8 +916,7 @@
         \pgfiglabel{3.5,9}{LRPC}
 
         \end{axis} 
-      }{Long-run phillips curve}{fig:lrpc}{1}
-
+      }{Long-run phillips curve}{fig:lrpc}{0.85}
 
     \end{core}
 
@@ -1000,7 +999,7 @@
         \node at (-3.5,0.7) {\textbf{M0}};
         \node[align=center] at (-3.5,-0.3) {Amount\\printed};
         
-      }{Diagram of money supply}{fig:msupply}{1.0}
+      }{Diagram of money supply}{fig:msupply}{0.80}
 
       These aggregates reflect different degrees of liquidity, with broader measures (\textit{M2}) capturing more forms of money that can be relatively easily converted to cash.
 
@@ -1030,7 +1029,7 @@
         \pgfiglabel{10,2}{D}
 
         \end{axis} 
-      }{Money market}{fig:mmarket}{1}
+      }{Money market}{fig:mmarket}{0.84}
 
       Factors affecting money demand include price levels (\textit{higher prices require more money for transactions}), national income (\textit{higher income increases transactions}), and technology affecting liquidity.
 
