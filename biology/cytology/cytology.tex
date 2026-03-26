@@ -2,7 +2,7 @@
 \usepackage{titling}
 
 \title{Cytology}
-\date{DATE PLACEHOLDER}
+\date{March 2026}
 \author{Ingyu Bahng}
 
 \input{../../presets/biology/preamble}
@@ -36,7 +36,7 @@
     \textbf{Carbohydrates} are sugars that function both as a primary source of energy and as structural materials for cells. The simplest carbohydrates are \textbf{monosaccharides}, which generally have molecular formulas that are multiples of \ce{CH2O}. 
 
     \begin{core}{Monosaccharides}
-
+  
       One of the most well-known monosaccharides is \textbf{glucose} (\ce{C6H12O6}), a key energy source in cellular respiration.
 
       \reactionfig{
@@ -57,7 +57,7 @@
             )
           }
         }
-      }{Glucose}{fig:filler1}{0.6}
+      }{Glucose}{fig:filler1}{0.62}
 
       Other monosaccharides include \textbf{fructose} and \textbf{galactose}, which are structural isomers of glucose (\textit{they share the same molecular formula but differ in the arrangement of their atoms}).
 
@@ -93,7 +93,7 @@
             )
           }
         }
-      }{Fructose (\textit{left}) and galactose (\textit{right})}{fig:filler2}{0.6}
+      }{Fructose (\textit{left}) and galactose (\textit{right})}{fig:filler2}{0.7}
 
       Additionally, monosaccharides can exist in both \textbf{linear} and \textbf{ring} forms, though the ring form predominates in aqueous solutions. The linear forms of several common monosaccharides (\textit{including glucose}) are shown below.
 
@@ -218,227 +218,347 @@
             )
           }
         }
-      }{Sucrose (\textit{disaccharide})}{fig:filler4}{0.7}
+      }{Sucrose (\textit{disaccharide})}{fig:filler4}{0.65}
 
       When many monosaccharides are linked together through glycosidic bonds, they form \textbf{polysaccharides}. These large polymers serve two primary biological roles: some function as energy storage molecules that can be hydrolyzed into monosaccharides when the cell requires fuel, while others provide structural support.
 
       For example, \textbf{starch} serves as the main storage polysaccharide in plants, whereas \textbf{glycogen} fulfills this same role in animals. In contrast, \textbf{cellulose} is a structural polysaccharide that constitutes the primary component of plant cell walls, providing rigidity and protection (CORE CONCEPT REFERENCE).
 
-      % \reactionfig{ IN PROGRESS
-      %   \chemfig{
-      %     \ce{Sugar}
-      %   }
-      %   \qquad
-      %   \chemfig{
-      %     [:0]
-      %     -[:30]
-      %   }
-      %   \qquad
-      %   \chemfig{
-      %     [:0]
-      %     -[:30]
-      %   }
-      % }{Monosaccharides, disaccharides, polysaccharides}{fig:filler5}{0.9}
-
-      \myfig{0.5}{cytology_figures/polysacc}{caption}{fig:fig5} % CHANGE
+      \reactionfig{ 
+        \scheme{
+          \chemname{
+            \chemfig{
+              [:30]*6(------)
+            }
+          }{\large Monosaccharide}
+          \qquad
+          \qquad
+          \chemname{
+            \chemfig{
+              [:-30]*6(---
+              (-[:0,0.5]*6(------))
+              ---)
+            }
+          }{\large Disaccharide}
+          \qquad
+          \qquad
+          \chemname{
+            \chemfig{
+              [:-30]*6(---
+              (-[:0,0.5]*6(---
+              (-[:0,0.5]*6(---
+              (-[:0]\text{****})
+              ---))
+              ---))
+              ---)
+            }
+          }{\large Polysaccharide}
+        }
+      }{Saccharides}{fig:filler5}{0.65}
 
     \end{core}
 
   \subsection{Lipids}
 
-    \begin{core}{Lipids}
-
-      \textbf{Lipids} are the one major class of large biological molecules that do not form true polymers. They are largely \textbf{hydrophobic} (water-fearing) molecules composed primarily of hydrocarbons, which contain nonpolar covalent bonds. The most biologically important lipids include \textbf{fats}, \textbf{phospholipids}, and \textbf{steroids}.
-
-    \end{core}
+    \textbf{Lipids} are unique among the major classes of biological macromolecules in that they do not form true polymers. Unlike carbohydrates, proteins, and nucleic acids, lipids are largely \textbf{hydrophobic} (\textit{water-fearing}) molecules composed primarily of hydrocarbons with nonpolar covalent bonds. The most biologically important lipids include \textbf{fats}, \textbf{phospholipids}, and \textbf{steroids}.
 
     \begin{core}{Fats}
 
-      \textbf{Fats} are constructed from two types of smaller molecules: \textbf{glycerol} and \textbf{fatty acids}. A \textbf{fatty acid} consists of a long hydrocarbon chain, typically 16 or 18 carbon atoms in length, with a carboxyl group at one end. \textbf{Glycerol} is a three-carbon alcohol with a hydroxyl group attached to each carbon. When three fatty acids are linked to one glycerol molecule through ester linkages (via dehydration reactions), the resulting molecule is called a \textbf{triglyceride} or \textbf{triacylglycerol}.
+      \textbf{Fats} are constructed from two types of smaller molecules: \textbf{glycerol} and \textbf{fatty acids}. A \textbf{fatty acid} consists of a long hydrocarbon chain—typically 16 or 18 carbon atoms in length—with a carboxyl group at one end. \textbf{Glycerol}, in contrast, is a three-carbon alcohol bearing a hydroxyl group on each carbon. When three fatty acids bond to a single glycerol molecule through ester linkages formed by dehydration reactions, the resulting fat molecule is called a \textbf{triglyceride}.
 
-      \myfig{0.5}{cytology_figures/triglyceride}{caption}{fig:fig6} % CHANGE
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]\ce{CH2}
+            (
+            -[:0]O
+            -[:0]C
+            (=[:90]O)
+            -[:0]\ce{CH2}
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]\ce{CH3}
+            )
+            -[:-90,2]\ce{CH}
+            (
+            -[:0]O
+            -[:0]C
+            (=[:90]O)
+            -[:0]\ce{CH2}
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]\ce{CH3}
+            )
+            -[:-90,2]\ce{CH2}
+            (
+            -[:0]O
+            -[:0]C
+            (=[:90]O)
+            -[:0]\ce{CH2}
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]\ce{CH3}
+            )
+          }
+        }
+      }{Triglyceride}{fig:filler6}{0.8}
 
     \end{core}
 
     \begin{core}{Phospholipids}
 
-      \textbf{Phospholipids} are major structural components of cell membranes. Like fats, they consist of a glycerol backbone; however, only two of glycerol's hydroxyl groups are linked to fatty acids, while the third is bonded to a phosphate group. 
+      \textbf{Phospholipids} are major structural components of cell membranes. Like fats, they are built on a glycerol backbone; however, phospholipids differ in that only two of glycerol's hydroxyl groups are linked to fatty acids, while the third is bonded to a negatively charged phosphate group. 
 
-      This structure gives phospholipids an amphipathic nature, featuring a \textbf{hydrophilic} (water-loving) phosphate-containing “head” and two \textbf{hydrophobic} (water-fearing) fatty acid “tails.”
+      This asymmetric structure gives phospholipids their amphipathic nature, featuring a \textbf{hydrophilic} (\textit{water-loving}) phosphate-containing "head" and two \textbf{hydrophobic} (\textit{water-fearing}) fatty acid "tails."
 
-      \myfig{0.55}{cytology_figures/phospholipid}{caption}{fig:fig7}
+      \myfig{0.55}{cytology_figures/phospholipid}{caption}{fig:fig7} % CHANGE
 
-      \begin{definition}
-        In the diagram above, one of the fatty acid tails contains a double bond, meaning it is \textbf{unsaturated}. This double bond introduces a kink in the hydrocarbon chain. The kink prevents adjacent phospholipids from packing tightly together, thereby increasing membrane fluidity. \\ REFERNCE TO MEMBRANE CONCEPT
+      In the diagram above, one of the fatty acid tails contains a double bond, making it \textbf{unsaturated}. This double bond introduces a kink in the hydrocarbon chain that prevents adjacent phospholipids from packing tightly together, thereby increasing membrane fluidity.
 
-        Membrane fluidity is essential for proper cellular function, as it enables the lateral movement of proteins within the lipid bilayer and allows the membrane to remain flexible.
-      \end{definition}
+      This fluidity is essential for proper cellular function, as it enables membrane proteins to move laterally within the lipid bilayer and allows the membrane to remain flexible and responsive (CORE CONCEPT REFERENCE).
 
     \end{core}
 
     \begin{core}{Steriods}
 
-      \textbf{Steroids} are lipids characterized by a carbon skeleton composed of four fused rings. Different steroids vary based on the functional groups attached to this core ring structure. An important steroid in animals is \textbf{cholesterol}, which serves as a component of cell membranes and as a precursor to other steroids that perform diverse functions in the body. The structure of cholesterol is shown below.
+      \textbf{Steroids} are lipids characterized by a carbon skeleton composed of four fused rings. Different steroids are distinguished by the chemical groups attached to this conserved ring structure. One particularly important steroid in animals is \textbf{cholesterol}, which plays dual roles.
 
-      \myfig{0.35}{cytology_figures/cholesterol}{caption}{fig:fig8} % CHANGE
+      \begin{enumerate}
+
+        \item Modulation of membrane fluidity as a component of cell membranes
+
+        \item Serves as a precursor for synthesizing other steroid hormones, including sex hormones and corticosteroids.
+
+      \end{enumerate}
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:30]HO
+            -*6(--*6(=--*6(-*5(---(-(-[::+60]\ce{H3C})
+            -[::-60]-[::-60]-[::+60]-[::-60](-[::-60]\ce{CH3})-[::+60]\ce{CH3})-)-(-[::+0]\ce{CH3})---)--)-(-[::+0]\ce{CH3})---)
+          }
+        }
+      }{Cholesterol}{fig:filler7}{0.7}
 
     \end{core}
 
   \subsection{Proteins}
 
-    \begin{core}{Proteins}
-
-      \textbf{Proteins} account for more than 50\% of the dry mass of most cells and carry out a vast array of functions within organisms. They are polymers composed of \textbf{amino acids}, the monomeric building blocks of proteins. Each amino acid is an organic molecule containing both an amino group and a carboxyl group, along with a distinctive side chain (R group). 
-
-    \end{core}
+    \textbf{Proteins} account for more than 50\% of the dry mass of most cells and are the most functionally diverse class of biological macromolecules. These versatile polymers are constructed from monomeric building blocks called \textbf{amino acids}.
 
     \begin{core}{Amino Acids}
 
-      There are 20 standard amino acids commonly incorporated into proteins, and the chemical properties of their R groups largely determine the structure and function of the resulting protein.
+      There are 20 standard amino acids commonly incorporated into proteins. Each amino acid shares a common structural core---an amino group and a carboxyl group bonded to a central carbon--but possesses a distinctive side chain (\textit{R group}) that determines its unique chemical properties.
 
-      \myfig{0.2}{cytology_figures/amino_acid}{caption}{fig:fig9} % CHANGE
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]\textcolor{Blue}{H}
+            -[:0,,,,Blue]\textcolor{Blue}{N}
+            (-[:90,,,,Blue]\textcolor{Blue}{H})
+            -[:0]C
+            (-[:90]H)
+            (-[:-90]\textcolor{Green}{R})
+            -[:0]\textcolor{Red}{C}
+            (=[:90,,,,Red]\textcolor{Red}{O})
+            -[:0,,,,Red]\textcolor{Red}{OH}
+          }
+        }
+      }{Amino acid; amino group (\textit{blue}), side chain (\textit{green}), carboxyl group (\textit{red})}{fig:filler8}{0.8}
 
     \end{core}
 
-    \begin{core}{Protein Structure Hierarchy}
+    \begin{core}{Protein Structural Hierarchy}
 
       Proteins perform a wide range of functions, including catalyzing biochemical reactions (\textbf{enzymes}), providing structural support, facilitating cell signaling, and transporting molecules. A protein is a polymer of amino acids linked by \textbf{peptide bonds}, and its specific function is determined by its precise three-dimensional structure. This structure is organized into four hierarchical levels: primary, secondary, tertiary, and quaternary structure.
 
-      The \textbf{primary} structure represents the unique linear sequence of amino acids in a polypeptide chain.
+      \myfig{0.6}{cytology_figures/pstructures.png}{caption}{fig:fig12}
 
-      \myfig{0.4}{cytology_figures/primary}{caption}{fig:fig10}
+      \begin{enumerate}
 
-      The \textbf{secondary} structure refers to local folded conformations that arise from hydrogen bonding between backbone atoms of the polypeptide chain. The most common types of secondary structure are the \textbf{$\alpha$-helix} and the \textbf{$\beta$-pleated sheet}.
+        \item The \textbf{primary} structure represents the unique linear sequence of amino acids in a polypeptide chain, determined by the order in which amino acids are covalently bonded during protein synthesis.
 
-      \myfig{0.3}{cytology_figures/secondary}{caption}{fig:fig11}
+        \item The \textbf{secondary} structure refers to localized folding patterns that arise from hydrogen bonding between atoms in the polypeptide backbone. The two most common secondary structures are the \textbf{α-helix}, a right-handed coil, and the \textbf{β-pleated sheet}, formed by adjacent polypeptide strands.
 
-      The \textbf{tertiary} structure is the overall three-dimensional shape of a single polypeptide, formed by interactions among the side chains (R groups) of the amino acids. These interactions may include hydrogen bonds, ionic bonds, hydrophobic interactions, and disulfide bridges.
+        \item The \textbf{tertiary} structure is the overall three-dimensional shape of a complete polypeptide, stabilized by interactions among amino acid side chains (\textit{R groups}). These interactions include hydrogen bonds, ionic bonds, hydrophobic interactions, and covalent disulfide bridges.
 
-      \myfig{0.45}{cytology_figures/tertiary}{caption}{fig:fig12}
+        \item The \textbf{quaternary} structure arises when multiple polypeptide subunits associate to form a functional protein complex. Not all proteins exhibit quaternary structure---only those composed of two or more polypeptide chains.
 
-      The \textbf{quaternary} structure arises when two or more polypeptide chains associate to form a functional protein complex.
+      \end{enumerate}
 
-      \myfig{0.25}{cytology_figures/quaternary}{caption}{fig:fig13}
-
-      As we will see in later chapters, proteins are extraordinarily versatile molecules that are essential for virtually every biological process.
+      The precise three-dimensional structure of a protein is directly linked to its function, and even small changes in folding can render a protein nonfunctional. This structure-function relationship underlies the remarkable versatility of proteins, making them essential molecular machines for virtually every biological process.
 
     \end{core}
 
   \subsection{Nucleic Acids}
 
-    \begin{core}{Nucleic Acids}
+    \textbf{Nucleic acids} are the informational macromolecules of life, responsible for storing, transmitting, and expressing hereditary information across generations. Like proteins and carbohydrates, nucleic acids are polymers, but their monomeric building blocks are \textbf{nucleotides}.
 
-      \textbf{Nucleic Acids} store, transmit, and help express hereditary information. They are polymers composed of monomers called \textbf{nucleotides}.
+    \begin{core}{Nucleotides}
 
-      \myfig{0.3}{cytology_figures/nucleotide}{caption}{fig:fig14} % CHANGE
+      \textbf{Nucleotides} consist of three components: a five-carbon sugar (\textit{pentose}), a nitrogen-containing nitrogenous base, and one to three phosphate groups. 
+      
+      \reactionfig{ % CHANGE TO A BETTER CHEM FIGJk
+        \scheme{
+          \chemfig{
+            [:0]\text{\Large \textbf{P}}
+            -[:0]
+            -[:-30]*5(---
+            (
+            -[:45]*5(-----)
+            )
+            --)
+          }
+        }
+      }{Nucleotide; phosphate group (\textit{left}), sugar (\textit{center}), nitrogenous base (\textit{right})}{fig:filler9}{0.8}
 
     \end{core}
 
     \begin{core}{Deoxyribonucleic Acids (DNA) \& Ribonucleic Acid (RNA)}
 
-      When nucleotides are linked together through \textbf{phosphodiester bonds} (formed via dehydration reactions), they create a polynucleotide chain. This chain consists of a repeating sugar-phosphate backbone with nitrogenous bases projecting outward. Depending on whether the sugar contains a hydroxyl group or only a hydrogen atom at the 2' carbon, nucleic acids are classified as either \textbf{deoxyribonucleic acid (DNA)} or \textbf{ribonucleic acid (RNA)}.
+      When nucleotides join together through \textbf{phosphodiester bonds}---\textit{formed via dehydration reactions}---they create a polynucleotide chain with a repeating sugar-phosphate backbone and nitrogenous bases projecting outward. The identity of the pentose sugar determines whether the polymer is classified as \textbf{deoxyribonucleic acid (DNA)} or \textbf{ribonucleic acid (RNA)}: DNA contains deoxyribose, which lacks a hydroxyl group at the 2' carbon position, while RNA contains ribose, which retains this hydroxyl group.
 
-      \myfig{0.8}{cytology_figures/DNARNA}{caption}{fig:fig15}
+      \myfig{0.8}{cytology_figures/DNARNA}{caption}{fig:fig15} % CHANGE TO CHEMFIG OF DNA AND RNA SIDE BY SIDE
 
-      DNA is typically double-stranded, forming the well-known double helix structure. Its nitrogenous bases are \textbf{adenine (A)}, \textbf{thymine (T)}, \textbf{cytosine (C)}, and \textbf{guanine (G)}. RNA, in contrast, is usually single-stranded and contains \textbf{uracil (U)} instead of thymine.
+      These two nucleic acids also differ in structure and base composition. DNA typically exists as a double-stranded double helix and utilizes four nitrogenous bases: the purines \textbf{adenine (A)} and \textbf{guanine (G)}, and the pyrimidines \textbf{cytosine (C)} and \textbf{thymine (T)}. RNA, in contrast, is usually single-stranded and contains \textbf{uracil (U)}, a pyrimidine, in place of thymine.
 
-      As we will explore in \textit{Chapter 6 Gene Expression and Regulation}, DNA functions as the long-term storage of hereditary information, while RNA plays a central role in expressing that information through protein synthesis.
+      < FIGURE FOR BASE PAIRINGS >
+
+      These structural differences reflect their distinct biological roles. While DNA serves as the stable repository of hereditary information, while RNA acts as the versatile intermediary that expresses this information through protein synthesis (CORE CONCEPT REFERENCE)
 
     \end{core}
 
 \section{Cell Overview}
 
-  \subsection{Investigative Techniques}
-
-    Cells are the fundamental units of life, and all living organisms are composed of cells. By studying the structure and function of cells, biologists gain insight into how organisms grow, reproduce, and interact with their environment.
-
-    \begin{core}{Light \& Electron Microscopy}
-
-      To investigate cells, scientists use techniques such as \textbf{light microscopy} and \textbf{electron microscopy}, which allow visualization of cellular structures at different levels of resolution. As shown in the figure below, electron microscopes can resolve much finer details because they use beams of electrons rather than visible light.
-
-      \myfig{1}{cytology_figures/l_e_micro}{caption}{fig:fig16}
-
-    \end{core}
-
-    \begin{core}{Cell Fractionation}
-
-      Another important technique is \textbf{cell fractionation}, which separates cellular components (or \textbf{organelles}) based on their size and density. This process uses a \textbf{centrifuge}, a machine that spins test tubes containing disrupted cells at increasing speeds. Larger and denser components settle at the bottom first, allowing scientists to isolate and study specific organelles.
-
-      \myfig{0.8}{cytology_figures/centrifuge}{caption}{fig:fig17}
-
-    \end{core}    
+  Cells are the fundamental units of life---every living organism, from the simplest bacterium to the most complex multicellular plant or animal, is composed of one or more cells. By studying cellular structure and function, biologists can understand the molecular basis of how organisms grow, reproduce, respond to stimuli, and interact with their environment.
     
   \subsection{Prokaryotic and Eukaryotic Cells}
-    
-    All cells share several fundamental features. Every cell is enclosed by a selective barrier called the \textbf{plasma membrane}. Inside the cell is a semifluid, jellylike substance called the \textbf{cytosol}, in which organelles are suspended. All cells also contain \textbf{chromosomes}, structures that organize genetic material (DNA). Cells are broadly classified into two types: \textbf{prokaryotic} and \textbf{eukaryotic}.
+
+  Despite the remarkable diversity of life, all cells share several fundamental features that define them as living units. Every cell is enclosed by a selective barrier called the \textbf{plasma membrane}, which controls the passage of substances into and out of the cell. Within this membrane lies the \textbf{cytosol}, a semifluid, gel-like substance in which cellular components are suspended. All cells also contain \textbf{chromosomes}, DNA-containing structures that carry genetic information. Beyond these universal features, cells are broadly classified into two fundamentally different types: \textbf{prokaryotic} and \textbf{eukaryotic}.
 
     \begin{core}{Prokaryotic Cells}
 
-      \textbf{Prokaryotic} cells---which include bacteria and archaea---lack a membrane-enclosed nucleus. Instead, their DNA is concentrated in a region called the \textbf{nucleoid}. They also lack membrane-bound organelles. Compared to eukaryotic cells, prokaryotes are generally smaller and structurally simpler. Most are unicellular organisms.
+      \textbf{Prokaryotic} cells---which include the domains Bacteria and Archaea---are characterized by the absence of a membrane-enclosed nucleus. Instead, their DNA is concentrated in an irregularly shaped region called the \textbf{nucleoid}, which is not separated from the cytosol by a membrane. Prokaryotes also lack other membrane-bound organelles, making them structurally simpler than eukaryotic cells. They are generally smaller in size and most exist as single-celled organisms.
 
-      \myfig{1}{cytology_figures/prokaryotic_cell}{caption}{fig:fig18}
+      \myfig{0.3}{cytology_figures/prokaryotic_cell}{caption}{fig:fig18}
 
     \end{core}
 
     \begin{core}{Eukaryotic Cells}
 
-      \textbf{Eukaryotic} cells, found in plants, animals, fungi, and protists, possess a true nucleus and numerous membrane-bound organelles that perform specialized functions. As a result, they are typically larger and more complex than prokaryotic cells. Eukaryotic cells can be categorized primarily as \textbf{animal} or \textbf{plant} cells. While both share many organelles, plant cells contain additional structures such as chloroplasts, a cell wall, and a large central vacuole.
+      \textbf{Eukaryotic} cells---found in animals, plants, fungi, and protists---are distinguished by the presence of a true, membrane-bound nucleus that houses their genetic material. Beyond the nucleus, eukaryotic cells contain an extensive system of membrane-bound organelles, each specialized for specific functions, making them considerably larger and more structurally complex than prokaryotes. Among eukaryotes, \textbf{animal cells} and \textbf{plant cells} represent the two most commonly studied types. While they share many organelles, including mitochondria (CORE CONCEPT REFERENCE), endoplasmic reticulum (CORE CONCEPT REFERENCE), and Golgi apparatus (CORE CONCEPT REFERENCE), plant cells possess unique structures: \textbf{chloroplasts} for photosynthesis (CORE CONCEPT REFERENCE), a rigid \textbf{cell wall} exterior (CORE CONCEPT REFERENCE) to the plasma membrane, and a large \textbf{central vacuole} (CORE CONCEPT REFERENCE) for storage and maintaining turgor pressure.
 
-      \myfig{0.8}{cytology_figures/animal_cell}{caption}{fig:fig19}
+      \myfig{0.3}{cytology_figures/animal_cell}{caption}{fig:fig19}
 
-      \myfig{0.8}{cytology_figures/plant_cell}{caption}{fig:fig20}
+      \myfig{0.3}{cytology_figures/plant_cell}{caption}{fig:fig20}
 
-    \end{core}  
+    \end{core}
 
   \subsection{Cell Organelles}
 
-    Let us now examine the major organelles found in eukaryotic cells.
+    The following sections examine the major organelles found in cells and their specialized functions.
 
     \begin{core}{Cell Organelles (\textit{Nucleus})}
 
-      (1) \textbf{NUCLEUS}: The nucleus houses most of the cell's genetic material (DNA) and is enclosed by a double membrane known as the \textbf{nuclear envelope}. Within the nucleus is the \textbf{nucleolus}, where ribosomal RNA (rRNA) is synthesized and ribosomal subunits are assembled.
+      \sbs{0.6}{
+        The \textbf{nucleus} houses most of the genetic material (\textit{DNA}) within a protective double membrane called the \textbf{nuclear envelope}. This envelope is perforated by nuclear pores that regulate the passage of molecules between the nucleus and cytoplasm. Within the nucleus lies the \textbf{nucleolus}, a distinct region where ribosomal RNA (\textit{rRNA}) is synthesized and ribosomal subunits are assembled before export to the cytoplasm.
 
-      \myfig{0.4}{cytology_figures/nucleus}{caption}{fig:fig21}
-
-      DNA within the nucleus is organized into discrete units called \textbf{chromosomes}. Each chromosome consists of a single long DNA molecule associated with proteins, including small proteins called \textbf{histones}. The DNA-protein complex that makes up chromosomes is called \textbf{chromatin}.
-
-      \myfig{0.35}{cytology_figures/chromosomes}{caption}{fig:fig22}
+        The DNA within the nucleus is not randomly dispersed but rather organized into discrete structures called \textbf{chromosomes}. Each chromosome consists of a single, extremely long DNA molecule intimately associated with proteins that help package and regulate the DNA.
+      }{
+        \myfig{}{cytology_figures/nucleus}{Nucleus}{fig:fig21}
+      }
+  
+      \textit{Further details on chromosome structure and the organization of genetic material are presented in CORE CONCEPT REFERENCE.}
 
     \end{core}
 
     \begin{core}{Cell Organelles (\textit{Ribosomes})}
 
-      (2) \textbf{RIBOSOMES}: Ribosomes are complexes composed of ribosomal RNA and proteins. They carry out \textbf{protein synthesis}. Ribosomes may be found free in the cytosol (\textbf{free ribosomes}) or attached to the endoplasmic reticulum or nuclear envelope (\textbf{bound ribosomes}).
+      \sbs{0.6}{
+        \textbf{Ribosomes} are molecular machines composed of ribosomal RNA (\textit{rRNA}) and associated proteins that catalyze \textbf{protein synthesis}, translating genetic information from messenger RNA into polypeptide chains. Ribosomes exist in two functional populations within the cell.
 
-      \myfig{0.3}{cytology_figures/ribosome}{caption}{fig:fig23}
+        \begin{itemize}
 
-      The membrane-bound organelles of eukaryotic cells form the \textbf{endomembrane system}. This system is involved in protein synthesis, protein transport, lipid metabolism, and detoxification.
+          \item \textbf{Free ribosomes} float freely in the cytosol and typically synthesize proteins destined for use within the cytoplasm.
+
+          \item \textbf{Bound ribosomes}, which are attached to the endoplasmic reticulum (CORE CONCEPT REFERENCE) or nuclear envelope, generally produce proteins destined for secretion or membrane insertion.
+
+        \end{itemize}
+      }{
+        \myfig{0.85}{cytology_figures/ribosome}{Ribosome}{fig:fig23}
+      }
 
     \end{core}
 
     \begin{core}{Cell Organelles (\textit{Endoplasmic Reticulum})}
 
-      (3) \textbf{ENDOPLASMIC RETICULUM (ER)}: The ER is an extensive membrane network divided into two regions: \textbf{smooth ER} and \textbf{rough ER}.
+      \sbs{0.5}{
+        The \textbf{endoplasmic reticulum (ER)} is an extensive network of interconnected membranes that exists in two distinct forms: smooth ER and rough ER, each specialized for different functions.
 
-      \myfig{0.7}{cytology_figures/er}{caption}{fig:fig24}
+        \begin{itemize}
 
-      The smooth ER \textbf{lacks ribosomes} and functions in lipid synthesis, carbohydrate metabolism, detoxification, and calcium storage.
+          \item The \textbf{smooth ER} lacks ribosomes and synthesizes lipids, metabolizes carbohydrates, detoxifies drugs and poisons, and stores calcium ions. 
 
-      The rough ER is \textbf{studded with ribosomes} and synthesizes proteins destined for secretion, membranes, or organelles. These proteins are packaged into \textbf{transport vesicles} that bud from the ER and travel to the Golgi apparatus. The rough ER also contributes to membrane production.
+          \item The \textbf{rough ER}, studded with bound ribosomes, produces proteins destined for secretion, incorporation into membranes, or delivery to other organelles.
+
+        \end{itemize}
+      }{
+        \myfig{0.8}{cytology_figures/er}{Endoplasmic reticulum}{fig:fig24}
+      }
+
+      Newly synthesized proteins are packaged into transport vesicles that bud from the rough ER and ferry their cargo to the Golgi apparatus for further processing.
 
     \end{core}
 
     \begin{core}{Cell Organelles (\textit{Golgi Apparatus})}
 
-      (4) \textbf{GOLGI APPARATUS}: The Golgi apparatus acts as the cell's processing and shipping center. Proteins and lipids from the ER are modified, sorted, and packaged for delivery. The side facing the ER is the \textbf{cis face}, while the shipping side is the \textbf{trans face}.
+      \sbs{0.6}{
+        The \textbf{Golgi apparatus} consists of polarized, membrane-bound sacs called \textbf{cisternae} that modify, sort, and package proteins and lipids received from the ER. Materials enter at the \textbf{cis face} and migrate through the medial stacks, where they undergo enzymatic processing such as \textbf{glycosylation}---the addition or trimming of sugar chains to create functional glycoproteins and glycolipids.
 
-      \myfig{0.55}{cytology_figures/ga}{caption}{fig:fig25}
+        At the \textbf{trans face}, molecules are sorted into vesicles, which then bud off for three primary pathways: \textbf{exocytosis} for secretion, integration into the \textbf{plasma membrane}, or the formation of \textbf{lysosomes} for intracellular digestion. This regulated trafficking ensures that finished products reach their specific functional destinations.
+      }{
+        \myfig{0.8}{cytology_figures/ga}{Golgi apparatus}{fig:fig25}
+      }
 
     \end{core}
 
     \begin{core}{Cell Organelles (\textit{Lysosome})}
 
-      (5) \textbf{LYSOSOMES}: Lysosomes are membrane-bound sacs containing hydrolytic enzymes that function in intracellular digestion. They operate best in an acidic environment. Lysosomes fuse with food vacuoles and recycle cellular components in a process known as \textbf{autophagy}.
+      \textbf{Lysosomes} are membrane-bound organelles containing hydrolytic enzymes that digest macromolecules, damaged organelles, and engulfed materials. These enzymes function optimally in the acidic environment maintained within the lysosome. Lysosomes fuse with food vacuoles to break down ingested material and recycle the cell's own components through \textbf{autophagy}.
 
       \myfig{0.6}{cytology_figures/lysosome}{caption}{fig:fig26}
 
@@ -446,17 +566,31 @@
 
     \begin{core}{Cell Organelles (\textit{Vacuoles})}
 
-      (6) \textbf{VACUOLES}: Vacuoles are membrane-bound sacs that originate from the ER and Golgi apparatus and perform diverse functions depending on the cell type. \textit{Food vacuoles} are formed by \textbf{phagocytosis}, a process in which a cell engulfs large particles for digestion. In many freshwater protists, \textit{contractile vacuoles} function in osmoregulation by pumping excess water out of the cell to prevent bursting. In plant cells, a prominent \textit{large central vacuole} stores water, ions, nutrients, and waste products, and plays a crucial role in maintaining turgor pressure, which supports the cell's structure and overall rigidity.
+      \textbf{Vacuoles} are membrane-bound organelles derived from the ER and Golgi apparatus that serve diverse functions.
+      
+      \begin{itemize}
+
+        \item \textbf{Food vacuoles} form through \textbf{phagocytosis}, engulfing large particles for enzymatic digestion.
+
+        \item \textbf{Contractile vacuoles} in freshwater protists pump out excess water to maintain osmotic balance. 
+
+        \item Plant cells contain a large \textbf{central vacuole} that stores water, ions, nutrients, and wastes while maintaining turgor pressure, which provides structural rigidity to the cell.
+
+      \end{itemize}
 
       \myfig{0.7}{cytology_figures/vacuole}{caption}{fig:fig27}
 
-    \end{core}
-    
-    The following two organelles are those involved in energy conversion. Their functions covered more in depth in EXTERNAL SECTION REFERENCE.
+    \end{core}    
+
+    The nuclear envelope, endoplasmic reticulum, Golgi apparatus, lysosomes, vacuoles, and plasma membrane (\textit{covered in CORE CONCEPT REFERENCE}) are functionally interconnected components of the \textbf{endomembrane system}.
+
+    These organelles work together through vesicular transport---small membrane-bound sacs bud from one organelle, travel through the cytosol, and fuse with another, delivering proteins and lipids to their destinations. This integrated network coordinates protein synthesis and modification, lipid metabolism, intracellular transport of macromolecules, and cellular secretion, enabling eukaryotic cells to compartmentalize and regulate complex biochemical processes.
 
     \begin{core}{Cell Organelles (\textit{Mitochondria})}
 
-      (7) \textbf{MITOCHONDRIA}: Mitochondria are the sites of \textbf{cellular respiration}, generating ATP by extracting energy from organic molecules using oxygen. They have a double membrane; the inner membrane is folded into \textbf{cristae}, increasing surface area for ATP production. The interior compartment, the \textbf{mitochondrial matrix}, contains enzymes, mitochondrial DNA, and ribosomes. Mitochondria are found in nearly all eukaryotic cells.
+      \textbf{Mitochondria} are the sites of \textbf{cellular respiration} (CORE CONCEPT REFERENCE), the metabolic process that generates ATP by extracting energy from sugars and other organic molecules in the presence of oxygen. 
+      
+      These organelles possess a distinctive double-membrane structure: the smooth outer membrane and the highly folded inner membrane, whose folds form shelf-like projections called \textbf{cristae} that dramatically increase surface area for ATP synthesis. The interior compartment, termed the \textbf{mitochondrial matrix}, contains the enzymes for the \textbf{citric acid cycle} (CORE CONCEPT REFERENCE), along with mitochondrial DNA and ribosomes. Mitochondria are present in nearly all eukaryotic cells, reflecting the universal need for efficient energy production.
 
       \myfig{0.4}{cytology_figures/mitochondria}{caption}{fig:fig28}
 
@@ -464,39 +598,41 @@
 
     \begin{core}{Cell Organelles (\textit{Chloroplast})}
 
-      (8) \textbf{CHLOROPLASTS}: Chloroplasts carry out \textbf{photosynthesis}. They contain chlorophyll and an internal membrane system of flattened sacs called \textbf{thylakoids}, which are stacked into \textbf{grana}. The surrounding fluid, the \textbf{stroma}, contains DNA, ribosomes, and enzymes. Chloroplasts are found in plants and algae.
+      \textbf{Chloroplasts}, found in plants and algae, are the sites of \textbf{photosynthesis} (CORE CONCEPT REFERENCE), converting light energy into chemical energy stored in sugars.
+
+      Like mitochondria, chloroplasts possess a double membrane and contain their own DNA and ribosomes. Within the chloroplast lies an internal membrane system of disc-shaped sacs called \textbf{thylakoids}, which stack to form structures called \textbf{grana}. The thylakoid membranes contain chlorophyll and other pigments that capture light energy. Surrounding the thylakoids is the \textbf{stroma}, a fluid-filled space containing enzymes for the Calvin cycle (CORE CONCEPT REFERENCE), which synthesizes sugars from carbon dioxide.
 
       \myfig{0.55}{cytology_figures/chloroplast}{caption}{fig:fig29}
 
     \end{core}
 
-    The the following four organelles are structural components of the cell.
-
     \begin{core}{Cell Organelles (\textit{Cytoskeleton})}
 
-      (9) \textbf{CYTOSKELETON}: The cytoskeleton is a dynamic network of fibers that maintains cell shape, enables movement, and facilitates intracellular transport. It consists of three types of fibers: \textbf{microtubules}, \textbf{microfilaments}, and \textbf{intermediate filaments}.
+      The \textbf{cytoskeleton} is a dynamic network of protein fibers that maintains cell shape, anchors organelles, enables cellular movement, and facilitates intracellular transport. This structural framework consists of three distinct types of fibers, each with specialized functions.
 
-      (9a) \textbf{MICROTUBULES}: Microtubules are hollow rods made of \textbf{tubulin}. They function as tracks for organelle movement, form the mitotic spindle during cell division, and make up \textbf{cilia} and \textbf{flagella}. In animal cells, they originate from the \textbf{centrosome}, which contains a pair of \textbf{centrioles}.
+      \begin{enumerate}
 
-      \myfig{0.45}{cytology_figures/microtubules}{caption}{fig:fig30}
+        \item \textbf{Microtubules} are hollow tubes composed of the protein \textbf{tubulin} arranged in a cylindrical structure. These largest cytoskeletal fibers serve as tracks along which motor proteins transport organelles and vesicles, form the mitotic spindle that separates chromosomes during cell division (CORE CONCEPT REFERENCE), and constitute the structural core of \textbf{cilia} and \textbf{flagella}. In animal cells, microtubules radiate outward from the \textbf{centrosome}, an organizing center containing a pair of cylindrical structures called \textbf{centrioles}.
 
-      (9b) \textbf{MICROFILAMENTS}: Microfilaments, also known as \textbf{actin filaments}, are the thinnest components of the cytoskeleton. They are solid rods composed of \textbf{actin}. They bear tension, support cell shape, and enable movement, including muscle contraction through interactions with \textbf{myosin}.
+        \myfig{0.45}{cytology_figures/microtubules}{caption}{fig:fig30}
 
-      \myfig{0.6}{cytology_figures/microfilament}{caption}{fig:fig31}
+        \item \textbf{Microfilaments}, also called \textbf{actin filaments}, are the thinnest cytoskeletal components, consisting of twisted double chains of the protein \textbf{actin}. These filaments resist tensile forces, maintain cell shape, and enable various forms of cellular movement. In muscle cells, actin filaments interact with the motor protein \textbf{myosin} to generate the sliding forces that produce muscle contraction.
 
-      (9c) \textbf{INTERMEDIATE FILAMENTS}: Intermediate filaments are cytoskeletal fibers with diameters between those of microtubules and microfilaments. Unlike the more dynamic microtubules and microfilaments, intermediate filaments are relatively \textbf{permanent} structures within the cell, providing stable support. They play key roles in maintaining cell shape and anchoring organelles in place; for instance, the nucleus is often held securely within the cell by a network or "cage" of intermediate filaments.
+        \myfig{0.6}{cytology_figures/microfilament}{caption}{fig:fig31}
 
-      \myfig{0.65}{cytology_figures/intermediate_filament}{caption}{fig:fig32}
+        \item \textbf{Intermediate filaments} are rope-like structures with diameters between those of microtubules and microfilaments. In contrast to the rapidly assembling and disassembling microtubules and microfilaments, intermediate filaments form more \textbf{permanent} structures that provide mechanical stability to cells. They reinforce cell shape and anchor organelles in fixed positions.
 
-      Bottom line, the cytoskeleton is a dynamic structure essential for maintaining cell shape, enabling cellular movement, and facilitating intracellular transport.
+        \myfig{0.65}{cytology_figures/intermediate_filament}{caption}{fig:fig32}
 
-      Finally, let us examine the extracellular components and the connections between cells that help coordinate their activities.
+      \end{enumerate}
+
+      Together, these three cytoskeletal components form an integrated network that adapts to the cell's changing structural and functional needs throughout its life cycle.
 
     \end{core}
 
     \begin{core}{Cell Organelles (\textit{Cell Walls})}
 
-      (10) \textbf{CELL WALLS}: The cell wall is an extracellular structure that distinguishes plant cells from animal cells. Its primary functions are to \textbf{protect the plant cell}, maintain its shape, and prevent excessive water uptake.
+      The \textbf{cell wall} is a rigid extracellular structure that surrounds the plasma membrane in plant cells, fungi, and many prokaryotes, but is absent in animal cells. Composed primarily of the polysaccharide \textbf{cellulose} in plants, the cell wall provides structural support, protects the cell from mechanical damage and pathogens, and prevents excessive water uptake that would otherwise cause the cell to burst (CORE CONCEPT REFERENCE).
 
       \myfig{0.4}{cytology_figures/cell_wall}{caption}{fig:fig33}
 
@@ -504,7 +640,9 @@
 
     \begin{core}{Cell Organelles (\textit{Extracellular Matrix})}
 
-      (11) \textbf{EXTRACELLULAR MATRIX OF ANIMAL CELLS}: The ECM of animal cells is composed of glycoproteins such as \textbf{collagen}, \textbf{proteoglycans}, and \textbf{fibronectin}, which bind to receptor proteins in the plasma membrane called \textbf{integrins}. The ECM provides structural support to the cell, separates tissues, and regulates intercellular communication. \textit{This complex protein network is absent in plant cells, as their cells are tightly packed and supported by cell walls.}
+      Animal cells, lacking cell walls, instead produce an \textbf{extracellular matrix (ECM)}, a complex network of glycoproteins secreted into the extracellular space.
+
+      The ECM is composed primarily of the fibrous protein \textbf{collagen}, \textbf{proteoglycans} (\textit{proteins with attached polysaccharide chains}), and \textbf{fibronectin}, an adhesive glycoprotein. These ECM components bind to transmembrane receptor proteins called \textbf{integrins}, which anchor the cell to the matrix and relay signals between the external environment and the cell interior. The ECM provides structural support, facilitates cell adhesion and migration, regulates tissue organization, and influences cell behavior through biochemical signaling.
 
       \myfig{0.8}{cytology_figures/ecm}{caption}{fig:fig34}
 
@@ -512,11 +650,23 @@
 
     \begin{core}{Cell Organelles (\textit{Intracellular Junctions})}
 
-      (12) \textbf{INTERCELLULAR JUNCTIONS}: Cells in animals or plants are organized into tissues, organs, and organ systems. Neighboring cells often interact through sites of direct physical contact. In plant cells, these connections are called \textbf{plasmodesmata}.
+      In multicellular organisms, cells are organized into tissues, organs, and organ systems, requiring specialized structures for cell-to-cell communication and adhesion. \textbf{Intercellular junctions} are sites of direct physical contact between neighboring cells that serve these functions. Plant and animal cells have evolved distinct types of junctions suited to their cellular architecture.
+      
+      In plant cells, channels called \textbf{plasmodesmata} penetrate adjacent cell walls, creating cytoplasmic bridges that allow direct exchange of water, nutrients, and signaling molecules between cells.
 
       \myfig{0.4}{cytology_figures/plasmodesmata}{caption}{fig:fig35}
+      
+      Animal cells employ three main types of intercellular junctions, each with specialized functions
 
-      In animal cells, intercellular junctions are categorized into three types: \textbf{tight junctions}, \textbf{desmosomes}, and \textbf{gap junctions}.
+      \begin{itemize}
+
+        \item \textbf{Tight junctions} seal cells together to prevent leakage between them.
+
+        \item \textbf{Desmosomes} rivet cells together to provide mechanical strength.
+
+        \item \textbf{Gap junctions} form communication channels allowing passage of small molecules and ions between cells.
+
+      \end{itemize}
 
       \myfig{0.45}{cytology_figures/animal_junctions}{caption}{fig:fig36}
 

@@ -7,562 +7,1044 @@
 
 \input{../../presets/finance_markets/preamble}
 
+\externaldocument[acc-]{../accounting/accounting}[../accounting/accounting.pdf]
+\externaldocument[com-]{../commodity/commodity}[../commodity/commodity.pdf]
+\externaldocument[cor-]{../corporate_finance/corporate_finance}[../corporate_finance/corporate_finance.pdf]
+\externaldocument[der-]{../derivatives/derivatives}[../derivatives/derivatives.pdf]
+\externaldocument[equ-]{../equity/equity}[../equity/equity.pdf]
+\externaldocument[fix-]{../fixed_income/fixed_income}[../fixed_income/fixed_income.pdf]
+\externaldocument[for-]{../forex/forex}[../forex/forex.pdf]
+\externaldocument[fnd-]{../fundamental_analysis/fundamental_analysis}[../fundamental_analysis/fundamental_analysis.pdf]
+\externaldocument[mac-]{../macroeconomics/macroeconomics}[../macroeconomics/macroeconomics.pdf]
+\externaldocument[tec-]{../technical_analysis/technical_analysis}[../technical_analysis/technical_analysis.pdf]
+\externaldocument[val-]{../valuation/valuation}[../valuation/valuation.pdf]
+%\externaldocument[mic-]{../microeconomics/microeconomics}[../microeconomics/microeconomics.pdf]
+
 \begin{document}
 
 \input{../../presets/_general/startup}
 
 \section{Fundamental Concepts}
 
-  == ECONOMICS DEFINITION
+  \textbf{Economics} is the social science that studies the production, distribution, and consumption of goods and services. At its core, economics addresses the fundamental problem of \textbf{scarcity}: while resources such as labor, capital, and natural resources are limited, human wants are essentially unlimited. This creates the central challenge that all economies must navigate---how to allocate scarce resources among competing uses. 
 
-  \begin{core}{Factors of Production}
+  \textbf{Microeconomics} is the branch of economics that studies how individuals, firms, and markets make decisions about the allocation of scarce resources. Unlike macroeconomics, which examines the economy as a whole, microeconomics focuses on the behavior of individual economic agents and the interactions between them.
 
-    == FACTORS OF PRODUCTION 
+  \begin{core}{Factors of Production} 
+
+    The production of goods and services requires four essential factors of production: 
+
+    \begin{enumerate}
+
+      \item \textbf{Land} encompasses all natural inputs used in production, including agricultural land, mineral deposits, water resources, and the physical space upon which production facilities are constructed.
+
+      \item \textbf{Labor} represents the human effort devoted to production, encompassing both physical and mental work. Labor includes the services of workers across all sectors, from agricultural laborers harvesting crops to knowledge workers developing software.
+
+      \item \textbf{Capital} refers to goods that are produced and then used to produce other goods and services. Unlike consumer goods that satisfy wants directly, capital goods facilitate future production. Examples include manufacturing facilities, machinery, transportation equipment, and tools.
+
+      \item \textbf{Entrepreneurship} represents the creative effort of individuals who combine the other three factors of production to create goods and services. Entrepreneurs bear risk, organize production, and drive innovation.
+
+    \end{enumerate}
 
   \end{core}
 
   \begin{core}{Economic Systems}
 
-    Economic System: Mechanism for deciding what to make, how to make it, and who gets it
+    An \textbf{economic system} is the mechanism by which a society decides what to produce, how to produce it, and who receives what is produced. The two most prevalent economic systems in the modern world are market economies and command economies.
 
-    Market Economy: Individuals make decisions and keep what they produce (protected private property rights), prices set by supply and demand (CAPITALISM)
-    Grows the economy through an invisible hand
-    Problems: Inequality, nonoptimal business practices
+    \begin{enumerate}
 
-    Command Economy: Government makes decisions and sets goals, no private property rights (COMMUNISM?)
-    Problems: Lack of incentive for investing, improving quality, and innovating
+      \item In a \textbf{market economy}, individuals make decisions about production and consumption, and individuals keep what they produce. This system is characterized by private property rights and prices determined by supply and demand, a framework often associated with \textbf{capitalism}.
+
+      The market economy grows through the \textbf{invisible hand} whereby individuals pursuing their own self-interest inadvertently promote the general welfare. However, market economies face challenges, including income inequality and the potential for suboptimal business practices when left unregulated.
+
+      \item In a \textbf{command economy}, the government makes all decisions about production and resource allocation, with no private property rights, thus often associated with \textbf{communism}. 
+
+      This system faces significant challenges, including lack of incentive for individuals to invest, improve quality, or innovate.
+
+    \end{enumerate}
+
+    In practice, most contemporary economies, including major global economic powers such as the United States and China, operate as \textbf{mixed economies} that combine elements of both market and command systems. The relative balance between market forces and government intervention varies considerably across nations and remains a subject of ongoing economic and political debate.
 
   \end{core}
 
   \begin{core}{Opportunity Cost}
 
-    == OPPORTUNITY COST
-
-    Law of Increasing Opportunity Cost
-    - As more and more of a good is produced, the opportunity cost of producing the good increases
-    - Reason: The resources that are best suited for producign a good are used first, and once they are used, producing more requires resources that are less suited for producing it, so more resources are required
+    When making economic decisions, individuals and societies must choose among mutually exclusive alternatives. The \textbf{opportunity cost} of a choice represents the value of the best alternative forgone. This concept is fundamental to rational decision-making because choosing one option necessarily means sacrificing another.
 
   \end{core}
 
-  \begin{core}{Production Possibility Curve}
+  \begin{core}{Law of Increasing Opportunity Cost}
 
-    == PRODUCTION POSSIBILITY CURVE
+    The \textbf{law of increasing opportunity cost} states that as more and more of a good is produced, the opportunity cost of producing additional units increases. This occurs because resources are not equally suited for producing all goods. The resources best suited for producing a particular good are used first, and as production expands, less suitable resources must be employed, requiring increasingly larger quantities of resources to produce each additional unit.
+
+  \end{core}
+
+  \begin{core}[label=core:ppc]{Production Possibilities Curve}
+
+    The \textbf{Production Possibilities Curve (PPC)} illustrates the maximum combinations of two goods that an economy can produce given its available resources and technology. 
+
+    \pgfig{
+      \begin{axis}[
+        \econplot{Good A}{Good B}
+        \axispresetstwo
+        ]
+
+        \addplot[domain=0:8.5, samples=100, thick] {sqrt(8.5^2 - x^2)};
+
+        % Point inside the circle (underallocation)
+        \node[circle, fill=black, inner sep=2pt, label=below:{Underallocation}] at (axis cs:3,3) {};
+
+        % Point on the circle (efficient)
+        \node[circle, fill=black, inner sep=2pt, label={[xshift=-15pt]below:{Efficient}}] at (axis cs:6,6.02) {};
+
+        % Point outside the circle (overheating)
+        \node[circle, fill=black, inner sep=2pt, label=below:{Overheating}] at (axis cs:7,9) {};
+
+      \end{axis} 
+    }{Production possibilities curve}{fig:ppc}{0.9}
+
+    \begin{enumerate}
+
+      \item Points \textbf{on the curve} represent efficient production where all resources are fully utilized. 
+
+      \item Points \textbf{inside the curve} indicate underallocation of resources
+
+      \item Points \textbf{outside the curve}---although appearing unattainable---can occur temporarily during periods of economic overheating when resources are used beyond their sustainable capacity. However, this state is not sustainable and typically leads to inflation, resource depletion, or economic crisis.
+
+    \end{enumerate}
+
+    The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (\autoref{fig:ppc}) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
+
+    Shifts in the PPC represent economic growth or decline. \textbf{Outward shifts indicate economic growth}, resulting from increases in available resources, improvements in technology, or enhancements in human capital. On the other hand, \textbf{inward shifts indicate economic decline}, potentially from natural disasters, war, or resource depletion.
 
   \end{core}
 
   \begin{core}{Comparative and Absolute Advantage}
 
-    == COMPARITIVE AND ABSOLUTE ADVANTAGE
+    An economy has an \textbf{absolute advantage} when it can produce more of a good than another economy using the same resources. \textbf{Comparative advantage} is when an economy can produce a good at a lower opportunity cost than another economy.
 
+    It is impossible for one economy to have a comparative advantage in both goods simultaneously. This principle, known as the \textbf{law of comparative advantage}, implies that all economies can benefit from trade by specializing in goods where they hold a comparative advantage. The gains from trade arise from this specialization and the subsequent exchange of goods.
+    
   \end{core}
 
   \begin{core}{Cost-Benefit Analysis}
 
-    Cost-Benefit Analysis
-    Individuals and businesses make the best decisions by maximizing difference between total benefits and total costs
+    \textbf{Cost-benefit analysis} is a decision-making framework in which individuals and businesses compare the total benefits of an action against its total costs. The optimal decision is made when the marginal benefit equals the marginal cost.
 
-    Costs should include both explicit and implicit (opportunity) costs
+    Costs should include both \textbf{explicit costs} (\textit{direct monetary payments}) and \textbf{implicit costs} (\textit{opportunity costs of resources already owned}).
 
-    Example Problem: Adam decides to start a business. He spends \$200,000 in expenses to start the business, and earns \$255,000 in revenue during the first year. If he didn't start the business, he could’ve instead worked as an accountant earning a salary of \$50,000 and placed the \$200,000 he spent in a savings account with an annual interest rate of 3%.
-
-    What are the explicit and implicit costs of running the business for a year?
-
-    Explicit costs: 200,000 spent to start business
-
-    Implicit Costs
-    - Forgone Salary: 50,000
-    - Forgone Interest: 0.03 x 200,000 = 6,000
-    - Total Implicit Costs: 56,000
-
-    Accounting vs Economic Profit
-    - Accounting profit = revenue - explicit costs
-    - Economic profit = revenue - explicit and implicit costs
+    For instance, consider an entrepreneur who invests \$200,000 to start a business and earns \$255,000 in revenue during the first year. Subtracting explicit costs yields an \textbf{accounting profit} of \$55,000. However, this calculation ignores opportunity costs. Suppose this individual quit a \$50,000 salary job to pursue the business and foregone the 3\% annual interest (\$6,000) that the \$200,000 could have earned in a savings account. These implicit costs total \$56,000. When subtracted from the accounting profit, the \textbf{economic profit} is actually -\$1,000, revealing that the entrepreneur would have been financially better off keeping the salaried position and depositing the capital in savings (\textit{at least in the short run}).
 
   \end{core}
 
   \begin{core}{Utility}
 
-    Utility: the satisfaction from consuming a good
-    - marginal utility: additional utility from consuming an additional unit (ice cream cone example)
+    \textbf{Utility} represents the satisfaction or pleasure derived from consuming a good or service. Utility is subjective and varies across individuals.
+
+    \textbf{Marginal utility} is the additional satisfaction gained from consuming one more unit of a good. For most goods, marginal utility diminishes as consumption increases---a phenomenon known as the \textbf{law of diminishing marginal utility}. For example, the first ice cream cone provides substantial satisfaction, but the tenth cone provides much less.
+
+  \end{core} 
+
+  \begin{core}{Utility Maximization Using Marginal Analysis}
+
+    When faced with purchasing a combination of multiple products, a rational consumer should always incrementally purchase the product that provides the highest marginal utility per dollar spent on that marginal unit.
 
   \end{core}
 
   \begin{core}{Marginal Benefit and Cost}
 
-    Marginal benefit vs marginal cost analysis
-    - optimal quantity is where MB = MC
-    - there is a graph of mc as a horizontal line and mb as a downward sloping line because marginal benefit of consumption decreases as you consume more (constant marginal cost)
-    - there is another graph of mc as an upward sloping line (increasing marginal cost)
+    \textbf{Marginal benefit} represents the additional benefit received (\textit{often measured in monetary terms}), while \textbf{marginal cost} represents the additional cost of producing one more unit. Rational decision-making requires comparing marginal benefits and marginal costs.
 
-    Utility Maximization Using MU Analysis
-    - when faced with buying a combination of two products, the individual should always incrementally buy the product(s) that have the highest MU per dollar on that incremental purchase.
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity of Good Consumed}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+      \pgfiglabel{10,2}{MB = MU}
+
+      \upslope{0}
+      \pgfiglabel{10,8}{MC}
+
+      % Dot at intersection
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+      % Vertical dashed line from dot to x-axis
+      \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+      \pgfiglabel{2.5, 5.8}{}
+
+      \end{axis} 
+    }{Marginal benefit and marginal cost}{fig:mb_mc}{1}
+
+    The optimal quantity occurs where marginal benefit equals marginal cost ($\text{MB} = \text{MC}$). At this point, the net benefit from the last unit produced equals the cost of producing it, and total net benefits are maximized.
+
+    When $\text{MB} > \text{MC}$, producing additional units increases total welfare. When $\text{MB} < \text{MC}$, producing fewer units increases total welfare.
 
   \end{core}
 
   \begin{core}{Circular Flow of Income}
 
-    == CIRCULAR FLOW OF INCOME
+    The \textbf{Circular Flow of Income} illustrates how goods, services, and money flow between \textbf{households} and \textbf{firms} in an economy. Firms produce goods and services using factors of production provided by households and, in exchange, pay households wages, rent, interest, and profits. Households then use this income to purchase goods and services from firms, completing the circular flow.
+
+    \pgfig{
+      [
+        box/.style={rectangle, draw, thick, minimum width=3cm, minimum height=2cm, align=center},
+        arrow/.style={->, very thick, >=stealth},
+        curve/.style={very thick, >=stealth}
+      ]
+      
+      % Boxes for Households and Firms
+      \node[box] (households) at (0,0) {HOUSEHOLDS};
+      \node[box] (firms) at (8,0) {FIRMS};
+      
+      % Top curved arrow (Goods and services)
+      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services} (households.north);
+      
+      % Upper middle curved arrow (Consumer expenditure)
+      \draw[arrow, bend right=25] (households.south east) to node[below, sloped, pos=0.5] {Consumer expenditure} (firms.south west);
+      
+      % Lower middle curved arrow (Wages, rent, dividends)
+      \draw[arrow, bend right=25] (firms.north west) to node[above, sloped, pos=0.5] {Wages, rent, dividends} (households.north east);
+      
+      % Bottom curved arrow (Factors for production)
+      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production} (firms.south);
+      
+    }{Circular flow of income}{fig:circular}{1.0}
+
+    This model (\autoref{fig:circular}) illustrates the interdependence between sectors of the economy and forms the basis for measuring aggregate economic activity through Gross Domestic Product (\autoref{mac-core:gdp}).
 
   \end{core}
 
 \section{Supply and Demand}
-    
+
   \begin{core}{Demand}
 
-    == DEMAND AND DEMAND DETERMINANTS
+    \textbf{Demand} represents the quantity of a good that consumers are willing and able to purchase at various prices during a given time period. The \textbf{Law of Demand} states an inverse relationship between price and quantity demanded: as prices rise, quantity demanded falls, and vice versa. This relationship reflects both the \textbf{substitution effect} (\textit{consumers shift to cheaper alternatives}) and the \textbf{income effect} (\textit{higher prices reduce purchasing power}).
+
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+
+      \pgfiglabel{10,2}{Demand}
+
+      \end{axis} 
+    }{Demand curve}{fig:demand}{1}
+
+    The determinants of demand, factors that can cause the entire demand curve to shift, include:
+
+    \begin{enumerate}
+
+      \item \textbf{Consumer income}: Normal goods experience increased demand as income rises, while inferior goods experience decreased demand.
+
+      \item \textbf{The number of buyers} in the market.
+
+      \item \textbf{The prices of substitute and complementary goods}.
+
+      \item \textbf{Consumer expectations} about future prices.
+
+      \item \textbf{Consumer tastes and preferences}.
+
+    \end{enumerate}
 
   \end{core}
-
+    
   \begin{core}{Supply}
 
-    == SUPPLY AND SUPPLY DETERMINANTS
+    \textbf{Supply} represents the quantity of a good that producers are willing and able to offer for sale at various prices. The \textbf{Law of Supply} indicates a direct relationship between price and quantity supplied: higher prices incentivize producers to increase production.
+
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \upslope{0}
+
+      \pgfiglabel{10,8}{Supply}
+
+      \end{axis} 
+    }{Supply curve}{fig:supply}{1}
+
+    Determinants of supply include:
+
+    \begin{enumerate}
+
+      \item \textbf{Production costs}, including input prices and technology.
+
+      \item \textbf{The prices of related goods} firms could produce.
+
+      \item \textbf{Expectations about future prices}.
+
+      \item \textbf{The number of sellers} in the market.
+
+      \item \textbf{Government policies}, such as taxes, subsidies, and regulations.
+
+    \end{enumerate}
 
   \end{core}
 
   \begin{core}{Market Equilibrium}
 
-    == MARKET EQUILIBRIUM
+    \textbf{Market Equilibrium} occurs where the supply and demand curves intersect. At this point, the quantity supplied equals the quantity demanded, and the market clears. The equilibrium price and quantity are determined automatically through the price mechanism without external intervention. Correspondingly, adjustments in equilibrium price occur when supply and demand curve shifts.
 
-    == SHIFTS IN EQUILIBRIUM
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+      \pgfiglabel{10,2}{Demand}
+
+      \upslope{0}
+      \pgfiglabel{10,8}{Supply}
+
+      % Dot at intersection
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+      % Vertical dashed line from dot to x-axis
+      \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+      \pgfiglabel{2.5, 5.8}{$P_{eq}$}
+
+      % Horizontal dashed line from dot to y-axis
+      \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+      \pgfiglabel{6,2}{$Q_{eq}$}
+
+      \end{axis} 
+    }{Market equilibrium}{fig:equilibrium}{1}
 
   \end{core}
 
   \subsection{Elasticity}
 
-    \begin{core}{Elasticity}
-
-      Elasticity
-      - Measures how responsive something is to a change in something else
-
-    \end{core}
+    \textbf{Elasticity} measures how responsive one variable is to changes in another variable. In economics, elasticity quantifies the percentage change in one variable resulting from a one percent change in another variable.
 
     \begin{core}{Price Elasticity of Demand}
 
-      - Price Elasticity of Demand: Measures how much quantity demanded changes in response to changes in price
+      \textbf{Price Elasticity of Demand} measures how much quantity demanded changes in response to changes in price and is defined by the following equation.
 
       \[
-        E_D = \left| \frac{\%\Delta Q_{\text{demanded}}}{\%\Delta P} \right| = \left| \frac{\frac{Q_{\text{new}} - Q_{\text{old}}}{Q_{\text{old}}}}{\frac{P_{\text{new}} - P_{\text{old}}}{P_{\text{old}}}} \right|
+        E_D = \left| \frac{\%\Delta Q_d}{\%\Delta P} \right| = \left| \frac{\frac{Q_2 - Q_1}{Q_1}}{\frac{P_2 - P_1}{P_1}} \right|
       \]
 
-      Determinants of Price Elasticity of Demand
-      - Substitutes
-      More substitutes available = more elastic
-      more similar substitutes = more elastic
-      - Want vs Need
-      need = more elastic
-      - Timeframe
-      short term = less elastic
-      - share of income
-      lower share of income = less elastic
+      The following are the determinants of the price elasticity of demand.
 
-      Describing Elasticity
-      - a horizontal demand curve is perfectly elastic, meaning that price increases will lead to zero demand and price decreases will lead to infinite demand
-      - an elastic coefficient between 1 and infinity is elastic
-      - "" at 1 is unit elastic
-      - "" between 0 and 1 is inelastic
-      - "" at 0 is perfectly inelastic (vertical demand curve)
+      \begin{enumerate}
+
+        \item \textbf{Availability of substitutes}: More substitutes available means more elastic demand; more similar substitutes means more elastic demand.
+
+        \item \textbf{Necessity versus luxury}: Necessities tend to have more inelastic demand.
+
+        \item \textbf{Time frame}: Short-run demand tends to be less elastic than long-run demand.
+
+        \item \textbf{Share of income}: Goods that represent a smaller share of income tend to have less elastic demand.
+
+      \end{enumerate}
+
+      The following are the terms economists use to describe elasticity.
+
+      \begin{itemize}
+
+        \item \textbf{Perfectly elastic} ($\text{coefficient} = ∞$): A horizontal demand curve---price increases lead to zero demand, price decreases lead to infinite demand.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \horizontalslope{5}
+
+          \pgfiglabel{5,6}{Demand}
+
+          \end{axis} 
+        }{Perfect elasticity}{fig:perfect_elasticity}{1}
+
+        \item \textbf{Elastic} ($\text{coefficient} > 1$): Quantity demanded responds more than proportionally to price changes.
+
+        \item \textbf{Unit elastic} ($\text{coefficient} = 1$): Quantity demanded responds proportionally to price changes.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \downslope{0}
+
+          \pgfiglabel{10,2}{Demand}
+
+          \end{axis} 
+        }{Unit elasticity}{fig:unit_elasticity}{1}
+
+        \item \textbf{Inelastic} ($\text{coefficient} < 1$): Quantity demanded responds less than proportionally to price changes.
+
+        \item \textbf{Perfectly inelastic} ($\text{coefficient} = 0$): A vertical demand curve—quantity demanded does not respond to price changes.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \verticalslope{5}
+
+          \pgfiglabel{7,5}{Demand}
+
+          \end{axis} 
+        }{Perfect inelasticity}{fig:perfect_inelasticity}{1}
+
+      \end{itemize}
 
     \end{core}
 
     \begin{core}{Total Revenue Test}
 
-      Total revenue test
-      - if revenue decreases as price and quantity increases, elastic
-      - if revenue doesn't change as price and quantity change, unit elastic
-      - if revenue increases as price and quantity increases, inelastic
+      The \textbf{total revenue test} is a method for determining elasticity without calculation:
 
-      the total revenue test also implies that a standard downward sloping demand curve is elastic towards the top left, unit elastic in the middle, and inelastic on the bottom right
+      \begin{itemize}
+
+        \item If total revenue decreases as price increases, demand is \textbf{elastic}.
+
+        \item If total revenue remains constant as price changes, demand is \textbf{unit elastic}.
+
+        \item If total revenue increases as price increases, demand is \textbf{inelastic}.
+
+      \end{itemize}
+
+      For a standard downward-sloping demand curve, elasticity varies along the curve: it is elastic in the upper-left portion, unit elastic at the midpoint, and inelastic in the lower-right portion.
+
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+
+        \pgfiglabel{11,1}{Demand}
+
+        \draw[->, thick, dashed] (axis cs:2,8) -- (axis cs:2,7)
+            node[left, at start] {\footnotesize$\Delta$12\%};
+        \draw[->, thick, dashed] (axis cs:2,7) -- (axis cs:3,7)
+            node[midway, below] {\footnotesize$\Delta$50\%};
+        \pgfiglabel{4,9}{Elastic}
+
+
+        \draw[->, thick, dashed] (axis cs:4.5,5.5) -- (axis cs:4.5,4.5)
+            node[left, at start] {\footnotesize$\Delta$18\%};
+        \draw[->, thick, dashed] (axis cs:4.5,4.5) -- (axis cs:5.5,4.5)
+            node[midway, below] {\footnotesize$\Delta$22\%};
+        \pgfiglabel{7,7}{Unit Elastic}
+
+        \draw[->, thick, dashed] (axis cs:7,3) -- (axis cs:7,2)
+            node[left, at start] {\footnotesize$\Delta$33\%};
+        \draw[->, thick, dashed] (axis cs:7,2) -- (axis cs:8,2)
+            node[midway, below] {\footnotesize$\Delta$14\%};
+        \pgfiglabel{9,4}{Inelastic}
+
+        \end{axis} 
+      }{Total revenue test visualized}{fig:revenue_test}{1}
 
     \end{core}
 
     \begin{core}{Price Elasticity of Supply}
 
-      Price Elasticity of Supply: Measures how much quantity supplied changes in response to changes in price 
+      \textbf{Price Elasticity of Supply} measures how much quantity supplied changes in response to changes in price:
+
       \[
-        E_S = \frac{\%\Delta Q_{\text{supplied}}}{\%\Delta P} = \frac{\frac{Q_{\text{new}} - Q_{\text{old}}}{Q_{\text{old}}}}{\frac{P_{\text{new}} - P_{\text{old}}}{P_{\text{old}}}}
+        E_S = \frac{\%\Delta Q_s}{\%\Delta P} = \frac{\frac{Q_2 - Q_1}{Q_1}}{\frac{P_2 - P_1}{P_1}}
       \]
 
-      Determinants of Price Elasticity of Supply
-      - Timeframe
-      short term = less elastic
+      The primary determinant of price elasticity of supply is \textbf{time frame}. Short-run supply tends to be less elastic because producers cannot easily adjust their production capacity, while long-run supply is more elastic as firms can adjust inputs and production processes.
 
     \end{core}
 
     \begin{core}{Other Elasticities}
 
-      Other Elasticities
+      \textbf{Income Elasticity of Demand} measures how quantity demanded responds to changes in consumer income.
 
-      - Income Elasticity of Demand: measures the elasticity of a good based on the income level of consumers
-      if positive, good is normal
-      if negative, good is inferior
+      \[
+        E_I = \frac{\%\Delta Q_{\text{demanded}}}{\%\Delta \text{Income}}
+      \]
 
-      - Cross Elasticity of Demand: measures the elasticity of a good compared to levels of a substitute of complementary product
-      if positive, x and y are substitutes
-      if negative, x and y are complementary
+      \begin{itemize}
+
+        \item If $E_I > 0$, the good is a \textbf{normal good} (\textit{demand increases with income}).
+
+        \item If $E_I < 0$, the good is an \textbf{inferior good} (\textit{demand decreases with income}).
+
+      \end{itemize}
+
+      < INCOME ELASTICITY OF DEMAND PLOT >
+
+      \textbf{Cross Elasticity of Demand} measures how quantity demanded of one good responds to price changes in another good:
+
+      \[
+        E_{XY} = \frac{\%\Delta Q_{\text{demanded of X}}}{\%\Delta P_Y}
+      \]
+
+      \begin{itemize}
+
+        \item If $E_{XY} > 0$, X and Y are \textbf{substitutes} (\textit{price increase in Y increases demand for X}).
+
+        \item If $E_{XY} < 0$, X and Y are \textbf{complementary goods} (\textit{price increase in Y decreases demand for X}).
+
+      \end{itemize}
+
+      < CROSS ELASTICITY OF DEMAND PLOT >
 
     \end{core}
 
   \subsection{Surplus}
     
-    \begin{core}{Consumer Surplus} % SEPERATE OUT THE COMBINED SECTION INTO CONSUMER AND PRODUCER
+    \begin{core}{Consumer Surplus}
+
+      \textbf{Consumer surplus} represents the benefit consumers receive when they pay less than their maximum willingness to pay. The demand curve can be interpreted as the \textbf{marginal benefit} consumers receive from each unit consumed, reflecting the law of diminishing marginal utility.
+
+      < CONSUMER SURPLUS PLOT >
+
+      At market equilibrium, consumers who value the good more than the equilibrium price receive surplus because they pay the equilibrium price despite being willing to pay more. The total consumer surplus is represented by the area between the demand curve and the equilibrium price line, thus may increase or decrease depending on the demand elasticity of the good or service
 
     \end{core}
 
     \begin{core}{Producer Surplus}
 
+      \textbf{Producer surplus} represents the benefit producers receive when they sell at a price higher than their minimum acceptable price. The supply curve can be interpreted as the \textbf{marginal cost} of producing each additional unit.
+
+      <PRODUCER SURPLUS PLOT >
+
+      At prices above the market equilibrium, producers receive surplus because they sell at the equilibrium price despite being willing to accept less. The total producer surplus is represented by the area between the supply curve and the equilibrium price line, thus may increase or decrease depending on the supply elasticity of the good or service.
+
     \end{core}
 
-Consumer and Producer Surplus
-  
-  First, we can define the demand curve as the marginal utility from the consumer side (down sloping because of diminishing marginal utility)
-  Also, we can define the supply curve as the marginal cost from the producer side (upward sloping because law of diminishing returns)
+    \begin{core}{Allocative Efficiency}
 
-  The curves represent the marginla utility and cost summation of individual consumer and producer curves
+      \textbf{Allocative efficiency} occurs when resources are distributed in a way that maximizes the total benefit to society. In the context of consumer and producer surplus, allocative efficiency is a state in which \textbf{consumer and producer surplus is maximized}.
 
-  At the market equililbrium, since the purchaser of the first units is willing to pay more than the equilibirum price, his/her consumer surplus would be the difference between what he pays and what we would have paid
+      < ALLOCATIVELY EFFICIENT PLOT >
 
-  The reverse is true on the supplier side (producer surplus)
+    \end{core}
 
-  The total consumer and producer surplus is represented by the area between the eq price line and the respective mb and mc curves
+    Certain market interventions and imperfections can cause markets to deviate from allocative efficiency, resulting in deadweight loss and reduced social welfare.
 
-  Allocative Efficiency: total economic surplus is maximized, occurs at quantity where MB = MC (market equilibrium)
+    \begin{core}{Government Intervention and Surplus}
 
-  Keep in mind that the consumer and producer surplus can be greater or smaller based on the elasticity of the d or s curve
+      Governments can intervene directly in domestic markets through policies that alter equilibrium prices and quantities. 
 
-  \begin{core}{Government Intervention \& Surplus}
+      \begin{enumerate}
 
-    Effects of Government Intervention: REFERNCE TO LAST SECTION
+        \item A \textbf{price ceiling} is a government-mandated maximum price below the equilibrium. When binding, a price ceiling increases consumer surplus but decreases producer surplus, creating a \textbf{deadweight loss} due to reduced quantity exchanged.
 
-    Price Ceiling
-    A price ceiling below the market equilibrium would set the price below market eq price, thus CS increases and PS decreases. however there is also deadweight loss
+        < PLOT >
 
-    Price Floor
-    The opposite effect occurs when there is a price floor (increased PS, decreased CS, deadweight loss)
+        \item A \textbf{price floor} is a government-mandated minimum price above the equilibrium. When binding, a price floor increases producer surplus but decreases consumer surplus, also creating deadweight loss.
 
-    Per unit Taxes
-    The supply curve would shift up exactly by that amount, raising the eq price and decreasing both CS and PS, the square section between CS and PS is the tax revenue and the triangle that sticks out is DWL
-      Depending on how inelastic and elastic the S and D curves are, the incidence of tax can be more carried by the consumers or the producers
+        < PLOT >
 
-  \end{core}
+        \item A \textbf{per-unit tax} is a tax on each unit sold. It shifts the supply curve upward by the tax amount and consequently raises the equilibrium price, decreases both consumer and producer surplus, and creates deadweight loss. The tax revenue is captured between CS and PS. The relative incidence of the tax on consumers and producers depends on the relative elasticities of supply and demand---inelastic curves bear a greater burden.
 
-  \begin{core}{International Trade \& Surplus}
+        < PLOT >
 
-    International Trade
+      \end{enumerate}
 
-    World supply and demand curves are found by horizontally adding market supply and demand curves
-      In this case, because everyone now switches to the world supply and demand curve, a country will export or import the surplus or deficit of goods it possess based on its economic supply and demand curve
+    \end{core}
 
-  \end{core}
+    \begin{core}{International Trade and Surplus}
 
-  \begin{core}{Public Policy \& Surplus}
+      \textbf{International Trade} allows countries to specialize in producing goods where they have a comparative advantage. The world supply and demand curves are determined by horizontally adding individual countries' supply and demand curves.
 
-    Public Policy
+      < PLOT >
 
-    Tariff: a fee on domestic importer of the goods
-    When a tariff of 1 dollar is imposed, consumer surplus is increased, producer surplus is increased, and a portion of the plot is captured as tariff revenue 
+      A country will \textbf{export} goods when its domestic supply exceeds domestic demand at the world price, and will \textbf{import} goods when domestic demand exceeds domestic supply.
 
-    Quotas: a limits on how many units of a product you can import
-    This as essentially the same effect as tariffs, exporters can charge a higher price because you are importing less in terms of count
+      Governments can also implement public policies to regulate international trade. These interventions are typically designed to shield domestic producers from foreign competition and support emerging domestic industries.
 
-  \end{core}
+      \begin{enumerate}
+
+        \item \textbf{Tariffs} are taxes on imported goods. When imposed, they increase domestic producer surplus and generate tariff revenue for the government, but decrease consumer surplus and create deadweight loss.
+
+        < PLOT >
+
+        \item \textbf{Quotas} limit the quantity of imports. They have similar effects to tariffs, except that the quota rent (\textit{the revenue from limiting supply}) is captured by foreign exporters rather than the domestic government.
+
+        < PLOT >
+
+      \end{enumerate}
+
+    \end{core}
  
 \section{Production and Cost}
 
-Production Function: shows how much output is created for various different inputs (factory size, count, number of workers, capital, etc.)
+  A \textbf{production function} shows how much output is created for various combinations of inputs, such as factory size, capital, and labor.
 
-Short Run vs Long Run
-- short run: at least one input is fixed
-- long run: all inputs can be adjusted
+  The distinction between \textbf{short run} and \textbf{long run} is fundamental:
+  \begin{itemize}
 
-Total Marginal, and Average Product
-- marginal is the incremental additional count of product you get from increasing a production input (such as workers)
-- average product is the average amount of product you get from increasing a production input (such as workers)
+    \item \textbf{Short run}: At least one input is fixed.
 
-Graphing TP, MP, and AP - PLOT THIS
-- MP intersects AP at the AP's maximum
+    \item \textbf{Long run}: All inputs can be adjusted.
+
+  \end{itemize}
+
+  \subsection{Product Measures}
+
+    \begin{core}{Total, Marginal, and Average Product}
+
+      \textbf{Total Product (TP)} is the total output produced.
+
+      \textbf{Marginal Product (MP)} is the additional output from increasing one input by one unit.
+
+      \textbf{Average Product (AP)} is output per unit of input.
+
+      Graphically, marginal product intersects average product at the average product's maximum point.
+
+      % Total Marginal, and Average Product
+      % - marginal is the incremental additional count of product you get from increasing a production input (such as workers)
+      % - average product is the average amount of product you get from increasing a production input (such as workers)
+      % Graphing TP, MP, and AP - PLOT THIS
+      % MP intersects AP at the AP's maximum
+
+    \end{core}
 
   \subsection{Short Run}
 
     \begin{core}{Fixed and Variable Costs}
 
-      Short run fixed and variable costs
+      In the short run, costs are categorized as:
 
-      Fixed costs: stay constant, equal to total costs at 0 units of output (ex. rent)
+      \textbf{Fixed costs (FC)} remain constant regardless of output, such as rent. These exist even at zero output.
 
-      Variable costs: depend on amount of output (ex. payment to workers)
-      Remember: implicit costs are also included in economic terms
+      \textbf{Variable costs (VC)} depend on the amount of output, such as payments to workers and raw materials.
+
+      \textbf{Total cost (TC) = FC + VC}
+
+      In economic analysis, both explicit and implicit costs are considered.
+
+      % Short run fixed and variable costs
+      % Fixed costs: stay constant, equal to total costs at 0 units of output (ex. rent)
+      % Variable costs: depend on amount of output (ex. payment to workers)
+      % Remember: implicit costs are also included in economic terms
 
     \end{core}
 
-    \begin{core}{Short Run Average Total Cost}
+    \begin{core}{Short Run Cost Curves}
 
-      Short run 
-      total cost
-      marginal cost
-      average total cost
-      average fixed cost
-      average variable cost
+      \textbf{Marginal cost (MC)} is the additional cost of producing one more unit.
 
-      Graphs of MC, ATC, AFC, and AVC - PLOT THIS
+      \textbf{Average total cost (ATC)} is total cost divided by quantity.
 
-      MC intersects ATC and AVC at their minimums
+      \textbf{Average fixed cost (AFC)} is fixed cost divided by quantity.
 
-      ATC and AVC are U-shaped
+      \textbf{Average variable cost (AVC)} is variable cost divided by quantity.
 
-      AFC constantly decreases
+      Graphically, MC intersects both ATC and AVC at their minimum points. ATC and AVC are U-shaped due to diminishing marginal returns. AFC constantly decreases as output increases.
 
-      When marginal revenue for each product sold is fixed, it appears as a horizontal line
+      When marginal revenue is constant (as in perfect competition), the firm produces where MR = MC to maximize profit.
 
-      In order to maximize profits, produce at quantity where MR = MC
+      % Short run 
+      % total cost
+      % marginal cost
+      % average total cost
+      % average fixed cost
+      % average variable cost
+      % Graphs of MC, ATC, AFC, and AVC - PLOT THIS
+      % MC intersects ATC and AVC at their minimums
+      % ATC and AVC are U-shaped
+      % AFC constantly decreases
+      % When marginal revenue for each product sold is fixed, it appears as a horizontal line
+      % In order to maximize profits, produce at quantity where MR = MC
 
     \end{core}
 
   \subsection{Long Run}
 
     \begin{core}{Long Run Average Total Cost}
- 
-      In long run, costs aren't fixed (example. you can choose what size factory to rent)
 
-      LRATC is also U-shaped and is made up of many SRATC curves
+      In the long run, all costs are variable as firms can choose their scale of operation.
 
-      The LRATC is U shaped for the follow reasons
+      The \textbf{Long-Run Average Total Cost (LRATC)} curve is composed of many short-run average total cost (SRATC) curves at different fixed input levels. The LRATC is U-shaped for three reasons:
 
-        Economies of Scale: decreasing LRATC
-          increased specialization
-          deals for larger purchases
+      \begin{enumerate}
 
-        Diseconomies of Scale: increasing LRATC
-          firm is too large, hard to manage
-          hiring more workers requires higher wages
+        \item \textbf{Economies of Scale}: Decreasing LRATC as output increases, resulting from increased specialization and bulk purchasing discounts.
 
-        Minimum Efficient Scale: Minimum LRATC
+        \item \textbf{Diseconomies of Scale}: Increasing LRATC as output increases, resulting from management difficulties and higher wages required to attract additional workers.
+
+        \item \textbf{Minimum Efficient Scale}: The lowest output level at which LRATC is minimized.
+
+      \end{enumerate}
+
+      % In long run, costs aren't fixed (example. you can choose what size factory to rent)
+      % LRATC is also U-shaped and is made up of many SRATC curves
+      % The LRATC is U shaped for the follow reasons
+      %   Economies of Scale: decreasing LRATC
+      %     increased specialization
+      %     deals for larger purchases
+      %   Diseconomies of Scale: increasing LRATC
+      %     firm is too large, hard to manage
+      %     hiring more workers requires higher wages
+      %   Minimum Efficient Scale: Minimum LRATC
 
     \end{core}
 
     \begin{core}{Returns to Scale}
 
-      Increasing Returns to Scale: Output increases by more than increase in inputs
-      - Example: Increasing all inputs by 70\% increases outputs by 80\%
+      \textbf{Increasing Returns to Scale}: Output increases by more than the percentage increase in inputs. For example, increasing all inputs by 70\% increases output by 80\%.
 
-      Decreasing Returns to Scale; Output increases by less than increase in inputs
-      - Example: Increasing all inputs by 70\% increases output by 60\%
+      \textbf{Decreasing Returns to Scale}: Output increases by less than the percentage increase in inputs. For example, increasing all inputs by 70\% increases output by 60\%.
 
-      Constant Returns to Scale: Output increases by same amount as increase in inputs
-      - Example: Increasing all inputs by 70\% increases output by 70\%
+      \textbf{Constant Returns to Scale}: Output increases by the same percentage as inputs. For example, increasing all inputs by 70\% increases output by 70\%.
+
+      % Increasing Returns to Scale: Output increases by more than increase in inputs
+      % - Example: Increasing all inputs by 70% increases outputs by 80%
+      % Decreasing Returns to Scale; Output increases by less than increase in inputs
+      % - Example: Increasing all inputs by 70% increases output by 60%
+      % Constant Returns to Scale: Output increases by same amount as increase in inputs
+      % - Example: Increasing all inputs by 70% increases output by 70%
 
     \end{core}
 
 \section{Perfect Competition}
     
-  \begin{core}{Perfect Competition Characteristics}
+  \begin{core}{Characteristics of Perfect Competition}
 
-    Characteristics:
-    - Large number of firms
-    - Each firm makes up a negligible amount of market output
-    - No barriers to entry
-    - The firms are PRICE TAKERS: they sell at market price
-      - The firm's demand is perfectly elastic
-        - setting a price higher than market price will cause 0 demand for firm's product
-        - they can sell any amount of output at market price
+    \textbf{Perfect competition} is a market structure characterized by:
 
-    TAKE A LOOK AT THE PERFECT COMP MARKET AND FIRM PLOTS
+    \begin{enumerate}
+
+      \item \textbf{Large number of firms}: No single firm controls a significant market share.
+
+      \item \textbf{Price-taking behavior}: Each firm sells at the market price determined by industry supply and demand.
+
+      \item \textbf{No barriers to entry or exit}: Firms can freely enter or leave the market.
+
+      \item \textbf{Identical products}: All firms sell the same product.
+
+    \end{enumerate}
+
+    The individual firm's demand curve is perfectly elastic (horizontal) at the market price. If a firm raises its price above market price, quantity demanded falls to zero. The firm can sell any quantity at the market price.
+
+    % Characteristics:
+    % - Large number of firms
+    % - Each firm makes up a negligible amount of market output
+    % - No barriers to entry
+    % - The firms are PRICE TAKERS: they sell at market price
+    %   - The firm's demand is perfectly elastic
+    %     - setting a price higher than market price will cause 0 demand for firm's product
+    %     - they can sell any amount of output at market price
+    % TAKE A LOOK AT THE PERFECT COMP MARKET AND FIRM PLOTS
 
   \end{core}
 
   \begin{core}{Firm Entry and Exit}
 
-      If P > min ATC, firms make economic profit
-      • More firms will enter in long run
+    The decision to enter or exit depends on profitability:
 
-      If P = min ATC, firms make a normal profit (0 economic profit)
-      • Firms will neither enter nor leave
+    \begin{itemize}
 
-      If min AVC < P < min ATC, firms produce to minimize loss in short run
-      • Firms will leave in long run
+      \item If P > min ATC: Firms earn \textbf{economic profit}, attracting new firms to enter.
 
-      If P < min AVC, firms shut down and leave immediately
+      \item If P = min ATC: Firms earn \textbf{normal profit} (zero economic profit). Firms neither enter nor leave.
+
+      \item If min AVC < P < min ATC: Firms incur losses but continue producing in the short run to minimize losses. Firms will exit in the long run.
+
+      \item If P < min AVC: Firms shut down immediately as variable costs exceed revenue.
+
+    \end{itemize}
+
+    % If P > min ATC, firms make economic profit
+    % • More firms will enter in long run
+    % If P = min ATC, firms make a normal profit (0 economic profit)
+    % • Firms will neither enter nor leave
+    % If min AVC < P < min ATC, firms produce to minimize loss in short run
+    % • Firms will leave in long run
+    % If P < min AVC, firms shut down and leave immediately
 
   \end{core}
 
-  \begin{core}{Perfect Competition Long Run Equilibrium}
+  \begin{core}{Long Run Equilibrium in Perfect Competition}
 
-    Long Run: The firms will produce where P = min ATC and make a normal profit
-    • Productive Efficiency: Producing at min ATC (quantity where MC = ATC)
+    In long-run equilibrium, perfectly competitive firms produce where P = min ATC, earning normal profit.
 
-    Reason
-    • If P > min ATC, firms will enter, causing the market supply curve to shift right and price to decrease
-    • If P < min ATC, firms will leave, causing the market supply curve to shift left and price to increase
+    This outcome is \textbf{productively efficient} because goods are produced at the minimum average total cost.
+
+    The adjustment process: If P > min ATC, new firms enter, increasing market supply and lowering price until P = min ATC. If P < min ATC, firms exit, decreasing supply and raising price until P = min ATC.
+
+    % Long Run: The firms will produce where P = min ATC and make a normal profit
+    % • Productive Efficiency: Producing at min ATC (quantity where MC = ATC)
+    % Reason
+    % • If P > min ATC, firms will enter, causing the market supply curve to shift right and price to decrease
+    % • If P < min ATC, firms will leave, causing the market supply curve to shift left and price to increase
 
   \end{core}
 
 \section{Imperfect Competition}
-  
-  *In imperfect competition, to sell more of a product, the price must be lowered
 
-  \begin{core}{Imperfect Competition Types}
+  In \textbf{imperfect competition}, individual firms face downward-sloping demand curves. To sell more output, firms must lower price. Unlike perfect competition, firms have some control over price.
 
-    Monopoly: One firm selling product, price maker, very high barriers to entry
+  % *In imperfect competition, to sell more of a product, the price must be lowered
 
-    Monopolistic Competition: Large number of firms selling differentiated products, low to no barriers to entry (like nike, adidas, underarmour, puma, etc)
+  \begin{core}{Types of Market Structures}
 
-    Oligopoly: Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (like gas station oil firms)
+    \begin{enumerate}
+
+      \item \textbf{Monopoly}: A single firm selling a product with no close substitutes. High barriers to entry allow the firm to be a price maker.
+
+      \item \textbf{Monopolistic Competition}: Many firms selling differentiated products with low barriers to entry. Examples include restaurants and clothing brands like Nike, Adidas, and Under Armour.
+
+      \item \textbf{Oligopoly}: A small number of firms selling identical or differentiated products. Characterized by interdependence and high barriers to entry. Examples include smartphone manufacturers (Apple, Samsung) and beverage companies (Coke, Pepsi).
+
+    \end{enumerate}
+
+    % Monopoly: One firm selling product, price maker, very high barriers to entry
+    % Monopolistic Competition: Large number of firms selling differentiated products, low to no barriers to entry (like nike, adidas, underarmour, puma, etc)
+    % Oligopoly: Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (like gas station oil firms)
 
   \end{core}
 
   \begin{core}{Barriers to Entry}
 
-    Examples of Barriers to Entry
-      Economies of Scale
-      Patents \& Legal Statutes
-      High Start-up Costs
-      Ownership of Resources
+    Barriers to entry prevent new firms from entering a market:
+
+    \begin{enumerate}
+
+      \item \textbf{Economies of scale}: Large firms have cost advantages.
+
+      \item \textbf{Patents and legal statutes}: Legal protection of intellectual property.
+
+      \item \textbf{High start-up costs}: Significant capital requirements.
+
+      \item \textbf{Ownership of key resources}: Control over essential inputs.
+
+    \end{enumerate}
+
+    % Examples of Barriers to Entry
+    %   Economies of Scale
+    %   Patents & Legal Statutes
+    %   High Start-up Costs
+    %   Ownership of Resources
 
   \end{core}
 
   \subsection{Monopoly}
 
-  MONOPOLY INTRO
+    \begin{core}{Monopoly Demand and Revenue}
 
-  \begin{core}{Monopoly Demand \& Revenue}
+      A \textbf{monopolist} faces the market demand curve, which is downward sloping. The marginal revenue (MR) curve lies below the demand curve because lowering price to sell more units applies to all units, not just the marginal unit.
 
-    Monopoly Demand \& Marginal Revenue
-    The demand curve is downward sloping and the MR curve is even more downward sloping because of the price effect
+      To maximize profit, the monopolist produces where MR = MC, then sets price on the demand curve at that quantity. This creates producer surplus at the expense of consumer surplus and generates deadweight loss.
 
-    To maximize profit, produce at quantity where MR=MC, and price at the D curve price for that quantity
-    this maximizes producer surplus at the expense of consumer surplus and the creation of DWL
+      % Monopoly Demand & Marginal Revenue
+      % The demand curve is downward sloping and the MR curve is even more downward sloping because of the price effect
+      % To maximize profit, produce at quantity where MR=MC, and price at the D curve price for that quantity
+      % this maximizes producer surplus at the expense of consumer surplus and the creation of DWL
 
-  \end{core}
+    \end{core}
 
-  \begin{core}{Natural Monopolies}
+    \begin{core}{Natural Monopoly}
 
-    Natural Monopoly
+      A \textbf{natural monopoly} occurs when a single firm can serve the entire market at a lower cost than multiple firms. This typically happens when long-run average total cost declines throughout the relevant range of demand, meaning marginal cost is always below average total cost.
 
-    Occurs when only one firm can achieve economies of scale (Decreasing LRATC)
+      % Natural Monopoly
+      % Occurs when only one firm can achieve economies of scale (Decreasing LRATC)
+      % ATC decreases throughout the entire effective demand of the product, so MC is constantly below ATC
 
-    ATC decreases throughout the entire effective demand of the product, so MC is constantly below ATC
+    \end{core}
 
-  \end{core}
+    \begin{core}{Price Discrimination}
 
-  \begin{core}{Price Discrimination}
-  
-    Charging different prices for the same product
+      \textbf{Price discrimination} involves charging different customers different prices for the same product. Examples include senior/child discounts and geographic pricing.
 
-    Examples: Different ticket prices based on age, selling good in different places with different prices
+      Price discrimination increases producer surplus at the expense of consumer surplus.
 
-    Increases producer surplus at the expense of consumer surplus
+      \textbf{Perfect price discrimination} charges each consumer their maximum willingness to pay. In this case, MR equals the demand curve, eliminating consumer surplus—all surplus goes to the producer.
 
-    Perfect Price Discrimination: charging each consumer the maximum they're willing to pay, MR becomes equal to D curve because of the absence of the price effect
-      here all the surplus is the producer's, no consumer surplus
+      % Charging different prices for the same product
+      % Examples: Different ticket prices based on age, selling good in different places with different prices
+      % Increases producer surplus at the expense of consumer surplus
+      % Perfect Price Discrimination: charging each consumer the maximum they're willing to pay, MR becomes equal to D curve because of the absence of the price effect
+      %   here all the surplus is the producer's, no consumer surplus
 
-  \end{core}
+    \end{core}
 
-\subsection{Monopolistic Competition}
+  \subsection{Monopolistic Competition}
 
-  MONOPOLISTIC COMPETITION INTRO (ex restaurants, clothing brands)
+    \begin{core}{Monopolistic Competition}
 
-    Large number of firms selling differentiated products, low to no barriers to entry
+      \textbf{Monopolistic competition} features many firms selling differentiated products with low barriers to entry. Due to product differentiation, each firm faces a relatively elastic demand curve.
 
-    Usually demand is more elastic than for a monopoly
+      Like monopolies, firms produce where MR = MC and set price on the demand curve.
 
-    Firms make the same decisions as a monopoly: sell at the quantity where MR = MC and at the price on the demand curve
-
-  \begin{core}{Long Run Monopolisitic Competition}
-
-    In the long run, firms enter or leave until D intersects ATC once at the quantity where MR = MC; each firm makes a normal profit (0 economic profit)
-    this is not efficient because it leaves excess capacity (the difference beteen productively efficient quantity and quantity produced) 
-
-  \end{core}
-
-\subsection{Oligopolies}
-
-Oligopolies
-
-  Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (Examples: Apple, Google, Samsung, Coke/Pepsi)
-
-  \begin{core}{Cartels}
-
-    Cartel: Different firms colluding (making agreements, such as collectively raising prices and limiting quantity), making the firms more similar to a monopoly
-
-    • Antitrust laws often restrict cartels or make them illegal
-    • Firms may have incentive to break agreement out of own interest
+      % MONOPOLISTIC COMPETITION INTRO (ex restaurants, clothing brands)
+      % Large number of firms selling differentiated products, low to no barriers to entry
+      % Usually demand is more elastic than for a monopoly
+      % Firms make the same decisions as a monopoly: sell at the quantity where MR = MC and at the price on the demand curve
 
   \end{core}
 
-\section{Game Theory: (\textit{A Brief Lesson})}
+    \begin{core}{Long Run Equilibrium}
+
+      In long-run equilibrium, new firms enter until economic profit equals zero. The demand curve is tangent to ATC at the quantity where MR = MC.
+
+      Monopolistically competitive markets are not productively efficient because they produce below minimum ATC (leaving excess capacity) and not allocatively efficient because price exceeds marginal cost.
+
+      % In the long run, firms enter or leave until D intersects ATC once at the quantity where MR = MC; each firm makes a normal profit (0 economic profit)
+      % this is not efficient because it leaves excess capacity (the difference beteen productively efficient quantity and quantity produced) 
+
+  \end{core}
+
+  \subsection{Oligopoly}
+
+    \begin{core}{Oligopoly}
+
+      \textbf{Oligopoly} involves a small number of firms with high barriers to entry. Firms are interdependent—each firm's decisions significantly affect competitors.
+
+      % Oligopolies
+      % Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (Examples: Apple, Google, Samsung, Coke/Pepsi)
+
+    \end{core}
+
+    \begin{core}{Cartels}
+
+      A \textbf{cartel} is a group of firms that collude to act like a single monopolist, restricting output and raising prices. Antitrust laws often restrict or prohibit cartels. However, individual firms have incentives to cheat on agreements to increase their own profits.
+
+      % Cartel: Different firms colluding (making agreements, such as collectively raising prices and limiting quantity), making the firms more similar to a monopoly
+      % • Antitrust laws often restrict cartels or make them illegal
+      % • Firms may have incentive to break agreement out of own interest
+
+    \end{core}
+
+\section{Game Theory: (A Brief Lesson)}
 
   \begin{core}{Payoff Tables}
 
-    Game Theory Payoff Table
+    \textbf{Game theory} analyzes strategic interactions where outcomes depend on all players' decisions.
 
-    Two firms selling a similar product can either set their price low or high
+    A \textbf{payoff table} shows outcomes for each combination of strategies. Consider two firms choosing between high and low prices:
 
-    • If both firms price high, they each earn \$100 in profit
-    • If one firm prices high and the other low, the firm that priced high earns \$50 in profit and the firm that priced low earns \$130 in profit
-    • If both firms price low, they each earn \$80 in profit
+    \begin{center}
+      \begin{tabular}{c|c|c|}
+        & \textbf{Firm B Low} & \textbf{Firm B High} \\
+        \hline
+        \textbf{Firm A Low} & (80, 80) & (130, 50) \\
+        \hline
+        \textbf{Firm A High} & (50, 130) & (100, 100) \\
+      \end{tabular}
+    \end{center}
 
-    Strategy: A course of action a firm can take
+    A \textbf{strategy} is a course of action a firm can take. A \textbf{dominant strategy} yields a better outcome regardless of what the other firm does.
 
-    Dominant Strategy: A strategy that will always produce a better outcome for a firm, regardless of what the other firm decides
+    % Game Theory Payoff Table
+    % Two firms selling a similar product can either set their price low or high
+    % • If both firms price high, they each earn $100 in profit
+    % • If one firm prices high and the other low, the firm that priced high earns $50 in profit and the firm that priced low earns $130 in profit
+    % • If both firms price low, they each earn $80 in profit
+    % Strategy: A course of action a firm can take
+    % Dominant Strategy: A strategy that will always produce a better outcome for a firm, regardless of what the other firm decides
 
   \end{core}
 
   \begin{core}{Nash Equilibrium}
 
-    Nash Equilibrium: A situation where neither firm can obtain a better outcome by changing their strategy, assuming the other firm doesn't change their decision
+    A \textbf{Nash Equilibrium} occurs when neither firm can improve its outcome by changing strategy, assuming the other firm doesn't change. Neither player has an incentive to deviate unilaterally.
+
+    % Nash Equilibrium: A situation where neither firm can obtain a better outcome by changing their strategy, assuming the other firm doesn't change their decision
 
   \end{core}
 
-\section{Factor Markets} 
+\section{Factor Markets}
 
-  Factor Market: pretty much talking about labor
+  \textbf{Factor markets} study the demand and supply for productive resources, particularly labor.
+
+  % Factor Market: pretty much talking about labor
 
   \begin{core}{Factor Demand}
 
-    Demand for Factor: The amount of that factor (e.g. workers) that firms are willing to purchase at each price (e.g. wage)
+    \textbf{Factor demand} is the quantity of a factor (e.g., labor) that firms are willing to purchase at each price (e.g., wage).
 
-    Demand for a factor is derived, meaning that it depends on the demand for something else (in this case, the product)
+    Factor demand is \textbf{derived demand}—it depends on the demand for the final product being produced.
 
-    Determinants of Factor Demand
-      price of product (wage)
-      productivity of factors
-      substitute and complementary resources (AI?)
+    \textbf{Determinants of factor demand:}
+    \begin{enumerate}
+
+      \item Price of the product.
+
+      \item Productivity of the factor.
+
+      \item Prices of substitute and complementary resources.
+
+    \end{enumerate}
+
+    % Demand for Factor: The amount of that factor (e.g. workers) that firms are willing to purchase at each price (e.g. wage)
+    % Demand for a factor is derived, meaning that it depends on the demand for something else (in this case, the product)
+    % Determinants of Factor Demand
+    %   price of product (wage)
+    %   productivity of factors
+    %   substitute and complementary resources (AI?)
 
   \end{core}
 
   \begin{core}{Factor Supply}
 
-    Supply of Factor: The amount of that factor available at each price
+    \textbf{Factor supply} is the quantity of a factor available at each price.
 
-    Determinants of Factor Supply
-      workforce size
-      education
-      alternative options
-      preference of leisure
+    \textbf{Determinants of factor supply:}
+    \begin{enumerate}
+
+      \item Workforce size.
+
+      \item Education and training.
+
+      \item Alternative options available.
+
+      \item Preferences for leisure.
+
+    \end{enumerate}
+
+    % Supply of Factor: The amount of that factor available at each price
+    % Determinants of Factor Supply
+    %   workforce size
+    %   education
+    %   alternative options
+    %   preference of leisure
 
   \end{core}
 
-  \begin{core}{Marginal Revenue Product }
+  \begin{core}{Marginal Revenue Product and Marginal Resource Cost}
 
-    Marginal Revenue Product and Marginal Resource Cost
+    \textbf{Marginal Revenue Product (MRP)} is the additional revenue generated by employing one more unit of a factor. In a perfectly competitive product market, MRP = MP × P.
 
-    Marginal Revenue Product (MRP): The additional revenue generated by one additional unit of the factor (Equal to MP * P in a perfectly competitive product market)
+    \textbf{Marginal Resource Cost (MRC)} is the additional cost of employing one more unit of a factor. In a perfectly competitive factor market, MRC equals the factor price and is constant.
 
-    Marginal Resource Cost (MRC): The additional cost for one additional unit of the factor (Constant in a perfectly competitive factor market)
+    Firms maximize profit by employing factors where MRP = MRC.
 
-    Profit Maximization: MRP = MRC -> IMPORTANT PLOT (MRP is a upside down U curve and MRC is flat, this is assuming a perfectly competitive factor market)
-
-    Total product maximization using marginal product analysis is done by incrementally choosing the factor that provides the current best marginal product per dollar spentA
+    \textbf{Marginal Revenue Product and Marginal Resource Cost}
+    % Marginal Revenue Product (MRP): The additional revenue generated by one additional unit of the factor (Equal to MP * P in a perfectly competitive product market)
+    % Marginal Resource Cost (MRC): The additional cost for one additional unit of the factor (Constant in a perfectly competitive factor market)
+    % Profit Maximization: MRP = MRC -> IMPORTANT PLOT (MRP is a upside down U curve and MRC is flat, this is assuming a perfectly competitive factor market)
+    % Total product maximization using marginal product analysis is done by incrementally choosing the factor that provides the current best marginal product per dollar spentA
 
   \end{core}
 
   \begin{core}{Monopsony}
 
-    Monopsony (monopoly in the context of product inputs) Labor Market
+    \textbf{Monopsony} exists when a single buyer (employer) controls the market for a factor, similar to monopoly in the product market.
 
-    Only one firm employing workers; firm decidest he workers wage
+    In a monopsony, the marginal resource cost rises faster than the factor supply curve because hiring additional workers requires raising wages for all workers, not just the marginal one.
 
-    MRC increase faster than supply because purchasing additional workers requires raising wages for everyone (analogous to MR with demand)
-      The best mode of action is to acquire inputs at the quantity where MRC intersects MRP and pay at the supply curve price, allowing for greater profits
+    The profit-maximizing monopsonist hires where MRC = MRP and pays the wage on the supply curve at that quantity.
+
+    % Monopsony (monopoly in the context of product inputs) Labor Market
+    % Only one firm employing workers; firm decidest he workers wage
+    % MRC increase faster than supply because purchasing additional workers requires raising wages for everyone (analogous to MR with demand)
+    % The best mode of action is to acquire inputs at the quantity where MRC intersects MRP and pay at the supply curve price, allowing for greater profits
 
   \end{core}
 
@@ -570,76 +1052,109 @@ Oligopolies
 
   \begin{core}{Market Failure}
 
-    Market Failure: When market forces fail to produce the allocatively efficient quantity of output
+    \textbf{Market failure} occurs when market forces fail to produce the allocatively efficient quantity of output. This can result from externalities, public goods, imperfect competition, or information asymmetries.
+
+    % Market Failure: When market forces fail to produce the allocatively efficient quantity of output
 
   \end{core}
 
   \begin{core}{Government Intervention Methods}
 
-    Government Intervention Methods
+    The government can intervene in markets through various mechanisms:
 
-    • Lump Sum Tax/Subsidy: Doesn't affect MB, MC, or profit-maximizing output; only affects fixed costs
+    \begin{enumerate}
 
-    • Per-Unit Tax/Subsidy: Affects either MB or MC and therefore profit-maximizing output
-    * Taxes decrease output; Subsidies increase output
+      \item \textbf{Lump-sum tax/subsidy}: Does not affect marginal benefit, marginal cost, or profit-maximizing output; only affects fixed costs.
 
-    • Price Ceiling/Floor: If binding, affects profit-maximizing output
+      \item \textbf{Per-unit tax/subsidy}: Affects either marginal benefit or marginal cost, thereby changing profit-maximizing output. Taxes decrease output; subsidies increase output.
 
-    • Imposing Regulations
-      * Antitrust Laws
+      \item \textbf{Price ceiling/floor}: When binding, affects profit-maximizing output.
+
+      \item \textbf{Regulations}: Including antitrust laws to promote competition.
+
+    \end{enumerate}
+
+    % Government Intervention Methods
+    % • Lump Sum Tax/Subsidy: Doesn't affect MB, MC, or profit-maximizing output; only affects fixed costs
+    % • Per-Unit Tax/Subsidy: Affects either MB or MC and therefore profit-maximizing output
+    % * Taxes decrease output; Subsidies increase output
+    % • Price Ceiling/Floor: If binding, affects profit-maximizing output
+    % • Imposing Regulations
+    %   * Antitrust Laws
 
   \end{core}
 
   \subsection{Externalities}
 
-    Externality: When an individual or individuals not involved in a market transaction are affected by the transaction
+    An \textbf{externality} occurs when individuals not involved in a transaction are affected by it.
 
     \begin{core}{Positive Externalities}
 
-      * Positive Externality (Example: Streetlights ensure driver safety at night)
+      A \textbf{positive externality} exists when a transaction generates benefits for third parties. Example: Streetlights improve driver safety for all road users, not just those who pay for them.
+
+      % * Positive Externality (Example: Streetlights ensure driver safety at night)
 
     \end{core}
 
     \begin{core}{Negative Externalities}
 
-      * Negative Externality (Example: A factory releases pollution)
+      A \textbf{negative externality} exists when a transaction imposes costs on third parties. Example: Factory pollution affects the health of nearby residents.
+
+      % * Negative Externality (Example: A factory releases pollution)
 
     \end{core}
 
-    \begin{core}{Marginal Social Cost/Benefit}
+    \begin{core}{Marginal Social Cost and Benefit}
 
-      The graphs of marginal cost and marginal benefit we've seen so far have been referring to only private costs and benefits. In reality there could be a greater cost due to negative externaltiies (marginal social cost) or greater benefits due to positive externalities (marginal social benefit)
+      Previously, our marginal cost and benefit curves represented only \textbf{private} costs and benefits. In reality, externalities create \textbf{social} costs and benefits.
 
-      Negative externality: Government should tax per unit to shift MPC up and reduce output to allocatively efficient amount
+      \textbf{Marginal Social Cost (MSC)} = Marginal Private Cost + Marginal External Cost
 
-      Positive externality: Government should subsidize per unit to shift MPB up and increase output to allocatively efficient amount
+      \textbf{Marginal Social Benefit (MSB)} = Marginal Private Benefit + Marginal External Benefit
+
+      For negative externalities, the government should impose a per-unit tax equal to the marginal external cost to shift marginal private cost upward and reduce output to the allocatively efficient level.
+
+      For positive externalities, the government should provide a per-unit subsidy equal to the marginal external benefit to shift marginal private benefit upward and increase output to the allocatively efficient level.
+
+      % The graphs of marginal cost and marginal benefit we've seen so far have been referring to only private costs and benefits. In reality there could be a greater cost due to negative externaltiies (marginal social cost) or greater benefits due to positive externalities (marginal social benefit)
+      % Negative externality: Government should tax per unit to shift MPC up and reduce output to allocatively efficient amount
+      % Positive externality: Government should subsidize per unit to shift MPB up and increase output to allocatively efficient amount
 
     \end{core}
 
   \subsection{Monopoly Interventions}
 
-    Interventions INTRO
+    \begin{core}{General Monopoly Intervention}
 
-    \begin{core}{General Monopoly Invervention}
+      To address monopoly inefficiency, the government can:
 
-      Socially optimal: ceiling at price where D = MC
+      \begin{enumerate}
 
-      OR
+        \item Impose a \textbf{price ceiling} where demand equals marginal cost, achieving the socially optimal quantity.
 
-      Socially optimal: subsidize per unit so that MR = MC at allocatively efficient quantity
+        \item Provide a \textbf{per-unit subsidy} so that marginal revenue equals marginal cost at the allocatively efficient quantity.
+
+      \end{enumerate}
+
+      % Socially optimal: ceiling at price where D = MC
+      % OR
+      % Socially optimal: subsidize per unit so that MR = MC at allocatively efficient quantity
 
     \end{core}
 
     \begin{core}{Natural Monopoly Price Ceilings}
 
-      Effect of Price Ceilings on Natural Monopolies
+      Without regulation, a natural monopoly produces where MR = MC and charges the price on the demand curve.
 
-      Without Price Ceiling: Firm produces at quantity where MR = MC and sells at D curve price for that quantity
+      \textbf{Fair return pricing}: Price ceiling where demand equals ATC, allowing the firm to earn normal profit.
 
-      Fair return: ceilign price where D = ATC; firm makes a normal profit
+      \textbf{Socially optimal pricing}: Price ceiling where demand equals MC, maximizing total economic surplus but causing the firm to incur an economic loss. The government can provide a lump-sum subsidy to offset this loss.
 
-      Socially optimal: ceiling at price where D = MC; total economic surplus is maximized, but firm produces at an economic loss
-        solution: provide a lump sum subsisty to offset the loss
+      % Effect of Price Ceilings on Natural Monopolies
+      % Without Price Ceiling: Firm produces at quantity where MR = MC and sells at D curve price for that quantity
+      % Fair return: ceilign price where D = ATC; firm makes a normal profit
+      % Socially optimal: ceiling at price where D = MC; total economic surplus is maximized, but firm produces at an economic loss
+      %   solution: provide a lump sum subsisty to offset the loss
 
     \end{core}
 
@@ -647,66 +1162,109 @@ Oligopolies
 
     \begin{core}{Types of Goods}
 
-      +-------------------------+----------------------------+----------------------------+
-      |                         | Rival (Decreasable)        | Non-Rival (Infinite)       |
-      +-------------------------+----------------------------+----------------------------+
-      | Excludable              | Private Goods              | Club Goods                 |
-      | (Must pay to use)       | Ex: Clothing, Coffee       | Ex: Netflix, Gyms          |
-      +-------------------------+----------------------------+----------------------------+
-      | Non-Excludable          | Common Resources           | Public Goods               |
-      | (Cannot prevent use)    | Ex: Fish in the ocean      | Ex: National Defense       |
-      +-------------------------+----------------------------+----------------------------+
+      Goods can be classified by two characteristics:
+
+      \begin{enumerate}
+
+        \item \textbf{Rivalrous}: One person's consumption reduces availability for others.
+
+        \item \textbf{Excludable}: People can be prevented from consuming the good.
+
+      \end{enumerate}
+
+      \begin{center}
+        \begin{tabular}{c|c|c|}
+          & \textbf{Rivalrous} & \textbf{Non-Rivalrous} \\
+          \hline
+          \textbf{Excludable} & Private Goods & Club Goods \\
+          & (Clothing, Coffee) & (Netflix, Gyms) \\
+          \hline
+          \textbf{Non-Excludable} & Common Resources & Public Goods \\
+          & (Fish in ocean) & (National Defense) \\
+        \end{tabular}
+      \end{center}
+
+      % +-------------------------+----------------------------+----------------------------+
+      % |                         | Rival (Decreasable)        | Non-Rival (Infinite)       |
+      % +-------------------------+----------------------------+----------------------------+
+      % | Excludable             | Private Goods              | Club Goods                 |
+      % | (Must pay to use)      | Ex: Clothing, Coffee       | Ex: Netflix, Gyms          |
+      % +-------------------------+----------------------------+----------------------------+
+      % | Non-Excludable         | Common Resources           | Public Goods               |
+      % | (Cannot prevent use)   | Ex: Fish in the ocean      | Ex: National Defense      |
+      % +-------------------------+----------------------------+----------------------------+
 
     \end{core}
 
     \begin{core}{Public Goods Issues}
 
-      Problems
+      \textbf{Tragedy of the Commons}: People overconsume common goods because they don't bear the full cost of consumption. Example: Overfishing depletes fish stocks.
 
-      Tragedy of the Commons: People overconsume common goods (Example: People overfish and deplete the amount of fish left in the future)
+      Solution: Government limits use through permits or regulations.
 
-      * Solution: Government should limit use (Example: Giving permits)
+      \textbf{Free Rider Problem}: People benefit from non-excludable goods without paying for them.
 
-      Free Rider Problem: People who benefit from non-excludable goods don’t pay or underpay for them
+      Solution: Government funds public goods through taxation.
 
-      * Solution: Government should funds the goods
+      % Problems
+      % Tragedy of the Commons: People overconsume common goods (Example: People overfish and deplete the amount of fish left in the future)
+      % * Solution: Government should limit use (Example: Giving permits)
+      % Free Rider Problem: People who benefit from non-excludable goods don't pay or underpay for them
+      % * Solution: Government should funds the goods
 
     \end{core}
 
   \subsection{Income Equality}
 
-    \begin{core}{Lorenz Curve \& the Gini Coefficient}
+    \begin{core}{Lorenz Curve and Gini Coefficient}
 
-      Lorenz Curve: a graph that shows the cumulative share of income earned by the cumulative share of the population. 
+      The \textbf{Lorenz Curve} graphs the cumulative share of income against the cumulative share of population.
 
-      Gini Coefficient: single number that summarizes the Lorenz Curve. It measures the area between the "Line of Perfect Equality" and the actual "Lorenz Curve." 
-          
-        0 <= G <= 1
-        0\% <= G <= 100\%
+      The \textbf{Gini Coefficient} (G) is a single number summarizing the Lorenz Curve, measuring the area between the line of perfect equality and the actual Lorenz Curve:
 
-        G = 0 means perfect equality (everyone has the same amount of income)
+      \[
+        0 \leq G \leq 1 \quad \text{or} \quad 0\% \leq G \leq 100\%
+      \]
 
-        G = 1 means perfect inequality (one person hold all the income)
+      \begin{itemize}
 
-    \end{core}
+        \item G = 0: Perfect equality (everyone has same income)
 
-    \begin{core}{Government Interventions to Inequality}
+        \item G = 1: Perfect inequality (one person holds all income)
 
-      Progressive Taxes (Higher income = Higher percent of income taxed) decrease inequality
+      \end{itemize}
 
-      Proportional Taxes (Fixed percent of income taxed) don’t affect income distribution
-
-      Regressive Taxes (Lower income = Higher percent of income taxed) increase inequality
-
-      Transfer payments to people with lower income reduces inequality
-
-      Minimum wage and anti-discrimination laws can also reduce inequality
+      % Lorenz Curve: a graph that shows the cumulative share of income earned by the cumulative share of population. 
+      % Gini Coefficient: single number that summarizes the Lorenz Curve. It measures the area between the "Line of Perfect Equality" and the actual "Lorenz Curve." 
+      %   0 <= G <= 1
+      %   0% <= G <= 100%
+      %   G = 0 means perfect equality (everyone has the same amount of income)
+      %   G = 1 means perfect inequality (one person hold all the income)
 
     \end{core}
-  
+
+    \begin{core}{Government Interventions to Reduce Inequality}
+
+      \begin{enumerate}
+
+        \item \textbf{Progressive taxes}: Higher income = higher tax percentage. Reduces inequality.
+
+        \item \textbf{Proportional taxes}: Fixed tax percentage. Does not affect income distribution.
+
+        \item \textbf{Regressive taxes}: Lower income = higher tax percentage. Increases inequality.
+
+        \item \textbf{Transfer payments}: Direct payments to lower-income individuals reduce inequality.
+
+        \item \textbf{Minimum wage and anti-discrimination laws}: Can also reduce inequality.
+
+      \end{enumerate}
+
+      % Progressive Taxes (Higher income = Higher percent of income taxed) decrease inequality
+      % Proportional Taxes (Fixed percent of income taxed) don't affect income distribution
+      % Regressive Taxes (Lower income = Higher percent of income taxed) increase inequality
+      % Transfer payments to people with lower income reduces inequality
+      % Minimum wage and anti-discrimination laws can also reduce inequality
+
+    \end{core}
+   
 \end{document}
-
-
-
-
-

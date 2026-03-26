@@ -19,6 +19,27 @@
   \end{figure}
 }
 
+\newcommand{\sbs}[3]{
+  \begin{minipage}[t]{#1\textwidth}
+    \setlength{\parskip}{0.8em}
+    #2
+    \vspace{4pt}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{\textwidth-#1\textwidth-1em}
+    \vspace{-1em}
+    #3
+  \end{minipage}
+}
+
+\newcommand{\itemspace}[0]{
+  \vspace{0.8em}
+}
+
+\newcommand{\mlistpreset}[0]{
+  [itemsep=8pt, leftmargin=1.5em]
+}
+
 \newcommand{\mymultifig}[8]{
   \begin{figure}[H]%
     \centering%
