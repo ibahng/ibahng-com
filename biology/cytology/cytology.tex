@@ -226,11 +226,13 @@
 
       \reactionfig{ 
         \scheme{
-          \chemname{
-            \chemfig{
-              [:30]*6(------)
-            }
-          }{\large Monosaccharide}
+          \raisebox{-0.9cm}{
+            \chemname{
+              \chemfig{
+                [:30]*6(------)
+              }
+            }{\large Monosaccharide}
+          }
           \qquad
           \qquad
           \chemname{
@@ -344,7 +346,65 @@
 
       This asymmetric structure gives phospholipids their amphipathic nature, featuring a \textbf{hydrophilic} (\textit{water-loving}) phosphate-containing "head" and two \textbf{hydrophobic} (\textit{water-fearing}) fatty acid "tails."
 
-      \myfig{0.55}{cytology_figures/phospholipid}{caption}{fig:fig7} % CHANGE
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]R
+            -[:0]O
+            -[:0]P
+            (-[:90]\ce{O-})
+            (=[:-90]O)
+            -[:0]O
+            -[:0]\ce{CH2}
+            -[:-90,2]\ce{CH}
+            (
+            -[:0]O
+            -[:0]C
+            (=[:90]O)
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            =[:0]
+            -[:50]
+            -[:-10]
+            -[:50]
+            -[:-10]
+            -[:50]
+            -[:-10]
+            -[:50]
+            -[:-10]
+            )
+            -[:-90,2]\ce{CH2}
+            (
+            -[:0]O
+            -[:0]C
+            (=[:90]O)
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            -[:30]
+            )
+          }
+        }
+      }{Phospholipid}{fig:filler10}{0.65}
 
       In the diagram above, one of the fatty acid tails contains a double bond, making it \textbf{unsaturated}. This double bond introduces a kink in the hydrocarbon chain that prevents adjacent phospholipids from packing tightly together, thereby increasing membrane fluidity.
 
@@ -474,17 +534,15 @@
 
       \textbf{Prokaryotic} cells---which include the domains Bacteria and Archaea---are characterized by the absence of a membrane-enclosed nucleus. Instead, their DNA is concentrated in an irregularly shaped region called the \textbf{nucleoid}, which is not separated from the cytosol by a membrane. Prokaryotes also lack other membrane-bound organelles, making them structurally simpler than eukaryotic cells. They are generally smaller in size and most exist as single-celled organisms.
 
-      \myfig{0.3}{cytology_figures/prokaryotic_cell}{caption}{fig:fig18}
+      \myfig{0.5}{cytology_figures/prokaryotic_cell}{Prokaryotic cell}{fig:fig18}
 
     \end{core}
 
     \begin{core}{Eukaryotic Cells}
 
-      \textbf{Eukaryotic} cells---found in animals, plants, fungi, and protists---are distinguished by the presence of a true, membrane-bound nucleus that houses their genetic material. Beyond the nucleus, eukaryotic cells contain an extensive system of membrane-bound organelles, each specialized for specific functions, making them considerably larger and more structurally complex than prokaryotes. Among eukaryotes, \textbf{animal cells} and \textbf{plant cells} represent the two most commonly studied types. While they share many organelles, including mitochondria (CORE CONCEPT REFERENCE), endoplasmic reticulum (CORE CONCEPT REFERENCE), and Golgi apparatus (CORE CONCEPT REFERENCE), plant cells possess unique structures: \textbf{chloroplasts} for photosynthesis (CORE CONCEPT REFERENCE), a rigid \textbf{cell wall} exterior (CORE CONCEPT REFERENCE) to the plasma membrane, and a large \textbf{central vacuole} (CORE CONCEPT REFERENCE) for storage and maintaining turgor pressure.
+      \textbf{Eukaryotic} cells---found in animals, plants, fungi, and protists---are distinguished by the presence of a true, membrane-bound nucleus that houses their genetic material. Beyond the nucleus, eukaryotic cells contain an extensive system of membrane-bound organelles, each specialized for specific functions, making them considerably larger and more structurally complex than prokaryotes. Among eukaryotes, \textbf{animal cells} and \textbf{plant cells} represent the two most commonly studied types. While they share many organelles, including mitochondria (\autoref{core:mito}), endoplasmic reticulum (\autoref{core:er}), and Golgi apparatus (\autoref{core:golgi}), plant cells possess unique structures: \textbf{chloroplasts} for photosynthesis (\autoref{core:chl}), a rigid \textbf{cell wall} exterior (\autoref{core:cw}) to the plasma membrane, and a large \textbf{central vacuole} (\autoref{core:vac}) for storage and maintaining turgor pressure.
 
-      \myfig{0.3}{cytology_figures/animal_cell}{caption}{fig:fig19}
-
-      \myfig{0.3}{cytology_figures/plant_cell}{caption}{fig:fig20}
+      \myfig{0.85}{cytology_figures/ap_cell}{Eukaryotic cells}{fig:fig19}
 
     \end{core}
 
@@ -492,7 +550,7 @@
 
     The following sections examine the major organelles found in cells and their specialized functions.
 
-    \begin{core}{Cell Organelles (\textit{Nucleus})}
+    \begin{core}[label=core:nuc]{Cell Organelles (\textit{Nucleus})}
 
       \sbs{0.6}{
         The \textbf{nucleus} houses most of the genetic material (\textit{DNA}) within a protective double membrane called the \textbf{nuclear envelope}. This envelope is perforated by nuclear pores that regulate the passage of molecules between the nucleus and cytoplasm. Within the nucleus lies the \textbf{nucleolus}, a distinct region where ribosomal RNA (\textit{rRNA}) is synthesized and ribosomal subunits are assembled before export to the cytoplasm.
@@ -502,11 +560,9 @@
         \myfig{}{cytology_figures/nucleus}{Nucleus}{fig:fig21}
       }
   
-      \textit{Further details on chromosome structure and the organization of genetic material are presented in CORE CONCEPT REFERENCE.}
-
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Ribosomes})}
+    \begin{core}[label=core:rib]{Cell Organelles (\textit{Ribosomes})}
 
       \sbs{0.6}{
         \textbf{Ribosomes} are molecular machines composed of ribosomal RNA (\textit{rRNA}) and associated proteins that catalyze \textbf{protein synthesis}, translating genetic information from messenger RNA into polypeptide chains. Ribosomes exist in two functional populations within the cell.
@@ -524,7 +580,7 @@
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Endoplasmic Reticulum})}
+    \begin{core}[label=core:er]{Cell Organelles (\textit{Endoplasmic Reticulum})}
 
       \sbs{0.5}{
         The \textbf{endoplasmic reticulum (ER)} is an extensive network of interconnected membranes that exists in two distinct forms: smooth ER and rough ER, each specialized for different functions.
@@ -533,7 +589,7 @@
 
           \item The \textbf{smooth ER} lacks ribosomes and synthesizes lipids, metabolizes carbohydrates, detoxifies drugs and poisons, and stores calcium ions. 
 
-          \item The \textbf{rough ER}, studded with bound ribosomes, produces proteins destined for secretion, incorporation into membranes, or delivery to other organelles.
+          \item The \textbf{rough ER}, studded with bound ribosomes, produces proteins intended for secretion, incorporation into membranes, or delivery to other organelles.
 
         \end{itemize}
       }{
@@ -544,7 +600,7 @@
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Golgi Apparatus})}
+    \begin{core}[label=core:golgi]{Cell Organelles (\textit{Golgi Apparatus})}
 
       \sbs{0.6}{
         The \textbf{Golgi apparatus} consists of polarized, membrane-bound sacs called \textbf{cisternae} that modify, sort, and package proteins and lipids received from the ER. Materials enter at the \textbf{cis face} and migrate through the medial stacks, where they undergo enzymatic processing such as \textbf{glycosylation}---the addition or trimming of sugar chains to create functional glycoproteins and glycolipids.
@@ -556,73 +612,81 @@
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Lysosome})}
+    \begin{core}[label=core:lyso]{Cell Organelles (\textit{Lysosome})}
 
-      \textbf{Lysosomes} are membrane-bound organelles containing hydrolytic enzymes that digest macromolecules, damaged organelles, and engulfed materials. These enzymes function optimally in the acidic environment maintained within the lysosome. Lysosomes fuse with food vacuoles to break down ingested material and recycle the cell's own components through \textbf{autophagy}.
+      \sbs{0.6}{
+        \textbf{Lysosomes} are membrane-bound organelles containing a diverse array of hydrolytic enzymes capable of digesting macromolecules, damaged organelles, and engulfed materials. These enzymes function optimally in the acidic environment actively maintained by proton pumps. This acidic pH is crucial for enzymatic activity and provides a safety mechanism---should the lysosome rupture, the enzymes would be inactive in the neutral pH of the cytosol, protecting the cell from self-digestion.
 
-      \myfig{0.6}{cytology_figures/lysosome}{caption}{fig:fig26}
+        Lysosomes play a critical role in recycling the cell's own components through \textbf{autophagy}, a process in which damaged or obsolete organelles are engulfed and degraded, allowing their molecular components to be reused by the cell.
+      }{
+        \myfig{0.9}{cytology_figures/lysosome}{Lysosome}{fig:fig26}
+      }
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Vacuoles})}
+    \begin{core}[label=core:vac]{Cell Organelles (\textit{Vacuoles})}
 
-      \textbf{Vacuoles} are membrane-bound organelles derived from the ER and Golgi apparatus that serve diverse functions.
-      
+      \textbf{Vacuoles} are membrane-bound organelles derived from the endoplasmic reticulum and Golgi apparatus that serve diverse functions across different cell types.
+
       \begin{itemize}
 
-        \item \textbf{Food vacuoles} form through \textbf{phagocytosis}, engulfing large particles for enzymatic digestion.
-
-        \item \textbf{Contractile vacuoles} in freshwater protists pump out excess water to maintain osmotic balance. 
-
-        \item Plant cells contain a large \textbf{central vacuole} that stores water, ions, nutrients, and wastes while maintaining turgor pressure, which provides structural rigidity to the cell.
+        \item \textbf{Food vacuoles} (\textit{also called phagosomes}) form through \textbf{phagocytosis} (CORE CONCEPT REFERENCE). These vacuoles subsequently fuse with lysosomes to break down the engulfed material into usable nutrients.
+        
+        \item \textbf{Contractile vacuoles} in freshwater protists function as osmoregulatory organelles that actively pump out excess water to maintain osmotic balance.
+        
+        \item Plant cells contain a large \textbf{central vacuole} that serves multiple essential functions: it stores water, inorganic ions, nutrients, pigments, and metabolic wastes. Critically, the central vacuole maintains \textbf{turgor pressure}---the outward pressure of the vacuolar fluid against the cell wall---which provides rigidity to the cell and supports the plant body, allowing herbaceous plants to stand upright.
 
       \end{itemize}
 
-      \myfig{0.7}{cytology_figures/vacuole}{caption}{fig:fig27}
+      \myfig{0.6}{cytology_figures/vacuole}{Plant cell central vacuole}{fig:fig27}
 
     \end{core}    
 
-    The nuclear envelope, endoplasmic reticulum, Golgi apparatus, lysosomes, vacuoles, and plasma membrane (\textit{covered in CORE CONCEPT REFERENCE}) are functionally interconnected components of the \textbf{endomembrane system}.
+    The nuclear envelope, endoplasmic reticulum, Golgi apparatus, lysosomes, vacuoles, and plasma membrane (\autoref{core:phosbi}) are functionally interconnected components of the \textbf{endomembrane system}.
 
     These organelles work together through vesicular transport---small membrane-bound sacs bud from one organelle, travel through the cytosol, and fuse with another, delivering proteins and lipids to their destinations. This integrated network coordinates protein synthesis and modification, lipid metabolism, intracellular transport of macromolecules, and cellular secretion, enabling eukaryotic cells to compartmentalize and regulate complex biochemical processes.
 
-    \begin{core}{Cell Organelles (\textit{Mitochondria})}
+    \begin{core}[label=core:mito]{Cell Organelles (\textit{Mitochondria})}
 
-      \textbf{Mitochondria} are the sites of \textbf{cellular respiration} (CORE CONCEPT REFERENCE), the metabolic process that generates ATP by extracting energy from sugars and other organic molecules in the presence of oxygen. 
-      
-      These organelles possess a distinctive double-membrane structure: the smooth outer membrane and the highly folded inner membrane, whose folds form shelf-like projections called \textbf{cristae} that dramatically increase surface area for ATP synthesis. The interior compartment, termed the \textbf{mitochondrial matrix}, contains the enzymes for the \textbf{citric acid cycle} (CORE CONCEPT REFERENCE), along with mitochondrial DNA and ribosomes. Mitochondria are present in nearly all eukaryotic cells, reflecting the universal need for efficient energy production.
+      \sbs{0.6}{
+        \textbf{Mitochondria} are the sites of \textbf{cellular respiration} (CORE CONCEPT REFERENCE), the metabolic process that generates ATP by extracting energy from sugars and other organic molecules in the presence of oxygen. 
 
-      \myfig{0.4}{cytology_figures/mitochondria}{caption}{fig:fig28}
+        These organelles possess a distinctive double-membrane structure: the smooth outer membrane and the highly folded inner membrane, whose folds form projections called \textbf{cristae} that increase surface area for ATP synthesis. The interior compartment---the \textbf{mitochondrial matrix}---contains the enzymes for the \textbf{citric acid cycle} (CORE CONCEPT REFERENCE). Mitochondria are present in nearly all eukaryotic cells, reflecting the universal need for efficient energy production.
+      }{
+        \myfig{0.9}{cytology_figures/mitochondria}{Mitochondria}{fig:fig28}
+      }
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Chloroplast})}
+    \begin{core}[label=core:chl]{Cell Organelles (\textit{Chloroplast})}
 
       \textbf{Chloroplasts}, found in plants and algae, are the sites of \textbf{photosynthesis} (CORE CONCEPT REFERENCE), converting light energy into chemical energy stored in sugars.
 
-      Like mitochondria, chloroplasts possess a double membrane and contain their own DNA and ribosomes. Within the chloroplast lies an internal membrane system of disc-shaped sacs called \textbf{thylakoids}, which stack to form structures called \textbf{grana}. The thylakoid membranes contain chlorophyll and other pigments that capture light energy. Surrounding the thylakoids is the \textbf{stroma}, a fluid-filled space containing enzymes for the Calvin cycle (CORE CONCEPT REFERENCE), which synthesizes sugars from carbon dioxide.
+      Like mitochondria, chloroplasts possess a double membrane and contain their own DNA and ribosomes. Within the chloroplast lies an internal membrane system of disc-shaped sacs called \textbf{thylakoids}, which stack to form structures called \textbf{grana}. The thylakoid membranes contain chlorophyll and other pigments that capture light energy. Surrounding the thylakoids is the \textbf{stroma}, a fluid-filled space containing enzymes for the \textbf{Calvin cycle} (CORE CONCEPT REFERENCE), which synthesizes sugars from carbon dioxide.
 
-      \myfig{0.55}{cytology_figures/chloroplast}{caption}{fig:fig29}
+      \myfig{0.55}{cytology_figures/chloroplast}{Chloroplasts}{fig:fig29}
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Cytoskeleton})}
+    \begin{core}[label=core:cyto]{Cell Organelles (\textit{Cytoskeleton})}
 
       The \textbf{cytoskeleton} is a dynamic network of protein fibers that maintains cell shape, anchors organelles, enables cellular movement, and facilitates intracellular transport. This structural framework consists of three distinct types of fibers, each with specialized functions.
 
       \begin{enumerate}
 
-        \item \textbf{Microtubules} are hollow tubes composed of the protein \textbf{tubulin} arranged in a cylindrical structure. These largest cytoskeletal fibers serve as tracks along which motor proteins transport organelles and vesicles, form the mitotic spindle that separates chromosomes during cell division (CORE CONCEPT REFERENCE), and constitute the structural core of \textbf{cilia} and \textbf{flagella}. In animal cells, microtubules radiate outward from the \textbf{centrosome}, an organizing center containing a pair of cylindrical structures called \textbf{centrioles}.
-
-        \myfig{0.45}{cytology_figures/microtubules}{caption}{fig:fig30}
+        \sbs{0.5}{
+          \item \textbf{Microtubules} are hollow tubes composed of the protein \textbf{tubulin} arranged in a cylindrical structure. These largest cytoskeletal fibers serve as tracks along which motor proteins transport organelles and vesicles, form the mitotic spindle that separates chromosomes during cell division (CORE CONCEPT REFERENCE), and constitute the structural core of \textbf{cilia} and \textbf{flagella}. In animal cells, microtubules radiate outward from the \textbf{centrosome}, an organizing center containing a pair of cylindrical structures called \textbf{centrioles}.
+        }{
+          \myfig{0.9}{cytology_figures/microtubules}{Microtubules}{fig:fig30}
+        }
 
         \item \textbf{Microfilaments}, also called \textbf{actin filaments}, are the thinnest cytoskeletal components, consisting of twisted double chains of the protein \textbf{actin}. These filaments resist tensile forces, maintain cell shape, and enable various forms of cellular movement. In muscle cells, actin filaments interact with the motor protein \textbf{myosin} to generate the sliding forces that produce muscle contraction.
 
-        \myfig{0.6}{cytology_figures/microfilament}{caption}{fig:fig31}
+        \myfig{0.7}{cytology_figures/microfilament}{Microfilament}{fig:fig31}
 
-        \item \textbf{Intermediate filaments} are rope-like structures with diameters between those of microtubules and microfilaments. In contrast to the rapidly assembling and disassembling microtubules and microfilaments, intermediate filaments form more \textbf{permanent} structures that provide mechanical stability to cells. They reinforce cell shape and anchor organelles in fixed positions.
+        \item \textbf{Intermediate filaments} are rope-like structures with diameters between those of microtubules and microfilaments. In contrast to the rapidly assembling and disassembling microtubules and microfilaments, intermediate filaments form more \textbf{permanent} structures that provide mechanical stability to cells. They reinforce cell shape and anchor organelles in fixed positions.S
 
-        \myfig{0.65}{cytology_figures/intermediate_filament}{caption}{fig:fig32}
+        \myfig{0.65}{cytology_figures/intermediate_filament}{Intermediate filament}{fig:fig32}
 
       \end{enumerate}
 
@@ -630,179 +694,183 @@
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Cell Walls})}
+    \begin{core}[label=core:cw]{Cell Organelles (\textit{Cell Walls})}
 
-      The \textbf{cell wall} is a rigid extracellular structure that surrounds the plasma membrane in plant cells, fungi, and many prokaryotes, but is absent in animal cells. Composed primarily of the polysaccharide \textbf{cellulose} in plants, the cell wall provides structural support, protects the cell from mechanical damage and pathogens, and prevents excessive water uptake that would otherwise cause the cell to burst (CORE CONCEPT REFERENCE).
-
-      \myfig{0.4}{cytology_figures/cell_wall}{caption}{fig:fig33}
-
-    \end{core}
-
-    \begin{core}{Cell Organelles (\textit{Extracellular Matrix})}
-
-      Animal cells, lacking cell walls, instead produce an \textbf{extracellular matrix (ECM)}, a complex network of glycoproteins secreted into the extracellular space.
-
-      The ECM is composed primarily of the fibrous protein \textbf{collagen}, \textbf{proteoglycans} (\textit{proteins with attached polysaccharide chains}), and \textbf{fibronectin}, an adhesive glycoprotein. These ECM components bind to transmembrane receptor proteins called \textbf{integrins}, which anchor the cell to the matrix and relay signals between the external environment and the cell interior. The ECM provides structural support, facilitates cell adhesion and migration, regulates tissue organization, and influences cell behavior through biochemical signaling.
-
-      \myfig{0.8}{cytology_figures/ecm}{caption}{fig:fig34}
+      \sbs{0.5}{
+        The \textbf{cell wall} is a rigid extracellular structure that surrounds the plasma membrane in plant cells, fungi, and many prokaryotes, but is absent in animal cells. Composed primarily of the polysaccharide \textbf{cellulose} in plants (\textit{and \textbf{chitin} in fungi}), the cell wall provides structural support, protects the cell from mechanical damage and pathogens, and prevents excessive water uptake that would otherwise cause the cell to burst via \textbf{osmotic lysis} (CORE CONCEPT REFERENCE).
+      }{
+        \myfig{0.75}{cytology_figures/cell_wall}{Cell wall}{fig:fig33}
+      }
 
     \end{core}
 
-    \begin{core}{Cell Organelles (\textit{Intracellular Junctions})}
+    \begin{core}[label=core:ecm]{Cell Organelles (\textit{Extracellular Matrix})}
+
+      \sbs{0.6}{
+        Animal cells, lacking the rigid cell walls, instead produce an \textbf{extracellular matrix (ECM)}, a complex, dynamic network of glycoproteins and polysaccharides secreted into the extracellular space surrounding and between cells.
+
+        The ECM is composed primarily of the fibrous structural protein \textbf{collagen}, \textbf{proteoglycans}, and \textbf{fibronectin}, an adhesive glycoprotein that helps organize the matrix. These ECM components bind to transmembrane receptor proteins called \textbf{integrins}, which physically anchor the cell to the matrix and relay signals bidirectionally between the external environment and the cell interior, linking the ECM to the cytoskeleton. The ECM provides essential structural support, facilitates cell adhesion and migration, regulates tissue organization and development, and influences cell behavior, differentiation, and gene expression through various signaling pathways.
+      }{
+        \myfig{0.9}{cytology_figures/ecm}{Extracellular matrix}{fig:fig34}
+      }
+
+    \end{core}
+
+    \begin{core}[label=core:ij]{Cell Organelles (\textit{Intercellular Junctions})}
 
       In multicellular organisms, cells are organized into tissues, organs, and organ systems, requiring specialized structures for cell-to-cell communication and adhesion. \textbf{Intercellular junctions} are sites of direct physical contact between neighboring cells that serve these functions. Plant and animal cells have evolved distinct types of junctions suited to their cellular architecture.
-      
-      In plant cells, channels called \textbf{plasmodesmata} penetrate adjacent cell walls, creating cytoplasmic bridges that allow direct exchange of water, nutrients, and signaling molecules between cells.
 
-      \myfig{0.4}{cytology_figures/plasmodesmata}{caption}{fig:fig35}
-      
-      Animal cells employ three main types of intercellular junctions, each with specialized functions
+      In plant cells, channels called \textbf{plasmodesmata} penetrate adjacent cell walls, creating cytoplasmic bridges that allow direct exchange of water, nutrients, and signaling molecules between neighboring cells.
+
+      \myfig{0.45}{cytology_figures/plasmodesmata}{Plasmodesmata}{fig:fig35}
+
+      Animal cells, lacking cell walls, instead rely on specialized intercellular junctions to connect and communicate.
 
       \begin{itemize}
 
-        \item \textbf{Tight junctions} seal cells together to prevent leakage between them.
+        \item \textbf{Tight junctions} seal adjacent cells together by fusing their plasma membranes, preventing leakage of substances through the intercellular space. They are especially prominent in epithelial tissues, such as the gut lining, where strict control of molecular passage is essential.
 
-        \item \textbf{Desmosomes} rivet cells together to provide mechanical strength.
+        \item \textbf{Desmosomes} mechanically anchor cells to one another via intermediate filaments, conferring tissue-level structural strength. They are particularly abundant in tissues subject to mechanical stress, such as cardiac muscle and skin.
 
-        \item \textbf{Gap junctions} form communication channels allowing passage of small molecules and ions between cells.
+        \item \textbf{Gap junctions} form direct communication channels between cells via proteins called \textbf{connexins}, permitting the passage of small molecules, ions, and electrical signals. This makes them especially important in coordinating rapid responses.
 
       \end{itemize}
 
-      \myfig{0.45}{cytology_figures/animal_junctions}{caption}{fig:fig36}
+      \myfig{0.47}{cytology_figures/animal_junctions}{Intercellular junctions of animal cells}{fig:fig36}
 
     \end{core}
 
-% \section{Membrane Structure and Function}
+\section{Membrane Structure and Function}
 
-%   \subsection{Membrane Basics}
+  \subsection{Membrane Basics}
 
-%     \begin{core}{Phospholipid Bilayer}
+  \begin{core}[label=core:phosbi]{Phospholipid Bilayer}
 
-%       The cell membrane is a critical component of all cells, acting as a selective barrier that regulates the movement of substances in and out of the cell. Its fundamental structure is the \textbf{phospholipid bilayer}, composed of two layers of phospholipids with hydrophilic (water-attracting) heads facing outward and hydrophobic (water-repelling) tails facing inward, making the phospholipids \textbf{amphipathic}.
+      The cell membrane is a critical component of all cells, acting as a selective barrier that regulates the movement of substances in and out of the cell. Its fundamental structure is the \textbf{phospholipid bilayer}, composed of two layers of phospholipids with hydrophilic (water-attracting) heads facing outward and hydrophobic (water-repelling) tails facing inward, making the phospholipids \textbf{amphipathic}.
 
-%       \myfig{0.6}{cytology_figures/bilayer}{caption}{fig:fig37}
+      \myfig{0.6}{cytology_figures/bilayer}{caption}{fig:fig37}
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Fluid Mosaic Model}
+    \begin{core}{Fluid Mosaic Model}
 
-%       The \textbf{fluid mosaic model} describes the cell membrane as a dynamic, fluid structure with various proteins embedded within the phospholipid bilayer, forming a complex mosaic.
+      The \textbf{fluid mosaic model} describes the cell membrane as a dynamic, fluid structure with various proteins embedded within the phospholipid bilayer, forming a complex mosaic.
 
-%       \myfig{0.95}{cytology_figures/fluid_model}{caption}{fig:fig38}
+      \myfig{0.95}{cytology_figures/fluid_model}{caption}{fig:fig38}
 
-%       We describe the membrane as a \textbf{fluid} structure because the phospholipids and proteins can move laterally within the bilayer, similar to icebergs floating in the sea. This fluidity is due to the \textbf{unsaturated nature} of the hydrocarbon tails and the \textbf{presence of cholesterol} in the animal cell membrane, which prevents the phospholipids from packing too closely together.
+      We describe the membrane as a \textbf{fluid} structure because the phospholipids and proteins can move laterally within the bilayer, similar to icebergs floating in the sea. This fluidity is due to the \textbf{unsaturated nature} of the hydrocarbon tails and the \textbf{presence of cholesterol} in the animal cell membrane, which prevents the phospholipids from packing too closely together.
 
-%       \myfig{0.5}{cytology_figures/fluid_reason}{caption}{fig:fig39}
+      \myfig{0.5}{cytology_figures/fluid_reason}{caption}{fig:fig39}
 
-%       Proteins within the membrane serve various functions, including transport, enzymatic activity, signal transduction, cell-cell recognition, intercellular joining, and cytoskeleton-ECM attachment, among others.
+      Proteins within the membrane serve various functions, including transport, enzymatic activity, signal transduction, cell-cell recognition, intercellular joining, and cytoskeleton-ECM attachment, among others.
 
-%       \myfig{0.8}{cytology_figures/membrane_functions}{caption}{fig:fig40}
+      \myfig{0.8}{cytology_figures/membrane_functions}{caption}{fig:fig40}
 
-%       Another important type of molecule found on the cell membrane is \textbf{carbohydrates}, which are covalently bonded to lipids (forming \textbf{glycolipids}) or to proteins (forming \textbf{glycoproteins}). These carbohydrate-containing molecules play a crucial role in \textbf{cell-cell recognition and communication}.
+      Another important type of molecule found on the cell membrane is \textbf{carbohydrates}, which are covalently bonded to lipids (forming \textbf{glycolipids}) or to proteins (forming \textbf{glycoproteins}). These carbohydrate-containing molecules play a crucial role in \textbf{cell-cell recognition and communication}.
 
-%       Now let's shift to the topic of \textbf{permeability} of the cell membrane. The cell membrane is \textbf{selectively permeable}, meaning it allows certain substances to pass through while restricting others. Small nonpolar molecules, such as \ce{O2} and \ce{CO2}, can easily diffuse across the lipid bilayer. In contrast, larger polar molecules and ions require specific transport proteins to facilitate their movement across the membrane due to their hydrophilic nature.
+      Now let's shift to the topic of \textbf{permeability} of the cell membrane. The cell membrane is \textbf{selectively permeable}, meaning it allows certain substances to pass through while restricting others. Small nonpolar molecules, such as \ce{O2} and \ce{CO2}, can easily diffuse across the lipid bilayer. In contrast, larger polar molecules and ions require specific transport proteins to facilitate their movement across the membrane due to their hydrophilic nature.
 
-%     \end{core}
+    \end{core}
 
-%   \subsection{Passive and Active Transport}
+  \subsection{Passive and Active Transport}
 
-%     There are two main categories of transport: \textbf{passive transport} and \textbf{active transport}.
+    There are two main categories of transport: \textbf{passive transport} and \textbf{active transport}.
 
-%     \textbf{PASSIVE TRANSPORT} is the movement of substances across the membrane \textbf{without the input of energy}.
+    \textbf{PASSIVE TRANSPORT} is the movement of substances across the membrane \textbf{without the input of energy}.
 
-%     \begin{core}{Passive Transport (\textit{Simple Diffusion})}
+    \begin{core}{Passive Transport (\textit{Simple Diffusion})}
 
-%       Passive transport that \textbf{does not require the help of membrane proteins} is called \textbf{simple diffusion}, in which substances move down their concentration gradient (from high to low concentration) until equilibrium is reached, as with the \ce{O2} and \ce{CO2} mentioned earlier.
+      Passive transport that \textbf{does not require the help of membrane proteins} is called \textbf{simple diffusion}, in which substances move down their concentration gradient (from high to low concentration) until equilibrium is reached, as with the \ce{O2} and \ce{CO2} mentioned earlier.
 
-%       \myfig{0.6}{cytology_figures/simple}{caption}{fig:fig41}
+      \myfig{0.6}{cytology_figures/simple}{caption}{fig:fig41}
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Tonicity}
+    \begin{core}{Tonicity}
 
-%       \textbf{Tonicity} describes the ability of a surrounding solution to cause a cell to gain or lose water. When a solution is \textbf{hypotonic}, \textbf{isotonic}, or \textbf{hypertonic} relative to the cell, it has a lower, equal, or higher concentration of solutes compared to the inside of the cell, respectively. Consequently, the \textbf{cell gains water} when placed in a hypotonic solution to balance the concentration inside the cell with that of the solution. Conversely, the \textbf{cell loses water} when placed in a hypertonic solution. In any case, the cell will always tend to reach isotonicity.\\
+      \textbf{Tonicity} describes the ability of a surrounding solution to cause a cell to gain or lose water. When a solution is \textbf{hypotonic}, \textbf{isotonic}, or \textbf{hypertonic} relative to the cell, it has a lower, equal, or higher concentration of solutes compared to the inside of the cell, respectively. Consequently, the \textbf{cell gains water} when placed in a hypotonic solution to balance the concentration inside the cell with that of the solution. Conversely, the \textbf{cell loses water} when placed in a hypertonic solution. In any case, the cell will always tend to reach isotonicity.\\
 
-%       A consequence of this is that animal cells, which lack cell walls, can become \textbf{lysed} (burst) in a hypotonic solution due to excessive water intake. Plant cells, however, are protected from bursting by their rigid cell walls. Instead, they become \textbf{turgid} (firm) in hypotonic solutions, which is beneficial for structural support. Conversely, in a hypertonic solution, both animal and plant cells lose water and shrink; plant cells undergo \textbf{plasmolysis}, where the cell membrane pulls away from the cell wall.
+      A consequence of this is that animal cells, which lack cell walls, can become \textbf{lysed} (burst) in a hypotonic solution due to excessive water intake. Plant cells, however, are protected from bursting by their rigid cell walls. Instead, they become \textbf{turgid} (firm) in hypotonic solutions, which is beneficial for structural support. Conversely, in a hypertonic solution, both animal and plant cells lose water and shrink; plant cells undergo \textbf{plasmolysis}, where the cell membrane pulls away from the cell wall.
 
-%       \myfig{0.8}{cytology_figures/tonicity}{caption}{fig:fig42}
+      \myfig{0.8}{cytology_figures/tonicity}{caption}{fig:fig42}
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Passive Transport (\textit{Facilitated Diffusion, Channel Proteins, and Carrier Proteins})}
+    \begin{core}{Passive Transport (\textit{Facilitated Diffusion, Channel Proteins, and Carrier Proteins})}
 
-%       Passive transport that \textbf{does require the help of membrane proteins} is called \textbf{facilitated diffusion}. This process allows specific molecules, such as glucose and ions, to cross the membrane with the assistance of transport proteins, still moving down their concentration gradient and requiring no input of energy.
+      Passive transport that \textbf{does require the help of membrane proteins} is called \textbf{facilitated diffusion}. This process allows specific molecules, such as glucose and ions, to cross the membrane with the assistance of transport proteins, still moving down their concentration gradient and requiring no input of energy.
 
-%       Facilitated diffusion occurs through two main types of transport proteins: \textbf{channel proteins} and \textbf{carrier proteins}.
+      Facilitated diffusion occurs through two main types of transport proteins: \textbf{channel proteins} and \textbf{carrier proteins}.
 
-%       \textbf{Channel proteins} provide hydrophilic channels that allow specific ions or molecules to pass through the membrane. A common example is an \textbf{aquaporin}, which facilitates the rapid transport of water molecules. Another example is an \textbf{ion channel}, which permits the passage of specific ions such as \ce{Na+} or \ce{K+}. Many ion channels function as \textbf{gated channels}, opening or closing in response to a stimulus, such as a chemical signal or electrical charge. We explore these ion channels in \textit{4.1 Cellular Signaling}.
+      \textbf{Channel proteins} provide hydrophilic channels that allow specific ions or molecules to pass through the membrane. A common example is an \textbf{aquaporin}, which facilitates the rapid transport of water molecules. Another example is an \textbf{ion channel}, which permits the passage of specific ions such as \ce{Na+} or \ce{K+}. Many ion channels function as \textbf{gated channels}, opening or closing in response to a stimulus, such as a chemical signal or electrical charge. We explore these ion channels in \textit{4.1 Cellular Signaling}.
 
-%       \textbf{Carrier proteins} bind to specific molecules and undergo conformational changes to transport them across the membrane. A common example is the glucose transporter, which facilitates the movement of glucose into cells.
+      \textbf{Carrier proteins} bind to specific molecules and undergo conformational changes to transport them across the membrane. A common example is the glucose transporter, which facilitates the movement of glucose into cells.
 
-%       \myfig{0.45}{cytology_figures/facilitated}{caption}{fig:fig43}
+      \myfig{0.45}{cytology_figures/facilitated}{caption}{fig:fig43}
 
-%       The main difference between channel and carrier proteins is that channel proteins form \textbf{open pores} for molecules to pass through, whereas carrier proteins undergo \textbf{conformational changes} to transport specific molecules across the membrane. \textbf{As a result, carrier proteins are more selective and generally slower than channel proteins.}
+      The main difference between channel and carrier proteins is that channel proteins form \textbf{open pores} for molecules to pass through, whereas carrier proteins undergo \textbf{conformational changes} to transport specific molecules across the membrane. \textbf{As a result, carrier proteins are more selective and generally slower than channel proteins.}
 
-%     \end{core}
+    \end{core}
     
-%     Now, moving on to \textbf{ACTIVE TRANSPORT}, which is the movement of substances across the membrane \textbf{with the input of energy} (usually in the form of ATP). Active transport allows cells to maintain concentration gradients that differ from their surroundings (\textit{the movement of substances against their concentration gradient}). The proteins involved in active transport are all \textbf{carrier proteins}. Here are a few classic examples.
+    Now, moving on to \textbf{ACTIVE TRANSPORT}, which is the movement of substances across the membrane \textbf{with the input of energy} (usually in the form of ATP). Active transport allows cells to maintain concentration gradients that differ from their surroundings (\textit{the movement of substances against their concentration gradient}). The proteins involved in active transport are all \textbf{carrier proteins}. Here are a few classic examples.
 
-%     \begin{core}{Sodium-Potassium Pump}
+    \begin{core}{Sodium-Potassium Pump}
 
-%       (1) The \textbf{sodium-potassium pump} is a well-studied example of active transport. It uses ATP to move three \ce{Na+} ions out of the cell and two \ce{K+} ions into the cell \textbf{against} their respective concentration gradients. 
+      (1) The \textbf{sodium-potassium pump} is a well-studied example of active transport. It uses ATP to move three \ce{Na+} ions out of the cell and two \ce{K+} ions into the cell \textbf{against} their respective concentration gradients. 
 
-%       This pump is essential for maintaining the resting \textbf{membrane potential} in animal cells. Membrane potential is the voltage difference across a membrane, resulting from the unequal distribution of ions on either side. It acts like a battery that can be used to perform work in other cellular activities. The chemical force (concentration gradient) and electrical force (membrane potential) together constitute the \textbf{electrochemical gradient}, which influences the movement of ions across the membrane (\textit{note that this does not apply to uncharged molecules like glucose}).
+      This pump is essential for maintaining the resting \textbf{membrane potential} in animal cells. Membrane potential is the voltage difference across a membrane, resulting from the unequal distribution of ions on either side. It acts like a battery that can be used to perform work in other cellular activities. The chemical force (concentration gradient) and electrical force (membrane potential) together constitute the \textbf{electrochemical gradient}, which influences the movement of ions across the membrane (\textit{note that this does not apply to uncharged molecules like glucose}).
 
-%       Thus, an ion diffuses not simply down its concentration gradient, but more accurately down its electrochemical gradient.
+      Thus, an ion diffuses not simply down its concentration gradient, but more accurately down its electrochemical gradient.
 
-%       \myfig{0.65}{cytology_figures/na_k_pump}{caption}{fig:fig44}
+      \myfig{0.65}{cytology_figures/na_k_pump}{caption}{fig:fig44}
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Proton (\ce{H+}) Pump}
+    \begin{core}{Proton (\ce{H+}) Pump}
 
-%       (2) The \textbf{proton pump} is another classic example of active transport. It actively transports \ce{H+} ions (protons) out of the cell, creating a proton gradient across the membrane. This gradient can then drive various cellular processes, such as ATP synthesis in mitochondria (covered in \textit{Chapter 3 Cellular Energetics}).
+      (2) The \textbf{proton pump} is another classic example of active transport. It actively transports \ce{H+} ions (protons) out of the cell, creating a proton gradient across the membrane. This gradient can then drive various cellular processes, such as ATP synthesis in mitochondria (covered in \textit{Chapter 3 Cellular Energetics}).
 
-%       \myfig{0.45}{cytology_figures/proton_pump}{caption}{fig:fig45}
+      \myfig{0.45}{cytology_figures/proton_pump}{caption}{fig:fig45}
 
-%       So far, we have seen mechanisms of active transport that involve the direct use of ATP to move substances against their concentration gradients. However, there is another type of active transport called \textbf{cotransport}, in which a transport protein couples the "downhill" diffusion of one substance to the "uphill" transport of another substance against its own concentration gradient.
+      So far, we have seen mechanisms of active transport that involve the direct use of ATP to move substances against their concentration gradients. However, there is another type of active transport called \textbf{cotransport}, in which a transport protein couples the "downhill" diffusion of one substance to the "uphill" transport of another substance against its own concentration gradient.
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Sucrose-Proton Cotransporter}
+    \begin{core}{Sucrose-Proton Cotransporter}
 
-%       (3) An example of cotransport is the \textbf{sucrose \ce{H+} cotransporter} in plant cells. This protein uses the energy stored in the proton gradient (created by the proton pump) to transport sucrose into the cell against its concentration gradient, while simultaneously allowing \ce{H+} ions to move down their electrochemical gradient.
+      (3) An example of cotransport is the \textbf{sucrose \ce{H+} cotransporter} in plant cells. This protein uses the energy stored in the proton gradient (created by the proton pump) to transport sucrose into the cell against its concentration gradient, while simultaneously allowing \ce{H+} ions to move down their electrochemical gradient.
 
-%       \myfig{0.5}{cytology_figures/cotransport}{caption}{fig:fig46}
+      \myfig{0.5}{cytology_figures/cotransport}{caption}{fig:fig46}
 
-%     \end{core}
+    \end{core}
 
-%     We have now gone through the mechanisms of passive and active transport, which are the main ways substances move across the cell membrane. However, larger molecules, such as proteins and polysaccharides, cannot pass through the membrane via these smaller, protein-regulated transport methods. Instead, they are moved via \textbf{bulk transport}, which involves the transport of large particles or macromolecules across the membrane in vesicles. There are two main types of bulk transport: \textbf{exocytosis} (out of the cell) and \textbf{endocytosis} (into the cell).
+    We have now gone through the mechanisms of passive and active transport, which are the main ways substances move across the cell membrane. However, larger molecules, such as proteins and polysaccharides, cannot pass through the membrane via these smaller, protein-regulated transport methods. Instead, they are moved via \textbf{bulk transport}, which involves the transport of large particles or macromolecules across the membrane in vesicles. There are two main types of bulk transport: \textbf{exocytosis} (out of the cell) and \textbf{endocytosis} (into the cell).
 
-%   \subsection{Exocytosis and Endocytosis}
+  \subsection{Exocytosis and Endocytosis}
 
-%     \begin{core}{Exocytosis}
+    \begin{core}{Exocytosis}
 
-%       \textbf{EXOCYTOSIS} occurs when an inner vesicle fuses with the plasma membrane, releasing its contents outside the cell. This process is commonly used to secrete proteins (\textit{after being processed in the Golgi apparatus}), such as hormones and enzymes, and to expel waste materials.
+      \textbf{EXOCYTOSIS} occurs when an inner vesicle fuses with the plasma membrane, releasing its contents outside the cell. This process is commonly used to secrete proteins (\textit{after being processed in the Golgi apparatus}), such as hormones and enzymes, and to expel waste materials.
 
-%       \myfig{0.4}{cytology_figures/exocytosis}{caption}{fig:fig47}
+      \myfig{0.4}{cytology_figures/exocytosis}{caption}{fig:fig47}
 
-%     \end{core}
+    \end{core}
 
-%     \begin{core}{Endocytosis}
+    \begin{core}{Endocytosis}
 
-%       \textbf{ENDOCYTOSIS} occurs when the cell takes in macromolecules by forming vesicles from the plasma membrane. There are three main types of endocytosis: \textbf{phagocytosis}, \textbf{pinocytosis}, and \textbf{receptor-mediated endocytosis}.
+      \textbf{ENDOCYTOSIS} occurs when the cell takes in macromolecules by forming vesicles from the plasma membrane. There are three main types of endocytosis: \textbf{phagocytosis}, \textbf{pinocytosis}, and \textbf{receptor-mediated endocytosis}.
 
-%       (1) In \textbf{phagocytosis} ("\textit{cellular eating}"), the cell engulfs a large particle or even another cell by extending pseudopodia around it, forming a food vacuole. \textit{The food vacuole then fuses with a lysosome for digestion, as described in \textit{2.1 A Tour of the Cell}.}
+      (1) In \textbf{phagocytosis} ("\textit{cellular eating}"), the cell engulfs a large particle or even another cell by extending pseudopodia around it, forming a food vacuole. \textit{The food vacuole then fuses with a lysosome for digestion, as described in \textit{2.1 A Tour of the Cell}.}
 
-%       (2) In \textbf{pinocytosis} ("\textit{cellular drinking}"), the cell takes in extracellular fluid and its dissolved solutes by forming small vesicles. This process is nonspecific, meaning the cell engulfs whatever solutes are present in the extracellular fluid.
+      (2) In \textbf{pinocytosis} ("\textit{cellular drinking}"), the cell takes in extracellular fluid and its dissolved solutes by forming small vesicles. This process is nonspecific, meaning the cell engulfs whatever solutes are present in the extracellular fluid.
 
-%       (3) In \textbf{receptor-mediated endocytosis}, the cell uses specific receptor proteins on its surface to bind particular molecules (ligands) in the extracellular fluid. Once the receptors are bound to their ligands, the plasma membrane folds inward, forming a vesicle that brings the ligands into the cell. This process allows the cell to selectively take in specific substances, such as cholesterol or certain hormones.
+      (3) In \textbf{receptor-mediated endocytosis}, the cell uses specific receptor proteins on its surface to bind particular molecules (ligands) in the extracellular fluid. Once the receptors are bound to their ligands, the plasma membrane folds inward, forming a vesicle that brings the ligands into the cell. This process allows the cell to selectively take in specific substances, such as cholesterol or certain hormones.
 
-%       Here is a visual representation of all three types of endocytosis side-by-side for comparison.
+      Here is a visual representation of all three types of endocytosis side-by-side for comparison.
 
-%       \myfig{0.75}{cytology_figures/endocytosis}{caption}{fig:fig48}
+      \myfig{0.75}{cytology_figures/endocytosis}{caption}{fig:fig48}
 
-%     \end{core}
+    \end{core}
 
 % \section{Metabolism}
 

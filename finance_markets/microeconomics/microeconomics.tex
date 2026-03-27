@@ -176,7 +176,7 @@
       \pgfiglabel{2.5, 5.8}{}
 
       \end{axis} 
-    }{Marginal benefit and marginal cost}{fig:mb_mc}{1}
+    }{Marginal benefit and marginal cost}{fig:mb_mc}{0.9}
 
     The optimal quantity occurs where marginal benefit equals marginal cost ($\text{MB} = \text{MC}$). At this point, the net benefit from the last unit produced equals the cost of producing it, and total net benefits are maximized.
 
@@ -221,7 +221,7 @@
 
   \begin{core}{Demand}
 
-    \textbf{Demand} represents the quantity of a good that consumers are willing and able to purchase at various prices during a given time period. The \textbf{Law of Demand} states an inverse relationship between price and quantity demanded: as prices rise, quantity demanded falls, and vice versa. This relationship reflects both the \textbf{substitution effect} (\textit{consumers shift to cheaper alternatives}) and the \textbf{income effect} (\textit{higher prices reduce purchasing power}).
+    \textbf{Demand} represents the quantity of a good that consumers are willing and able to purchase at various prices during a given time period. The \textbf{Law of Demand} states an inverse relationship between price and quantity demanded: as prices rise, quantity demanded falls, and vice versa. This reflects both the \textbf{substitution effect} (\textit{consumers shift to cheaper alternatives}) and the \textbf{income effect} (\textit{higher prices reduce purchasing power}).
 
     \pgfig{
       \begin{axis}[
@@ -234,7 +234,7 @@
       \pgfiglabel{10,2}{Demand}
 
       \end{axis} 
-    }{Demand curve}{fig:demand}{1}
+    }{Demand curve}{fig:demand}{0.75}
 
     The determinants of demand, factors that can cause the entire demand curve to shift, include:
 
@@ -269,7 +269,7 @@
       \pgfiglabel{10,8}{Supply}
 
       \end{axis} 
-    }{Supply curve}{fig:supply}{1}
+    }{Supply curve}{fig:supply}{0.75}
 
     Determinants of supply include:
 
@@ -378,7 +378,7 @@
 
           \downslope{0}
 
-          \pgfiglabel{10,2}{Demand}
+          \pgfiglabel{10,3}{Demand}
 
           \end{axis} 
         }{Unit elasticity}{fig:unit_elasticity}{1}
@@ -582,34 +582,33 @@
  
 \section{Production and Cost}
 
-  A \textbf{production function} shows how much output is created for various combinations of inputs, such as factory size, capital, and labor.
+  In microeconomics, a \textbf{production function} represents the relationship between \textbf{inputs} (\textit{factors of production}) and the resulting quantity of \textbf{output}:
 
-  The distinction between \textbf{short run} and \textbf{long run} is fundamental:
-  \begin{itemize}
+  \[
+    Q = f(L,K)
+  \]
 
-    \item \textbf{Short run}: At least one input is fixed.
-
-    \item \textbf{Long run}: All inputs can be adjusted.
-
-  \end{itemize}
-
+  where $L$ denotes labor (\textit{hours worked, number of employees, etc.}) and $K$ denotes capital (\textit{machinery, factory space, tools, land, etc.}).
+ 
   \subsection{Product Measures}
 
     \begin{core}{Total, Marginal, and Average Product}
 
-      \textbf{Total Product (TP)} is the total output produced.
+      Economists measure production output using three key metrics.
 
-      \textbf{Marginal Product (MP)} is the additional output from increasing one input by one unit.
+      \begin{itemize}
 
-      \textbf{Average Product (AP)} is output per unit of input.
+        \item \textbf{Total Product (TP)} refers to the total output produced.
 
-      Graphically, marginal product intersects average product at the average product's maximum point.
+        \item \textbf{Marginal Product (MP)} is the additional output gained by increasing one input by one unit.
 
-      % Total Marginal, and Average Product
-      % - marginal is the incremental additional count of product you get from increasing a production input (such as workers)
-      % - average product is the average amount of product you get from increasing a production input (such as workers)
-      % Graphing TP, MP, and AP - PLOT THIS
-      % MP intersects AP at the AP's maximum
+        \item \textbf{Average Product (AP)} is the output per unit of input.
+
+      \end{itemize}
+
+      When plotted against input quantity (\textit{e.g., the number of workers}), these metrics follow a characteristic shape governed by the \textbf{law of diminishing returns}: AP and MP are predominantly downward sloping, while TP eventually plateaus and declines. Notably, MP intersects AP exactly at AP's maximum point.
+
+      < PLOT >
 
     \end{core}
 
@@ -617,97 +616,96 @@
 
     \begin{core}{Fixed and Variable Costs}
 
-      In the short run, costs are categorized as:
+      In the short run, costs fall into three categories.
 
-      \textbf{Fixed costs (FC)} remain constant regardless of output, such as rent. These exist even at zero output.
+      \begin{itemize}
 
-      \textbf{Variable costs (VC)} depend on the amount of output, such as payments to workers and raw materials.
+        \item \textbf{Fixed costs (FC)} remain constant regardless of output---such as rent---and persist even at zero production.
 
-      \textbf{Total cost (TC) = FC + VC}
+        \item \textbf{Variable costs (VC)} fluctuate with output level, including payments to workers and raw materials.
 
-      In economic analysis, both explicit and implicit costs are considered.
+        \item \textbf{Total cost (TC)} is simply their sum, $TC = FC + VC$.
 
-      % Short run fixed and variable costs
-      % Fixed costs: stay constant, equal to total costs at 0 units of output (ex. rent)
-      % Variable costs: depend on amount of output (ex. payment to workers)
-      % Remember: implicit costs are also included in economic terms
+      \end{itemize}
+
+      Note that economic analysis accounts for both explicit and implicit costs.
 
     \end{core}
 
     \begin{core}{Short Run Cost Curves}
 
-      \textbf{Marginal cost (MC)} is the additional cost of producing one more unit.
+      In the short run, the following cost curves are central to analyzing firm behavior.
 
-      \textbf{Average total cost (ATC)} is total cost divided by quantity.
+      \begin{itemize}
 
-      \textbf{Average fixed cost (AFC)} is fixed cost divided by quantity.
+        \item \textbf{Marginal cost (MC)} measures the additional cost of producing one more unit, defined as $MC = \Delta TC / \Delta Q$.
 
-      \textbf{Average variable cost (AVC)} is variable cost divided by quantity.
+        \item \textbf{Average total cost (ATC)} is total cost per unit of output, $ATC = TC/Q$.
 
-      Graphically, MC intersects both ATC and AVC at their minimum points. ATC and AVC are U-shaped due to diminishing marginal returns. AFC constantly decreases as output increases.
+        \item \textbf{Average variable cost (AVC)} and \textbf{average fixed cost (AFC)} disaggregate this into their variable and fixed components respectively, $AVC = VC/Q$ and $AFC = FC/Q$. Note that $ATC = AVC + AFC$ at every level of output.
 
-      When marginal revenue is constant (as in perfect competition), the firm produces where MR = MC to maximize profit.
+      \end{itemize}
 
-      % Short run 
-      % total cost
-      % marginal cost
-      % average total cost
-      % average fixed cost
-      % average variable cost
-      % Graphs of MC, ATC, AFC, and AVC - PLOT THIS
-      % MC intersects ATC and AVC at their minimums
-      % ATC and AVC are U-shaped
-      % AFC constantly decreases
-      % When marginal revenue for each product sold is fixed, it appears as a horizontal line
-      % In order to maximize profits, produce at quantity where MR = MC
+      These curves exhibit predictable shapes rooted in the \textbf{law of diminishing marginal returns}.
+
+      < PLOT >
+
+      \begin{enumerate}
+
+        \item Both ATC and AVC are U-shaped: initially falling as output rises and fixed costs are spread across more units, then rising as diminishing returns drive up marginal cost.
+
+        \item AFC declines continuously, since fixed costs are distributed over an ever-larger quantity.
+
+        \item MC, being directly tied to marginal returns, is also U-shaped and crucially intersects both ATC and AVC at their respective minimum points---a consequence of the relationship between marginal and average values.
+
+      \end{enumerate}
+
+      In perfectly competitive markets (CORE CONCEPT REFERENCE), a firm faces a constant market price, making marginal revenue $MR = P$. The firm maximizes profit by producing at the quantity where $MR = MC$, since any unit where $MR > MC$ adds to profit, while any unit where $MR < MC$ erodes it.
 
     \end{core}
 
   \subsection{Long Run}
 
-    \begin{core}{Long Run Average Total Cost}
+    \begin{core}{Long-Run Average Total Cost}
 
-      In the long run, all costs are variable as firms can choose their scale of operation.
+      In the long run, all costs become variable as firms are free to adjust every factor of production, including capital. The \textbf{Long-Run Average Total Cost (LRATC)} curve is constructed as the combination of many short-run average total cost (SRATC) curves, each corresponding to a different fixed level of capital---representing the lowest attainable average cost at each output level.
 
-      The \textbf{Long-Run Average Total Cost (LRATC)} curve is composed of many short-run average total cost (SRATC) curves at different fixed input levels. The LRATC is U-shaped for three reasons:
+      < PLOT >
+
+      The LRATC curve is U-shaped, reflecting three distinct phases of scale.
 
       \begin{enumerate}
 
-        \item \textbf{Economies of Scale}: Decreasing LRATC as output increases, resulting from increased specialization and bulk purchasing discounts.
+        \item Initially, \textbf{economies of scale} cause LRATC to fall as output expands: larger operations benefit from greater worker specialization, more efficient use of capital, and bulk purchasing discounts. 
 
-        \item \textbf{Diseconomies of Scale}: Increasing LRATC as output increases, resulting from management difficulties and higher wages required to attract additional workers.
+        \item Beyond a certain point, \textbf{diseconomies of scale} take hold and LRATC begins to rise, driven by managerial inefficiencies and coordination difficulties that emerge as firm size grows.
 
-        \item \textbf{Minimum Efficient Scale}: The lowest output level at which LRATC is minimized.
+        \item The output level at which LRATC reaches its minimum---the transition between these two phases---is known as the \textbf{minimum efficient scale (MES)}, and represents the most productively efficient scale of operation.
 
       \end{enumerate}
-
-      % In long run, costs aren't fixed (example. you can choose what size factory to rent)
-      % LRATC is also U-shaped and is made up of many SRATC curves
-      % The LRATC is U shaped for the follow reasons
-      %   Economies of Scale: decreasing LRATC
-      %     increased specialization
-      %     deals for larger purchases
-      %   Diseconomies of Scale: increasing LRATC
-      %     firm is too large, hard to manage
-      %     hiring more workers requires higher wages
-      %   Minimum Efficient Scale: Minimum LRATC
 
     \end{core}
 
     \begin{core}{Returns to Scale}
 
-      \textbf{Increasing Returns to Scale}: Output increases by more than the percentage increase in inputs. For example, increasing all inputs by 70\% increases output by 80\%.
+      \textbf{Returns to scale} describe how output responds when \textit{all} inputs are scaled up proportionally in the long run. Formally, suppose all inputs are multiplied by some factor $\lambda > 1$. The production function $f(L, K)$ exhibits:
+      \[
+        f(\lambda L,\, \lambda K) \begin{cases} > \lambda Q & \text{increasing returns to scale} \\ 
+        = \lambda Q & \text{constant returns to scale} \\ 
+        < \lambda Q & \text{decreasing returns to scale} \end{cases}
+      \]
 
-      \textbf{Decreasing Returns to Scale}: Output increases by less than the percentage increase in inputs. For example, increasing all inputs by 70\% increases output by 60\%.
+      Consider, for example, increasing all inputs by 70\%, so $\lambda = 1.7$ and $Q' = f(1.7L,\, 1.7K)$.
 
-      \textbf{Constant Returns to Scale}: Output increases by the same percentage as inputs. For example, increasing all inputs by 70\% increases output by 70\%.
+      \begin{itemize}
 
-      % Increasing Returns to Scale: Output increases by more than increase in inputs
-      % - Example: Increasing all inputs by 70% increases outputs by 80%
-      % Decreasing Returns to Scale; Output increases by less than increase in inputs
-      % - Example: Increasing all inputs by 70% increases output by 60%
-      % Constant Returns to Scale: Output increases by same amount as increase in inputs
-      % - Example: Increasing all inputs by 70% increases output by 70%
+        \item \textbf{Increasing Returns to Scale}: Output grows by a greater proportion than inputs. With $\lambda = 1.7$, output rises by more than 70\%---say, 80\%, so $Q' > 1.7Q$. This often arises from specialization gains and more efficient use of capital at larger scales.
+
+        \item \textbf{Constant Returns to Scale}: Output grows in exact proportion to inputs. With $\lambda = 1.7$, output also rises by exactly 70\%, so $Q' = 1.7Q$. This implies that doubling all inputs exactly doubles output: $f(2L,\, 2K) = 2Q$.
+
+        \item \textbf{Decreasing Returns to Scale}: Output grows by a smaller proportion than inputs. With $\lambda = 1.7$, output rises by less than 70\%---say, 60\%, so $Q' < 1.7Q$. This typically reflects coordination difficulties and resource constraints that emerge as scale increases.
+
+      \end{itemize}
 
     \end{core}
 
