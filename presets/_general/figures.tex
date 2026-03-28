@@ -75,6 +75,24 @@
   \end{figure}
 }
 
+\newcommand{\doublepgfig}[5]{%
+  \begin{figure}[H]
+    \centering
+    \scalebox{#5}{
+      \begin{tikzpicture}
+        #1
+      \end{tikzpicture}
+      \qquad
+      \qquad
+      \begin{tikzpicture}
+        #2
+      \end{tikzpicture}
+    }
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
 \newcommand{\axispresetsone}[0]{
   clip=false,
   grid=major,

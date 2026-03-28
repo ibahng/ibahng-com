@@ -482,7 +482,24 @@
 
       \end{itemize}
 
-      < INCOME ELASTICITY OF DEMAND PLOT >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+
+        \downslope{-3}
+        \pgfiglabel{2,2}{Inferior}
+        \draw[->, thick] (axis cs:4.5,5) -- (axis cs:2.5,5);
+
+        \downslope{3}
+        \pgfiglabel{10,6}{Normal}
+        \draw[->, thick] (axis cs:5.5,5) -- (axis cs:7.5,5);
+
+        \end{axis} 
+      }{Demand curve movement under rising income for inferior (\textit{left}) and normal (\textit{right}) goods}{fig:ielasticity}{0.9}
 
       \textbf{Cross Elasticity of Demand} measures how quantity demanded of one good responds to price changes in another good:
 
@@ -498,7 +515,24 @@
 
       \end{itemize}
 
-      < CROSS ELASTICITY OF DEMAND PLOT >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+
+        \downslope{-3}
+        \pgfiglabel{2.5,2}{\footnotesize Complementary}
+        \draw[->, thick] (axis cs:4.5,5) -- (axis cs:2.5,5);
+
+        \downslope{3}
+        \pgfiglabel{10,6}{\small Substitute}
+        \draw[->, thick] (axis cs:5.5,5) -- (axis cs:7.5,5);
+
+        \end{axis} 
+      }{Demand curve movement under rising price of complementary (\textit{left}) and substitute (\textit{right}) goods}{fig:celasticity}{0.9}
 
     \end{core}
 
@@ -508,7 +542,22 @@
 
       \textbf{Consumer surplus} represents the benefit consumers receive when they pay less than their maximum willingness to pay. The demand curve can be interpreted as the \textbf{marginal benefit} consumers receive from each unit consumed, reflecting the law of diminishing marginal utility.
 
-      < CONSUMER SURPLUS PLOT >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,2}{Demand}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{Supply}
+
+        \filldraw[fill=green!20] (0.5,5) -- (5,5) -- (0.5,9.5) -- cycle;
+        
+        \end{axis} 
+      }{Consumer surplus}{fig:csurplus}{1}
 
       At market equilibrium, consumers who value the good more than the equilibrium price receive surplus because they pay the equilibrium price despite being willing to pay more. The total consumer surplus is represented by the area between the demand curve and the equilibrium price line, thus may increase or decrease depending on the demand elasticity of the good or service
 
@@ -518,7 +567,22 @@
 
       \textbf{Producer surplus} represents the benefit producers receive when they sell at a price higher than their minimum acceptable price. The supply curve can be interpreted as the \textbf{marginal cost} of producing each additional unit.
 
-      <PRODUCER SURPLUS PLOT >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,2}{Demand}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{Supply}
+
+        \filldraw[fill=blue!20] (0.5,5) -- (5,5) -- (0.5,0.5) -- cycle;
+        
+        \end{axis} 
+      }{Producer surplus}{fig:psurplus}{1}
 
       At prices above the market equilibrium, producers receive surplus because they sell at the equilibrium price despite being willing to accept less. The total producer surplus is represented by the area between the supply curve and the equilibrium price line, thus may increase or decrease depending on the supply elasticity of the good or service.
 
@@ -528,7 +592,23 @@
 
       \textbf{Allocative efficiency} occurs when resources are distributed in a way that maximizes the total benefit to society. In the context of consumer and producer surplus, allocative efficiency is a state in which \textbf{consumer and producer surplus is maximized}.
 
-      < ALLOCATIVELY EFFICIENT PLOT >
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,2}{Demand}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{Supply}
+
+        \filldraw[fill=blue!20] (0.5,5) -- (5,5) -- (0.5,0.5) -- cycle;
+        \filldraw[fill=green!20] (0.5,5) -- (5,5) -- (0.5,9.5) -- cycle;
+        
+        \end{axis} 
+      }{Allocative efficiency; consumer surplus (\textit{green}) and producer surplus (\textit{blue}) is maximized}{fig:aefficiency}{0.85}
 
     \end{core}
 
@@ -542,15 +622,75 @@
 
         \item A \textbf{price ceiling} is a government-mandated maximum price below the equilibrium. When binding, a price ceiling increases consumer surplus but decreases producer surplus, creating a \textbf{deadweight loss} due to reduced quantity exchanged.
 
-        < PLOT >
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \downslope{0}
+          \pgfiglabel{10,2}{Demand}
+
+          \upslope{0}
+          \pgfiglabel{10,8}{Supply}
+
+          \draw[dashed] (0,4) -- (10,4);
+
+          \filldraw[fill=green!20] (0.5,4) -- (4,4) -- (4,6) -- (0.5,9.5) -- cycle;
+          \filldraw[fill=blue!20] (0.5,4) -- (4,4) -- (0.5,0.5) -- cycle;
+          \filldraw[fill=black!20] (4,4) -- (5,5) -- (4,6) -- cycle;
+          
+          \end{axis} 
+        }{Price ceiling; total surplus is lowered---CS (\textit{green}) is raised but PS (\textit{blue}) is lowered by a greater amount---and deadweight loss (\textit{gray}) is created}{fig:pceiling}{0.85}
 
         \item A \textbf{price floor} is a government-mandated minimum price above the equilibrium. When binding, a price floor increases producer surplus but decreases consumer surplus, also creating deadweight loss.
 
-        < PLOT >
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \downslope{0}
+          \pgfiglabel{10,2}{Demand}
+
+          \upslope{0}
+          \pgfiglabel{10,8}{Supply}
+
+          \draw[dashed] (0,6) -- (10,6);
+
+          \filldraw[fill=green!20] (0.5,6) -- (4,6) -- (0.5,9.5) -- cycle;
+          \filldraw[fill=black!20] (4,4) -- (5,5) -- (4,6) -- cycle;
+          \filldraw[fill=blue!20] (0.5,6) -- (4,6) -- (4,4) -- (0.5,0.5) -- cycle;
+          
+          \end{axis} 
+        }{Price floor; total surplus is lowered---PS (\textit{blue}) is raised but CF (\textit{green}) is lowered by a greater amount---and deadweight loss (\textit{gray}) is created}{fig:pfloor}{1}
 
         \item A \textbf{per-unit tax} is a tax on each unit sold. It shifts the supply curve upward by the tax amount and consequently raises the equilibrium price, decreases both consumer and producer surplus, and creates deadweight loss. The tax revenue is captured between CS and PS. The relative incidence of the tax on consumers and producers depends on the relative elasticities of supply and demand---inelastic curves bear a greater burden.
 
-        < PLOT >
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \downslope{0}
+          \pgfiglabel{10,2}{D}
+
+          \upslope{0}
+          \draw[->, thick] (axis cs:7,7.5) -- (axis cs:7,8.5);
+          \pgfiglabel{10,8}{S}
+
+          \filldraw[fill=green!20] (0.5,6) -- (4,6) -- (0.5,9.5) -- cycle;
+          \filldraw[fill=black!20] (4,4) -- (5,5) -- (4,6) -- cycle;
+          \filldraw[fill=blue!20] (0.5,4) -- (4,4) -- (0.5,0.5) -- cycle;
+          \filldraw[fill=red!20] (0.5,4) -- (4,4) -- (4,5) -- (0.5,5) -- cycle;
+          \filldraw[fill=yellow!20] (0.5,5) -- (4,5) -- (4,6) -- (0.5,6) -- cycle;
+          
+          \upslope{2}
+
+          \end{axis} 
+        }{Per unit tax; total surplus is lowered---both PS (\textit{blue}) and CF (\textit{green}) is lowered and a portion is captured as tax revenue, which can be further split into the tax incidence on producers (\textit{red}) and consumers (\textit{yellow})---and deadweight loss (\textit{gray}) is created}{fig:putax}{1}
 
       \end{enumerate}
 
@@ -560,9 +700,49 @@
 
       \textbf{International Trade} allows countries to specialize in producing goods where they have a comparative advantage. The world supply and demand curves are determined by horizontally adding individual countries' supply and demand curves.
 
-      < PLOT >
-
       A country will \textbf{export} goods when its domestic supply exceeds domestic demand at the world price, and will \textbf{import} goods when domestic demand exceeds domestic supply.
+
+      \doublepgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,1}{D}
+
+        \upslope{-4}
+        \pgfiglabel{10,6}{S} 
+
+        \pgfiglabel{11.5,5}{$P_{global}$} 
+
+        \draw[thick, |-|] (axis cs:5,6) -- (axis cs:9,6) 
+          node[midway, above] {\small Exported};
+
+        \draw[dashed] (0,5) -- (10,5);
+
+        \end{axis} 
+      }{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \downslope{0}
+        \pgfiglabel{10,1}{D}
+
+        \upslope{4}
+        \pgfiglabel{6,10}{S}
+
+        \pgfiglabel{11.5,5}{$P_{global}$} 
+
+        \draw[thick, |-|] (axis cs:1,4) -- (axis cs:5,4) 
+          node[midway, below] {\small Imported};
+
+        \draw[dashed] (0,5) -- (10,5);
+
+        \end{axis} 
+      }{International trade; a country must export more goods when domestic price lies lower than global price (\textit{left}) and import more goods when domestic price lies higher than global price}{fig:itrade}{0.9}
 
       Governments can also implement public policies to regulate international trade. These interventions are typically designed to shield domestic producers from foreign competition and support emerging domestic industries.
 
@@ -570,11 +750,63 @@
 
         \item \textbf{Tariffs} are taxes on imported goods. When imposed, they increase domestic producer surplus and generate tariff revenue for the government, but decrease consumer surplus and create deadweight loss.
 
-        < PLOT >
+        \doublepgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \filldraw[fill=green!20] (0.5,5) -- (5,5) -- (0.5,9.5) -- cycle;
+          \filldraw[fill=blue!20] (0.5,4.5) -- (1,5) -- (0.5,5) -- cycle;
+
+          \downslope{0}
+          \pgfiglabel{10,1}{D}
+
+          \upslope{4}
+          \pgfiglabel{6,10}{S}
+
+          \pgfiglabel{11.5,5}{$P_{global}$} 
+
+          \draw[thick, |-|] (axis cs:1,4) -- (axis cs:5,4) 
+            node[midway, below] {\small Imported};
+
+          \draw[dashed] (0,5) -- (10,5);
+
+          \end{axis} 
+        }{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+          ]
+
+          \filldraw[fill=green!20] (0.5,6) -- (4,6) -- (0.5,9.5) -- cycle;
+          \filldraw[fill=blue!20] (0.5,4.5) -- (2,6) -- (0.5,6) -- cycle;
+          \filldraw[fill=red!20] (2,5) -- (2,6) -- (4,6) -- (4,5) -- cycle;
+          \filldraw[fill=black!20] (1,5) -- (2,5) -- (2,6) -- cycle;
+          \filldraw[fill=black!20] (5,5) -- (4,5) -- (4,6) -- cycle;
+
+          \downslope{0}
+          \pgfiglabel{10,1}{D}
+
+          \upslope{4}
+          \pgfiglabel{6,10}{S}
+
+          \pgfiglabel{12.5,6}{$P_{global} + \text{Tariff}$} 
+
+          \draw[thick, |-|] (axis cs:2,4) -- (axis cs:4,4) 
+            node[midway, below] {\small Imported};
+
+          \draw[dashed] (0,6) -- (10,6);
+          \draw[dashed] (0,5) -- (10,5);
+
+          \end{axis} 
+        }{Tariffs; total surplus is lowered---producer surplus (\textit{blue}) is increased, but consumer surplus (\textit{green}) is lowered by a greater amount, a portion of which is captured as tariff revenue (\textit{red})---and deadweight loss (\textit{gray}) is created}{fig:tariff}{0.9}
 
         \item \textbf{Quotas} limit the quantity of imports. They have similar effects to tariffs, except that the quota rent (\textit{the revenue from limiting supply}) is captured by foreign exporters rather than the domestic government.
 
-        < PLOT >
+        The effect of a government-enforced import quota on the domestic market is visually identical to that of a tariff (\autoref{fig:tariff})---both restrict the quantity of imports and drive up the domestic price above the world price. The critical distinction, however, lies in who captures the resulting revenue. Under a tariff, the domestic government collects the revenue directly as tax receipts. Under a quota, no such tax is levied; instead, the right to export is artificially scarce, so the gains accrue to foreign exporting firms in the form of higher prices---a transfer known as \textbf{quota rents}.
+
+        This means that while the deadweight loss to domestic welfare is equivalent under both policies, a quota further disadvantages the importing country by transferring what would have been government revenue abroad.
 
       \end{enumerate}
 
