@@ -58,6 +58,20 @@
 
     The \textbf{Production Possibilities Curve (PPC)} illustrates the maximum combinations of two goods that an economy can produce given its available resources and technology. 
 
+    \begin{enumerate}
+
+      \item Points \textbf{on the curve} represent \textbf{productive efficiency} where all resources are fully utilized. 
+
+      \item Points \textbf{inside the curve} indicate underallocation of resources
+
+      \item Points \textbf{outside the curve}---although appearing unattainable---can occur temporarily during periods of economic overheating when resources are used beyond their sustainable capacity. However, this state is not sustainable and typically leads to inflation, resource depletion, or economic crisis.
+
+    \end{enumerate}
+
+    The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (\autoref{fig:ppc}) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
+
+    % 
+
     \pgfig{
       \begin{axis}[
         \econplot{Good A}{Good B}
@@ -76,19 +90,7 @@
         \node[circle, fill=black, inner sep=2pt, label=below:{Overheating}] at (axis cs:7,9) {};
 
       \end{axis} 
-    }{Production possibilities curve}{fig:ppc}{0.6}
-
-    \begin{enumerate}
-
-      \item Points \textbf{on the curve} represent efficient production where all resources are fully utilized. 
-
-      \item Points \textbf{inside the curve} indicate underallocation of resources
-
-      \item Points \textbf{outside the curve}---although appearing unattainable---can occur temporarily during periods of economic overheating when resources are used beyond their sustainable capacity. However, this state is not sustainable and typically leads to inflation, resource depletion, or economic crisis.
-
-    \end{enumerate}
-
-    The \textbf{shape of the PPC} reveals important information about opportunity costs. A concave curve (\autoref{fig:ppc}) indicates increasing opportunity costs, meaning that producing additional units of one good requires sacrificing increasingly larger quantities of the other good. This typically reflects the fact that resources are not equally adaptable to producing both goods.
+    }{Production possibilities curve}{fig:ppc}{0.85}
 
     Shifts in the PPC represent economic growth or decline. \textbf{Outward shifts indicate economic growth}, resulting from increases in available resources, improvements in technology, or enhancements in human capital. On the other hand, \textbf{inward shifts indicate economic decline}, potentially from natural disasters, war, or resource depletion.
 
@@ -117,7 +119,7 @@
       \pgfiglabel{10,2}{Demand}
 
       \end{axis} 
-    }{Demand curve}{fig:demand}{1}
+    }{Demand curve}{fig:demand}{0.8}
 
     The determinants of demand, factors that can cause the entire demand curve to shift, include:
 
@@ -152,7 +154,7 @@
       \pgfiglabel{10,8}{Supply}
 
       \end{axis} 
-    }{Supply curve}{fig:supply}{1}
+    }{Supply curve}{fig:supply}{0.8}
 
     Determinants of supply include:
 
@@ -220,7 +222,7 @@
       \node[box] (firms) at (8,0) {FIRMS};
       
       % Top curved arrow (Goods and services)
-      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services} (households.north);
+      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services (\textit{product market})} (households.north);
       
       % Upper middle curved arrow (Consumer expenditure)
       \draw[arrow, bend right=25] (households.south east) to node[below, sloped, pos=0.5] {Consumer expenditure} (firms.south west);
@@ -229,7 +231,7 @@
       \draw[arrow, bend right=25] (firms.north west) to node[above, sloped, pos=0.5] {Wages, rent, dividends} (households.north east);
       
       % Bottom curved arrow (Factors for production)
-      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production} (firms.south);
+      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production (\textit{factor market})} (firms.south);
       
     }{Circular flow of income}{fig:circular}{1.0}
 
@@ -701,7 +703,7 @@
         \pgfiglabel{10,2}{AD}
 
         \end{axis} 
-      }{Aggregate demand curve}{fig:ad}{1}
+      }{Aggregate demand curve}{fig:ad}{0.85}
 
       The AD curve slopes downward for three reasons:
 
@@ -709,23 +711,29 @@
 
         \item \textbf{Wealth effect}: Lower price levels increase real wealth, allowing consumers to purchase more goods and services.
 
+        \textit{When prices at the store drop, the \$20 bill in your pocket can suddenly buy more stuff. You haven't received a raise, but you feel richer because your money has more "purchasing power" and subsequently increase consumer spending (C).}
+
         \item \textbf{Interest rate effect}: Lower price levels reduce money demand, causing interest rates to fall, stimulating investment.
+
+        \textit{When prices are low, you don't need to carry as much cash for your daily coffee and groceries. You leave that extra money in the bank. When banks have more money sitting in accounts, they "on sale" their loans by lowering interest rates to get people to borrow, raising investment and thus increasing investment (I).}
 
         \item \textbf{Exchange rate effect}: Lower interest rates cause currency depreciation, making domestic goods cheaper abroad and stimulating exports.
 
+        \textit{In conjunction with the interest rate effect, when interest rates in the U.S. drop, foreign investors also move their money elsewhere to find better returns. To do that, they sell their U.S. Dollars. This makes the Dollar "weaker" or cheaper. Suddenly, American products look like they are "on clearance" to people in other countries.}
+
       \end{enumerate}
 
-      Rightwards Shifts in the AD curve result from changes in the following four components. Correspondingly, decreases shift the AD leftward.
+      Rightwards Shifts in the AD curve result from increases in the following four components that are not due to a change in price. Correspondingly, decreases shift the AD leftward.
 
       \begin{enumerate}
 
-        \item \textbf{Consumer spending}: Increases from tax cuts or increased confidence shift AD rightward.
+        \item \textbf{Consumer spending}: Increases from tax cuts (\textit{through the tax multiplier effect}; \autoref{core:mpcs}) or increased confidence shift AD rightward.
 
         \item \textbf{Investment}: Increases from business optimism or technological innovation shift AD rightward.
 
-        \item \textbf{Government spending}: Increases shift AD rightward.
+        \item \textbf{Government spending}: Increases shift AD rightward. \textit{Government spending acts as the "balancer" to manually shove the AD curve back to the LRAS (\autoref{core:fiscal}) when the private sector fails to do so.}
 
-        \item \textbf{Net exports}: Increases from foreign economic growth or currency depreciation shift AD rightward.
+        \item \textbf{Net exports}: Increases from foreign economic growth or currency depreciation (\textit{note that depreciation at face value is a price change from the foreign buyer perspective, but the domestic price in unchanged, making this a non-price influence}) shift AD rightward.
 
       \end{enumerate}
 
@@ -733,27 +741,32 @@
 
     \begin{core}[label=core:mpcs]{The Multiplier Effect}
 
-      An initial change in spending creates a larger final change in GDP through the multiplier effect. To understand why this is, we introduce two new concepts: the \textbf{Marginal Propensity to Consume or MPC} (the fraction of additional disposable income that households spend) and the \textbf{Marginal Propensity to Save (MPS)} (the fraction of additional household income that households save). Thus, 
+      An initial change in spending creates a larger final change in GDP through the multiplier effect. To understand why this is, we introduce two new concepts: the \textbf{Marginal Propensity to Consume or MPC} (\textit{the fraction of additional disposable income that households spend}) and the \textbf{Marginal Propensity to Save (MPS)} (\textit{the fraction of additional household income that households save}). Thus, 
       \[
         \text{MPC} + \text{MPS} = 1
       \]
 
       The \textbf{spending multiplier} effect operates through successive rounds of spending. When one person spends income, the recipient receives income and spends a portion (\textit{the MPC}), continuing until leakages (\textit{saving, taxes, imports}) absorb the remaining income.
       \[
-        \text{Spending Multiplier} = \frac{1}{1 - \text{MPC}} = \frac{1}{\text{MPS}}
+        \text{Spending Multiplier} = \frac{1}{1 - \text{MPC}} = \frac{1}{\text{MPS}} = 1 + \text{MPC} + \text{MPC}^2 + \text{MPC}^3 + \ldots
       \]
+
+      As a result, a government spending stimulus of $\$X$ would increase aggregate demand by $\dfrac{\$X}{MPS}$.
 
       The \textbf{tax multiplier} works in the same manner but with a smaller initial impact because a tax change first affects disposable income rather than direct aggregate demand. When taxes are cut, consumers do not spend the entire amount; they save a portion (\textit{the MPS}) immediately. Consequently, the first round of the spending cycle is "diluted" by this initial leakage, making the tax multiplier's overall effect less powerful than that of the spending multiplier. The negative sign in the following equation for the tax multiplier reflects that tax increases reduce disposable income and spending.
       \[
-        \text{Tax Multiplier} = -\frac{\text{MPC}}{1 - \text{MPC}}
+        \text{Tax Multiplier} = -\frac{\text{MPC}}{1 - \text{MPC}} = -\frac{\text{MPC}}{\text{MPS}} = \text{MPC} + \text{MPC}^2 + \text{MPC}^3 + \ldots
       \]
+
+      Consequently, a total tax change of $-\$X$ would increase aggregate demand by $-\dfrac{-\$X \cdot MPC}{MPS}$.
+
     \end{core}
 
   \subsection{Aggregate Supply}
 
     \begin{core}{Short-Run Aggregate Supply}
 
-      \textbf{Short-Run Aggregate Supply (SRAS)} represents the total output firms are willing to produce at different price levels in the short run, when some input costs (\textit{particularly wages}) are fixed.
+      \textbf{Short-Run Aggregate Supply (SRAS)} represents the total output firms are willing to produce at different price levels in the short run, when \textbf{some input costs (\textit{particularly wages}) are fixed}.
 
       \pgfig{
         \begin{axis}[
@@ -765,19 +778,29 @@
         \pgfiglabel{10,8}{SRAS}
 
         \end{axis} 
-      }{Short-run aggregate supply}{fig:sras}{1}
+      }{Short-run aggregate supply}{fig:sras}{0.85}
 
-      The SRAS curve slopes upward because higher price levels increase profitability when input costs are \textbf{sticky}. Firms respond to higher prices by increasing production to capture additional profits in the near future until production costs adjust.
+      The SRAS curve slopes upward because higher price levels increase profitability (\textit{higher margins}) when input costs are \textbf{sticky}. Firms respond to higher prices by increasing production to capture the temporary opportunity for additional profits until production costs adjust, representing a movement along the SRAS curve (\autoref{core:shifts}).
 
-      The SRAS curve illustrates the short-run trade-off between inflation and unemployment. Points higher on the curve indicate economic boom conditions (\textit{low unemployment, high inflation}), while points lower on the curve indicate recessionary conditions (\textit{high unemployment, low inflation}).
+      Shifts in the SRAS result from changes in the following.
 
-      SRAS shifts result from changes in productivity, input costs, labor market conditions, and taxes or subsidies.
+      \begin{enumerate}
+
+        \item \textbf{Productivity:} More productive factors of production (\textit{technological advancement, machinery, etc.}) shift the SRAS rightwards.
+
+        \item \textbf{Input Costs:} Lower input costs (\textit{such as decreasing oil prices}) mean producers have larger margins, shifting the SRAS rightwards.
+
+        \item \textbf{Labor Market Conditions:} High unemployment among the labor force pushes wages downward because firms have more bargaining power over its employees. Wages are a type of input costs, thus decreases in wages (\textit{stemming from labor market conditions}) will shift the supply curve rightwards.
+
+        \item \textbf{Taxes/Subsidies:} Governments can incentivize or disincentivize the production of goods and services by selectively applying subsidies (\textit{artificially raising margins}) or additional taxes (\textit{artificially lowering margins}) on firms, respectively.
+
+      \end{enumerate}
 
     \end{core}
 
     \begin{core}[label=core:lras]{Long-Run Aggregate Supply}
 
-      \textbf{Long-Run Aggregate Supply (LRAS)} represents the economy's potential output when all input costs can fully adjust to price changes. In the long run, output is independent of the price level and equals potential GDP.
+      \textbf{Long-Run Aggregate Supply (LRAS)} represents the economy's potential output when all input costs can fully adjust to price changes (\textit{the reality in the long run}). Here, output is independent of the price level and is equivalent to potential GDP.
 
       \pgfig{
         \begin{axis}[
@@ -795,147 +818,487 @@
 
   \subsection{Economic Theory}
 
-    \begin{core}{Types of Inflation}
+    \begin{core}[label=core:shifts]{Shifts in Short Run Equilibrium}
 
-      \textbf{Demand-pull inflation} results from AD increasing beyond potential output, pushing the economy above its LRAS.
+      The short run equilibrium price and quantity can be shifted by any shift in the AD and SRAS curve, thus we can classify these shifts into four categories.
 
-      \pgfig{
-        \begin{axis}[
-          \econplot{Quantity}{Price}
-          \axispresetstwo
-        ]
+      \begin{enumerate}
 
-        % Dot at intersection
-        \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,6.5) {};
+        \item \textbf{AD curve shifts rightwards.} This scenario occurs when consumer demand and business growth occurs at a faster rate at which the economy can sustainably handle in the short term, leading to \textbf{high inflation} (\textit{increase in P}) and \textbf{low unemployment} (\textit{increase in Q}). This scenario is also called \textbf{demand-pull inflation} and is essentially an "economic boom" (\textit{high GDP growth}).
 
-        % Vertical dashed line from dot to x-axis
-        \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
-        \pgfiglabel{1.5, 7}{$P_{n}$}
+        \textit{It's important to point out here the logical relationship between the quantity of goods and services denoted in the AD-SRAS-LRAS plot and GDP. Since GDP is essentially the market value of all products and services produced, it is in a direct relationship with the quantity of those goods and services. In order to support the production of more goods and services, an economy needs more workers and thus unemployment would subsequently fall. This observation is also in line with \textbf{Okun's Law}, which is the observed statistical relationship between a country's GDP and its unemployment rate.}
 
-        % Horizontal dashed line from dot to y-axis
-        \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:0,6.5); 
-        \pgfiglabel{5.8,2}{$Q_{n}$}
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
 
-        \draw[-stealth, thick] (axis cs:7,3.5) -- (axis cs:8,4.5);
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,6.5) {};
 
-        \downslope{3}
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
+            \pgfiglabel{1.5, 7}{$P_{n}$}
 
-        \downslope{0}
-        \pgfiglabel{8,1}{AD}
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:0,6.5); 
+            \pgfiglabel{5.8,2}{$Q_{n}$}
 
-        \upslope{0}
-        \pgfiglabel{10,8}{SRAS}
+            \draw[-stealth, thick] (axis cs:7,3.5) -- (axis cs:8,4.5);
 
-        \verticalslope{5}
-        \pgfiglabel{6.5,9}{LRAS}
+            \downslope{3}
 
-        \end{axis} 
-      }{Demand pull inflation}{fig:dpi}{0.85}
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
 
-      \textbf{Cost-push inflation} results from SRAS decreasing due to supply shocks, reducing output and raising prices simultaneously.
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
 
-      \pgfig{
-        \begin{axis}[
-          \econplot{Quantity}{Price}
-          \axispresetstwo
-        ]
+            \verticalslope{5}
+            \pgfiglabel{6.5,9}{LRAS}
 
-        % Dot at intersection
-        \node[circle, fill=black, inner sep=2pt] at (axis cs:3.5,6.5) {};
+          \end{axis} 
+        }{AD shifts rightwards; associated with unsustainable economic growth}{fig:ad_right}{0.85}
 
-        % Vertical dashed line from dot to x-axis
-        \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:3.5,0);
-        \pgfiglabel{1.5, 7}{$P_{n}$}
+        \item \textbf{AD curve shifts leftwards.} This scenario occurs when consumer demand and business growth slows down (\textit{consumer pessemism, higher interest rates, tax hikes to reduce government deficit, etc.}). Consequently, this leads to \textbf{low inflation} (\textit{decrease in P}) and \textbf{high unemployment} (\textit{decrease in Q}). This scenario represents a recession (\textit{low GDP growth}).
 
-        % Horizontal dashed line from dot to y-axis
-        \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:0,6.5); 
-        \pgfiglabel{4.2,2}{$Q_{n}$}
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
 
-        \draw[-stealth, thick] (axis cs:7,7.5) -- (axis cs:6,8.5);
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:3.5,3.5) {};
 
-        \upslope{3}
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:3.5,3.5) -- (axis cs:3.5,0);
+            \pgfiglabel{1.5, 4}{$P_{n}$}
 
-        \downslope{0}
-        \pgfiglabel{8,1}{AD}
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:3.5,3.5) -- (axis cs:0,3.5); 
+            \pgfiglabel{4.2,2}{$Q_{n}$}
 
-        \upslope{0}
-        \pgfiglabel{10,8}{SRAS}
+            \draw[-stealth, thick] (axis cs:7,2.5) -- (axis cs:6,1.5);
 
-        \verticalslope{5}
-        \pgfiglabel{3.5,9}{LRAS}
+            \downslope{-3}
 
-        \end{axis} 
-      }{Supply push inflation}{fig:spi}{0.85}
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{6.5,9}{LRAS}
+
+          \end{axis} 
+        }{AD shifts leftwards; associated with a recession}{fig:ad_left}{0.85}
+
+        \item \textbf{SRAS curve shifts rightwards.} This scenario is the consequence of a positive supply shock, an unexpected event that suddenly changes the supply of a product or commodity (\textit{sustained lower oil prices, infrastructure development}), leading to \textbf{low inflation} (\textit{decrease in P}) and \textbf{low unemployment} (\textit{increase in Q}). This is the "golden scenario" that economies strive for because allows for lower prices and higher economic growth simultaneously.
+
+        \textit{Positive supply shocks are usually common with technological breakthroughs and lower input costs. However, although this may seem like an ideal scenario, there are some negative consequences of this societal development. Structural displacement of certain workers due to automation is a large downside (such as AI displacing the current white collar workforce). Lower prices can induce a deflationary spiral risk during which AD shifts left because consumers want to wait for prices to drop further. Since debt erodes in value under high inflationary conditions, borrowers undertake a comparatively higher debt burden as a positive supply shock may cause wages to also fall.}
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,3.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:6.5,3.5) -- (axis cs:6.5,0);
+            \pgfiglabel{1.5, 4}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:6.5,3.5) -- (axis cs:0,3.5); 
+            \pgfiglabel{5.9,1.8}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:7,6.5) -- (axis cs:8,5.5);
+
+            \upslope{-3}
+
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRAS}
+
+          \end{axis} 
+        }{SRAS shifts rightwards; associated with sudden positive supply shocks}{fig:sras_right}{0.85}
+
+        \item \textbf{SRAS curve shifts leftwards.} This scenario is the consequence of a negative supply shock, an unexpected event that suddenly changes the supply of a product or commodity (\textit{such as the oil shock of 1973 which led to the Volcker shock}), leading to \textbf{high inflation} (\textit{increase in P}) and \textbf{high unemployment} (\textit{decrease in Q}). This scenario is also called \textbf{cost-push inflation}.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:3.5,6.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:3.5,0);
+            \pgfiglabel{1.5, 7}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:3.5,6.5) -- (axis cs:0,6.5); 
+            \pgfiglabel{4.2,2}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:7,7.5) -- (axis cs:6,8.5);
+
+            \upslope{3}
+
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRAS}
+
+          \end{axis} 
+        }{SRAS shifts leftwards; associated with sudden negative supply shocks}{fig:sras_left}{0.85}
+
+      \end{enumerate}
 
     \end{core}
 
     \begin{core}{Long-Run Self-Adjustment \& Equilibrium}
 
-      Without government intervention, the economy naturally adjusts to long-run equilibrium through wage and price flexibility. When output falls below potential (\textit{recessionary gap}), unemployment rises, wages decline, and production costs fall, shifting SRAS rightward until output returns to potential. When output exceeds potential (\textit{inflationary gap}), upward pressure on wages increases costs, shifting SRAS leftward.
+      Without government intervention, the economy naturally adjusts to long-run equilibrium through wage and price flexibility.
+      
+      \begin{enumerate}
 
-      \pgfig{
-        \begin{axis}[
-          \econplot{Quantity}{Price}
-          \axispresetstwo
-        ]
+        \item \textbf{Rightward AD Shift Correction:} Because unemployment is low, workers have high bargaining power, which eventually leads to \textbf{higher nominal wages} to keep up with the rising cost of living. As a result, SRAS shifts to the left to account for the higher input cost and the economy returns to LRAS at a \textbf{permanently higher price level}.
 
-        \draw[-stealth, thick] (axis cs:6,8.5) -- (axis cs:7,7.5);
-        \draw[-stealth, thick] (axis cs:8.5,6) -- (axis cs:7.5,7);
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
 
-        \upslope{-3}
-        \upslope{3}
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:5,8) {};
 
-        \downslope{0}
-        \pgfiglabel{8,1}{AD}
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:5,8) -- (axis cs:5,0);
+            \pgfiglabel{1.5, 8.5}{$P_{n}$}
 
-        \upslope{0}
-        \pgfiglabel{10,8}{SRAS}
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:5,8) -- (axis cs:0,8); 
+            \pgfiglabel{5.8,2}{$Q_{n}$}
 
-        \verticalslope{5}
-        \pgfiglabel{3.5,9}{LRAS}
+            \draw[-stealth, thick] (axis cs:7,7.5) -- (axis cs:6,8.5);
 
-        \end{axis} 
-      }{Long-run self-adjustment or SRAS}{fig:adjustment}{1}
+            \downslope{3}
+            \pgfiglabel{9,3}{AD}
 
-      This self-adjustment process explains why classical economists emphasized the economy's natural tendency toward full employment ($\text{U-3 Rate} = \text{NRU}$), though the adjustment process may be slow and painful.
+            \upslope{3}
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{5,10.5}{LRAS}
+
+          \end{axis} 
+        }{Rightward AD shift correction; SRAS shifts left}{fig:ad_right_correction}{0.85}  
+
+        \item \textbf{Leftward AD Shift Correction:} Because unemployment is high, workers have low bargaining power, which forces them to accept \textbf{lower nominal wages}. As a result, SRAS shifts to the right to account for lower input costs and the economy returns to LRAS at a \textbf{permanently lower price level}.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:5,2) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:5,2) -- (axis cs:5,0);
+            \pgfiglabel{1.5, 2.5}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:5,2) -- (axis cs:0,2); 
+            \pgfiglabel{5.6,0.7}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:6,5.5) -- (axis cs:7,4.5);
+
+            \downslope{-3}
+            \pgfiglabel{7,1}{AD}
+
+            \upslope{-3}
+            \upslope{0}
+            \pgfiglabel{10,8}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{6.5,9}{LRAS}
+
+          \end{axis} 
+        }{Leftward AD shift correction; SRAS shifts right}{fig:ad_left_correction}{0.85}
+
+        \item \textbf{Rightward SRAS Shift Correction/Integration:} The correction for this scenario depends on the time frame of the positive supply shock in question.
+
+        If \textbf{temporary}, the SRAS simple shifts back to the right because higher employment will increase wages and thus input costs, decreasing output eventually.
+
+        If \textbf{permanent}, the supply shock is usually due a positive economic breakthrough, thus an economy would integrate the productivity gain rather than "correct" it. Consequently, LRAS will shift to the right and sustainably decrease the NRU of that economy. \textit{This is why developed nations tend to have a lower unemployment rate than developing nations.}
+
+        \doublepgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+            \pgfiglabel{1.5, 5.5}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+            \pgfiglabel{5.7,1.5}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:7,4.5) -- (axis cs:6,5.5);
+
+            \upslope{-3}
+            \upslope{0}
+            \pgfiglabel{10,7}{SRAS}
+
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRAS}
+
+          \end{axis} 
+        }{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,3.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:6.5,3.5) -- (axis cs:6.5,0);
+            \pgfiglabel{1.5, 4}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:6.5,3.5) -- (axis cs:0,3.5); 
+            \pgfiglabel{5.9,1.8}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:5.2,6) -- (axis cs:6.3,6);
+
+            \upslope{-3}
+            \pgfiglabel{10,7}{SRAS}
+
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \verticalslope{5}
+            \verticalslope{6.5}
+            \pgfiglabel{3.5,9}{LRAS}
+
+          \end{axis} 
+
+        }{Rightward SRAS shift correction/integration; SRAS shifts back left if temporary (\textit{left}) or LRAS shifts right under permanent positive supply shocks (\textit{right})}{fig:sras_right_correction}{0.85}
+
+        \item \textbf{Leftward SRAS Shift Correction:} The nature of the correction for this scenario also depends on the time frame of the supply shock in question.
+
+        If \textbf{temporary}, the SRAS simply shifts back to the right once the "input costs" return to normal.
+
+        If \textbf{permanent}, workers eventually accept the new reality of higher prices and lower output. High unemployment consequently pushes wages downwards (\textit{due to lower worker bargaining power}) and shifts SRAS back right due to this lowered input cost.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity}{Price}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+            \pgfiglabel{1.5, 5.5}{$P_{n}$}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+            \pgfiglabel{4.2,2}{$Q_{n}$}
+
+            \draw[-stealth, thick] (axis cs:6,8.5) -- (axis cs:7,7.5);
+
+            \downslope{0}
+            \pgfiglabel{8,1}{AD}
+
+            \upslope{3}
+            \upslope{0}
+            \pgfiglabel{8,10}{SRAS}
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRAS}
+
+          \end{axis} 
+        }{Leftward SRAS shift correction; SRAS shifts back}{fig:sras_left_correction}{0.85}
+
+      \end{enumerate}
+
+      The general self-adjustment process explains why classical economists emphasized the economy's natural tendency toward full employment ($\text{U-3 Rate} = \text{NRU}$), though the adjustment process may be slow and painful.
 
     \end{core}
 
     \begin{core}{The Phillips Curve}
 
-      The \textbf{Phillips Curve} illustrates the short-run inverse relationship between unemployment and inflation. Lower unemployment corresponds to higher inflation, reflecting the short-run trade-off between economic activity and price stability.
+      The \textbf{Philips Curve} is a graphical representation of the relationship between unemployment and inflation.
 
       \pgfig{
         \begin{axis}[
           \econplot{Unemployment Rate}{Inflation Rate}
           \axispresetstwo
-        ]
+          ]
 
-        \downslope{0}
-        \pgfiglabel{10,2}{SRPC}
+          \verticalslope{5}
+          \pgfiglabel{3.5,9}{LRPC}
 
-        \end{axis} 
-      }{Short-run phillips curve}{fig:srpc}{1}
-
-      Movements along the SRAS correspond to movements along the Short-Run Phillips Curve (SRPC). Rightward shifts in SRAS shift the SRPC leftward (\textit{better outcomes for both unemployment and inflation}). However, a leftward shift in the SRAS (\textit{supply push inflation}) causes a rightward shift in the SRPC, resulting in a phenomenon known as \textbf{stagflation}---a period characterized by simultaneous increases in both unemployment and inflation.
-
-      In the long run, the economy returns to the natural rate of unemployment regardless of inflation, making the Long-Run Phillips Curve vertical.
-
-      \pgfig{
-        \begin{axis}[
-          \econplot{Unemployment Rate}{Inflation Rate}
-          \axispresetstwo
-        ]
-
-        \verticalslope{5}
-        \pgfiglabel{3.5,9}{LRPC}
+          \downslope{0}
+          \pgfiglabel{10,2}{SRPC}
 
         \end{axis} 
-      }{Long-run phillips curve}{fig:lrpc}{0.85}
+      }{Short-run and long-run phillips curve}{fig:phillips}{0.85}
+
+      In the short run, unemployment and inflation share an inverse relationship. Importantly, movements along and entire shifts of the SRPC directly cooresponds to shifts in the AD and SRAS curve, respectively.
+
+      In the long run, the economy returns to the natural rate of unemployment regardless of inflation, making the LRPC vertical.
+
+      \begin{enumerate}
+
+        \item \textbf{Movements along the SRPC} occur when AD shifts (\textit{equivalent to a movement along the SRAS}), leading to an inverse change in both inflation and unemployment.
+
+        \textit{Keep in mind here that the subsequent SRAS shift that occurs to correct the AD curve shift leads the SRPC to shift horizontally (not shown) so that the unemployment rate sits at the NRU.}
+
+        \doublepgfig{
+          \begin{axis}[
+            \econplot{Unemployment Rate}{Inflation Rate}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:8,2) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:8,2) -- (axis cs:8,0);
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:8,2) -- (axis cs:0,2); 
+
+            \draw[-stealth, thick] (axis cs:5.5,5.5) -- (axis cs:8.5,2.5);
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRPC}
+
+            \downslope{0}
+            \pgfiglabel{10,2}{SRPC}
+
+          \end{axis}
+        }{
+          \begin{axis}[
+            \econplot{Unemployment Rate}{Inflation Rate}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:2,8) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:2,8) -- (axis cs:2,0);
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:2,8) -- (axis cs:0,8); 
+
+            \draw[-stealth, thick] (axis cs:4.5,6.5) -- (axis cs:2.5,8.5);
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRPC}
+
+            \downslope{0}
+            \pgfiglabel{10,2}{SRPC}
+
+          \end{axis} 
+        }{Movements along the SRPC when AD shifts left (\textit{left; demand decreases}) and right (\textit{right; demand increases})}{fig:ad_srpc}{0.85}
+
+        \item \textbf{Shifts in the SRPC} occur when SRAS shifts (\textit{positive or negative supply shocks}), leading to the same directional change in both inflation and unemployment.
+
+        \textit{Under negative supply shocks, SRAS eventually shifts back to the long run equilibrium, equivalent to the SRPC shifting back to its initial position. Under positive supply shocks, either the SRPC shifts back to its initial position (if the shift is temporary) and or the LRPC shifts to the left (if the shift is permanent) and consequently leads to a sustainably lower NRU. This equivalent correction on the SRPC-LRPC plot is not shown.}
+
+        \doublepgfig{
+          \begin{axis}[
+            \econplot{Unemployment Rate}{Inflation Rate}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,6.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:0,6.5); 
+
+            \draw[-stealth, thick] (axis cs:7,3.5) -- (axis cs:8,4.5);
+
+            \verticalslope{5}
+            \pgfiglabel{6.5,9}{LRPC}
+
+            \downslope{0}
+            \downslope{3}
+            \pgfiglabel{10,2}{SRPC}
+
+          \end{axis}
+        }{
+          \begin{axis}[
+            \econplot{Unemployment Rate}{Inflation Rate}
+            \axispresetstwo
+            ]
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:3.5,3.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:3.5,3.5) -- (axis cs:3.5,0);
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:3.5,3.5) -- (axis cs:0,3.5); 
+
+            \draw[-stealth, thick] (axis cs:7,2.5) -- (axis cs:6,1.5);
+
+            \verticalslope{5}
+            \pgfiglabel{3.5,9}{LRPC}
+
+            \downslope{0}
+            \downslope{-3}
+            \pgfiglabel{10,2}{SRPC}
+
+          \end{axis} 
+        }{Shifts in the SRPC when SRAS shifts left (\textit{left; negative supply shock}) and right (\textit{right; positive supply shock})}{fig:sras_srpc}{0.85}
+
+      \end{enumerate}
 
     \end{core}
 
-    \begin{core}{Quantity Theory of Money}
+    \begin{core}{Quantity Theory of Money} % IN PROGRESS
 
       The \textbf{Quantity Theory of Money} provides a mathematical framework for understanding the long-run causes of inflation. The theory is expressed through the following identity.
       \[
@@ -970,17 +1333,17 @@
 
       \begin{itemize}
 
-        \item \textbf{Medium of exchange}: Money facilitates transactions by eliminating barter's double coincidence of wants.
+        \item \textbf{Medium of exchange}: Money facilitates transactions by acting as an intermediary instrument and eliminating barter's double coincidence of wants (\textit{we two traders have exactly what each other want}).
 
-        \item \textbf{Store of value}: Money preserves purchasing power for future use.
+        \item \textbf{Store of value}: Money preserves purchasing power for future use well compared to other assets (\textit{unlike food, for instance, because it rots}).
 
-        \item \textbf{Unit of account}: Money provides a common measure for valuing goods and services.
+        \item \textbf{Unit of account}: Money provides a common measure for valuing goods and services across a country.
 
       \end{itemize}
 
-      When hyperinflation erodes money's value, it fails as a store of value and unit of account, disrupting economic activity.
+      \textit{Note that money is not a perfect store of value or unit of account due to inflation. Overtime, its purchasing power does indeed erode. In periods of hyperinflation, its unit of account also may start of skew based on the varying sentiment of market participants.}
 
-      The \textbf{opportunity cost of holding money} is the interest that could be earned by holding interest-bearing assets instead. Higher interest rates increase this opportunity cost, reducing money demand because people would much rather earn interest from securities.
+      The \textbf{opportunity cost of holding money} is the interest that could be earned by holding interest-bearing assets instead (\textit{such as savings accounts or treasury bills}). Higher interest rate conditions increase this opportunity cost, reducing money demand because people would much rather earn interest from securities.
 
     \end{core}
 
@@ -990,11 +1353,11 @@
 
       \begin{itemize}
 
-        \item \textbf{M0}: Currency in circulation plus reserves held by banks at the central bank.
+        \item \textbf{M0}: Physical currency in circulation and reserves held by banks at the central bank.
 
-        \item \textbf{M1}: The most liquid forms, including currency, checking accounts, and travelers' checks.
+        \item \textbf{M1}: M0 money supply, checking accounts, and travelers' checks.
 
-        \item \textbf{M2}: Includes M1 plus savings deposits, small time deposits, and money market mutual funds.
+        \item \textbf{M2}: M0 money supply, M1 money supply, savings deposits, small time deposits (\textit{CDs}), and money market mutual funds.
 
       \end{itemize}
 
@@ -1016,13 +1379,13 @@
         
       }{Diagram of money supply}{fig:msupply}{0.80}
 
-      These aggregates reflect different degrees of liquidity, with broader measures (\textit{M2}) capturing more forms of money that can be relatively easily converted to cash.
+      These aggregates reflect different degrees of \textbf{liquidity}, with broader measures (\textit{M2}) capturing more forms of money that cannot be relatively easily converted to cash compared to the foundational counterparts (\textit{M0 or M1}).
 
     \end{core}
 
     \begin{core}{The Money Market}
 
-      The money market determines the equilibrium nominal interest rate through the interaction of money supply and money demand. The money supply curve is vertical (\textit{set by the central bank}), while money demand slopes downward (\textit{higher interest rates increase the opportunity cost of holding money}).
+      The money market determines the equilibrium nominal interest rate through the interaction of money supply and money demand. The \textbf{money supply curve is vertical} because it is a fixed value that is manipulated by the government and central bank through fiscal policy (\autoref{core:fiscal}) and monetary policy (\autoref{core:monetary}). On the other hand, \textbf{money demand slopes downward} because higher interest rates increase the opportunity cost of holding money, thus market participants would increasingly deposit their money into interest-bearing assets (\textit{decreasing the quantity of money held}).
 
       \pgfig{
         \begin{axis}[
@@ -1046,7 +1409,17 @@
         \end{axis} 
       }{Money market}{fig:mmarket}{0.84}
 
-      Factors affecting money demand include price levels (\textit{higher prices require more money for transactions}), national income (\textit{higher income increases transactions}), and technology affecting liquidity.
+      The following non-interest-rate factors lead to shifts in the money demand curve.
+
+      \begin{enumerate}
+
+        \item \textbf{Price Level:} When the overall price of goods and services increases, individuals must hold more money to execute these transactions, shifting the money demand curve rightwards.
+
+        \item \textbf{National Income:} When people earn more (\textit{national income rise}), they spend more, raising the deamand for money and shifting the curve rightwards.
+
+        \item \textbf{Technology Affecting Liquidity:} When technology makes it easier/faster to convert asssets into "spendable" forms, the need for holding liquid cash lowers, shifting the money demand curve leftwards.
+
+      \end{enumerate}
 
     \end{core}
 
@@ -1054,15 +1427,19 @@
 
     \begin{core}{Fractional Reserve Banking}
 
-      Banks operate under \textbf{fractional reserve banking}, maintaining only a fraction of deposits as \textbf{reserves} while lending the remainder. This reserve to lending ratio is set by the \textbf{required reserve ratio (RRR)}, which establishes the minimum fraction of deposits that banks must hold as reserves.
+      Banks operate under \textbf{fractional reserve banking}, maintaining only a fraction of deposits as \textbf{reserves} while lending the remainder to outside market participants. This reserve to lending ratio is set by the \textbf{required reserve ratio (RRR)}, which establishes the minimum fraction of deposits that banks must hold as reserves.
 
-      This system creates money through the multiplier effect as shown by the following formulas.
+      This system creates money through the multiplier effect as shown by the following formulas where $\text{rr} = \text{reserve ratio} \geq \text{RRR}$.
       \[
-        \text{money multiplier} = \frac{1}{\text{RRR}}
+        \text{money multiplier} = \frac{1}{\text{rr}} = 1 + \text{rr} + \text{rr}^2 + \text{rr}^3 + \ldots
       \]
+
+      As a result, the total change in the money supply of an economy for a given amount of excess reserve (\textit{money a bank does not need to store as required reserves}) is shown by the following equation.
       \[
-        \text{ΔMoney Supply} = \text{Excess Reserves} \times \frac{1}{rr}
+        \text{ΔMoney Supply} = \frac{\text{excess reserves}}{rr}
       \]
+
+      \textit{Note that excess reserves, in layman's terms, refers to an injection of money from the government or central bank (new money). It's important to notice that this is not talking about consumer deposits, which are already accounted for in the money supply and is simply recirculated money.}
 
       As these loans are spent and redeposited into other banks, the process repeats across the banking system, mathematically expanding a single initial deposit into a much larger total increase in the money supply. We have seen this same pattern with the multiplier effect in the context of MPC and MPS (\autoref{core:mpcs}). With a 20\% RRR, an initial deposit of \$1,000 can ultimately support \$5,000 in total deposits.
 
@@ -1070,54 +1447,62 @@
 
     \begin{core}{Loanable Funds Supply and Demand}
 
-      The loanable funds market determines the real interest rate through the supply of funds (\textit{savings}) and demand for funds (\textit{investment}). With higher real interest rates, the supply of loanable funds increases (\textit{encouraging saving}) and the demand decreases (\textit{discouraging borrowing for investment}).
+      The loanable funds market determines the real interest rate through the supply of funds (\textit{savings provided by lenders}) and demand for funds (\textit{investments sought after by borrowers}).
 
       \pgfig{
         \begin{axis}[
           \econplot{Quantity of Loanable Funds}{Real Interest Rate}
           \axispresetstwo
-        ]
+          ]
 
-        \downslope{0}
-        \pgfiglabel{10,2}{D}
+          \downslope{0}
+          \pgfiglabel{10,2}{D}
 
-        \upslope{0}
-        \pgfiglabel{10,8}{S}
+          \upslope{0}
+          \pgfiglabel{10,8}{S}
 
-        % Dot at intersection
-        \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+          % Dot at intersection
+          \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
 
-        % Vertical dashed line from dot to x-axis
-        \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
-        \pgfiglabel{2.5, 5.8}{r}
+          % Vertical dashed line from dot to x-axis
+          \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+          \pgfiglabel{2.5, 5.8}{r}
 
-        % Horizontal dashed line from dot to y-axis
-        \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
-        \pgfiglabel{6,2}{Q}
+          % Horizontal dashed line from dot to y-axis
+          \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+          \pgfiglabel{6,2}{Q}
 
         \end{axis} 
       }{Loanable funds}{fig:lfunds}{1}
 
-      The position of these curves reflects national saving behavior (S), government borrowing (D), and investment profitability (D) expectations.
+      \textit{Real interest rates represent the price of borrowing from the supply of loans avaliable, analogous to price on a simple supply and demand plot.}
+
+      Thus when real interest rates rise, the quantity of loanable funds demanded decreases (\textit{movement up the demand curve}), and when real interest rates fall, the demand subsequently increases because loans have gotten "cheaper" (\textit{movement down the demand curve}). Supply curve sloping upwards works in the same manner but in the context of supply.
+
+      The position of these curves reflects national saving behavior (S), government borrowing (D), and investment profitability (D) expectations. % FIGURE OUT WHAT THIS MEANS
 
     \end{core}
 
     \begin{core}{National Savings}
 
-      \textbf{National Savings} represents total saving in an economy for investment, equaling private savings plus public savings. A \textbf{closed economy} national savings is represented by the following equation.
+      \textbf{National Savings} represents total saving in an economy for investment, equaling private savings plus public savings.
+
+      A \textbf{closed economy} national savings is represented by the following equation.
       \[
         I = \text{National Savings} = Y - C - G = \underbrace{(Y - T - C)}_{\text{Private Saving}} + \underbrace{(T - G)}_{\text{Public Saving}} 
       \]
 
       As the above equations shows nicely, private saving is simply household income (Y) after taxes (T) and private consumption (C) and public saving (\textit{or the government saving}) its tax revenue (T) after accounting for its spending (G). 
 
-      In an \textbf{open economy}, the relationship between savings and investment changes because a country is no longer limited to its own internal resources. It can interact with the rest of the world and must consider net capital outflow (NCO).
+      The national saving in a closed economy context is equal to investment (I) and is an alternative representation of the supply of loanable funds (\textit{savings}) and demand for those loanable funds (\textit{investment}) at equilibrium.
+
+      In an \textbf{open economy}, the relationship between savings and investment changes because a country is no longer limited to its own internal resources. It can interact with the rest of the world and must consider \textbf{net capital outflow (NCO)}.
 
       \[
         \text{National Savings} = I + NCO
       \]
 
-      \textbf{Net Capital Outflow (NCO)} measures the net flow of funds being invested abroad, calculated by the following equation.
+      \textbf{Net Capital Outflow (NCO)} measures the net flow of funds being \textbf{invested abroad}, calculated by the following equation.
       \[
         \text{NCO} = \text{Domestic purchase of foreign assets} - \text{Foreign purchase of domestic assets}
       \]
@@ -1130,7 +1515,7 @@
 
   \subsection{Fiscal Policy}
 
-    \begin{core}{Fiscal Policy}
+    \begin{core}[label=core:fiscal]{Fiscal Policy}
 
       \textbf{Fiscal policy} involves government spending and taxation decisions to influence aggregate demand. 
 
@@ -1164,7 +1549,7 @@
 
   \subsection{Monetary Policy}
 
-    \begin{core}{Monetary Policy}
+    \begin{core}[label=core:monetary]{Monetary Policy}
 
       \textbf{Monetary policy} involves central bank actions controlling the money supply and interest rates.
 

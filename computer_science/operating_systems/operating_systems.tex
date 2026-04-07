@@ -11,6 +11,219 @@
 
 \input{../../presets/_general/startup}
 
-Notes start here
-  
+\section{macOS}
+
+\section{Windows}
+
+\section{Linux}
+
+  \subsection{Foundational Software} 
+
+    \begin{core}{Linux Kernel}
+
+      Although people conversationally refer to linux as the linux operating system, linux is actually a kernel.
+
+      A kernel is fundamental piece of software in any operating system and loads machine code (1s and 0s) and consequently allocates RAM to it, where after the CPU will read that machine code and carry out the specific set of instructions and actions that machine code is commanding.
+
+    \end{core}
+
+    \begin{core}{GNU Operating System}
+
+      GNU is the actual operating system of linux, a collection of the following software:
+
+        The compiler (GCC): This is the translator of C code into machine code.
+
+        Shell: This is the CLI used to talk directly to the kernel by inputing commands defined within the core utilities (pure machine code files).
+
+        The C Library (glibc): The fundamental set of instructions that almost every other base program on the computer relies on to do basic things like opening a file.
+
+        Core utilities (coreutils): the basic CLI commands like ls, rm, grep, etc. These a no extension files written in machine code.
+
+      In GNU, the large majority of its base functionalities stored within glibc is written in C (an a bit of assembly), hence the direct need of the compiler GCC to come with the operating system.
+
+      In terms of levels C is a mid-level language
+
+      machine code -> assembly -> C -> other high level languages like python
+
+    \end{core}
+
+    \begin{core}{Drivers}
+
+      Modern operatings systems have to communicate and deal with thousands of different hardware components (mouse, keyboard, wifi chip, printer, graphics card, etc.)
+
+      A driver is a specialized piece of software that tells the kernel how to communicate with a specific piece of hardware, essentially sitting between the kernel and the hardware.
+
+      coreutils/glibc -> linux kernel -> drivers -> relevant hardware
+
+      The following are the two different types of drivers.
+
+        Monolithic (built in): These drivers are part of the linux kernel file, making it very fast (like keyboard, disk, etc.).
+
+        Kernel Modules: These drivers are only loaded in when needed, keeping the kernel small and efficient (like a USB webcam). (these are kept at a specific path)
+
+      *Every unique piece of hardware requires a complementary driver in order to be accessed by the kernel of an operating system. Thus, if the complementary driver to any cutting edge piece of hardware doesn't exist in the local, one would have to manually install the driver before being able to use it.
+
+      The linux kernel is able to search whether it has the specific driver for a piece of hardware via a tiny unchangeable chip called the firmware.
+
+      The firmware is like an ID card. It simple says something like "I am a Logitech Webcam model 9000". If a hardware is connected to the machine, the kernel subsequently reads the firmware and sees if it had its cooresponding driver within its kernel modules.
+
+    \end{core}
+
+  \subsection{General Distribution Components}
+
+    A linux distribution is essentially the linux kernel + GNU OS + other software that give each distro their unique personality.
+
+    The other software are the collection of the following categories
+
+    \begin{core}{Init System}
+
+      When a kernel finishes loading, it doesn't nessecarily know how to start your machine (desktop, wifi, etc.). It instead starts one program (PID 1) called the init system which starts all of the background processes needed to just turn on the computer for the user. At face value, systemd is a suite of no extension files written in C and compiled with GCC.
+
+      Most modern and major distros use an init system called systemd. In certain niche cases, other init systems are used like openrc, runit, but these are irrelevant for just the average linux user.
+
+      The linux kernel knows to run systemd first because it is hardcoded into the linux kernel files to search for systemd via preset paths.
+
+    \end{core}
+
+    \begin{core}{Package Manager}
+
+      Packages are essentially a compressed archive of the follow three components.
+
+        The Binary: The no extension machine code files (such as the python3 executable) 
+
+        Metadata: Information about the version of the package, the creator, the description, etc. (the file type differs across different distros but usually plain text or YAML/JSON variant)
+
+        Dependencies: a specific field within the metadata file that uses boolean logic to express which other packages the relevant package needs in order to work.
+
+      For different distros, the package extensions differ. For ubuntu it is .deb, for redhat/fedora it is .rpm, and for macOS is it just .pkg.
+
+      Each distro maintains a repository of packages. This is essentially a massive online server containing thousands of precompiled, vetted, and secure packages.
+
+      A package manager is the middle man that can access these repositories and install whatever packages you'd like into your local. The greatest strength of the package manager is dependency handling (making sure each dependency and their respective versions are installed in the correct order and manner, which, done otherwise, would break the package you are trying to use).
+
+      Here are some examples across distros (these are like what homebrew is for macOS).
+
+        ubuntu -> apt
+        fedora/redhat -> dnf 
+        arch linux -> pacman
+
+    \end{core}
+
+    \begin{core}{Display Server}
+
+      The display server is the foundation of the machine's GUI. And it's job is to coordinate the communication between the kernel and apps, after which the GUI would adjust according to the action you've done with hardware (like the mouse of keyboard).
+
+      input (mouse click on button) -> hardware -> driver -> kernel -> display server -> app recognizes an action -> display server -> kernel -> diver -> hardware -> output (button takes on the "pressed" appearance)
+
+      The X11 display server has been the standard since the 1980s, however the modern successor that people are pivoting towards is Wayland (modern distros like ubuntu and fedora have already switched over to Wayland from X11).
+
+    \end{core}
+
+    \begin{core}{Window Manager}
+   
+      The window manager is the software that gives the outputed pixels on the screen a sense of organization. In the linux world, window mangers are separated into three categories
+
+        Stacking (floating) window managers: windows float on top of each other (this is how macOS and windows is by default)
+
+        Tiling window managers (TWM): windows tile within the screen (yabai/skhd or hammerspoon are extensions in macOS that make the GUI a tiling set up)
+    
+        Dynamic window managers: this is a hybrid between stacking and tiling window managers
+
+      The window manager is also responsible for the design of windows (close x symbol at the top, border of window, etc.). Without it, all application graphical interfaces will be mushed towards the top left corner (you won't be able to grab it because the very concept of grabbing exists within the WM and not he display server) of the GUI made possible by the display server.
+
+    \end{core}
+
+    \begin{core}{Wayland: The Modern Standard}
+
+      Now, so far we have described the display server and window manager being to seperate piece of software. However, Wayland or, more accurately, the Wayland compositor is both a display server and window manager, thus its processes are much faster than the old X11 standard. The following are different types of wayland compositors.
+
+        Mutter (used for the Gnome DE) - stacking
+        KWin (used for the KDE Plasma DE) - hybrid
+        Sway (standalone) - tiling
+        Hyprland (standalone) - tiling/dynamic
+
+      each different "flavors" have their own pros and cons.
+
+    \end{core}
+
+    \begin{core}{Desktop Environment}
+
+      The DE is a bundled suite of seperate applications that are designed to look, feel, and talk to each other cohesively. A DE is a general collection of the following programs.
+
+        The window manager/compositor: usually Wayland like we have discussed
+
+        The Shell/Panel: A standalone program that run on top of the display server, the bar the top of bottom of the desktop that holds the time, wifi, bluetooth, app icons, etc.
+
+        File Manager: the user space application that acts as the interface between you and the file system stored in the hardware. this is like finder for macOS
+
+          hardware(ssd) -> driver -> kernel -> file manager -> file system interface (screen)
+
+          Different DEs use different file managers:
+
+            dolphin (KDE Plasma)
+            nautilus (Gnome)
+            Thunar (XFCE)
+
+        Settings Manager: This is the GUI that allows you manipulate how the kernel, drivers, and compositor behave without having to handle complex file written in C.
+
+        Core Apps: These are the basic apps that are preset within the environment such as the terminal emulator (kitty), text editor (nvim), system monitor (htop), the package manager GUI (app store), etc.
+
+    \end{core}
+
+    \begin{core}{Daemons}
+
+      Daemons are the background processes that run constantly in a machine and is launched by the init system (usually systemd). Daemons exist for various processes and their process names are usually ended with a "d"
+
+        cupsd -> printing
+        sshd -> ssh
+        bluetoothd -> bluetooth
+        journald -> journal (logging)
+
+      A user can access and talk with a daemon via a control tool.
+
+        To talk to systemd -> systemctl
+        To talk to the network daemon -> networkctl
+        To talk to bluetoothd -> bluetoothctl
+
+    \end{core}  
+
+  \subsection{Linux File System Hierarchy}
+
+    / (Root)
+     ├── bin -> usr/bin       (Essential command binaries: ls, cd, cat)
+     ├── boot                 (Static files for the Bootloader: GRUB, Kernel images)
+     ├── dev                  (Device files: sda1 [disk], mouse0, urandom)
+     ├── etc                  (System-wide configuration files: fstab, passwd, hosts)
+     ├── home                 (User personal directories)
+     │   └── ingyu            (Your space: .config, Downloads, Desktop)
+     ├── lib -> usr/lib       (Essential shared libraries for the binaries in /bin)
+     ├── media                (Mount point for removable media: USB sticks, CDs)
+     ├── mnt                  (Mount point for temporarily mounted filesystems)
+     ├── opt                  (Optional add-on software packages: Google Chrome, Zoom)
+     ├── proc                 (Virtual filesystem: Kernel & process information)
+     ├── root                 (Home directory for the Root/Superuser)
+     ├── run                  (Temporary data for running daemons: PIDs, locks)
+     ├── sbin -> usr/sbin     (System binaries for root: fdisk, reboot, iptables)
+     ├── sys                  (Virtual filesystem: Hardware/Driver info & control)
+     ├── tmp                  (Temporary files: deleted on reboot)
+     ├── usr                  (The "User" hierarchy: the bulk of your system)
+     │   ├── bin              (Non-essential binaries: python3, nvim, git)
+     │   ├── lib              (Libraries for /usr/bin)
+     │   ├── local            (Programs you compile/install manually from source)
+     │   └── share            (Architecture-independent data: icons, fonts, docs)
+     └── var                  (Variable data: logs, databases, mail spools)
+         ├── log              (System logs: journald, auth.log)
+         └── cache            (Application cache data)     
+
+  \subsection{Major Linux Distributions}
+
+    \subsubsection{Ubuntu}
+
+      
+
+    \subsubsection{Arch}
+
+    
+
+ 
 \end{document}
