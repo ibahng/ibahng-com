@@ -11,9 +11,35 @@
 
 \input{../../presets/_general/startup}
 
+\section{Windows}
+
 \section{macOS}
 
-\section{Windows}
+  \subsection{Foundational Software}
+
+  \subsection{macOS Storage Architecture}
+    
+    \begin{core}{Root Directory \& Overview}
+
+    \end{core}
+
+    % include as many core concepts for categorization of direct root subdirectories
+
+    \begin{core}{Disk Storage Management}
+
+      need to clear out caches (16GB) and look into app support (21 GB) more carefully
+
+      /Applications/ 8.85GB
+      /System/ 36GB - BULK≥
+      /Library/ 16.14 GB
+      - here you can clean out Logs/ and Caches/
+      /opt/
+      - can cleanup cached downloads brew keeps after installing = “brew cleanup”
+      /private/var/log/*
+      - can clean this up
+      /Users/ 74.43 
+
+    \end{core}
 
 \section{Linux}
 
@@ -85,7 +111,7 @@
 
     \end{core}
 
-    \begin{core}{Package Manager}
+    \begin{core}[label=core:pack_man]{Package Manager}
 
       Packages are essentially a compressed archive of the follow three components.
 
@@ -189,41 +215,195 @@
 
   \subsection{Linux File System Hierarchy}
 
-    / (Root)
-     ├── bin -> usr/bin       (Essential command binaries: ls, cd, cat)
-     ├── boot                 (Static files for the Bootloader: GRUB, Kernel images)
-     ├── dev                  (Device files: sda1 [disk], mouse0, urandom)
-     ├── etc                  (System-wide configuration files: fstab, passwd, hosts)
-     ├── home                 (User personal directories)
-     │   └── ingyu            (Your space: .config, Downloads, Desktop)
-     ├── lib -> usr/lib       (Essential shared libraries for the binaries in /bin)
-     ├── media                (Mount point for removable media: USB sticks, CDs)
-     ├── mnt                  (Mount point for temporarily mounted filesystems)
-     ├── opt                  (Optional add-on software packages: Google Chrome, Zoom)
-     ├── proc                 (Virtual filesystem: Kernel & process information)
-     ├── root                 (Home directory for the Root/Superuser)
-     ├── run                  (Temporary data for running daemons: PIDs, locks)
-     ├── sbin -> usr/sbin     (System binaries for root: fdisk, reboot, iptables)
-     ├── sys                  (Virtual filesystem: Hardware/Driver info & control)
-     ├── tmp                  (Temporary files: deleted on reboot)
-     ├── usr                  (The "User" hierarchy: the bulk of your system)
-     │   ├── bin              (Non-essential binaries: python3, nvim, git)
-     │   ├── lib              (Libraries for /usr/bin)
-     │   ├── local            (Programs you compile/install manually from source)
-     │   └── share            (Architecture-independent data: icons, fonts, docs)
-     └── var                  (Variable data: logs, databases, mail spools)
-         ├── log              (System logs: journald, auth.log)
-         └── cache            (Application cache data)     
+    \begin{core}{Root Directory \& Overview}
+
+      The starting point of the linux file system is called the \textbf{root directory}, represented as a single forward slash: \textcode{/}. Every single file or directory within the system exists under this directory. The following is an overview of the first layer of directories within \textcode{/}.
+
+      \dirtree{%
+      .1 / (Root).
+      .2 bin $\rightarrow$ usr/bin --- Core System Directories. 
+      .2 sbin $\rightarrow$ usr/sbin.
+      .2 lib $\rightarrow$ usr/lib.
+      .2 boot.
+      .2 etc.
+      .2 home --- User Data and Configuration.
+      .2 root.
+      .2 usr.
+      .2 opt.
+      .2 proc --- Virtual and Variable Files.
+      .2 sys.
+      .2 dev.
+      .2 run.
+      .2 var --- Variable/Persistent Data.
+      .2 tmp.
+      .2 media --- Media and Mounts.
+      .2 mnt.
+      .2 srv.
+      }
+
+    \end{core}
+
+    \begin{core}[label=core:coresd]{Core System Directories}
+
+      INTRODUCTION
+
+      \begin{enumerate}
+
+        \item \textcode{/bin} : The bin directory (\textit{which stand for "binaries"}) is a \textbf{symlink} to \textcode{/usr/bin}. It's primary function is to store foundational machine code executable files intended to be avaliable to be executed by \textbf{all users}. These files can generally be categorized into three groups.
+
+          \begin{itemize}
+
+            \item \textbf{Filesystem \& file tools} encompasses file system manipulation and navigation executables commonly used in the terminal: \textcode{ls}, \textcode{cp}, \textcode{mv}, \textcode{rm}, etc.
+
+            \item \textbf{Shells} are the actual shell executable files one executes in order to switch between shell types: \textcode{sh}, \textcode{bash}, \textcode{zsh}.
+
+            \item \textbf{Process \& system tools} refer to executables meant for manipulating system processes via the terminal: \textcode{kill}, \textcode{ps}, \textcode{su}, \textcode{df}, etc.
+
+          \end{itemize}
+
+        \textcode{/usr/bin} is one of the directories listed in the \textcode{\$PATH} environment variable.
+
+        \item \textcode{/sbin} : The sbin directory (\textit{standing for system binaries}) is a \textbf{symlink} to \textcode{/usr/sbin} and functions as the location for machine code executables intended for the \textbf{system administrator} or \textbf{root user}. These files can generally be categorized into the following groups.
+
+          \begin{itemize}
+
+            \item \textbf{Filesystem management \& maintenance} tools handle the creation, repair and integrity of disk paritions: \textcode{fsck}, \textcode{mkfs}, \textcode{fdisk}, \textcode{resize2fs}, etc.
+
+            \item \textbf{System boot \& initialization} tools encompass binaries that are responsible for turning on and off the machine into and out of a function desktop or server environment: \textcode{init} / \textcode{systemd}, \textcode{grub-install}, \textcode{reboot}, \textcode{shutdown}, \textcode{halt}, etc.
+
+            \item \textbf{Network configuration \& security} refers to tools to change network hardware states or configure deep-level routing and firewalls: \textcode{iptables} / \textcode{nftables}, \textcode{ip}, \textcode{route}, \textcode{ethtool}, etc.
+
+            \item \textbf{Kernel and hardware management} binaries are programs that allow the user to talk to the linux kernel and in turn with the phyiscal hardware: \textcode{modprobe}, \textcode{lsmod}, \textcode{hwclock}, \textcode{swapon}, etc.
+
+            \item \textbf{Administrative user management} executables are for managing the different capabilites and attributes of the machine's users: \textcode{useradd}, \textcode{usermod}, \textcode{userdel}, \textcode{chage}, etc.
+
+          \end{itemize}
+
+        \textcode{/usr/sbin} is one of the directories listed in the \textcode{\$PATH} environment variable and is only executable under \textcode{sudo}.
+
+        \item \textcode{/lib} : The lib directory (\textit{short for library}) is a \textbf{symlink} to \textcode{/usr/lib} and contains essential \textbf{shared libraries} in machine code format and kernel modules that provide the fundamental instructions require by the binaries in \textcode{/bin}and \textcode{/sbin} to interact with the linux kernel and hardware during boot and execution.
+
+        \textbf{Shared libraries} are a shared hierarchy of \textcode{.so} files that reside in memory and provide modular, reusable logic (\textit{functions}) to multiple independently running applications through dynamic linking at runtime.
+
+        \item \textcode{/boot} : The boot directory is the location of three foundational operating system files.
+
+          \begin{itemize}
+
+            \item \textcode{vmlinuz} is the actual linux kernel developed by Linus Torvalds and is short for "Virtual Memory Linux [compressed] (z)"
+
+            \item \textcode{initrd} / \textcode{initramfs} is the initial RAM disk needed to provide initial drivers to reach the harddrive during machine initialization.
+
+            \item \textcode{grub/} is a subdirectory containing the configurations for the GRUB bootloader, the program that runs (\textit{after BIOS/UEFI}) when the computer is turned on before it loads in the linux kernel into RAM.
+
+          \end{itemize} 
+
+        \textit{Note that this bootloading process occurs prior to \textcode{systemd}, which is the first software run once the system is actually "alive".}
+
+        \item \textcode{/etc} : The etc directory (\textit{short for editable text configurations}) is storage for text configurations files for the entire operating system across all users.
+
+        \textit{For instance, whereas \textcode{~/.zshrc} would configure the local instance of the zsh shell, \textcode{/etc/.zshrc} would set the default for every person who logs into the machine.}
+
+      \end{enumerate}
+
+    \end{core}
+
+    \begin{core}{User Data and Configuration}
+
+      INTRODUCTION
+
+      \begin{enumerate}
+
+        \item \textcode{/home} : The home directory is the primary personal workspace of the user(s). Each user will have their own subdirectory (\textit{with their username as the title}) within \textcode{/home}, such as \textcode{/home/john} or \textcode{/home/sally}, and each user's subdirectory contents \textbf{will not be accessible} by other users.
+
+        This is the directory containing workspaces familiar to all computer users---such as \textcode{Documents/}, \textcode{Downloads/}, \textcode{Desktop/}, \textcode{Pictures/}, \textcode{Music/}, etc.---as well as the custom dotfiles for the relevant user, such as \textcode{.bashrc}, \textcode{.config/}, etc.
+
+        \item \textcode{/root} : This is the workspace of the superuser and houses primarily \textcode{.bashrc} (or \textcode{.zshrc})---the specific terminal settings that only apply when you are acting as the superuser via \textcode{sudo -i} or \textcode{sudo su}---and \textcode{.ssh}, which are security keys used for system level automated tasks.
+
+        \item \textcode{/usr} : The usr directory (\textit{short for Unix System Resources} holds the vast majority of static, read-only software and files. Like we have covered in \autoref{core:coresd}, the real directories for the \textcode{/bin}, \textcode{/sbin}, and \textcode{/lib} symlinks live here. Additionally, \textcode{/usr} houses the following important subdirectories.
+
+        \begin{itemize}
+
+          \item \textcode{local/} is a secondary, mirrored file system designed as a "safe zone" for the system administrator to install software manually \textbf{without interference from the system's package manager} (\textcode{apt}, \textcode{pacman}, \textcode{dnf}). The packages residing here are avaliable to all users of the machine but isn't part of the standard distribution's repository of packages.
+
+          At face value, the subdirectories within \textcode{local/} are an exact mirror of subdirectories of \textcode{/usr}: \textcode{/usr/local/bin}, \textcode{/usr/local/sbin}, \textcode{/usr/local/lib}, and \textcode{/usr/local/share}.
+
+          \item \textcode{share/} is the central storage lcoation for \textbf{read-only, architecture-independent data} such as \textcode{man}---manual pages for different executable commands---and \textcode{doc}---general documentation, license agreements, and README files for every software package installed. Other static files and directories regarding fonts, timezones, and icons for the operating system are stored here too.
+
+          \item \textcode{include/} stores \textcode{.h} files (\textit{C/C++ header files}) which provides the technical definitions requred to compile software that links to system libraries.
+
+          \item \textcode{src/} contains the source code (\textit{the human-readable C and Assembly code}) of the operating system's components, most notably the Linux Kernel \textcode{vmlinuz}. 
+
+        \end{itemize}
+
+        \item \textcode{/opt}: The opt directory (\textit{short for Optional}) is a reserved location for self-contained, third-party software \textbf{bundles}---software that keeps all its files (\textit{binaries, libraries, icons, and configuration}) inside a single-dedicated subdirectory rather than scattering different files into different locations, such as executables in \textcode{/usr/local/bin} and libraries in \textcode{/usr/local/lib}. The latter being the primary installation method covered previously.        
+
+        The \textbf{monolithic} software installed within \textcode{/opt} is usually built by firms and corporations such as Chrome or Zoom.
+
+      \end{enumerate}
+
+    \end{core}
+
+    \begin{core}{Virtual and Variable Files}
+
+      \begin{enumerate}
+
+        \item \textbf{[/proc]}: A virtual filesystem that doesn't exist on disk. It provides a window into the Linux kernel and current processes; for example, /proc/meminfo shows RAM usage in real-time.
+
+        \item \textbf{[/sys]}: Similar to /proc, this is a virtual filesystem that exposes information about hardware, drivers, and various kernel subsystems.
+
+        \item \textbf{[/dev]}: Contains "device files" that act as interfaces to hardware. In Linux, "everything is a file"—writing to /dev/sda is a way of interacting directly with your hard drive.
+
+        \item \textbf{[/run]}: A temporary filesystem (tmpfs) that stores volatile runtime data since the last boot, such as Process IDs (PIDs) and lock files for running services.
+
+      \end{enumerate}
+
+    \end{core}
+
+    \begin{core}{Variable/Persistent Data}
+
+      \begin{enumerate}
+
+        \item \textbf{[/var]}: Contains files to which the system writes data during operation. This includes system logs (/var/log), mail spools, and database files that grow over time.
+
+        \item \textbf{[/tmp]}: A place for temporary files created by applications. Most distributions are configured to wipe this directory automatically upon reboot.
+
+      \end{enumerate}
+
+    \end{core}
+
+    \begin{core}{Media and Mounts}
+
+      \begin{enumerate}
+
+        \item \textbf{[/media]}: The standard location where the OS automatically mounts removable media, like USB sticks, SD cards, or external hard drives.
+
+        \item \textbf{[/mnt]}: A dedicated space for administrators to manually and temporarily mount filesystems (like a network drive or a secondary partition).
+
+        \item \textbf{[/srv]}: Contains data for services provided by the system, such as files for a web server (/srv/www) or data for an FTP server.
+
+      \end{enumerate}
+
+    \end{core}
 
   \subsection{Major Linux Distributions}
 
     \subsubsection{Ubuntu}
 
-      
+      placeholder text 
+
+      \begin{core}{Ubuntu Flavors}
+
+        Kubuntu
+
+      \end{core}
+
+    \subsubsection{Mint}
+
+      placeholder text
 
     \subsubsection{Arch}
 
-    
+      placeholder text
 
  
 \end{document}

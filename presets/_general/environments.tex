@@ -11,6 +11,8 @@
 \definecolor{Orange}{HTML}{D35400} % Pumpkin/Burnt Orange
 \definecolor{Black}{HTML}{000000}    % Solid Black
 \definecolor{White}{HTML}{FFFFFF}    % Solid White
+\definecolor{codefontcolor}{HTML}{454746}
+\definecolor{codebgcolor}{HTML}{EAEEF5}
 
 \tcbset{ % this is the default design of tcolorboxes
   colframe = black,
@@ -51,3 +53,18 @@
 \newcommand{\tcb@cnt@coreautorefname}{Core Concept}
 \newcommand{\tcb@cnt@definitionautorefname}{Definition}
 \makeatother
+
+
+\newtcbox{\textcode}{
+    on line,
+    boxrule=0pt,        % Removes the border thickness
+    boxsep=0pt,
+    left=3pt,           % Horizontal padding
+    right=3pt,
+    top=1pt,            % Vertical padding
+    bottom=1pt,
+    arc=4pt,            % Adjust for more/less rounding
+    colback=codebgcolor,     % Background color
+    colframe=codebgcolor,    % Set frame to match background just in case
+    fontupper=\ttfamily\color{codefontcolor}\strut
+}

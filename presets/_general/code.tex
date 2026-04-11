@@ -1,6 +1,7 @@
 \usepackage{newverbs} % allows for inline typewriter font via \texttt{}
 \usepackage{fancyvrb} % also code font blocks but has more capabilities than texttt
 \usepackage{listings} % allows for codeblocks - config below
+\usepackage{dirtree}
 
 %BELOW ARE CODE BLOCK DESIGNS (Light Theme)
 \definecolor{gray}{HTML}{707070}
@@ -39,3 +40,6 @@
   framesep=6pt,
   stepnumber=1,
 }
+
+\renewcommand*\DTstyle{\ttfamily} % Keeps the font monospaced
+\setlist{nosep}                   % Optional: tightens spacing

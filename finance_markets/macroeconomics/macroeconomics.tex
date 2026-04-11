@@ -222,18 +222,18 @@
       \node[box] (firms) at (8,0) {FIRMS};
       
       % Top curved arrow (Goods and services)
-      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services (\textit{product market})} (households.north);
+      \draw[arrow, bend right=45] (firms.north) to node[above, sloped, pos=0.5] {Goods and services} (households.north);
       
       % Upper middle curved arrow (Consumer expenditure)
-      \draw[arrow, bend right=25] (households.south east) to node[below, sloped, pos=0.5] {Consumer expenditure} (firms.south west);
+      \draw[arrow, bend right=-25] (firms.south west) to node[below, sloped, pos=0.5] {Wages, rent, dividends} (households.south east);
       
       % Lower middle curved arrow (Wages, rent, dividends)
-      \draw[arrow, bend right=25] (firms.north west) to node[above, sloped, pos=0.5] {Wages, rent, dividends} (households.north east);
+      \draw[arrow, bend right=-25] (households.north east) to node[above, sloped, pos=0.5] {Consumer expenditure} (firms.north west);
       
       % Bottom curved arrow (Factors for production)
-      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production (\textit{factor market})} (firms.south);
+      \draw[arrow, bend right=45] (households.south) to node[below, sloped, pos=0.5] {Factors for production} (firms.south);
       
-    }{Circular flow of income}{fig:circular}{1.0}
+    }{Circular flow of income; factor market (\textit{down}) and product market (\textit{up})}{fig:circular}{1.0}
 
     This model (\autoref{fig:circular}) illustrates the interdependence between sectors of the economy and forms the basis for measuring aggregate economic activity through Gross Domestic Product (\autoref{core:gdp}).
 
@@ -1383,7 +1383,7 @@
 
     \end{core}
 
-    \begin{core}{The Money Market}
+    \begin{core}[label=core:mmarket]{The Money Market}
 
       The money market determines the equilibrium nominal interest rate through the interaction of money supply and money demand. The \textbf{money supply curve is vertical} because it is a fixed value that is manipulated by the government and central bank through fiscal policy (\autoref{core:fiscal}) and monetary policy (\autoref{core:monetary}). On the other hand, \textbf{money demand slopes downward} because higher interest rates increase the opportunity cost of holding money, thus market participants would increasingly deposit their money into interest-bearing assets (\textit{decreasing the quantity of money held}).
 
@@ -1392,6 +1392,9 @@
           \econplot{Quantity of Money Held}{Nominal Interest Rate}
           \axispresetstwo
         ]
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
 
         % Vertical dashed line from dot to x-axis
         \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
@@ -1425,7 +1428,7 @@
 
   \subsection{Banking System}
 
-    \begin{core}{Fractional Reserve Banking}
+  \begin{core}[label=core:frac_banking]{Fractional Reserve Banking}
 
       Banks operate under \textbf{fractional reserve banking}, maintaining only a fraction of deposits as \textbf{reserves} while lending the remainder to outside market participants. This reserve to lending ratio is set by the \textbf{required reserve ratio (RRR)}, which establishes the minimum fraction of deposits that banks must hold as reserves.
 
@@ -1511,39 +1514,84 @@
 
 \section{Stabilization Policies}
 
-  Policymakers use fiscal and monetary policy to manage aggregate demand and stabilize the economy.
+  Without government intervention, the economy can potentially spiral out of control, characterized by extreme high and lows of the natural business cycle due to fluctuating aggregate demand levels. In order to stabilize this naturally volatile economic timeline, policymakers use fiscal and monetary to manage aggregate demand.
 
   \subsection{Fiscal Policy}
 
     \begin{core}[label=core:fiscal]{Fiscal Policy}
 
-      \textbf{Fiscal policy} involves government spending and taxation decisions to influence aggregate demand. 
+      \textbf{Fiscal policy} involves \textbf{government spending} and \textbf{taxation decisions} to influence aggregate demand. 
 
       \begin{itemize}
 
-        \item \textbf{Contractionary fiscal policy} (\textit{reducing spending or increasing taxes}) reduces AD to combat inflation. 
+        \item \textbf{Contractionary fiscal policy} reduces AD to combat inflation by decreasing government spending ( $\downarrow G$ ) and increasing taxes ( $\downarrow C$ ). 
 
-        \item \textbf{Expansionary fiscal policy} (\textit{increasing spending or decreasing taxes}) stimulates AD to combat recession.
+        \item \textbf{Expansionary fiscal policy} stimulates AD to combat recession by increasing government spending ( $\uparrow G$ ) and decreasing taxes ( $\uparrow C$ ).
 
       \end{itemize}
 
-      Keep in mind that the initial impact of fiscal policy is multiplied through the multiplier effect (\autoref{core:mpcs}), meaning the ultimate change in GDP exceeds the initial fiscal impulse.
+      *Keep in mind that the initial impact of fiscal policy is multiplied through the \textbf{spending and tax multiplier} (\autoref{core:mpcs}), meaning the ultimate change in GDP exceeds the initial fiscal impulse of government spending or tax policy.
 
     \end{core}
 
     \begin{core}{Automatic Stabilizers}
 
-      \textbf{Automatic stabilizers} are fiscal policies that automatically counteract economic fluctuations without discretionary action by the government. These stabilizers provide immediate response to economic conditions, avoiding recognition and implementation lags that affect discretionary policy.
+      \textbf{Automatic stabilizers} are fiscal policies that automatically counteract economic fluctuations \textbf{without discretionary action by the government}. These stabilizers provide immediate response to economic conditions, avoiding recognition and implementation lags that affect discretionary policy.
 
-      Progressive income taxes exemplify this: during expansions, rising incomes push taxpayers into higher brackets, automatically increasing tax revenues and exerting downward pressure on the economy. During recessions, falling incomes reduce tax burdens, providing automatic stimulus.
+      \textbf{Progressive income taxes} exemplify automatic stabilizers.
+  
+      \begin{itemize}
+
+        \item During \textbf{economic expansions}, rising incomes push taxpayers into higher brackets, automatically increasing tax revenues and exerting downward pressure on the economy.
+
+        \item During \textbf{economic recessions}, falling incomes reduce tax burdens, providing automatic stimulus.
+
+      \end{itemize}
 
     \end{core}
 
-    \begin{core}{Crowding Out and Government Debt}
+    \begin{core}{Crowding Out and Government Debt} 
 
-      Government \textbf{deficit} (\textit{annual spending minus revenue}) and \textbf{debt} (\textit{accumulated deficits}) represent the fiscal stance. Deficit spending can stimulate the economy but may crowd out private investment through higher interest rates.
+      The \textbf{crowding out effect} occurs when government spending reduces private sector activity, potentially nullifying the original intent of stimulating the economy in times of recession. This is particularly problematic when the government is operating at a \textbf{deficit} (\textit{annual spending greater than tax revenue}), consequently building its \textbf{debt} (\textit{accumulated deficits}).
 
-      The \textbf{crowding out effect} occurs when government borrowing increases demand for loanable funds, raising interest rates and reducing private investment. This effect is more significant in closed economies with limited capital inflow.
+      Governments generally finance this spending through two primary channels.
+
+      \begin{enumerate}
+
+        \item \textbf{Loans} (\autoref{core:omc}) are usually the only viable option as much of developed nations operate under a deficit. However, when an institution as large as a government enters the loanable funds market, the demand curve of loanable funds shifts rightwards, increasing real interest rates, and consequently \textbf{crowding out investment (I)}.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity of Loanable Funds}{Real Interest Rate}
+            \axispresetstwo
+            ]
+
+            \downslope{3}
+            \downslope{0}
+            \pgfiglabel{10,2}{D}
+
+            \upslope{0}
+            \pgfiglabel{10,8}{S}
+
+            \draw[-stealth, thick] (axis cs:7,3.5) -- (axis cs:8,4.5);
+
+            % Dot at intersection
+            \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,6.5) {};
+
+            % Vertical dashed line from dot to x-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
+            \pgfiglabel{2.5, 5.8}{r}
+
+            % Horizontal dashed line from dot to y-axis
+            \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:0,6.5); 
+            \pgfiglabel{6,2}{Q}
+
+          \end{axis} 
+        }{Government induced loanable funds demand increase}{fig:crowding_out}{0.85}
+
+        \item \textbf{Tax hikes} are the second option, although less common because nations that operate under perpetual debt use it primarily as a tool for preventing debt from compounding uncontrollably. However, tax hikes also directly \textbf{slow down consumer spending (C) and investment (I)}, which is also called \textbf{tax-induced contraction}.
+
+      \end{enumerate}
 
     \end{core}
 
@@ -1551,31 +1599,81 @@
 
     \begin{core}[label=core:monetary]{Monetary Policy}
 
-      \textbf{Monetary policy} involves central bank actions controlling the money supply and interest rates.
+      \textbf{Monetary policy} involves central bank actions controlling the \textbf{money supply} and \textbf{interest rates}.
 
       \begin{itemize}
 
-        \item \textbf{Expansionary monetary policy} decreases interest rates and increases the money supply to stimulate economic activity.
+        \item \textbf{Expansionary monetary policy} stimulates economy activity to combat recession by decreasing interest rates and increasing the total money supply.
 
-        \item \textbf{Contractionary monetary policy} increases interest rates and reduces the money supply to combat inflation.
+        \item \textbf{Contractionary monetary policy} reduces economy activty to combat inflation by increasing interest rates and decreasing the total money supply.
 
       \end{itemize}
 
-      The central bank influences rates through open market operations, reserve requirements, and the discount rate.
-
     \end{core}
 
-    The central bank influences rates through the following monetary policy tools.
+    The central bank specifcally influences rates through the following monetary policy tools.
 
-    \begin{core}{Monetary Policy Tool (\textit{Open Market Operations})}
+    \begin{core}[label=core:omc]{Monetary Policy Tool (\textit{Open Market Operations})}
 
-      \textbf{Open market operations} involve buying and government bonds to affect bank reserves.
+      \textbf{Open market operations} involve buying and selling government bonds to affect private sector bank reserves and thus the total money supply of the economy.
 
       \begin{itemize}
 
-        \item \textbf{Purchasing bonds} injects reserves and expand the money supply in the economy
+        \item \textbf{Purchasing bonds} involves the government handing over money to the private sector in exchange for its bonds, thus expanding the money supply and consequently lowering interest rates in order to combat recession.
 
-        \item \textbf{Selling bonds} build up reserves and contract the money supply in the economy
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity of Money Held}{Nominal Interest Rate}
+            \axispresetstwo
+          ]
+
+          % Dot at intersection
+          \node[circle, fill=black, inner sep=2pt] at (axis cs:8,2) {};
+
+          % Vertical dashed line from dot to x-axis
+          \draw[dashed] (axis cs:8,2) -- (axis cs:8,0);
+          \pgfiglabel{2, 2.5}{r}
+
+          \draw[dashed] (axis cs:8,2) -- (axis cs:0,2); 
+          \pgfiglabel{7.2,1}{M1}
+
+          \verticalslope{5}
+          \verticalslope{8}
+          \pgfiglabel{5,10.5}{S}
+
+          \downslope{0}
+          \pgfiglabel{10,2}{D}
+
+          \end{axis} 
+        }{Money supply increasing as a result of government purchasing bonds}{fig:omc_purchase}{0.84}
+
+        \item \textbf{Selling bonds} involves the government receiving money from the private sector in exchange for its bonds, thus contracting the money supply and consequently raising interest rates in order to combat inflation.
+
+        \pgfig{
+          \begin{axis}[
+            \econplot{Quantity of Money Held}{Nominal Interest Rate}
+            \axispresetstwo
+          ]
+
+          % Dot at intersection
+          \node[circle, fill=black, inner sep=2pt] at (axis cs:2,8) {};
+
+          % Vertical dashed line from dot to x-axis
+          \draw[dashed] (axis cs:2,8) -- (axis cs:2,0);
+          \pgfiglabel{1, 7.5}{r}
+
+          \draw[dashed] (axis cs:2,8) -- (axis cs:0,8); 
+          \pgfiglabel{2.8,2}{M1}
+
+          \verticalslope{5}
+          \verticalslope{2}
+          \pgfiglabel{5,10.5}{S}
+
+          \downslope{0}
+          \pgfiglabel{10,2}{D}
+
+          \end{axis} 
+        }{Money supply decreasing as a result of government selling bonds}{fig:omc_sell}{0.84}
 
       \end{itemize}
 
@@ -1583,21 +1681,31 @@
 
     \begin{core}{Monetary Policy Tool (\textit{Required Reserve Ratio})}
 
-      Changes in the \textbf{required reserve ratio (RRR)} affect banks' lending capacity. Lowering the RRR expands the money supply and raising it contracts the money supply. Keep in mind that the ultimate change in money supply is amplified due to the multiplier effect in fractional reserve banking (\autoref{core:mpcs}).
+      Changes in the \textbf{required reserve ratio (RRR)} affect banks' lending capacity. Lowering the RRR expands the money supply and raising it contracts the money supply in the same manner as in \autoref{core:omc}. 
 
-      Historically, the RRR was set by the Federal Reserve and publicly announced. However, as of March 2020 (\textit{COVID pandemic}), \href{https://www.federalreserve.gov/monetarypolicy/reservereq.htm}{the Fed reduced the RRR to 0\%} for all deposits, effectively eliminating it as an active policy tool.
+      Note that the ultimate change in money supply is also amplified due to the multiplier effect in fractional reserve banking (\autoref{core:frac_banking}).
 
-      In contrast, some central banks (\textit{such as the People's Bank of China}) continue to actively adjust reserve requirements as a monetary policy tool.
+      \textit{Historically, the RRR was set by the Federal Reserve and publicly announced. However, as of March 2020 (COVID pandemic), \href{https://www.federalreserve.gov/monetarypolicy/reservereq.htm}{the Fed reduced the RRR to 0\%} for all deposits, effectively eliminating it as an active policy tool.}
+
+      \textit{In contrast, some central banks (such as the People's Bank of China) continue to actively adjust reserve requirements as a monetary policy tool.}
 
     \end{core}
 
     \begin{core}[label=core:ffr]{Monetary Policy Tool (\textit{Discount Rate, Interest on Reserves, and Federal Funds Rate})}
 
-      The \textbf{discount rate} is the interest rate banks pay to borrow from the central bank. Consequently, no bank would ever rationally borrow from another commercial bank with a higher interest rate than the discount rate. Thus, lowering the discount rate encourages borrowing because it effectively acts as the ceiling for all other interest rates; raising it has the opposite effect. 
+      The \textbf{Federal Funds Rate} is the target interest rate range set by the central bank in order to broadly manage economic activity. This range of this rate is controlled by the discount rate (\textit{ceiling}) and the interest on reserves rate (\textit{floor}).
 
-      \textbf{Interest on reserves (IOR)} is the rate of interest that a central bank pays to commercial banks on the funds they hold in their reserve accounts at the central bank. This effectively sets a floor for interest rates because no lender would ever rationally lend at a rate below the IOR.
+      \begin{itemize}
 
-      Through lowering and raising these two figures, the central bank can effectively manage short-term rates across the economy, influencing the level of economic activity as a result. This target rate range is called the \textbf{Federal Reserve Rate (FFR)}.
+        \item The \textbf{discount rate} is the interest rate banks pay to borrow from the central bank.
+
+        \textit{Consequently, no bank would ever rationally borrow from another commercial bank with a higher interest rate than the discount rate. Thus, lowering the discount rate encourages borrowing because it effectively acts as the ceiling for all other interest rates; raising it has the opposite effect.}
+
+        \item The \textbf{interest on reserves rate (IOR)} is the rate of interest that a central bank pays to commercial banks on the funds they hold in their reserve accounts at the central bank.
+
+        \textit{This effectively sets a floor for interest rates because no lender would ever rationally lend at a rate below the IOR.}
+
+      \end{itemize}
 
       \myfig{}{macroeconomics_figures/ffrgraph.png}{Federal funds rate (July 1954 - February 2026)}{fig:ffrgraph}
 
@@ -1611,41 +1719,104 @@
 
   \subsection{Balance of Payments}
 
-    The \textbf{Balance of Payments (BOP)} is a comprehensive record of all economic transactions between the residents of a country and the rest of the world over a specific period. It is composed of two sections.
+    The \textbf{Balance of Payments (BOP)}---composed of the \textbf{current account} and the \textbf{capital/financial account}---is a comprehensive record of all economic transactions between the residents of a country and the rest of the world over a specific period.
 
     \begin{core}{Current Account}
 
-      The \textbf{current account} measures the net balance of \textbf{value} flow into a country in the form of goods, services, income, and transfers. It essentially represents a nation's short-term economic transactions.
+      The \textbf{current account} measures the net balance of \textbf{value} flow into a country, composed of the following three components.
 
-      A current account deficit means a country is importing more than it exports and is a net borrower from abroad. A surplus indicates the opposite.
+      \begin{enumerate}
 
-      \textit{It's helpful to think of the current account as a country's shopping bag.}
+        \item \textbf{Balance of Trade:} The balance of trade encompasses the value of \textbf{exports} (\textit{money coming in}) minus \textbf{imports} (\textit{money going out}), including both physical goods and services.
+        \[
+          \text{Balance of Trade} = \text{Exports} - \text{Imports}
+        \]
+
+        \item \textbf{Primary Income:} Primary income refers to net earnings on investments and wages from business entities. This is recorded as a positive when recipients are domestic entities (\textit{citizens and business of that country}) receiving earnings (\textit{dividends, interest, etc.}) from foreign investments or wages from foreign businesses. On the other hand, negative primary income refers to when recipients are foreign entities (\textit{citizens and businesses of a foriegn country}) receiving earnings from domestic investment and wages from domestic businesses.
+        \[
+          \text{Primary Income} = \text{Earnings}_{domestic} + \text{Wages}_{domestic} - (\text{Earnings}_{foreign} + \text{Wages}_{foreign})
+        \]
+
+        \item \textbf{Secondary Income:} Secondary income---often called \textbf{current transfers}---refers to money or goods transferred without anything given in return. \textit{Note that in balance of trade, goods and services were given in return for money, and in primary income, either labor or capital was given in return for earnings or wages.} Secondary income transfers are usually one of the following.
+
+        \begin{itemize}
+
+          \item \textbf{Personal transfers} occurs when a person living in one country send money directly to a person in another country.
+
+          \item \textbf{Institutional/Government Transfers (Foreign Aid)} refers to money or resources given by one government to another. \textit{This is like personal transfers but government entities as the sender and recipient.}
+
+          \item \textbf{Taxes and Social Contributions} tracks money crossing borders for social welfare purposes. \textit{For example, a citizen of Country A works remotely for a business entity at Country B. If Country B taxes that worker's income, the tax (taken as a portion of the original income outflow) is recorded as inflow for Country B's Secondary Income and an outflow for Country A}
+
+        \end{itemize}
+
+        An outflow of value would coorespond to a negative transfer in the current account, whereas an inflow would be recorded as a positive transfer.
+        \[
+          \text{Secondary Income} = \text{Inflow} - \text{Outflow}
+        \]
+
+      \end{enumerate}
 
     \end{core}
 
-    \begin{core}{Capital (Financial) Account}
+    \begin{core}{Capital Account}
 
-      The \textbf{capital (financial) account} records the net change in national ownership of assets. It reflects how a country finances the items in its current account or where it invests its current account surplus. When a country imports in a good with the value of 100, there must be an export of assets (\textit{usually currency}) of the same value of 100.
+      The \textbf{capital account} is a record of "capital transfers" and the acquisition/disposal of \textbf{non-produced, non-financial assets}, specifically referring to the ownership transfer of this that does not involve a traditional financial instruments like a loan or stock.
 
-      A capital account deficit means a country is gaining more assets than is losing. A surplus indicates the opposite.
+      \textit{The capital account behaves similarly to the current account in the context of representing value transfers, however the transfered "object" in question is usually not tangible, whereas, say, a transfer of cash for secondary income is still obtainable in paper form.}
 
-      \textit{It's helpful to think of the capital account as a country's wallet.}
+      \begin{itemize}
+
+        \item \textbf{Debt Forgiveness:} When a government forgives the debt of another, the "value" of that forgiven debt is recorded.
+
+        \item \textbf{Intangible Assets:} The sale or purchase of things that aren't "produced" by labor, such as patents, copyrights, trademarks, and franchises.
+
+      \end{itemize}
 
     \end{core}
 
-    In theory, the current account and capital account sum to zero: a current account deficit must be financed by a capital account surplus (\textit{net borrowing from abroad}).
+    \begin{core}{Financial Account}
+
+      The \textbf{financial account} tracks the ownership of financial assets between domestic and foreign entities. It reflects \textbf{how a country finances the value transfers in its current and capital accounts}. A transfer of a financial asset from a foreign to domestic entity (\textit{import}) would be considered a negative line item. On the other hand, a transfer of a financial asset from a domestic to foriegn entity (\textit{export}) would be considered a positive line item.
+
+      \textit{Keep in mind that cash is considered a financial asset.}
+  
+    \end{core}
+
+    \begin{core}{Balancing the Current, Captial, and Financial Accounts}
+
+      In theory, the absolute value of the current account (CA) and capital account (KA) should equal to that of the financial account (FA).
+      \[
+        |CA + KA|  = |FA|
+        \qquad \text{or} \qquad 
+        CA + KA = -FA
+      \]
+
+      \textit{In reality, accurately keeping track of all cross border transactions that occur for a country is impossible. Thus official government data usually includes a line item called \textbf{Net Errors and Omissions} to force a balance.}
+
+    \end{core}
 
   \subsection{Exchange Rates}
 
     \begin{core}{Exchange Rates}
 
-      The \textbf{exchange rate} represents the price of one currency in terms of another. Currency \textbf{appreciation} means a currency becomes more valuable relative to another, and \textbf{depreciation} means it becomes less valuable. The following is the foreign exchange market graph for the USD/EUR pair.
+      The \textbf{exchange rate} represents the price of one currency in terms of another. Currency \textbf{appreciation} means a currency becomes more valuable relative to another, and \textbf{depreciation} means it becomes less valuable.
 
       \pgfig{
         \begin{axis}[
           \econplot{Quantity of USD}{EUR/USD (Price of USD)}
           \axispresetstwo
         ]
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:5,5) -- (axis cs:5,0);
+        \pgfiglabel{2.5, 5.8}{rate}
+
+        % Horizontal dashed line from dot to y-axis
+        \draw[dashed] (axis cs:5,5) -- (axis cs:0,5); 
+        \pgfiglabel{6,2}{Q}
 
         \downslope{0}
         \pgfiglabel{10,2}{D of USD}
@@ -1654,19 +1825,19 @@
         \pgfiglabel{10,8}{S of USD}
 
         \end{axis} 
-      }{USD/EUR currency market}{fig:usdeur}{1}
+      }{USD/EUR currency market}{fig:usdeur}{0.85}
 
-      Like other markets, exchange rates are determined by supply and demand. Factors affecting currency demand include the following.
+      Like other markets, exchange rates are determined by supply and demand. Factors affecting currency supply and demand include the following.
 
       \begin{itemize}
 
-        \item Relative interest rates (\textit{higher rates attract investors towards assets that are bought via that currency})
+        \item \textbf{Relative interest rates:} Higher rates attract investors towards assets that are bought via that currency.
 
-        \item Relative price levels (\textit{lower prices increase global economy competitiveness})
+        \item \textbf{Relative price levels:} Lower prices for a country's goods and services increase global economy competitiveness and create more demand for the relevant currency due to higher purchasing power.
 
-        \item Relative national income (\textit{higher income increases imports and currency demand})
+        \item \textbf{Relative national income:} Higher income increases the domestic currency supply, increasing relative demand for all goods, including imports, which decreases demand for the domestic currency.
 
-        \item Rariffs (\textit{tariffs reduce import demand}).
+        \item \textbf{Tariffs:} Tariffs reduce import demand for foreign goods and services, preventing domestic currency demand from falling.
 
       \end{itemize}
 
@@ -1674,19 +1845,17 @@
 
     \begin{core}{Real Interest Rate Parity}
 
-      The \textbf{Real Interest Rate Parity} condition states that differences in real interest rates between countries drive capital flows. Higher domestic real interest rates relative to foreign rates attract capital inflows, appreciating the domestic currency.
+      The \textbf{Real Interest Rate Parity} condition states that differences in real interest rates between countries drive capital flows. Higher domestic real interest rates relative to foreign rates attract capital inflows, appreciating the domestic currency. These \textbf{capital flows continue until real interest rates equalize} across countries, implying that in integrated capital markets, real interest rates theoretically should converge globally.
 
-      These capital flows continue until real interest rates equalize across countries, implying that in integrated capital markets, real interest rates should converge globally.
-
-      In practice, real interest rates do not perfectly converge due to the following. Consequently, the RIRP condition serves rather as a long-run tendency than a constant state of equilibrium.
+      In reality, real interest rates do not perfectly converge and serves rather as a long-run tendency than a constant state of dynamic equilibrium due to the following.
 
       \begin{itemize}
 
-          \item \textbf{Transaction Costs:} Fees and regulations that impede the free flow of capital.
+          \item \textbf{Transaction Costs:} Fees and regulations that impede the free capital flow between countries.
 
-          \item \textbf{Risk Premiums:} Higher rates required to compensate for political or default risk in specific countries.
+          \item \textbf{Risk Premiums:} Higher rates in certain economies are required to compensate for political or default risk in specific countries.
 
-          \item \textbf{Non-Tradable Goods:} Differences in local inflation that prevent Purchasing Power Parity (PPP) from holding.
+          \item \textbf{Non-Tradable Goods:} Items like rent or local services (\textit{like a haircut}) cannot be exported to take advantage of for price differences, preventing local inflation rates from equalizing, which in turn prevents real interest rates from converging globally.
 
       \end{itemize}
 

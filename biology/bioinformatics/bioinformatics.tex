@@ -11,9 +11,76 @@
 
 \input{../../presets/_general/startup}
 
-\section{First Section}
+\section{Databases}
 
-filler 
+  \subsection{Nucleotide Sequence Databases}
+
+    GenBank: the primary archival, open source database of only nucleotide sequences based on the collaboration of the following institutions. 
+      US National Center for Biotechnology Information (NCBI) - these guys are the actual maintainers
+      European Molecular Biology Laboratory (EMBL)
+      DNA Data Bank of Japan (DDBJ)
+
+    *As a clarification, the NCBI "nucleotide" tool is simply a search interface for nucleotide sequence data from Genbank, RefSeq, TPA, and PDB
+
+    Components of the GenBank format sequence entry overview page (flat file)
+      LOCUS:
+        locus name
+        size of the nucleotide sequence in base pairs (bp)
+        the nature of the molecule (DNA or RNA)
+        topology (linear or circular)
+        Genbank divisions (BCT = bacteria; VRL = viruses; etc...)
+      DEFINITION: 
+        short definition of that gene
+      ACCESSION:
+        the unique accession number
+      VERSION: 
+        fills you in on synonymous or past ID numbers if exists
+      KEYWORDS: 
+        introduces list of terms that broadly characterizes the entry 
+      SOURCE: 
+        the common name of the relevant organism
+        ORGANISM (subsection of SOURCE)
+          the more technical taxonomic classification (name) of the relevant organism
+      REFERENCE: 
+        credits for the sequence determination; lists the following
+          AUTHORS: authors of relevant paper
+          TITLE: paper title
+          JOURNAL: journal name and id
+          PUBMED: pubmed id
+      COMMENT: 
+        other more miscellaneous items/content, such as acknowledgements
+
+      FEAURES
+        source        the origin of specific regions of the sequence
+          this is useful when you want to distinguish cloning vectors (synthetic sequnces) from host sequences
+        regulatory:   the precise coordinates of the regulatory (promoter, ribosome binding site, terminator, enhancer, etc.) element 
+          mind that there can be more than one regulartory element
+        misc feature: the first misc feature indicates the putative location of the transcription start (mRNA synthesis)
+        CDS:          CoDing Segment introduces a complex section that describes the gene's open reading frame (ORF)
+          coordinates of the main sequence that translates into amino acids
+          the different database protein sequences for the gene sequnces
+          conceptual amino-acid sequence of the coding segment
+          *there can be multiple CDS cooresponding to the same promoter element (however while one CDS has been investigated, the other may be still a mystery)
+            genbank entries containing more than one gene are frequent
+        misc feature: points out putative stem-loop structures and repeats (potential regulatory elements of the gene)
+
+      ORIGIN
+        the nucleotide sequence with 60 nucleotides per line split into 6 10-segments followed by a // at the end
+  
+    It is important to note that flat file overview may have incomplete annotations, thus 
+
+  \subsection{Protein Sequence Databases}
+
+\section{Sequence Analysis}
+
+BLAST (Basic Local Alignment Search Tool): a sequence comparison tool that quickly tells you which of the other known proteins out there has a sequence similar to yours. This analysis can help
+- predict protein function,
+- 3D structure
+- domain organization
+- identification of homologues (similar proteins)
+
+
+
 
 \end{document}
 
