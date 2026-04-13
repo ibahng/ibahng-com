@@ -814,13 +814,12 @@
  
 \section{Production and Cost}
 
-  In microeconomics, a \textbf{production function} represents the relationship between \textbf{inputs} (\textit{factors of production}) and the resulting quantity of \textbf{output}:
-
+  In microeconomics, a \textbf{production function} represents the overarching relationship between \textbf{inputs} (\textit{factors of production}) and the resulting quantity of \textbf{output}:
   \[
     Q = f(L,K)
   \]
 
-  where $L$ denotes labor (\textit{hours worked, number of employees, etc.}) and $K$ denotes capital (\textit{machinery, factory space, tools, land, etc.}).
+  where $L$ denotes labor (\textit{hours worked, number of employees, etc.}) and $K$ denotes capital (\textit{machinery, factory space, etc.}).
  
   \subsection{Product Measures}
 
@@ -838,9 +837,31 @@
 
       \end{itemize}
 
+      Here is a theoretical scenario of product as a function of input (\textit{workers}), assuming other inputs are fixed.
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{llll}
+          \hline
+          \hline
+          \textbf{Workers} & \textbf{Total Product} & \textbf{Marginal Product} & \textbf{Average Product} \\
+          \hline
+          0 & 0 & --- & --- \\
+          1 & 10 & 10 & 10 \\
+          2 & 22 & 12 & 11 \\
+          3 & 30 & 8 & 10 \\
+          4 & 32 & 2 & 8 \\
+          5 & 28 & -4 & 5.6 \\
+          \hline
+          \hline
+        \end{tabular}
+        \caption{Total, marginal, and average product}
+        \label{tab:tamp}
+      \end{table}
+
       When plotted against input quantity (\textit{e.g., the number of workers}), these metrics follow a characteristic shape governed by the \textbf{law of diminishing returns}: AP and MP are predominantly downward sloping, while TP eventually plateaus and declines. Notably, MP intersects AP exactly at AP's maximum point.
 
-      < PLOT >
+      \myfig{0.35}{microeconomics_figures/tamp.png}{Total, marginal, and average product}{fig:placeholder1}
 
     \end{core}
 
@@ -848,7 +869,7 @@
 
     \begin{core}{Fixed and Variable Costs}
 
-      In the short run, costs fall into three categories.
+      At the foundational level, economists categorize costs into the following three general categories.
 
       \begin{itemize}
 
@@ -874,25 +895,49 @@
 
         \item \textbf{Average total cost (ATC)} is total cost per unit of output, $ATC = TC/Q$.
 
-        \item \textbf{Average variable cost (AVC)} and \textbf{average fixed cost (AFC)} disaggregate this into their variable and fixed components respectively, $AVC = VC/Q$ and $AFC = FC/Q$. Note that $ATC = AVC + AFC$ at every level of output.
+        \item \textbf{Average variable cost (AVC)} and \textbf{average fixed cost (AFC)} disaggregate into their variable and fixed components respectively, $AVC = VC/Q$ and $AFC = FC/Q$. Note that $ATC = AVC + AFC$ at every level of output.
 
       \end{itemize}
 
-      These curves exhibit predictable shapes rooted in the \textbf{law of diminishing marginal returns}.
+      Again, consider the following theoretical situation.
 
-      < PLOT >
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{llllll}
+          \hline
+          \hline
+          \textbf{Output} & \textbf{TC} & \textbf{MC} & \textbf{ATC} & \textbf{AFC} & \textbf{AVC} \\
+          \hline
+          0   & \$5,000  & ---   & ---     & ---     & ---   \\
+          100 & \$10,000 & \$50  & \$100   & \$50    & \$50  \\
+          200 & \$14,000 & \$40  & \$70    & \$25    & \$45  \\
+          300 & \$20,000 & \$60  & \$66.67 & \$16.67 & \$50  \\
+          400 & \$29,000 & \$90  & \$72.50 & \$12.50 & \$60  \\
+          500 & \$45,000 & \$160 & \$90    & \$10    & \$80  \\
+          \hline
+          \hline
+        \end{tabular}
+        \caption{Marginal, average total, average fixed, and average variable cost}
+        \label{tab:matav}
+      \end{table}
+
+      The resulting plot of MV, ATC, AVC, and AFC exhibit predictable shapes also rooted in the \textbf{law of diminishing marginal returns}.
 
       \begin{enumerate}
 
-        \item Both ATC and AVC are U-shaped: initially falling as output rises and fixed costs are spread across more units, then rising as diminishing returns drive up marginal cost.
+        \item \textbf{Both ATC and AVC are U-shaped}, initially falling as output rises and fixed costs are spread across more units, then rising as diminishing returns drive up marginal cost.
 
-        \item AFC declines continuously, since fixed costs are distributed over an ever-larger quantity.
+        \item \textbf{AFC declines continuously}, since fixed costs are distributed over an ever-larger quantity.
 
-        \item MC, being directly tied to marginal returns, is also U-shaped and crucially intersects both ATC and AVC at their respective minimum points---a consequence of the relationship between marginal and average values.
+        \item MC, being directly tied to marginal returns, is also U-shaped and crucially \textbf{intersects both ATC and AVC at their respective minimum points}---a consequence of the relationship between marginal and average values.
 
       \end{enumerate}
 
-      In perfectly competitive markets (CORE CONCEPT REFERENCE), a firm faces a constant market price, making marginal revenue $MR = P$. The firm maximizes profit by producing at the quantity where $MR = MC$, since any unit where $MR > MC$ adds to profit, while any unit where $MR < MC$ erodes it.
+      \myfig{0.4}{microeconomics_figures/matav.png}{Marginal, average total, average fixed, and average variable cost}{fig:placeholder2}
+
+      In perfectly competitive markets (\autoref{core:perf_comp}), a firm faces a constant market price, making marginal revenue $MR = P$. The firm maximizes profit by producing at the quantity where $MR = MC$, since any unit where $MR > MC$ adds to profit, while any unit where $MR < MC$ erodes it.
+
+      \myfig{0.45}{microeconomics_figures/matav2.png}{Profit maximization during perfect competition}{fig:placeholder3}
 
     \end{core}
 
@@ -900,11 +945,13 @@
 
     \begin{core}{Long-Run Average Total Cost}
 
-      In the long run, all costs become variable as firms are free to adjust every factor of production, including capital. The \textbf{Long-Run Average Total Cost (LRATC)} curve is constructed as the combination of many short-run average total cost (SRATC) curves, each corresponding to a different fixed level of capital---representing the lowest attainable average cost at each output level.
+      In the long run, \textbf{all costs become variable} as firms are free to adjust every factor of production, including capital. The \textbf{Long-Run Average Total Cost (LRATC)} curve is constructed as the combination of many short-run average total cost (SRATC) curves, each corresponding to a different fixed level of capital (\textit{such as factory size})---representing the lowest attainable average cost at each output level.
 
-      < PLOT >
+      \myfig{0.51}{microeconomics_figures/lratc.png}{LRATC curve as a combination of SRATCs at differing factory sizes (\textit{capital levels})}{fig:placeholder4}
 
-      The LRATC curve is U-shaped, reflecting three distinct phases of scale.
+      As shown in \autoref{fig:placeholder4}, the LRATC curve is U-shaped. This characteristic shape reflects the follow three distinct phases of production scale.
+
+      \myfig{0.53}{microeconomics_figures/lratc_es.png}{Economies and diseconomies of scale on the LRATC}{fig:placeholder5}
 
       \begin{enumerate}
 
@@ -921,6 +968,7 @@
     \begin{core}{Returns to Scale}
 
       \textbf{Returns to scale} describe how output responds when \textit{all} inputs are scaled up proportionally in the long run. Formally, suppose all inputs are multiplied by some factor $\lambda > 1$. The production function $f(L, K)$ exhibits:
+
       \[
         f(\lambda L,\, \lambda K) \begin{cases} > \lambda Q & \text{increasing returns to scale} \\ 
         = \lambda Q & \text{constant returns to scale} \\ 
@@ -939,11 +987,15 @@
 
       \end{itemize}
 
+      \textit{Note that while returns to scale tends to be correlated with economies of scale, they do not exactly pertain to the same situation. Economies of scale can exist even without increasing returns to scale---for example, if input costs fall as you buy in bulk (purchasing power), average cost can fall even with constant returns to scale.}
+
+      \textit{Returns to scale is purely about the physical input and output relationship, ignoring prices entirely.}
+
     \end{core}
 
 \section{Perfect Competition}
     
-  \begin{core}{Characteristics of Perfect Competition}
+  \begin{core}[label=core:perf_comp]{Characteristics of Perfect Competition}
 
     \textbf{Perfect competition} is a market structure characterized by:
 

@@ -101,7 +101,7 @@
 
     The other software are the collection of the following categories
 
-    \begin{core}{Init System}
+    \begin{core}[label=core:init_sys]{Init System}
 
       When a kernel finishes loading, it doesn't nessecarily know how to start your machine (desktop, wifi, etc.). It instead starts one program (PID 1) called the init system which starts all of the background processes needed to just turn on the computer for the user. At face value, systemd is a suite of no extension files written in C and compiled with GCC.
 
@@ -347,13 +347,21 @@
 
       \begin{enumerate}
 
-        \item \textbf{[/proc]}: A virtual filesystem that doesn't exist on disk. It provides a window into the Linux kernel and current processes; for example, /proc/meminfo shows RAM usage in real-time.
+        \item \textcode{/proc} : The proc directory (\textit{short for Process Infromation}) contains files that provide a standardized way for the user and user-space programs to see \textbf{what the Kernel is doing} and what \textbf{processes and softwares} are running. This directory is classified as a \textbf{virtual filesystem}. meaning that the filesystem exists entirely in the compueter's RAM rather than physical storage, thus has no physical persistence like the \textcode{home} directory has. In general, \textcode{/proc} subdirectories are categorized into the following.
 
-        \item \textbf{[/sys]}: Similar to /proc, this is a virtual filesystem that exposes information about hardware, drivers, and various kernel subsystems.
+        \begin{itemize}
 
-        \item \textbf{[/dev]}: Contains "device files" that act as interfaces to hardware. In Linux, "everything is a file"—writing to /dev/sda is a way of interacting directly with your hard drive.
+          \item \textbf{The numbered folders (PIDs)} represents each process that is currently running on the system. Recall from \autoref{core:init_sys} that the init system \textcode{systemd} is PID 1.
 
-        \item \textbf{[/run]}: A temporary filesystem (tmpfs) that stores volatile runtime data since the last boot, such as Process IDs (PIDs) and lock files for running services.
+          \item \textbf{Global files} are those that are vital for system administration such as \textcode{/proc/cpuinfo} for details about the processor, \textcode{/proc/meminfo} for real-time RAM usage, or \textcode{/proc/uptime} for how long the system has been running.
+
+        \end{itemize}
+
+        \item \textcode{/sys} : The sys directory (\textit{short for sysfs}) is another virtual filesystem (\textit{like \textcode{proc}}) that provides a standardized way for the user and user-space programs to see the state of \textbf{hardware} and the \textbf{drivers} that manages the machine.
+
+        \item \textcode{/dev}: The dev directory (\textit{short for devices}) contains \textbf{device files}, the interface that allows programs to actually \textbf{read from and write to} the physical hardware itself.
+
+        \item \textcode{/run}: The run directory (\textit{short for runtime}) is a \textbf{temporary filesystem (tmpfs)} that stores \textbf{runtime data}, which is information that different processes (\textit{init systems, daemons, and services}) create and store into files that reside in \textcode{/run}.
 
       \end{enumerate}
 
