@@ -47,51 +47,64 @@
 
     \begin{core}{Linux Kernel}
 
-      Although people conversationally refer to linux as the linux operating system, linux is actually a kernel.
+      Conversationally, people refer to linux as the linux operating system, however linux actaully refers to the \textbf{linux kernel}, a fundamental piece of software that acts as a middle man between the computer's hardware (\textit{CPU, RAM, disk}) and the software (\textit{Chrome, Neovim, or Python scripts}). It broadly manages four key areas in a machine.
 
-      A kernel is fundamental piece of software in any operating system and loads machine code (1s and 0s) and consequently allocates RAM to it, where after the CPU will read that machine code and carry out the specific set of instructions and actions that machine code is commanding.
+      \begin{itemize}
+
+        \item \textbf{Process Management}: It decides which program gets to use the CPU and for how long.
+
+        \item \textbf{Memory Management}: It keeps track of which RAM portion is being used by which app and ensures no overlap.
+
+        \item \textbf{Device Management}: It communicates with hardware (\textit{keyboard, mouse, etc.}) and its signals via \textbf{drivers} (\autoref{core:drivers}).
+
+        \item \textbf{System Calls}: It handles requests from software called "system calls", such as python code wanting to save a file to the disk.
+
+      \end{itemize}      
+
+      At face value, the linux kernel is machine code (\textit{binary}) that has been compiled from \textbf{C} and \textbf{Assembly} written by \textbf{Linus Torvalds} in 1991.
 
     \end{core}
 
     \begin{core}{GNU Operating System}
 
-      GNU is the actual operating system of linux, a collection of the following software:
+      GNU is actual operating system of the "linux operating system", which is a collection of the following software.
 
-        The compiler (GCC): This is the translator of C code into machine code.
+      \begin{itemize}
 
-        Shell: This is the CLI used to talk directly to the kernel by inputing commands defined within the core utilities (pure machine code files).
+        \item \textbf{The compiler (GCC)} is the translator of C code into machine code.
 
-        The C Library (glibc): The fundamental set of instructions that almost every other base program on the computer relies on to do basic things like opening a file.
+        \item \textbf{The shell} is the command line interface (CLI) used to talk directly to the kernel via commands defined in the core utilities primarily residing in \textcode{/bin} and \textcode{/sbin} (\autoref{core:coresd}).
 
-        Core utilities (coreutils): the basic CLI commands like ls, rm, grep, etc. These a no extension files written in machine code.
+        \item \textbf{The C library (glibc)} is the fundamental set of instructions written in C and some Assembly---hence the direct need of the compiler GCC to arrive with the operating system---that almost every other base program on the computer relies onto do basic things like opening a file.
 
-      In GNU, the large majority of its base functionalities stored within glibc is written in C (an a bit of assembly), hence the direct need of the compiler GCC to come with the operating system.
+        \item \textbf{Core utilities} refer to the basic CLI commands such as \textcode{ls}, \textcode{rm}, and \textcode{grep}, which, at face value, are no extension files written purely in machine code.
 
-      In terms of levels C is a mid-level language
-
-      machine code -> assembly -> C -> other high level languages like python
+      \end{itemize}
 
     \end{core}
 
-    \begin{core}{Drivers}
+    \begin{core}[label=core:drivers]{Drivers}
 
-      Modern operatings systems have to communicate and deal with thousands of different hardware components (mouse, keyboard, wifi chip, printer, graphics card, etc.)
+      Modern operatings systems have to communicate with thousands of different hardware components (\textit{mouse, keyboard, wifi chip, printer, graphics card, etc.}). This is where \textbf{drivers} come in.
 
-      A driver is a specialized piece of software that tells the kernel how to communicate with a specific piece of hardware, essentially sitting between the kernel and the hardware.
+      A \textbf{driver} is a specialized piece of software that tells the kernel how to communicate with a specific piece of hardware, sitting \textbf{between the kernel and the hardware}. 
+      \[
+        \text{User Apps} \rightarrow \text{glibc} \rightarrow \text{System Call} \rightarrow \text{Linux Kernel [Driver]} \rightarrow \text{Hardware}
+      \]
 
-      coreutils/glibc -> linux kernel -> drivers -> relevant hardware
+      There are two different types of drivers in the context of linux.
 
-      The following are the two different types of drivers.
+      \begin{itemize}
 
-        Monolithic (built in): These drivers are part of the linux kernel file, making it very fast (like keyboard, disk, etc.).
+        \item \textbf{Monolithic (\textit{built in}) drivers} are part of the linux kernel file, making it very fast (\textit{keyboard, disk, etc.}).
 
-        Kernel Modules: These drivers are only loaded in when needed, keeping the kernel small and efficient (like a USB webcam). (these are kept at a specific path)
+        \item \textbf{Kernel module drivers} are only loaded in when needed, keeping the kernel small and efficient (\textit{like a USB webcam}). These module drivers are kept in \textcode{/lib/modules}.
 
-      *Every unique piece of hardware requires a complementary driver in order to be accessed by the kernel of an operating system. Thus, if the complementary driver to any cutting edge piece of hardware doesn't exist in the local, one would have to manually install the driver before being able to use it.
+      \end{itemize}
 
-      The linux kernel is able to search whether it has the specific driver for a piece of hardware via a tiny unchangeable chip called the firmware.
+      It's important to know that \textbf{every unique piece of hardware requires a complementary driver} in order to be accessed by the linux kernel. Thus, if the complementary driver to any cutting edge piece of hardware doesn't exist in the local, one would have to manually install the driver before being able to use it.
 
-      The firmware is like an ID card. It simple says something like "I am a Logitech Webcam model 9000". If a hardware is connected to the machine, the kernel subsequently reads the firmware and sees if it had its cooresponding driver within its kernel modules.
+      The linux kernel is able to search whether it has the specific driver for a piece of hardware via a tiny unchangeable chip called the \textbf{ID chip}, which simply says something like "\textit{I am a Logitech Webcam model 9000}". If a hardware is connected to the machine, the kernel subsequently reads the ID chip and sees if it had its cooresponding driver within its kernel modules.
 
     \end{core}
 
@@ -345,6 +358,8 @@
 
     \begin{core}{Virtual and Variable Files}
 
+      INTRODUCTION
+
       \begin{enumerate}
 
         \item \textcode{/proc} : The proc directory (\textit{short for Process Infromation}) contains files that provide a standardized way for the user and user-space programs to see \textbf{what the Kernel is doing} and what \textbf{processes and softwares} are running. This directory is classified as a \textbf{virtual filesystem}. meaning that the filesystem exists entirely in the compueter's RAM rather than physical storage, thus has no physical persistence like the \textcode{home} directory has. In general, \textcode{/proc} subdirectories are categorized into the following.
@@ -359,9 +374,9 @@
 
         \item \textcode{/sys} : The sys directory (\textit{short for sysfs}) is another virtual filesystem (\textit{like \textcode{proc}}) that provides a standardized way for the user and user-space programs to see the state of \textbf{hardware} and the \textbf{drivers} that manages the machine.
 
-        \item \textcode{/dev}: The dev directory (\textit{short for devices}) contains \textbf{device files}, the interface that allows programs to actually \textbf{read from and write to} the physical hardware itself.
+        \item \textcode{/dev} : The dev directory (\textit{short for devices}) contains \textbf{device files}, the interface that allows programs to actually \textbf{read from and write to} the physical hardware itself.
 
-        \item \textcode{/run}: The run directory (\textit{short for runtime}) is a \textbf{temporary filesystem (tmpfs)} that stores \textbf{runtime data}, which is information that different processes (\textit{init systems, daemons, and services}) create and store into files that reside in \textcode{/run}.
+        \item \textcode{/run} : The run directory (\textit{short for runtime}) is a \textbf{temporary filesystem (tmpfs)} that stores \textbf{runtime data}, which is information that different processes (\textit{init systems, daemons, and services}) create and store into files that reside in \textcode{/run}.
 
       \end{enumerate}
 
@@ -369,11 +384,23 @@
 
     \begin{core}{Variable/Persistent Data}
 
+      INTRODUCTION
+
       \begin{enumerate}
 
-        \item \textbf{[/var]}: Contains files to which the system writes data during operation. This includes system logs (/var/log), mail spools, and database files that grow over time.
+        \item \textcode{/var} : The var directory (\textit{short for Variable}) is the storage location for files that are expected to grow, change, and---most importantly---persist across reboots
 
-        \item \textbf{[/tmp]}: A place for temporary files created by applications. Most distributions are configured to wipe this directory automatically upon reboot.
+        \begin{itemize}
+
+          \item \textcode{/var/log} is where the system writes its \textbf{log}, the chronological record of events, processes, or messages that occur within the system.
+
+          \item \textcode{/var/lib} store the "state" of applications and packages so that its services remain functional across reboots. \textit{If you have built up a database in an application, the actual data would get stored in \textcode{/var/lib}, which safely stores that data even across reboots.}
+
+          \item \textcode{/var/cache} is a persistent storage area for data that was expensive to generate or download, kept locally so that the system doesn't have to do all of the work again when asked to generate or download a second time. 
+
+        \end{itemize}
+
+        \item \textcode{/tmp} : The tmp directory (\textit{short for Temporary}) is designed for files that are needed only for a very short period---such as the duration of a \LaTeX{} file compilation or a single boot session. In most modern linux distros, \textcode{/tmp} is a \textbf{temporary filesystem (tmpfs)}, meaning that it is wiped automatically during reboot and is RAM-backed.
 
       \end{enumerate}
 
@@ -381,13 +408,15 @@
 
     \begin{core}{Media and Mounts}
 
+      INTRODUCTION
+
       \begin{enumerate}
 
-        \item \textbf{[/media]}: The standard location where the OS automatically mounts removable media, like USB sticks, SD cards, or external hard drives.
+        \item \textcode{/media} : The media directory is the standard location where temporary, removeable devices---such as USB sticks, SD cards, and external hard drives---\textbf{automatically} appear in the file tree.
 
-        \item \textbf{[/mnt]}: A dedicated space for administrators to manually and temporarily mount filesystems (like a network drive or a secondary partition).
+        \item \textcode{/mnt} : The mnt directory (\textit{short for Mount}) is the standard location where temporary, removable devices \textbf{manually} appear in the file tree via the shell commmand \textcode{mount}, usually used only in cases where the user requires more direct control of hardware connections relative to the automatic method mentioned previously in \textcode{/media}.
 
-        \item \textbf{[/srv]}: Contains data for services provided by the system, such as files for a web server (/srv/www) or data for an FTP server.
+        \item \textcode{/srv} : The srv directory (\textit{short for Service}) is the designated home for data that the system \textbf{serves} to external users or other systems, used when the machine is acting as a host for other machines to connect to, such as files for a web server in \textcode{/srv/www}.
 
       \end{enumerate}
 

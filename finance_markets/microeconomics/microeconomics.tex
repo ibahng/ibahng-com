@@ -289,7 +289,7 @@
 
   \end{core}
 
-  \begin{core}{Market Equilibrium}
+  \begin{core}[label=core:market_eq]{Market Equilibrium}
 
     \textbf{Market Equilibrium} occurs where the supply and demand curves intersect. At this point, the quantity supplied equals the quantity demanded, and the market clears. The equilibrium price and quantity are determined automatically through the price mechanism without external intervention. Correspondingly, adjustments in equilibrium price occur when supply and demand curve shifts.
 
@@ -987,9 +987,7 @@
 
       \end{itemize}
 
-      \textit{Note that while returns to scale tends to be correlated with economies of scale, they do not exactly pertain to the same situation. Economies of scale can exist even without increasing returns to scale---for example, if input costs fall as you buy in bulk (purchasing power), average cost can fall even with constant returns to scale.}
-
-      \textit{Returns to scale is purely about the physical input and output relationship, ignoring prices entirely.}
+      \textit{Note that while returns to scale tends to be correlated with economies of scale, they do not exactly pertain to the same situation. Economies of scale can exist even without increasing returns to scale---for example, if input costs fall as you buy in bulk (purchasing power), average cost can fall even with constant returns to scale. \textbf{Returns to scale is purely about the physical input and output relationship, ignoring prices entirely.}}
 
     \end{core}
 
@@ -997,73 +995,53 @@
     
   \begin{core}[label=core:perf_comp]{Characteristics of Perfect Competition}
 
-    \textbf{Perfect competition} is a market structure characterized by:
+    \textbf{Perfect competition} is a market structure characterized by the following assumptions.
 
     \begin{enumerate}
 
-      \item \textbf{Large number of firms}: No single firm controls a significant market share.
+      \item \textbf{Large number of firms}: No single firm controls a significant market share. If one producer decides to double or half their production, the total supply barely shifts. 
 
-      \item \textbf{Price-taking behavior}: Each firm sells at the market price determined by industry supply and demand.
+      \item \textbf{Price-taking behavior}: Each firm sells at the market price determined by industry supply and demand equilibrium (\autoref{core:market_eq}).
 
-      \item \textbf{No barriers to entry or exit}: Firms can freely enter or leave the market.
+      \item \textbf{No barriers to entry or exit}: Firms can freely and easily enter or leave the market due to no patents, high start-up costs, or government regulations blocking new players. 
 
-      \item \textbf{Identical products}: All firms sell the same product.
+      \item \textbf{Identical products}: All firms sell the same product, meaning there is \textbf{no brand loyalty}, no product differentiation, and products across firms are \textbf{perfect substitutes} for each other.
 
     \end{enumerate}
 
-    The individual firm's demand curve is perfectly elastic (horizontal) at the market price. If a firm raises its price above market price, quantity demanded falls to zero. The firm can sell any quantity at the market price.
+    \myfig{0.7}{microeconomics_figures/pc.png}{Market supply and demand equilibrium (\textit{left}) setting price for individual firmMR curve (\textit{right}); \textit{notice the difference output scale between the market and firm}}{fig:placeholder6}
 
-    % Characteristics:
-    % - Large number of firms
-    % - Each firm makes up a negligible amount of market output
-    % - No barriers to entry
-    % - The firms are PRICE TAKERS: they sell at market price
-    %   - The firm's demand is perfectly elastic
-    %     - setting a price higher than market price will cause 0 demand for firm's product
-    %     - they can sell any amount of output at market price
-    % TAKE A LOOK AT THE PERFECT COMP MARKET AND FIRM PLOTS
+    As shown in \autoref{fig:placeholder6}, the individual firm's marginal revenue curve is \textbf{perfectly elastic} (\textit{horizontal}) at the market price, meaning that if a individual firm raises its price above market price, quantity demanded falls to zero and that the firm can sell any quantity at the market price.
 
   \end{core}
 
   \begin{core}{Firm Entry and Exit}
 
-    The decision to enter or exit depends on profitability:
+    The decision for any individual firm to enter or exit a perfectly competitive market depends on profitability categorized into the following scenarios.
 
     \begin{itemize}
 
-      \item If P > min ATC: Firms earn \textbf{economic profit}, attracting new firms to enter.
+      \item If \textbf{P > ATC}, individual firms earn \textbf{economic profit}, attracting new firms to enter over time until price is pushed down due to the influx of market supply from more producers.
 
-      \item If P = min ATC: Firms earn \textbf{normal profit} (zero economic profit). Firms neither enter nor leave.
+      \myfig{0.42}{microeconomics_figures/fee1.png}{Price is greater than average total cost}{fig:placeholder7}
 
-      \item If min AVC < P < min ATC: Firms incur losses but continue producing in the short run to minimize losses. Firms will exit in the long run.
+      \item If \textbf{P = ATC$_{\text{\textbf{min}}}$}, firms earn \textbf{normal profit} (\textit{zero economic profit}), which is the equilibrium state where firms neither enter nor leave. \textit{Mind that accounting profit would be still be positive in this scenario.}
 
-      \item If P < min AVC: Firms shut down immediately as variable costs exceed revenue.
+      \myfig{0.42}{microeconomics_figures/fee2.png}{Price is equal to minimum average total cost}{fig:placeholder8}
+
+      \item If \textbf{AVC$_{\text{\textbf{min}}}$ < P < ATC$_{\text{\textbf{min}}}$} firms \textbf{incur losses} due to high initial fixed cost but \textbf{continue producing in the short run} because they still make an economic profit with every unit in the context of AVC, which helps to cover a portion of the fixed costs, but not all.
+
+      \myfig{0.42}{microeconomics_figures/fee3.png}{Price lies above minimum average variable cost but below average total cost}{fig:placeholder9}
+
+      \item If \textbf{P < AVC$_{\text{\textbf{min}}}$}, firms shut down immediately as the producer incurs loss with every unit of production.
+
+      \myfig{0.42}{microeconomics_figures/fee4.png}{Price lies below minimum average variable cost; \textit{the loss area shown only refers to the fixed cost portion which should be the only loss for an economically rational producer because any production would simply lead to greater total loss}}{fig:placeholder10}
 
     \end{itemize}
 
-    % If P > min ATC, firms make economic profit
-    % • More firms will enter in long run
-    % If P = min ATC, firms make a normal profit (0 economic profit)
-    % • Firms will neither enter nor leave
-    % If min AVC < P < min ATC, firms produce to minimize loss in short run
-    % • Firms will leave in long run
-    % If P < min AVC, firms shut down and leave immediately
+    In the long-run, a perfectly competitive market price would converge to where \textbf{P = ATC$_{\text{\textbf{min}}}$}, leading to all individuals firms operating at \textbf{normal profit} or \textbf{zero economic profit}. This equilibrium state is said to be \textbf{productively efficient} because goods are produced at the minimum ATC.
 
-  \end{core}
-
-  \begin{core}{Long Run Equilibrium in Perfect Competition}
-
-    In long-run equilibrium, perfectly competitive firms produce where P = min ATC, earning normal profit.
-
-    This outcome is \textbf{productively efficient} because goods are produced at the minimum average total cost.
-
-    The adjustment process: If P > min ATC, new firms enter, increasing market supply and lowering price until P = min ATC. If P < min ATC, firms exit, decreasing supply and raising price until P = min ATC.
-
-    % Long Run: The firms will produce where P = min ATC and make a normal profit
-    % • Productive Efficiency: Producing at min ATC (quantity where MC = ATC)
-    % Reason
-    % • If P > min ATC, firms will enter, causing the market supply curve to shift right and price to decrease
-    % • If P < min ATC, firms will leave, causing the market supply curve to shift left and price to increase
+    If the market is not at equilibrium within the short run, new firms will enter and leave accordingly to price levels to minimum average total cost as discussed in the above scenarios.
 
   \end{core}
 
