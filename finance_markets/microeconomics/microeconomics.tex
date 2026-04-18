@@ -1047,90 +1047,122 @@
 
 \section{Imperfect Competition}
 
-  In \textbf{imperfect competition}, individual firms face downward-sloping demand curves. To sell more output, firms must lower price. Unlike perfect competition, firms have some control over price.
+  \begin{core}{Imperfect Competition}
 
-  % *In imperfect competition, to sell more of a product, the price must be lowered
-
-  \begin{core}{Types of Market Structures}
+    \textbf{Imperfect competition} describes a market structure where individual firms possess a non-negligible market share, granting them a degree of \textbf{price-setting power}. Unlike the price-taking firms of perfect competition, these entities face downward-sloping demand curves; consequently, they must lower their prices to increase the volume of output sold. The following are the primary subcategories of imperfect competition.
 
     \begin{enumerate}
 
-      \item \textbf{Monopoly}: A single firm selling a product with no close substitutes. High barriers to entry allow the firm to be a price maker.
+      \item \textbf{Monopoly}: A single firm selling a product with no close substitutes. High barriers to entry allow the firm to be the sole price setter.
 
-      \item \textbf{Monopolistic Competition}: Many firms selling differentiated products with low barriers to entry. Examples include restaurants and clothing brands like Nike, Adidas, and Under Armour.
+      \item \textbf{Monopolistic Competition}: \textbf{Many} firms selling \textbf{differentiated} products with \textbf{low barriers to entry}. \textit{Examples include restaurants and clothing brands like Nike, Adidas, and Under Armour.}
 
-      \item \textbf{Oligopoly}: A small number of firms selling identical or differentiated products. Characterized by interdependence and high barriers to entry. Examples include smartphone manufacturers (Apple, Samsung) and beverage companies (Coke, Pepsi).
-
-    \end{enumerate}
-
-    % Monopoly: One firm selling product, price maker, very high barriers to entry
-    % Monopolistic Competition: Large number of firms selling differentiated products, low to no barriers to entry (like nike, adidas, underarmour, puma, etc)
-    % Oligopoly: Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (like gas station oil firms)
-
-  \end{core}
-
-  \begin{core}{Barriers to Entry}
-
-    Barriers to entry prevent new firms from entering a market:
-
-    \begin{enumerate}
-
-      \item \textbf{Economies of scale}: Large firms have cost advantages.
-
-      \item \textbf{Patents and legal statutes}: Legal protection of intellectual property.
-
-      \item \textbf{High start-up costs}: Significant capital requirements.
-
-      \item \textbf{Ownership of key resources}: Control over essential inputs.
+      \item \textbf{Oligopoly}: A \textbf{small} number of firms selling identical or differentiated products. Characterized by \textbf{interdependence} and \textbf{high barriers to entry}. \textit{Examples include smartphone manufacturers (Apple, Samsung).}
 
     \end{enumerate}
 
-    % Examples of Barriers to Entry
-    %   Economies of Scale
-    %   Patents & Legal Statutes
-    %   High Start-up Costs
-    %   Ownership of Resources
+    \textbf{Barriers to entry} are structural or legal obstacles that prevent new firms from entering an industry. These are primarily comprised of economies of scale, patents and legal statutes, prohibitive start-up costs, and exclusive ownership of key resources, such as critical commodities.
 
   \end{core}
 
   \subsection{Monopoly}
 
-    \begin{core}{Monopoly Demand and Revenue}
+    \begin{core}[label=core:monopoly]{Monopoly Demand and Marginal Revenue}
 
-      A \textbf{monopolist} faces the market demand curve, which is downward sloping. The marginal revenue (MR) curve lies below the demand curve because lowering price to sell more units applies to all units, not just the marginal unit.
+      A \textbf{monopolist} faces the market demand curve, which is downward sloping. The MR curve lies below the demand curve because lowering price to sell more units applies to all units, not just the marginal unit.
 
-      To maximize profit, the monopolist produces where MR = MC, then sets price on the demand curve at that quantity. This creates producer surplus at the expense of consumer surplus and generates deadweight loss.
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
 
-      % Monopoly Demand & Marginal Revenue
-      % The demand curve is downward sloping and the MR curve is even more downward sloping because of the price effect
-      % To maximize profit, produce at quantity where MR=MC, and price at the D curve price for that quantity
-      % this maximizes producer surplus at the expense of consumer surplus and the creation of DWL
+        \filldraw[fill=green!20] (0.5,5.6666) -- (4.3333,5.6666) -- (0.5,9.5) -- cycle;
+        \filldraw[fill=blue!20] (0.5,0.5) -- (0.5,5.6666) -- (4.3333,5.6666) -- (4.3333,4.3333) -- cycle;
+        \filldraw[fill=black!20] (4.3333,4.3333) -- (4.3333,5.6666) -- (5,5) -- cycle;
+
+        \downslope{0}
+        \pgfiglabel{10,2}{D}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{MC}
+
+        \def\linepos{0}
+        \addplot[domain=3:9.5, samples=100, thick, restrict y to domain=0.5:9.5] {-2*x + 13}; 
+
+        % Dot at intersection
+        \node[circle, fill=black, inner sep=2pt] at (axis cs:4.3333,5.6666) {};
+
+        % Vertical dashed line from dot to x-axis
+        \draw[dashed] (axis cs:4.3333,5.6666) -- (axis cs:4.3333,0);
+
+        % Horizontal dashed line from dot to y-axis
+        \draw[dashed] (axis cs:4.3333,5.6666) -- (axis cs:0,5.6666); 
+
+        \end{axis} 
+      }{Monopoly supply and demand; consumer surplus (\textit{green}), producer surplus (\textit{blue}), deadweight loss (\textit{gray})}{fig:monopoly}{0.9}
+
+      As shown in \autoref{fig:monopoly}, the monopolist produces at the quantity where $\text{MR} = \text{MC}$ and sets price on the demand curve at that quantity, creating producer surplus at the expense of consumer surplus and generating deadweight loss.
 
     \end{core}
 
     \begin{core}{Natural Monopoly}
 
-      A \textbf{natural monopoly} occurs when a single firm can serve the entire market at a lower cost than multiple firms. This typically happens when long-run average total cost declines throughout the relevant range of demand, meaning marginal cost is always below average total cost.
+      A \textbf{natural monopoly} occurs when a single firm can serve the entire market at a lower cost than multiple firms. This typically happens when LRATC curve declines throughout the relevant range of demand, meaning MC is always below average total cost. 
 
-      % Natural Monopoly
-      % Occurs when only one firm can achieve economies of scale (Decreasing LRATC)
-      % ATC decreases throughout the entire effective demand of the product, so MC is constantly below ATC
+      \myfig{0.4}{microeconomics_figures/nat_mono.png}{Natural monopoly production cost and revenue curves}{fig:placeholder11}
+
+      Like the price setting tactics described in \autoref{core:monopoly}, a natural monopolist will produce at the quantity where $\text{MR} = \text{MC}$ and set price on the demand curve, generating profit as shown in \autoref{fig:placeholder11}.
 
     \end{core}
 
     \begin{core}{Price Discrimination}
 
-      \textbf{Price discrimination} involves charging different customers different prices for the same product. Examples include senior/child discounts and geographic pricing.
+      \textbf{Price discrimination} involves charging different customers different prices for the same product. Examples include senior/child discounts and geographic pricing (\textit{increased price levels in urban areas compared to rural regions}).
 
       Price discrimination increases producer surplus at the expense of consumer surplus.
 
-      \textbf{Perfect price discrimination} charges each consumer their maximum willingness to pay. In this case, MR equals the demand curve, eliminating consumer surplus—all surplus goes to the producer.
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
 
-      % Charging different prices for the same product
-      % Examples: Different ticket prices based on age, selling good in different places with different prices
-      % Increases producer surplus at the expense of consumer surplus
-      % Perfect Price Discrimination: charging each consumer the maximum they're willing to pay, MR becomes equal to D curve because of the absence of the price effect
-      %   here all the surplus is the producer's, no consumer surplus
+        \filldraw[fill=green!20] (0.5,5.6666) -- (4.3333,5.6666) -- (0.5,9.5) -- cycle;
+        \filldraw[fill=blue!20] (0.5,0.5) -- (0.5,7.5) -- (2.5,7.5) -- (2.5,5.6666) -- (4.3333,5.6666) -- (4.3333,4.3333) -- cycle;
+        \filldraw[fill=black!20] (4.3333,4.3333) -- (4.3333,5.6666) -- (5,5) -- cycle;
+
+        \downslope{0}
+        \pgfiglabel{10,2}{D}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{MC}
+
+        \def\linepos{0}
+        \addplot[domain=3:9.5, samples=100, thick, restrict y to domain=0.5:9.5] {-2*x + 13}; 
+        \pgfiglabel{6.5,2}{MR}
+
+        \end{axis} 
+      }{Price discrimination; consumer surplus (\textit{green}), producer surplus (\textit{blue}), deadweight loss (\textit{gray})}{fig:pdiscrimination}{0.9}
+
+      \textbf{Perfect price discrimination} charges each consumer their maximum willingness to pay, effectively eliminating all consumer surplus at the benefit of the producer. In this case, $\text{MR} = \text{D}$ because the price effect (\textit{the fact that lowering pirce to sell more units applies to all units}) becomes obsolete.
+
+      \pgfig{
+        \begin{axis}[
+          \econplot{Quantity}{Price}
+          \axispresetstwo
+        ]
+
+        \filldraw[fill=blue!20] (0.5,0.5) -- (0.5,9.5) -- (5,5) -- cycle;
+
+        \downslope{0}
+        \pgfiglabel{10,2}{D = MR}
+
+        \upslope{0}
+        \pgfiglabel{10,8}{MC}
+
+        \end{axis} 
+      }{Perfect price discrimination; consumer surplus (\textit{none}), producer surplus (\textit{blue}), deadweight loss (\textit{none})}{fig:ppdiscrimination}{0.9}
 
     \end{core}
 
@@ -1138,52 +1170,45 @@
 
     \begin{core}{Monopolistic Competition}
 
-      \textbf{Monopolistic competition} features many firms selling differentiated products with low barriers to entry. Due to product differentiation, each firm faces a relatively elastic demand curve.
+      \textbf{Monopolistic competition} features many firms selling \textbf{differentiated} products with low barriers to entry, such as restaurants. Due to this characterisitic product differentiation, each firm or business entity faces a \textbf{relatively elastic demand curve but not a perfectly elastic demand curve}. Additionally, like monopolies, these firms produce where $\text{MR} = \text{MC}$ and set price on the demand curve.
 
-      Like monopolies, firms produce where MR = MC and set price on the demand curve.
+      \myfig{0.4}{microeconomics_figures/mono_comp.png}{Monopolistic competition}{fig:placeholder12}
 
-      % MONOPOLISTIC COMPETITION INTRO (ex restaurants, clothing brands)
-      % Large number of firms selling differentiated products, low to no barriers to entry
-      % Usually demand is more elastic than for a monopoly
-      % Firms make the same decisions as a monopoly: sell at the quantity where MR = MC and at the price on the demand curve
+      As shown in \autoref{fig:placeholder12}, the individual firm will operate at a profit or loss equal the distance between the ATC and D curve.
 
-  \end{core}
+    \end{core}
 
     \begin{core}{Long Run Equilibrium}
 
-      In long-run equilibrium, new firms enter until economic profit equals zero. The demand curve is tangent to ATC at the quantity where MR = MC.
+      In the long run equilibrium, new firms enter until economic profit equals zero, which is until when the demand curve is \textbf{tangent} to ATC at the quantity where $\text{MR} = \text{MC}$.
 
-      Monopolistically competitive markets are not productively efficient because they produce below minimum ATC (leaving excess capacity) and not allocatively efficient because price exceeds marginal cost.
+      \myfig{0.35}{microeconomics_figures/lr_mono_comp.png}{Long run monopolistic competition}{fig:placeholder13}
 
-      % In the long run, firms enter or leave until D intersects ATC once at the quantity where MR = MC; each firm makes a normal profit (0 economic profit)
-      % this is not efficient because it leaves excess capacity (the difference beteen productively efficient quantity and quantity produced) 
+      Monopolistically competitive markets are \textbf{not productively efficient} because they produce below minimum ATC (\textit{leaving excess capacity}) and \textbf{not allocatively efficient} because price exceeds marginal cost.
 
-  \end{core}
+      \textit{It's important to keep in mind that this long run equilibrium state is more a long run tendency rather than a state of dynamic equilibrium because, in reality, business entities may achieve a long run economic profit due to factors outside of competitors reach, such as brand loyalty or business secrets, blurring the line between monopolistic competition and monopolies. }
+
+    \end{core}
 
   \subsection{Oligopoly}
 
     \begin{core}{Oligopoly}
 
-      \textbf{Oligopoly} involves a small number of firms with high barriers to entry. Firms are interdependent—each firm's decisions significantly affect competitors.
+      An \textbf{oligopoly} refers to a market with a \textbf{small number of firms} with \textbf{high barriers to entry} and where firms are \textbf{interdependent}, meaning each firm's decisions significantly affect competitors.
 
-      % Oligopolies
-      % Small number of firms selling identical or differentiated products, characterized by interdependence, high barriers to entry (Examples: Apple, Google, Samsung, Coke/Pepsi)
+      \textit{Smartphone companies such as Apple, Google, Samsung, etc. is a nice example of oligopolies on all levels of its supply chain. Soda beverage companies such as Coca Cola and Pepsi are also good examples in the context of global logistical capabilities but becomes more of a monopolisitic competition in the context of a local beverage market.}
 
     \end{core}
 
     \begin{core}{Cartels}
 
-      A \textbf{cartel} is a group of firms that collude to act like a single monopolist, restricting output and raising prices. Antitrust laws often restrict or prohibit cartels. However, individual firms have incentives to cheat on agreements to increase their own profits.
-
-      % Cartel: Different firms colluding (making agreements, such as collectively raising prices and limiting quantity), making the firms more similar to a monopoly
-      % • Antitrust laws often restrict cartels or make them illegal
-      % • Firms may have incentive to break agreement out of own interest
+      A \textbf{cartel} is a group of firms that \textbf{collude} to act like a single monopolist, restricting output and raising prices. \textbf{Antitrust laws} often restrict or prohibit cartels. However, individual firms have \textbf{incentives to cheat on agreements to increase their own profits} (\textit{the basis of this behavior is explained in \autoref{core:payoff}}).
 
     \end{core}
 
 \section{Game Theory: (A Brief Lesson)}
 
-  \begin{core}{Payoff Tables}
+  \begin{core}[label=core:payoff]{Payoff Tables}
 
     \textbf{Game theory} analyzes strategic interactions where outcomes depend on all players' decisions.
 

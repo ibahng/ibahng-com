@@ -24,113 +24,12 @@
 
 \input{../../presets/_general/startup}
 
+% TODO: Incorporate Damadoran Corporate Finance - Valuation section into this note
+
 \section{Valuation Overview}
 
-  \begin{core}{How do you value a company?}
+  \begin{core}{Defining Valuation}
 
-    Fundamentally, there are only 2 ways to value a company
-    Relative Valuation
-    you mostly look at other public companies (Comparable Public Companies, AKA Public Comps) and recent M&A deals (Precedent Transactions) to estimate company worth
-    Intrinsic Valuation: most methods come down to
-    Estimating future cash flows and discounting them back to their present value (DCF Model)
-    Valuing the firm’s Assets and assuming that the firm’s total value is linked to its adjusted Asset value minus its Liabilities in some way (Net Asset Value)
-
-    So When Do You Use Each Method
-    Public Comps & Precedent Transactions
-    Almost always used because they are universally applicable
-    You will use different metrics and valuation multiples depending on the industry
-    Works best when there’s a lot of good market data and there are truly similar companies
-    DCF Analysis
-    Used in most “standard” industries (consumer/retail, technology, healthcare, industrials)
-    In some industries, DCF is irrelevant because: [1] “Free Cash Flow” is not a meaningful metric; or [2] The industry is asset-centric and so you’re better off valuing the company’s Assets and Liabilities
-    Works well for stable, mature companies w/ predictable growth rates and profit margins
-
-    DCF can usually produce higher valuations because of its dependence on assumptions compared to relative valuations, however you could make extremely conservative assumptions as well
-
-    Generally, Precedent Transactions will almost always have higher valuations than Public Comps in the same industry due to the nature of premiums when buying out 100% of a company
-
-    There is no “best” methodology and no “correct” number. Valuation models are for the purpose of determining a valuation range and not a precise number
-
-    How Do You Pick Companies and Transactions?
-    Public Comps
-    Geography (US? China? Europe?)
-    Industry (Diversified Consumer? Food and Beverages?)
-    Financial (Revenue of EBITDA above, below, or between certain numbers)
-    You may tweak these assumptions and cut or add companies as you continue with the analysis; senior bankers often have their own idea of what should be in there and you’ll have to change your assumptions to support their ideas
-    Precedent Transactions
-    Geography
-    Industry
-    Financial
-    Time (Transactions Since… or Transactions Between Year X/Y)
-    Time is very important for M&A deals because markets change over time; multiples are only meaningful when you limit the transactions to a specific time period
-
-    What About Other Methodologies
-    Asset-Based Valuations (alternatives to DCF)
-    Liquidation Valuation: Determine the true Asset and Liability values, repay all liabilities w/ Assets and whatever remains is the company’s Equity Value
-    Also called the “Net Asset Value” model
-    There are also some industry-specific variations to this model as well
-    Public Comps and Precedent Transactions variants
-    M&A Premiums Analysis: Precedent transactions but instead of calculating valuation multiples, you calculate the premium that the buyer paid for the seller in each case
-    Future Share Price Analysis: Projecting a company’s future share price based on the P/E (or other) multiple of public comps, and then discount to present value
-    Sum of Parts: Split conglomerates into individual segments and pick different sets of Public Comps and Precedent Transactions for each and add up at the end
-
-    Leveraged Buyout (LBO) Analysis—assume a PE firm acquires a company and needs to achieve a certain Internal Rate of Return and work backwards to calculate how much they could potentially pay to achieve that return
-    Variation of DCF model b/c it involves future cash flow valuations
-
-  \end{core}
-
-  \begin{core}{Which Metrics and Multiples Do you Use?}
-
-    Metric and multiple comparisons are very dependent on the industry you’re analyzing and what stage of growth the company is in
-    Often use two or more Profitability Multiples
-
-    Metrics
-    P/E: Price per share / EPS or MKT CAP / Net Income
-    EBIT: Earnings before Interest and Taxes; This is a company’s operating income
-    EBITDA: EBIT + Depreciation + Amortization; The idea is to remove most of the non-cash charges and make it more accurately reflect cash flow potential; may add back other non-cash charges like Stock-Based Compensation
-    Unlevered Free Cash Flow (FCF to Firm)
-    EBIT * (1-Tax Rate) + Non-Cash Charges - Change in Operating Assets and Liabilities - CapEx
-    Levered Free Cash Flow (FCF to Equity)
-    Net Income + Non-Cash Charges - Change in Operating Assets and Liabilities - CapEx - Mandatory Debt Repayments
-
-    Profitability Multiples
-    Enterprise Value/EBIT
-    Useful for when CapEx is a more important factor since D and A follows closely
-    Company value relative to operating income
-    Enterprise Value/EBITDA
-    Useful for when CapEx and D&A are not as important
-    Company value relative to operational cash flow
-    P/E
-    Most relevant for banks and financial institutions; distorted by non-cash charges, capital structure, and tax rates
-    Company value relative to after tax earnings
-    Equity Value/Levered FCF
-    Most accurate measure of a company’s true “cash flow” and how valuable it is relative to that
-    Enterprise Value/Unlevered FCF
-    Used when CapEx or changes in Operational Assets and Liabilities such as Deferred Revenue have a big impact
-    Capital structure neutral—so better for comparing different companies
-
-    EV/EBITDA and EV/EBIT are by far the most common in finance because of convenience and comparability
-
-    P/E is probably the “least accurate” multiple because it includes non-cash charges and is impacted by tax rates and capital structures
-
-    The FCF multiples are “more accurate” but they take more time and may not be standardized b/c companies include very different items in the CFS
-
-    Book Value Multiples (Equity Value/Book Value, or Price per Share/Book Value per Share) tell company value relative to its Balance Sheet
-    Book value is essentially Shareholders’ Equity(with slight adjustments sometimes)
-    P/BV multiples become less relevant over time because most industries, company Equity Values vastly differ because companies have become more and more service-oriented and intellectual property-oriented over time
-
-    Depending on the industry you’re in, there may be specific multiples
-    Ex. Retail, Restaurant: EV/EBITDAR(R stands for “Rent” - you add back the rental expenses) is often used for comparability purposes
-    No need to memorize, just be aware of these other multiples’ existence
-
-    Once you’ve calculated all the relevant multiple, you normally find the minimum, 25th percentile, median, 75th percentile, and maximum each year of public comps and then apply them to the company’s own financial figures
-    Normally, you’d create a graph based on the full range of values, and you may weight certain multiples more than others
-
-  \end{core}
-
-  \begin{core}{What Does a Valuation Mean?}
-
-    Key Rule #3: What Does a Valuation Mean?
     A valuation does not give a pinpoint price, it gives a range of possible values for a company
     A football field graph of valuation ranges using different models and time periods can summarize valuations results very well
     It is how you’d normally present the data to investors, potential buyers, and the company itself
@@ -139,224 +38,381 @@
 
     Look at BIWS page 15 in Valuations for the chart example
 
-  \end{core}
-
-  \begin{core}{Trade-Offs and Correlations}
-
-    Advantages and Disadvantages of Different Methodologies
-    Public Comps
-    Pros: Based on real data as opposed to future assumptions
-    Cons: May be no true comparables; less accurate for thinly traded stocks or volatile companies
-    Precedent Transactions
-    Pros: Based on what really companies have actually paid
-    Cons: Data may be spotty; may be no truly comparable transactions
-    Discounted Cash Flow Analysis
-    Pros: Not as subject to market fluctuations; theoretically sound
-    Cons: Subject to far-in-the-future assumptions; less useful for fast-growing, unpredictable companies
-
-    Other Methodologies
-    Liquidation Valuation:
-    Pros: Ignores market “noise” and determines value based on Assets and Liabilities
-    Cons: Not useful for very healthy companies b/c it tends to produce extremely low values
-    M&A Premiums Analysis
-    Pros: Same as Precedent Transactions
-    Cons: ‘’; only application to public companies w/ stock price
-    Future Stock Price Analysis
-    Pros: Predicts future company worth in 1-2 years
-    Cons: Dependent on assumptions
-    Sum of Parts
-    Pros: More accurately values diversified conglomerates
-    Cons: Often lacks data for each division
-    Leveraged Buyout (LBO) Analysis
-    Pros: It sets a “floor” on valuation by determining maximum amount a PE firm could pay to achieve its returns
-    Cons: Gives a relatively low/“floor” number rather than a wide range of values
-
-    Comparing Expected Values from Different Methodologies
-    Precedent Transactions vs Public Comps
-    Transactions tend to be higher due to the control premium
-    DCF
-    Tends to be the most variable because of its dependence on future assumptions
-    Liquidation Valuation
-    99% of the time, it will produce the lowest value because a company is usually worth much more than its book value
-    Sum of Parts
-    Tend to produce higher values than relative valuation methodologies if a company is worth more in “parts”
-    LBO Analysis
-    Tends to produce the lowest valuations
-
-    There are very few hard-and-fast rules, and almost all of these guidelines have exceptions or do not hold up in many cases
-
-    Generally, there’s a correlation between growth rates and relevant multiples, and sometimes also between margins and multiples
-    All else being equal, a company with higher revenue growth will also have higher revenue multiples than companies not growing as quickly
-    You see this behavior for other multiples as well. To account for this, you well sometimes calculate PEG (PE Divided by EPS Growth) multiples to get a better view
-
-    Two other very important points
-    Plenty of other factors besides revenue/EPS/EBITDA growth rates impact the multiples… and there are many exceptions
-    Ex. lawsuit rulings, intellectual property, talented employees
-    Basic math can also impact the multiples,especially when companies have very different margins
-    Ex. A greater margin increases raw EBITDA, lowering the EV/EBITDA value and resulting a lower valuation multiple than a company w/ similar EV and lower margins
-
-    To recap briefly, EV/Revenue and P/E multiples, while easy to calculate, are taken the least seriously because
-    A company should be valued based on its profits, not its sales… earning revenue is easy, keeping it is hard
-    P/E is subject to non-cash and non-recurring charges, significantly different tax rates, the company’s capital structure, and a host of other problems
+    Valuation is a combination of info from the numbers and narrative people
 
   \end{core}
 
-  \begin{core}{Valuation in the Real World}
+  \subsection{Valuation Types}
 
-    The entire purpose of valuation is to give a client an idea of what it’s worth, to justify an acquisition offer or price, and also value for internal purposes
+    Fundamentally, there are only two ways to value a company: \textbf{relative valuation} and \textbf{intrinsic valuation}.
 
-    Always present in football field graphs and focus on ranges rather than specific numbers
+    \begin{core}{Relative Valuation}
 
-    Premiums or discounts can come for many reasons
-    market position
-    competitive advantages not reflected in financial statements
-    recent press releases
+      Relative Valuation
+        you mostly look at other public companies (Comparable Public Companies, AKA Public Comps) and recent M&A deals (Precedent Transactions) to estimate company worth
 
-    * You can pick certain multiples and ranges or focus on them for many reasons—for example, if a company is truly outperforming its peers, maybe you’ll focus on the 75th percentile in a set of comps when displaying the multiples and the “Football Field” graph
+      when to use this method
+      Relative Valuation - Public Comps & Precedent Transactions
+        Almost always used because they are universally applicable
+        You will use different metrics and valuation multiples depending on the industry
+        Works best when there’s a lot of good market data and there are truly similar companies
 
-    Accounting choices and oddities can also greatly affect valuation—for example, owning vs leasing buildings makes a big impact on EBITDA
-    Owning: Depreciation and Interest are neither included
-    Leasing: Rental expenses show up on the IS
+      Generally, Precedent Transactions will almost always have higher valuations than Public Comps in the same industry due to the nature of premiums when buying out 100% of a company
 
-    What should you do if a company has no profit and/or no revenue?
-    In industries like Consumer Internet you can alternate metrics and multiples, such as EV/Unique Visitors or EV/Registered Users, or even more creative ones
-    Sometimes for Biotech and Pharma, you will actually create a far-in-the-future, multi-stage DCF—potential profits from a drug with a known market size are easier to estimate
+      How Do You Pick Companies and Transactions?
+      Public Comps
+        Geography (US? China? Europe?)
+        Industry (Diversified Consumer? Food and Beverages?)
+        Financial (Revenue of EBITDA above, below, or between certain numbers)
+        You may tweak these assumptions and cut or add companies as you continue with the analysis; senior bankers often have their own idea of what should be in there and you’ll have to change your assumptions to support their ideas
+      Precedent Transactions
+        Geography
+        Industry
+        Financial
+        Time (Transactions Since… or Transactions Between Year X/Y)
+        Time is very important for M&A deals because markets change over time; multiples are only meaningful when you limit the transactions to a specific time period
 
-  \end{core}
+      Pricing: The value of an asset is estimated based upon what investors are paying for similar assets. In general, this takes the form of value or price multiples and comparing firms within the same business
+
+    \end{core}
+
+    \begin{core}{Intrinsic Valuation}
+
+      Intrinsic Valuation
+        most methods come down to estimating future cash flows and discounting them back to their present value (DCF Model)
+        Valuing the firm’s Assets and assuming that the firm’s total value is linked to its adjusted Asset value minus its Liabilities in some way (Net Asset Value)
+
+      when to use this method
+      Intrinsic Valuation - DCF Analysis
+        Used in most “standard” industries (consumer/retail, technology, healthcare, industrials)
+        In some industries, DCF is irrelevant because: [1] “Free Cash Flow” is not a meaningful metric; or [2] The industry is asset-centric and so you’re better off valuing the company’s Assets and Liabilities
+        Works well for stable, mature companies w/ predictable growth rates and profit margins
+
+      DCF can usually produce higher valuations because of its dependence on assumptions compared to relative valuations, however you could make extremely conservative assumptions as well
+
+      What About Other Methodologies
+        Asset-Based Valuations (alternatives to DCF)
+        Liquidation Valuation: Determine the true Asset and Liability values, repay all liabilities w/ Assets and whatever remains is the company’s Equity Value
+        Also called the “Net Asset Value” model
+        There are also some industry-specific variations to this model as well
+        Public Comps and Precedent Transactions variants
+        M&A Premiums Analysis: Precedent transactions but instead of calculating valuation multiples, you calculate the premium that the buyer paid for the seller in each case
+        Future Share Price Analysis: Projecting a company’s future share price based on the P/E (or other) multiple of public comps, and then discount to present value
+        Sum of Parts: Split conglomerates into individual segments and pick different sets of Public Comps and Precedent Transactions for each and add up at the end
+
+      Leveraged Buyout (LBO) Analysis—assume a PE firm acquires a company and needs to achieve a certain Internal Rate of Return and work backwards to calculate how much they could potentially pay to achieve that return
+      Variation of DCF model b/c it involves future cash flow valuations
+
+      Intrinsic valuation: The value of an asset is a function of its fundamentals—cash flows, growth and risk. In general, DCF models are used to estimate intrinsic value
+
+      Intrinsic Valuation 101
+      The value of a risky asset can be estimated by discounting the expected cash flows on the asset over its life at a risk-adjusted discount rate
+
+    \end{core}
+
+    \begin{core}{Contingent Claim Valuation}
+
+      Contingent claim valuation: When the cash flows on an asset are contingent on an external event, the value can be estimated using option pricing models
+
+    \end{core}
+
+    There is no “best” methodology and no “correct” number. Valuation models are for the purpose of determining a valuation range and not a precise number + TRANSITION to next section
+
+    \begin{core}{Trade-Offs}
+
+      Advantages and Disadvantages of Different Methodologies
+        Public Comps
+          Pros: Based on real data as opposed to future assumptions
+          Cons: May be no true comparables; less accurate for thinly traded stocks or volatile companies
+        Precedent Transactions
+          Pros: Based on what really companies have actually paid
+          Cons: Data may be spotty; may be no truly comparable transactions
+        Discounted Cash Flow Analysis
+          Pros: Not as subject to market fluctuations; theoretically sound
+          Cons: Subject to far-in-the-future assumptions; less useful for fast-growing, unpredictable companies
+
+      Other Methodologies
+        Liquidation Valuation:
+          Pros: Ignores market “noise” and determines value based on Assets and Liabilities
+          Cons: Not useful for very healthy companies b/c it tends to produce extremely low values
+        M&A Premiums Analysis
+          Pros: Same as Precedent Transactions
+          Cons: ‘’; only application to public companies w/ stock price
+        Future Stock Price Analysis
+          Pros: Predicts future company worth in 1-2 years
+          Cons: Dependent on assumptions
+        Sum of Parts
+          Pros: More accurately values diversified conglomerates
+          Cons: Often lacks data for each division
+        Leveraged Buyout (LBO) Analysis
+          Pros: It sets a “floor” on valuation by determining maximum amount a PE firm could pay to achieve its returns
+          Cons: Gives a relatively low/“floor” number rather than a wide range of values
+
+    \end{core}
+
+    \begin{core}{Correlations}
+
+      Comparing Expected Values from Different Methodologies
+      Precedent Transactions vs Public Comps
+        Transactions tend to be higher due to the control premium
+      DCF
+        Tends to be the most variable because of its dependence on future assumptions
+      Liquidation Valuation
+        99\% of the time, it will produce the lowest value because a company is usually worth much more than its book value
+      Sum of Parts
+        Tend to produce higher values than relative valuation methodologies if a company is worth more in “parts”
+      LBO Analysis
+        Tends to produce the lowest valuations
+
+      There are very few hard-and-fast rules, and almost all of these guidelines have exceptions or do not hold up in many cases
+
+      Generally, there’s a correlation between growth rates and relevant multiples, and sometimes also between margins and multiples
+      All else being equal, a company with higher revenue growth will also have higher revenue multiples than companies not growing as quickly
+      You see this behavior for other multiples as well. To account for this, you well sometimes calculate PEG (PE Divided by EPS Growth) multiples to get a better view
+
+    \end{core}
+ 
+  \subsection{Metrics and Reality}
+
+    \begin{core}{Core Metrics}
+
+      Metrics
+        P/E: Price per share / EPS or MKT CAP / Net Income
+        EBIT: Earnings before Interest and Taxes; This is a company’s operating income
+        EBITDA: EBIT + Depreciation + Amortization; The idea is to remove most of the non-cash charges and make it more accurately reflect cash flow potential; may add back other non-cash charges like Stock-Based Compensation
+        Unlevered Free Cash Flow (FCF to Firm)
+        EBIT * (1-Tax Rate) + Non-Cash Charges - Change in Operating Assets and Liabilities - CapEx
+        Levered Free Cash Flow (FCF to Equity)
+        Net Income + Non-Cash Charges - Change in Operating Assets and Liabilities - CapEx - Mandatory Debt Repayments
+
+    \end{core}
+
+    \begin{core}{Profitability Multiples}
+
+      Metric and multiple comparisons are very dependent on the industry you’re analyzing and what stage of growth the company is in
+      Often use two or more Profitability Multiples
+
+      Profitability Multiples
+        Enterprise Value/EBIT
+          Useful for when CapEx is a more important factor since D and A follows closely
+          Company value relative to operating income
+        Enterprise Value/EBITDA
+          Useful for when CapEx and D&A are not as important
+          Company value relative to operational cash flow
+        P/E
+          Most relevant for banks and financial institutions; distorted by non-cash charges, capital structure, and tax rates
+          Company value relative to after tax earnings
+        Equity Value/Levered FCF
+          Most accurate measure of a company’s true “cash flow” and how valuable it is relative to that
+        Enterprise Value/Unlevered FCF
+          Used when CapEx or changes in Operational Assets and Liabilities such as Deferred Revenue have a big impact
+          Capital structure neutral—so better for comparing different companies
+
+      EV/EBITDA and EV/EBIT are by far the most common in finance because of convenience and comparability
+
+      P/E is probably the “least accurate” multiple because it includes non-cash charges and is impacted by tax rates and capital structures
+
+      The FCF multiples are “more accurate” but they take more time and may not be standardized b/c companies include very different items in the CFS
+
+      Book Value Multiples (Equity Value/Book Value, or Price per Share/Book Value per Share) tell company value relative to its Balance Sheet
+        Book value is essentially Shareholders’ Equity(with slight adjustments sometimes)
+        P/BV multiples become less relevant over time because most industries, company Equity Values vastly differ because companies have become more and more service-oriented and intellectual property-oriented over time
+
+      Depending on the industry you’re in, there may be specific multiples
+        Ex. Retail, Restaurant: EV/EBITDAR(R stands for “Rent” - you add back the rental expenses) is often used for comparability purposes
+        No need to memorize, just be aware of these other multiples’ existence
+
+      What should you do if a company has no profit and/or no revenue?
+        In industries like Consumer Internet you can alternate metrics and multiples, such as EV/Unique Visitors or EV/Registered Users, or even more creative ones
+        Sometimes for Biotech and Pharma, you will actually create a far-in-the-future, multi-stage DCF—potential profits from a drug with a known market size are easier to estimate
+
+      Once you’ve calculated all the relevant multiple, you normally find the minimum, 25th percentile, median, 75th percentile, and maximum each year of public comps and then apply them to the company’s own financial figures
+      Normally, you’d create a graph based on the full range of values, and you may weight certain multiples more than others
+
+    \end{core}
+
+    \begin{core}{Valuation in the Real World}
+
+      The entire purpose of valuation is to give a client an idea of what it’s worth, to justify an acquisition offer or price, and also value for internal purposes
+
+      Always present in football field graphs and focus on ranges rather than specific numbers
+
+      Premiums or discounts can come for many reasons
+        market position
+        competitive advantages not reflected in financial statements
+        recent press releases
+
+      * You can pick certain multiples and ranges or focus on them for many reasons—for example, if a company is truly outperforming its peers, maybe you’ll focus on the 75th percentile in a set of comps when displaying the multiples and the “Football Field” graph
+
+      Accounting choices and oddities can also greatly affect valuation—for example, owning vs leasing buildings makes a big impact on EBITDA
+        Owning: Depreciation and Interest are neither included
+        Leasing: Rental expenses show up on the IS
+
+      Two other very important points
+        Plenty of other factors besides revenue/EPS/EBITDA growth rates impact the multiples… and there are many exceptions
+          Ex. lawsuit rulings, intellectual property, talented employees
+        Basic math can also impact the multiples,especially when companies have very different margins
+          Ex. A greater margin increases raw EBITDA, lowering the EV/EBITDA value and resulting a lower valuation multiple than a company w/ similar EV and lower margins
+
+      To recap briefly, EV/Revenue and P/E multiples, while easy to calculate, are taken the least seriously because
+        A company should be valued based on its profits, not its sales… earning revenue is easy, keeping it is hard
+        P/E is subject to non-cash and non-recurring charges, significantly different tax rates, the company’s capital structure, and a host of other problems
+
+    \end{core}
 
 \section{Equity \& Enterprise Value}
 
-  \begin{core}{Equity Value}
+  \subsection{Equity Value}
 
-    Equity Value is essentially just Market Capitalization—answering the simple question of “How much is this company worth?
-    When you read about “a \$10 billion company” in the news, usually the “\$10 billion” refers to the Equity Value of the company
+    \begin{core}{Equity Value}
 
-    Where is nothing complicated about determining a company’s share price; calculating the total number of shares can require more work because there is Basic Equity Value and Diluted Equity Value (which we’ll get into in Key Rule #3)
+      Equity Value is essentially just Market Capitalization—answering the simple question of “How much is this company worth?
+      When you read about “a \$10 billion company” in the news, usually the “\$10 billion” refers to the Equity Value of the company
 
-  \end{core}
+      Where is nothing complicated about determining a company’s share price; calculating the total number of shares can require more work because there is Basic Equity Value and Diluted Equity Value (which we’ll get into in Key Rule #3)
 
-  \begin{core}{Diluted Shares Outstanding}
+      Equity Valuation
+      The value of equity is the sum of the discounted FCFE (FCFE starts with net income, not NOPAT) forever
+      The dividend discount model is a specialized case of equity valuation, and the value of a stock is the present value of expected future dividends (has limitations because it undervalued low dividend, cash retaining firms)
 
-    Calculating the exact number of shares a company has can be tricky due to dilutive securities
-    A security is “dilutive” if it could potentially create more shares
-    Ex. Call Options
-    The potential for additional shares is always there… and that’s what we care about when calculating the diluted shares for a company
+    \end{core}
 
-    Calculating the Impact of Diluted Shares (Treasury Stock Method)
-    You assume that the new shares get created when options are exercised, and that the company buys back some of those new shares with the funds it receives
-    Ex. Firm spot price = \$10.00; 100 options at \$5.00 strike price
-    Firm receives \$500 and gives 100 shares
-    Firm buys back 50 shares with \$500
-            Result is that there are 50 additional shares outstanding and the diluted share count goes up by 50
-    With the TSM, you assume all in-the-money options contribute to dilution
+    \begin{core}{Diluted Shares Outstanding}
 
-    Options are the most common dilutive securities, but there are others
-    Warrants
-    Uses TSM in its diluted calculation
-    Convertible Bonds
-    Either counted as 100% debt when out-the-money or 100% additional shares when in-the-money; no TSM
-    Convertible Preferred Stock
-    Same calculation treatment as Convertible Bonds
-    Restricted Stock Units
-    This is just straight addition
-    Performance Shares
-    If the stock price is above a certain level, they count as additional shares
+      Calculating the exact number of shares a company has can be tricky due to dilutive securities
+      A security is “dilutive” if it could potentially create more shares
+      Ex. Call Options
+      The potential for additional shares is always there… and that’s what we care about when calculating the diluted shares for a company
 
-    Warrants are issued by the underlying company, are less short-term, and have less liquidity in comparison to call options
-    Restricted Stock Units (RSUs) are a form of equity-based compensation that companies use to attract, retain, and incentivize employees. RSUs represent a promise by the company to grant the employee a specific number of shares of the company’s stock at a future date, subject to certain conditions and restrictions
-    Performance Shares are also a form of equity-based compensation usually granted to executives because they are tied to specific performance metrics or goals
+      Calculating the Impact of Diluted Shares (Treasury Stock Method)
+      You assume that the new shares get created when options are exercised, and that the company buys back some of those new shares with the funds it receives
+      Ex. Firm spot price = \$10.00; 100 options at \$5.00 strike price
+      Firm receives \$500 and gives 100 shares
+      Firm buys back 50 shares with \$500
+              Result is that there are 50 additional shares outstanding and the diluted share count goes up by 50
+      With the TSM, you assume all in-the-money options contribute to dilution
 
-    We calculate the Diluted Equity Value of a company to see what it would really cost to acquire a company
+      Options are the most common dilutive securities, but there are others
+      Warrants
+      Uses TSM in its diluted calculation
+      Convertible Bonds
+      Either counted as 100% debt when out-the-money or 100% additional shares when in-the-money; no TSM
+      Convertible Preferred Stock
+      Same calculation treatment as Convertible Bonds
+      Restricted Stock Units
+      This is just straight addition
+      Performance Shares
+      If the stock price is above a certain level, they count as additional shares
 
-    When you buy another company, the contract normally states that any in-the-money dilutive securities get cashed out or get converted into an equivalent number of the buyer’s securities. So it’s more accurate to calculate Diluted Equity Value when you’re determining the Enterprise Value—otherwise you’re underestimating how much the company would truly cost to acquire
+      Warrants are issued by the underlying company, are less short-term, and have less liquidity in comparison to call options
+      Restricted Stock Units (RSUs) are a form of equity-based compensation that companies use to attract, retain, and incentivize employees. RSUs represent a promise by the company to grant the employee a specific number of shares of the company’s stock at a future date, subject to certain conditions and restrictions
+      Performance Shares are also a form of equity-based compensation usually granted to executives because they are tied to specific performance metrics or goals
 
-  \end{core}
+      We calculate the Diluted Equity Value of a company to see what it would really cost to acquire a company
 
-  \begin{core}{Enterprise Value}
+      When you buy another company, the contract normally states that any in-the-money dilutive securities get cashed out or get converted into an equivalent number of the buyer’s securities. So it’s more accurate to calculate Diluted Equity Value when you’re determining the Enterprise Value—otherwise you’re underestimating how much the company would truly cost to acquire
 
-    If you compare buying a company to buying a house, Equity Value is like the “sticker price”
-    However there are additional items that might push up the effective price afterward, or possible push down the effective price
-    The company might have Debt that needs to be repaid upon acquisition
-    The company might have Excess Cash that we can claim for ourselves
-    The company might have Unfunded Pension Obligations and other Liabilities that we’ll have to repay at some point
+    \end{core}
 
-    Enterprise Value
-    = [Equity Value] +
-    [Debt, Debt-Like Items and Other Obligations] +
-    [Cash, Cash-Like Items, and Anything That Saves Us Money]
+  \subsection{Enterprise Value}
 
-    More Precise Definition = [Equity Value] + [Debt] + [Preferred Stock] + [Noncontrolling Interests] - [Cash & Cash Equivalents]
+    \begin{core}{Enterprise Value}
 
-    Essentially we add anything that we’re going to have to set aside funds to pay off in the future, and subtract anything that can save us money in the future
+      If you compare buying a company to buying a house, Equity Value is like the “sticker price”
+      However there are additional items that might push up the effective price afterward, or possible push down the effective price
+      The company might have Debt that needs to be repaid upon acquisition
+      The company might have Excess Cash that we can claim for ourselves
+      The company might have Unfunded Pension Obligations and other Liabilities that we’ll have to repay at some point
 
-  \end{core}
+      Enterprise Value
+      = [Equity Value] +
+      [Debt, Debt-Like Items and Other Obligations] +
+      [Cash, Cash-Like Items, and Anything That Saves Us Money]
 
-  \begin{core}{Enterprise Value Specifics}
+      More Precise Definition = [Equity Value] + [Debt] + [Preferred Stock] + [Noncontrolling Interests] - [Cash & Cash Equivalents]
 
-    When do you subtract an item?
-    Normally when it saves you money or potentially gives you extra cash, either immediately or in the long-term
+      Essentially we add anything that we’re going to have to set aside funds to pay off in the future, and subtract anything that can save us money in the future
 
-    When do you add an item?
-    When it is something that must be paid immediately (Debt)
-    When it is something that must be repaid in the future (Unfunded Pension Obligations)
+      Firm Valuation
+      The value of the firm is the sum of the discounted FCFF forever
+      This makes the cash flows are after meeting all operating expenses as well as tax on EBIT, but prior to debt payments
+      The discount rate is WACC
 
-    Unfunded pension obligations, also referred to as an unfunded pension liability, represent the portion of a company’s pension plan obligations that exceed the plan’s assets. In other words, it’s the deficit between the amount of money needed to cover future pension benefits promised to employees and the assets available in the pension fund to meet those obligations
+      When we calculate FCFF, we start from operating income (which does not take into consideration interest from debt). However, wouldn’t this mean that the tax benefits of debt are not captured in the cash flows. Yes, but it is instead captured in the WACC where the cost of debt is calculated WITH the tax benefit as well. 
+      If you include interest expenses in the FCFF, then you would effectively be double counting the tax benefits from debt
 
-    When you’re adding it back for comparability purposes (Noncontrolling Interests)
+    \end{core}
 
-    Noncontrolling interests (NCI), also known as minority interests, refer to the ownership stake in a company that is held by external parties or investors who do not have control over the company’s operations. Noncontrolling interests represent a portion of a subsidiary’s equity that is not owned by the parent company.
+    \begin{core}{Enterprise Value Deductions}
 
-    Few examples of items to subtract
-    Cash
-    (Potentially) Short-Term, Long-Term, and Equity Investments
-    Sometimes these are subtracted—depending on how liquid they are
-    Net Operating Losses
-    These could potentially save you cash as future tax deductions, so sometimes they are factored in (standards vary widely)
+      When do you subtract an item?
+        Normally when it saves you money or potentially gives you extra cash, either immediately or in the long-term
 
-    Few examples of items to add
-    Debt
-    Preferred Stock
-    It’s similar to Debt because of the required dividends, which act as interest expense; also, normally it must also be repaid upon acquisition
+      Few examples of items to subtract
+      Cash
+      (Potentially) Short-Term, Long-Term, and Equity Investments
+      Sometimes these are subtracted—depending on how liquid they are
+      Net Operating Losses
+      These could potentially save you cash as future tax deductions, so sometimes they are factored in (standards vary widely)
 
-    Examples of items to add but wouldn’t necessarily come from the company’s normal cash flows
-    Unfunded Pension Obligations
-    Capital Leases
-    Restructuring/Environmental Liabilities
-    All three points above have the same scenarios of having to be paid through debt because regular firm cash flows aren’t nearly enough to pay for them
+    \end{core}
 
-    You also add Noncontrolling Interests (AKA Minority Interests) for comparability purposes
-    When you own over 50\% of another company, you consolidate 100\% of its financial statements with your own. But Equity Value only reflects the value of the percentage that you own, not 100\%. So you need to reflect 100\% of that other company in Enterprise Value—if you did not add Noncontrolling Interests, you would be reflecting 60\%, or 70\%, or however much you own.
+    \begin{core}{Enterprise Value Additions}
 
-    Comparability purposes refers to the comparisons the acquirer makes with other potential acquisition targets and the current firm under inspection.
+      When do you add an item?
+      When it is something that must be paid immediately (Debt)
+      When it is something that must be repaid in the future (Unfunded Pension Obligations)
 
-  \end{core}
+      Unfunded pension obligations, also referred to as an unfunded pension liability, represent the portion of a company’s pension plan obligations that exceed the plan’s assets. In other words, it’s the deficit between the amount of money needed to cover future pension benefits promised to employees and the assets available in the pension fund to meet those obligations
 
-  \begin{core}{Comparing Equity and Enterprise Value}
+      When you’re adding it back for comparability purposes (Noncontrolling Interests)
 
-    Equity Value is like the “sticker price” and Enterprise Value is how much the company would actually cost to acquire
+      Noncontrolling interests (NCI), also known as minority interests, refer to the ownership stake in a company that is held by external parties or investors who do not have control over the company’s operations. Noncontrolling interests represent a portion of a subsidiary’s equity that is not owned by the parent company.
 
-    There usage depends on what’s in the denominator when calculating valuation multiples
+      Few examples of items to add
+      Debt
+      Preferred Stock
+      It’s similar to Debt because of the required dividends, which act as interest expense; also, normally it must also be repaid upon acquisition
 
-    If the denominator included (uses) interest income and expense, you use Equity Value; if it does not include interest income and expense, you use Enterprise Value
+      Examples of items to add but wouldn’t necessarily come from the company’s normal cash flows
+      Unfunded Pension Obligations
+      Capital Leases
+      Restructuring/Environmental Liabilities
+      All three points above have the same scenarios of having to be paid through debt because regular firm cash flows aren’t nearly enough to pay for them
 
-    Common Valuation Multiples
-    Enterprise Value / Revenue
-    Enterprise Value / EBITDA
-    Enterprise Value / EBIT
-    Equity Value / Net Income (P/E)
-    Enterprise Value / FCFF
-    Unlevered Free Cash Flow (Free Cash Flow to Firm)
-    Equity Value / FCFE
-    Levered Free Cash Flow (Free Cash Flow to Equity)
+      You also add Noncontrolling Interests (AKA Minority Interests) for comparability purposes
+      When you own over 50\% of another company, you consolidate 100\% of its financial statements with your own. But Equity Value only reflects the value of the percentage that you own, not 100\%. So you need to reflect 100\% of that other company in Enterprise Value—if you did not add Noncontrolling Interests, you would be reflecting 60\%, or 70\%, or however much you own.
 
-    When in doubt, think: “Does this include interest income and expense, i.e. do we subtract interest expense and add interest income to get to this metric?”
-    If it does, use Equity Value; if it does not, use Enterprise Value
+      Comparability purposes refers to the comparisons the acquirer makes with other potential acquisition targets and the current firm under inspection.
 
-  \end{core}
+    \end{core}
 
-\section{Discounted Cash Flow}
+    \begin{core}{Enterprise vs. Equity Valuation Multiples}
 
-  \begin{core}{The Basic Concept}
+      Equity Value is like the “sticker price” and Enterprise Value is how much the company would actually cost to acquire
+
+      There usage depends on what’s in the denominator when calculating valuation multiples
+
+      If the denominator included (uses) interest income and expense, you use Equity Value; if it does not include interest income and expense, you use Enterprise Value
+
+      Common Valuation Multiples
+      Enterprise Value / Revenue
+      Enterprise Value / EBITDA
+      Enterprise Value / EBIT
+      Equity Value / Net Income (P/E)
+      Enterprise Value / FCFF
+      Unlevered Free Cash Flow (Free Cash Flow to Firm)
+      Equity Value / FCFE
+      Levered Free Cash Flow (Free Cash Flow to Equity)
+
+      When in doubt, think: “Does this include interest income and expense, i.e. do we subtract interest expense and add interest income to get to this metric?”
+      If it does, use Equity Value; if it does not, use Enterprise Value
+
+    \end{core}
+
+\section{Discounted Cash Flow (DCF)}
+
+  \begin{core}{Discounted Cash Flow Overview}
 
     The basic concept of DCF analysis is that a company is worth the present value of its future cash flows
     Cash today is worth more than cash tomorrow, thus any future cash flows must be discounted to represent the time value of money
@@ -390,7 +446,6 @@
     180
     1000
 
-
     Present Value of Cash Flows: \$516
     Present Value of Terminal Value: \$621
     Total Value of Firm: \$1137
@@ -405,172 +460,365 @@
 
   \end{core}
 
-  \begin{core}{Calculating and Projecting Free Cash Flow}
+  \subsection{Free Cash Flow}
 
-    Free Cash Flow Definition
-    After tax cash flow the firm generates on a recurring basis, after taking into account
-    Account non-cash changes
-    Changes in Operating Assets and Liabilities
-    Required CapEx
-    FCF closely corresponds to the actual cash flow an investor would receive each year if he/she buys the entire company
+    \begin{core}{Revenue \& Growth}
 
-    Types of FCF
-    Unlevered FCF (Free Cash Flow to Firm); used more, easier to calculate, excludes net interest expense and mandatory debt repayments
-    Levered FCF (Free Cash Flow to Equity); includes net interest expense and mandatory debt repayments
+      3 - Expected Growth
+      Value is driven by expected future growth, not past growth, and generically there are three approaches to estimating growth:
+      past performance
+      outsourcing analysts and management
+      Fundamentals: by looking at reinvestment
+      For a company with stable margins and returns on equity/capital, the expected growth becomes a product of how much the firm reinvests (as a percent of earnings) and how well it reinvests (a return on equity or capital)
 
-    Calculating Unlevered FCF
-    Project the company’s revenue growth (\%) for the 5-10 year “near-future” period
-    Assume an operating margin to calculate EBIT. Usually this is based on historical margins
-    Calculate the company’s effective tax rate and its Net Operating Profit After Tax, or NOPAT
-    Ex. Tax Rate = 40\% ; NOPAT = EBIT * (1-40\%)
-    Next, Project the 3 key cash flow items
-    Non-cash changes
-    Changes in Operating Assets and Liabilities
-    Capital Expenditures
-    The main Non-Cash Charges are Depreciation \& Amortization; you may also project others, such as Stock-Based Compensation. You can make these additions percentages of the total revenue
-    If assets increase more than liabilities, change in Operating Assets and Liabilities is negative. Liabilities more than assets—positive. Assets eat up money; Liabilities produce cash flow. Make this as a percentage of revenue.
-    Estimate CapEx, which always reduces cash flow. Also a percentage of revenue
+      1 - Revenue Growth
+      To gauge revenue growth and magnitude, we have to observe the current market size and growth as well as the firm’s share in that market.
+      The worst condition is when a mature, large-market-share owning firm is operating in a mature, slow-growing market. There is simply not much room left to grow on both dimensions.
+      A smaller market share owning firm in a quickly advancing market is the best, because it has both dimensions left to growth
 
-    Through this, we replicate the CFS, but exclude interest, debt repayments, and everything in Cash Flow from Financing. We’re also eliminating everything under CFI except for CapEx because that is the only usually recurring item.
+      Market Size and Growth
+      Market Share
+      1. Current Market Size: The size of the market for the company’s products & services, given geography it is targeting and product type
 
-    Operating Assets \& Liability (Review)
-    Accounts Receivable
-    Prepaid Expenses
-    Inventory
-    Accounts Payable
-    Accrued Expenses
-    Deferred Revenue
+      2. Expected Growth in Market: Growth in total market, as technology and market conditions change
+      1. Company’s current market share: If company’s current market share is low, potential for growth in market share at expense of competition
 
-    Unlevered vs Levered FCF
-    Main difference is that you add net interest income / (expense) after the EBIT calculation, thus more like net income rather than NOPAT in step 3
-    Then you must subtract mandatory debt repayments after CapEx subtraction, which is hard to find
-    There are alternate definitions, but do not mind those
+      2. Industry Economics: Nature of the business (a few big winners or splintered competition).
 
-  \end{core}
+      3. Strength of company’s competitive advantages: Stronger and more sustainable competitive advantages should allow for higher market share.
 
-  \begin{core}{Discount Rates and WACC}
+    \end{core}
 
-    You need to discount both the company’s future FCF and it sTerminal Value because of the time value of money
-    What return are investors expecting to earn, at the minimum, when they invest in this company?
-    The Discount Rate also represents the “risk” of a company, because higher potential returns correspond to higher risk
+    \begin{core}{Margins}
 
-    All else being equal, smaller companies and companies in emerging markets have higher Discount Rates because their risk is inherently higher.
+      2 - Target Margins (and path there)...
 
-    The Discount Rate has three components
-    Cost of Equity
-    Cost of Debt → Interest Rate
-    Cost of Preferred Stock → The Effective Yield
-    Typically, there are variables/adjustments, but for now cost of debt = IR on that debt
+      Target Operating Margin
+      Pathway to Profitability
+      1. Unit Economics: Profits on extra unit sold (GM), as percent of price, with higher profitability going with higher operating margin
 
-    Equity costs the company in two ways
-    Dividend issues
-    Giving up future stock appreciation
+      2. Economies of scale: Costs of growth relative to revenue growth, with greater economies of scale allowing for higher margins
 
-    Cost of Equity = Risk-Free Rate + Equity Risk Premium * Levered Beta
-    Risk-Free Rate = IR we earn by investing in a “riskless” security, such as 30-year US Treasury notes
-    Equity Risk Premium = the extra yield you could earn by investing in an index that tracks the market in your country of choosing (usually within 3-10%)
-    Beta = refers to the “riskiness” of this company relative to all other companies in the stock market (β = 1 is as volatile as index, <1 is less, >1 is more)
+      3. Competition: Pricing behavior among competitors, with more aggressive pricing leading to lower margins
+      1. Company’s current operating margin: The lower a company’s current margin, relative to the target, the steeper the path to profitability
 
-    You can also estimate you own β through public comps rather than historical data
+      2. Profitability vs Growth trade off: Companies that put growth ahead of profitability will wait longer before getting a target margin
 
-    Unlevering and Relevering Beta
-    You assume that a company’s “true” riskiness is more in-line with how risky similar companies in the market are than its own historical track record
+      3. Business model: The more well formed a business model, the speedier the pathway to the target margin
 
-    Unlevered Beta=Levered Beta1+(1-Tax Rate)DebtEquity Value
+      While all companies would like higher margins in steady state, the level of these margins will be determined by the sector in which a firm operates and its choice of business model, and the speed with which you move towards those target margins will be determined by a company’s ambitions and business model choices 
 
-    We say that there are two types of risks with a company
-    the inherent, business risk
-    the risk that comes from debt
-    Unlevered Beta represents just the business risk
-    Levered Beta represent both business and debt risk; the denominator in the equation above simply “removes” the debt risk from Levered β, creating Unlevered β
-    Assume that debt risk is proportional to Debt/Equity value ratio; debt is tax-deductible, so that helps reduce risk from debt slightly
-    Next, calculate the Unlevered β for public comps, take the median, then re-lever to approximate levered β for target firm
+    \end{core}
 
-    Levered Beta=Unlevered Beta(1+(1-Tax Rate)DebtEquity Value)
+    \begin{core}{Reinvestment}
 
-    To recap, we unlever public comp beta, assume the target firm has the same inherent business risk, then we relever this unlevered beta with the target firm’s current debt condition to capture its inherent business risk + debt risk
+      REINVESTMENT is a critical ingredient to estimating the growth of the company and we can calculate the reinvestment rate by
 
-    Alternate Cost of Equity formula (only if firm has stable dividends)
-    Cost of Equity=Dividends per ShareShare Price+Growth Rate of Dividends
+      Reinvestment Rate=(Net Capex+Change in WC)/NOPAT
 
-    Calculating the Weighted Average Cost of Capital (WACC)
-    WACC = (Cost of Equity * % Equity) + (Cost of Debt * % Debt * (1 - Tax Rate)) + (Cost of Preferred Stock * % Preferred Stock)
-    If you’re using Unlevered FCF, use WACC because you care about all parts of the company’s capital structure and all investors
-    If you’re using Levered FCF, use Cost of Equity as the Discount Rate because you only care about Equity investors
+      Another factor you can add into a cash flow model is also the reinvestment rate as well
 
-    WACC Implications
-    Debt will almost always push down WACC because IRs are lower than the cost of equity usually and interest is tax-deductible
-    Preferred Stock is generally cheaper than Equity, but not debt because it is not tax-deductible
-    Equity tends to “cost” the most because it is inherently more risky
+      Reinvestment and Return: Measures
+      Earnings Measure
+      Reinvestment Measure
+      Return Measure
+      EPS
+      Retention Ratio = % of net income retained by the company = 1- Payout Ratio
+      Return on Equity = Net Income / Book Value of Equity
+      Net Income from non-cash assets
+      Equity reinvestment Rate = (Net Capex + Change in non-cash WC - Change in Debt) / (Net Income)
+      Non-cash ROE = Net Income from non-cash assets / (Book value of equity - Cash)
+      Operating Income
+      Reinvestment Rate = (Net Capex + Change in non-cash WC - Change in Debt) / (NOPAT)
+      Return on Capital or ROIC = NOPAT / (Book value of equity + Book value of debt - Cash)
 
-    Cost of Equity Implications
-    Higher Risk-Free Rates and Equity Risk Premiums always increase it
-    Debt increases the Cost of Equity, because debt increases the chance of default, leaving the common shareholder with nothing
+      However, remember to base these figures / results on reality (the ROE may be unrealistically)
 
-    Regardless of which type of FCF used, you always use LeveredBeta when calculating Cost of Equity. Remember that if a company has Debt, it makes both the Equity of the company and the entire firm itself riskier.
+      When everything is in flux: Changing growth and margins
+      The elegant connection between reinvestment and earnings growth, captured by a sustainable growth rate, when you have a company in transition, and margins are changing over time
+      If that is the case, you have to estimate cash flows in three steps:
+      Forecast revenue growth and revenues in future years, taking into account market potential and competition.
+      Forecast a “target” margin in the future and a pathway from current margins to the target
+      Estimate reinvestment from revenues, using a sales to capital ratio (measuring the dollars of revenues you get from each dollar of investment)
 
-    Targeted vs. Existing Capital Structures
-    What if the company’s capital structure changes in the future?
-    You’d use this capital structure if known in the new Debt and Equity value calculations
-    In real life this almost never comes up because no one “knows” how a company’s capital structure will change far in advance
+      3 - Sales to Invested Capital: A Pathway to estimating Reinvestment
+      Current (Historical) Sales to Capital
+      Future Sales to Capital
+      The sales to IC ratio relates the revenues of the firm to its invested capital, with the latter defined the same way that you would in the return on invested capital calculation
 
-  \end{core}
+      Sales to Capital
+      = Revenues / (Book Equity + Book Debt - Cash)
 
-  \begin{core}{Terminal Value}
+      The ratio measures the efficiency with which a firm delivers its revenue growth, with higher values indicating more efficiency. You can look at:
+      The company’s historical sales to capital ratio
+      The industry average sales to capital ratio
+      1. Scaling Effects: As companies get bigger, the sales to IC ratio can rise or fall, depending on the sector being analyzed. (Looking at the peer group may give some guidance)
 
-    Key Idea #4: Calculating Terminal Value
-    Method #1: Assume That the Company Gets Sold for a Certain Multiple
-    Ex. EBITDA = \$500 million in Year 5
-    EBITDA multiple = 10x
-    thus EV is \$5billion = Terminal Value
-    This method is simple and commonly used in banking, but estimating this exact multiple is difficult, so you always use a range of multiples in a sensitivity table
+      2. Excess Capacity: If a company has excess capacity, created by past investments, it should be able to generate revenues growth with less investment, i.e., with higher sales to capital ratios
 
-    Method #2: Assume That the Company Keeps Operating Indefinitely and Sum Its Future Cash Flows
-    Called the “Gordon Growth” for “Perpetual Growth” method
-    Although FCF grows theoretically forever, the present value of the FCF keeps shrinking because the Discount Rate is higher than the growth rate of these FCF
-    The sum of these future cash flows will eventually converge on a single number
+      3. Lag between investment and growth: If reinvestment creates growth quickly (or instantaneously), the reinvestment in a year can be estimated based upon revenue change in that year. If there is a lag, the reinvestment may have to be tied to revenue change in a future year.
 
-    Terminal Value=Final Year FCF1+Terminal FCF Growth RateDiscount Rate-Terminal FCF Growth Rate
 
-    The Terminal Growth Rate should always be very low—less than or equal to the country's GDP growth rate. Otherwise, the company’s FCF will exceed GDP.
+    \end{core}
 
-    Which Method to Use?
-    There is no best method and neither will necessary produce lower/higher results because you can’t directly compare the
-    In both cases, the key variables—the Terminal Multiple and the Terminal Growth Rate—are difficult to determine precisely
-    If the industry is cyclical or multiples are unpredictable, Gordon Growth may be better
-    If multiples are predictable, the Multiples Method may be better
+    \begin{core}{Free Cash Flow}
 
-    End Game
-    Discount the terminal value and add it to the discounted FCF from the Projection Period to generate Enterprise Value (with Unlevered FCF) or Equity Value (with Levered FCF) and thus the implied share price after finding out diluted shares outstanding
-    Remember that in a presentation to investors, we always show a range of values for the analysis using a sensitivity table
+      Free Cash Flow Definition
+      After tax cash flow the firm generates on a recurring basis, after taking into account
+      Account non-cash changes
+      Changes in Operating Assets and Liabilities
+      Required CapEx
+      FCF closely corresponds to the actual cash flow an investor would receive each year if he/she buys the entire company
 
-  \end{core}
+    \end{core}
 
-  \begin{core}{Factors That Impact a DCF and WACC}
+    \begin{core}{Calculating Unlevered and Levered FCF}
 
-    Overall Impact: The Discount Rate and Terminal Value tend to have the biggest impact here compared to, say, a change in a company’s revenue growth rate or margins.
+      Types of FCF
+      Unlevered FCF (Free Cash Flow to Firm); used more, easier to calculate, excludes net interest expense and mandatory debt repayments
+      Levered FCF (Free Cash Flow to Equity); includes net interest expense and mandatory debt repayments
 
-    It gets trickier when questions are like, “Well, what about a 10% change in revenue vs a 1% difference in the Discount Rate?”
-    In this case, you’re better off “hedging your answer and saying that at a certain level, the revenue increase or decrease will make more of a difference than the new Discount Rate, but it varies greatly by company and by specific assumptions
+      Calculating Unlevered FCF
+      Project the company’s revenue growth (\%) for the 5-10 year “near-future” period
+      Assume an operating margin to calculate EBIT. Usually this is based on historical margins
+      Calculate the company’s effective tax rate and its Net Operating Profit After Tax, or NOPAT
+      Ex. Tax Rate = 40\% ; NOPAT = EBIT * (1-40\%)
+      Next, Project the 3 key cash flow items
+      Non-cash changes
+      Changes in Operating Assets and Liabilities
+      Capital Expenditures
+      The main Non-Cash Charges are Depreciation \& Amortization; you may also project others, such as Stock-Based Compensation. You can make these additions percentages of the total revenue
+      If assets increase more than liabilities, change in Operating Assets and Liabilities is negative. Liabilities more than assets—positive. Assets eat up money; Liabilities produce cash flow. Make this as a percentage of revenue.
+      Estimate CapEx, which always reduces cash flow. Also a percentage of revenue
 
-    Rules of Thumb for Cost of Equity:
-    Smaller companies generally have a higher Cost of Equity because expected returns are higher
-    Companies in emerging markets are the same for the same reasons
-    Additional Debt increases cost of equity because it makes the company riskier for all investors
-    Additional Equity lowers the cost of equity by decreasing the percentage of debt capital
-    Using Historical vs Calculated Beta doesn’t have a predictable impact—it could go either way
+      Through this, we replicate the CFS, but exclude interest, debt repayments, and everything in Cash Flow from Financing. We’re also eliminating everything under CFI except for CapEx because that is the only usually recurring item.
 
-    Rules of Thumb for WACC:
-    WACC is higher for smaller companies and ones in emerging markets
-    Additional Debt will reduce WACC because it shifts the capital structure and equity is more expensive than debt. Levered Beta goes up, but the additional debt in WACC makes up for more
-    Additional Preferred Stock generally reduces WACC because it is less expensive than Equity (Common Stock)
-    Higher Debt IR will increase WACC b/c it increases cost of equity
+      Operating Assets \& Liability (Review)
+      Accounts Receivable
+      Prepaid Expenses
+      Inventory
+      Accounts Payable
+      Accrued Expenses
+      Deferred Revenue
+
+      Unlevered vs Levered FCF
+      Main difference is that you add net interest income / (expense) after the EBIT calculation, thus more like net income rather than NOPAT in step 3
+      Then you must subtract mandatory debt repayments after CapEx subtraction, which is hard to find
+      There are alternate definitions, but do not mind those
+
+    \end{core}
+
+  \subsection{Discount Rates}
+
+    \begin{core}{Discount Rates}
+
+      You need to discount both the company’s future FCF and it sTerminal Value because of the time value of money
+      What return are investors expecting to earn, at the minimum, when they invest in this company?
+      The Discount Rate also represents the “risk” of a company, because higher potential returns correspond to higher risk
+
+      All else being equal, smaller companies and companies in emerging markets have higher Discount Rates because their risk is inherently higher.
+
+      2 - Discount Rates
+      Critical ingredient in DCF valuation. Errors in estimating the discount rate or mismatching cash flows and discount rates can lead to serious errors in valuation
+      At an intuitive level, the discount rate used should be consistent with both the riskiness and the type of cash flow being discounted
+      The cost of equity is the rate at which we discount cash flows to equity (dividends or free cash flows to equity). The cost of capital is the rate at which we discount free cash flows to the firm
+
+      We have to be cognizant that the cost of equity and capital can and should change over time. Especially in the case of an initially small cap company growing, the cost of capital should become lower over time because of economies of scale
+
+    \end{core}
+
+    \begin{core}{Weighted Average Cost of Capital}
+
+      The Discount Rate has three components
+      Cost of Equity
+      Cost of Debt → Interest Rate
+      Cost of Preferred Stock → The Effective Yield
+      Typically, there are variables/adjustments, but for now cost of debt = IR on that debt
+
+      Equity costs the company in two ways
+      Dividend issues
+      Giving up future stock appreciation
+
+      Cost of Equity = Risk-Free Rate + Equity Risk Premium * Levered Beta
+      Risk-Free Rate = IR we earn by investing in a “riskless” security, such as 30-year US Treasury notes
+      Equity Risk Premium = the extra yield you could earn by investing in an index that tracks the market in your country of choosing (usually within 3-10%)
+      Beta = refers to the “riskiness” of this company relative to all other companies in the stock market (β = 1 is as volatile as index, <1 is less, >1 is more)
+
+      You can also estimate you own β through public comps rather than historical data
+
+      Unlevering and Relevering Beta
+      You assume that a company’s “true” riskiness is more in-line with how risky similar companies in the market are than its own historical track record
+
+      Unlevered Beta=Levered Beta1+(1-Tax Rate)DebtEquity Value
+
+      We say that there are two types of risks with a company
+      the inherent, business risk
+      the risk that comes from debt
+      Unlevered Beta represents just the business risk
+      Levered Beta represent both business and debt risk; the denominator in the equation above simply “removes” the debt risk from Levered β, creating Unlevered β
+      Assume that debt risk is proportional to Debt/Equity value ratio; debt is tax-deductible, so that helps reduce risk from debt slightly
+      Next, calculate the Unlevered β for public comps, take the median, then re-lever to approximate levered β for target firm
+
+      Levered Beta=Unlevered Beta(1+(1-Tax Rate)DebtEquity Value)
+
+      To recap, we unlever public comp beta, assume the target firm has the same inherent business risk, then we relever this unlevered beta with the target firm’s current debt condition to capture its inherent business risk + debt risk
+
+      Alternate Cost of Equity formula (only if firm has stable dividends)
+      Cost of Equity=Dividends per ShareShare Price+Growth Rate of Dividends
+
+      Calculating the Weighted Average Cost of Capital (WACC)
+      WACC = (Cost of Equity * % Equity) + (Cost of Debt * % Debt * (1 - Tax Rate)) + (Cost of Preferred Stock * % Preferred Stock)
+      If you’re using Unlevered FCF, use WACC because you care about all parts of the company’s capital structure and all investors
+      If you’re using Levered FCF, use Cost of Equity as the Discount Rate because you only care about Equity investors
+
+      WACC Implications
+      Debt will almost always push down WACC because IRs are lower than the cost of equity usually and interest is tax-deductible
+      Preferred Stock is generally cheaper than Equity, but not debt because it is not tax-deductible
+      Equity tends to “cost” the most because it is inherently more risky
+
+      Cost of Equity Implications
+      Higher Risk-Free Rates and Equity Risk Premiums always increase it
+      Debt increases the Cost of Equity, because debt increases the chance of default, leaving the common shareholder with nothing
+
+      Regardless of which type of FCF used, you always use LeveredBeta when calculating Cost of Equity. Remember that if a company has Debt, it makes both the Equity of the company and the entire firm itself riskier.
+
+      Targeted vs. Existing Capital Structures
+      What if the company’s capital structure changes in the future?
+      You’d use this capital structure if known in the new Debt and Equity value calculations
+      In real life this almost never comes up because no one “knows” how a company’s capital structure will change far in advance
+
+    \end{core}
+
+  \subsection{Terminal Value}
+
+    \begin{core}{Terminal Value}
+
+      4 - Getting Closure in Valuation
+      When a firm’s cash flows grow at a “constant” rate forever, the present value of those cash flows can be written as:
+
+      Value = Expected Cash Flow Next Period / (r-g)
+      r = discount rate
+      g = expected growth rate forever
+
+      The “constant” growth rate is called a stable growth rate and cannot be higher than the growth rate of the economy in which the firm operates
+
+
+      Myths
+      Truths
+      The only way to estimate terminal value is to use the perpetual growth model
+
+      The perpetual growth model can give you an infinite value
+
+      The growth rate is your biggest driver of terminal value
+
+      Your growth rate cannot be negative in a perpetual growth model
+
+
+      If you terminal value is a high proportion of your DCF value, it is flawed
+      The terminal value can be based on annuities or a liquidation value
+
+      Not if growth forever is capped at the growth rate of the economy
+
+      Growth is not free & increasing growth can add or destroy value
+
+      Growth can be negative forever & is often more reflective of reality
+      fossil fuel companies (falling industry)
+
+      The terminal value should be a higher percentage of value today
+
+    \end{core}
+
+    \begin{core}{Terminal Value Calculation Methods}
+
+      Method #1: Assume That the Company Gets Sold for a Certain Multiple
+        Ex. EBITDA = \$500 million in Year 5
+        EBITDA multiple = 10x
+        thus EV is \$5billion = Terminal Value
+        This method is simple and commonly used in banking, but estimating this exact multiple is difficult, so you always use a range of multiples in a sensitivity table
+
+      Method #2: Assume That the Company Keeps Operating Indefinitely and Sum Its Future Cash Flows
+        Called the “Gordon Growth” for “Perpetual Growth” method
+        Although FCF grows theoretically forever, the present value of the FCF keeps shrinking because the Discount Rate is higher than the growth rate of these FCF
+        The sum of these future cash flows will eventually converge on a single number
+
+        Terminal Value=Final Year FCF1+Terminal FCF Growth RateDiscount Rate-Terminal FCF Growth Rate
+
+        The Terminal Growth Rate should always be very low—less than or equal to the country's GDP growth rate. Otherwise, the company’s FCF will exceed GDP.
+
+      Which Method to Use?
+      There is no best method and neither will necessary produce lower/higher results because you can’t directly compare the
+      In both cases, the key variables—the Terminal Multiple and the Terminal Growth Rate—are difficult to determine precisely
+      If the industry is cyclical or multiples are unpredictable, Gordon Growth may be better
+      If multiples are predictable, the Multiples Method may be better
+
+    \end{core}
     
+    \begin{core}{End Game}
+
+      Discount the terminal value and add it to the discounted FCF from the Projection Period to generate Enterprise Value (with Unlevered FCF) or Equity Value (with Levered FCF) and thus the implied share price after finding out diluted shares outstanding
+      Remember that in a presentation to investors, we always show a range of values for the analysis using a sensitivity table
+
+    \end{core}
+
+  \subsection{Types of DCF Models}
+
+    \begin{core}{FCFE Discounted by Cost of Equity}
+
+      Present value is the value of aggregate equity. Subtract the value of equity options given to managers and divide by number of shares
+
+    \end{core}
+
+    \begin{core}{FCFF Discounted by WACC}
+
+      PV = Value of operating assets
+      Cash & Near Cash investments
+      Value of minority cross holders
+      Debt outstanding
+      = Value of equity
+      Value of Equity options
+      = Value of equity in common stock
+      / Number of shares
+
+    \end{core}
+
+  \subsection{DCF Sensitivities}
+
+    \begin{core}{Factors That Impact a DCF and WACC}
+
+      Overall Impact: The Discount Rate and Terminal Value tend to have the biggest impact here compared to, say, a change in a company’s revenue growth rate or margins.
+
+      It gets trickier when questions are like, “Well, what about a 10% change in revenue vs a 1% difference in the Discount Rate?”
+      In this case, you’re better off “hedging your answer and saying that at a certain level, the revenue increase or decrease will make more of a difference than the new Discount Rate, but it varies greatly by company and by specific assumptions
+
+      Rules of Thumb for Cost of Equity:
+      Smaller companies generally have a higher Cost of Equity because expected returns are higher
+      Companies in emerging markets are the same for the same reasons
+      Additional Debt increases cost of equity because it makes the company riskier for all investors
+      Additional Equity lowers the cost of equity by decreasing the percentage of debt capital
+      Using Historical vs Calculated Beta doesn’t have a predictable impact—it could go either way
+
+      Rules of Thumb for WACC:
+      WACC is higher for smaller companies and ones in emerging markets
+      Additional Debt will reduce WACC because it shifts the capital structure and equity is more expensive than debt. Levered Beta goes up, but the additional debt in WACC makes up for more
+      Additional Preferred Stock generally reduces WACC because it is less expensive than Equity (Common Stock)
+      Higher Debt IR will increase WACC b/c it increases cost of equity
+      
+    \end{core}
+
+\section{Dividend Discount Model (DDM)}
+
+  \begin{core}{placeholder}
+
+    Discount dividends per share at the cost of equity
+    Present value is the value of equity per share
+
+    % TODO: There is a nice figure named "Measuring Potential Dividends" in Session 26 of Corporate Finance google docs notes
+
   \end{core}
 
-\section{Leveraged Buyout}
+\section{Leveraged Buyout (LBO)}
 
-  \begin{core}{What is an LBO and Why does it Work?}
+  \begin{core}{Leveraged Buyout Overview}
 
     When buying out a company, the returns go up when you buy through debt because reducing the amount of cash you pay up-front for an asset has a disproportionate effect on your returns… since money today is worth more than money tomorrow
 
@@ -600,161 +848,181 @@
 
   \end{core}
 
-  \begin{core}{How to Make Basic Model Assumptions}
+  \subsection{The Buyout}
 
-    3 major things to do:
-    Assume a purchase price and the amount of debt and equity you’ll be using
-    Figure out the debt terms, including IR and annual repayment
-    Create a Sources & Uses schedule that tracks where your funds are coming from, and where they’re going
+    \begin{core}{Debt Structure}
 
-    For the purchase price, you would use all the standard valuation techniques and also look at the premium if public
-    Focus on Equity Value
-    The percentages of debt and equity would be based on recent, similar deals as well as what lenders will go for
+      3 major things to do:
+      Assume a purchase price and the amount of debt and equity you’ll be using
+      Figure out the debt terms, including IR and annual repayment
+      Create a Sources & Uses schedule that tracks where your funds are coming from, and where they’re going
 
-    IR and debt repayment schedules depend on the type of debt
-    Bank debt
-    Generally lower IR
-    10-20% annual principal repayment
-    “less risky” since backed by collateral
-    High-yield debt
-    Higher IR
-    Generally no annual repayment
-    Unsecured and thus riskier
+      For the purchase price, you would use all the standard valuation techniques and also look at the premium if public
+      Focus on Equity Value
+      The percentages of debt and equity would be based on recent, similar deals as well as what lenders will go for
 
-    Bank debt has maintenance covenants (Eg. Total debt must always be below 4x), whereas high-yield debt has incurrence covenants (Eg. the company cannot sell off assets)
+      IR and debt repayment schedules depend on the type of debt
+      Bank debt
+      Generally lower IR
+      10-20% annual principal repayment
+      “less risky” since backed by collateral
+      High-yield debt
+      Higher IR
+      Generally no annual repayment
+      Unsecured and thus riskier
 
-    Assessing potential debt structure
-    Leverage Ratio (Debt/EBITDA)? Too high or too low relative to public comps
-    Interest Coverage Ratio (EBITDA/Interest) Is that too high or too low compared to other companies?
-    Company planning on major expansion or acquisition that limits certain debt types?
-    What are lenders comfortable with
-    There is no simple rule to apply to determine the “best structure”
+      Bank debt has maintenance covenants (Eg. Total debt must always be below 4x), whereas high-yield debt has incurrence covenants (Eg. the company cannot sell off assets)
 
-    Sources and Uses
-    This shows where the transaction funding is coming from and where it’s going to
+      Assessing potential debt structure
+      Leverage Ratio (Debt/EBITDA)? Too high or too low relative to public comps
+      Interest Coverage Ratio (EBITDA/Interest) Is that too high or too low compared to other companies?
+      Company planning on major expansion or acquisition that limits certain debt types?
+      What are lenders comfortable with
+      There is no simple rule to apply to determine the “best structure”
 
+    \end{core}
 
-    Common Funding Sources
-    Common Funding Uses
-    Debt (all types)
-    Investor Equity (cash from the PE firm)
-    Debt Assumed
-    Equity Value of Company
-    Advisory, Legal, Financing, and Other Fees
-    Debt Assumed
-    Refinanced Debt
+    \begin{core}{Sources and Uses}
 
+      Sources and Uses
+      This shows where the transaction funding is coming from and where it’s going to
 
-    Most of the time, the PE firm must pay off / refinance any existing debt when it buys a company because the terms of the debt state that it must be repaid when the company is acquired
+      Common Funding Sources
+      Common Funding Uses
+      Debt (all types)
+      Investor Equity (cash from the PE firm)
+      Debt Assumed
+      Equity Value of Company
+      Advisory, Legal, Financing, and Other Fees
+      Debt Assumed
+      Refinanced Debt
 
-    Do you pay Equity or Enterprise Value to Acquire a Company in a LBO?
-    Assume Existing Debt: This will bring the effective purchase price closer to the Equity Value (but not the same due to cash)
-    Repay Existing Debt: Brings closer to Enterprise Value (but not the same due to cash)
+      Most of the time, the PE firm must pay off / refinance any existing debt when it buys a company because the terms of the debt state that it must be repaid when the company is acquired
 
-    Transaction Assumptions & Model Output Summary
+      Do you pay Equity or Enterprise Value to Acquire a Company in a LBO?
+      Assume Existing Debt: This will bring the effective purchase price closer to the Equity Value (but not the same due to cash)
+      Repay Existing Debt: Brings closer to Enterprise Value (but not the same due to cash)
 
-    % LOOK AT GOOGLE DOCS TABLE
+      Transaction Assumptions & Model Output Summary
 
-  \end{core}
+      % LOOK AT GOOGLE DOCS TABLE
 
-  \begin{core}{How to Project the Statements and Pay Off Debt}
+    \end{core}
 
-    Projecting financial statements in an LBO is a fundamental part of the due diligence process. It helps investors assess the financial feasibility, risk, and potential returns associated with acquiring a company through leverage
+  \subsection{Statement Projections}
 
-    Few guidelines for the IS
-    Revenue growth: You generally want this to decline over time (e.g. 10% initially down to 5% in Year 5)
+    \begin{core}{Free Cash Flow Projections}
 
-    It’s not necessarily that you want revenue growth to slow down, but rather that the focus shifts from high revenue growth to other financial priorities. While revenue growth remains important, it must be balanced with the need to service debt, generate cash flow, and enhance overall profitability to create value for the LBO investors
+      Projecting financial statements in an LBO is a fundamental part of the due diligence process. It helps investors assess the financial feasibility, risk, and potential returns associated with acquiring a company through leverage
 
-    EBIT / EBITDA Margins: Should stay in the same range each year
-    BS Items: Many of these can be percentages of revenue, COGS, or Operating Expenses; you can use historical averages
-    D&A and Other Non-Cash Charges: Historical averages and percentages of revenue
-    Capital Expenditures: Make it a percentage of revenue, use a historical average, or assume a fixed dollar amount growth each year.
+      Few guidelines for the IS
+      Revenue growth: You generally want this to decline over time (e.g. 10% initially down to 5% in Year 5)
 
-    After calculating for the period, you can use the numbers to calculate how much debt the company pays off each year.
+      It’s not necessarily that you want revenue growth to slow down, but rather that the focus shifts from high revenue growth to other financial priorities. While revenue growth remains important, it must be balanced with the need to service debt, generate cash flow, and enhance overall profitability to create value for the LBO investors
 
-    Calculating Free Cash Flow
-    In the context of an LBO model, FCF means Cash Flow from Operations minus CapEx. Different from Levered/Unlevered FCF
-    “How much cash do we have left to pay debt principal each year, after we’ve already paid for our normal expenses and for the interest expenses on that debt?”
-    If there are other recurring items, you may add those
-    Eg. Investment purchases or sales each year
+      EBIT / EBITDA Margins: Should stay in the same range each year
+      BS Items: Many of these can be percentages of revenue, COGS, or Operating Expenses; you can use historical averages
+      D&A and Other Non-Cash Charges: Historical averages and percentages of revenue
+      Capital Expenditures: Make it a percentage of revenue, use a historical average, or assume a fixed dollar amount growth each year.
 
-    Once FCF is calculated FCF, logic of debt repayment is simple
-    Make mandatory repayments first
-    With remaining cash flows, make optional repayments
-    However, most companies have a minimum cash balance
-    Not all types of debt can be repaid early
-    And the company may not have enough cash flow for its minimum mandatory debt repayments, in which it would need to borrow more via a Revolver
+      After calculating for the period, you can use the numbers to calculate how much debt the company pays off each year.
 
-    Circular References
-    The interest expense on the IS is dependent on how much debt is paid off throughout the year
-    Normally, you average the beginning and ending Debt balances to determine annual interest expense—but that creates a paradox because the ending Debt balance depends on how much cash flow you had, after paying interest… but the interest expense depends on the Debt balance
-    To simplify models, you can base the interest expense on only the beginning Debt balance each year to get around this problem
+      Calculating Free Cash Flow
+      In the context of an LBO model, FCF means Cash Flow from Operations minus CapEx. Different from Levered/Unlevered FCF
+      “How much cash do we have left to pay debt principal each year, after we’ve already paid for our normal expenses and for the interest expenses on that debt?”
+      If there are other recurring items, you may add those
+      Eg. Investment purchases or sales each year
 
-  \end{core}
+    \end{core}
 
-  \begin{core}{How to Calculate Returns}
+    \begin{core}{Debt Repayment}
 
-    Simple Explanation of Returns
-    The equity (cash) that the PE firm invests is a negative
-    Any cash/dividends are a positive (most of the time it is \$0 b/c any cash flow available is used for debt repayment)
-    The sale proceeds minus debt outstanding at the end are also positive and represents what the PE firm “gets” when selling the company
+      Once FCF is calculated FCF, logic of debt repayment is simple
+      Make mandatory repayments first
+      With remaining cash flows, make optional repayments
+      However, most companies have a minimum cash balance
+      Not all types of debt can be repaid early
+      And the company may not have enough cash flow for its minimum mandatory debt repayments, in which it would need to borrow more via a Revolver
 
-    The internal rate of return (IRR) is just the effective IR on the investment
+      Circular References
+      The interest expense on the IS is dependent on how much debt is paid off throughout the year
+      Normally, you average the beginning and ending Debt balances to determine annual interest expense—but that creates a paradox because the ending Debt balance depends on how much cash flow you had, after paying interest… but the interest expense depends on the Debt balance
+      To simplify models, you can base the interest expense on only the beginning Debt balance each year to get around this problem
 
-    If the PE firm receives cash of dividends from the company, those would increase the IRR because they’d boost the total amount of funds received by the firm
+    \end{core}
 
-    In an LBO model, you assume an exit EBITDA multiple for the company, usually close to or below the purchase EBITDA multiple
+  \subsection{Returns and IRR}
 
-    In this case, the actual purchase price would be lower than the exit price because total EBITDA would increase throughout the 3-5 years
+    \begin{core}{Returns}
 
-    Once the Enterprise value is calculated, you work backwards to calculate the Equity Value
+      Simple Explanation of Returns
+      The equity (cash) that the PE firm invests is a negative
+      Any cash/dividends are a positive (most of the time it is \$0 b/c any cash flow available is used for debt repayment)
+      The sale proceeds minus debt outstanding at the end are also positive and represents what the PE firm “gets” when selling the company
 
-    IRR calculation rules of thumb
-    PE firm doubles its money in 5 years → 15% IRR
-    PE firm triples its money in 5 years → 25% IRR
-    PE firm doubles its money in 3 years → 26% IRR
-    PE firm triples its money in 3 years → 44% IRR
+    \end{core}
 
-    Time plays a huge factor; if a PE firm can get a good price for a company early on, it will always sell the company earlier rather than later
+    \begin{core}{Internal Rate of Return}
 
-    Greatest impact on IRR in an LBO
-    Purchase Price
-    %Debt and %Equity Used
-    Exit Price
+      The internal rate of return (IRR) is just the effective IR on the investment
 
-    Changes That Increase IRR: Lower Purchase Price, Less Equity, Higher Revenue Growth, Higher EBITDA Margins, Lower IR, Lower CapEx
-    Changes that Reduce IRR: Higher Purchase Price, More Equity, Lower Revenue Growth, Lower EBITDA Margins, Higher IR, Higher CapEx
-    Ask, “Will this change boost cash flow?”
+      If the PE firm receives cash of dividends from the company, those would increase the IRR because they’d boost the total amount of funds received by the firm
 
-  \end{core}
+      In an LBO model, you assume an exit EBITDA multiple for the company, usually close to or below the purchase EBITDA multiple
 
-  \begin{core}{More Advanced LBO Features}
+      In this case, the actual purchase price would be lower than the exit price because total EBITDA would increase throughout the 3-5 years
 
-    Dividend Recapitalizations (Dividend Recaps)
-    PE firm forces the company to take on additional debt and issues a big cash dividend to itself with the proceeds from that debt (Debt UP and Retained earnings DOWN on BS)
-    This boosts returns because it allows the PE firm to regain some of their initially invested capital
-    Debt investors dislike dividend recaps because they worsen the company’s credit quality and only helps a select few (PE owners)
+      Once the Enterprise value is calculated, you work backwards to calculate the Equity Value
 
-    Private Companies
-    LBOs of private companies are difficult because
-    The company may not want to sell, especially if it’s owned by one person, and unlike with public companies the PE firm cannot “force” a sale
-    Info is limited, so an LBO assessment may not be feasible
-    Purchase and Exit Prices are based on implied value rather than the premiums method
+      IRR calculation rules of thumb
+      PE firm doubles its money in 5 years → 15% IRR
+      PE firm triples its money in 5 years → 25% IRR
+      PE firm doubles its money in 3 years → 26% IRR
+      PE firm triples its money in 3 years → 44% IRR
 
-    Other Types of Debt
-    Bank Debt can be split into different types of “Term Loans” which have different characteristics
-    “High-Yield Debt” is split into Senior Notes, Subordinated notes, and Mezzanine which also have different characteristics
-    Payment-in-Kind (PIK) allows interest to accrue into the debt principal rather than being mandatorily paid in cash
+      Time plays a huge factor; if a PE firm can get a good price for a company early on, it will always sell the company earlier rather than later
 
-  \end{core}
+      Greatest impact on IRR in an LBO
+      Purchase Price
+      %Debt and %Equity Used
+      Exit Price
 
-Breaking Into Wall Street
-- 2_Equity_Value_and_Enterprise_Value
-- 3_Valuation
-- 4_DCF
-- 5_LBO
-  
+      Changes That Increase IRR: Lower Purchase Price, Less Equity, Higher Revenue Growth, Higher EBITDA Margins, Lower IR, Lower CapEx
+      Changes that Reduce IRR: Higher Purchase Price, More Equity, Lower Revenue Growth, Lower EBITDA Margins, Higher IR, Higher CapEx
+      Ask, “Will this change boost cash flow?”
+
+    \end{core}
+
+  \subsection{Advanced LBO Topics}
+
+    \begin{core}{Dividend Recapitalizations}
+
+      Dividend Recapitalizations (Dividend Recaps)
+      PE firm forces the company to take on additional debt and issues a big cash dividend to itself with the proceeds from that debt (Debt UP and Retained earnings DOWN on BS)
+      This boosts returns because it allows the PE firm to regain some of their initially invested capital
+      Debt investors dislike dividend recaps because they worsen the company’s credit quality and only helps a select few (PE owners)
+
+    \end{core}
+
+    \begin{core}{Private Companies}
+
+      Private Companies
+      LBOs of private companies are difficult because
+      The company may not want to sell, especially if it’s owned by one person, and unlike with public companies the PE firm cannot “force” a sale
+      Info is limited, so an LBO assessment may not be feasible
+      Purchase and Exit Prices are based on implied value rather than the premiums method
+
+    \end{core}
+
+    \begin{core}{Other Debt Types}
+
+      Other Types of Debt
+      Bank Debt can be split into different types of “Term Loans” which have different characteristics
+      “High-Yield Debt” is split into Senior Notes, Subordinated notes, and Mezzanine which also have different characteristics
+      Payment-in-Kind (PIK) allows interest to accrue into the debt principal rather than being mandatorily paid in cash
+
+    \end{core}
+
 \end{document}
 
 

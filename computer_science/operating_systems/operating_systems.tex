@@ -258,7 +258,7 @@
 
     \begin{core}[label=core:coresd]{Core System Directories}
 
-      INTRODUCTION
+      \textbf{Core system directories} are the \textbf{foundational} directories of the Linux filesystem, housing the essential binaries, libraries, and configuration files that the operating system requires to boot and function. Generally speaking, these directories are managed by the operating system itself and are \textbf{not meant to be modified directly by the user}.
 
       \begin{enumerate}
 
@@ -322,7 +322,7 @@
 
     \begin{core}{User Data and Configuration}
 
-      INTRODUCTION
+      \textbf{User data and configuration} directories are where the \textbf{human-facing} side of Linux lives, housing personal workspaces, user-installed software, and the configuration files that tailor the system to individual users.
 
       \begin{enumerate}
 
@@ -356,9 +356,9 @@
 
     \end{core}
 
-    \begin{core}{Virtual and Variable Files}
+    \begin{core}[label=core:vv_files]{Virtual and Variable Files}
 
-      INTRODUCTION
+      \textbf{Virtual and variable} files directories are not stored on disk like conventional directories, but are instead \textbf{dynamically generated} by the kernel at runtime to expose the live state of processes, hardware, and system resources.
 
       \begin{enumerate}
 
@@ -384,7 +384,7 @@
 
     \begin{core}{Variable/Persistent Data}
 
-      INTRODUCTION
+      \textbf{Variable and persistent} data directories are where the system writes information that needs to \textbf{survive across reboots}, such as logs, application state, and cached data, as opposed to the ephemeral runtime data covered in \autoref{core:vv_files}.
 
       \begin{enumerate}
 
@@ -408,7 +408,7 @@
 
     \begin{core}{Media and Mounts}
 
-      INTRODUCTION
+      \textbf{Media and mount} directories are where the Linux filesystem exposes \textbf{external} storage devices and network services, acting as the designated attachment points for hardware and data that exists outside of the machine itself.
 
       \begin{enumerate}
 
