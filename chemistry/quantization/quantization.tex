@@ -32,26 +32,22 @@
 
       \textbf{Light} consists of oscillations of electric and magnetic fields --- or \textbf{electromagnatic waves} --- that travel together at the speed of light ($c \approx 3.0 \times 10^8\,m\,s^{-1}$)
 
-      \myfig{0.75}{quantization_figures/light.png}{Electromagnetic wave showing electric and magnetic field oscillations}{fig:placeholder1}
+      \myfig{0.75}{quantization_figures/light.png}{The respective electric and magnetic field oscillations of an electromagnetic wave}{fig:placeholder1}
 
     \end{core}
 
-    \begin{core}{Frequency \& Wavelength}
+    \begin{core}{Frequency, Wavelength, and the Electromagnetic Spectrum}
 
-      While \textbf{frequency} (ν) quantifies the number of oscillations that occur per second, \textbf{wavelength} (λ) represents the physical distance spanned by a single cycle. Thus,
+      While \textbf{frequency (ν)} quantifies the number of oscillations that occur per second, \textbf{wavelength (λ)} represents the physical distance spanned by a single cycle. Thus,
       \[
         c = λν
       \]
 
-    \end{core}
+      The electromagnetic spectrum is the complete range of all electromagnetic radiation, organized by frequency or wavelength.
 
-    The electromagnetic spectrum is the complete range of all electromagnetic radiation, organized by frequency or wavelength.
+      \myfig{0.55}{quantization_figures/em_spectrum.png}{The electromagnetic spectrum (\textit{top}) and the visible specturm (\textit{bottom})}{fig:placeholder2}
 
-    \myfig{0.55}{quantization_figures/em_spectrum.png}{The electromagnetic spectrum showing different types of radiation}{fig:placeholder2}
-
-    It describes every form of light in the universe, from the vast radio waves used for broadcasting to the tiny, high-energy gamma rays emitted by nuclear reactions.
-
-    \begin{core}{Visible Spectrum}
+      It describes every form of light in the universe, from the vast radio waves used for broadcasting to the tiny, high-energy gamma rays emitted by nuclear reactions.
 
       The \textbf{visible spectrum} is the portion of the EM spectrum that corresponds to EM waves with wavelengths between 400nm and 700nm.
 
@@ -60,31 +56,35 @@
     \begin{core}{Wave Power \& Energy}
 
       A light wave's power and energy are two distinct characteristics.
+
+      \begin{enumerate}
+
+        \item \textbf{Power} is determined by the \textbf{amplitude} of the wave and represents the rate at which the light's energy is being delivered or transferred.
+
+        \myfig{0.55}{quantization_figures/amplitude.png}{Wave amplitude}{fig:placeholder3}
+
+        To understand why, it's helpful to understand the additive properties of waves or \textbf{superposition}. Waves do not "collide" and bounce off each other like billiard balls. Instead, they pass through one another, and their amplitudes add together algebraically at every point in space and time.
+
+        \myfig{0.4}{quantization_figures/superposition.png}{Constructive and destructive interference as a result of wave superposition}{fig:placeholder4}
+
+        This means when we see an amplitude increase, it's not a single wave getting stronger, but rather many waves of the same frequency being delivered simultaneously, thus increasing the rate at which energy is delivered (\textit{i.e., power}).
+
+        \item \textbf{Energy} is the total amount of work a light wave can perform and is determined by the frequency of the wave. Higher frequency (\textit{more frequent oscillations}) means higher energy, and lower frequency (\textit{less frequent oscillations}) means lower energy. Thus
+        \[
+          E_{gamma} > E_{Xrays} > E_{ultraviolet}
+        \]
+
+      \end{enumerate}
       
-      \textbf{Power} is determined by the \textbf{amplitude} of the wave and represents the rate at which the light's energy is being delivered or transferred.
-      
-      \myfig{0.55}{quantization_figures/amplitude.png}{Wave amplitude demonstrating power of a light wave}{fig:placeholder3}
-
-      To understand why, it's helpful to understand the additive properties of waves (\textbf{superposition}). Waves do not "collide" and bounce off each other like billiard balls. Instead, they pass through one another, and their amplitudes add together algebraically at every point in space and time.
-
-      \myfig{0.4}{quantization_figures/superposition.png}{Wave superposition showing constructive and destructive interference}{fig:placeholder4}
-
-      This means when we see an amplitude increase, it's not a single wave getting stronger, but rather many waves of the same frequency being delivered simultaneously, thus increasing the rate at which energy is delivered (i.e., power).
-
-      \textbf{Energy} is the total amount of work a light wave can perform and is determined by the frequency of the wave. Higher frequency (\textit{more frequent oscillations}) means higher energy, and lower frequency (\textit{less frequent oscillations}) means lower energy. Thus
-      \[
-        E_{gamma} > E_{Xrays} > E_{ultraviolet}
-      \]
+      \textit{To understand the distinction between wave power and energy, imagine a stream of marbles moving through space at constant speed. Increasing each marble's mass will increase its kinetic energy on impact, thus increasing the work it can perform when colliding with another system. The marble's mass is analogous to the frequency of EM waves. Now imagine adding a second stream so the rate of marble delivery doubles. This is analogous to the power of EM waves.}
 
     \end{core}
-
-    To understand the distinction between wave power and energy, imagine a stream of marbles moving through space at constant speed. Increasing each marble's mass will increase its kinetic energy on impact, thus increasing the work it can perform when colliding with another system. The marble's mass is analogous to the frequency of EM waves. Now imagine adding a second stream so the rate of marble delivery doubles. This is analogous to the power of EM waves.
 
   \subsection{Photons}
 
     \begin{core}{Photons}
 
-      Light energy is quantized into "packets" called \textbf{photons}, meaning that the energy of light is not a continuous, smooth flow, but is instead delivered in discrete, indivisible "packets"---\textit{just as a stream of water may look continuous on the macroscale but consists of discrete, indivisible \ce{H2O} molecules on the microscale.} The energy of an individual photon is determined by the frequency of the electromagnetic wave it is part of (\textit{as discussed above in the context of the general wave}). 
+      Light energy is quantized into "packets" called \textbf{photons}, meaning that the energy of light is not a continuous, smooth flow, but is instead delivered in \textbf{discrete, indivisible "packets"}---\textit{just as a stream of water may look continuous on the macroscale but consists of discrete, indivisible \ce{H2O} molecules on the microscale.} The energy of an individual photon is determined by the frequency of the electromagnetic wave it is part of (\textit{as discussed above in the context of the general wave}). 
       \[
         E_{photon} = \frac{hc}{λ} = hν
       \]
@@ -94,11 +94,39 @@
 
     \begin{core}{Photoelectric Effect}
 
-      Prior to the discovery of photons, the leading theory was the \textbf{Classical Wave Theory}, which viewed light as a continuous wave carrying energy proportional to its intensity (brightness). This assumed that if you shine light on an atom, the \ce{e-}s should eventually "soak up" enough energy to break free regardless of the wavelength of the light.
+      Prior to the discovery of photons, the leading theory was the \textbf{Classical Wave Theory}, which viewed light as a continuous wave carrying energy proportional to its intensity (\textit{brightness}). This assumed that if you shine light on an atom, the \ce{e-}s should eventually "soak up" enough energy to break free regardless of the wavelength of the light.
 
       The existence of photons was proven via the \textbf{photoelectric effect}, where the kinetic energy of an \ce{e^-} begins to rise only after a certain threshold frequency, revealing that light interacts with matter in discrete, one-to-one events. 
 
-      \myfig{0.65}{quantization_figures/pe_effect.png}{Photoelectric effect demonstrating photon energy}{fig:placeholder5}
+      \pgfig{
+        \begin{axis}[
+          xlabel={frequency of incident light (Hz)},
+          ylabel={Maximum kinetic energy of the photoelectron (J)},
+          xmin=0, xmax=10,
+          ymin=-6, ymax=6,
+          xtick={4},
+          xticklabels={$f_T$},
+          ytick={-4},
+          yticklabels={$-\phi$},
+          axis lines=center,
+          width=9cm,
+          height=8cm,
+          xlabel style={at={(axis description cs:1,0.42)}, anchor=west},
+          ylabel style={at={(axis description cs:0.35,1)}, anchor=south, align=center},
+          clip=false,
+        ]
+
+        % Main line
+        \addplot[blue, thick, domain=0:9.5, samples=100] {x - 4};
+
+        % Gradient annotation
+        \node[blue, draw, fill=white, align=center] at (axis cs:7.5, 3.5) {gradient of the line is $h$};
+
+        % Threshold annotation
+        \node[blue, draw, fill=white, align=center, font=\small] at (axis cs:5.5, -2.5) {$f_T$ is the threshold frequency below \\ which no photoelectrons will be released.};
+
+        \end{axis}
+      }{Photoelectric effect; maximum kinetic energy of photoelectron vs frequency of incident light}{fig:photoelectric}{0.9}
 
       This gave rise to the \textbf{"all-or-nothing" rule}, which states that an \ce{e^-} can only absorb one photon at a time and thus cannot accumulate energy from multiple low-energy photons.
 
@@ -121,7 +149,6 @@
         E_{photon} = \frac{4.417 \times 10^{-19}\,J}{1.602 \times 10^{-19}\,J\,eV^{-1}} = 2.757\,eV
       \]
       
-
     \end{core}
 
 \section{Electron Energy}
@@ -133,9 +160,10 @@
     Here we also introduce the \textbf{wave-like nature of electrons}. Physicists have proven this wave-like state, namely through the double-slit experiment.
 
     \begin{core}{Double Slit Experiment}
+
       The \textbf{double-slit experiment} was a setup where a single \ce{e^-} was shot at a double slit in a wall and would leave a mark indicating where it hit on the screen on the other side of the slits.
 
-      \myfig{0.45}{quantization_figures/double_slit.png}{Double slit experiment showing wave interference}{fig:placeholder6}
+      \myfig{0.35}{quantization_figures/double_slit.png}{Double slit experiment wave interference pattern}{fig:placeholder6}
 
       The results of the experiment produced a diffraction pattern that could only be explained by assuming that an \ce{e^-} behaves like a wave. The regions where marks were left represent regions hit by constructively interfering portions of the waves that originated from the slits. The regions with no marks represent regions hit by destructively interfering portions of the waves that originated from the slits.
 
@@ -147,7 +175,7 @@
 
       We see a similar diffraction pattern in the \textbf{single-slit experiment} as well.
 
-      \myfig{0.6}{quantization_figures/single_slit.png}{Single slit diffraction pattern}{fig:placeholder7}
+      \myfig{0.55}{quantization_figures/single_slit.png}{Single slit experiment diffraction pattern}{fig:placeholder7}
 
       The reason we see a diffraction pattern is the \textbf{Huygens-Fresnel principle}, which states that we don't treat a slit as just a "hole" that light passes through. Instead, every point along the width of the slit acts as a \textbf{secondary source} of spherical wavelets. These wavelets spread out in all directions from their respective points of origin. Thus the diffraction pattern we see on the screen is the interference pattern created by the superposition of all these secondary wavelets.
 
@@ -159,15 +187,15 @@
 
       A \textbf{standing wave} is a wave pattern that oscillates in time but does not move in space (\textit{confined to a restricted region}), formed by the interference of two waves of the \textbf{same frequency and amplitude} traveling \textbf{in opposite directions}.
 
-      \myfig{0.55}{quantization_figures/standing_wave.png}{Standing wave with nodes and antinodes}{fig:placeholder8}
+      \myfig{0.5}{quantization_figures/standing_wave.png}{One-dimensional standing wave harmonics}{fig:placeholder8}
 
       Recognize that there are points along the standing waves shown above where the medium remains completely still and experiences zero amplitude and displacement due to destructive interference. These points are called \textbf{nodes} of the wave. Now let's take a look at a 2D standing wave.
 
-      \myfig{0.85}{quantization_figures/2d_standing_wave.png}{Two-dimensional standing wave pattern}{fig:placeholder9}
+      \myfig{0.7}{quantization_figures/2d_standing_wave.png}{Two-dimensional standing wave pattern}{fig:placeholder9}
 
       It's harder to visualize, but just like the 1D standing wave displayed above, 2D standing waves also have nodes where the wave function sums to zero. In 2D, these nodes can be either radial or angular, as shown below.
 
-      \myfig{0.5}{quantization_figures/nodes.png}{Different standing wave patterns showing nodes}{fig:placeholder10}
+      \myfig{0.4}{quantization_figures/nodes.png}{Radial and angular nodes of two-dimensional standing waves}{fig:placeholder10}
 
       It's also important to keep in mind that the energy of these standing waves increases as the node count increases because the frequency of the standing wave increases.
 
@@ -175,9 +203,11 @@
 
     \begin{core}{Electron Orbitals}
 
-      Now we introduce \textbf{electron orbitals}, which are 3D standing waves that represent the \textbf{likelihood} of where \ce{e^-}s are located in space in the context of their wave-like characteristics rather than as particles. Just as a standing wave exists only within a confined region, electron orbitals are also \textbf{confined in a space determined by the Coulomb attractions} between them and the nucleus of the atom.
+      Now we introduce \textbf{electron orbitals}, which are \textbf{3-dimensional standing waves} that represent the \textbf{likelihood} of where \ce{e^-}s are located in space in the context of their wave-like characteristics rather than as particles.
 
-      \myfig{0.6}{quantization_figures/e_orbitals.png}{Shapes of s, p, d, and f orbitals}{fig:placeholder11}
+      \myfig{0.5}{quantization_figures/e_orbitals.png}{Shapes of s, p, d, and f orbitals}{fig:placeholder11}
+
+      Just as a standing wave exists only within a confined region, electron orbitals are also \textbf{confined in a space determined by the Coulomb attractions} between them and the nucleus of the atom.
 
     \end{core}
   
@@ -185,121 +215,113 @@
 
       Electron orbitals are categorized by their energy levels, identified with a \textbf{principal quantum number ($n$)} and an \textbf{angular quantum number ($l$)}. Electron orbitals within the same energy level are further distinguished by their \textbf{magnetic quantum number ($m_l$)}. Each electron within each orbital is again distinguished by its \textbf{spin quantum number ($m_s$)}.
 
-      The \textbf{principal quantum number} $n$ defines the electron's main energy level (shell), its average distance from the nucleus, and its size. The value $n - 1$ also represents the \textbf{total number of nodes} within the electron orbital. Generally, the higher $n$ is, the higher the energy level of the orbital; however, there are some nuances to this based on the angular quantum number.
+      \begin{enumerate}
 
-      The \textbf{angular quantum number} $l$ defines the subshell of the electron orbital and, more importantly, the shape of the orbital by representing the \textbf{number of angular nodes}. We use letters $s, p, d, f$ corresponding to $0, 1, 2, 3$, respectively, to represent the angular quantum numbers.
+        \item The \textbf{principal quantum number} $n$ defines the electron's main energy level (shell), its average distance from the nucleus, and its size. The value $n - 1$ also represents the \textbf{total number of nodes} within the electron orbital. Generally, the higher $n$ is, the higher the energy level of the orbital; however, there are some nuances to this based on the angular quantum number.
 
-      Here is a schematic showing the different electron orbitals with their principal and angular quantum numbers. The arrow indicates the order from lowest (1s) to highest (7p) orbital energy levels. 
+        \item The \textbf{angular quantum number} $l$ defines the subshell of the electron orbital and, more importantly, the shape of the orbital by representing the \textbf{number of angular nodes}. We use letters $s, p, d, f$ corresponding to $0, 1, 2, 3$, respectively, to represent the angular quantum numbers.
 
-      \myfig{0.5}{quantization_figures/orbital_table.png}{Periodic table of elements showing electron configurations}{fig:placeholder12}
+        Here is a schematic showing the different electron orbitals with their principal and angular quantum numbers. The arrow indicates the order from lowest (1s) to highest (7p) orbital energy levels. 
 
-      Let's look at an example of the 3p orbital and its corresponding principal quantum number (3) and angular quantum number (1 or p).
+        \myfig{0.5}{quantization_figures/orbital_table.png}{Electron orbital energy level ordering schematic}{fig:placeholder12}
 
-      \myfig{0.5}{quantization_figures/3p_example.png}{Example of a 3p orbital}{fig:placeholder13}
+        Let's look at an example of the 3p orbital and its corresponding principal quantum number (3) and angular quantum number (1 or p).
 
-      As you can see, there are a total of $n-1 = 3-1 = 2$ nodes, of which there are $l = 1$ angular nodes.
+        \myfig{0.35}{quantization_figures/3p_example.png}{3p electron orbital}{fig:placeholder13}
 
-      The \textbf{magnetic quantum number} $m_l$ simply tells us the spatial orientation of the electron orbital. The values for $m_l$, however, depend on the angular quantum number $l$. $m_l$ can only be integers from $-l$ to $l$, inclusive.
+        As you can see, there are a total of $n-1 = 3-1 = 2$ nodes, of which there are $l = 1$ angular nodes.
 
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{cc}
-          \hline
-          $l$ & Possible $m_l$ \\ \hline
-          0 (s) & 0 \\
-          1 (p) & $-1, 0, +1$ \\
-          2 (d) & $-2, -1, 0, +1, +2$ \\
-          3 (f) & $-3, -2, -1, 0, +1, +2, +3$ \\ \hline
-        \end{tabular}
-        \label{tab:quantum}
-      \end{table}
+        \item The \textbf{magnetic quantum number} $m_l$ simply tells us the spatial orientation of the electron orbital. The values for $m_l$, however, depend on the angular quantum number $l$. $m_l$ can only be integers from $-l$ to $l$, inclusive.
 
-      We revisit this figure, which illustrates the various orientations across the four angular quantum numbers.
+        \begin{table}[H]
+          \centering
+          \begin{tabular}{cc}
+            \hline
+            $l$ & Possible $m_l$ \\ \hline
+            0 (s) & 0 \\
+            1 (p) & $-1, 0, +1$ \\
+            2 (d) & $-2, -1, 0, +1, +2$ \\
+            3 (f) & $-3, -2, -1, 0, +1, +2, +3$ \\ \hline
+          \end{tabular}
+          \caption{Magnetic quantum numbers ($m_l$) for each angular quantum number ($l$)}
+          \label{tab:quantum}
+        \end{table}
 
-      \myfig{0.6}{quantization_figures/e_orbitals.png}{Shapes of s, p, d, and f orbitals}{fig:placeholder15}
+        We revisit this figure, which illustrates the various orientations across the four angular quantum numbers.
 
-      As shown, s and p orbitals possess relatively straightforward orientations---either none (\textit{for the s orbital}) or along the x, y, or z axis (\textit{for the p orbitals}). However, the d and f orbitals require additional orientations beyond these simple Cartesian axes. The nature of these additional orientations will not be examined in these notes.
+        \myfig{0.6}{quantization_figures/e_orbitals.png}{Shapes of s, p, d, and f orbitals}{fig:placeholder15}
 
-      It is sufficient to understand that the orientations of each electron orbital (\textit{with unique principal, angular, and magnetic quantum number combinations}) formed within an atom are directed such that they remain \textbf{orthogonal} to one another. While \textbf{orthogonality} in mathematics denotes independence or perpendicularity, in the context of electron orbitals, it signifies that each orbital is \textbf{statistically non-overlapping} with all others, despite potentially occupying the same general spatial region. Consequently, the \ce{e^-}s within the $2p_{-1}$ orbital will not occupy the $2p_{0}$ or $2p_{+1}$ orbitals, nor any other orbitals with differing angular or principal quantum numbers.
+        As shown, s and p orbitals possess relatively straightforward orientations---either none (\textit{for the s orbital}) or along the x, y, or z axis (\textit{for the p orbitals}). However, the d and f orbitals require additional orientations beyond these simple Cartesian axes. The nature of these additional orientations will not be examined in these notes.
 
-      Finally, we address the \textbf{spin quantum number}. The spin quantum number describes the orientation of the electron's spin within the orbital. It should be noted that nothing physically "spins" in the classical sense; rather, spin represents the orientation of the electron's intrinsic magnetic moment. This magnetic moment is quantized such that measurement of its magnitude along any given direction yields only two possible values: spin-up ($+1/2$) or spin-down ($-1/2$), which are orthogonal to each other.
+        It is sufficient to understand that the orientations of each electron orbital (\textit{with unique principal, angular, and magnetic quantum number combinations}) formed within an atom are directed such that they remain \textbf{orthogonal} to one another. While \textbf{orthogonality} in mathematics denotes independence or perpendicularity, in the context of electron orbitals, it signifies that each orbital is \textbf{statistically non-overlapping} with all others, despite potentially occupying the same general spatial region. Consequently, the \ce{e^-}s within the $2p_{-1}$ orbital will not occupy the $2p_{0}$ or $2p_{+1}$ orbitals, nor any other orbitals with differing angular or principal quantum numbers.
+
+        \item Finally, we address the \textbf{spin quantum number}. The spin quantum number describes the orientation of the electron's spin within the orbital. It should be noted that nothing physically "spins" in the classical sense; rather, spin represents the orientation of the electron's intrinsic magnetic moment. This magnetic moment is quantized such that measurement of its magnitude along any given direction yields only two possible values: spin-up ($+\nicefrac{1}{2}$) or spin-down ($-\nicefrac{1}{2}$), which are orthogonal to each other.
+
+      \end{enumerate}
 
     \end{core}
   
     \begin{core}{Pauli Exclusion Principle}
     
-      Each \ce{e^-} within an atom possesses a unique set of quantum numbers that fully characterize the electron's spatial and angular orientation, as well as its spin state. This is formalized by the \textbf{Pauli Exclusion Principle}, which states that \textbf{no two \ce{e^-}s can occupy the same orbital with the same spin orientation}.
+      Each \ce{e^-} within an atom possesses a unique set of quantum numbers ($n$, $l$, $m_l$, and $m_s$) that fully characterize the electron's spatial and angular orientation, as well as its spin state. This is formalized by the \textbf{Pauli Exclusion Principle}, which states that \textbf{no two \ce{e^-}s can occupy the same orbital with the same spin orientation}.
 
     \end{core}
 
-    \begin{core}{Orbital Energy Discrepancies \& Hydrogenic Atomic Orbitals} % START FROM HERE ===========================================
+    \begin{core}[label=core:hydrogenic]{Orbital Energy Discrepancies \& Hydrogenic Atomic Orbitals}
 
-      Let's revisit the orbital energy levels figure from before.
+      You may be wondering why the \textbf{order of orbital energy levels is not entirely determined by the total number of nodes}. After all, we have established that the energy of a wave depends on its frequency---and by extension, its number of nodes. As shown in \autoref{fig:placeholder16}, the 2s and 2p orbitals illustrate this pattern well because both contain the same number of nodes (1), yet the 2s orbital sits at a lower energy than the 2p.
 
-      \myfig{0.45}{quantization_figures/orbital_table.png}{Periodic table of elements showing electron configurations}{fig:placeholder16}
+      \myfig{0.55}{quantization_figures/orbital_table.png}{Electron orbital energy level ordering schematic}{fig:placeholder16}
 
-      You may be wondering why the order of the orbital energy levels are not entirely dependent on the total number of nodes in the orbital. After all, we have defined the energy of a wave being dependent on its frequency. For instance, the 2s and 2p orbitals contain the same number of nodes (1), but 2s lies in a lower energy state than 2p.
-
-      Before we answer this question, let's look at the energy of \textbf{hydrogenic atom orbitals}, which refers to the singular \ce{e^-} of an atom in which all but one \ce{e^-} has been removed, like \ce{H}, \ce{He+}, \ce{Li^{2+}}, etc. In these cases, the energy of the electron depends only on the total number of nodes, or quivalently, on the principle quantum number n (\textit{the angular quantum number l does not matter}). This aligns with our previous observation that the energy of a wave is dependent on its frequency (\textit{goes up with more nodes}). The quantitative expression for the energy of the hydrogenic atom orbitals across different principle quantum numbers n is given by:
-
+      To understand why, we first examine \textbf{hydrogenic atom orbitals}---those of atoms stripped of all but one \ce{e^-}, such as \ce{H}, \ce{He+}, and \ce{Li^{2+}}. In these simplified systems, the energy of the electron depends \textit{only} on the total number of nodes, or equivalently, on the principal quantum number $n$, regardless of the angular quantum number $l$. This is fully consistent with our earlier observation that more nodes means higher frequency, which means higher energy. The energy of a hydrogenic orbital is given quantitatively by:
       \[
         E = -\frac{hcRZ^2}{n^2}
       \]
 
-      where h is the Plank's constant ($6.626 \times 10^{-34}\,J\,s$), c is the speed of light ($2.998 \times 10^8\,m\,s^{-1}$), R is the Rydberg Constant ($1.097 \times 10^7\,m^{-1}$), Z is the atomic number (\textit{no unit}), and n is the principle quantum number (\textit{no unit}). The expression has a negative sign to represent the energy well the bond falls into as we have gone over when discussing PE and bond energies in \textit{3.1.3 Bond Energy}.
+      where $h$ is Planck's constant ($6.626 \times 10^{-34}\,\text{J\,s}$), $c$ is the speed of light ($2.998 \times 10^8\,\text{m\,s}^{-1}$), $R$ is the Rydberg constant ($1.097 \times 10^7\,\text{m}^{-1}$), $Z$ is the atomic number, and $n$ is the principal quantum number. The negative sign reflects the fact that the electron sits in an energy well relative to a free electron---consistent with our earlier discussion of potential energy and bond energies in EXTERNAL REFERENCE.
 
-      As you can see the energy decreases as the atomic number increases to account for the greater attractive force of nucleus on the single \ce{e^-} due to an increase in positive charge. And like we have repeatedly learned, the energy of the \ce{e^-} (\textit{which is wave-like}) increases with n (a.k.a. the number of nodes).
+      Two trends follow directly from this expression. First, \textbf{energy decreases as $Z$ increases}, reflecting the stronger attractive pull of a more positively charged nucleus on the single \ce{e^-}. Second, energy increases with $n$, consistent with the wave-like nature of the electron and the role of nodes in determining frequency. \autoref{fig:placeholder17} below illustrates these energy levels across different principal quantum numbers for a hydrogenic atom.
 
-      Here is a visual representation of the energy levels of orbitals across different principal quantum numbers within a hydrogenic atom.
+      \myfig{0.4}{quantization_figures/hydrogenic.png}{Hydrogen-like atom orbital energies across different principal quantum numbers}{fig:placeholder17}
 
-      \myfig{0.4}{quantization_figures/hydrogenic.png}{Hydrogen-like atom orbital energies}{fig:placeholder17}
-
-      Likewise, here is how we calculate the change in energy when a \ce{e^-} jumps from one orbital to another.
-
+      The energy change when an \ce{e^-} transitions between orbitals is given by the following equation
       \[
-        E = -hcRZ^2(\frac{1}{n^2_f}-\frac{1}{n^2_i})
+        \Delta E = -hcRZ^2\left(\frac{1}{n^2_f}-\frac{1}{n^2_i}\right)
       \]
 
-      Now that we know that the energy of \ce{e^-} orbitals in the absence of all but one \ce{e^-} is dependent only on the number of nodes, there must be a shift that occurs with the presence of additional \ce{e^-}s that skews the orbital energy levels to the order in which we know them to be. This skewing is primarily due to \ce{e^-} \ce{e^-} \textbf{repulsion interactions} that occur as more than one \ce{e^-} are present in the atom. This presents a nuanced shift in radial character changes, but the angular character and total number of nodes remain the same as that of a hydrogenic atom. Thus, what results is orbital energy being dependent on both $n$ and $l$.
+      With this foundation in place, we can now return to the original question. In a hydrogenic atom, orbital energy depends solely on $n$. However, when additional electrons are introduced, \textbf{\ce{e^-} \ce{e^-} repulsion} disturbs this clean dependence. These repulsion interactions alter the \textbf{radial} character of orbitals---while the \textbf{angular} character and total node count \textbf{remain unchanged} from the hydrogenic case---causing orbitals with the same $n$ but different $l$ to diverge in energy. The result is that orbital energy in multi-electron atoms depends on \textit{both} $n$ and $l$, producing the ordering we observe in practice.
 
     \end{core}
 
-    \begin{core}{Aufbau Principle}
+    \begin{core}[label=core:aufbau]{Aufbau Principle}
 
-      According to the \textbf{Aufbau principle}, as an atom gains more \ce{e^-}s, it will fill orbitals in the order from \textbf{lowest to highest energy}. This diagram shown previously is a helpful schematic to help remember the order of orbital energy levels.
-
-      \myfig{0.45}{quantization_figures/orbital_table.png}{Periodic table of elements showing electron configurations}{fig:placeholder18}
+      According to the \textbf{Aufbau principle}, \ce{e^-} fill orbitals in order from \textbf{lowest to highest energy} as an atom gains more \ce{e^-}s. The diagonal arrow schematic in \autoref{fig:placeholder16} is a useful mnemonic for remembering this filling order across subshells.
 
     \end{core}
 
     \begin{core}{Simplifying Electron Configuration Notation}
 
-      Here are a few examples of this with Li, Ne, and Al.
+      The Aufbau principle is best understood through electron configuration diagrams, where orbitals are filled sequentially from lowest to highest energy. \autoref{fig:placeholder19} illustrates this clearly for Li, Ne, and Al.
 
-      \myfig{0.55}{quantization_figures/example_configurations.png}{Electron configuration examples}{fig:placeholder19}
+      It is also convenient to use \textbf{noble gas notation} to simplify electron configurations. By placing a noble gas symbol in brackets---for example, \ce{[Ne]} as shown in the Al electron configuration---you represent all core electrons corresponding to that noble gas's stable configuration, allowing you to focus exclusively on the valence electrons responsible for chemical bonding.
 
-      You can use noble gas notation to simplify electron configurations. By placing a noble gas symbol in brackets (e.g., [Ne]), you represent all the core electrons that make up that specific noble gas's stable configuration. This allows you to focus only on the valence electrons—the ones responsible for chemical bonding.
+      \myfig{0.55}{quantization_figures/example_configurations.png}{Electron configuration notation for Li, Ne, and Al}{fig:placeholder19}
 
     \end{core}
 
     \begin{core}{Hund's Rule}
 
-      \textbf{Hund's Rule} states that within the highest energy subshell, we unpair as many \ce{e^-}s as possible and give them the same spin.
+      \textbf{Hund's Rule} states that within the highest energy subshell, \ce{e^-}s occupy orbitals singly and with the same spin before any pairing occurs, maximizing the number of unpaired \ce{e^-}s.
 
-      \myfig{0.55}{quantization_figures/hunds_rule.png}{Hunds rule diagram for electron filling}{fig:placeholder20}
+      \myfig{0.55}{quantization_figures/hunds_rule.png}{Hund's rule electron configurations}{fig:placeholder20}
 
-      The underlying reason for this phenomenon is based on the nuanced \ce{e^-} \ce{e^-} repulsion we have briefly mentioned previously and will not be detailed out in these notes.
+      The underlying reason stems from the \ce{e^-} \ce{e^-} repulsion interactions briefly introduced earlier, the full treatment of which is beyond the scope of these notes.
 
     \end{core}
 
     \begin{core}{Ionization Energy Analysis}
 
-      Let's take a look at the real numbers for the ionization energies of two elements, \ce{Mg} and \ce{B}. The electron configureations for \ce{Mg} and \ce{B} are shown below.
-      \[
-        Mg = [Ne]\,3s^2\qquad B = [He]\,2s^2\,2p^1
-      \]
-
-      If we take a look at the ionization energies of \ce{Mg}, we get the following
+      To ground this in real numbers, consider the ionization energies of \ce{Mg} and \ce{B}, with respective electron configurations $[Ne]\,3s^2$ and $[He]\,2s^2\,2p^1$.
 
       \begin{table}[H]
         \centering
@@ -312,11 +334,11 @@
           3rd & 80.1 eV \\
           \hline
         \end{tabular}
+        \caption{Ionization energies of Mg}
+        \label{tab:pholder1}
       \end{table}
 
-      As you can see, the ionization energy for the 3rd \ce{e^-} demonstrates a considerable jump compared to that of the 2nd and 1st. This happens because we are now trying to ionize the \ce{e^-} in the 2p orbital, which is at a further down the energy well compared to the 3s orbital.
-
-      In a similar manner, we see the same pattern for \ce{B}.
+      The sharp jump at the 3rd ionization energy reflects the transition from the 3s valence orbital to the 2p core orbital, which sits considerably deeper in the energy well. The same pattern emerges for \ce{B}.
 
       \begin{table}[H]
         \centering
@@ -330,19 +352,21 @@
           4th & 259.4 eV \\
           \hline
         \end{tabular}
+        \caption{Ionization energies of B}
+        \label{tab:pholder2}
       \end{table}
 
-      The $E_{ionization}$ jumps considerably from the 1st to the 2nd \ce{e^-} because this represents the transition from the 2p to the 2s orbital. The same happens from the 3rd to the 4th \ce{e^-} because this represents the transtion from the 2s to the 1s orbital. \textit{The core \ce{e^-} are so tightly held that they almost never participate in chemistry.}
+      Here, the jump from the 1st to the 2nd ionization energy marks the transition from the 2p to the 2s orbital, and the dramatic jump from the 3rd to the 4th marks the transition from the 2s to the 1s orbital. \textit{Core electrons are held so tightly that they almost never participate in chemistry.}
 
     \end{core}
 
     \begin{core}{Periodic Table Organization of Valance Orbital Configurations}
 
-      The structural layout of the periodic table also visually representative of the valance electron orbital configurations.
+      The structural layout of the periodic table is itself a visual map of valence electron orbital configurations, as shown in \autoref{fig:placeholder21}.
 
-      \myfig{0.7}{quantization_figures/orbital_ptable.png}{Orbital periodic table}{fig:placeholder21}
+      \myfig{0.7}{quantization_figures/orbital_ptable.png}{Periodic table of elements organization of valence electron orbitals}{fig:placeholder21}
 
-      Generally, elements in the same column along the periodic table have the same valence \ce{e^-} configuration and thus, often, similar behavior
+      Elements in the same column share the same valence \ce{e^-} configuration, which underlies their characteristically similar chemical behavior.
       
     \end{core}
 
@@ -350,48 +374,46 @@
 
     \begin{core}{Electron Energy Emissions \& Absorptions}
 
-      Let us revisit the electron energies of different principal quantum number orbitals of hydrogenic ions. We can represent the magnitude of the PE dip of an \ce{e^-}s using the Rydberg formula
-
+      Returning to the electron energies of hydrogenic ion orbitals, the magnitude of the potential energy well of an \ce{e^-} is given by the Rydberg formula.
       \[
         E = -\frac{hcRZ^2}{n^2}
       \]
 
-      We can also calculate the same figure for a mole of the same \ce{e^-}s by multiplying it by Avogadro's number.
-
+      As a side note, multiplying by Avogadro's number gives the same quantity per mole of electrons.
       \[
         E = -\frac{hcRN_AZ^2}{n^2}
       \]
 
-      Because the bond between eletrons work the same way as any bond, energy would be absorbed when the \ce{e^-} is taken to a higher orbital shell level (greater n) or ripped off completely and emitted when the \ce{e^-} is taken to a lower orbital shell level (lower n). Thus
-
+      Because electron bonding follows the same energetic logic as any bond, energy is absorbed when an \ce{e^-} is promoted to a higher shell (\textit{greater $n$}) and emitted when it relaxes to a lower shell (\textit{lower $n$}).
       \[
-        \Delta E > 0 \rightarrow \text{absorption} \qquad \Delta E < 0 \rightarrow \text{emission}
+        \Delta E_{electron} > 0 \rightarrow \text{absorption} \qquad \Delta E_{electron} < 0 \rightarrow \text{emission}
       \]
 
-      Given the smaller $\Delta E$ between energy levels at higher shell levels, there is a greater chance for violation in higher energy level atoms (\textit{elements of the lower rows of the periodic table}).
+      Since the energy gaps between adjacent shells narrow at higher $n$, electrons in higher principal quantum number orbitals are \textbf{more susceptible to thermal excitation}---this is especially relevant for elements in the lower rows of the periodic table.
 
-      Flames are hot enough to atomize (\textit{break intramolecular bonds}) many solids as well as promote \ce{e^-}s to higher orbitals. When the \ce{e^-} returns back to lower orbitals, that energy release is emitted as light/photons. And as we learned with the Rydberg formula, differences in the \ce{e^-} energy released changes the wavelength of the emitted energy of the photon.
-
-      As a result, different compounds with differing levels of \ce{e^-} energy released during higher to lower orbital transitions release different wavelengths of light and thus distinct colors when the wavelength lands within the \textbf{visible spectrum}.
+      \textbf{Flames} provide a practical illustration of this phenomenon. At flame temperatures, intramolecular bonds are broken and \textbf{electrons are promoted to higher orbitals}. As they relax back down, the energy difference is \textbf{released as photons}. Because the Rydberg formula ties electron energy differences directly to photon wavelength, different compounds produce distinct emission wavelengths---and when those wavelengths fall within the \textbf{visible spectrum}, they appear as characteristic colors.
 
     \end{core}
 
     \begin{core}{Crystal Field Theory}
 
-      This phenomenon is particularly well known among transition metals, which have d orbital valence electrons. However, we must first learn something called the \textbf{Crystal Field Theory}.
-      \myfig{0.9}{quantization_figures/d_orbitals.png}{Shapes of d orbitals}{fig:placeholder22}
+      The emission of photons within the visible spectrum is particularly well associated with \textbf{transition metals}, whose valence electrons occupy d orbitals. To understand why, we must first introduce Crystal Field Theory.
 
-      The \textbf{Crystal Field Theory} is an model designed to explain the splitting energy level behaviors of d orbitals. Let's take a look at a simple coordination compound, a structure consisting of a central metal atom or ion --- usually a transition metal --- surrounded by a group of bound molecules or ions called ligands.
-      \myfig{0.3}{quantization_figures/coordination_compound.png}{Coordination compound structure}{fig:placeholder23}
+      \myfig{0.8}{quantization_figures/d_orbitals.png}{d orbital shapes}{fig:placeholder22}
 
-      In this case, the ligands are \ce{NH3} and \ce{NO2} and the metal ion is \ce{Co}. Each of the ligands donate \ce{e^-} density into the d orbitals of \ce{Co} to form bonds with the metal ion, and this \ce{e^-} density will repel existing \ce{e^-} densities on the metal ion. This is the nuanced \ce{e^-} \ce{e^-} repulsion discussed in previous paragraphs. Thus, as this repulsion interaction skewed the originally only $n$ dependent orbital levels to ones that depend on both $n$ and $l$, the energy levels of the 5 different d orbitals are also skewed. This results in an \textbf{uneven distribution of energy to certain d orbitals over others}, making some inhabit higher energy levels than the rest. 
-      \myfig{0.6}{quantization_figures/cft.png}{Crystal Field Theory energy level splitting}{fig:placeholder24}
+      \textbf{Crystal Field Theory} is a model that explains the splitting of d orbital energy levels in \textbf{coordination compounds}---structures consisting of a central transition metal ion surrounded by bound molecules or ions called ligands, as shown in \autoref{fig:placeholder23}.
 
-      The magnitude of energy difference that arises from the skewed d orbital levels of transition metals due to the Crystal Field Theory generally fall \textbf{within the energy range cooresponding to wavelengths within the visible spectrum}. For non-transition metals, this is not the case because the drop \ce{e^-}s would need to experience after being excited into higher orbitals are too large to fall within the visible spectrum because the \textbf{jump is across distinct orbital shells (n) and subshells (l)}, which coorespond to much smaller wavelengths due to greater energy emissions.
+      \myfig{0.25}{quantization_figures/coordination_compound.png}{Coordination compound example}{fig:placeholder23}
 
-      It it helpful to keep in the back of your mind that the foundation to this nuanced interaction between \ce{e^-} densities within and across orbitals is \textbf{effective nuclear charge} ($Z_{eff}$). We have mentioned this concept briefly in \textit{1.1.3 Bond Polarity and Electronegativity} in the context of the electronegativity of an element. But this also helps to explain the skewing of orbital levels via \ce{e^-} shielding (\textit{inner electrons occupying the space between the nucleus and the outer electrons, repelling the outer ones and pushing them away}).
+      In the above mole, \ce{NH3} and \ce{NO2} act as ligands donating \ce{e^-} density into the d orbitals of \ce{Co}. This incoming \ce{e^-} density repels the existing \ce{e^-} density on the metal ion---the same \ce{e^-} \ce{e^-} repulsion discussed earlier in EXTERNAL REFERENCE---and just as that repulsion caused orbital energy levels to depend on both $n$ and $l$ rather than $n$ alone (\autoref{core:hydrogenic}), here it \textbf{unevenly distributes energy across the five d orbitals}, pushing some to higher energy levels than others.
 
-      Additionally, the explaination above is only a simplified overview of the mechanics of the \textbf{Crystal Field Theory}. In a more detailed manner, the d orbital energy difference also depend on the type of ligand being presented and (\textit{as shown in the figure}) the shape of the coordination compound in question.
+      \myfig{0.6}{quantization_figures/cft.png}{Crystal Field Theory d orbital energy level splitting}{fig:placeholder24}
+
+      Crucially, the magnitude of this d orbital energy splitting in transition metals generally falls \textbf{within the energy range corresponding to visible light wavelengths}. This is not the case for non-transition metals, where electronic transitions span distinct orbital shells and subshells, producing energy differences far too large to fall within the visible spectrum and corresponding instead to much shorter wavelengths.
+
+      Underlying all of these interactions is the concept of \textbf{effective nuclear charge} ($Z_{eff}$), introduced briefly in EXTERNAL REFERENCE in the context of electronegativity. It also governs the shielding effect, whereby inner electrons occupy the space between the nucleus and outer electrons, repelling the outer ones and reducing the net nuclear attraction they experience---contributing directly to the skewing of orbital energy levels shown in \autoref{fig:placeholder24}.
+
+      It should be noted that the treatment above is a simplified overview of Crystal Field Theory. A more complete picture accounts for the nature of the specific ligands present and the geometry of the coordination compound, both of which influence the magnitude and ordering of d orbital splitting.
 
     \end{core}
 
@@ -401,65 +423,71 @@
 
     \begin{core}{Orbital Wave Overlap}
 
-      The reason why bonding is favorable for atoms is because it results in a lower energy state as we have discussed in \textit{3.1.1 Potential and Kinetic Energy}. Now that we have learned about orbitals representing electron density, we can explain why we see a drop in energy.
+      Bonding is favorable because it results in a lower energy state, as discussed in EXTERNAL REFERENCE. Now that we have established that orbitals represent electron density, we can explain the physical origin of this energy drop from both an electrostatic and a wave mechanical perspective.
 
-      When two atoms bond, you are placing negative \ce{e^-} density directly between two positive nuclei. Instead of an electron being attracted to just one nucleus, it is now simultaneously attracted to two. This "bridge" of \textbf{negative charge pulling on both positive centers lowers the overall PE of the system}.
+      \begin{enumerate}
 
-      We can also explain this favorability in the context of wavelength increases and thus lowered KE because a higher frequency indicates faster "vibration". This relationship is quantitatively expressed through the \textbf{de Broglie relationship}.
-      \[
-        \lambda = \frac{h}{mv}
-      \]
+        \item From an \textbf{electrostatic standpoint}, when two atoms bond, electron density accumulates directly between two positive nuclei. Rather than being attracted to a single nucleus, each \ce{e^-} is now simultaneously attracted to two — this bridge of \textbf{negative charge pulling on both positive centers lowers the overall PE of the system}.
 
-      Recall the types of interference between waves: \textbf{constructive} and \textbf{destructive}.
+        \item From a \textbf{wave mechanical standpoint}, bonding can be understood through the \textbf{de Broglie relationship}, which is represented by the following equation.
+        \[
+          λ = \frac{h}{mv}
+        \]
 
-      \myfig{0.45}{quantization_figures/superposition.png}{Wave superposition showing constructive and destructive interference}{fig:placeholder25}
+        This equation links the wavelength of an \ce{e^-} to its momentum and thus its KE. When two atomic wave functions overlap during bond formation, they undergo interference---\textbf{constructive interference} in the bonding region increases the combined wavelength of the resulting wave function, and since a longer wavelength corresponds to lower frequency and slower effective motion, the KE of the \ce{e^-} is reduced.
 
-      You can represent \ce{e^-}s during bonding as the overlapping of individual wave functions, resulting in interference. And because resulting combined wave function has a larger wavelength, the KE is lowered. This is equivalent to creating a larger "box" for the \ce{e^-} standing waves to move in, thus allowing for greater wavelength. Recall that the simplest standing wave's wavelength can only be twice the size of the length of its confinements ($\lambda = 2 L$).
-      \myfig{0.4}{quantization_figures/wave_overlap.png}{Wave overlap in molecular orbital formation}{fig:placeholder26}
+        \myfig{0.45}{quantization_figures/superposition.png}{Constructive and destructive interference as a result of wave superposition}{fig:placeholder25}
 
-      This decrease in \ce{e^-} PE and KE is enough to make up for the nuclear-nuclear repulsions at an optimal distance (a.k.a. the equilibriumm bond length).
+        This is equivalent to enlarging the "box" that the \ce{e^-} standing waves inhabit---a larger confining region permits a longer standing wave, recalling that the fundamental standing wave wavelength is twice the length of its confinement ($λ = 2L$).
+
+        \myfig{0.5}{quantization_figures/wave_overlap.png}{Molecular orbital formation wave overlap}{fig:placeholder26}
+
+      \end{enumerate}
+
+      Together, the reduction in both PE and KE is sufficient to overcome the nuclear-nuclear repulsion at the equilibrium bond length, making bond formation energetically favorable overall.
 
     \end{core}
 
     \begin{core}{σ and π Bonds}
 
-      Now we introduce the types of bonds that form from \ce{e^-} orbital overlapping: $\sigma$ (\textit{head-on overlap}) and $\pi$ (\textit{side-to-side overlap}).
+      Electron orbital overlap gives rise to two types of bonds, distinguished by the axis along which the overlap occurs: σ bonds (\textit{head-on overlap}) and π bonds (\textit{side-to-side overlap}).
 
-      \myfig{0.45}{quantization_figures/sigma_pi.png}{Sigma and pi bonding interactions}{fig:placeholder27}
+      \myfig{0.45}{quantization_figures/sigma_pi.png}{σ and π bonding interactions}{fig:placeholder27}
 
-      To clear up any potential confusion, the $\sigma$ and $\pi$ bonds are not representative of the s and p orbitals in any matter. It only represents \textbf{the axis in which the orbitals overlap}. For instance, an $\sigma$ bond could be formed between an s-p, s-s, p-p, etc. However, we will only be diving into s and p orbital related bonding interactions as d and f orbitals are above the scope of this course.
+      It is important to note that σ and π do not refer to the s and p orbital types---they refer exclusively to \textbf{the geometry of the overlap}. A σ bond, for instance, can form between any combination of orbital types (s-s, s-p, p-p, etc.). For the scope of these notes, we will restrict our discussion to s and p orbital interactions, as d and f orbital bonding lies beyond the current scope.
 
-      As mentioned previously, the $\sigma$ bond represents an orbital overlap in a line directly from the center of one atom to the center of the other. It can be formed via many different orbital pair overlaps as shown below.
-      \myfig{0.6}{quantization_figures/sigma_bonds.png}{Sigma bond formation from orbital overlap}{fig:placeholder28}
+      \begin{enumerate}
 
-      A $\pi$ bond represents an overlap of two orbitals that are perpendicular to the bond axis. It can be formed via many different pairs, however, the most common is through 2 p orbitals as shown below
-      \myfig{0.45}{quantization_figures/pi_bonds.png}{Pi bond formation from p orbital overlap}{fig:placeholder29}
+        \item A \textbf{σ bond} forms when two orbitals overlap directly along the internuclear axis---that is, head-on from the center of one atom to the center of the other. The various orbital combinations that can produce a σ bond are shown in \autoref{fig:placeholder28}.
 
-      While a single bond is defined by a primary $\sigma$ overlap, double and triple bonds are formed by layering one or two $\pi$ bonds over that initial sigma framework. This will be easier to conceptualize in the next section \textit{4.3.2 Diatomic Orbital Bonding}.
+        \myfig{0.6}{quantization_figures/sigma_bonds.png}{σ bond formation from various orbital overlap combinations}{fig:placeholder28}
+
+        \item A \textbf{π bond}, by contrast, forms when two orbitals overlap perpendicular to the internuclear axis. While various orbital combinations can produce a π bond, the most common involves two p orbitals overlapping side-to-side, as shown in \autoref{fig:placeholder29}.
+
+        \myfig{0.45}{quantization_figures/pi_bonds.png}{π bond formation from p orbital overlap}{fig:placeholder29}
+
+      \end{enumerate}
+
+      With this framework in place, single bonds consist of one σ interaction, while double and triple bonds layer one or two π bonds on top of the initial σ framework. This will become clearer in the context of \autoref{sec:diatomic}.
 
     \end{core}
  
     \begin{core}{Antibonding Orbitals \& Quantum Superposition}
 
-      So far, we have seen orbital overlaps only in the context of \textbf{bonding orbital} generations. However, these same orbital overlaps simultaneously create an \textbf{anti-bonding orbital} (which is denoted by a *; $\sigma^*$ or $\pi^*$).
+      Every orbital overlap that produces a \textbf{bonding orbital} simultaneously produces a corresponding \textbf{anti-bonding orbital}, denoted with an asterisk (σ$^*$ or π$^*$). This is a consequence of \textbf{quantum superposition}---the overlapping wave functions do not simply choose between constructive and destructive interference; rather, the mathematical space defined by the two overlapping atoms permits both modes of vibration to exist \textbf{simultaneously} as distinct solutions.
 
-      It is quite a bit of a mind-bender, but this phenomenon hits on the topic of \textbf{quantum superposition}. We will not explore this topic in depth, but the outcome is that the wave isn't "choosing" to be constructive or destructive; rather, the mathematical space created by the overlapping atoms allows for two distinct "modes" of vibration to exist simultaneously.
+      \myfig{0.4}{quantization_figures/anti_s.png}{σ bonding and antibonding orbitals}{fig:placeholder30}
 
-      This theory more specifically is known as the \textbf{Linear Combinations of Atomic Orbitals (LCAO)}, which states that the total number of orbitals must be conserved. \textit{If you start with two orbitals, you must end with two orbitals.}
+      This is formally captured by the \textbf{Linear Combination of Atomic Orbitals (LCAO)} theory, which requires that the \textbf{total number of orbitals be conserved}, meaning that if you begin with two atomic orbitals, you must end with two molecular orbitals---one bonding and one anti-bonding. The anti-bonding orbital carries an additional node relative to its bonding counterpart, placing it at a higher energy level. As a result, electrons fill the bonding orbital preferentially before occupying the anti-bonding orbital, consistent with the \textbf{Aufbau principle} discussed in \autoref{core:aufbau}.
 
-      And because of the presence of an extra node within the antibonding orbital, the energy level of the antibonding orbital is higher than that of of the bonding orbital, \ce{e^-}s will preferentially fill the bonding orbital first before filling the antibonding orbital based on the \textbf{Aufbau principle} discussed in \textit{4.2.2 Electron Orbital Basics}.
+      The σ bonding and anti-bonding orbitals are shown in \autoref{fig:placeholder30}, and their π counterparts in \autoref{fig:placeholder31}.
 
-      Here is a visual representation of the $\sigma$ bonding and antibonding orbitals:
-      
-      \myfig{0.4}{quantization_figures/anti_s.png}{Antibonding s orbital interaction}{fig:placeholder30}
-
-      Likewise, here is a visual representation of the $\pi$ bonding and antibonding orbitals:
-
-      \myfig{0.65}{quantization_figures/anti_p.png}{Antibonding p orbital interaction}{fig:placeholder31}
+      \myfig{0.65}{quantization_figures/anti_p.png}{π bonding and antibonding orbitals}{fig:placeholder31}
 
     \end{core}
 
   \subsection{Diatomic Orbital Bonding}
+  \label{sec:diatomic}
 
     When two atoms are bonded, the orbitals that primarily engage in this interaction are the valence orbitals, which are the highest energy occupied orbitals with unpaired \ce{e^-}s.
     
@@ -467,7 +495,7 @@
 
       Let us look at the simplest example of an orbital overlap resulting in a single bond across \ce{H2}:
 
-      \myfig{0.35}{quantization_figures/h2_mod.png}{Molecular orbital diagram for H2}{fig:placeholder32}
+      \myfig{0.35}{quantization_figures/h2_mod.png}{Molecular orbital diagram for \ce{H2}}{fig:placeholder32}
 
       Here the highest energy occupied orbital is simply the 1s orbital in each H atom, which combine to form a low energy bonding orbital $\sigma$ and a high energy antibonding orbital $\sigma^*$. The two \ce{e^-}s of the two H atoms will then go onto occupy the $\sigma$ orbital and the antibonding orbital will remain empty.
 
@@ -552,7 +580,6 @@
       As we can see, the paramagnetism of \ce{B2} is a direct consequence of s-p mixing. If s-p mixing was absent, the two valence \ce{e^-}s would be fully occupying the $\sigma_{2p}$ orbital in opposite spin states, resulting in diamagnetism. However, since the $\pi_{2p}$ orbitals stand at a lower energy level, these valence \ce{e^-}s are instead forced to occupy these two molecular orbitals in the same spin state, resulting in paramagnetism.
 
     \end{core}
-
 
     \begin{core}{Bonding \& Antibonding Orbital Energy Split}
 

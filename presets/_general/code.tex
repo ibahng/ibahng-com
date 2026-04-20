@@ -43,3 +43,22 @@
 
 \renewcommand*\DTstyle{\ttfamily} % Keeps the font monospaced
 \setlist{nosep}                   % Optional: tightens spacing
+
+\definecolor{codefontcolor}{HTML}{822E2A}
+\definecolor{codebgcolor}{HTML}{EEEEEE}
+\definecolor{codeframecolor}{HTML}{D3D3D2}
+
+\newtcbox{\textcode}{
+    on line,
+    boxrule=0.5pt,        % Removes the border thickness
+    boxsep=0pt,
+    left=2pt,           % Horizontal padding
+    right=2pt,
+    top=1pt,            % Vertical padding
+    bottom=1pt,
+    arc=3pt,            % Adjust for more/less rounding
+    colback=codebgcolor,     % Background color
+    colframe=codeframecolor,    % Set frame to match background just in case
+    fontupper=\ttfamily\color{codefontcolor}\strut
+}
+

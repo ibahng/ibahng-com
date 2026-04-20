@@ -1208,13 +1208,14 @@
 
 \section{Game Theory: (A Brief Lesson)}
 
+  \textbf{Game theory} analyzes strategic interactions where outcomes depend on all players' decisions.
+
   \begin{core}[label=core:payoff]{Payoff Tables}
 
-    \textbf{Game theory} analyzes strategic interactions where outcomes depend on all players' decisions.
+    \textbf{Payoff tables} show outcomes for each combination of \textbf{strategies}---a courses of action participants can take. The following is a payoff table of two firms choosing between high and low prices.
 
-    A \textbf{payoff table} shows outcomes for each combination of strategies. Consider two firms choosing between high and low prices:
-
-    \begin{center}
+    \begin{table}[H]
+      \centering
       \begin{tabular}{c|c|c|}
         & \textbf{Firm B Low} & \textbf{Firm B High} \\
         \hline
@@ -1222,114 +1223,145 @@
         \hline
         \textbf{Firm A High} & (50, 130) & (100, 100) \\
       \end{tabular}
-    \end{center}
+      \caption{Firm A and Firm B payoff table; \textit{the first and second value in each pair corresponds to Firm B and Firm A gains}}
+      \label{tab:payoff}
+    \end{table}
 
-    A \textbf{strategy} is a course of action a firm can take. A \textbf{dominant strategy} yields a better outcome regardless of what the other firm does.
-
-    % Game Theory Payoff Table
-    % Two firms selling a similar product can either set their price low or high
-    % • If both firms price high, they each earn $100 in profit
-    % • If one firm prices high and the other low, the firm that priced high earns $50 in profit and the firm that priced low earns $130 in profit
-    % • If both firms price low, they each earn $80 in profit
-    % Strategy: A course of action a firm can take
-    % Dominant Strategy: A strategy that will always produce a better outcome for a firm, regardless of what the other firm decides
+    \textbf{Dominant strategies} yield a better outcome regardless of the choice the other participant makes. In the scenario presented in \autoref{tab:payoff}, the dominant strategy for both firms would be to \textbf{set a high price} because it provides the superior gain when looking at each choice of the other firm in isolation.
 
   \end{core}
 
   \begin{core}{Nash Equilibrium}
 
-    A \textbf{Nash Equilibrium} occurs when neither firm can improve its outcome by changing strategy, assuming the other firm doesn't change. Neither player has an incentive to deviate unilaterally.
+    A \textbf{Nash equilibrium} occurs when neither participant can improve its outcome by changing strategy, assuming the other participant doesn't change. This results in neither player having an incentive to deviate unilaterally, which is the case presented in \autoref{tab:payoff}.
 
-    % Nash Equilibrium: A situation where neither firm can obtain a better outcome by changing their strategy, assuming the other firm doesn't change their decision
+    \textit{It's important to note that not all scenarios possess a Nash equilibrium.}
 
   \end{core}
 
 \section{Factor Markets}
 
-  \textbf{Factor markets} study the demand and supply for productive resources, particularly labor.
-
-  % Factor Market: pretty much talking about labor
+  \textbf{Factor markets} study the demand and supply for the factors of production, namely labor.
 
   \begin{core}{Factor Demand}
 
-    \textbf{Factor demand} is the quantity of a factor (e.g., labor) that firms are willing to purchase at each price (e.g., wage).
+    \textbf{Factor demand} is the quantity of a factor (\textit{e.g., labor}) that firms are willing to purchase at each price (\textit{e.g., wage}). Factor demand is a \textbf{derived demand}---it does not exist for its own sake but stems directly from the demand for the final good or service that the factor helps produce. \textit{A rise in demand for housing, for instance, pulls up the demand for construction workers.} As a result, factor demand shifts in response to the following determinants.
 
-    Factor demand is \textbf{derived demand}—it depends on the demand for the final product being produced.
-
-    \textbf{Determinants of factor demand:}
     \begin{enumerate}
 
-      \item Price of the product.
+      \item \textbf{Price of the end product:} since factor demand is derived from product demand, any change in the price of the final good ripples back to the factor market.
 
-      \item Productivity of the factor.
+      \item \textbf{Productivity of the factor:} a more productive factor generates more output per unit, increasing its marginal revenue product and thus the firm's willingness to hire it at any given price.
 
-      \item Prices of substitute and complementary resources.
+      \item \textbf{Prices of substitute and complementary resources:} factors of production can be substitutes or complements for one another.
+
+      \textit{Namely, the general rise of and falling cost of AI and automation---a close substitute to human labor in relevant fields---shifts the demand for human labor leftwards.}
 
     \end{enumerate}
-
-    % Demand for Factor: The amount of that factor (e.g. workers) that firms are willing to purchase at each price (e.g. wage)
-    % Demand for a factor is derived, meaning that it depends on the demand for something else (in this case, the product)
-    % Determinants of Factor Demand
-    %   price of product (wage)
-    %   productivity of factors
-    %   substitute and complementary resources (AI?)
 
   \end{core}
 
   \begin{core}{Factor Supply}
 
-    \textbf{Factor supply} is the quantity of a factor available at each price.
+    \textbf{Factor supply} is the quantity of a factor that owners are willing to offer at each price. It shifts in response to the following determinants.
 
-    \textbf{Determinants of factor supply:}
     \begin{enumerate}
 
-      \item Workforce size.
+      \item \textbf{Workforce size:} a larger population of workers eligible to supply a given factor shifts supply rightward, placing downward pressure on wages.
 
-      \item Education and training.
+      \item \textbf{Education and training:} factors that require specialized skills are in limited supply by nature. As more workers acquire the necessary qualifications, supply expands and the skill premium narrows.
 
-      \item Alternative options available.
+      \item \textbf{Alternative options available:} if returns in an alternative occupation rise, workers may reallocate toward it, reducing supply in the original market. Factor supply in any given market is always shaped by the opportunity cost of not supplying elsewhere.
 
-      \item Preferences for leisure.
+      \item \textbf{Preferences for leisure:} at sufficiently high wages, workers may choose to work fewer hours rather than more---prioritizing leisure over additional income. This produces the characteristic \textbf{backward-bending labor supply curve}, where supply eventually turns leftward as the wage rises.
+
+      \myfig{0.45}{microeconomics_figures/backward_supply.png}{Backward-bending labor supply curve}{fig:placeholder14}
 
     \end{enumerate}
-
-    % Supply of Factor: The amount of that factor available at each price
-    % Determinants of Factor Supply
-    %   workforce size
-    %   education
-    %   alternative options
-    %   preference of leisure
 
   \end{core}
 
   \begin{core}{Marginal Revenue Product and Marginal Resource Cost}
 
-    \textbf{Marginal Revenue Product (MRP)} is the additional revenue generated by employing one more unit of a factor. In a perfectly competitive product market, MRP = MP × P.
+    \textbf{Marginal Revenue Product (MRP)} is the additional revenue generated by employing one more unit of a factor. In a perfectly competitive product market, $\text{MRP} = \text{MP} \times \text{P}$ because the price (\textit{marginal revenue}) curve is horizontal.
 
-    \textbf{Marginal Resource Cost (MRC)} is the additional cost of employing one more unit of a factor. In a perfectly competitive factor market, MRC equals the factor price and is constant.
+    \textbf{Marginal Resource Cost (MRC)} is the additional cost of employing one more unit of a factor. In a perfectly competitive \textbf{factor} market, MRC simply equals the factor price and is \textbf{constant}.
 
-    Firms maximize profit by employing factors where MRP = MRC.
+    To maximize profit, firms produce and employ factors at the quantity where $\text{MRP} = \text{MRC}$.
 
-    \textbf{Marginal Revenue Product and Marginal Resource Cost}
-    % Marginal Revenue Product (MRP): The additional revenue generated by one additional unit of the factor (Equal to MP * P in a perfectly competitive product market)
-    % Marginal Resource Cost (MRC): The additional cost for one additional unit of the factor (Constant in a perfectly competitive factor market)
-    % Profit Maximization: MRP = MRC -> IMPORTANT PLOT (MRP is a upside down U curve and MRC is flat, this is assuming a perfectly competitive factor market)
-    % Total product maximization using marginal product analysis is done by incrementally choosing the factor that provides the current best marginal product per dollar spentA
+    \doublepgfig{
+      \begin{axis}[
+        \econplot{Quantity of Workers (in thousands)}{Price}
+        \axispresetstwo
+      ]
+
+      \downslope{0}
+      \pgfiglabel{10,1}{D}
+
+      \upslope{0}
+      \pgfiglabel{10,9}{S} 
+
+      \pgfiglabel{11.5,5}{$P_{workers}$} 
+
+      \draw[dashed] (0,5) -- (10,5);
+
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:5,5) {};
+
+      \end{axis} 
+    }{
+      \begin{axis}[
+        \econplot{Quantity of Workers}{Price}
+        \axispresetstwo
+      ]
+
+      \horizontalslope{5}
+      \pgfiglabel{10.5,5}{MRC}
+
+      % Vertical dashed line from dot to x-axis
+      \draw[dashed] (axis cs:7.72,5) -- (axis cs:7.72,0);
+
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:7.72,5) {};
+
+      \addplot[thick, domain=0.5:9.5, samples=200] {-0.15*(x-1.5)^2 + 0.45*(x-1.5) + 8};
+      \pgfiglabel{10.5,2}{MRP}
+
+      \end{axis} 
+    }{Perfectly competitive factor market; market (\textit{left}) and firm (\textit{right})}{fig:mrp_mrc}{0.85}
+
+    When presented with the a choice between multiple factors, total product is maximized by allocating each successive unit of spending to whichever factor \textbf{currently} offers the \textbf{highest MP per dollar spent}.
 
   \end{core}
 
   \begin{core}{Monopsony}
 
-    \textbf{Monopsony} exists when a single buyer (employer) controls the market for a factor, similar to monopoly in the product market.
+    \textbf{Monopsony} is the factor market analogue of a product market monopoly---just as a monopoly features a single seller, a monopsony features a \textbf{single buyer} dominating the market for a factor of production such as labor.
 
-    In a monopsony, the marginal resource cost rises faster than the factor supply curve because hiring additional workers requires raising wages for all workers, not just the marginal one.
+    \pgfig{
+      \begin{axis}[
+        \econplot{Quantity of Workers}{Price}
+        \axispresetstwo
+      ]
 
-    The profit-maximizing monopsonist hires where MRC = MRP and pays the wage on the supply curve at that quantity.
+      \addplot[thick, domain=0.5:9.5, samples=200] {-0.15*(x-1.5)^2 + 0.45*(x-1.5) + 8};
+      \pgfiglabel{10.5,2}{MRP}
 
-    % Monopsony (monopoly in the context of product inputs) Labor Market
-    % Only one firm employing workers; firm decidest he workers wage
-    % MRC increase faster than supply because purchasing additional workers requires raising wages for everyone (analogous to MR with demand)
-    % The best mode of action is to acquire inputs at the quantity where MRC intersects MRP and pay at the supply curve price, allowing for greater profits
+      \upslope{0}
+      \pgfiglabel{10.5,9.5}{MRC}
+
+      \addplot[domain=0.5:9.5, samples=100, thick, restrict y to domain=0.5:9.5] {0.5*x}; 
+      \pgfiglabel{10,5}{S}
+
+      % Vertical dashed line from dot to x-axis
+      \draw[dashed] (axis cs:6.5,6.5) -- (axis cs:6.5,0);
+      \draw[dashed] (axis cs:0,3.25) -- (axis cs:6.5,3.25);
+
+      % Dot at intersection
+      \node[circle, fill=black, inner sep=2pt] at (axis cs:6.5,3.25) {};
+
+      \end{axis} 
+    }{Monopsony plot}{fig:monopsony}{0.9}
+
+    As shown in \autoref{fig:monopsony}, the MRC curve rises faster than the factor supply curve because hiring an additional worker requires raising the wage for all existing workers, not just the marginal hire. The profit-maximizing monopsonist hires up to the quantity where $\text{MRC} = \text{MRP}$, then pays the wage read off the supply curve at that quantity---a wage below the competitive equilibrium.
 
   \end{core}
 
