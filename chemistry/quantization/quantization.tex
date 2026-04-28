@@ -211,7 +211,7 @@
 
     \end{core}
   
-    \begin{core}{Quantum State of Electrons}
+    \begin{core}[label=core:qnumbers]{Quantum State of Electrons}
 
       Electron orbitals are categorized by their energy levels, identified with a \textbf{principal quantum number ($n$)} and an \textbf{angular quantum number ($l$)}. Electron orbitals within the same energy level are further distinguished by their \textbf{magnetic quantum number ($m_l$)}. Each electron within each orbital is again distinguished by its \textbf{spin quantum number ($m_s$)}.
 
@@ -487,130 +487,273 @@
     \end{core}
 
   \subsection{Diatomic Orbital Bonding}
-  \label{sec:diatomic}
+    \label{sec:diatomic}
 
-    When two atoms are bonded, the orbitals that primarily engage in this interaction are the valence orbitals, which are the highest energy occupied orbitals with unpaired \ce{e^-}s.
-    
     \begin{core}{Homogenous Diatomic Molecular Orbital Bonding (\textit{Single Bonds})}
 
-      Let us look at the simplest example of an orbital overlap resulting in a single bond across \ce{H2}:
+      When two atoms bond, it is their \textbf{valence orbitals}---the highest energy occupied orbitals containing unpaired electrons---that drive the interaction. Consider the simplest case of orbital overlap: the formation of \ce{H2}.
 
-      \myfig{0.35}{quantization_figures/h2_mod.png}{Molecular orbital diagram for \ce{H2}}{fig:placeholder32}
+      \mofig{
+        \atom[H]{left} { 1s = { 0; up } }
+        \atom[H]{right}{ 1s = { 0; up } }
+        \molecule[\ce{H2}]{ 1sMO = {.75; pair } }
+      }{Molecular orbital diagram for \ce{H2}}{fig:placeholder32}{1.4}
 
-      Here the highest energy occupied orbital is simply the 1s orbital in each H atom, which combine to form a low energy bonding orbital $\sigma$ and a high energy antibonding orbital $\sigma^*$. The two \ce{e^-}s of the two H atoms will then go onto occupy the $\sigma$ orbital and the antibonding orbital will remain empty.
+      The highest occupied atomic orbital in each hydrogen atom is the 1s orbital. When these overlap, they combine to form a low-energy bonding orbital σ and a high-energy antibonding orbital σ$^*$. The two electrons from the two hydrogen atoms occupy the σ orbital, leaving σ$^*$ empty.
 
-      We now introduce the calculation of \textbf{bond order}. \textbf{Bond order} is a numerical value that represents the stability and strength of a chemical bond by calculating the "net" number of bonds between two atoms.
-
+      This leads naturally to the concept of \textbf{bond order}, a numerical measure of the stability and strength of a chemical bond representing the net number of bonds between two atoms.
       \[
         \text{Bond Order} = \frac{\text{Number of bonding \ce{e^-}} - \text{Number of antibonding \ce{e^-}}}{2}
       \]
 
-      For \ce{H2}, the bond order would be 1, representing a single bond. A 0 bond order would indcate that the bond is unstable and would thus not form. Take a look at the molecular orbital diagram for \ce{He2}.
+      For \ce{H2}, this gives a bond order of 1, consistent with a \textbf{single bond}. A bond order of 0 indicates that no stable bond forms, as the bonding and antibonding contributions cancel. This is illustrated by \ce{He2}.
 
-      \myfig{0.35}{quantization_figures/he2_mod.png}{Molecular orbital diagram for He2}{fig:placeholder33}
+      \mofig{
+        \atom[He]{left} { 1s = { 0; pair } }
+        \atom[He]{right}{ 1s = { 0; pair } }
+        \molecule[\ce{He2}]{ 1sMO = {.75; pair, pair } }
+      }{Molecular orbital diagram for \ce{He2}}{fig:placeholder33}{1.4}
 
-      The bond order comes out to be 0. And conceptually the presence of \ce{e^-} occupation within the antibonding orbital will cancel out the bonding orbital, thus resulting in no bond. This aligns with reality as \ce{He2} does not exist naturally.
+      In \ce{He2}, electrons occupy both the bonding and antibonding orbitals, yielding a bond order of 0. Since the two contributions cancel, no net bond forms---consistent with the fact that \ce{He2} does not exist naturally.
 
-    \end{core}
+    \end{core}    
 
-    \begin{core}{Homogenous Diatomic Molecular Orbital Bonding (\textit{Double Bonds})}
+    \begin{core}[label=core:double]{Homogenous Diatomic Molecular Orbital Bonding (\textit{Double Bonds})}
 
-      Now, let us look at an example of the orbital overlap of the double bond across \ce{O2}:
+      Consider now the orbital overlap in \ce{O2}, which gives rise to a \textbf{double bond}.
 
-      \myfig{0.6}{quantization_figures/o2_mod.png}{Molecular orbital diagram for O2}{fig:placeholder34}
+      \mofig{
+        \atom[O]{left} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; pair, up, up } ,
+        }
+        \atom[O]{right} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; pair, up, up } ,
+        }
+        \molecule[\ce{O2}]{
+          1sMO = {.5; pair, pair } ,
+          2sMO = {.5; pair, pair } ,
+          2pMO = {1.5, .5; pair, pair, pair, up, up } ,
+        }
+      }{Molecular orbital diagram for \ce{O2}}{fig:placeholder34}{1.4}
 
-      Lower level 1s and 2s orbitals will overlap to form fully occupied bonding and antibonding orbitals $\sigma$ and $\sigma^*$, thus canceling out and not forming a bond. This makes sense because these are not the valence orbitals (2p). The 2p orbitals exist in 3 different orientations, and the overlap of those that exist along the bonding axis will be responsible for the formation of the $\sigma$ and $\sigma^*$ orbitals. Those that exist along the axis perpendicular to that of the bonding will be responsible for $\pi$ and $\pi^*$ orbitals. As shown in the diagram, when we fill in the overlapped orbitals according to the Aufbau principle, all 3 bonding orbitals are filled and one \ce{e^-} is place in the $\pi^*$ orbitals each, resulting in a bond order of 2.
-      \[
-        \text{Bond Order} = \frac{6-2}{2} = 2
-      \]
+      The lower-energy 1s and 2s orbitals each produce fully occupied bonding and antibonding pairs that cancel out, contributing nothing to the net bond---consistent with the fact that these are not the valence orbitals. It is the 2p orbitals that drive bonding. Of the three spatial orientations of the 2p orbitals, those aligned along the bonding axis overlap to form σ and σ$^*$ orbitals, while those perpendicular to it overlap to form π and π$^*$ orbitals. Filling these according to the Aufbau principle, all three bonding orbitals are fully occupied and one electron is placed in each of the two π$^*$ orbitals, giving a bond order of 2.
 
     \end{core}
 
     \begin{core}{Homogenous Diatomic Molecular Orbital Bonding (\textit{Triple Bonds})}
 
-      Lastly, let us look at the molecular orbital diagram of the triple bond across \ce{N2}:
+      Consider finally the molecular orbital diagram of \ce{N2}, which gives rise to a \textbf{triple bond}. The orbital structure follows the same logic as \ce{O2} (\textit{\autoref{core:double}}), with the key distinction that no electrons occupy any antibonding orbitals. All six bonding electrons are therefore uncontested, yielding a bond order of 3.
 
-      \myfig{0.6}{quantization_figures/n2_mod.png}{Molecular orbital diagram for N2}{fig:placeholder35}
-
-      Here, the molecular orbital structure works in exactly the same manner as it did in \ce{O2}, except that no \ce{e^-}s are alotted to the antibonding orbitals. This results in a bond order of 3, hence the triple bond.
+      \mofig{
+        \atom[N]{left} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; up, up, up } ,
+        }
+        \atom[N]{right} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; up, up, up } ,
+        }
+        \molecule[\ce{N2}]{
+          1sMO = {.5; pair, pair } ,
+          2sMO = {.5; pair, pair } ,
+          2pMO = {1.5, .5; pair, pair, pair } ,
+        }
+      }{Molecular orbital diagram for \ce{N2}}{fig:placeholder35}{1.3}
 
     \end{core}
 
     \begin{core}{Heterogenous Diatomic Molecular Orbital Bonding}
 
-      So far, we have only seen examples of homogenous diatomic molecular orbital bonding. Let us now take a look at a heterogeneous diatomic interation: HF
+      We now turn to \textbf{heterogeneous} (\textit{different elements}) interactions, beginning with \ce{HF}.
 
-      \myfig{0.5}{quantization_figures/hf_mod.png}{Molecular orbital diagram for HF}{fig:placeholder36}
+      \mofig{
+        \atom[H]{left} { 
+          1s = { 2.5; up } ,
+        }
+        \atom[F]{right} { 
+          1s = { 0; pair } ,
+          2s = { 1; pair } ,
+          2p = { 2; pair, pair, up } ,
+        }
+        \AO[sigma*](3cm){s}[label={σ$^*$}]{3;}
+        \AO[p2](3.25cm){s}{2}
+        \AO[p1](2.75cm){s}{2}
+        \AO[sigma](3cm){s}[label={σ}]{1.5}
+        \connect{ 1sleft & sigma* , sigma* & 2pxright , 1sleft & sigma , sigma & 2pxright , p2 & 2pxright }
+      }{Molecular orbital diagram for \ce{HF}}{fig:placeholder36}{1.3}
 
-      Here, the only bond that is able to be made is a $\sigma$ orbital between the 1s of the H and the 2p of the F that exists along the bonding axis. This is a very simple heterogenous bonding interaction. How about something like FCl? which has several lower level core orbitals present?
+      Here, the only possible interaction is a σ bond formed between the 1s orbital of H and the 2p orbital of F aligned along the bonding axis---a straightforward heterogeneous interaction. Consider now a slightly more complex case, \ce{ClF}, which introduces several lower-energy core orbitals.
 
-      \myfig{0.5}{quantization_figures/clf_mod.png}{Molecular orbital diagram for ClF}{fig:placeholder37}
+      \mofig{
+        \AO[Cl](0.5cm){p}[label[x]={3p$_x$},label[y]={3p$_y$},label[z]={3p$_z$}]{1.75; pair, pair, up}
+        \AO[F](5cm){p}[label[x]={2p$_x$},label[y]={2p$_y$},label[z]={2p$_z$}]{1.5; pair, pair, up}
+        \AO[p1](3.25cm){s}[label={π}]{0.75}
+        \AO[p2](3.75cm){s}{0.75}
+        \AO[p3](3.25cm){s}[label={π$^*$}]{2.5}
+        \AO[p4](3.75cm){s}{2.5}
+        \AO[s1](3.5cm){s}[label={σ}]{0}
+        \AO[s2](3.5cm){s}[label={σ$^*$}]{3.25;}
+        \connect{
+          Clz & s2 ,
+          Clz & p3 ,
+          Clz & p1 ,
+          Clz & s1 ,
+          p4 & Fx ,
+          s2 & Fx ,
+          p2 & Fx ,
+          s1 & Fx ,
+        }
+      }{Molecular orbital diagram for \ce{ClF}; \textit{non-valence orbitals exlcuded}}{fig:placeholder37}{1.4}
 
-      Still, in this case, the \textbf{bonding interactions only occur between the incompletely occupied valence orbitals}, which is a 2p orbital of F and 3p orbital of Cl. Although lower level orbitals are presently forming bonding and cooresponding antibonding molecular orbitals (most definetely $\sigma$ orbitals because the only lower level orbitals present in F are 1s and 2s), they do not effect the molecular orbital structure of the valence \ce{e^-} because they have a net 0 bond order. Likewise, although core shells do overlap to some infinitesimal degree when any two atoms are close, this interaction is so tiny for core \ce{e^-}s that we treat them as if they don't interact at all.
+      Even here, \textbf{bonding interactions occur only between the incompletely occupied valence orbitals}---the 2p of F and the 3p of Cl. The lower-energy core orbitals do form bonding and antibonding pairs, but since these contributions cancel to a net bond order of zero, they have no effect on the valence electronic structure.
+
+      \textit{More generally, while core orbitals do overlap to some infinitesimal degree whenever two atoms are in close proximity, this interaction is negligibly small and is therefore treated as nonexistent.}
 
     \end{core} 
 
     \begin{core}{S-P Mixing (\textit{Periodic Table 2nd Row})}
 
-      Now let us discuss the unique phenomenon of \textbf{s-p mixing} along the diatomic molecules of the second row of the periodic table. This phenomenon is based on the delicate balance between \ce{e^-} \ce{e^-} and \ce{e^-} nuclear attraction that occur for atoms at this nuclear range and results in an anomaly for smaller atoms in regards to the $\sigma_{2p}$/$\pi_{2p}$ energy level orderings.
+      Along the second-row diatomic molecules, a phenomenon known as \textbf{s-p mixing} produces an anomaly in the relative energy ordering of the σ$_{2p}$ and π$_{2p}$ orbitals. It arises from the interplay between \ce{e^-} \ce{e^-} repulsion and \ce{e^-} nuclear attraction at this range of nuclear charge.
 
-      For lighter diatomic molecules \ce{B2}, \ce{C2}, and \ce{N2}, since the atom has less effective nuclear charge due to less protons, the energy gap between the 2s and 2p orbital is small enough that mixing is significant and results in the $\sigma_{2p}$ being pushed higher in the energy hierarchy compared to the $\pi_{2p}$. The previously shown molecular orbital diagram of \ce{N2} does not account for this phenomenon. A more accurate representation of the molecular orbital diagram of \ce{N2} is shown below.
-      \myfig{0.5}{quantization_figures/n2_mod_correct.png}{Corrected molecular orbital diagram for N2}{fig:placeholder38}
+      In lighter diatomic molecules such as \ce{B2}, \ce{C2}, and \ce{N2}, the lower effective nuclear charge narrows the energy gap between the 2s and 2p orbitals sufficiently for significant mixing to occur. This pushes the σ$_{2p}$ orbital higher in energy than the π$_{2p}$, inverting the usual ordering. The molecular orbital diagram of \ce{N2} shown earlier (\autoref{fig:placeholder35}) does not account for this; a corrected version is shown below in \autoref{fig:placeholder38}.
 
-      In larger diatomic molecules \ce{O2} and \ce{F2}, this anomaly does not occur due to the sufficient effective nuclear charge strong enough to prevent the 2s and 2p orbitals from mixing. Therefore, the $\pi_{2p}$ energy level remains higher than that of $\sigma_{2p}$. \textit{The previously shown molecular orbital diagram of \ce{O2} is correct.}
+      In heavier molecules such as \ce{O2} and \ce{F2}, the greater effective nuclear charge widens the 2s--2p energy gap enough to suppress mixing, leaving π$_{2p}$ higher in energy than σ$_{2p}$ as expected. S-p mixing carries two notable practical consequences.
 
-      So, why is this important? There are actually two large practical consequences of this s-p mixing interaction.
+      \begin{itemize}
 
-      First is \textbf{the stability of \ce{N2}}. Because nitrogen's 2s and 2p orbitals are close in energy, s-p mixing is very strong. This mixing pushes the $\sigma_{2s}$ orbital lower in energy and the $\sigma_{2p}$ higher. By lowering the energy of the $\sigma_{2s}$ bonding orbital, the entire molecule becomes significantly more stable. This is why \ce{N2} is an exceptionally unreactive gas that composes the majority of the earth's atmosphere. Without s-p mixing, \ce{N2} may be more reactive, potentially making life as we know it impossible.
+        \item \textbf{The exceptional stability of \ce{N2}}: Strong s-p mixing in nitrogen lowers the energy of the σ$_{2s}$ bonding orbital and raises that of σ$_{2p}$, stabilising the molecule significantly. This is partially why \ce{N2} is so chemically inert and constitutes the majority of Earth's atmosphere---without this effect, nitrogen may be far more reactive, with profound consequences for life.
 
-      Second is regarding magnetism prediction (specifically regarding \ce{B2}). 
+        \item \textbf{Magnetism prediction}: S-p mixing also bears on the magnetic properties of \ce{B2}, which is discussed in \autoref{core:magnetism}.
+
+      \end{itemize}
+
+      \mofig{
+        \atom[N]{left} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; up, up, up } ,
+        }
+        \atom[N]{right} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; up, up, up } ,
+        }
+        \molecule[\ce{N2}]{
+          1sMO = {.5; pair, pair } ,
+          2sMO = {.5; pair, pair } ,
+        }
+        \AO[p1](2.75cm){s}[label={π$_y$}]{3.75}
+        \AO[p2](3.25cm){s}[label={π$_z$}]{3.75}
+        \AO[p3](2.75cm){s}[label={π$^*_y$}]{5.5;}
+        \AO[p4](3.25cm){s}[label={π$^*_z$}]{5.5;}
+        \AO[s1](3cm){s}[label={σ$_x$}]{4.5}
+        \AO[s2](3cm){s}[label={σ$^*_x$}]{6.25;}
+        \connect{
+          2pzleft & s2 ,
+          2pzleft & p3 ,
+          2pzleft & p1 ,
+          2pzleft & s1 ,
+          p4 & 2pxright ,
+          s2 & 2pxright ,
+          p2 & 2pxright ,
+          s1 & 2pxright ,
+        }
+      }{Corrected molecular orbital diagram for \ce{N2}}{fig:placeholder38}{1.2}
+
+    \end{core}
+
+    \begin{core}[label=core:magnetism]{Diamagnetism \& Paramagnetism}
+
+      A molecule is \textbf{diamagnetic} if it is not attracted to a magnetic field and \textbf{paramagnetic} if it is, a distinction determined entirely by the presence or absence of unpaired electrons in its molecular orbitals.
+
+      \doublemofig{
+        \AO[one](3cm){s}[label={σ$_2p^*$}]{5;}
+        \AO[two](3.25cm){s}{4;}
+        \AO[three](2.75cm){s}[label={π$_2p^*$}]{4;}
+        \AO[four](3cm){s}[label={σ$_2p$}]{3}
+        \AO[six](3.25cm){s}{2}
+        \AO[five](2.75cm){s}[label={π$_2p$}]{2}
+        \AO[seven](3cm){s}[label={σ$_2s^*$}]{1}
+        \AO[eight](3cm){s}[label={σ$_{2s}$}]{0}
+      }{
+        \AO[one](3cm){s}[label={σ$_{2p}^*$}]{5;}
+        \AO[two](3.25cm){s}{4; up}
+        \AO[three](2.75cm){s}[label={π$_{2p}^*$}]{4; up}
+        \AO[four](3cm){s}[label={σ$_{2p}$}]{3}
+        \AO[six](3.25cm){s}{2}
+        \AO[five](2.75cm){s}[label={π$_{2p}$}]{2}
+        \AO[seven](3cm){s}[label={σ$_{2s}^*$}]{1}
+        \AO[eight](3cm){s}[label={σ$_{2s}$}]{0}
+      }{\ce{N2} (\textit{left}) being diamagnetic (\textit{not attracted to magnetic field}) due to the absence of unpaired \ce{e^-}s; \ce{O2} (\textit{right}) being paramagnetic (\textit{attracted to magnetic field}) due to the presence of unpaired \ce{e^-}s at the π$_{2p}^*$ molecular orbitals}{fig:placeholder39}{1.2}
+
+      To understand why unpaired electrons produce magnetism, we turn to \textbf{spin}---the intrinsic angular momentum of an electron, briefly introduced through the spin quantum number $m_s$ in \autoref{core:qnumbers}. Each electron generates a small magnetic field oriented along its spin direction. When two electrons of opposite spin occupy the same orbital, their magnetic fields cancel, yielding a net field of zero. An \textbf{unpaired electron}, however, has no opposing spin to cancel it, so its magnetic moment persists and the molecule is \textbf{attracted to external magnetic fields}.
+
+      The molecular orbital diagram of \ce{B2} provides a striking illustration of this.
+
+      \mofig{
+        \atom[B]{left} { 
+          2s = { 0; pair } ,
+          2p = { 3; up, up, up } ,
+        }
+        \atom[B]{right} { 
+          2s = { 0; pair } ,
+          2p = { 3; up, up, up } ,
+        }
+        \molecule[\ce{B2}]{
+          2sMO = {.5; pair, pair } ,
+        }
+        \AO[p1](2.75cm){s}[label={π$_y$}]{1.75}
+        \AO[p2](3.25cm){s}[label={π$_z$}]{1.75}
+        \AO[p3](2.75cm){s}[label={π$^*_y$}]{3.5;}
+        \AO[p4](3.25cm){s}[label={π$^*_z$}]{3.5;}
+        \AO[s1](3cm){s}[label={σ$_x$}]{2.5}
+        \AO[s2](3cm){s}[label={σ$^*_x$}]{4.25;}
+        \connect{
+          2pzleft & s2 ,
+          2pzleft & p3 ,
+          2pzleft & p1 ,
+          2pzleft & s1 ,
+          p4 & 2pxright ,
+          s2 & 2pxright ,
+          p2 & 2pxright ,
+          s1 & 2pxright ,
+        }
+      }{Molecular orbital diagram for \ce{B2}}{fig:placeholder40}{1.3}
+
+      The paramagnetism of \ce{B2} is a \textbf{direct consequence of s-p mixing}. Without it, the two valence electrons would pair up in the σ$_{2p}$ orbital with opposite spins, producing a diamagnetic molecule. Because s-p mixing lowers the π$_{2p}$ orbitals below σ$_{2p}$, however, these electrons instead occupy the two degenerate π$_{2p}$ orbitals one each with the same spin---giving rise to paramagnetism.
+
+    \end{core}
+
+    \begin{core}[label=core:bond_antibonding]{Bonding \& Antibonding Orbital Energy Split}
+
+      The size of the energy split between bonding and antibonding molecular orbitals is determined by the degree of overlap between the two interacting orbitals---greater overlap produces a larger split. Several factors govern the strength of this overlap.
+
+      \begin{enumerate}
+
+        \item σ bonds overlap more strongly than π bonds because they interact directly along the bonding axis, producing a larger energy split.
+
+        \item Smaller orbitals (\textit{e.g. $n=2$}) overlap more intensely than larger ones (\textit{e.g. $n=5$}) due to greater electron density, closer internuclear proximity, and shorter inter-orbital distances. This explains why the HOMO--LUMO (\textit{\autoref{core:homo_lumo}}) excitation energy among the homonuclear diatomic halogens decreases down the periodic table.
+        \[
+          E_{\ce{F2}} > E_{\ce{Cl2}} > E_{\ce{Br2}} > E_{\ce{I2}}
+        \]
+
+        \item A smaller energy difference between the interacting atomic orbitals leads to greater overlap, while a larger difference---arising from \textbf{electronegativity differences}---skews electron density toward one atom rather than delocalising it uniformly. As a result, homonuclear bonds tend to be more stable than heteronuclear bonds, and their ionisation energies (IE) are generally higher. For instance, despite \ce{CO} and \ce{N2} having virtually identical molecular orbital diagrams, their IEs are approximately 14 eV and 15.6 eV respectively. Similarly, despite \ce{O2} and \ce{NO} sharing the same HOMO (\textit{π$^*_{2p}$}), their IEs differ markedly at approximately 12 eV and 9.2 eV respectively.
+
+      \end{enumerate}
 
     \end{core}
     
-    \begin{core}{Diamagnetism \& Paramagnetism}
-
-      Here we introduce a two new concepts: \textbf{diamagnetism} and \textbf{paramagnetism}, which refers to not being and being attracted to a magnetic field, respectively. Whether a molecule is diamagnetic or paramagnetic is dependent on the \textbf{presence} (paramagnetic) or \textbf{absence} (diamagnetic) of unpaired \ce{e^-}s in \ce{e^-} orbitals. 
-      \myfig{0.8}{quantization_figures/magnetism.png}{Molecular orbital theory and magnetism}{fig:placeholder39}
-
-      To understand why unpaired \ce{e^-} in orbitals lead to magnetism, we must understand \textbf{spin}. Mentioned briefly through the spin quantum number ($m_s$) in \textit{4.2.2 Electron Orbital Basics}, spin refers to an intrinsic property called spin angular momentum that creates a tiny magnetic field around the \ce{e^-} in one direction (\textit{up or down}). In the presence of a partner \ce{e^-} with the opposite spin, these magnetic fields cancel out, resulting in a net magnetic field of zero. In the case of an unpaired \ce{e^-}, there is no opposing spin to cancel its magnetic field, thus the magnetic moment is maintained.
-
-      Now let's take a look at the molecular orbital diagram of \ce{B2}.
-      \myfig{0.5}{quantization_figures/b2_mod.png}{Molecular orbital diagram for B2}{fig:placeholder40}
-
-      As we can see, the paramagnetism of \ce{B2} is a direct consequence of s-p mixing. If s-p mixing was absent, the two valence \ce{e^-}s would be fully occupying the $\sigma_{2p}$ orbital in opposite spin states, resulting in diamagnetism. However, since the $\pi_{2p}$ orbitals stand at a lower energy level, these valence \ce{e^-}s are instead forced to occupy these two molecular orbitals in the same spin state, resulting in paramagnetism.
-
-    \end{core}
-
-    \begin{core}{Bonding \& Antibonding Orbital Energy Split}
-
-      Moving on to another topic, you may be wondering what determines the \textbf{SIZE OF THE ENERGY SPLIT} between bonding and antibonding molecular orbitals. This is factor is determined by the \textbf{overlap between the two relevant orbitals}. A stronger overlap means larger splitting, and several factors contribute to stronger overlaps. 
-
-      (1) $\sigma$ bonds have a larger overlap relative to $\pi$ bonds because they interact along the bond axis.
-
-      (2) Smaller orbitals ($n=2$) overlaps more intensely compared to larger orbitals ($n=5$) due to \ce{e^-} density, nuclei proximity, and distance differences between orbital sizes.
-
-      For example, the first excitation energy (the energy it takes to excite an \ce{e^-} from its highest occupied molecular orbital to its lowest unoccupied molecular orbital \textit{or HOMO to LUMO}) among homogenous diatomic halogens (\ce{F2}, \ce{Cl2}, \ce{Br2}, \ce{I2}) increases as you go up the periodic table. In other words,
-
-      \[
-        E_{\ce{F2}} > E_{\ce{Cl2}} > E_{\ce{Br2}} > E_{\ce{I2}}
-      \]
-
-      (3) Smaller differences in energy between atomic orbitals lead to greater overlap whereas larger differences lead to less because the EN differences cause a more one-sided skew in \ce{e^-} density compared to a more uniform delocalization. 
-
-      As a result, homonuclear bonds tend to be more stable than heteronuclear bonds and hence the ionization energy (IE) of heteronuclear bonds is generally lower than homonuclear bonds.
-
-      For instance, the IE of \ce{CO} and \ce{N2} are roughly 14eV and 15.6eV, respectively, despite their molecular orbital diagrams being virtually identical.
-      \myfig{0.5}{quantization_figures/n2_mod_correct.png}{Corrected molecular orbital diagram for N2}{fig:placeholder41}
-
-      In another instance, the IE of \ce{O2} and \ce{NO} are roughly 12eV and 9.2eV, respectively, despite their HOMO both being $\pi^*_{2p}$.
-
-    \end{core}
-
   \subsection{Orbital Hybridization}
     
     \begin{core}{Orbital Hydridization}
 
-      \textbf{Orbital hybridization} is the mixing of orbitals to create a new set of orbtials. The resulting count of orbitals is unchanged and are still orthogonal to one another. This is the "correction factor" for the mismatch between how atomic orbitals looked in isolation (as we have covered so far) and how they actually behave when interacting with multiple bonding orbitals simultaneously.
+      \textbf{Orbital hybridization} is the mixing of atomic orbitals to form a new set of equivalent orbitals. The number of orbitals is conserved and they remain orthogonal to one another. It serves as the correction factor for the mismatch between how atomic orbitals appear in isolation and how they behave when participating in multiple bonds simultaneously.
 
     \end{core}
 
@@ -618,100 +761,133 @@
 
       \myfig{0.75}{quantization_figures/sp.png}{sp hybridization showing orbital mixing}{fig:placeholder42}
 
-      Above is the simplest example of orbital hybridization, $sp$, is made from the mixing of an s and p orbital, which is used to make two $\sigma$ bonds and/or lone pairs at a 180$^\circ$ angle from each other. A good representative example of $sp$ hybridization is \ce{HCN}.
+      The simplest case of hybridization is $sp$, formed by mixing \textbf{one s and one p orbital} to produce two equivalent orbitals arranged at 180$^\circ$ to each other. These orbitals accommodate two σ bonds and/or lone pairs in a linear geometry. A representative example is \ce{HCN}, with the MO configuration $(1s)^4(σ_{CH})^2(σ_{CN})^2(π_{CN})^4(n_{N})^2$
 
       \myfig{0.6}{quantization_figures/HCN.png}{HCN molecule showing sp hybridization}{fig:placeholder43}
-
-      Result: $(1s)^4(\sigma_{CH})^2(\sigma_{CN})^2(\pi_{CN})^4(n_{N})^2$
 
     \end{core}
 
     \begin{core}{$sp^2$ Hybridization}
 
-      $sp^2$ hybridization results from the mixing of one s and two p orbitals. Each $sp^2$ orbital points at one vertex of an equilateral triangle and used to make 3 $\sigma$ bonds and/or lone pairs at roughly 120$^\circ$ angles from each other (the leftover p orbital can be used for a $\pi$ bond). A good representative example of $sp^2$ hybridization is Ethylene \ce{CH4}.
+      $sp^2$ hybridization results from mixing \textbf{one s and two p orbitals}, producing three equivalent orbitals pointing toward the vertices of an equilateral triangle at 120$^\circ$ to each other. These orbitals accommodate three σ bonds and/or lone pairs, while the remaining unhybridized p orbital is available for π bonding. A representative example is ethylene \ce{C2H4}, with the MO configuration $(1s)^4(σ_{CH})^8(σ_{CC})^2(π_{CC})^2$.
 
       \myfig{0.65}{quantization_figures/ethylene.png}{Ethylene molecule showing sp2 hybridization}{fig:placeholder44}
-
-      Result: $(1s)^4(\sigma_{CH})^8(\sigma_{CC})^2(\pi_{CC})^2$
 
     \end{core}
 
     \begin{core}{$sp^3$ Hybridization}
 
-      $sp^3$ hybridization results from the mixing of one s and three p orbitals, forming a tetrahedron that is used to make four $\sigma$ bonds and/or lone pairs in a tetrahedral arrangement. 
+      $sp^3$ hybridization results from mixing \textbf{one s and three p orbitals}, producing four equivalent orbitals arranged tetrahedrally at 109.5$^\circ$ to each other, accommodating four σ bonds and/or lone pairs. A representative example is \ce{CH3F}, with the MO configuration $(1s)^4(σ_{CH})^6(σ_{CF})^2(n_{F})^6$.
 
       \myfig{0.55}{quantization_figures/ch3f.png}{CH3F molecule orbital diagram}{fig:placeholder45}
 
-      Result: $(1s)^4(\sigma_{CH})^6(\sigma_{CF})^2(n_{F})^6$
-
     \end{core}
 
-    \textit{It's also important to ponder why orbital hybridization occurs.} Like we have discussed throughout this entire course, bonding interactions will occur in a manner that \textbf{minimizes the PE of a system}. How orbital hybridization follows this tendency comes back down to the greater energy differences between the bonding and antibonding molecular orbitals as greater overlap occurs. Hybrid orbitals are "lopsided" --- they have one very large lobe and one tiny lobe. This \textbf{large lobe extends much further into space} than a standard s or p orbital ever could, \textbf{leading to more overlap} when interacting with other atomic orbitals and thus minimizing the PE of the bonding system.
+    Orbital hybridization occurs because bonding interactions proceed in whatever manner \textbf{minimizes the system's potential energy}. Hybrid orbitals are asymmetric---featuring one large lobe and one small lobe---allowing them to extend further into space than standard s or p orbitals. This \textbf{greater spatial extension produces more overlap} with neighboring orbitals, increasing the energy gap between bonding and antibonding MOs and thereby lowering the overall potential energy of the system.
 
   \subsection{Delocalization, Resonance, and Light}
 
-    \begin{core}{Resonance \& Delocalization}
+  \begin{core}[label=core:delocalization]{Resonance \& Delocalization}
         
-      Let us look a simple lewis structure for benezene (\ce{C6H6}).
+      Consider the Lewis structure of benzene (\ce{C6H6}), which can be drawn in two equivalent ways.
 
-      \myfig{0.35}{quantization_figures/benzene.png}{Benzene structure showing alternating bonds}{fig:placeholder46}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            *6(-=-=-=)
+          }
+          \arrow{<->}
+          \chemfig{
+            *6(=-=-=-)
+          }
+        }
+      }{Benzene resonance structures}{fig:placeholder46}{0.8}
 
-      These two interchangable skeletal structures are called \textbf{resonance structures}. As you can see, there is no actual difference between them. When we zoom out to see this from a molecular orbital perspective, we see a plane of $sp^2$ orbitals with 6 different 2p orbitals that are perpendicular to this plane.
+      These interchangeable representations are called \textbf{resonance structures}. From a molecular orbital perspective, benzene consists of a plane of $sp^2$ orbitals with six 2p orbitals oriented perpendicular to the following plane.
 
-      \myfig{0.5}{quantization_figures/benzene_delocalized.png}{Benzene with delocalized pi system}{fig:placeholder47}
+      \myfig{0.45}{quantization_figures/benzene_delocalized.png}{Benzene with delocalized π system}{fig:placeholder47}
 
-      In reality, the distinct $\pi$ bond representation shown in the skeletal resonance structures is inaccurate. Instead, the \ce{e^-}s within the parallel 2p orbitals delocalize throughout the entire molecule. Here is another representative figure showing cases and noncases of delocalization.
+      The localized π bonds implied by the resonance structures in \autoref{fig:placeholder46} are in fact a simplification---in reality, the \ce{e^-}s within the parallel 2p orbitals \textbf{delocalize} continuously across the entire ring (\textit{\autoref{fig:placeholder47}}) rather than residing between any two specific atoms. The following figure further illustrates this occurance.
 
-      \myfig{0.6}{quantization_figures/delocalization_examples.png}{Examples of resonance and delocalization}{fig:placeholder48}
+      \myfig{0.55}{quantization_figures/delocalization_examples.png}{Examples of resonance and delocalization}{fig:placeholder475}
 
     \end{core}
 
-    \begin{core}{Light \& HOMO LUMO}
-      
-      Let's now revisit a topic briefly mentioned in \textit{4.3.3 Orbital Hybridization}: the \textbf{HOMO LUMO gap}.
+    \begin{core}[label=core:homo_lumo]{Light \& HOMO LUMO}
 
-      HOMO and LUMO stands for \textbf{highest occupied molecular orbital} and \textbf{lowest unoccupied molecular orbital}. Let's take a look at a previously shown molecular orbital diagram for \ce{O2}.
+      The acronyms HOMO and LUMO stand for the \textbf{highest occupied molecular orbital} and \textbf{lowest unoccupied molecular orbital}, respectively, and the \textbf{HOMO-LUMO gap} is the energy difference between them. Consider the molecular orbital diagram for \ce{O2}.
 
-      \myfig{0.7}{quantization_figures/o2_mod.png}{Molecular orbital diagram for O2}{fig:placeholder49}
+      \mofig{
+        \atom[O]{left} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; pair, up, up } ,
+        }
+        \atom[O]{right} { 
+          1s = { 0; pair } ,
+          2s = { 2; pair } ,
+          2p = { 5; pair, up, up } ,
+        }
+        \molecule[\ce{O2}]{
+          1sMO = {.5; pair, pair } ,
+          2sMO = {.5; pair, pair } ,
+          2pMO = {1.5, .5; pair, pair, pair, up, up } ,
+        }
+      }{Molecular orbital diagram for \ce{O2}}{fig:placeholder49}{1.1}
 
-      In this scenario, the HOMO and LUMO would be the $\pi^*_{2p}$ and $\sigma^*_{2p}$ molecular orbitals, respectively. The HOMO LUMO gap represents the energy it takes to excite one \ce{e^-} in the HOMO to the LUMO. Therefore, the size of this gap determines what wavelength of light it would absorb. Take a look at this diagram representing halogen (\textit{column 17 of the periodic table}) HOMO LUMO transitions that we have discussed previously.
+      Here the HOMO is $π^*_{2p}$ and the LUMO is $σ^*_{2p}$. The HOMO-LUMO gap represents the \textbf{energy required to excite an electron from the HOMO to the LUMO}, and its magnitude determines which wavelength of light the molecule absorbs. This is illustrated clearly by comparing the MO diagrams of halogens (\textit{Group 17}).
 
-      \myfig{0.8}{quantization_figures/halogen_homo_lumo.png}{HOMO-LUMO orbitals in halogens}{fig:placeholder50}
+      \myfig{0.6}{quantization_figures/halogen_homo_lumo.png}{HOMO-LUMO orbitals in halogens}{fig:placeholder50}
 
-      As the HOMO LUMO gap increases, the energy required to excite the HOMO \ce{e^-} increases, thus the wavelength of light it absorbs decreases. \textit{The light source we shine in this model refers to white light (such as sunlight or LEDs), which is a mixture of different wavelengths spanning the visible spectrum.} Therefore, what we visually see are the rest of the wavelengths of light that the halogens didn't absorb and instead reflects, summing up the complementary color. For instance, the HOMO LUMO gap for \ce{I2} cooresponds to the wavelength around green and yellow, thus the complementary color we see is purple. This same process can be seen for \ce{Cl2} and \ce{Br2} as well. In the case of \ce{F2}, the wavelength lands in the UV spectrum, thus all of the wavelengths are reflected and we see a relatively more transparent color (but still pale yellow because it slightly absorbs a portion of violet wavelengths). Here is a real visual of these gases in the order \ce{F2}, \ce{Cl2}, \ce{Br2}, and \ce{I2}.
+      As the HOMO-LUMO gap widens, the excitation energy increases and the absorbed wavelength decreases. When white light---a mixture of all visible wavelengths---is incident on the molecule, what we perceive is the complement of the absorbed wavelengths. For example, \ce{I2} absorbs in the green-yellow region, so we observe its complementary color, purple. The same logic applies to \ce{Cl2} and \ce{Br2}. In the case of \ce{F2}, its HOMO-LUMO gap corresponds to UV wavelengths, meaning no visible light is absorbed and nearly all wavelengths are reflected---producing a pale, near-transparent appearance with a slight yellow tint from partial absorption of violet light.
 
-      \myfig{0.6}{quantization_figures/halogen_gases.png}{Halogen molecular orbital diagrams}{fig:placeholder51}
+      \myfig{0.45}{quantization_figures/halogen_gases.png}{Halogen gases in order: F2, Cl2, Br2, I2}{fig:placeholder51}
 
-      Combining our lessons on delocalization and the HOMO LUMO gap, we observe that the HOMO LUMO gap decreases under greater delocalization. This feels counterintuitive based on our understanding that delocalization stablizes the system (\textit{more overlap}). However, the overall energy difference intervals between molecular orbital levels of the conjugated $\pi$-system get smaller despite the difference between the top and bottom levels getting larger as delocalization increases. 
+      Combining this with our understanding of delocalization (\textit{\autoref{core:delocalization}}), greater delocalization is associated with a \textbf{smaller} HOMO-LUMO gap. Although delocalization stabilizes the system through increased overlap, the energy intervals between successive MO levels in the conjugated π-system become smaller as more p orbitals are included---even as the total energy span from the lowest to highest MO increases. This is illustrated below by comparing the π-system MO diagrams of ethene (\textit{two p orbitals}) and butadiene (\textit{four p orbitals}).
 
-      This is nicely represented in the figure below showing the molecular orbital diagrams for the conjugated $\pi$-systems of ethene (\textit{two p orbitals}) and butadiene (\textit{four p orbitals}).
+      \mofig{
+        \AO[p1](1cm){s}[label={π}]{1}
+        \AO[p2](1cm){s}[label={π$^*$}]{5;}
+        \AO[p3](5cm){s}[label={ψ$_1$}]{0}
+        \AO[p4](5cm){s}[label={ψ$_2$}]{2}
+        \AO[s1](5cm){s}[label={ψ$_3$}]{4;}
+        \AO[s2](5cm){s}[label={ψ$_4$}]{6;}
 
-      \myfig{0.6}{quantization_figures/homo_lumo_delocalization.png}{HOMO-LUMO delocalization in molecules}{fig:placeholder52}
+        \draw[->, dashed] (1.5, 1) -- (1.5, 5);
+        \draw[->, dashed] (4.5, 2) -- (4.5, 4);
+
+        \node[anchor=east, font=\footnotesize] at (0.75, 5) {LUMO};
+        \node[anchor=east, font=\footnotesize] at (0.75, 1) {HOMO};
+        \node[anchor=west, font=\footnotesize] at (5.25, 4) {LUMO};
+        \node[anchor=west, font=\footnotesize] at (5.25, 2) {HOMO};
+
+        \node[anchor=center, font=\footnotesize] at (1, 5.5) {ethene};
+        \node[anchor=center, font=\footnotesize] at (5, 6.5) {butadiene};
+
+      }{HOMO-LUMO delocalization in conjugated systems of ethene (\ce{H2CCH2}) and butadiene (\ce{H2CHCHCH2})}{fig:placeholder52}{1.2}
 
     \end{core}
 
     \begin{core}{Infrared Spectroscopy}
-      
-      Now let's move onto the last topic. It isn't just \ce{e^-}s that absorb wavelengths of light. Entire molecules also absorb wavelengths of light not associated with exactly the energy jump between \ce{e^-} transitions, instead they absorb along the infrared spectrum. This much lower energy is used to increase the KE of a molecule via vibration, stretching, bending, etc. 
 
-      \myfig{0.65}{quantization_figures/infrared_spectroscopy.png}{Infrared spectroscopy fundamentals}{fig:placeholder53}
+      Molecules do not only absorb light through electronic transitions---they also absorb in the \textbf{infrared spectrum}, where the energy is too low to excite \ce{e^-}s but sufficient to increase the \textbf{kinetic energy} of the molecule through vibrational motion: stretching, bending, and rotating of bonds.
 
-      The plot above is an infrared spectroscopy graph, within which the peaks represent the wavelengths of light absorbed by the given molecule (\textit{which would be vanillin in this case}) in the infrared spectrum. Like how molecules absorbed only certain wavelengths (\textit{peaks}) to excite electrons, the same phenomenon occurs for energy absorption to increase KE.
+      \myfig{0.62}{quantization_figures/infrared_spectroscopy.png}{Infrared spectroscopy fundamentals}{fig:placeholder53}
 
-      When we take a step back and see a more birds eye view of the wavelength absorptions across a larger spectrum range, all of these individual peaks blur out to create the broad absorption band you see below.
+      \autoref{fig:placeholder53} is an infrared spectrum for vanillin, where each peak corresponds to a specific wavelength of infrared light absorbed by the molecule to drive a particular vibrational mode---analogous to how electronic transitions produce discrete absorption peaks in the visible spectrum. When viewed across a broader wavelength range, these individual peaks merge into characteristic broad absorption bands.
 
-      \myfig{0.35}{quantization_figures/absorption_bands.png}{IR absorption bands for functional groups}{fig:placeholder54}
+      \myfig{0.3}{quantization_figures/absorption_bands.png}{IR absorption bands for functional groups}{fig:placeholder54}
 
     \end{core}
   
     \begin{core}{Proton Nuclear Magnetic Resonance}
-      
-      Okay, last topic. Just as \ce{e^-}s, \ce{p^+}s also have a spin. In the absence of an external magnetic field, the direction of these spins are random. However, in the presence of a magnetic field, the direction of these spins orient with the field (parallel, lower energy) or against it (anti-parallel, higher energy), creating an energy gap between the two states that increases in magnitude as the external magnetic field strength increases.
 
-      \myfig{0.65}{quantization_figures/proton_spin.png}{Proton nuclear magnetic resonance basics}{fig:placeholder55}
+      Just as \ce{e^-} possess spin, so do protons. In the absence of an external magnetic field their spins are randomly oriented, but when placed in one, each proton aligns either parallel (\textit{lower energy}) or anti-parallel (\textit{higher energy}) to the field. The energy gap between these two states grows with the strength of the applied field:
 
-      By hitting these protons with specific radio frequencies, we can make them "flip" between states. And the energy they release when flipping back is what \textbf{magnetic resonance imaging or MRI} uses to map out tissues in the body.
+      \myfig{0.55}{quantization_figures/proton_spin.png}{Proton nuclear magnetic resonance basics}{fig:placeholder55}
 
+      By irradiating these protons with radiofrequency radiation matched to this energy gap, their spins can be induced to flip between states. The energy released as they relax back to the lower-energy orientation is precisely what \textbf{magnetic resonance imaging (MRI)} detects and uses to construct detailed maps of tissue in the body.
+            
     \end{core}
 
 \end{document}  

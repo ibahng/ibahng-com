@@ -8,6 +8,7 @@
 \usepackage{chemfig}
 \usepackage[version=4]{mhchem}
 \usepackage{bohr}
+\usepackage{modiagram}
 
 \newcommand{\bce}[1]{
   \hspace{7mm}{#1}
@@ -133,6 +134,36 @@
     (4.3,2.8) -- 
     (4.6,2.8) -- 
     (4.6,0.4) -- cycle;
+}
+
+\newcommand{\mofig}[4]{
+    \begin{figure}[H]
+    \centering
+    \scalebox{#4}{
+    \begin{modiagram}[names, labels, labels-fs=\footnotesize]
+      #1 
+    \end{modiagram}
+    }
+    \caption{#2}
+    \label{#3}
+    \end{figure}
+}
+
+\newcommand{\doublemofig}[5]{
+    \begin{figure}[H]
+    \centering
+    \scalebox{#5}{
+    \begin{modiagram}[names, labels, labels-fs=\footnotesize]
+      #1 
+    \end{modiagram}
+    \hspace{1cm}
+    \begin{modiagram}[names, labels, labels-fs=\footnotesize]
+      #2
+    \end{modiagram}
+    }
+    \caption{#3}
+    \label{#4}
+    \end{figure}
 }
 
 
