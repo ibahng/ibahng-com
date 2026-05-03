@@ -30,127 +30,127 @@
 
     \begin{core}{Thermodynamics}
 
-      \textbf{Thermodynamics} focuses on the \textbf{energy changes} that occur during chemical reactions and phase transitions. It allows us to predict whether a reaction will occur \textbf{spontaneously} and \textbf{how much energy will be released or absorbed}. 
+      \textbf{Thermodynamics} examines the \textbf{energy changes} that accompany chemical reactions and phase transitions, enabling us to predict both whether a reaction will proceed \textbf{spontaneously} and \textbf{how much energy it will release or absorb}.
 
     \end{core}
 
-    Energy in the context of chemistry can be boiled down to two main categories.
+    In chemistry, energy is broadly classified into two fundamental categories.
 
-    \begin{core}{Kinetic Energy (KE)}
+    \begin{core}{Kinetic Energy}
 
-      \textbf{Kinetic Energy} simply pertains to the motion of a molecule.
-
-      \myfig{0.45}{thermodynamics_figures/KE.png}{Kinetic Energy}{fig:ke}
+      \textbf{Kinetic Energy (KE)} refers to the energy associated with the motion of a molecule and is broadly categorize into \textbf{vibrational}, \textbf{rotational}, and \textbf{translational} motion.
 
     \end{core}
 
-    \begin{core}[label=core:pe]{Potential Energy (PE)}
+    \begin{core}[label=core:pe]{Potential Energy}
 
-      \textbf{Potential Energy} pertains to the energy stored within the bond of intra- and intermolecular interactions. The basis of these interactions is electrostatic attractions that occur between the many opposing charge instances (\ce{e^-} and \ce{p^+}) within a system (a.k.a. \textbf{Coulomb's Law}).
+      \textbf{Potential Energy (PE)} refers to the energy stored within intra- and intermolecular interactions. These interactions are governed by electrostatic attractions between opposing charges (\textit{\ce{e^-} and protons}) within a system, a principle formally described by \textbf{Coulomb's Law}.
 
-      \myfig{0.4}{thermodynamics_figures/PE.png}{Potential Energy}{fig:pe}
+      \myfig{0.5}{thermodynamics_figures/PE.png}{Potential Energy}{fig:pe}
 
-      Intramolecular bonds between atoms always arrange themselves at specific distance from one another that occur at the lowest PE possible. PE is the energy associated with the bonds between the atoms. 
+      As shown in \autoref{fig:pe}, intramolecular bonds arrange themselves at internuclear distances that \textbf{minimize PE}. When the internuclear distance is \textbf{infinitely large}, PE approaches zero, as the force between atoms is negligible.
 
-      For instance, when the internuclear distance is \textbf{infinitely large}, there is no PE within the interaction betwen the atoms because there is virtually no force between them. 
+      As atoms approach one another, they reach an equilibrium point at which repulsive (\textit{like-charge}) and attractive (\textit{opposing-charge}) forces balance. The PE at this equilibrium is defined as the \textbf{bond energy}, and its formation is accompanied by a release of energy---analogous to two magnets snapping together. Conversely, compressing atoms beyond this equilibrium causes PE to rise, as repulsive forces begin to dominate---analogous to two rubber balls being forced together. \textit{Bond energy is more rigorously characterized by the thermodynamic quantity \textbf{enthalpy}, discussed further in \autoref{core:enthalpy}.}
 
-      Once atoms approach one another, they will reach an equlibrium point where the repulsive (\textit{like charge interactions}) and attractive forces (\textit{opposing charge interactions}) across atoms equal one another. The PE at this equilibrium point is called the \textbf{bond energy} and results in a release of energy, analagous to two magnets snapping and releasing heat on impact. At this point, we would need to expend or input energy in order to break the bond between the atoms, thus the PE is indicated as negative, analagous to two magnets being pulled apart by an input of force.
+      These observations give rise to two fundamental principles.
 
-      At an even closer distance, the PE will increase because the repulsive forces overcome the attractive forces, thus resulting in a higher PE state than at the equilibrium point, analogous to two rubber balls being pressed against each other.
+      \begin{itemize}
 
-      Remember, \textbf{breaking a bond will always require an INPUT of energy}, thus the change in PE from the bonded to the unbonded state is negative. Conversely, \textbf{forming a bond will always result in an OUTPUT of energy}, thus the change in PE from the unbonded to the bonded state is positive.
+        \item \textbf{Breaking} a bond requires an \textbf{input of energy}; the change in PE from the bonded to unbonded state is therefore negative.
+
+      \item \textbf{Forming} a bond releases an \textbf{output of energy}; the change in PE from the unbonded to bonded state is therefore positive.
+
+      \end{itemize}
 
     \end{core}
 
-    \begin{core}{Total Energy}
+    \begin{core}{The First Law of Thermodynamics}
 
-      Within a closed system, the total energy of the system is equal to the sum of the PE and KE of the system. This is represented mathematically as:
+      Within a \textbf{closed system}, the total energy is defined as the sum of its kinetic and potential energies:
       \[
         E_{total} = KE + PE
       \]
 
-      If \textbf{PE drops} (e.g., two atoms snap together to form a bond), the system must gain KE. This is why exothermic reactions release heat --- the potential energy "lost" by the atoms settling into a stable bond is converted into the kinetic energy of the molecules vibrating and moving faster.
+      This relationship reflects the \textbf{First Law of Thermodynamics}, which states that energy is neither created nor destroyed, but interconverted between KE and PE. When \textbf{PE decreases}---for instance, as two atoms form a bond and settle into a lower-energy configuration---the system gains a corresponding amount of KE. This conversion underlies \textbf{exothermic} reactions (\textit{\autoref{core:endo_exo}}), in which the stabilization of chemical bonds manifests as increased molecular motion and the release of heat.
 
-      If \textbf{KE drops} (e.g., a molecule slows down as it flies away from an attractive neighbor), that energy hasn't vanished; it has been investing into PE as the molecule climbs out of a potential well. 
+      Conversely, when \textbf{KE decreases}---as when a molecule decelerates against an attractive intermolecular force---that energy is not lost, but transferred into PE as the molecule ascends a potential energy well shown in \autoref{fig:pe}
 
     \end{core}
 
   \subsection{Heat}
 
-    \begin{core}{Endothermicity \& Exothermicity}
+    \begin{core}[label=core:endo_exo]{Endothermicity \& Exothermicity}
 
-      An \textbf{ENDOTHERMIC REACTION}, is a reaction that requires the input of heat in order to occur. Take the melting of ice for example. An \textbf{EXOTHERMIC REACTION}, is a reaction that releases heat in order to occur. Take the combustion of gasoline for example.
+      Chemical reactions can be classified based on the direction of heat flow between the system and its surroundings. In an \textbf{exothermic reaction}, energy is \textbf{released} into the surroundings---the products are at a lower energy state than the reactants, and the excess energy is dissipated as thermal energy. \textit{Take the combustion of gasoline as an example.}
 
-      \myfig{0.45}{thermodynamics_figures/endo_exo.png}{Endothermic and Exothermic Reactions}{fig:endo_exo}
+      Conversely, in an \textbf{endothermic reaction}, energy is \textbf{absorbed} from the surroundings in order to drive the reaction forward---the products are at a higher energy state than the reactants, necessitating a net input of thermal energy. \textit{A familiar example is the dissolution of ammonium nitrate in water, the principle underlying instant cold packs: as the reaction proceeds, it draws heat from the surrounding environment, producing a pronounced drop in temperature.}
 
     \end{core}
 
-    \begin{core}{Heat Transfer, Calorimetry, and The First Law of Thermodynamics}
+    \begin{core}{Heat Transfer \& Calorimetry}
 
-      When two systems with differing temperatures come into contact, the system with the lower temperature will absorb heat from the system with the higher temperature. This is called \textbf{HEAT TRANSFER}.
-
-      \textit{It's important to remember that "\textbf{hot}" and "\textbf{cold}" describe how much particles are moving. Hot substances have particles that vibrate and move more, while cold substances have particles that vibrate less. Temperature reflects the average kinetic energy of the particles.}
+      \textbf{Heat transfer} occurs when two systems at differing temperatures come into contact, whereupon thermal energy flows from the system of higher temperature to that of lower temperature. 
 
       \myfig{0.75}{thermodynamics_figures/heat_transfer.png}{Heat Transfer}{fig:heat_transfer}
+      
+      This behavior reflects the underlying molecular basis of temperature: \textbf{hot} substances possess particles with greater average KE---vibrating and moving more rapidly---whereas \textbf{cold} substances possess particles with comparatively lower KE. \textbf{Temperature}, therefore, is more precisely defined as a measure of the \textbf{average kinetic energy} of the particles within a system.
 
-      Chemists represent the transfer of heat with this equation:
+      The quantity of heat transferred within a system is given by:
       \[
         q = m \times C \times \Delta T
       \]
 
-      where $q$ is the amount of heat transferred, $m$ is the mass of the system, $C$ is the \textbf{specific heat capacity}, and $\Delta T$ is the change in temperature.
+      where $q$ denotes the heat transferred, $m$ the mass of the system, $C$ the \textbf{specific heat capacity}, and $\Delta T$ the change in temperature. \textbf{Specific heat capacity} is defined as the quantity of energy required to raise the temperature of 1 g of a substance by 1 K. For water, this value is $4.184\, J\, g^{-1} K^{-1}$, meaning 4.184 joules or energy are required to raise the temperature of 1 g of water by 1 K.
 
-      \textbf{Specific heat capacity} is a measure of the energy required to raise the temperature of 1g of a substance by 1 K. For instance, the specific heat capacity of water is $4.184 J\, g^{-1} K^{-1}$. In other words, it takes 4.184 joules to raise the temperature of 1g of water by 1K.
+      The experimental discipline concerned with measuring the heat exchanged during chemical reactions, physical changes, or thermal interactions between objects is known as \textbf{calorimetry}, and constitutes a practical application of the \textbf{First Law of Thermodynamics}. Consider the following worked examples.
 
-      The experimental science of measuring the amount of heat ($q$) exhcanged during a chemical reaction, physical chnage, or between two objects at different temperatures is called \textbf{CALORIMETRY}. It is the practical application of the \textbf{First Law of Thermodynamics (Conservation of Energy)}.
+      \begin{enumerate}
 
-      As an example, let's find out how many joules it takes to raise the temperature of 43g of water by 45K.
-      \[
-        q = (43 g) (4.184 J\, g^{-1} K^{-1}) (45 K) = 8096.04 J
-      \]
+        \item \textbf{Determine the heat required to raise the temperature of 43g of water by 45K.}
+        \[
+          q = (43\, g)(4.184\, J\, g^{-1} K^{-1})(45\, K) = 8096.04\, J
+        \]
 
-      While joules are the most common unit for energy in the context of chemistry, another common energy unit is \textbf{calories}, which is equal to 4.184 J. With this in mind, the specific heat capacity of water in $cal\, g^{-1} K^{-1}$ is just 1.
+        While the joule is the standard unit of energy in chemistry, the \textbf{calorie} is another commonly encountered unit, defined as 4.184 J. Notably, this equivalence renders the specific heat capacity of water exactly $1\, cal\, g^{-1} K^{-1}$. It should be noted that the dietary Calorie (\textit{Cal}), as reported on nutritional labels, corresponds to 1 kilocalorie (\textit{kcal}), or 1000 calories.
 
-      The calorie figures often shown in nutrition labels are written in Cal or kcal, which is 1000 calories.
+        \item \textbf{A 560 g sample of Au at $100^{\circ}$C is placed into 560 mL of water at $20^{\circ}$C. Determine the final equilibrium temperature of the system. Given: $C_{\ce{H2O}} = 4.184\, J\, g^{-1} K^{-1}$, $C_{Au} = 0.13\, J\, g^{-1} K^{-1}$.}
 
-      Let's take a look at another example. \textbf{You place 560g of Au at 100°C into 560mL of water at 20°C. What would be the final temperature of the water? $C_{\ce{H2O}} = 4.184 J\, g^{-1} K^{-1}$, $C_{Au} = 0.13 J\, g^{-1} K^{-1}$}.
+        By the conservation of energy, the total heat change within a closed system must equal zero:
+        \[
+          q_{lost} + q_{gained} = 0 \quad \Longrightarrow \quad q_{gained} = -q_{lost}
+        \]
 
-      Recall that energy cannot be created nor destroyed in a closed system. Thus the total net energy change must be zero.
-      \[
-        q_{lost} + q_{gained} = 0
-      \]
+        Since heat flows from the Au to the water, the Au loses energy while the water gains energy, and both reach a common final temperature $T_{final}$. Substituting into the calorimetry equation:
+        \[
+          (560\, g)(4.184\, J\, g^{-1} K^{-1})(T_{final} - 20) = -(560\, g)(0.13\, J\, g^{-1} K^{-1})(T_{final} - 100)
+        \]
 
-      which we can rewrite as:
-      \[
-        q_{gained} = -q_{lost}
-      \]
+        Solving for $T_{final}$:
+        \[
+          T_{final} = 22.41^{\circ}C
+        \]
 
-      Heat is transferred from the Au to the water, thus water gains energy while Au loses energy. The $T_{final}$ of Au would be the same as the $T_{final}$ of the water. Thus, the equation becomes:
-      \[
-        (560g) (4.184 J\, g^{-1} K^{-1}) (T_{final} - 20) = -(560g) (0.13 J\, g^{-1} K^{-1}) (T_{final} - 100)
-      \]
-
-      Solving for $T_{final}$ brings us to $T_{final} = 22.41^{\circ}C$
+      \end{enumerate}
 
     \end{core}   
 
     \begin{core}{Phase Transitions}
 
-      Okay, now let's move onto phase transitions, namely of water. We call the heat required to transition water from a solid to a liquid state as the \textbf{heat of fusion}, and the heat required to transition water from a liquid to a gas state as the \textbf{heat of vaporization}. The signs of these variables depends on whether you are evaporating or condensing (\textit{for vaporization}) and whether you are melting or freezing (\textit{for fusion}).
+      \textbf{Phase transitions} refer to the physical transformation of a substance from one state of matter to another, driven by changes in thermal energy. The heat required to transition water from a solid to a liquid state is termed the \textbf{heat of fusion}, while that required to transition water from a liquid to a gaseous state is termed the \textbf{heat of vaporization}.
 
-      \myfig{0.5}{thermodynamics_figures/water_heat.png}{Heating Curve of Water}{fig:water_heat}
+      \textit{The sign of each quantity is determined by the direction of the transition: positive for melting and vaporization (endothermic), and negative for freezing and condensation (exothermic).}
 
-      As you can see from the graph above, the temperature does not increase as vaporization occurs. During this process, energy is spent to raise the PE of the IMFs between water molecules rather than their KE (a.k.a. what temperature measures). In other words, at 100°C, the molecules in liquid water are moving with the same average KE as they will be once they become steam at 100°C. The "vibrational speed" and "collisional energy" of liquid state water molecules are already up to par as that of the gas phase, but the molecules are still stuck in the liquid phase because of the deep PE wells created by hydrogen bonding IMFs. The heat of vaporization is the energy required to seperate the molecules from neighboring molecules (effectively break the IMFs and raising PE) in order to evaporate into a gas phase.
+      \myfig{0.6}{thermodynamics_figures/water_heat.png}{Heating Curve of Water}{fig:water_heat}
 
-      This same logic applies to the heat of fusion.
+      As illustrated in \autoref{fig:water_heat}, temperature remains constant during phase transitions. During vaporization, for instance, the energy supplied does not increase the average KE of the molecules (\textit{which temperature measures}), but is instead directed toward increasing the \textbf{PE of the IMFs}. At $100^{\circ}$C, water molecules in the liquid phase possess the same average KE as those in the gas phase; however, they remain confined to the liquid state by the deep PE wells created by hydrogen bonding interactions. The heat of vaporization, therefore, represents \textbf{the energy required to overcome these IMFs entirely}, liberating the molecules from their neighbors and enabling the transition to the gas phase. \textit{The same reasoning applies analogously to the heat of fusion.}
 
-      You may also notice that the energy magnitude for the heat of vaporization is much more than that of fusion. This is because during fusion, you are only adding enough energy to \textbf{disrupt the rigid, ordered structure of the crystal lattice} whereas during vaporization, you are adding enough energy to overcome the IMFs between water molecules \textbf{completely}. The scale difference between the two is enormous as a result.
+      It is also notable that the heat of vaporization is substantially greater in magnitude than the heat of fusion. This disparity arises because \textbf{fusion} requires only sufficient energy to \textbf{disrupt the rigid, ordered crystal lattice} of ice---partially weakening intermolecular interactions without eliminating them---whereas \textbf{vaporization} necessitates the \textbf{complete dissociation} of all intermolecular interactions between water molecules. The energetic difference between these two processes is therefore considerable.
 
     \end{core}
 
-  \subsection{Bond Energy}
+  \subsection{Enthalpy}
 
-    \begin{core}{Enthalpy}
+    \begin{core}[label=core:enthalpy]{Enthalpy}
 
       \textbf{Enthalpy (H)} is a thermodynamic property that represents the total heat content of a system. It accounts for both the internal energy of the system and the energy required to "make room" for it by pushing back the surrounding atmophere.
 
@@ -291,7 +291,7 @@
 
     \end{core} 
 
-\section{Entropy and Gibbs Free Energy}
+\section{Entropy}
 
   \subsection{Defining Entropy}
 
@@ -359,7 +359,7 @@
 
     \end{core}
 
-  \subsection{Changes in Entropy and Gibbs Free Energy}
+  \subsection{Changes in Entropy}
 
     \begin{core}{The Third Law of Thermodynamics}
 
@@ -398,6 +398,10 @@
       When we get really nuanced with the definitions of entropy and enthalpy, we realize that enthalpy is a measure of temperature dependent entropy characteristics in a way. The limitations of enthalpy is that you cannot quantify the change in entropy dependent on positional coordinates, which stretch outside the scope of this course.
 
     \end{core}
+
+\section{Gibbs Free Energy}
+
+  \subsection{Gibbs Free Energy}
 
     \begin{core}{Deriving the Gibbs Free Energy Equation}
 
@@ -508,7 +512,7 @@
 
     The Gibbs free energy equation allows us to gauge the favorability of a reaction by comparing the free energies provided by the enthalpy changes across the reactants and products and the free energies provided by the entropy change across the reactants and products. Entropy changes at a higher surrounding T will magnify the effects of entropy differences on free energy. This is because at higher temperatures, the system has more thermal energy to distribute among its avilable microstates, making the free energy "reward" for an already greater number of microstates (high entropy) much larger vs a lower number of microstates (low entropy). The universe always wants to minimize free energy or the potential to do spontaneous work.
 
-  \subsection{Gibbs Free Energy and Equilibrium Constants}
+  \subsection{Free Energy \& Equilibrium}
 
     \begin{core}{Gibbs Free Energy \& Equilibrium}
 
