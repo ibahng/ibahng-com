@@ -46,7 +46,7 @@
 
       \textbf{Potential Energy (PE)} refers to the energy stored within intra- and intermolecular interactions. These interactions are governed by electrostatic attractions between opposing charges (\textit{\ce{e^-} and protons}) within a system, a principle formally described by \textbf{Coulomb's Law}.
 
-      \myfig{0.5}{thermodynamics_figures/PE.png}{Potential Energy}{fig:pe}
+      \myfig{0.45}{thermodynamics_figures/PE.png}{Bond potential energy diagram}{fig:pe}
 
       As shown in \autoref{fig:pe}, intramolecular bonds arrange themselves at internuclear distances that \textbf{minimize PE}. When the internuclear distance is \textbf{infinitely large}, PE approaches zero, as the force between atoms is negligible.
 
@@ -91,7 +91,7 @@
 
       \textbf{Heat transfer} occurs when two systems at differing temperatures come into contact, whereupon thermal energy flows from the system of higher temperature to that of lower temperature. 
 
-      \myfig{0.75}{thermodynamics_figures/heat_transfer.png}{Heat Transfer}{fig:heat_transfer}
+      \myfig{0.6}{thermodynamics_figures/heat_transfer.png}{Heat transfer}{fig:heat_transfer}
       
       This behavior reflects the underlying molecular basis of temperature: \textbf{hot} substances possess particles with greater average KE---vibrating and moving more rapidly---whereas \textbf{cold} substances possess particles with comparatively lower KE. \textbf{Temperature}, therefore, is more precisely defined as a measure of the \textbf{average kinetic energy} of the particles within a system.
 
@@ -140,9 +140,9 @@
 
       \textit{The sign of each quantity is determined by the direction of the transition: positive for melting and vaporization (endothermic), and negative for freezing and condensation (exothermic).}
 
-      \myfig{0.6}{thermodynamics_figures/water_heat.png}{Heating Curve of Water}{fig:water_heat}
-
       As illustrated in \autoref{fig:water_heat}, temperature remains constant during phase transitions. During vaporization, for instance, the energy supplied does not increase the average KE of the molecules (\textit{which temperature measures}), but is instead directed toward increasing the \textbf{PE of the IMFs}. At $100^{\circ}$C, water molecules in the liquid phase possess the same average KE as those in the gas phase; however, they remain confined to the liquid state by the deep PE wells created by hydrogen bonding interactions. The heat of vaporization, therefore, represents \textbf{the energy required to overcome these IMFs entirely}, liberating the molecules from their neighbors and enabling the transition to the gas phase. \textit{The same reasoning applies analogously to the heat of fusion.}
+
+      \myfig{0.6}{thermodynamics_figures/water_heat.png}{Heating curve of water}{fig:water_heat}
 
       It is also notable that the heat of vaporization is substantially greater in magnitude than the heat of fusion. This disparity arises because \textbf{fusion} requires only sufficient energy to \textbf{disrupt the rigid, ordered crystal lattice} of ice---partially weakening intermolecular interactions without eliminating them---whereas \textbf{vaporization} necessitates the \textbf{complete dissociation} of all intermolecular interactions between water molecules. The energetic difference between these two processes is therefore considerable.
 
@@ -152,144 +152,219 @@
 
     \begin{core}[label=core:enthalpy]{Enthalpy}
 
-      \textbf{Enthalpy (H)} is a thermodynamic property that represents the total heat content of a system. It accounts for both the internal energy of the system and the energy required to "make room" for it by pushing back the surrounding atmophere.
+      \textbf{Enthalpy} ($H$) is a thermodynamic state function representing the \textbf{total heat content} of a system at constant pressure. Formally, it is defined as the sum of the system's internal energy and the pressure-volume work required to establish its physical extent within the surrounding environment---\textit{that is, the energy expended to displace the atmosphere and ``make room'' for the system}.
 
-      While you cannot measure the absolute enthalpy of a system, you can measure the \textbf{change in enthalpy} ($\Delta H$) during a process, which is why this term is so central to chemistry.
+      Although the absolute enthalpy of a system cannot be determined experimentally, the \textbf{change in enthalpy} ($\Delta H$) during a chemical or physical process is directly measurable, making it one of the most practically significant quantities in thermochemistry.
 
-      Let us revisit the bond energy graph from \autoref{core:pe}.
+      To understand the molecular origin of $\Delta H$, recall the potential energy diagram (\textit{\autoref{fig:pe}}) introduced in \autoref{core:pe}.
 
-      \myfig{0.5}{thermodynamics_figures/PE.png}{Potential Energy Diagram}{fig:pe_diagram}
-
-      The formation of bonds releases energy and the breakdown of bonds requires energy. All chemical reactions are are the breakdown of the initial bonds of reactants and the formation of new bonds of products. $\Delta H$ is used to denote whether a reaction results in the net input of heat (\textbf{endothermic}) or the net release of heat (\textbf{exothermic})
+      At the molecular level, all chemical reactions involve the breaking of bonds in the reactants and the formation of new bonds in the products. Since \textbf{bond formation releases energy} and \textbf{bond breaking requires energy}, the net enthalpy change of a reaction reflects the difference between these two contributions. When the energy released upon forming product bonds exceeds the energy required to break reactant bonds, the reaction is classified as \textbf{exothermic} ($\Delta H < 0$); conversely, when more energy is consumed than released, the reaction is \textbf{endothermic} ($\Delta H > 0$).
 
     \end{core}
 
     \begin{core}{Enthalpy Example (\textit{Combustion of Hydrogen})}
 
-      Take the combustion of hydrogen to produce water for example.
+      Take the combustion of hydrogen to produce water (\ce{2H2 + O2 -> 2H2O}) as an illustrative example. The enthalpy change over the course of this reaction is depicted below.
 
-      \bce{\ce{2H2 + O2 -> 2H2O}}
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=7cm,
+          xmin=-4, xmax=4,
+          ymin=-0.3, ymax=1.4,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={Reaction proceeding},
+          ylabel={Potential Energy},
+          axis line style={thick},
+          \axispresetsone
+        ]
+        % energy curve — gaussian-like hill
+        \addplot[
+            thick,
+            black,
+            domain=-1.8:1.5,
+            samples=200,
+        ] {exp(-x^2) - 0.15*x};
+        % reactant energy level (left)
+        \addplot[thick, black] coordinates {(-3.5, 0.30916) (-1.8, 0.30916)};
+        % product energy level (right) — slightly lower
+        \addplot[thick, black] coordinates {(1.5, -0.1196) (3.5, -0.1196)};
+        % dashed line at reactant energy level
+        \addplot[thick, black, dashed] coordinates {(-3.5, 0.30916) (0, 0.30916)};
+        % dashed line at peak of energy curve (exp(0) - 0.15*0 = 1)
+        \addplot[thick, black, dashed] coordinates {(-2, 1) (1, 1)};
 
-      Here is a graph of the enthalpy change during the reaction.
+        \draw[->] (axis cs:-1, 0.35) -- (axis cs:-1, 0.95);
+        \node[font=\small] at (axis cs:-1.5, 0.6) {E$_{\text{a}}$};
 
-      \myfig{0.5}{thermodynamics_figures/H_combustion.png}{Enthalpy of Combustion}{fig:h_combustion}
+        \draw[->] (axis cs:-1, 0.25) -- (axis cs:-1, -0.05);
+        \node[font=\small] at (axis cs:-0.5, 0.1) {ΔH};
 
-      Let's first start off by imagining the reaction occuring in front of you. When you light a balloon of \ce{H2}, you'd see it light up and explode. The fact that heat was released as a result of the reaction should tell you that the reaction was exothermic.
+        \node[font=\small] at (axis cs:-2.5, 0.23) {\ce{2H2 + O2}};
+        \node[font=\small] at (axis cs:2.8, -0.2) {\ce{2H2O}};
+        \end{axis}
+      }{Enthalpy diagram of \ce{H2} combustion}{fig:h_combustion}{1}
 
-      What we saw was that the original reactants (the \ce{H2} within the balloon and the \ce{O2} in the air) were transformed into the products (\ce{H2O}) as a result of an inital input of energy (the lighter). We call this initial input of energy as the \textbf{activation energy}, the jumpstart in energy the reaction needs to carry out the breakdown of reactant bonds before reforming product bonds.
+      To build intuition, consider the reaction as it would appear in practice. Upon igniting a hydrogen-filled balloon, one observes an immediate release of heat and light---a clear indication that the reaction is exothermic. The original reactants (\textit{\ce{H2} within the balloon and \ce{O2} from the surrounding air}) are converted into the product (\ce{H2O}) following an initial input of energy supplied by the ignition source. This initial energy input is termed the \textbf{activation energy} ($E_a$), which is the minimum energy required to \textbf{initiate the breakdown of reactant bonds} before product bonds can form.
 
-      The fundamental driving force of chemistry is \textbf{the pursuit of the lowest PE state}. Thus the bonds of the free atoms (H, H, H, H, O, O) would interact to form \ce{2H2O}. And since the enthalpies of the bonds exist at a lower PE than the original bonds, the net release of heat equal to the net difference in enthalpy occurs (the explosion).
+      The fundamental driving force underlying chemical reactivity is \textbf{the tendency of a system to minimise its potential energy}. Consequently, the free atoms produced upon bond dissociation---H, H, H, H, O, O---reorganise to form \ce{2H2O}, whose bonds exist at a lower potential energy state than those of the original reactants. The net difference in enthalpy between reactants and products is released as heat, manifesting as the observed explosion.
 
-      It may be worth noting that a small spark is not enough to fulfill the activation energy of all \ce{H2} and \ce{O2} molecules at once. Instead, the energy release from one spark is sufficient to form one \ce{H2O} molecule. The release of energy from the formation this \ce{H2O} is then used as the $E_a$ of neighboring \ce{H2} and \ce{O2} molecules. This domino effect occurs at a rapid rate to carry out the reaction for the entire balloon.
+      It is worth noting that a single spark does not supply sufficient activation energy to convert all \ce{H2} and \ce{O2} molecules simultaneously. Rather, the initial spark provides enough energy to initiate the formation of a single \ce{H2O} molecule. The energy released by this event then serves as the activation energy for neighbouring reactant molecules, which in turn release energy that drives further reactions. This cascade propagates rapidly throughout the balloon, accounting for the near-instantaneous nature of the explosion.
 
-      We can represent the enthalpy change quantitatively as well. These are the average bond enthalpy values for several commonly occurring bonds.
+      The enthalpy change of a reaction can also be determined quantitatively using average bond enthalpies. Representative values for several common bonds are given in \autoref{tab:bond_enthalpies}.
 
-      \begin{center}
+      \begin{table}[H]
+        \centering
         \begin{tabular}{c|c|c|c|c|c|c|c|c}
-          Bond           & H--H & O--O & H--O & C--C & C=C & C$\equiv$C & C--O & O=O\\
+          Bond & H--H & O--O & H--O & C--C & C=C & C$\equiv$C & C--O & O=O\\
           \hline
-          $H_{average}$ (kJ/mol) & 436  & 146  & 463  & 348  & 612 & 838    & 360  & 498\\
+          $H_{\text{average}}$ (kJ/mol) & 436 & 146 & 463 & 348 & 612 & 838 & 360 & 498\\
         \end{tabular}
-      \end{center}
+        \caption{Average bond enthalpies of common bonds}
+        \label{tab:bond_enthalpies}
+      \end{table}
 
-      We can calculate the enthalpy change for the breakdown and formation of each bond as follows:
+      Applying these values to the combustion of hydrogen, the enthalpy change is calculated by summing the energies of bonds broken (\textit{endothermic, positive sign}) and bonds formed (\textit{exothermic, negative sign}):
 
-      Break 2 moles of H--H $\rightarrow$ $(2)(+436\,kJ\,mol^{-1})$\\
-      Break 1 moles of O=O $\rightarrow$ $(1)(+498\,kJ\,mol^{-1})$\\
-      Make 4 moles of O--H $\rightarrow$ $(4)(-463\,kJ\,mol^{-1})$
+      \begin{itemize}
 
-      Thus $\Delta H = -482\,kJ\,mol^{-1}$ for the reaction.
+        \item Break 2 mol of H--H $\rightarrow$ $(2)(+436\,\text{kJ\,mol}^{-1})$
 
-      It is also important to remember that $E_a$ is rarely the energy required to break ALL the reactant bonds. \textbf{$E_a$ is only the energy needed to break key reactant bonds just enough for the reaction to occur}. For instance the $E_a$ of water formation is only $200\,kJ\,mol^{-1}$, not the entire $1370\,kJ\,mol^{-1}$ required to break all reactant bonds.
+        \item Break 1 mol of O=O $\rightarrow$ $(1)(+498\,\text{kJ\,mol}^{-1})$
+
+        \item Form 4 mol of O--H $\rightarrow$ $(4)(-463\,\text{kJ\,mol}^{-1})$
+
+      \end{itemize}
+      
+      Thus $\Delta H = -482\,\text{kJ\,mol}^{-1}$ for the reaction. Finally, it is important to note that $E_a$ does not represent the energy required to break all reactant bonds simultaneously. \textbf{$E_a$ is only the energy needed to break key reactant bonds to the extent necessary for the reaction to proceed}. For instance, the activation energy for water formation is approximately $200\,\text{kJ\,mol}^{-1}$ — far less than the $1370\,\text{kJ\,mol}^{-1}$ that would be required for complete dissociation of all reactant bonds.
 
     \end{core}
 
     \begin{core}{Enthalpy Example (\textit{Autoionization of Water})}
 
-      Let's take a look at another example: the autoionization of water.
+      Consider the autoionization of water as another example.
 
-      \myfig{0.45}{thermodynamics_figures/water_ion_enthalpy.png}{Autoionization of Water Enthalpy}{fig:water_ion_enthalpy}
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=7cm,
+          xmin=0, xmax=10,
+          ymin=0, ymax=10,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={Reaction Progress},
+          ylabel={Potential Energy},
+          axis line style={thick},
+          \axispresetsone
+        ]
+        % Step 1 — H2O(l) level
+        \addplot[thick, black] coordinates {(0.5, 1.5) (2.5, 1.5)};
+        \node[font=\small] at (axis cs:1.5, 2) {\ce{H2O}};
+        \node[font=\small] at (axis cs:2.9, 2.5) {\small(1)};
 
-      Here, we see a net rise in PE, making the overall reaction endothermic ($\Delta H > 0$). The reaction is seperated into three distinct steps
+        % Step 2 — H(g), OH(g) level
+        \addplot[thick, black] coordinates {(2.0, 4.5) (5.0, 4.5)};
+        \node[font=\small] at (axis cs:3.5, 5) {\ce{H, OH}};
 
-      \bce{(1) Break 1 mole of O--H $\rightarrow$ $(1)(+467\,kJ\,mol^{-1})$}  
+        % Step 3 — H+, OH- (aq) top level
+        \addplot[thick, black] coordinates {(4.5, 7.0) (7.0, 7.0)};
+        \node[font=\small] at (axis cs:5.5, 7.5) {\ce{H+, OH}};
+        \node[font=\small] at (axis cs:4.6, 6.2) {\small(2)};
 
-      \bce{(2) Pull \ce{e^-} from 1 mole of H ("ionization energy") $\rightarrow$ $(1)(+1312\,kJ\,mol^{-1})$}
+        % Step 4 — H+(aq), OH-(aq) final level
+        \addplot[thick, black] coordinates {(6.5, 5.5) (9.0, 5.5)};
+        \node[font=\small] at (axis cs:7.8, 6) {\ce{H+, OH-}};
+        \node[font=\small] at (axis cs:6.1, 6.4) {\small(3)};
 
-      \bce{(3) Add \ce{e^-} to 1 mole of O ("electron affinity") $\rightarrow$ $(1)(-180\,kJ\,mol^{-1})$}
+        % vertical arrow 1 — H2O(l) to H(g), OH(g)
+        \draw[->] (axis cs:2.5, 1.5) -- (axis cs:2.5, 4.5);
 
-      Thus $\Delta H = +1599\,kJ\,mol^{-1}$ for the reaction.
+        % vertical arrow 2 — H(g), OH(g) to H+(g), OH-(g)
+        \draw[->] (axis cs:5.0, 4.5) -- (axis cs:5.0, 7.0);
+
+        % vertical arrow 3 — H+(g), OH-(g) down to H+(aq), OH-(aq)
+        \draw[->] (axis cs:6.5, 7.0) -- (axis cs:6.5, 5.5);
+
+        \end{axis}
+      }{enthalpy diagram for water autoionization}{fig:water_ion_enthalpy}{1}
+
+      The diagram above in \autoref{fig:water_ion_enthalpy} shows a net rise in PE, indicating that the overall reaction is endothermic ($\Delta H > 0$). The process can be decomposed into three distinct steps, each with an associated enthalpy contribution:
+
+      \begin{enumerate}[label=(\arabic*)]
+
+        \item Break 1 mol of O--H $\rightarrow$ $(1)(+467\,\text{kJ\,mol}^{-1})$
+
+        \item Remove \ce{e^-} from 1 mol of H (\textit{ionisation energy}) $\rightarrow$ $(1)(+1312\,\text{kJ\,mol}^{-1})$
+
+        \item Add \ce{e^-} to 1 mol of O (\textit{electron affinity}) $\rightarrow$ $(1)(-180\,\text{kJ\,mol}^{-1})$
+
+      \end{enumerate}
+
+      Thus $\Delta H = +1599\,\text{kJ\,mol}^{-1}$ for the reaction.
 
     \end{core}
 
     \begin{core}{Hess's Law}
 
-      If two or more chemical equations are added to give another chemical equation, the corresponding enthalpies of each reaction can be added to obtain the enthalpy of the combined reaction. This is called \textbf{Hess's Law}. Enthalpies are \textbf{state functions}, meaning it does not matter what path you take, the altitude difference is the same.
-
+      When two or more chemical equations are combined to yield an overall reaction, the enthalpy of that reaction is equal to the sum of the enthalpies of the constituent steps. This principle is known as \textbf{Hess's Law}, and it follows directly from the fact that enthalpy is a \textbf{state function}---one whose value depends only on the initial and final states of the system, not on the path taken between them.
       \[
-        \Delta H_{Rxn} = \sum \Delta H_{f}(products) - \sum \Delta H_{f}(reactants)
+        \Delta H_{\text{rxn}} = \sum \Delta H_{f}(\text{products}) - \sum \Delta H_{f}(\text{reactants})
       \]
 
-      In other words, this formula is equivalent to \textbf{undoing the formation of the reactants} and then \textbf{doing the formation of the products}.
+      Conceptually, this expression corresponds to notionally \textbf{reversing the formation of the reactants} (\textit{contributing a positive enthalpy term}) and then \textbf{carrying out the formation of the products} (\textit{contributing a negative enthalpy term}), with the net enthalpy change reflecting the difference between the two.
 
     \end{core}
 
     \begin{core}{Enthalpy Example (\textit{Iron Smelting})}
+      Consider the reaction of iron oxide with carbon. The formation of iron oxide is an exothermic process, as given by the following equation.
 
-      Lets take a look at the reaction of iron oxide with carbon.
+      \bce{\ce{2Fe(s) + \frac{3}{2}O2(g) -> Fe2O3(s)}\hspace{5mm}$\Delta H = -824\,\text{kJ\,mol}^{-1}$}
 
-      This is the chemical equation of the formation of iron oxide. The reaction is exothermic.
+      By Hess's Law, the reverse reaction---the decomposition of iron oxide---is endothermic with an equal and opposite enthalpy change. This is designated \textbf{Rxn A}.
 
-      \bce{\ce{2Fe(s) + \frac{3}{2}O2(g) -> Fe2O3(s)}\hspace{5mm}$\Delta H = -824\,kJ\,mol^{-1}$}
+      \bce{(\text{Rxn A})\hspace{2mm}\ce{Fe2O3(s) -> 2Fe(s) + \frac{3}{2}O2(g)}\hspace{5mm}$\Delta H_{A} = +824\,\text{kJ\,mol}^{-1}$}
 
-      Thus the opposite reaction (\textit{iron oxide deomposition}) is endothermic. We'll call this reaction \textbf{Rxn A}.
+      Next, consider the combustion of carbon, designated \textbf{Rxn B}.
 
-      \bce{(Rxn A) \ce{Fe2O3(s) -> 2Fe(s) + \frac{3}{2}O2(g)}\hspace{5mm}$\Delta H_{A} = +824\,kJ\,mol^{-1}$}
+      \bce{(\text{Rxn B})\hspace{2mm}\ce{C(s) + O2(g) -> CO2(g)}\hspace{5mm}$\Delta H_{B} = -394\,\text{kJ\,mol}^{-1}$}
 
-      Let's also take a look at the combustion of carbon. We'll call this reaction \textbf{Rxn B}.
+      Combining 2 equivalents of Rxn A with 3 equivalents of Rxn B yields the overall reduction of iron oxide by carbon, designated \textbf{Rxn C}.
 
-      \bce{(Rxn B). \ce{C(s) + O2(g) -> CO2(g)}\hspace{5mm}$\Delta H_{B} = -394\,kJ\,mol^{-1}$}
+      \bce{(\text{Rxn C})\hspace{2mm}\ce{2Fe2O3(s) + 3C(s) -> 4Fe(s) + 3CO2(g)}}
 
-      When we combine 2 Rxn A with 3 Rxn B, we get the following reaction of iron oxide with carbon. We'll call this reaction \textbf{Rxn C}.
-
-      \bce{(Rxn C) \ce{2Fe2O3(s) + 3C(s) -> 4Fe(s) + 3CO2(g)}}
-
-      Based on Hess's Law, the sum of the enthalpy changes of 2 Rxn A and 3 Rxn B is equal to the enthalpy change of the combined reaction.
+      Applying Hess's Law, the enthalpy of Rxn C is obtained by summing the scaled enthalpies of Rxn A and Rxn B.
       \[
-        \Delta H_C = 2 \Delta H_A + 3 \Delta H_B = +466\,kJ\,mol^{-1}
+        \Delta H_C = 2\Delta H_A + 3\Delta H_B = +466\,\text{kJ\,mol}^{-1}
       \]
 
-      Thus, it would take $+466\,kJ\,mol^{-1}$ to deoxidize 2 moles of iron oxide or $+233\,kJ\,mol^{-1}$ to deoxidize 1 mole of iron oxide. Making this process much more favorable compared to the $+824\,kJ\,mol^{-1}$ net enthalpy change in the absence of carbon.
-
-      \textit{This chemical reaction is process of smelting raw iron ore into pure iron.}
+      This result indicates that deoxidising 2 moles of iron oxide requires $+466\,\text{kJ\,mol}^{-1}$, or equivalently $+233\,\text{kJ\,mol}^{-1}$ per mole---a substantially more energetically favourable outcome than the $+824\,\text{kJ\,mol}^{-1}$ that would be required in the absence of carbon. This reaction forms the thermochemical basis of the iron smelting process, by which raw iron ore is reduced to pure iron.
 
     \end{core}
-
+    
     \begin{core}{Enthalpy Example (\textit{Vaporization of Water})}
 
-      Let's look at another example of the formation of \ce{H2O(g)} from \ce{H2O(l)} at 25$^\circ$C.
+      Consider the vaporization of water at $25\,^\circ$C, in which liquid water is converted to its gaseous phase.
 
-      \bce{\ce{H2O(l) -> H2O(g)}\hspace{5mm}$\Delta H_{Rxn} = ?$}
+      \bce{\ce{H2O(l) -> H2O(g)}\hspace{5mm}$\Delta H_{\text{rxn}} = ?$}
 
-      \bce{(Rxn A) \ce{H2O(l) -> H2(g) + \frac{1}{2}O2(g)}\hspace{5mm}$\Delta H_{A} = +286\,kJ\,mol^{-1}$}
+      This transformation can be decomposed into two intermediate steps. Rxn A represents the decomposition of liquid water into its constituent elements, and Rxn B represents the formation of gaseous water from those elements.
 
-      \bce{(Rxn B) \ce{H2(g) + \frac{1}{2}O2(g) -> H2O(g)}\hspace{5mm}$\Delta H_{B} = -242\,kJ\,mol^{-1}$}
+      \bce{(\text{Rxn A})\hspace{2mm}\ce{H2O(l) -> H2(g) + \frac{1}{2}O2(g)}\hspace{5mm}$\Delta H_{A} = +286\,\text{kJ\,mol}^{-1}$}
 
-      Thus
+      \bce{(\text{Rxn B})\hspace{2mm}\ce{H2(g) + \frac{1}{2}O2(g) -> H2O(g)}\hspace{5mm}$\Delta H_{B} = -242\,\text{kJ\,mol}^{-1}$}
+
+      Applying Hess's Law, the enthalpy of vaporization is obtained by summing the enthalpies of the two steps.
       \[
-        \Delta H_{Rxn} = \Delta H_{A} + \Delta H_{B} = +44\,kJ\,mol^{-1}
+        \Delta H_{\text{rxn}} = \Delta H_{A} + \Delta H_{B} = +44\,\text{kJ\,mol}^{-1}
       \]
 
-      or 
+      This result is consistent with the general formulation introduced previously, whereby the overall enthalpy change corresponds to \textbf{reversing the formation of the reactants} and \textbf{carrying out the formation of the products}.
       \[
-        \Delta H_{Rxn} = \sum \Delta H_{f}(products) - \sum \Delta H_{f}(reactants)
+        \Delta H_{\text{rxn}} = \sum \Delta H_{f}(\text{products}) - \sum \Delta H_{f}(\text{reactants})
       \]
 
-      In other words, this formula is equivalent to \textbf{undoing the formation of the reactants} and then \textbf{doing the formation of the products}.
-
-      % just make the reference to Hess's Law above
-
-    \end{core} 
+    \end{core}
 
 \section{Entropy}
 
