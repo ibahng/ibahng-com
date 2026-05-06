@@ -287,7 +287,7 @@
         \draw[->] (axis cs:6.5, 7.0) -- (axis cs:6.5, 5.5);
 
         \end{axis}
-      }{enthalpy diagram for water autoionization}{fig:water_ion_enthalpy}{1}
+      }{Enthalpy diagram for water autoionization}{fig:water_ion_enthalpy}{1}
 
       The diagram above in \autoref{fig:water_ion_enthalpy} shows a net rise in PE, indicating that the overall reaction is endothermic ($\Delta H > 0$). The process can be decomposed into three distinct steps, each with an associated enthalpy contribution:
 
@@ -370,67 +370,92 @@
 
   \subsection{Defining Entropy}
 
-    Enthalpy is just one factor in predicting whether a reaction will be favorable or unfavorable. For instance, the dissociation of ammonium chloride into its cooresponding ions is endothermic, yet it goes to completion.
-  
+    Enthalpy alone is insufficient to predict whether a reaction will proceed spontaneously. The dissociation of ammonium chloride into its constituent ions, for instance, is endothermic yet proceeds to completion.
+
     \bce{\ce{NH4Cl -> NH4+ + Cl-}\hspace{5mm}$\Delta H_{Rxn} = +14.8\,kJ\,mol^{-1}$}
 
-    What about the tendency for gas to expand into a vacuum? Although this isn't a reaction, it occurs in only one direction and $\Delta H = 0$, thus it cannot be explained by enthalpy alone.
+    Similarly, the spontaneous expansion of a gas into a vacuum occurs irreversibly despite $\Delta H = 0$, and thus cannot be accounted for by enthalpic considerations alone.
 
     \begin{core}{Entropy \& The Second Law of Thermodynamics}
 
-      There is a natural tendency for energy and matter to disperse. In chemistry terms, this means that systems tend to react towards a state with high \textbf{entropy}. This is also known as \textbf{the second law of thermodynamics}.
-
-      Introductory chemistry textbooks often describe entropy as \textit{disorder}. However, this is a very vague definition. Instead, entropy is more accurately defined as a measure of how many different ways (\textbf{microstates}) you can achieve a specific result (\textbf{macrostate}).
+      There exists a natural tendency for energy and matter to disperse---in thermodynamic terms, systems tend to evolve towards states of higher \textbf{entropy}. This principle constitutes \textbf{the second law of thermodynamics}. Although introductory texts often characterise entropy as \textit{disorder}, this description is imprecise. More rigorously, entropy is defined as a measure of the number of distinct microscopic configurations (\textbf{microstates}) consistent with a given observable state (\textbf{macrostate}).
 
     \end{core}
 
     \begin{core}{Entropy (\textit{Dice Analogy})}
 
-      Take the sum of rolling two dice for example. There are a total of 36 different combinations of rolling 2 dice, but the statistical likelihood of of sum outcomes is concentrated around 7. The outcome of the sum being 7 is the macrostate in this case, and the different combinations of possible dice rolls (6-1, 5-2, 4-3, 3-4, 2-5, 1-6) are the microstates. It is much less likely to be at a low entropy macrostate (\textit{like the sum of 2}) than a high entropy macrostate (\textit{like the sum of 7}) because of the number of valid microstates for each macrostate.
+      Consider the sum obtained from rolling two dice. Across all 36 possible outcomes, the probability distribution is strongly concentrated around a sum of 7. In this context, the macrostate is defined by the sum, while the microstates are the individual dice combinations that yield it (\textit{6--1, 5--2, 4--3, 3--4, 2--5, 1--6}). A low-entropy macrostate such as a sum of 2 has only a single accessible microstate, whereas the sum of 7 has six---making high-entropy macrostates statistically far more probable.
 
-      \myfig{0.45}{thermodynamics_figures/dice_roll.png}{Dice Roll Probability Distribution}{fig:dice_roll}
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=5cm,
+          ymin=0, ymax=7,
+          xmin=1.5, xmax=12.5,
+          xtick={2,3,4,5,6,7,8,9,10,11,12},
+          ytick={0,1,2,3,4,5,6},
+          xlabel={Sum of Dice},
+          ylabel={Count},
+          ybar,
+          axis y line=left,
+          bar width=0.3cm,
+          fill=blue!50!violet,
+          draw=white,
+          axis lines=left,
+        ]
+        \addplot coordinates {
+          (2,1) (3,2) (4,3) (5,4) (6,5) (7,6) (8,5) (9,4) (10,3) (11,2) (12,1)
+        };
+        \end{axis}
+      }{Dice roll probability distribution}{fig:dice_roll}{1}
 
     \end{core}
 
     \begin{core}{Entropy (\textit{Gas Molecule Traits})}
 
-      Now let's think about this in the context of gas molecules within a closed container at 25$^\circ$C. Intuitively, we can expect the gas to spontaneously disperse throughout the container volume. Just as rolling a sum of 7 on two dice is the most likely macrostate because of its high number of possible microstates (\textit{number combinations}), the gas utilizing the entire container volume is the most likely macrostate because of its higher number of possible microstates (\textit{positional combinations}). The low entropy macrostate counterpart is if all gas molecules concentrate into one corner of the container. There are much less possible microstates in which the gas molecules can arrange themselves in when restricted to a small corner compared to the entire container.
+      Consider a collection of gas molecules confined within a closed container. The spontaneous dispersion of the gas throughout the available volume is directly analogous to the dice example: uniform distribution across the container corresponds to the highest-entropy macrostate, as it is accessible through the greatest number of positional microstates. By contrast, the configuration in which all molecules are concentrated in a single corner of the container represents a low-entropy macrostate, accessible through comparatively few microstates. This is illustrated at a reduced scale in \autoref{fig:gas_positions}.
 
-      The following figure shows this concept nicely but at a smaller scale.
+      \myfig{0.6}{thermodynamics_figures/gas_positions.png}{Gas molecule position microstates}{fig:gas_positions}
 
-      \myfig{0.6}{thermodynamics_figures/gas_positions.png}{Gas Molecule Position Microstates}{fig:gas_positions}
+      The preceding discussion has focused exclusively on the positional coordinates of gas molecules. In reality, the number of accessible microstates for a given macrostate is further expanded by additional degrees of freedom, including rotational orientation, vibrational motion, translational velocity, and KE magnitude. Those dimensions associated with KE are, by extension, coupled to temperature. Just as positional microstates favour uniform spatial distribution, the microstates associated with KE favour its broad dispersal throughout the system---providing a statistical basis for the spontaneous transfer of heat from warmer to cooler regions.
 
-      So far, we've only talked about the coordinate positions of the gas molecules. In reality, there are also many other characteristics that we can include to expand the number of possible microstates there are for a given macrostate: rotational position, vibrational motion, translational motion, magnitude of KE, etc.
+      It is important to note that when gas molecules are described as being at $25\,^\circ$C, this refers to the \textit{average} KE of the ensemble---not to all molecules simultaneously possessing the KE equivalent of $25\,^\circ$C. At any given instant, individual molecules will deviate from this average, with some possessing slightly higher and others slightly lower KEs. Consequently, there exist far more microstates in which KEs are broadly distributed around the mean than those in which all molecules possess identical KEs.
 
-      Dimensions tied to KE are consequently tied to temperature. 
+      \myfig{0.95}{thermodynamics_figures/gas_KE.png}{Gas kinetic energy distribution}{fig:gas_ke}
 
-      Like the gas molecule coordinate positions, there are more possible microstates in which the distribution of T in the form of KE is more widely distributed across the entire container volume compared to being concentrated in one corner, hence the tendency for heat to transfer into cooler surroundings.
-
-      When we say that the gas molecules are at 25$^\circ$C, we're actually referring to the average KE of the gas molecules, NOT all gas molecules being at the KE equivalent of 25$^\circ$C simultaneously. At a random time instance, one gas molecule could be at the KE equivalent of 24.99$^\circ$C, and another at 25.01$^\circ$C. With that being said, there are many more possible microstates in which the KE magnitudes of the gas molecules are within a wider range compared to all being at that of 25$^\circ$C.
-      \myfig{0.7}{thermodynamics_figures/gas_KE.png}{Gas Kinetic Energy Distribution}{fig:gas_ke}
-
-      The graph above represents the counts of possible 5 number permutations that sum to 125 (and thus average out to 25) seperated by the maximum deviation from 25 that was allowed. The possible permutation ranges were also constrained to 0-50 inclusive for the sake of simplicity. As you can see, even in an extremely simplified model like this, there is a much larger number of possible microstates where the temperature ranges are more widely distributed than when all gas molecules are at the same KE such as the permutation (25, 25, 25, 25, 25). Thus there is a tendency for heat to be distributed more randomly through out gas molecules although the average KE is still 25$^\circ$C. This is the \textbf{Maxwell-Boltzmann Distribution} that we've visited \textit{1.2.1 Kinetic Molecular Therory and Ideal Gas Laws}.
+      \autoref{fig:gas_ke} plots the number of possible 5-integer permutations that sum to 125 (\textit{and thus average to 25}), partitioned by the maximum permitted deviation from the mean. Even in this highly simplified model, the number of accessible microstates increases dramatically as the permitted spread in KE widens---vastly outnumbering the single microstate in which all values equal 25, such as the permutation $(25, 25, 25, 25, 25)$. This statistical tendency for KE to be broadly and randomly distributed among gas molecules, while the ensemble average remains fixed, is the basis of the \textbf{Maxwell--Boltzmann Distribution} (\autoref{gas-core:max_boltz_dis}).
 
     \end{core}
 
     \begin{core}{Boltzmann Equation}
 
-      With that being said, entropy ($S$) can be defined through the \textbf{Boltzmann equation}.
+      Entropy ($S$) is formally quantified through the \textbf{Boltzmann equation}:
       \[
         S = k_B \ln(W)
       \]
 
-      where W represents the number of energetically equivalent microstates of a system and $k_B$ is the Boltzmann's constant represented as
-
+      where $W$ denotes the number of energetically equivalent microstates accessible to the system, and $k_B$ is the Boltzmann constant, defined as
       \[
-        k_B = \frac{R}{N_A} = \frac{8.314 J\,K^{-1}\,mol^{-1}}{6.022 \times 10^{23} units} = 1.38 \times 10^{-23}\,J\,K^{-1}  
+        k_B = \frac{R}{N_A} = \frac{8.314\,J\,K^{-1}\,mol^{-1}}{6.022 \times 10^{23}\,mol^{-1}} = 1.38 \times 10^{-23}\,J\,K^{-1}
       \]
 
-      where $R$ is the ideal gas constant in $J\,K^{-1}\,mol^{-1}$ and $N_A$ is Avogadro's number, which represents the number of units per mole. $k_B$ tell us how much thermal energy is contained in a single particle for every degree of temperature in a system. 
+      where $R$ is the ideal gas constant and $N_A$ is Avogadro's number. Physically, $k_B$ represents the amount of thermal energy contained per particle per degree of temperature.
 
-      And from our discussion of entropy, we can see that the change in number of accessible microstates is exponentially related to the change in the number of particles, thus the proportionality of entropy is to $ln(W)$ and not simply $W$. This relationship will be brought back to in \textit{3.2.3 Gibbs Free Energy and Equilibrium Constants}.
+      As the preceding discussion illustrates, the number of accessible microstates grows exponentially with the number of particles in the system. It is for this reason that entropy is proportional to $\ln(W)$ rather than $W$ directly---a relationship revisited in \autoref{core:G_eq}.
 
-      In more general terms, entropy increase ($\Delta S > 0$) as (1) temperature increases, (2) a reaction results in a net increase in number of molecules, and (3) a phase change towards more unstable phases occurs. When presented with more nuanced cases, always revert back to whether the change or reaction will increase or decrease the number of possible microstates.
+      In more general terms, entropy increases ($\Delta S > 0$) when
+
+      \begin{enumerate}
+
+        \item Temperature increases.
+
+        \item A reaction produces a net increase in the number of molecules.
+
+        \item A phase transition occurs toward a less ordered phase ($\text{solid} \rightarrow \text{liquid}$ or $\text{liquid} \rightarrow \text{gas}$).
+
+      \end{enumerate}
+
+      In more nuanced cases, the guiding principle remains whether the process increases or decreases the number of accessible microstates.
 
     \end{core}
 
@@ -438,78 +463,81 @@
 
     \begin{core}{The Third Law of Thermodynamics}
 
-      The \textbf{third law of thermodynamics} states that as the T of a system approaches absolute zero (0 Kelvin), its entropy approaches a constant minimum value, which is 0 for a perfect, pure crystal. This is critical because it ables us to quantify the absolute entropy of a system, molecule, mole of a substance, etc. Recall that we could not do the same with enthalpy because we could not quantify the absolute enthalpy of a system due to the absence of an absolute reference point (\textit{we could only calculate its change}).
+      The \textbf{third law of thermodynamics} states that as the temperature of a system approaches absolute zero ($0\,K$), its entropy approaches a constant minimum value---defined as zero for a perfect, pure crystal. This is significant because it provides an absolute reference point from which the entropy of any system, molecule, or quantity of substance can be determined. This stands in contrast to enthalpy, for which no such absolute reference exists and only changes can be meaningfully quantified.
 
     \end{core}
 
     \begin{core}{Entropy \& Temperature}
 
-      We measure entropy in the units of \textbf{Joules per Kelvin ($J/K$)}. While this unit may be difficult to wrap your head around, it is easier when compared to a similar unit like grams per liter ($g/L$) or density. Just as how density is a descriptive value of a substance of how much mass it would have at a certain volume, entropy is a descriptive value of how large the range of microstates it has access to (quantified as energy) for a certain temperature.
+      Entropy is expressed in units of \textbf{Joules per Kelvin ($J\,K^{-1}$)}. This unit is best understood by analogy: just as density ($g\,L^{-1}$) describes how much mass a substance occupies per unit volume, entropy describes the breadth of accessible microstates---quantified in units of energy---per unit temperature.
 
-      It's also important to keep in mind that \textbf{the entropy of a system (\textit{the ratio $J/K$}) increases with temperature}, but at a decreasing rate. Conceptually, we can imagine inputing the same amount of energy into a system of boiling water vs ice. The boiling water is already at a state of high entropy thus a 1 K increase in temperature does a lot less percent change to the system compared to a 1 K increase in temperature for ice, which is at a state of low entropy. We express this mathematically as  
+      It is also important to note that \textbf{the entropy of a system increases with temperature, but at a diminishing rate}. To build intuition, consider supplying an equal quantity of energy to boiling water and to ice. Since boiling water already exists in a high-entropy state, a $1\,K$ rise in temperature produces a proportionally smaller increase in entropy compared to the same temperature rise applied to ice, which begins in a low-entropy state. This relationship is expressed mathematically as
       \[
         \frac{dS}{dT} = \frac{C_{p}}{T}
       \]
 
-      This equation says that the rate at which entropy increases with temperature is proportional to the heat capacity of the system and inversely proportional to the temperature. We explained why entropy is inversely proportional to temperature above. $C_p$ is proportional to the rate of entropy change because a higher $C_p$ indicates a higher input of energy per Kelvin increased in temperature. For instance, you'd need to input a lot more energy to raise water by 1 K compared to Cu. Because you are pumping in so many Joules just to move the needle by 1 K for water, you are creating a massive amount of new molecular "chaos", whereas you aren't putting in as much energy in Cu for a 1 K uptick, thus less new "disorder".
+      This expression states that the rate of entropy change with respect to temperature is proportional to the heat capacity of the system ($C_p$) and inversely proportional to the temperature ($T$). The inverse dependence on $T$ reflects the diminishing effect described above. The proportionality to $C_p$ follows from the fact that a higher heat capacity requires a greater energy input per kelvin of temperature increase---and consequently generates a greater expansion of accessible microstates. For instance, raising the temperature of water by $1\,K$ requires substantially more energy than the same increase in copper; this large energy input into water produces a correspondingly greater increase in molecular disorder than the comparatively modest input required for copper.
 
     \end{core}
 
     \begin{core}{Thought Experiment (\textit{Increasing the Temperature of Water})}
 
-      Let's discuss the case of increasing the temperature of water from 25$^\circ$C to 50$^\circ$C in the context of enthalpy and entropy. 
+      Consider the heating of water from $25\,^\circ$C to $50\,^\circ$C, examined through the dual lenses of enthalpy and entropy.
 
-      Enthalpy is simple calorimetry as we've learned previously. $\Delta H$ is simply the the products of $mol_{\ce{H2O}}$, $C_{\ce{H2O}}$, and $\Delta T$. 
+      From an enthalpic standpoint, this is a straightforward calorimetric calculation: $\Delta H$ is given by the product of the molar quantity of \ce{H2O}, its heat capacity $C_{\ce{H2O}}$, and the temperature change $\Delta T$.
 
-      In order to quantify this energy input through entropy gain, we must consider (1) the the increasing entropy of water as T increases and (2) the decreasing rate at which entropy increases as T increase. Mathematically, this is summarized as 
-
+      To express the same energy input in terms of entropy, two factors must be accounted for simultaneously: (1) the monotonic increase in entropy with temperature, and (2) the diminishing rate at which this increase occurs. These conditions are summarised mathematically as
       \[
-        \frac{dS}{dT} > 0 , \frac{d^2S}{dT^2} < 0
+        \frac{dS}{dT} > 0 , \quad \frac{d^2S}{dT^2} < 0
       \]
 
-      The area under the curve of a line graph presenting S as a function of T, from the initial T to the final T, represents the access to a greater number of microstates and/or a higher entropy. The overall shape of the line would be similar to $f(x) = ln(x)$.
-      \myfig{0.7}{thermodynamics_figures/lnx.png}{Entropy vs Temperature}{fig:lnx}
+      The entropy gained over this temperature interval corresponds to the area under the $S$ versus $T$ curve between the initial and final temperatures, reflecting the cumulative expansion of accessible microstates. The functional form of this curve resembles $f(x) = \ln(x)$, consistent with the constraints above.
 
-      When we get really nuanced with the definitions of entropy and enthalpy, we realize that enthalpy is a measure of temperature dependent entropy characteristics in a way. The limitations of enthalpy is that you cannot quantify the change in entropy dependent on positional coordinates, which stretch outside the scope of this course.
+      \myfig{0.7}{thermodynamics_figures/lnx.png}{Entropy vs temperature}{fig:lnx}
+
+      On closer inspection, enthalpy can be understood as a macroscopic surrogate for the entropy change of the \textit{surroundings}---that is, the thermal, temperature-dependent component of total entropy change. A complete thermodynamic description requires additionally accounting for the entropy change of the \textit{system} itself, which captures configurational and positional contributions that enthalpy is blind to. It is the sum of these two contributions that ultimately determines spontaneity---a relationship formalized by Gibbs free energy (\textit{\autoref{core:gibbs}}).
 
     \end{core}
 
 \section{Gibbs Free Energy}
 
-  \subsection{Gibbs Free Energy}
+  \subsection{Gibbs Free Energy Foundations}
 
     \begin{core}{Deriving the Gibbs Free Energy Equation}
 
-      Okay, now let's revisit the \textbf{second law of thermodynamics} which states that the total entropy of an isolated system always increases over time. Our universe is essentially an isolated system (\textit{albeit a very large one}), thus we can represent this law as the equation
-
+      Returning to the \textbf{second law of thermodynamics}---which states that the total entropy of an isolated system increases over time---and treating the universe as an isolated system, this law can be expressed as the following.
       \[
         \Delta S_{universe} = \Delta S_{system} + \Delta S_{environment} > 0
       \]
 
-      Let's look at a scenario where we melt 10 moles of water. The energy inputted into the system would be the enthalpy of fusion, and since the temperature of the system is static during phase changes, we do not need any integral calculations. Thus the entropy change of the ice cube (the system) would be
-
+      To illustrate, consider the melting of 10 moles of ice. Since temperature remains constant during a phase transition, the entropy change of the system can be calculated directly from the enthalpy of fusion without integration.
       \[
-        \Delta S_{system} = \frac{\Delta H_{fusion}}{T_{system}} = \frac{(6.02\,kJ\,mol^{-1})(10\,mol)}{273\,K} = + 220J\,K^{-1}
+        \Delta S_{system} = \frac{\Delta H_{fusion}}{T_{system}} = \frac{(6.02\,\text{kJ\,mol}^{-1})(10\,\text{mol})}{273\,\text{K}} = +220\,\text{J\,K}^{-1}
       \]
 
-      As for the surroundings, the temperature does increase (\textit{in theory}), but the shift is negligible due to the surroundings being quite literally the rest of the universe. As a result, we keep $T_{surroundings}$ at 298K. In most chemistry problems, the "surroundings" are modeled as a \textbf{thermal reservoir}. By definition, a reservoir is so large that its heat capacity is effectively infinite in comparison to the system.
+      The temperature of the surroundings does technically decrease upon absorbing heat from the system, but this change is negligible given that the surroundings are modelled as a \textbf{thermal reservoir}---a body so large that its heat capacity is effectively infinite relative to the system, and its temperature remains constant at $298\,\text{K}$.
 
-      With this in mind, the cooresponding entropy change of the surroundings would be
-
+      The corresponding entropy change of the surroundings is therefore
       \[
-        \Delta S_{surroundings} = \frac{-\Delta H_{fusion}}{T_{surroundings}} = \frac{-(6.02\,kJ\,mol^{-1})(10\,mol)}{298\,K} = - 202J\,K^{-1}
+        \Delta S_{surroundings} = \frac{-\Delta H_{fusion}}{T_{surroundings}} = \frac{-(6.02\,\text{kJ\,mol}^{-1})(10\,\text{mol})}{298\,\text{K}} = -202\,\text{J\,K}^{-1}
       \]
 
-      Consequently, $S_{universe}$ would then be
-
+      The total entropy change of the universe is then
       \[
-        \Delta S_{universe} = \Delta S_{system} + \Delta S_{surroundings} = 220J\,K^{-1} + (- 202J\,K^{-1}) = + 18J\,K^{-1}
+        \Delta S_{universe} = \Delta S_{system} + \Delta S_{surroundings} = 220\,\text{J\,K}^{-1} + (-202\,\text{J\,K}^{-1}) = +18\,\text{J\,K}^{-1}
       \]
 
-      Conceptually, this means that (1) the entropy of the system increased due to the input of heat into the system and (2) the entropy of the surroundings decreased due to the transfer of heat from the surroundings to the system (\textit{but to a lesser degree because the marginal difference in the context of the greater temperature of the surroundings is smaller as we've explained previously}).
+      This result reflects two competing contributions.
 
-      Let's algebraically manipulate the equation for $S_{universe}$.
+      \begin{enumerate}[label=(\arabic*)]
 
+        \item The entropy of the system increases upon absorption of heat.
+
+        \item The entropy of the surroundings decreases as heat is transferred from it---\textbf{but to a lesser degree}, since the same quantity of energy represents a smaller change at the higher temperature of the surroundings.
+
+      \end{enumerate}
+
+      Algebraically manipulating the expression for $\Delta S_{universe}$ yields the \textbf{Gibbs free energy} equation. Substituting $\Delta S_{surroundings} = -\frac{\Delta H_{sys}}{T_{surr}}$:
       \[
         \Delta S_{uni} = \Delta S_{surr} + \Delta S_{sys} > 0
       \]
@@ -526,17 +554,26 @@
         -T_{surr}\Delta S_{uni} = \Delta H_{sys} - T_{surr}\Delta S_{sys} < 0
       \]
 
-      We have just defined the \textbf{Gibbs free energy} equation where $\Delta G = -T_{surr}\Delta S_{uni}$.
-
+      Defining $\Delta G = -T_{surr}\Delta S_{uni}$, the condition for spontaneity becomes
       \[
         \Delta G = \Delta H_{sys} - T_{surr}\Delta S_{sys} < 0
       \]
 
     \end{core}
 
-    \begin{core}{Gibbs Free Energy}
+    \begin{core}[label=core:gibbs]{Gibbs Free Energy}
 
-      \textbf{Gibbs free energy} is another way to conveying whether the total entropy of the universe is increasing or not (\textit{a net spontenaity score}). It acts as a balancing act between two universal desires: (1) to maximize the entropy of the universe (2) to minimize the enthalpy of the system. If a reaction fulfills both conditions, the reaction is \textbf{spontaneous}. If a reaction does not fulfill both conditions, the reaction is \textbf{non-spontaneous}. If a reaction fulfills only one, the reaction's spontenaity is determined by which force is greater.
+      \textbf{Gibbs free energy} ($\Delta G$) provides a unified criterion for thermodynamic spontaneity, effectively quantifying the net tendency of the universe's entropy to increase. It represents a balance between two competing thermodynamic driving forces.
+
+      \begin{enumerate}[label=(\arabic*)]
+
+        \item The tendency to maximise the entropy of the universe
+
+        \item The tendency to minimise the enthalpy of the system.
+
+      \end{enumerate}
+
+      When both conditions are satisfied simultaneously, the reaction is unconditionally \textbf{spontaneous}; when neither is satisfied, the reaction is unconditionally \textbf{non-spontaneous}; when only one is satisfied, spontaneity is determined by the relative magnitudes of the two contributions.
 
       \begin{table}[H]
         \centering
@@ -550,46 +587,85 @@
           $+$ & $-$ & ANY & $+$ & Reactant favored ($\leftarrow$) \\
         \end{tabular}
         \label{tab:gibbs}
+        \caption{Reaction favorability across different ΔH and ΔS values}
       \end{table}
 
-      $\Delta G_{rxn}$ measures the difference between the free energies of the reactants and products when all components of the reaction are present at standard-state conditions. $\Delta G_{rxn}$ can be either calculated from cooresponding $\Delta H_{rxn}$ and $\Delta S_{rxn}$ values or from the the Gibbs free energies of formation ($\Delta G_{f}$). Like both enthalpy and entropy are state functions, $\Delta G_{rxn}$ is also a state function.
-
+      $\Delta G_{rxn}$ quantifies the difference in free energy between products and reactants under standard-state conditions, and---like enthalpy and entropy---is a state function. It may be calculated either from the corresponding $\Delta H_{rxn}$ and $\Delta S_{rxn}$ values, or directly from tabulated standard Gibbs free energies of formation ($\Delta G_{f}$).
       \[
-        \Delta G_{rxn} = \Delta G_{f}(products) - \Delta G_{f}(reactants)
+        \Delta G_{rxn} = \sum \Delta G_{f}(\text{products}) - \sum \Delta G_{f}(\text{reactants})
       \]
 
-      An easy way to conceptualize the Gibbs free energy equation is to treat $\Delta S$ as a scaling factor for the effect of temperature on free energy. 
+      A useful way to interpret the Gibbs free energy equation is to treat $T\Delta S$ as a temperature-dependent scaling term that modulates the entropic contribution to spontaneity---amplifying or diminishing the influence of entropy depending on the thermal conditions of the system.
 
-    \end{core} 
+    \end{core}
 
     \begin{core}{Gibbs Free Energy Example (\textit{Barium Hydroxide \& Ammonium Chloride Reaction})}
 
-      Let's take a look at the reaction between barium hydroxide and ammonium chloride.
+      Consider the reaction between barium hydroxide octahydrate and ammonium chloride.
 
       \bce{\ce{Ba(OH)2*8H2O(s) + 2NH4Cl(s) -> BaCl2(aq) + 2NH3(aq) + 10H2O(l)}}
 
-      This reaction is highly endothermic ($\Delta H = 62\,kJ\,mol^{-1}$). However, just by first glance at the states of the reactants vs products, we can see that this reaction raises entropy tremendously ($\Delta S = 368\,J\,mol^{-1}\,K^{-1}$). Thus the free energy provided by the product entropy is much greater than that of the reactant entropy at the same temperature because the products have an access to a greater number of possible microstates due to several factors (\textit{number of moles of molecules, phases, etc}). The magnitude of this "entropic energy" gain at 298K is greater than the magnitude of the enthalpy increase the reaction provides, thus the reaction is favored.
+      Although the reaction is highly endothermic ($\Delta H = +62\,\text{kJ\,mol}^{-1}$), inspection of the physical states of the reactants and products reveals a substantial increase in entropy ($\Delta S = +368\,\text{J\,mol}^{-1}\,\text{K}^{-1}$), driven by the increase in the number of moles of molecules and the transition to more disordered phases. At $298\,\text{K}$, the magnitude of the entropic contribution $T\Delta S = +109.7\,\text{kJ\,mol}^{-1}$ exceeds the enthalpic penalty, yielding $\Delta G < 0$ and confirming that the reaction proceeds spontaneously.
 
     \end{core}
 
     \begin{core}{Thought Experiment (\textit{Liquid Water at Absolute Zero})}
 
-      Let's imagine water states at a theoretical temperature of 0 Kelvin. We already know that liquid water will freeze at absolute zero but why? First, let us take a look at the freezing phase change reaction.
+      Consider the behaviour of water at a theoretical temperature of $0\,\text{K}$. It is well established that liquid water freezes at absolute zero, but the thermodynamic basis for this warrants examination. The relevant phase transition is represented bythe following equation.
 
       \bce{\ce{H2O(l) -> H2O(s)}}
 
-      The process is exothermic thus the process is enthalpically favorable. However, the entropy falls as the phase change from liquid to solid occurs. Yet this entropy drop does not matter in the context of absolute zero because the free energy (\textit{or access to microstates}) of liquid water and solid water would be the same. \textit{It is counterintuitive to conceptualize liquid water at absolute zero because water as we know it doesn't exist in the liquid state at absolute zero. But this phenomenon is exactly what we are trying to explain.} At absolute zero, entropic free energy is zero, thus the only factor that matters is enthalpy. 
-      \myfig{0.55}{thermodynamics_figures/water_Ggraph.png}{Gibbs Free Energy of Water}{fig:water_ggraph}
+      Freezing is exothermic and therefore enthalpically favourable. Although the transition from liquid to solid entails a decrease in entropy, this entropic penalty carries no thermodynamic weight at absolute zero---since $T\Delta S = 0$ when $T = 0\,K$, the entropic contribution to $\Delta G$ vanishes entirely. At absolute zero, Gibbs free energy reduces to enthalpy alone, and the exothermic nature of freezing makes the solid state unconditionally favoured. Note that while liquid water cannot physically exist at $0\,K$, this theoretical limiting case is precisely what the thermodynamic framework predicts and seeks to explain.
 
-      At higher temperatures, the free energy bound the entropy of liquid state of water is always greater than that of the solid state. However, until this difference in free energy bound to entropy surpasses the enthalpic change that occurs during freezing (\textit{which approaches as T increases}), the frozen state of water is favored. It is at 273K that we see the phase change from solid to liquid occur. This is where free energy bound to entropy drops too much during a freezing reaction to push Gibbs free energy into the positives, thus the freezing phase change reaction is not favored and the reverse is favored.
+      \pgfig{
+        \begin{axis}[
+          width=10cm,
+          height=10cm,
+          xmin=0, xmax=10,
+          ymin=-6, ymax=6,
+          xtick=\empty,
+          ytick={0},
+          xlabel={$T$},
+          ylabel={$\Delta G^\circ$},
+          axis lines=center,
+          axis line style={thick},
+          \axispresetsone,
+          xmajorgrids=false,
+          ymajorgrids=false,
+        ]
+        % main line: G = -DS*T + DH, intercept at DH < 0, slope > 0 (DS < 0)
+        \addplot[thick, black, domain=0:9.5] {x - 5};
+        % dashed vertical line at T = 273K (x = 4.28)
+        \addplot[thick, black, dashed] coordinates {(5, -6) (5, 6)};
+        % slope annotation
+        \node[font=\small, align=left] at (axis cs:8, 4.5) {slope $= -\Delta S^\circ$\\ so $\Delta S^\circ < 0$};
+        % intercept annotation
+        \node[font=\small, align=left] at (axis cs:-1.5, -4.5) {intercept\\ $= \Delta H^\circ < 0$};
+        % DG = 0 annotation
+        \node[font=\small] at (axis cs:5, -6.5) {$\Delta G^\circ = 0$ \ @ \ $T = \tfrac{\Delta H^\circ}{\Delta S^\circ} = 273\,\text{K}$};
+        % 273K annotation
+        \node[font=\small] at (axis cs:5, 6.5) {$273\,\text{K}\ (0^\circ\text{C})$};
+        % phase change arrows
+        \draw[->] (axis cs:4.4, 5.2) -- (axis cs:5.6, 5.2) node[right, above, font=\small] {liquid};
+        \draw[->] (axis cs:5.6, 4.6) -- (axis cs:4.4, 4.6) node[left, below, font=\small] {ice};
+        % product favored annotation (green)
+        \node[font=\small, text=green!60!black, align=center] at (axis cs:2.5, 0) {$\Delta G^\circ < 0$\\ product favored\\ (\ce{H2O(s)})};
+        % reactant favored annotation (red)
+        \node[font=\small, text=red!80!black, align=center] at (axis cs:7.5, 0) {$\Delta G^\circ > 0$\\ reactant favored\\ (\ce{H2O(l)})};
+        % boxed equation
+        \node[draw, thick] at (axis cs:7.5, -5) {$\ce{H2O_{(l)} <=> H2O_{(s)}}$};
+        \end{axis}
+      }{Gibbs Free Energy of Water}{fig:water_graph}{0.85}
+
+      As temperature increases, the $T\Delta S$ term grows in magnitude, progressively amplifying the entropic penalty associated with freezing. Below $273\,\text{K}$, this penalty is insufficient to offset the enthalpic driving force, and the solid phase remains favoured. At $273\,\text{K}$, the two contributions are exactly balanced ($\Delta G = 0$), marking the equilibrium melting point. Above this temperature, the entropic penalty outweighs the enthalpic driving force, rendering freezing non-spontaneous and the liquid phase thermodynamically favoured.
 
     \end{core}
 
-    The Gibbs free energy equation allows us to gauge the favorability of a reaction by comparing the free energies provided by the enthalpy changes across the reactants and products and the free energies provided by the entropy change across the reactants and products. Entropy changes at a higher surrounding T will magnify the effects of entropy differences on free energy. This is because at higher temperatures, the system has more thermal energy to distribute among its avilable microstates, making the free energy "reward" for an already greater number of microstates (high entropy) much larger vs a lower number of microstates (low entropy). The universe always wants to minimize free energy or the potential to do spontaneous work.
+    The Gibbs free energy equation provides a unified framework for evaluating reaction spontaneity by weighing the enthalpic and entropic contributions to the total free energy change. At elevated temperatures, the $T\Delta S$ term is amplified, increasing the thermodynamic reward for reactions that generate greater numbers of accessible microstates. This reflects the fact that at higher temperatures, the system possesses greater thermal energy to distribute across available microstates, making the free energy difference between high- and low-entropy states more pronounced. In this sense, the universe can be understood as evolving perpetually towards states of minimum free energy---that is, towards configurations with the greatest capacity for spontaneous change.
 
   \subsection{Free Energy \& Equilibrium}
 
-    \begin{core}{Gibbs Free Energy \& Equilibrium}
+    \begin{core}[label=core:G_eq]{Gibbs Free Energy \& Equilibrium}
 
       We have established so far that if a reaction's $\Delta G$ is negative, it is favorable, and if it is positive, it is unfavorable. However, from EXTERNAL REFERENCE TO EQUILIBRIUM, we know that just because a reaction is favorable, it does not mean that it goes to completion. Many reactions find an equlibrium point where some reactants or products are still leftover although their presence is not favored in the context of $\Delta G$.
 

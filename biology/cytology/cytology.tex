@@ -1035,229 +1035,334 @@
 
     \begin{core}{Reaction Rates \& Enzymes}
 
-      So far, we have discussed metabolism in terms of whether biological reactions are energetically favorable (\textit{spontaneous}) or unfavorable (\textit{non-spontaneous}). However, we have not yet considered the \textbf{rate at which these reactions occur}.
+      Thus far, the discussion of metabolism has centered on the \textbf{thermodynamic favourability} of biological reactions---that is, whether a given reaction is spontaneous or non-spontaneous. However, thermodynamic spontaneity alone does not determine whether a reaction is biologically meaningful; equally important is the \textbf{rate at which the reaction proceeds}.
 
-      Even if a reaction is thermodynamically spontaneous, it may proceed so slowly that it is effectively negligible on a biological timescale. This is where \textbf{enzymes} play a critical role.
+      A reaction may be thermodynamically spontaneous yet proceed so slowly under physiological conditions that it is effectively negligible on a biological timescale. This kinetic barrier is where \textbf{enzymes} play an indispensable role.
 
-      For a reaction to proceed, reactant molecules must first overcome an energy barrier known as the \textbf{activation energy} ($E_A$). This energy corresponds to the formation of a high-energy transition state, in which existing bonds are partially broken and new bonds are partially formed.
+      For any reaction to proceed, reactant molecules must first surmount an energy barrier known as the \textbf{activation energy} ($E_a$). This barrier corresponds to the formation of a temporary \textbf{transition state}---a high-energy configuration in which existing bonds are partially broken and new bonds are partially formed.
+      
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=7cm,
+          xmin=-4, xmax=4,
+          ymin=-0.3, ymax=1.4,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={Reaction proceeding},
+          ylabel={Potential Energy},
+          axis line style={thick},
+          \axispresetsone
+        ]
+        % energy curve — gaussian-like hill
+        \addplot[
+            thick,
+            black,
+            domain=-1.8:1.5,
+            samples=200,
+        ] {exp(-x^2) - 0.15*x};
+        % reactant energy level (left)
+        \addplot[thick, black] coordinates {(-3.5, 0.30916) (-1.8, 0.30916)};
+        % product energy level (right) — slightly lower
+        \addplot[thick, black] coordinates {(1.5, -0.1196) (3.5, -0.1196)};
 
-      \myfig{0.5}{cytology_figures/reaction_energy}{caption}{fig:fig59}
+        % dashed line at reactant energy level
+        \addplot[thick, black, dashed] coordinates {(-3.5, 0.30916) (0, 0.30916)};
+        % dashed line at peak of energy curve (exp(0) - 0.15*0 = 1)
+        \addplot[thick, black, dashed] coordinates {(-2, 1) (1, 1)};
 
-      Enzymes \textbf{lower the activation energy of a reaction}, allowing it to proceed at a much \textbf{faster rate} without being consumed in the process. They accomplish this by \textbf{stabilizing the transition state}, the high-energy configuration between reactants and products in which bonds are partially broken and partially formed.
+        \draw[->] (axis cs:-1, 0.35) -- (axis cs:-1, 0.95);
+        \node[font=\small] at (axis cs:-1.5, 0.6) {E$_{\text{a}}$};
 
-      \myfig{0.5}{cytology_figures/reaction_energy2}{caption}{fig:fig60}
+        \node[font=\small] at (axis cs:-2.5, 0.23) {\ce{AB + CD}};
+        \node[font=\small] at (axis cs:2.8, -0.2) {\ce{AD + CB}};
+        \end{axis}
+      }{Potential energy diagram}{fig:fig59}{1}
+    
+      Enzymes function by \textbf{lowering the activation energy} of a reaction, thereby enabling it to proceed at a rate compatible with cellular function without being consumed in the process. They achieve this by \textbf{stabilising the transition state}, reducing the energy required to reach it and thus increasing the proportion of reactant molecules with sufficient energy to react.
+
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=7cm,
+          xmin=-4, xmax=4,
+          ymin=-0.3, ymax=1.4,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={Reaction proceeding},
+          ylabel={Potential Energy},
+          axis line style={thick},
+          \axispresetsone
+        ]
+
+        \addplot[
+            thick,
+            black,
+            domain=-1.8:1.5,
+            samples=200,
+        ] {exp(-x^2) - 0.15*x};
+        % energy curve — gaussian-like hill
+        \addplot[
+            thick,
+            red,
+            domain=-1.8:1.5,
+            samples=200,
+        ] {0.5*exp(-x^2) - 0.14*x + 0.038};
+        % reactant energy level (left)
+        \addplot[thick, black] coordinates {(-3.5, 0.30916) (-1.8, 0.30916)};
+        % product energy level (right) — slightly lower
+        \addplot[thick, black] coordinates {(1.5, -0.1196) (3.5, -0.1196)};
+
+        % dashed line at reactant energy level
+        \addplot[thick, black, dashed] coordinates {(-3.5, 0.30916) (0, 0.30916)};
+        % dashed line at peak of energy curve (exp(0) - 0.15*0 = 1)
+        \addplot[thick, black, dashed] coordinates {(-2, 1) (1, 1)};
+        \addplot[thick, black, dashed] coordinates {(-2, 0.538) (1, 0.538)};
+
+        \draw[->] (axis cs:-1.5, 0.35) -- (axis cs:-1.5, 0.5);
+        \node[font=\small] at (axis cs:-2, 0.4) {E$_{\text{a}}$};
+
+        \node[font=\small] at (axis cs:-2.5, 0.23) {\ce{AB + CD}};
+        \node[font=\small] at (axis cs:2.8, -0.2) {\ce{AD + CB}};
+        \end{axis}
+      }{Potential energy diagram with (\textit{red}) and without (\textit{black}) an enzyme}{fig:fig60}{1}
 
     \end{core}    
 
   \subsection{Enzyme Mechanisms}
 
-    The reactant upon which an enzyme acts is called its \textbf{substrate}. The enzyme binds its substrate (or substrates, if multiple reactants are involved), forming an \textbf{enzyme--substrate complex}. Within this complex, the enzyme facilitates the conversion of the substrate into the product(s) of the reaction.
+    \begin{core}{Enzyme \& Substrates}
 
-    The overall process can be summarized as follows
+      The reactant upon which an enzyme acts is termed its \textbf{substrate}. Upon binding to its substrate---or substrates, in reactions involving multiple reactants---the enzyme forms an \textbf{enzyme--substrate complex}, within which the catalytic conversion of substrate to product is facilitated.
 
-    \bce{\ce{Enzyme + Substrate -> Enzyme-Substrate Complex -> Enzyme + Product}}
+      \bce{\ce{Enzyme + Substrate -> Enzyme-Substrate Complex -> Enzyme + Product}}
 
-    The specificity of an enzyme for its substrate is determined by the shape and chemical properties of its \textbf{active site}, the region where the substrate binds. The active site creates a unique microenvironment that facilitates the conversion of substrate to product. Enzymes are \textbf{highly specific}, meaning that each enzyme typically catalyzes a particular reaction and acts on a specific substrate (or closely related substrates).
+      Substrate specificity is governed by the geometry and chemical properties of the enzyme's \textbf{active site}---the region to which the substrate binds. The active site establishes a distinctive microenvironment that promotes the conversion of substrate to product. Enzymes exhibit \textbf{high specificity}, with each enzyme typically catalysing a single reaction and acting on one substrate (or a narrow class of structurally related substrates).
 
-    When the substrate binds to the active site, weak interactions (such as hydrogen bonds, ionic interactions, and van der Waals forces) between the enzyme and substrate induce a slight conformational change in the enzyme. This adjustment allows the active site to fit more snugly around the substrate and stabilize the transition state. This phenomenon is known as \textbf{induced fit}.
+      Upon substrate binding, weak non-covalent interactions---including hydrogen bonds, ionic interactions, and van der Waals forces---induce a conformational change in the enzyme. This adjustment optimises the interaction between the active site and the substrate, stabilizing the transition state and enhancing catalytic efficiency. This phenomenon is known as \textbf{induced fit}.
 
-    \myfig{0.5}{cytology_figures/enzyme_substrate}{caption}{fig:fig61}
+      \myfig{0.5}{cytology_figures/enzyme_substrate}{Enzyme--substract complex cycle}{fig:fig61}
 
-    Each enzyme has its own \textbf{optimal conditions}, typically defined by a specific range of pH, temperature, and other environmental factors at which the enzyme functions most efficiently. In humans, many enzymes operate optimally at approximately 35--40$^\circ$C and within a pH range of 6--8, though there are important exceptions. For example, pepsin, a digestive enzyme in the stomach, functions most effectively at the highly acidic pH found in that environment. Outside their optimal ranges, enzymes may lose their functional three-dimensional structure and become \textbf{denatured}, resulting in reduced or lost catalytic activity.
-
-    Many enzymes also require nonprotein helpers to carry out catalysis. These molecules are called \textbf{cofactors}. Cofactors may be inorganic, such as metal ions like iron or zinc, or organic. Organic cofactors are referred to as \textbf{coenzymes}. Many vitamins are nutritionally important because they function as coenzymes or as precursors from which coenzymes are synthesized.
-
-    \myfig{0.4}{cytology_figures/cofactor}{caption}{fig:fig62}
-
-    Enzymes can also be \textbf{inhibited} by certain substances, reducing or blocking their ability to catalyze a reaction. Enzyme inhibition is commonly categorized as \textbf{competitive} or \textbf{noncompetitive}.
-
-    \begin{core}{Competitive Inhibition}
-
-      \textbf{Competitive inhibitors} resemble the substrate and compete for binding at the enzyme's active site. By occupying the active site, they prevent the substrate from binding and being converted into product.
-
-      \myfig{0.6}{cytology_figures/competitive}{caption}{fig:fig63}
-      
     \end{core}
 
-    \begin{core}{Noncompetitive Inhibition}
+    \begin{core}{Optimal Enzyme Conditions}
 
-      On the other hand, \textbf{noncompetitive inhibitors} bind to a site other than the active site (an allosteric site), rather than binding to the substrate itself. This binding alters the enzyme's conformation in a way that reduces or prevents its catalytic activity, even if the substrate is still able to bind.
+      Each enzyme operates most efficiently within a characteristic range of environmental conditions, including temperature, pH, and ionic strength, collectively referred to as its \textbf{optimal conditions}. In humans, most enzymes function optimally at temperatures of 35--40$^\circ$C and at pH values between 6 and 8, though notable exceptions exist. 
 
-      \myfig{0.5}{cytology_figures/noncompetitive}{caption}{fig:fig64}
+      \textit{Pepsin, a protease active in the stomach, for instance, is adapted to function under highly acidic conditions.} 
 
-      Most enzyme inhibitors are \textbf{reversible}, meaning they bind noncovalently and can dissociate from the enzyme, allowing normal enzymatic activity to resume once the inhibitor is removed. In contrast, \textbf{irreversible inhibitors} typically bind covalently or otherwise permanently inactivate the enzyme. Many toxins and poisons act as irreversible enzyme inhibitors.
+      When exposed to conditions outside their optimal range, enzymes may undergo \textbf{denaturation}---the loss of their functional three-dimensional conformation---resulting in diminished or abolished catalytic activity.
 
-      Unregulated, simultaneous activity of all metabolic pathways would lead to metabolic imbalance. Therefore, enzymes are \textbf{regulated} so that their activity can be precisely controlled in response to the cell's needs and environmental conditions. One major mechanism of regulation is \textbf{allosteric regulation}, in which the binding of a regulatory molecule at one site on a protein affects the protein's function at a separate site. This interaction can either activate or inhibit the enzyme's activity.
+    \end{core}
 
-      \myfig{0.5}{cytology_figures/allosteric}{caption}{fig:fig65}
+    \begin{core}{Cofactors}
 
-      In another form of allosteric activation, the binding of a substrate molecule to one active site in a multisubunit enzyme increases the activity at other active sites within the same enzyme. This phenomenon is known as \textbf{cooperativity}.
+      Many enzymes require the assistance of nonprotein molecules to carry out catalysis; these are collectively termed \textbf{cofactors}. Cofactors may be inorganic---such as metal ions including iron or zinc---or organic, in which case they are designated \textbf{coenzymes}. The nutritional importance of many vitamins derives from their role as coenzymes or as biosynthetic precursors from which coenzymes are derived.
 
-      \myfig{0.5}{cytology_figures/cooperativity}{caption}{fig:fig66}
+      \myfig{0.4}{cytology_figures/cofactor}{Cofactors}{fig:fig62}
+
+    \end{core}
+
+    \begin{core}{Inhibition}
+
+      Enzymatic activity can be reduced or abolished by molecules known as \textbf{inhibitors}. Enzyme inhibition is broadly classified into the following two categories.
+
+      \myfig{0.7}{cytology_figures/inhibition}{Competitive (\textit{left}) and noncompetitive (\textit{right}) inhibition}{fig:fig63}
+
+      \begin{itemize}
+
+        \item \textbf{Competitive inhibitors} are molecules that bear structural similarity to the substrate and compete directly for occupancy of the enzyme's active site. By binding to the active site, they preclude substrate binding and thereby suppress product formation.
+
+        \item \textbf{Noncompetitive inhibitors} bind to a site distinct from the active site---termed the \textbf{allosteric site}. This binding induces a conformational change in the enzyme that diminishes or abolishes catalytic activity, even when the substrate remains capable of binding.
+
+      \end{itemize}
+
+    \end{core}
+
+    \begin{core}{Allosteric Regulation}
+
+      Most inhibitors are \textbf{reversible}, associating with the enzyme through noncovalent interactions and dissociating upon removal of the inhibitor, thereby restoring normal catalytic function. \textbf{Irreversible inhibitors}, by contrast, form covalent bonds with the enzyme or otherwise permanently abolish its activity. \textit{Many biological toxins and poisons exert their effects through irreversible enzyme inhibition.}
+
+      Unregulated and simultaneous activity across all metabolic pathways would result in profound metabolic imbalance. Consequently, enzyme activity is subject to precise \textbf{regulation} in response to the cell's metabolic state and environmental conditions. A principal mechanism of such regulation is \textbf{allosteric regulation}, in which the binding of a regulatory molecule at one site on the enzyme modulates its activity at a spatially distinct site, either \textbf{activating} or \textbf{inhibiting} catalysis.
+
+      \myfig{0.5}{cytology_figures/allosteric}{Allosteric regulation}{fig:fig65}
+
+      A related phenomenon, known as \textbf{cooperativity}, occurs in multisubunit enzymes whereby substrate binding at one active site enhances catalytic activity at the remaining active sites within the same enzyme complex.
+
+      \myfig{0.5}{cytology_figures/cooperativity}{Cooperativity}{fig:fig66}
 
     \end{core}
 
     \begin{core}{Feedback Inhibition}
 
-      Now that we have seen how enzyme activity is regulated, an important mode of metabolic control is \textbf{feedback inhibition}. \textbf{Feedback inhibition} occurs when the end product of a metabolic pathway inhibits an enzyme involved earlier in that same pathway. This creates a self-regulating loop that helps maintain appropriate levels of the product, ensuring that the pathway operates efficiently (i.e., not producing too much or too little relative to the organism's needs).
+      A particularly important mode of metabolic regulation is \textbf{feedback inhibition}, in which the end product of a biosynthetic pathway inhibits an enzyme acting earlier in that same pathway. This self-regulating mechanism maintains product concentrations within an appropriate range, preventing both overproduction and underproduction relative to the cell's requirements.
 
-      An example of this process is seen in isoleucine synthesis, where the accumulation of isoleucine inhibits an early enzyme in its own biosynthetic pathway.
+      A well-characterised example is the biosynthesis of isoleucine, in which the accumulation of the end product allosterically inhibits an enzyme catalysing an early step in its own synthetic pathway.
 
-      \myfig{0.65}{cytology_figures/feedback}{caption}{fig:fig67}
+      \myfig{0.5}{cytology_figures/feedback}{Feedback inhibition}{fig:fig67}
 
     \end{core}
 
 \section{Cellular Respiration}
 
-  \subsection{Respiration Basics} % THIS SECTION NEEDS EDITING ======================================
+  \subsection{Respiration Basics}
 
     \begin{core}[label=core:cell_respiration]{Cellular Respiration}
 
-      \textbf{Cellular respiration} is the set of metabolic processes by which cells extract chemical energy from organic molecules and use it to synthesize ATP.
+      \textbf{Cellular respiration} encompasses the set of metabolic processes by which cells extract chemical energy from organic molecules and transduce it into the synthesis of ATP. These processes are broadly categorised into the following categories.
 
-    \end{core}
+      \begin{enumerate}
 
-    It is broadly categorized into \textbf{aerobic respiration}, \textbf{anaerobic respiration}, and \textbf{fermentation}.
+        \item \textbf{Aerobic respiration} is the most energetically efficient catabolic pathway available to most organisms, in which molecular oxygen serves as the terminal electron acceptor during the stepwise oxidation of organic fuel molecules.
 
-    \begin{core}{Aerobic Respiration}
+        \myfig{0.7}{cytology_figures/aerobic}{Aerobic respiration}{fig:fig68}
 
-      \textbf{Aerobic respiration} is the most energetically efficient catabolic pathway in many organisms, in which oxygen serves as the final electron acceptor during the oxidation of organic fuels.
+        \item \textbf{Anaerobic respiration} follows identically to aerobic respiration, however it uses an inorganic molecule (\textit{such as sulfate or nitrate}) as the terminal electron acceptor rather than oxygen.
 
-      \myfig{0.7}{cytology_figures/aerobic}{caption}{fig:fig68}
+        \sbs{0.45}{
+          \item \textbf{Fermentation} is the partial catabolism of sugars or other organic molecules that proceeds in the absence of oxygen and without the involvement of an electron transport chain.
+        }{
+          \myfig{1}{cytology_figures/fermentation}{Fermentation}{fig:fig69}
+        }
 
-    \end{core}
-
-    \begin{core}{Fermentation}
-
-      \textbf{Fermentation} is the partial degradation of sugars or other organic molecules that occurs without the use of oxygen and without an electron transport chain.
-
-      \myfig{0.55}{cytology_figures/fermentation}{caption}{fig:fig69}
+      \end{enumerate}
 
     \end{core}
 
     \begin{core}{Reduction-Oxidation Reactions}
 
-      The general mechanism underlying energy production in cellular respiration involves \textbf{redox (reduction--oxidation) reactions}, which entail the transfer of electrons between molecules. The \textbf{loss of electrons} (\ce{e^-}) by a substance is called \textbf{oxidation}, whereas the \textbf{gain of electrons} is called \textbf{reduction}. Consider the following simple, nonbiological example involving sodium and chlorine.
+      The central mechanism by which cellular respiration extracts energy from organic molecules involves \textbf{redox (reduction--oxidation) reactions}---chemical processes in which \ce{e^-}s are transferred between molecular species. The \textbf{loss of \ce{e^-}s} by a substance is termed \textbf{oxidation}, while the \textbf{gain of \ce{e^-}s} is termed \textbf{reduction}. The following non-biological example involving sodium and chlorine serves as a useful illustration.
 
-      \myfig{0.4}{cytology_figures/nacl}{caption}{fig:fig70}
+      \myfig{0.4}{cytology_figures/nacl}{Reduction-oxidation reaction of sodium and chlorine}{fig:fig70}
 
-      Analogous to the reaction above, cellular respiration occurs in the following manner.
+      The same redox principles apply in the biological context of cellular respiration, as depicted below.
 
-      \myfig{0.55}{cytology_figures/redox}{caption}{fig:fig71}
-
-    \end{core}
-
-    \begin{core}{Nicotinamide Adenine Dinucleotide (NADH)}
-
-      This transfer of \ce{e^-}s occurs via the coenzymes \textbf{\ce{NAD+} (oxidized form) and \ce{NADH} (reduced form)}. \ce{NAD+} accepts electrons from substrates---often from H-C-OH groups---with the assistance of \textbf{dehydrogenase enzymes}, resulting in the oxidation of the substrate to C=O and the reduction of \ce{NAD+} to \ce{NADH} (along with the release of \ce{H^+}). 
-
-      \myfig{0.55}{cytology_figures/nad}{caption}{fig:fig72}
+      \myfig{0.55}{cytology_figures/redox}{Reduction-oxidation reaction of cellular respiration}{fig:fig71}
 
     \end{core}
 
-    \begin{core}{Flavin Adenine Dinucleotide}
+    \begin{core}{NADH \& FADH2}
 
-      Another important electron carrier is \textbf{FAD}, which functions similarly to \ce{NAD+} as an electron acceptor. Its reduced form, \ce{FADH2}, will also play a key role throughout cellular respiration. Keep these two molecules and their roles in mind as we examine each step of the respiration process.
+      Electron transfer in cellular respiration is mediated by the coenzyme \textbf{\ce{NAD+}} (\textit{oxidised form}) and its reduced counterpart \textbf{\ce{NADH}} (\textit{nicotinamide adenine dinucleotide}). Acting in concert with \textbf{dehydrogenase enzymes}, \ce{NAD+} accepts \ce{e^-}s from substrate molecules---typically from hydroxyl groups of the form \ce{H-C-OH}---oxidizing the substrate to a carbonyl (\ce{C=O}) while itself being reduced to \ce{NADH}, with release of \ce{H+}.
+
+      \myfig{0.55}{cytology_figures/nad}{Reduction of \ce{NAD+} to \ce{NADH}}{fig:fig72}
+
+      A second important \ce{e^-} carrier is \textbf{FAD} (\textit{flavin adenine dinucleotide}), which functions analogously to \ce{NAD+} as an electron acceptor. Its reduced form, \ce{FADH2}, plays an equally significant role throughout the respiration pathway.
 
     \end{core}
 
   \subsection{Glycolysis, Pyruvate Oxidation, Citric Acid Cycle, and Oxidative Phosphorylation}
     
-    Let us first examine the process of aerobic respiration, beginning with \textbf{glycolysis}, which takes place in the \textbf{cytoplasm}.
-
     \begin{core}{Glycolysis}
 
-      \textbf{GLYCOLYSIS} literally means "sugar splitting," which accurately describes the process. Glucose, a 6-carbon sugar, is split into 2 3-carbon molecules called \textbf{pyruvate}. Glycolysis can be divided into two phases: [1] the Energy Investment Phase and [2] the Energy Payoff Phase.
+      \sbs{0.4}{
+        The process of aerobic respiration begins with \textbf{glycolysis}---from the Greek for "\textit{sugar splitting}"--- which is the metabolic pathway in which a single glucose molecule (\textit{a 6-carbon sugar}) is cleaved into two 3-carbon molecules of \textbf{pyruvate}. The pathway is divided into two phases.
 
-      In the \textbf{energy investment phase}, 2 ATP are initially consumed to phosphorylate glucose and initiate the pathway. In the \textbf{energy payoff phase}, 4 ATP and 2 NADH are produced, along with 2 pyruvate and 2 \ce{H2O} molecules from the original glucose molecule. \textit{Although multiple stepwise reactions occur within each phase, we will not discuss them in detail here.}
+        \begin{itemize}
 
-      \myfig{0.6}{cytology_figures/glycolysis}{caption}{fig:fig73}
+          \item In the \textbf{energy investment phase}, 2 ATP are consumed to phosphorylate glucose and prime it for cleavage.
+
+          \item In the subsequent \textbf{energy payoff phase}, 4 ATP and 2 NADH are generated, along with 2 pyruvate and 2 \ce{H2O} molecules. 
+
+        \end{itemize}
+
+        \textit{Although each phase comprises multiple enzymatic steps, their mechanistic details lie beyond the current scope of these notes.}
+      }{
+        \myfig{0.87}{cytology_figures/glycolysis}{Glycolysis}{fig:fig73}
+      }
 
     \end{core}
 
     \begin{core}{Pyruvate Oxidation}
 
-      Afterward, \textbf{PYRUVATE OXIDATION} occurs. Pyruvate is transported into the \textbf{mitochondrial matrix} (the compartment enclosed by the inner mitochondrial membrane), where it is converted into a two-carbon compound called \textbf{acetyl-CoA}. This reaction is catalyzed by a multienzyme complex known as \textbf{pyruvate dehydrogenase}. During this process, \textbf{2 additional NADH are produced} (per glucose) as the two pyruvate molecules are oxidized to acetyl-CoA, with carbon released as \ce{CO2}.
-
-      \myfig{0.5}{cytology_figures/pyruvate_de}{caption}{fig:fig74}
+      \sbs{0.46}{
+        Following glycolysis, each pyruvate molecule is transported into the \textbf{mitochondrial matrix}---the compartment enclosed by the inner mitochondrial membrane---where it undergoes \textbf{pyruvate oxidation}. This reaction, catalysed by the multienzyme complex \textbf{pyruvate dehydrogenase}, converts pyruvate into the two-carbon compound \textbf{acetyl-CoA}, releasing one carbon per pyruvate as \ce{CO2} and generating 2 additional NADH per glucose molecule.
+      }{
+        \myfig{0.95}{cytology_figures/pyruvate_de}{Pyruvate oxidation}{fig:fig74}
+      }
 
     \end{core}
 
     \begin{core}{Citric Acid (Krebs) Cycle}
 
-      Acetyl-CoA then enters the \textbf{CITRIC ACID CYCLE} (also known as the \textbf{KREBS CYCLE}). The citric acid cycle is a series of reactions (\textit{each step mediated by a specific corresponding enzyme}) that further oxidizes the acetyl group of acetyl-CoA, releasing its carbons as \ce{CO2} and generating additional \ce{NADH} and \ce{FADH2}. The cycle also produces 1 ATP (or GTP) per acetyl-CoA, which corresponds to 1 ATP per pyruvate.
+      Acetyl-CoA subsequently enters the \textbf{citric acid cycle} (\textit{also known as the \textbf{Krebs cycle}}), a series of enzyme-mediated reactions occurring in the mitochondrial matrix. Each turn of the cycle fully oxidises the acetyl group of acetyl-CoA, releasing its two carbons as \ce{CO2} and generating additional \ce{NADH} and \ce{FADH2}. One molecule of ATP (\textit{or the energetically equivalent GTP}) is also produced per acetyl-CoA, corresponding to 2 ATP per glucose molecule.
 
-      \myfig{0.8}{cytology_figures/krebs}{caption}{fig:fig75}
+      \myfig{0.6}{cytology_figures/krebs}{Citric acid (\textit{Krebs}) cycle}{fig:fig75}
 
-      As shown above, the process regenerates the initial reactant, \textit{oxaloacetate}; hence, it is referred to as a \textbf{cycle}.
+      As illustrated in \autoref{fig:fig75}, the pathway regenerates its initial reactant, \textit{oxaloacetate}, thereby completing the \textit{cycle} and enabling continuous operation.
 
     \end{core}
 
-    Thus far, with a bit of calculation, 1 glucose molecule has yielded:
+    Summing the outputs of the three stages described, a single glucose molecule yields the following:
 
-    \bce{Glycolysis $\rightarrow$ 2 ATP, 2 NADH}
-    
-    \bce{Pyruvate Oxidation $\rightarrow$ 2 NADH (\textit{one per pyruvate})}
-    
-    \bce{Citric Acid Cycle $\rightarrow$ 6 NADH, 2 \ce{FADH2}, 2 ATP}
+    \begin{itemize}
 
-    In total, this amounts to 10 NADH, 2 \ce{FADH2}, and 4 ATP produced. However, cellular respiration yields approximately 30--32 ATP per glucose overall.
+      \item Glycolysis $\rightarrow$ 2 ATP, 2 NADH
+
+      \item Pyruvate Oxidation $\rightarrow$ 2 NADH (\textit{one per pyruvate})
+
+      \item Citric Acid Cycle $\rightarrow$ 6 NADH, 2 \ce{FADH2}, 2 ATP
+
+    \end{itemize}
+
+    This amounts to a cumulative yield of 10 NADH, 2 \ce{FADH2}, and 4 ATP. However, the overall ATP yield of cellular respiration is approximately 30--32 ATP per glucose---the bulk of which is generated in the final stage.
 
     \begin{core}{Oxidative Phosphorylation}
 
-      The majority of ATP is generated when NADH and \ce{FADH2} donate their electrons to the \textbf{electron transport chain}. This final stage is known as \textbf{OXIDATIVE PHOSPHORYLATION}.
+      \textbf{Oxidative phosphorylation} is the final stage of cellular respiration, in which the electron carriers \ce{NADH} and \ce{FADH2} donate their electrons to the \textbf{electron transport chain (ETC)}.
 
-      \myfig{1}{cytology_figures/ox_phos}{caption}{fig:fig76}
+      \myfig{0.95}{cytology_figures/ox_phos}{Oxidative phosphorylation}{fig:fig76}
 
-      Within the mitochondrial matrix, \ce{NADH} and \ce{FADH2} are oxidized back to their respective forms, \ce{NAD+} and \ce{FAD}, releasing electrons (\ce{e^-}) and protons (\ce{H^+}). The electrons enter the \textbf{electron transport chain} (Complexes I, II, III, and IV), where they move through a series of carriers to progressively lower energy states before ultimately being transferred to \ce{O2} (hence \textbf{aerobic} respiration). Oxygen then combines with electrons and \ce{H^+} to form \ce{H2O} as a byproduct.
+      Within the mitochondrial inner membrane, \ce{NADH} and \ce{FADH2} are oxidised to \ce{NAD+} and \ce{FAD} respectively, releasing \ce{e^-}s and protons (\ce{H^+}). The \ce{e^-}s traverse a series of protein complexes (Complexes I--IV), descending to progressively lower energy states before being transferred to \ce{O2}---the terminal electron acceptor---which combines with the \ce{e^-}s and \ce{H^+}s to yield \ce{H2O} as a byproduct.
 
-      The energy released during these electron transfers is used to pump \ce{H^+} from the matrix into the intermembrane space, creating an electrochemical gradient. \textbf{ATP synthase} then harnesses the energy stored in this gradient—--known as the \textbf{proton-motive force}—--as \ce{H^+} diffuse "downhill" back into the matrix, driving the phosphorylation of ADP to form ATP. 
+      The energy liberated during electron transfer is harnessed to pump \ce{H^+} from the mitochondrial matrix into the intermembrane space, establishing an electrochemical gradient known as the \textbf{proton-motive force}. \textbf{ATP synthase} exploits this gradient, coupling the thermodynamically favourable diffusion of \ce{H^+} back into the matrix to the phosphorylation of ADP, thereby generating ATP.
 
-      It is during this stage that the majority of ATP is produced, bringing the total yield to approximately 30--32 ATP per glucose.
+      It is through this mechanism that the majority of ATP is produced, bringing the total cellular yield to approximately 30--32 ATP per glucose molecule.
 
     \end{core}
 
-    Ultimately, the chemical bond energy stored in glucose is transferred through multiple intermediate forms, with the final energy capture occurring in the formation of the bond between ADP and inorganic phosphate to produce ATP.
-
+    The chemical energy stored in glucose is thus transduced through a sequence of intermediate forms, with the ultimate energy capture occurring via the phosphorylation of ADP to ATP.
     \[
       \text{glucose} \rightarrow \text{NADH} \rightarrow \text{ETC} \rightarrow \text{proton-motive force} \rightarrow \text{ATP}
     \]
 
   \subsection{Anaerobic Respiration \& Fermentation}
     
-    Now, let us revisit respiration in the absence of oxygen, which can be divided into \textbf{fermentation} and \textbf{anaerobic respiration}.
+    Having examined aerobic respiration, we now turn to energy-harvesting pathways that operate in the absence of oxygen, broadly categorised as \textbf{anaerobic respiration} and \textbf{fermentation}.
 
     \begin{core}{Anaerobic Respiration}
 
-      \textbf{Anaerobic respiration} is carried out by certain prokaryotes and uses substances other than oxygen as the terminal electron acceptor in a similar energy-harvesting process—hence the term \textit{anaerobic}. In this pathway, the ETC is still utilized, which is a key feature that distinguishes anaerobic respiration from fermentation.
+      \textbf{Anaerobic respiration} is employed by certain prokaryotes and proceeds by a mechanism analogous to aerobic respiration, with the critical distinction that an inorganic molecule other than oxygen---such as nitrate (\ce{NO3^-}) or sulfate (\ce{SO4^{2-}})---serves as the terminal \ce{e^-} acceptor. Crucially, the ETC is retained in anaerobic respiration, which constitutes the principal feature distinguishing it from fermentation.
 
     \end{core}
 
     \begin{core}{Fermentation}
 
-      \textbf{Fermentation} is the more relevant process for us. It is a partial degradation of sugars or other organic fuels that occurs without oxygen and without the use of the ETC. Essentially, fermentation consists of glycolysis followed by reactions that regenerate \ce{NAD+} by transferring electrons from \ce{NADH} to pyruvate or to derivatives of pyruvate. 
+      \textbf{Fermentation} is the more biologically widespread of the two anaerobic pathways. It involves the partial catabolism of sugars or other organic fuels in the absence of both oxygen and the ETC. The pathway consists of glycolysis followed by subsidiary reactions whose primary function is to regenerate \ce{NAD+} by transferring \ce{e^-}s from \ce{NADH} to pyruvate or pyruvate-derived intermediates---thereby sustaining continued glycolytic activity.
 
-      The only ATP produced is the net 2 ATP generated during glycolysis. \textit{As you can see, this is far less efficient than aerobic respiration.} Fermentation can be divided into \textbf{alcohol} fermentation and \textbf{lactic acid} fermentation.
+      The sole ATP yield is the net 2 ATP generated during glycolysis, rendering fermentation substantially less energetically efficient than aerobic respiration. Two principal variants are recognised: \textbf{alcohol fermentation} and \textbf{lactic acid fermentation}.
 
-      In \textbf{ALCOHOL FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to ethanol. \textit{Yeast is a well-known example of an organism that performs this type of fermentation. For thousands of years, humans have used yeast in brewing and baking. The \ce{CO2} produced during alcohol fermentation by baker's yeast causes bread dough to rise.}
+      \begin{itemize}
 
-      \myfig{0.6}{cytology_figures/alc}{caption}{fig:fig77}
+        \item In \textbf{alcohol fermentation}, pyruvate is converted to ethanol with the concomitant oxidation of \ce{NADH} to \ce{NAD+} and release of \ce{CO2}. \textit{Yeast represents the most well-known organism performing this pathway, and has been exploited by humans for millennia in brewing and baking---the \ce{CO2} produced by baker's yeast during fermentation is responsible for the leavening of bread dough.}
 
-      In \textbf{LACTIC ACID FERMENTATION}, \ce{NADH} is oxidized to \ce{NAD+} during the conversion of pyruvate to lactic acid. \textit{This type of fermentation occurs in humans when \ce{O2} is in short supply, such as during intense exercise.}
+        \myfig{0.5}{cytology_figures/alc}{Alcohol fermentation}{fig:fig77}
 
-      \myfig{0.6}{cytology_figures/lac}{caption}{fig:fig78}
+        \item In \textbf{lactic acid fermentation}, pyruvate is instead reduced to lactate, again with the concomitant oxidation of \ce{NADH} to \ce{NAD+}. \textit{This pathway is employed by human muscle cells under conditions of oxygen limitation, such as during sustained intense exercise.}
+
+        \myfig{0.5}{cytology_figures/lac}{Lactic acid fermentation}{fig:fig78}
+
+      \end{itemize}
 
     \end{core}
 
-    Fermentation, anaerobic respiration, and aerobic respiration are the three cellular pathways that produce ATP by harvesting the chemical energy stored in food. All three pathways begin with glycolysis, which oxidizes glucose (and other organic fuels) to pyruvate, yielding a net production of 2 ATP. Additionally, all three processes use \ce{NAD+} as the oxidizing agent that accepts electrons (\ce{e^-}) from food during glycolysis.
-
-    The key differences among these pathways lie in the total amount of ATP produced and in the mechanisms by which \ce{NADH} is oxidized back to \ce{NAD+}.
+    Fermentation, anaerobic respiration, and aerobic respiration collectively constitute the three principal ATP-generating pathways by which cells harvest chemical energy from organic fuels. All three share a common origin in glycolysis, which oxidises glucose and other substrates to pyruvate with a net yield of 2 ATP, and all three employ \ce{NAD+} as the primary oxidising agent during this initial stage. Their key distinctions lie in the magnitude of total ATP produced and in the mechanism by which \ce{NADH} is subsequently reoxidised to \ce{NAD+} to sustain continued metabolic flux.
 
 \section{Photosynthesis}
 
   \subsection{Photosynthesis Basics}
 
-  \begin{core}[label=core:photosynthesis]{Photosynthesis}
+    \begin{core}[label=core:photosynthesis]{Photosynthesis}
 
       \textbf{Photosynthesis} is the process by which the energy of sunlight is converted into chemical energy stored in sugars, ultimately nourishing nearly all life on Earth, either directly or indirectly.
 
