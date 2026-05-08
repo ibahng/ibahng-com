@@ -8,6 +8,7 @@
 \input{../../presets/biology/preamble}
 
 \externaldocument[the-]{../../chemistry/thermodynamics/thermodynamics}[../../chemistry/thermodynamics/thermodynamics.pdf]
+\externaldocument[qua-]{../../chemistry/quantization/quantization}[../../chemistry/quantization/quantization.pdf]
 
 \begin{document}
 
@@ -1307,7 +1308,7 @@
 
     This amounts to a cumulative yield of 10 NADH, 2 \ce{FADH2}, and 4 ATP. However, the overall ATP yield of cellular respiration is approximately 30--32 ATP per glucose---the bulk of which is generated in the final stage.
 
-    \begin{core}{Oxidative Phosphorylation}
+    \begin{core}[label=core:ox_phos]{Oxidative Phosphorylation}
 
       \textbf{Oxidative phosphorylation} is the final stage of cellular respiration, in which the electron carriers \ce{NADH} and \ce{FADH2} donate their electrons to the \textbf{electron transport chain (ETC)}.
 
@@ -1364,21 +1365,19 @@
 
     \begin{core}[label=core:photosynthesis]{Photosynthesis}
 
-      \textbf{Photosynthesis} is the process by which the energy of sunlight is converted into chemical energy stored in sugars, ultimately nourishing nearly all life on Earth, either directly or indirectly.
+      \textbf{Photosynthesis} is the process by which light energy is captured and converted into chemical energy stored in organic molecules, serving as the foundation of nearly all life on Earth, either directly or indirectly.
 
-      Just as cellular respiration takes place in the mitochondria, photosynthesis occurs in the \textbf{chloroplasts}. Its complex series of chemical reactions can be summarized by the following equation. Notice that it is, in many ways, the reverse of cellular respiration, except for the form of energy involved.
+      Analogous to the role of the mitochondria in cellular respiration (\textit{\autoref{core:cell_respiration}}), photosynthesis is localized to the \textbf{chloroplasts}. The overall process, though mechanistically complex, can be represented by the following net equation. Notably, photosynthesis is broadly the reverse of cellular respiration, distinguished primarily by the form of energy involved: whereas cellular respiration harnesses \textbf{chemical energy}, photosynthesis is driven by \textbf{light energy}.
 
       \bce{\ce{6CO2 + 12H2O + \text{Light energy} -> C6H12O6 + 6O2 + 6H2O}}
 
     \end{core}
 
-    \begin{core}{Autotrophs \$ Heterotrophs}
+    \begin{core}{Autotrophs \& Heterotrophs}
 
-      Within the biosphere, photosynthesis is carried out exclusively by \textbf{autotrophs}, organisms capable of producing their own organic food from inorganic substances and therefore not dependent on other living organisms for energy. In contrast, \textbf{heterotrophs} cannot synthesize their own food and must obtain energy by consuming organic compounds produced by autotrophs or by other heterotrophs.
+      Within the biosphere, photosynthesis is performed exclusively by \textbf{autotrophs}---organisms capable of synthesizing organic compounds from inorganic precursors and thus independent of other organisms for their energy supply. \textbf{Heterotrophs}, by contrast, lack this biosynthetic capacity and must obtain energy by consuming organic matter derived from autotrophs or other heterotrophs.
 
-      \myfig{0.5}{cytology_figures/trophs}{caption}{fig:fig79}
-
-      Consequently, the energy utilized by heterotrophs can, in nearly all cases, be traced back to photosynthesis performed by autotrophs.
+      \textit{It follows that the energy available to heterotrophs can, in virtually all cases, be traced back to photosynthetic activity in autotrophs.}
 
     \end{core}
 
@@ -1388,97 +1387,105 @@
 
     \begin{core}{Light Reactions}
 
-      The \textbf{LIGHT REACTIONS} convert solar energy into chemical energy and take place in the \textbf{thylakoid membrane}. To understand the light reactions, it is important to have a basic understanding of light energy, wavelength, photons, and absorption. Please refer to \textit{Introductory Chemistry 4.1: Light}.
+      The \textbf{light reactions} are responsible for the conversion of solar energy into chemical energy, and occur within the \textbf{thylakoid membrane}. A foundational understanding of light energy, wavelength, photons, and absorption (\textit{\autoref{qua-sect:light}}) is prerequisite to this discussion.
 
-      The key molecules within chloroplasts that mediate the light reactions are photosynthetic pigments, most notably chlorophyll. Chlorophyll is a pigment that absorbs light energy and subsequently excites its \ce{e^-}. Chlorophyll can be categorized into \textbf{chlorophyll a} and \textbf{chlorophyll b}, while \textbf{carotenoids} function as accessory pigments. Among these, chlorophyll a is the primary light-capturing pigment that participates directly in the light reactions. Although each pigment has a slightly different absorption spectrum, their overall spectral patterns are similar.
+      The light reactions are mediated by photosynthetic pigments localized within the chloroplast, most notably \textbf{chlorophyll}. Chlorophyll absorbs incident light energy and, in doing so, promotes its \ce{e^-}s to higher energy states. It is classified into two forms, \textbf{chlorophyll a} and \textbf{chlorophyll b}, with \textbf{carotenoids} serving as accessory pigments. Of these, chlorophyll a is the principal light-capturing pigment that participates directly in the light reactions. While each pigment exhibits a distinct absorption spectrum, their overall spectral profiles are broadly similar.
 
-      \myfig{0.4}{cytology_figures/absorption}{caption}{fig:fig80}
+      \myfig{0.5}{cytology_figures/absorption}{Absorption spectrum of chlorophyll a, chlorophyll b, and carotenoids}{fig:fig80}
 
-      As shown above, wavelengths corresponding to the color green are least absorbed and are therefore reflected or transmitted by the pigment molecules. This is why leaves typically appear green (and sometimes yellow), but rarely blue, purple, or red.
+      As illustrated above, wavelengths corresponding to green light are absorbed least efficiently and are instead reflected or transmitted by the pigment molecules. This accounts for the characteristically green appearance of leaves and, in some cases, yellow---but seldom blue, purple, or red.
 
-      When a \ce{e^-} is excited to a higher potential energy (PE) level, it eventually falls back to its ground state, releasing energy as heat or light in the process.
+      Upon excitation to a higher potential energy level, an electron is thermodynamically unstable and will eventually return to its ground state, dissipating the absorbed energy as heat or fluorescent light.
 
-      \myfig{0.4}{cytology_figures/excited}{caption}{fig:fig81}
+      \myfig{0.5}{cytology_figures/excited}{Energy dissipation of an excited electron}{fig:fig81}
 
-      In chloroplasts, this energy is captured and funneled through \textbf{photosystems}. A photosystem consists of a \textbf{reaction-center complex}, which contains a pair of chlorophyll a molecules and a \textbf{primary \ce{e^-} acceptor}, surrounded by \textbf{light-harvesting complexes}.
+      In chloroplasts, however, this energy is captured and directed through specialized molecular assemblies known as \textbf{photosystems}. Each photosystem comprises a \textbf{reaction-center complex}---containing a pair of chlorophyll a molecules and a \textbf{primary \ce{e^-} acceptor}---surrounded by an antenna network of \textbf{light-harvesting complexes}.
 
-      \myfig{0.45}{cytology_figures/photosystem}{caption}{fig:fig82}
+      \myfig{0.4}{cytology_figures/photosystem}{Photosystem}{fig:fig82}
 
-      There are two types of photosystems: \textbf{Photosystem II (PS II)} and \textbf{Photosystem I (PS I)}. Together, they capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}.
+      Two distinct photosystems operate in series: \textbf{Photosystem II (PS II)} and \textbf{Photosystem I (PS I)}. Acting in concert, they transduce light energy into chemical energy in the form of ATP and \ce{NADPH}.
 
       Here is a step-by-step description of the light reactions mediated by these photosystems.
 
-      \myfig{1}{cytology_figures/light_r}{caption}{fig:fig83}
+      \myfig{0.9}{cytology_figures/light_r}{Light reactions}{fig:fig83}
 
-      (1) A photon of light strikes a pigment molecule within the light-harvesting complex of PS II, exciting one of its electrons to a higher energy level. As this \ce{e^-} returns to its ground state, the energy is transferred to a neighboring pigment molecule, exciting one of its electrons in turn. This energy transfer continues from pigment to pigment until it reaches the pair of chlorophyll a molecules in the reaction-center complex.
+      \begin{enumerate}[label=(\arabic*)]
 
-      (2) The excited \ce{e^-} from the chlorophyll a pair in the reaction-center complex is then transferred to the primary \ce{e^-} acceptor. The reaction center replaces the lost electrons with electrons derived from the splitting of \ce{H2O} (a process catalyzed by an enzyme complex), producing \ce{O2} and \ce{H^+} as byproducts. The released \ce{H^+} contribute to the buildup of a proton gradient across the thylakoid membrane.
+        \item A photon absorbed by a pigment molecule within the light-harvesting complex of PS II excites one of its electrons to a higher energy level. Rather than decaying back to the ground state, the excitation energy is transferred resonantly to an adjacent pigment molecule, which in turn excites one of its own electrons. This sequential energy transfer propagates through the antenna complex until it converges on the chlorophyll a pair at the reaction-center complex.
 
-      (3) The excited \ce{e^-} in the primary \ce{e^-} acceptor of PS II is passed down an electron transport chain (ETC), similar to the process observed in oxidative phosphorylation during cellular respiration. As the electrons flow through a series of redox reactions toward the chlorophyll a pair of PS I, free energy is released and used to pump \ce{H^+} from the stroma into the thylakoid space. This further contributes to the buildup of a proton gradient across the thylakoid membrane.
+        \item The excited electron from the reaction-center chlorophyll a pair is transferred to the primary \ce{e^-} acceptor. To replenish the oxidized reaction center, \ce{e^-}s are extracted from the oxidative splitting of \ce{H2O}, a reaction catalyzed by an associated enzyme complex that yields \ce{O2} and \ce{H^+} as byproducts. The liberated protons contribute to the establishment of an electrochemical gradient across the thylakoid membrane.
 
-      The resulting \ce{H^+} gradient drives ATP synthesis via ATP synthase through \textit{chemiosmosis}, powered by the proton-motive force.
+        \item The energized \ce{e^-} is subsequently passed from the primary acceptor of PS II through an \textbf{electron transport chain (ETC)}, analogous to that of oxidative phosphorylation in cellular respiration (\textit{\autoref{core:ox_phos}}). As \ce{e^-}s traverse this series of redox carriers toward the PS I reaction center, the free energy released is coupled to the active transport of \ce{H^+} from the stroma into the thylakoid lumen, further amplifying the proton gradient established in the previous step during the oxidative splitting of \ce{H2O}.
 
-      (4) Light energy is then transferred to the PS I chlorophyll a pair in the same manner as before, exciting an electron that is subsequently passed to the primary \ce{e^-} acceptor of PS I. In this case, water splitting is not required to replace the lost electron, as it is replenished by the electron arriving from the PS II ETC.
+        The resulting electrochemical gradient drives ATP synthesis through \textbf{chemiosmosis}, as protons flow down their concentration gradient through ATP synthase, powered by the proton-motive force.
 
-      (5) The photoexcited electrons from PS I are then transferred through a second set of electron carriers and ultimately used to reduce \ce{NADP+} to \ce{NADPH} via \ce{NADP+} reductase. This reduction consumes \ce{H^+} in the stroma, further enhancing the proton gradient across the thylakoid membrane.
+        \item Light energy is absorbed by the PS I antenna complex and funneled to its reaction-center chlorophyll a pair via the same resonance transfer mechanism described above, exciting an \ce{e^-} that is passed to the PS I primary acceptor. Unlike PS II, water splitting is not required to restore the oxidized reaction center, as the electron deficit is fulfilled by electrons arriving from the PS II ETC.
+
+        \item The photoexcited electrons from PS I are transferred through a second set of \ce{e^-} carriers and ultimately delivered to \ce{NADP+} reductase, which reduces \ce{NADP+} to \ce{NADPH}. This reaction consumes stromal \ce{H^+}, further reinforcing the proton gradient across the thylakoid membrane.
+
+      \end{enumerate}
 
       Here is a more comprehensive figure illustrating the light reactions within the thylakoid membrane, highlighting the chemiosmotic generation of ATP.
 
-      \myfig{1}{cytology_figures/light_r_complete}{caption}{fig:fig84}
+      \myfig{1}{cytology_figures/light_r_complete}{Light reactions within the thylakoid membrane}{fig:fig84}
 
-      In certain cases, photoexcited electrons follow an alternative pathway known as \textbf{cyclic \ce{e^-} flow}, which involves PS I but not PS II.
+      Under certain conditions, photoexcited electrons may follow an alternative route known as \textbf{cyclic electron flow}, which engages PS I exclusively, bypassing PS II entirely.
 
-      \myfig{0.5}{cytology_figures/light_r_cyclic}{caption}{fig:fig85}
+      \myfig{0.85}{cytology_figures/light_r_cyclic}{Cyclic electron flow}{fig:fig85}
 
-      As a result, the light reactions capture light energy and convert it into chemical energy in the form of ATP and \ce{NADPH}, which are then utilized in the \textbf{Calvin cycle}. During this process, \ce{H2O} is split to maintain the proton gradient and to provide a continuous supply of electrons for PS II.
+      In summary, the light reactions transduce solar energy into the chemical energy carriers ATP and \ce{NADPH}, which are subsequently consumed by the \textbf{Calvin cycle}. Concomitantly, the oxidative splitting of \ce{H2O} sustains the proton gradient and provides a continuous supply of electrons to PS II.
 
     \end{core}
 
     \begin{core}{Calvin Cycle}
 
-      We now turn to the \textbf{CALVIN CYCLE}, which takes place in the stroma and uses the chemical energy stored in ATP and \ce{NADPH} to reduce \ce{CO2} to sugar. Like the citric acid cycle, the Calvin cycle is regenerative, meaning that its starting molecule is regenerated as some molecules enter the cycle and others exit.
+      The \textbf{Calvin cycle} takes place in the stroma and harnesses the chemical energy stored in ATP and \ce{NADPH} to drive the reductive fixation of \ce{CO2} into sugar. Like the citric acid cycle, it operates as a regenerative cycle: the carbon acceptor molecule is continuously replenished as substrates enter and products exit. The Calvin cycle proceeds through the following phases.
 
-      \myfig{0.8}{cytology_figures/calvin_cycle}{caption}{fig:fig86}
+      \begin{enumerate}
 
-      The Calvin cycle occurs in three phases:
+        \item \textbf{Phase 1 --- Carbon Fixation:} Three molecules of \ce{CO2} are each covalently attached to a molecule of the five-carbon acceptor ribulose-1,5-bisphosphate (RuBP), a reaction catalyzed by the enzyme \textbf{RuBisCO}. Each resulting six-carbon intermediate is highly unstable and rapidly cleaves into two molecules of 3-phosphoglycerate (3-PGA), yielding six 3-PGA molecules in total.
 
-      \textbf{PHASE 1 - CARBON FIXATION:} Three \ce{CO2} molecules are each attached to three 5-carbon sugars called ribulose-1,5-bisphosphate (RuBP), a reaction catalyzed by the enzyme \textbf{rubisco}. This produces three unstable 6-carbon intermediates, each of which immediately splits into two 3-carbon molecules called 3-phosphoglycerate (3-PGA).
+        \item \textbf{Phase 2 --- Reduction:} Each 3-PGA molecule is phosphorylated by ATP to yield 1,3-bisphosphoglycerate, which is subsequently reduced by \ce{NADPH} to produce glyceraldehyde-3-phosphate (G3P). Of the six G3P molecules generated, one is exported from the cycle as the net carbohydrate output, while the remaining five are retained for the regeneration phase.
 
-      \textbf{PHASE 2 - REDUCTION:} Each molecule of 3-phosphoglycerate receives an additional phosphate group from ATP, forming 1,3-bisphosphoglycerate. This intermediate is then reduced by \ce{NADPH} to glyceraldehyde-3-phosphate (G3P). Of the six G3P molecules produced, one exits the cycle as the net sugar output of the Calvin cycle.
+        \item \textbf{Phase 3 --- Regeneration of RuBP:} The five retained G3P molecules undergo a series of carbon skeleton rearrangements to regenerate the three RuBP acceptor molecules, a process that requires the additional expenditure of three ATP molecules.
 
-      \textbf{PHASE 3 - REGENERATION OF RuBP:} The remaining five G3P molecules undergo a series of reactions that rearrange their carbon skeletons to regenerate the original three RuBP molecules. This regeneration phase requires the expenditure of three additional ATP molecules.
+      \end{enumerate}
 
-      As a result, the Calvin cycle consumes a total of 9 ATP and 6 \ce{NADPH} to produce one net G3P molecule. During this process, 9 ADP and 6 \ce{NADP+} molecules are generated, which are then returned to the light reactions to be re-energized and reused in subsequent cycles.
+      In total, the Calvin cycle consumes 9 ATP and 6 \ce{NADPH} per net G3P molecule produced, generating 9 ADP and 6 \ce{NADP+} in the process. These spent energy carriers are returned to the light reactions, where they are re-energized and recycled for use in subsequent turns of the cycle. 
 
-    \end{core}  
+      \myfig{0.8}{cytology_figures/calvin_cycle}{Calvin cycle}{fig:fig86}
+
+    \end{core}
 
   \subsection{Photorespiration and Plant Adaptations}
     
-    Over millions of years, plants have evolved mechanisms to overcome challenges associated with terrestrial life. One major challenge is balancing photosynthesis with the prevention of excessive water loss. The \ce{CO2} required for photosynthesis enters through leaf pores called stomata, which are also the primary sites of transpiration. 
+    Over millions of years, plants have evolved sophisticated mechanisms to meet the challenges imposed by terrestrial life. A particularly significant challenge is the trade-off between sustaining photosynthesis and limiting excessive water loss. The \ce{CO2} required for carbon fixation enters the leaf through specialized pores called \textbf{stomata}, which simultaneously serve as the primary sites of \textbf{transpiration}.
 
-    On hot, dry days, many plants partially or completely close their stomata to conserve water. However, this also limits \ce{CO2} intake and leads to an accumulation of \ce{O2} within the leaf air spaces. Under these conditions, the enzyme rubisco binds \ce{O2} instead of \ce{CO2}, initiating a wasteful process known as \textbf{photorespiration}.
+    On hot, dry days, many plants partially or fully close their stomata to minimize water loss. This, however, restricts \ce{CO2} influx and promotes the accumulation of \ce{O2} within the leaf's intercellular air spaces. Under such conditions, RuBisCO---the enzyme responsible for carbon fixation---binds \ce{O2} in lieu of \ce{CO2}, initiating a metabolically costly process known as \textbf{photorespiration}.
 
     \begin{core}{C3 Plants}
 
-      The typical $C_3$ plant (named after the three-carbon first product of carbon fixation, 3-phosphoglycerate) produces less sugar on hot, dry days due to declining \ce{CO2} levels, which limits the Calvin cycle. Under these conditions, \ce{O2} competes with \ce{CO2} for the active site of rubisco, leading to \textbf{photorespiration}. This results in the formation of a 2-carbon compound (phosphoglycolate) that is eventually exported from the chloroplast. Photorespiration is inefficient: instead of producing sugar and ATP as in normal photosynthesis and cellular respiration, it consumes ATP and produces no net sugar. Consequently, $C_3$ plants are particularly vulnerable to prolonged hot, dry conditions. Over evolutionary time, plants have developed adaptations to minimize photorespiration.
+      C3 plants---named for the three-carbon molecule 3-phosphoglycerate, the first stable product of carbon fixation --- exhibit reduced photosynthetic output under hot, dry conditions. As stomatal closure depletes intracellular \ce{CO2}, \ce{O2} increasingly competes with \ce{CO2} for the active site of RuBisCO, diverting carbon flux toward photorespiration. This process yields a two-carbon compound, phosphoglycolate, which is exported from the chloroplast and metabolized through a series of reactions that consume ATP without producing net sugar. 
+
+      Photorespiration is therefore \textbf{energetically wasteful}, rendering C3 plants particularly susceptible to chronic heat and water stress. The evolutionary pressure imposed by these conditions has driven the emergence of alternative carbon fixation strategies in other plant lineages.
 
     \end{core}
-    
+
     \begin{core}{C4 Plants}
 
-      \textbf{$C_4$ plants} have evolved a mechanism to minimize photorespiration. On hot, dry days, $C_4$ plants only partially close their stomata, conserving water while still allowing some \ce{CO2} to enter. This \ce{CO2} is initially fixed into 4-carbon compounds by combining with phosphoenolpyruvate (PEP, a 3-carbon compound) in the \textbf{mesophyll cells} through the enzyme \textbf{PEP carboxylase}. This prevents the \ce{CO2} from simple diffusing back out of the cell like free \ce{CO2} would. These 4-carbon compounds are then transported to the \textbf{bundle-sheath cells}, where \ce{CO2} is released for use in the Calvin cycle, and PEP is regenerated to be reused in mesophyll cells. By concentrating \ce{CO2} around rubisco, $C_4$ plants ensure that rubisco preferentially binds \ce{CO2} rather than \ce{O2}, effectively reducing photorespiration.
+      \textbf{C4 plants} have evolved a spatial carbon-concentrating mechanism that suppresses photorespiration. Under hot, dry conditions, C4 plants only partially close their stomata, striking a balance between water conservation and \ce{CO2} acquisition. The \ce{CO2} that enters is first fixed in the \textbf{mesophyll cells} by \textbf{PEP carboxylase}, which combines it with phosphoenolpyruvate (PEP), a three-carbon acceptor, to yield a four-carbon organic acid. Unlike free \ce{CO2}, this covalently bound intermediate cannot diffuse back out of the cell, effectively trapping the carbon. The four-carbon compound is subsequently transported to the \textbf{bundle-sheath cells}, where it is decarboxylated to release \ce{CO2} directly at the site of RuBisCO activity, while PEP is regenerated and returned to the mesophyll. This spatial compartmentalization maintains a locally elevated \ce{CO2} concentration around RuBisCO, strongly favoring carboxylation over oxygenation and thus minimizing photorespiration.
 
-      \myfig{1}{cytology_figures/c4}{caption}{fig:fig87}
+      \myfig{1}{cytology_figures/c4}{C4 pathway}{fig:fig87}
 
     \end{core}
 
     \begin{core}{Crassulacean Acid Metabolism (CAM) Plants}
 
-      Another type of plant that uses an alternative pathway is \textbf{Crassulacean Acid Metabolism} or \textbf{CAM} plants. CAM plants open their stomata at night and close them during the day. This strategy conserves water during the hot, dry daytime, but limits \ce{CO2} uptake while the stomata are closed. To compensate, CAM plants fix \ce{CO2} at night into 4-carbon organic acids, which are stored in vacuoles. During the day, when the stomata are closed, the light reactions provide ATP and NADPH, and \ce{CO2} is released from the stored organic acids to drive the Calvin cycle in the chloroplasts, allowing sugar production to continue despite the stomatal closure.
+      \textbf{Crassulacean acid metabolism (CAM)} represents a temporal, rather than spatial, solution to the photorespiration problem. CAM plants open their stomata exclusively at night, when cooler temperatures reduce the evaporative demand, and keep them closed during the day to minimize water loss. During the nocturnal period, \ce{CO2} is fixed by PEP carboxylase into four-carbon organic acids, which are stored in vacuoles. In the daytime, when the stomata are sealed, the light reactions proceed normally, generating ATP and \ce{NADPH}. Concurrently, the stored organic acids are decarboxylated to release \ce{CO2}, which is fed directly into the Calvin cycle within the chloroplasts. This temporal separation of \ce{CO2} acquisition and carbon fixation allows CAM plants to sustain sugar production even under conditions of prolonged stomatal closure.
 
-      Here is a comparison of $C_4$ and CAM plants.
+      The following figure summarizes the key distinctions between $C_4$ and CAM carbon fixation strategies.
 
-      \myfig{0.6}{cytology_figures/c4_cam}{caption}{fig:fig88}
+      \myfig{0.55}{cytology_figures/c4_cam}{C4 (\textit{left}) and CAM (\textit{right}) plant pathways}{fig:fig88}
 
     \end{core}
 

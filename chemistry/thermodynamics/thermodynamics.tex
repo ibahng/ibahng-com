@@ -56,9 +56,9 @@
 
       \begin{itemize}
 
-        \item \textbf{Breaking} a bond requires an \textbf{input of energy}; the change in PE from the bonded to unbonded state is therefore negative.
+        \item \textbf{Breaking} a bond requires an \textbf{input of energy}; the change in PE from the bonded to unbonded state is therefore positive.
 
-      \item \textbf{Forming} a bond releases an \textbf{output of energy}; the change in PE from the unbonded to bonded state is therefore positive.
+        \item \textbf{Forming} a bond releases an \textbf{output of energy}; the change in PE from the unbonded to bonded state is therefore negative.
 
       \end{itemize}
 
@@ -100,7 +100,7 @@
         q = m \times C \times \Delta T
       \]
 
-      where $q$ denotes the heat transferred, $m$ the mass of the system, $C$ the \textbf{specific heat capacity}, and $\Delta T$ the change in temperature. \textbf{Specific heat capacity} is defined as the quantity of energy required to raise the temperature of 1 g of a substance by 1 K. For water, this value is $4.184\, J\, g^{-1} K^{-1}$, meaning 4.184 joules or energy are required to raise the temperature of 1 g of water by 1 K.
+      where $q$ denotes the heat transferred, $m$ the mass of the system, $C$ the \textbf{specific heat capacity}, and $\Delta T$ the change in temperature. \textbf{Specific heat capacity} is defined as the quantity of energy required to raise the temperature of 1 g of a substance by 1 K. For water, this value is $4.184\, J\, g^{-1} K^{-1}$, meaning 4.184 joules of energy are required to raise the temperature of 1 g of water by 1 K.
 
       The experimental discipline concerned with measuring the heat exchanged during chemical reactions, physical changes, or thermal interactions between objects is known as \textbf{calorimetry}, and constitutes a practical application of the \textbf{First Law of Thermodynamics}. Consider the following worked examples.
 
@@ -269,7 +269,7 @@
 
         % Step 3 — H+, OH- (aq) top level
         \addplot[thick, black] coordinates {(4.5, 7.0) (7.0, 7.0)};
-        \node[font=\small] at (axis cs:5.5, 7.5) {\ce{H+, OH}};
+        \node[font=\small] at (axis cs:5.5, 7.5) {\ce{H+, e^-, OH}};
         \node[font=\small] at (axis cs:4.6, 6.2) {\small(2)};
 
         % Step 4 — H+(aq), OH-(aq) final level
@@ -493,7 +493,38 @@
 
       The entropy gained over this temperature interval corresponds to the area under the $S$ versus $T$ curve between the initial and final temperatures, reflecting the cumulative expansion of accessible microstates. The functional form of this curve resembles $f(x) = \ln(x)$, consistent with the constraints above.
 
-      \myfig{0.7}{thermodynamics_figures/lnx.png}{Entropy vs temperature}{fig:lnx}
+      \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+          \begin{axis}[
+            xmin=-1, xmax=8.5,
+            ymin=-0.5, ymax=2.5,
+            axis lines=center,
+            axis line style={-stealth},
+            xtick=\empty,
+            ytick=\empty,
+            width=10cm,
+            height=5cm,
+          ]
+            % Shaded region between x=4 and x=5
+            \addplot[
+              fill=red!20,
+              fill opacity=0.6,
+              draw=none,
+              domain=4:5,
+            ] {ln(x)} \closedcycle;
+            % ln(x) curve
+            \addplot[
+              blue,
+              thick,
+              domain=0.05:8.5,
+              samples=200,
+            ] {ln(x)};
+          \end{axis}
+        \end{tikzpicture}
+        \caption{Plot of $\ln(x)$}
+        \label{fig:lnx}
+      \end{figure}
 
       On closer inspection, enthalpy can be understood as a macroscopic surrogate for the entropy change of the \textit{surroundings}---that is, the thermal, temperature-dependent component of total entropy change. A complete thermodynamic description requires additionally accounting for the entropy change of the \textit{system} itself, which captures configurational and positional contributions that enthalpy is blind to. It is the sum of these two contributions that ultimately determines spontaneity---a relationship formalized by Gibbs free energy (\textit{\autoref{core:gibbs}}).
 
@@ -611,7 +642,7 @@
 
     \begin{core}{Thought Experiment (\textit{Liquid Water at Absolute Zero})}
 
-      Consider the behaviour of water at a theoretical temperature of $0\,\text{K}$. It is well established that liquid water freezes at absolute zero, but the thermodynamic basis for this warrants examination. The relevant phase transition is represented bythe following equation.
+      Consider the behaviour of water at a theoretical temperature of $0\,\text{K}$. It is well established that liquid water freezes at absolute zero, but the thermodynamic basis for this warrants examination. The relevant phase transition is represented by the following equation.
 
       \bce{\ce{H2O(l) -> H2O(s)}}
 
@@ -655,7 +686,7 @@
         % boxed equation
         \node[draw, thick] at (axis cs:7.5, -5) {$\ce{H2O_{(l)} <=> H2O_{(s)}}$};
         \end{axis}
-      }{Gibbs Free Energy of Water}{fig:water_graph}{0.85}
+      }{Gibbs free energy of water}{fig:water_graph}{0.85}
 
       As temperature increases, the $T\Delta S$ term grows in magnitude, progressively amplifying the entropic penalty associated with freezing. Below $273\,\text{K}$, this penalty is insufficient to offset the enthalpic driving force, and the solid phase remains favoured. At $273\,\text{K}$, the two contributions are exactly balanced ($\Delta G = 0$), marking the equilibrium melting point. Above this temperature, the entropic penalty outweighs the enthalpic driving force, rendering freezing non-spontaneous and the liquid phase thermodynamically favoured.
 
@@ -667,28 +698,31 @@
 
     \begin{core}[label=core:G_eq]{Gibbs Free Energy \& Equilibrium}
 
-      We have established so far that if a reaction's $\Delta G$ is negative, it is favorable, and if it is positive, it is unfavorable. However, from EXTERNAL REFERENCE TO EQUILIBRIUM, we know that just because a reaction is favorable, it does not mean that it goes to completion. Many reactions find an equlibrium point where some reactants or products are still leftover although their presence is not favored in the context of $\Delta G$.
-
-      There must thus be a quantitatively defined relationship between $\Delta G$ and $K$. Here, we introduce the \textbf{Van't Hoff Isotherm equation}.
+      We have established that a negative $\Delta G$ indicates a thermodynamically favorable reaction, while a positive $\Delta G$ indicates an unfavorable one. However, as seen in \href{../equilibrium/equilibrium.pdf}{Equilibrium}, a favorable reaction does not necessarily proceed to completion. Many reactions reach an equilibrium state in which both reactants and products coexist, regardless of the sign of $\Delta G$ under standard conditions. This implies a quantitative relationship between $\Delta G$ and the equilibrium constant $K$, given by the \textbf{Van't Hoff isotherm}.
       \[
         \Delta G^{\circ} = -RT\ln{K}
       \]
 
-      Based on our previous establishment of $S = k_B \ln(W)$, we can see that entropy has a logarithmic relationship with the number of possible microstates (\textit{which shift exponentially to the number molecules in a system}). Since $K$ relates to the concentrations (\textit{or the amounts}) of reactants and products, the accessible number of microstates change exponentially when $Q$ shifts. Thus since $\Delta G$ incorporates $\Delta S$ into its value, the relationship between $K$ and $\Delta G$ is logarithmic. Consequently, a linear change in $\Delta G$ leads to an exponential change in $K$.
+      This logarithmic relationship is consistent with Boltzmann's entropy expression $S = k_B \ln(W)$, where entropy scales logarithmically with the number of accessible microstates. Since the number of microstates available to a system grows exponentially with the number of molecules, and $K$ reflects the ratio of product to reactant concentrations at equilibrium, a linear change in $\Delta G^{\circ}$ corresponds to an exponential change in $K$.
 
-      Also recognize the relationship between $\Delta G$ and $T$. A change in T will have an effect on the magnitude of $\Delta G$ but also shift the value of K based on the $\Delta H$ of the reaction. The T at which K is exactly 1 would be when neither side of the reaction is inherently favorable and thus there an equal part reactant and product ratio.
+      Temperature plays a dual role in this relationship. It directly scales the magnitude of $\Delta G^{\circ}$ and also shifts $K$ through its dependence on $\Delta H$, as described by the \textbf{Van't Hoff equation}, which describes how $K$ changes with temperature.
+      \[
+        \frac{d}{dt}\text{ln}\,K_{eq} = \frac{ΔH}{RT}
+      \]
 
-      Under non-standard conditions in the context of the current reactant product ratio Q. We would represent the total potential free energy left in the system by
+      Through a simplier lense, this dependence can also be explained via the \textbf{Le Chatelier's principle} (\textit{\autoref{equ-core:lecha}}). The temperature at which $K = 1$ marks the point where neither the forward nor reverse reaction is thermodynamically preferred, corresponding to an equal ratio of reactants to products at equilibrium.
+
+      Under non-standard conditions, the free energy available to drive a reaction depends on the reaction quotient $Q$, which describes the current ratio of products to reactants. The free energy change under these conditions is given by:
       \[
         \Delta G = \Delta G^{\circ} + RT\ln{Q}
       \]
 
-      or equivalently 
+      or equivalently:
       \[
         \Delta G = -RT\ln{\frac{K}{Q}}
       \]
 
-      When $K = Q$, we have achieved equilibrium, thus there is no more potential free energy left to do work. If $K > Q$ or $K < Q$, the reaction still has free energy left to do work. This these cases the sign of $\Delta G$ represent the direction of the reaction that can perform work.
+      When $Q = K$, the system is at equilibrium and $\Delta G = 0$, meaning no further net work can be extracted from the reaction. When $Q \neq K$, the sign of $\Delta G$ indicates the direction in which the reaction will spontaneously proceed: a negative value favors the forward reaction, and a positive value favors the reverse.
 
     \end{core}
 
@@ -698,55 +732,71 @@
 
     \begin{core}{Free Energy \& Work}
 
-      The free energy released from a system can be converted to \textbf{work} and used to \textbf{exert influence on an external body}. While reactions that are endothermic but entropy increasing enough to be favorable will be able to fulfill this purpose, it is more common to see reactions that are exothermic to be the source of work. In many cases, these exothermic reactions tend to decrease entropy along the process, thus the free energy that we can use to drive external processes will be less than the total heat released by the reaction.
+      The free energy released during a thermodynamic process can be harnessed to perform \textbf{work}, thereby \textbf{exerting influence on external systems}. Although endothermic reactions with sufficiently large positive entropy changes can be thermodynamically favorable and capable of performing work, exothermic reactions more commonly serve as the primary source of useful work. In many instances, exothermic processes are accompanied by entropy decreases, which reduces the magnitude of free energy available for driving external processes relative to the total heat released.
 
-      This is what Gibbs free energy is used for in a practical sense. Let's take a look at the Gibbs free energy equation again.
+      The practical significance of Gibbs free energy lies precisely in this capacity to quantify available work. Revisiting the fundamental Gibbs free energy equation:
       \[
         \Delta G = \Delta H - T\Delta S
       \]
 
-      For $\Delta H < 0$, $\Delta H$ can be converted into work after "the entropy cost" is paid for.
+      This relationship reveals several key insights:
 
-      For $\Delta S < 0$, $\Delta S$ must be compensated for in order to satisfy the second law of thermodynamics ("\textit{the entropy cost}").
+      \begin{itemize}
 
-      For $\Delta S > 0$, $\Delta S$ can also be converted into work.
+        \item When $\Delta H < 0$ (\textit{exothermic}), the enthalpy change can be converted into work after accounting for the entropy cost imposed by the second law of thermodynamics.
+
+        \item When $\Delta S < 0$ (\textit{entropy decreasing}), the system must compensate for this entropy decrease to satisfy thermodynamic constraints---this compensation represents the \textit{entropy cost}.
+
+        \item When $\Delta S > 0$ (\textit{entropy increasing}), the favorable entropy change itself contributes additional free energy that can be converted into work.
+
+      \end{itemize}
 
     \end{core}
 
     \begin{core}{Work Example (\textit{Rube Goldberg Machine})}
 
-      Let's go through a collective example of how a system's change in entropy and enthalpy can be used to drive work onto an external system.
+      To illustrate how changes in entropy and enthalpy can be systematically converted into useful work, consider the coupled mechanical system depicted in \autoref{fig:work_conversion}.
 
-      \myfig{0.5}{thermodynamics_figures/work_conversion.png}{Entropy to Work Conversion}{fig:work_conversion}
+      \myfig{0.8}{thermodynamics_figures/work_conversion.png}{Entropy to work conversion}{fig:work_conversion}
 
-      The figure above shows an initial state of a system. In this initial state, the red rubber band is in its stretched, low entropy position because there are fewer microstates in which the chains can be straight compared to its relaxed state where the chains are free to access a larger range of microstates because they aren't confined by the requirement to be straight.
+      The system begins with a stretched rubber band in a low-entropy configuration. This constrained state has fewer accessible microstates compared to the relaxed configuration, where the polymer chains can explore a broader conformational range. 
 
-      \textbf{ENTROPY TO WORK:} As the rubber band contracts, the free energy provided by this rubber band system's entropy rise is converted into work that pulls the cable it is connected to.
+      The system goes through the consequent chain reaction.
 
-      \textbf{WORK TO HEAT:} As the work transferred from the rubber band enters the cable-paddle system (rotating the paddle), it immediately leaves the system as heat is inputted into the water system via friction from the paddle.
+      \begin{enumerate}
 
-      \textbf{HEAT TO ENTROPY TO WORK:} This heat energy is transferred onto a gas system within a piston chamber to push the piston up via the gas system's entropy increase due to an increase in volume.
+        \item \textbf{Entropy-to-Work Conversion:} As the rubber band spontaneously contracts toward its equilibrium state, the accompanying increase in entropy releases free energy. This free energy performs mechanical work by pulling the attached cable.
 
-      \textit{It is important to note that \textbf{the process of heat conversion to work is never a perfect conversion}. This is because the quality of energy from work is different from that of heat. Heat is the random vibration of molecules within a system, thus making it inherently high entropy. Work, on the other hand, is the organized motion of molecules within a system, thus making it low entropy. \textbf{If heat to work conversion is perfect, the universe will lose entropy in the process} (\textit{we know from the second law of thermodynamics that this is impossible}), thus a portion of heat is released into the relatively lower temperature surrounding to compensate for the loss of entropy from the heat to work conversion process.}
+        \item \textbf{Work-to-Heat Conversion:} The mechanical work transmitted through the cable system rotates a paddle immersed in water. Frictional forces immediately dissipate this organized mechanical energy as heat into the water, increasing the thermal energy of the surroundings.
+
+        \item \textbf{Heat-to-Work Conversion via Thermal Expansion:} The thermal energy is subsequently transferred to a gas confined within a piston chamber. As the gas absorbs heat, its entropy increases through volume expansion, performing work by displacing the piston.
+
+      \end{enumerate}
+
+      A fundamental thermodynamic constraint emerges in this final conversion: \textbf{the conversion of heat to work is inherently irreversible and incomplete}. This limitation arises from the qualitative distinction between these energy forms. Heat represents disordered molecular motion---a high-entropy form of energy. Work, conversely, represents organized, directional motion---a low-entropy form. \textbf{Perfect heat-to-work conversion would violate the second law of thermodynamics by decreasing universal entropy}. Consequently, a portion of the thermal energy must be rejected to a lower-temperature reservoir, thereby generating sufficient entropy to satisfy thermodynamic requirements and compensate for the entropy decrease associated with converting random thermal motion into organized work. This heat-to-work conversion inefficiency is called the \textbf{Kelvin-Planck statement}.
 
     \end{core}
 
     \begin{core}{Internal Energy}
 
-      \textbf{Internal energy (E)} of a system is the sum of all kinetic and potential energies of all the system's components.
+      The \textbf{internal energy ($E$)} of a thermodynamic system represents the total kinetic and potential energy of all constituent particles. Changes in internal energy are governed by the first law of thermodynamics.
       \[
         \Delta E = q + w
       \]
 
-      Energy gained or lost by the system is equal to the energy lost of gained by the surroundings.
+      where $q$ represents heat transferred and $w$ represents work performed. Importantly, energy conservation dictates that any energy gained or lost by the system must be correspondingly lost or gained by the surroundings.
 
-      To help us better understand this concept, imagine the transfer of heat energy into two gas systems to $T_{final}$ from $T_{initial}$. We restrain one system to constant volume and the other to constant pressure.
+      The relationship between heat input and internal energy change depends critically on the constraints imposed on the system. Consider two gas systems, each heated from an initial temperature $T_{\text{initial}}$ to a final temperature $T_{\text{final}}$, with one maintained at constant volume and the other at constant pressure.
 
-      \textbf{CONSTANT VOLUME:} The system is restricted from doing any expansion work to its surroundings, thus 100\% of the heat you add goes directly into increasing the E of the system (\textit{raising T}).
+      \begin{enumerate}
 
-      \textbf{CONSTANT PRESSSURE:} This system, on the other hand, is free to expand. Thus for the same T increase as the former system, you would need to add extra heat energy (\textit{to raise T to $T_final$}) equivalent to the energy transferred to the surroundings from the expansion work it will do as volume increases.
+        \item \textbf{Constant Volume Process:} Under isochoric conditions, the system cannot perform expansion work ($w = 0$). Consequently, all heat transferred to the system increases its internal energy, manifesting entirely as a temperature rise.
 
-      It would take more heat energy to raise the temperature of the system with constant pressure than the system with constant volume by the same temperature increase.
+        \item \textbf{Constant Pressure Process:} Under isobaric conditions, the system expands as temperature increases, performing pressure-volume work on the surroundings. To achieve the same temperature increase as the constant volume case, additional heat must be supplied to compensate for the energy transferred out of the system through expansion work.
+
+      \end{enumerate}
+
+      This analysis demonstrates that achieving a given temperature increase under constant pressure conditions requires greater heat input than under constant volume conditions, with the additional energy accounting for the work performed during expansion.
 
     \end{core}
 
@@ -754,25 +804,27 @@
 
     \begin{core}{Electrochemical Cells}
 
-      An electrochemical cell is a device that bridges the gap between chemical energy and electrical energy, effectively allowing us to use the free energy drop of a spontaneous chemical reaction to generate electrical energy for practical purposes. It works by physically separating a redox (reduction-oxidation; \textit{\ce{e^-} transfer reactions}) reaction so that \ce{e^-}s are forced to travel through an external circuit rather than transferring directly between atoms within a solution.
+      An \textbf{electrochemical cell} is a device that converts chemical energy into electrical energy by harnessing the free energy released from spontaneous chemical reactions. The fundamental operating principle involves the spatial separation of a \textbf{reduction-oxidation} reaction, forcing \ce{e^-}s to traverse an external circuit rather than transferring directly between species within a solution, thereby enabling the extraction of useful electrical work.
 
     \end{core}
 
     \begin{core}{Electrode Potential}
 
-      Before introducing electrochemical cells, we first need to understand electrode potentials. \textbf{Electrode potential} is a measure of the tendency of a metal to either "shed" its atoms into a solution as ions or "pull" ions from the solution to become part of the metal.
+      To understand electrochemical cells quantitatively, we must first establish the concept of electrode potential. \textbf{Electrode potential} quantifies the thermodynamic tendency of a metal electrode to either undergo oxidation (\textit{releasing metal ions into solution}) or reduction (\textit{depositing metal ions from solution onto the electrode surface}). \textit{Note that these definitions of oxidation and reduction are specifically within the context of electrochemical cells.}
 
-      A high electrode potential means the metal is more likely to pull ions from the solution to become part of the metal. This is the reduction of metal ions into neutral metal atoms.
+
+      A high (\textit{positive}) electrode potential indicates a strong thermodynamic driving force for reduction, wherein metal ions in solution are deposited as neutral metal atoms on the electrode surface.
 
       \bce{\ce{M^+(aq) + e^- -> M(s)}}
 
-      A low electrode potential means the metal is more likely to shed ions into a solution from the metal. This is the oxidation of neutral metal atoms into metal ions.
+      Conversely, a low (\textit{negative}) electrode potential indicates a propensity for oxidation, wherein neutral metal atoms dissolve into solution as cations:
 
       \bce{\ce{M(s) -> M^+(aq) + e^-}}
 
-      You cannot measure the potential of a single metal electrode in isolation. You always need at least one more metal electrode to compare it to. To solve this, chemists have designated a universal reference point to hydrogen called the \textbf{Standard Hydrogen Electrode (SHE)}, which is arbitrarily assigned a value of 0.00 V. Here are the electrode potentials of some common metals:
+      Since absolute electrode potentials cannot be measured in isolation, all electrode potentials are reported relative to a universal reference standard. The \textbf{Standard Hydrogen Electrode (SHE)} serves this purpose, arbitrarily assigned a potential of 0.00 V under standard conditions (\textit{298 K, 1 atm, 1 M concentration}). \autoref{tab:reduction_potentials} presents standard reduction potentials for common half-reactions.
 
-      \begin{center}
+      \begin{table}[H]
+        \centering
         \begin{tabular}{cc}
           \hline
           \textbf{Potential} & \textbf{Reduction Half-Reaction} \\
@@ -792,114 +844,117 @@
           $+2.87$ V & \ce{F2(g) + 2e- -> 2F-(aq)} \\
           \hline
         \end{tabular}
-      \end{center}
+        \caption{Standard reduction potentials of common half-reactions}
+        \label{tab:reduction_potentials}
+      \end{table}
+
+      Electrode potentials are expressed in volts ($V$), equivalent to joules per coulomb ($J/C$), reflecting the energy per unit charge that \ce{e^-}s acquire as they spontaneously flow from the electrode of lower reduction potential to that of higher reduction potential.
 
     \end{core}
 
-    \begin{core}{Galvanic Cell}
+    \begin{core}[label=core:galvanic]{Galvanic Cell}
 
-      We assigning the units of $V$ or $J/C$ (joules per coulomb or energy per charge) because the potential tells us how much energy each \ce{e^-} possesses as it spontaneously travels from a low potential electrode to a high potential electrode.
-
-      With that being said, if you were to place Zn metal powder into a solution of Cu ions, a spontaneous redox reaction would occur where the solid Zn metal would eventually turn into solid Cu.
+      Consider the spontaneous reaction that occurs when zinc metal is immersed in a copper(II) ion solution.
 
       \bce{\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}}
 
-      Since this redox reaction is spontaneous ($\Delta G < 0$), free energy is released. A \textbf{galvanic cell} (\textit{a type of electrochemical cell}) is a set up that allows us to capture this free energy and use it as electrcity.
-      \myfig{0.4}{thermodynamics_figures/g_cell.png}{Galvanic Cell Diagram}{fig:g_cell}
+      This thermodynamically favorable process ($\Delta G < 0$) releases free energy that would otherwise escape as heat. A \textbf{galvanic cell} is an electrochemical device designed to capture this free energy by spatially separating the oxidation and reduction half-reactions, forcing \ce{e^-}s through an circuit where they can perform electrical work.
 
-      In a galvanic cell set up, we call the low and high electrode potential metal the anode and cathode, respectively. In the above schematic, the anode is Zn and the cathode is Cu. Since the solutions of the two electrodes are physically seperated, the presence of a salt bridge allows each solution to maintain electrical neutrality and keep the redox reaction moving forward rather than slow down and eventually stop due to the eventual build up of one-sided charge (positive ions on the anode from \ce{Zn^2+(aq)} accumulation and negative ions on the cathode from \ce{SO4^2-} presence with the decreaseing amounts of \ce{Cu^2+(aq)}). The result is a system that captures the potential differnce between the two electrodes until the redox reaction is complete, at which point the anode is completely in its aqueous ion form and the cathod is completely in its solid form.
+      \myfig{0.45}{thermodynamics_figures/g_cell.png}{Galvanic cell diagram}{fig:g_cell}
 
-      We can express the free energy gained from this system via the following equation:
+      In the galvanic cell shown in \autoref{fig:g_cell}, the electrode of lower reduction potential serves as the \textbf{anode} (\textit{site of oxidation}) and the electrode of higher reduction potential serves as the \textbf{cathode} (\textit{site of reduction})---zinc and copper, respectively, in the above schematic. The physical separation of the two half-cell compartments necessitates a salt bridge to maintain electroneutrality. Without the salt bridge, charge imbalance would develop from the accumulation of \ce{Zn^2+} at the anode and depletion of \ce{Cu^2+} at the cathode, creating an electrostatic barrier that would arrest the reaction. The salt bridge permits compensatory ion migration, sustaining continuous \ce{e^-} flow through the external circuit until the limiting reactant is fully consumed.
+
+      The relationship between cell potential and Gibbs free energy is given by the following equation.
       \[
         \Delta G^{\circ} = -nFE^{\circ}
       \]
 
-      where n is the number of moles of \ce{e^-}, F is the Faraday constant which measures the amount of charge per mole of \ce{e^-} ($96485\,C\,mol^{-1}$), and E$^{\circ}$ is cell potential or the difference in potential between the anode and the cathode (in the above case it would be $0.34V - (-0.80V) = 1.14V$).
+      where $n$ is the moles of \ce{e^-}s transferred, $F$ is the Faraday constant ($96485\,\text{C}\,\text{mol}^{-1}$), and $E^{\circ}$ is the standard cell potential, defined as the difference between the cathode and anode reduction potentials.
 
-      Let's go through a calculation for the galvanic cell above (\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}).
+      For the zinc-copper system (\textit{\autoref{fig:g_cell}}):
       \[
-        E^{\circ}_{cell} = E^{\circ}_{cathode} - E^{\circ}_{anode} = 0.34V - (-0.80V) = 1.14V
+        E^{\circ}_{\text{cell}} = E^{\circ}_{\text{cathode}} - E^{\circ}_{\text{anode}} = 0.34\,\text{V} - (-0.76\,\text{V}) = 1.10\,\text{V}
       \]
 
-      $n = 2 mol$ because two \ce{e^-}s are being transferred across the cell. Thus
+      With $n = 2\,\text{mol}$ electrons transferred per mole of reaction:
       \[
-        \Delta G^{\circ} = -(2\,mol)(96485\,C\,mol^{-1})(1.14\,J\,J^{-1}) = -219.98\,kJ
+        \Delta G^{\circ} = -(2\,\text{mol})(96485\,\text{C}\,\text{mol}^{-1})(1.10\,\text{V}) = -212.3\,\text{kJ}
       \]
 
-      It's important to keep in mind that this free energy value is for every mole of the redox reaction that occurs, thus the same galvanic cell with Zn as its limiting reactant would have a free energy value of $-219.98\,kJ$ per mole of Zn.
+      This value represents the maximum electrical work extractable \textbf{per mole} of reaction under standard conditions---equivalently, per mole of zinc oxidized when zinc serves as the limiting reactant.
 
     \end{core}
 
     \begin{core}{Concentration Cells}
 
-      Now we introduce a \textbf{concentration cell}, an electrochemical cell that uses the same metal for both the anode and cathode but at different solution concentrations. 
+      A \textbf{concentration cell} is a specialized electrochemical system in which identical electrode materials are employed at both the anode and cathode, with the sole thermodynamic driving force arising from the difference in electrolyte concentration between the two half-cell compartments.
 
-      \myfig{0.55}{thermodynamics_figures/c_cell.png}{Concentration Cell Diagram}{fig:c_cell}
+      \myfig{0.65}{thermodynamics_figures/c_cell.png}{Concentration cell diagram}{fig:c_cell}
 
-      Let's take a look at the chemical equation for the redox reaction in the concentration cell.
+      The net redox reaction for a copper concentration cell is:
 
-      \bce{\ce{Cu_{anode}(s) + Cu_{cathode}^2+(aq) <=> Cu_{anode}^2+(aq) + Cu_{cathode}(s)}}
+      \bce{\ce{Cu_{\text{anode}}(s) + Cu_{\text{cathode}}^{2+}(aq) <=> Cu_{\text{anode}}^{2+}(aq) + Cu_{\text{cathode}}(s)}}
 
-      The Eq for this reaction is $K = 1$, however
-
+      At equilibrium, when the concentrations of both compartments are equal, $K = 1$. Under non-equilibrium conditions, however:
       \[
-        Q = \frac{[Cu_{anode}^{2+}]}{[Cu_{cathode}^{2+}]} < 1
+        Q = \frac{[\ce{Cu_{\text{anode}}^{2+}}]}{[\ce{Cu_{\text{cathode}}^{2+}}]} < 1
       \]
 
-      Thus, the forward reaction if favored, raising the concentration of the anode solution at the expense of that of the cathode. Via the concentration differences, \ce{e^-}s flow just like it did in the galvanic cell and we are able to capture the free energy of the redox reaction.
+      Since $Q < K$, the forward reaction is thermodynamically favored, driving oxidation at the dilute anode and reduction at the concentrated cathode \textbf{until the two compartments reach equal concentration}. This concentration gradient serves as the sole source of free energy driving \ce{e^-} transport through the external circuit.
 
-      Quantiatively, we can measure the cell potential in volts using the following algebraic manipulations:
+      The cell potential under non-standard conditions is derived by combining the relevant thermodynamic relationships.
       \[
-        (STANDARD\ CONDITIONS)\quad\Delta G^{\circ} = -nFE^{\circ} = -R\,T\,ln(K)
+        (\text{\textit{Standard Conditions}})\quad\Delta G^{\circ} = -nFE^{\circ} = -RT\ln(K)
       \]
       \[
-        (NONSTANDARD\ CONDITIONS)\quad\Delta G = -nFE
+        (\text{\textit{Non-Standard Conditions}})\quad\Delta G = -nFE
       \]
       \[
-        \Delta G = \Delta G^{\circ} - (-R\,T\,ln(Q))
+        \Delta G = \Delta G^{\circ} + RT\ln(Q)
       \]
       \[
-        -nFE = -nFE^{\circ} + R\,T\,ln(Q)
+        -nFE = -nFE^{\circ} + RT\ln(Q)
       \]
       \[
-        E = E^{\circ} - \frac{RT}{nF}\,ln(Q)
-      \]
-
-      Since $E^{\circ}$ is always 0 for concentration cells and $ln(x) ~ 2.303 \times log_{10}(x)$, we can simplify the above equation to
-      \[
-        E = - \frac{0.0592}{n}\,log(\frac{[M^{n+}_{anode}]}{[M^{n+}_{cathode}]})
+        (\text{\textit{Nernst Equation}})\quad E = E^{\circ} - \frac{RT}{nF}\ln(Q)
       \]
 
-      In our example above, $E = 0.0296V$ for $[Cu_{anode}^{2+}] = 0.1M$ and $[Cu_{cathode}^{2+}] = 1.0M$ (or $Q = 0.1$). Because the potential is low compared to that of a galvanic cell, it does not actually provide any practical value in the context of batteries.
+      For concentration cells, $E^{\circ} = 0$ since the same half-reaction occurs at both electrodes. Substituting standard temperature (\textit{298 K}) and converting to base-10 logarithms yields the \textbf{simplified Nernst equation}.
+      \[
+        E = -\frac{0.0592}{n}\log\left(\frac{[\ce{M^{n+}_{\text{anode}}}]}{[\ce{M^{n+}_{\text{cathode}}}]}\right)
+      \]
+
+      For the copper concentration cell with $[\ce{Cu_{\text{anode}}^{2+}}] = 0.1\,\text{M}$ and $[\ce{Cu_{\text{cathode}}^{2+}}] = 1.0\,\text{M}$, the cell potential is $E = 0.0296\,\text{V}$. This characteristically low potential, inherent to concentration-driven cells, limits their practical utility as energy sources relative to conventional galvanic cells employing dissimilar electrode materials.
 
     \end{core}
 
     \begin{core}{Hydrogen Fuel Cell}
 
-      Okay, now we move onto one last type of electrochemical cell called hydrogen fuel cells. \textbf{Hydrogen fuel cells} does not use the typical metal elements as the anode and cathode, but rather uses the \textbf{hydrogen gas} as the anode and \textbf{oxygen gas} as the cathode. It simply utilizes the \ce{e^-} transfer energy during the process of forming water from these gases.
+      A \textbf{hydrogen fuel cell} represents a distinct class of electrochemical device in which gaseous \textbf{hydrogen} serves as the anode reactant and gaseous \textbf{oxygen} serves as the cathode reactant, harnessing the electron transfer energy accompanying the thermodynamically favorable formation of water.
 
-      \bce{\ce{H2(g) + \frac{1}{2}O2(g) -> H2O(g)}}
+      \myfig{0.55}{thermodynamics_figures/h_cell.png}{Hydrogen fuel cell diagram}{fig:h_cell}
 
-      When we break this chemical reaction down into components we get the anode reaction (oxidation)
+      The overall cell reaction is:
+
+      \bce{\ce{H2(g) + \frac{1}{2}O2(g) -> H2O(l)}}
+
+      Decomposing this into constituent half-reactions, hydrogen oxidation occurs at the anode:
 
       \bce{\ce{H2(g) -> 2H+(aq) + 2e-}}
 
-      and the cathode reaction (reduction)
+      while oxygen reduction occurs at the cathode:
 
       \bce{\ce{\frac{1}{2}O2(g) + 2H+(aq) + 2e- -> H2O(l)}}
 
-      Here is a schematic of a hydrogen fuel cell.
-      \myfig{0.55}{thermodynamics_figures/h_cell.png}{Hydrogen Fuel Cell Diagram}{fig:h_cell}
-
-      We can quantitatively express the free energy of the hydrogen fuel cell using the same method as we did for the galvanic cell.
+      Applying the same thermodynamic formalism established for galvanic cells (\textit{\autoref{core:galvanic}}), the standard cell potential is:
       \[
-        E^{\circ}_{cell} = E^{\circ}_{oxygen} - E^{\circ}_{hydrogen} = 1.23V - (-0.00V) = 1.23V
+        E^{\circ}_{\text{cell}} = E^{\circ}_{\text{cathode}} - E^{\circ}_{\text{anode}} = 1.23\,\text{V} - 0.00\,\text{V} = 1.23\,\text{V}
       \]
       \[
-        \Delta G^{\circ} = -(2\,mol)(96485\,C\,mol^{-1})(1.23\,J\,J^{-1}) = -237.35\,kJ
+        \Delta G^{\circ} = -(2\,\text{mol})(96485\,\text{C}\,\text{mol}^{-1})(1.23\,\text{V}) = -237.4\,\text{kJ}
       \]
 
-      Thus the free energy of a hydrogen fuel cell per mole of \ce{H2} is $-237.35\,kJ$.
+      This free energy value, corresponding to the oxidation of one mole of hydrogen gas, reflects the substantial energy density of hydrogen as a fuel and \textit{underscores the electrochemical efficiency that makes hydrogen fuel cells a compelling candidate for clean energy applications}.
 
     \end{core}
 
