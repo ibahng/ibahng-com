@@ -1475,7 +1475,7 @@
 
       \textbf{C4 plants} have evolved a spatial carbon-concentrating mechanism that suppresses photorespiration. Under hot, dry conditions, C4 plants only partially close their stomata, striking a balance between water conservation and \ce{CO2} acquisition. The \ce{CO2} that enters is first fixed in the \textbf{mesophyll cells} by \textbf{PEP carboxylase}, which combines it with phosphoenolpyruvate (PEP), a three-carbon acceptor, to yield a four-carbon organic acid. Unlike free \ce{CO2}, this covalently bound intermediate cannot diffuse back out of the cell, effectively trapping the carbon. The four-carbon compound is subsequently transported to the \textbf{bundle-sheath cells}, where it is decarboxylated to release \ce{CO2} directly at the site of RuBisCO activity, while PEP is regenerated and returned to the mesophyll. This spatial compartmentalization maintains a locally elevated \ce{CO2} concentration around RuBisCO, strongly favoring carboxylation over oxygenation and thus minimizing photorespiration.
 
-      \myfig{1}{cytology_figures/c4}{C4 pathway}{fig:fig87}
+      \myfig{0.95}{cytology_figures/c4}{C4 pathway}{fig:fig87}
 
     \end{core}
 
@@ -1491,145 +1491,199 @@
 
 \section{Cellular Signaling}
 
-  \subsection{Paracrine \& Endocrine Signalling}
-  
-    Cellular signalling is a complex process that enables cells to communicate with one another. It involves the exchange of information between cells through signalling molecules (\textbf{ligands}) and their receptors.
-    
-    \myfig{0.65}{cytology_figures/signaling}{caption}{fig:fig89}
-    
-    Cell communication is usually divided into two main categories: \textbf{paracrine} and \textbf{endocrine} signalling.
+  \begin{core}{Cellular Signalling}
 
-    \begin{core}{Paracrine Signalling}
+    Cellular signalling is a fundamental biological process that enables intercellular communication through the interaction of signalling molecules (\textbf{ligands}) with their cognate receptors. This sophisticated mechanism allows cells to coordinate their activities and respond to environmental stimuli.
 
-      \textbf{PARACRINE} signalling is \textbf{local} communication between cells in which signalling molecules diffuse over short distances to influence nearby target cells. This is distinct from direct contact (\textbf{juxtacrine}) signalling, such as communication through intracellular junctions discussed in \textit{2.1 A Tour of the Cell}, where cells signal through physical contact rather than secreted ligands.
+  \end{core}
 
-      \myfig{0.6}{cytology_figures/paracrine}{caption}{fig:fig90}
+  \subsection{Signalling Types}
 
-    \end{core}
+    \begin{core}{Signalling Types}
 
-    \begin{core}{Endocrine}
+      Cell communication can be broadly classified into three categories based on the distance of signal transmission.
 
-      \textbf{ENDOCRINE} signalling (or \textbf{hormonal} signalling) is \textbf{long-distance} communication between cells in which specialized endocrine cells secrete hormones into the circulatory system. These hormones travel through the bloodstream to reach distant target cells that possess the appropriate receptors and respond to the signal.
+      \begin{enumerate}
 
-      \myfig{0.5}{cytology_figures/endocrine}{caption}{fig:fig91}
+        \item \textbf{Juxtacrine signalling} is a form of \textbf{direct cell-cell} communication that requires physical contact between adjacent cells, mediated either by membrane-bound ligands interacting with neighbouring cell receptors or through \textbf{gap junctions} (\textit{\autoref{core:ij}}) that permit the direct passage of signals between cells.
+
+        \sbs{0.4}{
+          \item \textbf{Paracrine signalling} involves \textbf{local} intercellular communication, in which signalling molecules diffuse across short distances to act upon neighbouring target cells within the immediate microenvironment. The spatial range of paracrine signals is inherently limited by diffusion kinetics and rapid degradation or uptake of signalling molecules, ensuring that only cells in close proximity to the signal source are affected.
+        }{
+          \myfig{0.95}{cytology_figures/paracrine}{Paracrine signalling}{fig:fig90}
+        }
+
+        \sbs{0.45}{
+          \item \textbf{Endocrine signalling} (\textit{also termed \textbf{hormonal signalling}}) facilitates \textbf{long-distance} intercellular communication through the systemic circulation. Specialized \textbf{endocrine cells} synthesize and secrete hormones into the bloodstream, which transports these chemical messengers to anatomically distant target cells. Only cells expressing the appropriate cognate receptors are capable of detecting and responding to these hormonal signals, thereby ensuring specificity in systemic communication.
+        }{
+          \myfig{0.95}{cytology_figures/endocrine}{Endocrine (\textit{hormonal}) signaling}{fig:fig91}
+        }
+
+      \end{enumerate}
 
     \end{core}
 
   \subsection{Signal Reception, Transduction, and Response}
     
-    Regardless of the type of cellular signalling, the communication process follows a general sequence of steps: (1) \textbf{signal reception}, (2) \textbf{signal transduction}, and (3) \textbf{cellular response}.
+    \subsubsection{Signal Reception}
 
-    \begin{core}{Cell Communication (\textit{Signal Reception})}
+      \begin{core}{Signal Reception}
 
-      (1) \textbf{SIGNAL RECEPTION} is the target cell's detection of a signalling molecule from outside the cell. This occurs through receptor proteins located either on the \textbf{cell surface} or \textbf{within the cell} (intracellular receptors).
+        \sbs{0.4}{
+          \textbf{Signal reception} constitutes the initial step of cellular signalling, wherein target cells detect extracellular signalling molecules through specific receptor proteins. These receptors are strategically positioned either at the \textbf{cell surface} or \textbf{within the cell} as intracellular receptors---which are located primarily in the cytoplasm or nucleous and are activated by signalling molecules possessing sufficient hydrophobicity or small molecular size to traverse the plasma membrane's lipid bilayer.
+        }{
+          \myfig{1}{cytology_figures/intracellular}{Intracellular signal reception}{fig:fig95}
+        }
 
-      There are 3 major categories of cell-surface receptors.
+      \end{core}
 
-      \textbf{G Protein–Coupled Receptors} (\textbf{GPCRs}) are transmembrane receptors that, upon ligand binding, undergo a conformational change that activates an associated G protein. The activated G protein then regulates downstream target proteins, initiating an intracellular signalling cascade.
+      \begin{core}[label=core:receptor_types]{Major Cell-Surface Receptor Types}
 
-      \myfig{0.6}{cytology_figures/gpcr}{caption}{fig:fig92}
+        Cell-surface receptors can be classified into three principal categories based on their structural characteristics and signal transduction mechanisms.
 
-      \textbf{Receptor Tyrosine Kinases} (\textbf{RTKs}) are transmembrane receptors that, upon ligand binding, undergo dimerization and autophosphorylation of specific intracellular tyrosine residues. These phosphorylated tyrosines serve as docking sites for intracellular signalling proteins, leading to activation of downstream target pathways.
+        \begin{enumerate}
 
-      \myfig{0.6}{cytology_figures/rtk}{caption}{fig:fig93}
+          \item \textbf{G Protein–Coupled Receptors (GPCRs)} are seven-transmembrane domain receptors that undergo ligand-induced conformational changes, thereby activating associated heterotrimeric G proteins. The activated G protein subsequently modulates downstream effector proteins, initiating intracellular signalling cascades.
 
-      \textbf{Ion Channel Receptors} are transmembrane receptors that, upon binding a ligand, undergo a conformational change to open or close an ion channel, allowing specific ions to flow across the membrane.
+          \myfig{0.55}{cytology_figures/gpcr}{G protein-coupled receptors}{fig:fig92}
 
-      \myfig{0.55}{cytology_figures/ion_channel}{caption}{fig:fig94}
+          \item \textbf{Receptor Tyrosine Kinases (RTKs)} are single-pass transmembrane receptors that, upon ligand binding, undergo receptor dimerization and subsequent autophosphorylation at specific intracellular tyrosine residues. These phosphotyrosine residues function as docking sites for cytoplasmic signalling proteins, propagating downstream signalling cascades.
 
-      Some receptors are also located and activated in the cytoplasm by signalling molecules that are either hydrophobic enough or small enough to cross the hydrophobic interior of the membrane. This is known as \textbf{intracellular signalling}.
+          \myfig{0.6}{cytology_figures/rtk}{Receptor tyrosine kinases}{fig:fig93}
 
-      \myfig{0.5}{cytology_figures/intracellular}{caption}{fig:fig95}
+          \item \textbf{Ligand-Gated Ion Channel Receptors} are transmembrane proteins that undergo ligand-induced conformational changes, resulting in the opening or closing of an integral ion channel. This conformational transition permits the selective flux of specific ions across the plasma membrane, rapidly altering the cell's membrane potential.
 
-    \end{core}
+          \myfig{0.6}{cytology_figures/ion_channel}{Ligand-gated ion channel receptors}{fig:fig94}
 
-    \begin{core}{Cell Communication (\textit{Signal Transduction})}
+        \end{enumerate}
 
-      (2) \textbf{SIGNAL TRANSDUCTION} is the process by which the cell converts an external signal into a form that can produce a specific cellular response. This may occur in a single step; however, more often signal transduction involves a \textbf{series of signalling interactions} between proteins (i.e., a \textbf{signal transduction pathway}) that function like a relay.
+      \end{core}
 
-      A major mechanism by which signal transduction pathways operate is through phosphorylation, forming what are known as \textbf{phosphorylation cascades}. In these cascades, one protein kinase phosphorylates a target protein, which then phosphorylates another protein, and so on. Proteins that phosphorylate other proteins are called \textbf{kinases} (as seen with \textit{RTKs}).
+    \subsubsection{Signal Transduction}
 
-      \myfig{0.6}{cytology_figures/phos_cas}{caption}{fig:fig96}
+      \begin{core}{Signal Transduction}
 
-      In the signalling cascades described above, only proteins are shown participating in signal transduction. However, not all components of signal transduction are proteins. Many pathways also involve small, nonprotein, water-soluble molecules or ions known as \textbf{second messengers}. The two most common second messengers are \textbf{cyclic adenosine monophosphate (cAMP)} and \textbf{\ce{Ca2+}}.
+        \textbf{Signal transduction} is the process by which cells convert signals into intracellular responses. Although signal transduction may occasionally occur through a single-step mechanism, it more commonly involves a \textbf{sequential series of molecular interactions} between proteins, collectively termed a \textbf{signal transduction pathway}, which functions analogously to a molecular relay system to amplify and integrate cellular signals.
 
-      \textbf{cAMP} is a small molecule derived from ATP by the enzyme \textbf{adenylyl cyclase}, which is embedded in the plasma membrane. Adenylyl cyclase is classically activated through GPCR-mediated signalling via G proteins. An increase in intracellular cAMP levels typically activates a serine/threonine kinase called \textbf{protein kinase A (PKA)}, which then phosphorylates downstream target proteins to produce a cellular response.
+      \end{core}
 
-      \myfig{0.55}{cytology_figures/camp}{caption}{fig:fig97}
+      \begin{core}{Phosphorylation Cascades}
 
-      \textbf{\ce{Ca2+}} is another second messenger that is even more widely used than cAMP. Although cells always contain some \ce{Ca2+}, the cytosolic concentration is normally much lower (approximately 10,000-fold lower) than the concentration outside the cell and within the endoplasmic reticulum (ER). This is because \ce{Ca2+} ions are actively transported out of the cell and into the ER. As a result, a small absolute increase in cytosolic \ce{Ca2+} produces a large relative change in its intracellular concentration.
+        A fundamental mechanism underlying signal transduction pathways is reversible protein phosphorylation, which forms the basis of \textbf{phosphorylation cascades}. In these cascades, a protein kinase catalyzes the phosphorylation of a substrate protein, which, once activated, phosphorylates a subsequent target protein in a sequential manner. Enzymes that catalyze the transfer of phosphate groups from ATP to protein substrates are termed \textbf{protein kinases}, as exemplified by receptor tyrosine kinases (\textit{\autoref{core:receptor_types}}).
 
-      In response to certain signalling pathways, cytosolic \ce{Ca2+} levels rise, often through a mechanism that releases \ce{Ca2+} from the ER. This pathway commonly involves two additional second messengers—\textbf{DAG} and \textbf{IP$_3$}—which are generated when the membrane phospholipid PIP$_2$ is cleaved by \textbf{phospholipase C (PLC)}, typically downstream of GPCR activation. IP$_3$ diffuses through the cytosol and binds to receptors on the ER membrane, triggering \ce{Ca2+} release.
+        \myfig{0.6}{cytology_figures/phos_cas}{Phosphorylation cascade}{fig:fig96}
 
-      \myfig{0.65}{cytology_figures/ca_ion}{caption}{fig:fig98}
+      \end{core}
 
-    \end{core}
+      \begin{core}{Second Messengers}
 
-    \begin{core}{Cellular Response}
+        While the signalling cascades predominantly feature protein-protein interactions, signal transduction pathways frequently incorporate small, nonprotein, water-soluble molecules or ions termed \textbf{second messengers}. These diffusible intracellular mediators serve to amplify and propagate signals throughout the cell. The two most ubiquitous second messengers in eukaryotic cells are \textbf{cyclic adenosine monophosphate (cAMP)} and \textbf{calcium ions (\ce{Ca2+})}.
 
-      (3) \textbf{CELLULAR RESPONSE} is the final outcome of the signalling pathway within the target cell. Cellular responses can be broadly categorized into two types: \textbf{nuclear} and \textbf{cytoplasmic}.
+        \begin{itemize}
 
-      \textbf{Nuclear responses} occur in the nucleus and typically involve the activation of transcription factors, which regulate gene expression and ultimately lead to the synthesis of specific proteins, a process we explore in \textit{Chapter 6 Gene Expression and Regulation}.
+          \item \textbf{Cyclic AMP (cAMP)} is synthesized from ATP by the membrane-associated enzyme \textbf{adenylyl cyclase}, which is canonically activated downstream of GPCR signalling (\textit{\autoref{core:receptor_types}}) through G proteins. Elevated intracellular cAMP concentrations activate \textbf{protein kinase A (PKA)}, a serine/threonine kinase that phosphorylates specific substrate proteins, thereby eliciting diverse cellular responses (\textit{\autoref{fig:fig97}})
 
-      \textbf{Cytoplasmic responses} involve the regulation of existing protein activity rather than the synthesis of new proteins. These responses directly affect proteins that function \textbf{outside of the nucleus}.
+          \myfig{0.5}{cytology_figures/camp}{Cyclic adenosine monophosphate (cAMP) pathway}{fig:fig97}
 
-      \myfig{0.45}{cytology_figures/nuclear_cytoplasmic}{caption}{fig:fig99}
+          \item \textbf{Calcium ions (\ce{Ca2+})} constitute an even more versatile second messenger than cAMP, participating in a broader array of cellular processes. Cells maintain a steep \ce{Ca2+} concentration gradient, with cytosolic levels approximately 10,000-fold lower than extracellular concentrations and ER luminal stores. This gradient is actively maintained by ATP-dependent \ce{Ca2+} pumps that sequester \ce{Ca2+} into the ER and extrude it from the cell. Consequently, even modest absolute increases in cytosolic \ce{Ca2+} represent substantial relative changes, enabling sensitive signal detection.
 
-    \end{core}
+          \myfig{0.65}{cytology_figures/ca_ion}{\ce{Ca2+} pathway}{fig:fig98}
+
+          Upon activation of specific signalling pathways, cytosolic \ce{Ca2+} concentrations increase, predominantly through release from ER stores. This mechanism frequently involves two lipid-derived second messengers---\textbf{diacylglycerol (DAG)} and \textbf{inositol 1,4,5-trisphosphate (IP$_3$)}---which are generated via hydrolysis of the membrane phospholipid phosphatidylinositol 4,5-bisphosphate (PIP$_2$) by \textbf{phospholipase C (PLC)}, typically activated downstream of GPCRs. IP$_3$ diffuses through the cytosol and binds to IP$_3$ receptors on the ER membrane, inducing \ce{Ca2+} release into the cytoplasm.
+
+        \end{itemize}
+
+      \end{core}
+
+    \subsubsection{Signal Response}
+
+      \begin{core}{Cellular Response}
+
+        \textbf{Cellular response} represents the terminal phase of signal transduction, wherein integrated signalling information elicits specific biological outcomes. These responses can be broadly classified into two distinct categories.
+          
+        \myfig{0.45}{cytology_figures/nuclear_cytoplasmic}{Nuclear (\textit{left}) and cytoplasmic (\textit{right}) responses}{fig:fig99}
+
+        \begin{itemize}
+
+          \item \textbf{Nuclear responses} involve signal-dependent modulation of gene transcription through the activation or repression of specific \textbf{transcription factors} (\textit{\autoref{core:transcription_initiation}}). These genomic responses ultimately alter cellular protein composition through protein synthesis (\textit{\autoref{sec:gene_expression}}).
+
+          \item \textbf{Cytoplasmic responses} modulate the activity, localization, or stability of pre-existing proteins through post-translational modifications, bypassing transcriptional regulation. These non-genomic responses enable rapid cellular adaptation by directly affecting the functional state of cytoplasmic and membrane-associated proteins.
+
+        \end{itemize}
+
+      \end{core}
 
   \subsection{Signal Regulation}
     
-    Regardless of the response type, cellular signalling is not simply turned "on" or "off". Rather, the magnitude of the response can be regulated in several ways. Let us examine some of these mechanisms.
+    Cellular signalling operates as a \textbf{dynamic} and \textbf{highly regulated} process rather than a simple binary switch. The magnitude and duration of cellular responses are subject to multiple levels of control through distinct regulatory mechanisms.
 
     \begin{core}{Signal Amplification}
 
-      \textbf{Signal Amplification:} Signalling cascades amplify the cell's response to a signal. At each catalytic step in the cascade, the number of activated molecules can greatly exceed the number activated in the previous step. For example, a single activated adenylyl cyclase enzyme can catalyze the formation of many cAMP molecules before it is deactivated. Consequently, multistep cascades can produce substantial amplification of the original signal, provided that each step involves enzymatic amplification.
+      Signalling cascades function to amplify cellular responses through sequential enzymatic steps, wherein each activated component catalyzes the activation of multiple downstream molecules. This multiplicative effect at each catalytic step enables exponential \textbf{signal amplification}. For instance, a single activated adenylyl cyclase molecule can generate numerous cAMP molecules prior to its inactivation. Consequently, multi-tiered enzymatic cascades can achieve substantial amplification of the initial signal, with the overall gain determined by the product of amplification factors at each successive step.
 
-      \myfig{0.6}{cytology_figures/amplification}{caption}{fig:fig100}
+      \myfig{0.6}{cytology_figures/amplification}{Signal amplication in cAMP pathway}{fig:fig100}
 
     \end{core}
 
     \begin{core}{Specificity and Coordination}
 
-      \textbf{Specificity and Coordination:} Different cell types possess distinct sets of proteins, including receptors, relay molecules, and effector proteins. As a result, one cell type may respond to a particular ligand while another does not respond at all. A third cell type may respond to the same ligand but produce a different cellular response. In essence, a cell's response to a signal depends on its specific complement of receptor, signalling, and response proteins.
+      Cellular responses to identical extracellular signals exhibit remarkable \textbf{specificity} due to \textbf{differential protein expression profiles across cell types}. Each cell type expresses a unique repertoire of receptors, signalling intermediates, and effector proteins, enabling diverse responses to the same ligand. Consequently, a given signalling molecule may elicit a robust response in one cell type, no response in another, or qualitatively distinct responses in a third. This cellular specificity is determined by the particular complement of signalling machinery expressed within each cell, allowing for coordinated yet context-dependent physiological responses.
 
-      \myfig{0.5}{cytology_figures/specificity1}{caption}{fig:fig101}
+      \myfig{0.5}{cytology_figures/specificity1}{Signal specificity}{fig:fig101}
 
     \end{core}
 
     \begin{core}{Scaffolding Proteins}
 
-      \textbf{Scaffolding Proteins:} In many signalling pathways, efficiency is enhanced by scaffolding proteins—--large adaptor proteins that simultaneously bind multiple signalling components. By organizing these proteins into a functional complex, scaffolding proteins facilitate rapid and specific protein--protein interactions. In some cases, they stably assemble signalling complexes, reducing the dependence on random diffusion and increasing the speed and specificity of signal transmission.
+      Signal transduction efficiency is substantially enhanced by \textbf{scaffolding proteins}---large adaptor molecules that simultaneously bind multiple signalling components, organizing them into spatially defined functional complexes. By colocalizing pathway components, scaffolding proteins circumvent the kinetic limitations of diffusion, thereby accelerating signal propagation while simultaneously increasing signalling specificity through prevention of inappropriate cross-talk between parallel pathways. In certain cases, scaffolding proteins establish stable, pre-assembled signalling modules that enable rapid pathway activation upon receptor engagement.
 
-      \myfig{0.45}{cytology_figures/scaffolding}{caption}{fig:fig102}
+      \myfig{0.45}{cytology_figures/scaffolding}{Scaffolding protein}{fig:fig102}
 
     \end{core}
 
     \begin{core}{Signal Termination}
 
-      \textbf{Signal Termination:} A signalling pathway is not normally locked in a permanently activated state. The ability of a cell to respond to new signals depends on the \textbf{reversibility} of the changes produced by prior signalling events. Various mechanisms actively terminate signalling pathways. For example, phosphodiesterases convert cAMP to AMP, thereby reducing second messenger levels, and the intrinsic GTPase activity of G proteins hydrolyzes GTP to GDP, inactivating the G protein.
+      Signal transduction pathways are subject to active \textbf{termination} mechanisms that prevent constitutive activation and enable cellular responsiveness to subsequent stimuli. This responsiveness critically depends on the \textbf{reversibility} of signal-induced molecular modifications. Multiple enzymatic mechanisms mediate pathway deactivation: phosphodiesterases hydrolyze cAMP to 5'-AMP, thereby depleting second messenger pools; the intrinsic GTPase activity of G proteins catalyzes GTP hydrolysis to GDP, returning G proteins to their inactive state; and protein phosphatases reverse kinase-mediated phosphorylation events, restoring signalling components to their basal state.
 
     \end{core}  
 
-    A cellular response typically occurs when receptor activation (often proportional to the number of ligand-bound receptors) exceeds a threshold sufficient to initiate downstream signalling. Importantly, signal strength is usually graded rather than purely binary, meaning that the magnitude of the response can vary depending on the level of pathway activation.
+    Cellular responses are typically initiated when receptor occupancy---which correlates with ligand-receptor complex formation---exceeds a threshold level sufficient to activate downstream signalling cascades. Importantly, most signalling systems exhibit graded, dose-dependent responses rather than all-or-nothing behavior, enabling cells to produce proportional outputs that scale with the magnitude of signal strength.
 
-    BRIEF TRANSITION INTO APOPTOSIS ==================================================================
+  \subsection{Apoptosis}
 
     \begin{core}{Apoptosis}
 
-      In unhealthy or abnormal cells, such as cancerous or infected cells, one or more signalling pathways may become disrupted. These pathways may be defective or permanently active, flooding the body with excessive signals that can be harmful. In such cases, particularly when a cell has reached the end of its functional lifespan or is severely damaged, it may undergo \textbf{apoptosis}.
+      Dysregulation of signalling pathways---through mutation, infection, or damage---can result in aberrant pathway activation or loss of normal regulatory control. Such dysregulation is particularly prevalent in malignant and virally infected cells, where constitutive pathway activation may promote uncontrolled proliferation or other pathological phenotypes. When cells sustain irreparable damage, reach the terminus of their functional lifespan, or pose a threat to homeostasis, they may be eliminated through \textbf{apoptosis}, a regulated form of programmed cell death.
 
-      \textbf{Apoptosis} is a programmed and \textbf{tightly regulated} process of cellular self-destruction that enables an organism to eliminate damaged, infected, or unnecessary cells. During apoptosis, enzymes fragment the DNA and dismantle organelles and other cytoplasmic components. The cell shrinks and forms membrane-bound blebs, and its contents are packaged into apoptotic bodies that are engulfed and digested by specialized phagocytic cells, leaving little to no trace. This highly controlled process prevents damage to neighboring cells that would otherwise occur if a cell were to rupture and release its contents uncontrollably, as in \textbf{necrosis}, which is an unregulated form of cell death.
+      \textbf{Apoptosis} is a genetically programmed and \textbf{tightly regulated} process of cellular self-destruction that maintains tissue homeostasis by eliminating damaged, infected, senescent, or superfluous cells. The apoptotic program involves systematic dismantling of cellular architecture.
 
-      \myfig{0.5}{cytology_figures/apoptosis}{caption}{fig:fig103}
+      \begin{itemize}
 
-      The apoptotic pathway was first extensively studied in the nematode \textit{C. elegans}, a small soil worm. In these organisms (as shown in the above figure), the protein Ced-9 inhibits Ced-4 and Ced-3, which promote apoptosis. When a death signal activates a receptor at the cell surface, a signal transduction pathway leads to the inactivation of Ced-9. This releases its inhibition of Ced-4 and Ced-3, ultimately activating a cascade of \textbf{caspases} (cysteine proteases) that cleave specific cellular proteins and activate DNases responsible for DNA fragmentation, thereby executing apoptosis.
+        \item Endonucleases cleave chromosomal DNA into nucleosomal fragments.
 
-      In humans and other mammals, several distinct pathways—--utilizing approximately 15 different caspases--—can mediate apoptosis. One major pathway involves proteins that promote the formation of pores in the mitochondrial outer membrane, a process known as mitochondrial outer membrane permeabilization (MOMP). This leads to the release of pro-apoptotic factors, such as cytochrome \textit{c}, which activate downstream caspases and drive the apoptotic cascade.
+        \item Proteases degrade cytoskeletal and organellar protein.
 
-      These pathways employ proteins that are homologous to Ced-9, Ced-4, and Ced-3 in nematodes, reflecting the evolutionary conservation of the apoptotic machinery.
+      \item The cell undergoes characteristic morphological changes including cytoplasmic condensation, nuclear fragmentation (\textit{karyorrhexis}), and plasma membrane blebbing.
+      \end{itemize}
+      
+      Cellular contents are subsequently packaged into membrane-enclosed apoptotic bodies that are recognized and phagocytosed by neighboring cells or professional phagocytes, enabling efficient clearance without eliciting \textbf{inflammation} (EXTERNAL REFERENCE TO IMMUNOLOGY INFLAMMATION). This orderly process contrasts sharply with \textbf{necrosis}, an uncontrolled form of cell death characterized by plasma membrane rupture, release of intracellular contents, and consequent inflammatory responses that can damage surrounding tissue.
 
-    \end{core}    
+    \end{core}
+
+    \begin{core}{Apoptosis History \& Pathway}
+
+      The molecular mechanisms of apoptosis were first elucidated through pioneering genetic studies in the nematode \textit{Caenorhabditis elegans}. In this model organism, the anti-apoptotic protein Ced-9 constitutively inhibits the pro-apoptotic factors Ced-4 and Ced-3 under normal physiological conditions. Upon receipt of an apoptotic stimulus via cell-surface death receptors, downstream signal transduction pathways inactivate Ced-9, thereby relieving its inhibitory constraint on Ced-4 and Ced-3. This derepression initiates a proteolytic cascade mediated by \textbf{caspases}---a family of proteases---that systematically cleave structural and regulatory proteins while activating others responsible for internucleosomal DNA fragmentation, ultimately executing the apoptotic program.
+
+      \myfig{0.5}{cytology_figures/apoptosis}{Apoptosis pathway in nematode (\textit{Caenorhabditis elegans})}{fig:fig103}
+
+      In mammals, including humans, apoptosis is mediated through multiple convergent pathways that collectively utilize approximately 15 distinct caspases. A principal pathway, termed the intrinsic or mitochondrial pathway, involves Bcl-2 family proteins that regulate \textbf{mitochondrial outer membrane permeabilization (MOMP)}. Pro-apoptotic Bcl-2 family members oligomerize to form pores in the mitochondrial outer membrane, triggering the release of intermembrane space proteins, including cytochrome \textit{c}. Once released into the cytosol, cytochrome \textit{c} binds to Apaf-1, forming the apoptosome complex that activates initiator caspase-9, which subsequently cleaves and activates executioner caspases (\textit{caspase-3, -6, -7}) to propagate the apoptotic cascade.
+      \[
+        \text{Bcl-2} \rightarrow \text{Cytochrome \textit{c}} \rightarrow \text{Apaf-1} \rightarrow \text{caspase-9} \rightarrow \text{Apoptotic Cascade}
+      \]
+
+      These mammalian apoptotic pathways employ proteins structurally and functionally homologous to the \textit{C. elegans} core apoptotic machinery: Bcl-2 family proteins are homologous to Ced-9, Apaf-1 corresponds to Ced-4, and mammalian caspases are homologous to Ced-3. This remarkable conservation underscores the fundamental importance of programmed cell death across metazoan evolution.
+
+    \end{core}
 
 \section{Cell Division}
 
@@ -1760,6 +1814,7 @@
     \end{core}
  
 \section{Gene Expression}
+  \label{sec:gene_expression}
 
   Intro text content.
 
@@ -1783,7 +1838,7 @@
 
     Synthesis of RNA Transcript
 
-    \begin{core}{Synthesis of RNA Transcript (\textit{Initiation})}
+    \begin{core}[label=core:transcription_initiation]{Synthesis of RNA Transcript (\textit{Initiation})}
 
       Binding and initiation of transcription
       Promoter: is the entire portion of DNA that serves as the starting region for transcription 
