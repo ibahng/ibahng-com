@@ -2,7 +2,7 @@
 \usepackage{titling}
 
 \title{Radical Halogenation}
-\date{DATE PLACEHOLDER}
+\date{\today}
 \author{Ingyu Bahng}
 
 \input{../../presets/chemistry/preamble}
@@ -24,152 +24,195 @@
 
 \input{../../presets/_general/startup}
 
-\section{Radical Halogenation}
+\section{Foundations} 
 
-  \textbf{Radical halogenation} is a chemical reaction where a H atom in an alkane is replaced by a halogen atom (typically Cl or Br). Unlike many organic reactions that involve ions, this process is driven by \textbf{free radicals} --- highly reactive atoms or molecules with an unpaired electron.
+  \begin{core}{Radical Halogenation}
 
-  In the lab, chemists often want to substitute specific atoms within a molecule (organic synthesis). However, since alkanes are essentially "chemical dead ends" consisting only of strong, non-polar C-C and C-H bonds, they don't have a "handle" for other reagents to grab onto. This is where radical halogenation comes in to convert an unreactive alkane into a functionalized haloalkane (alkyl halide). In organic synthesis, radical halogenation is arguably the most important "entry point" into the world of functional group transformations that we learn later in \textit{2.1 Reaction Mechanisms}.
+    \textbf{Radical halogenation} is a chemical reaction where a H atom in an alkane is replaced by a halogen atom (typically Cl or Br). Unlike many organic reactions that involve ions, this process is driven by \textbf{free radicals} --- highly reactive atoms or molecules with an unpaired electron.
 
-  Let us review bond strength. Take a look at the \textbf{homolytic cleavage} of the example compound \ce{AB}.
+    In the lab, chemists often want to substitute specific atoms within a molecule (organic synthesis). However, since alkanes are essentially "chemical dead ends" consisting only of strong, non-polar C-C and C-H bonds, they don't have a "handle" for other reagents to grab onto. This is where radical halogenation comes in to convert an unreactive alkane into a functionalized haloalkane (alkyl halide). In organic synthesis, radical halogenation is arguably the most important "entry point" into the world of functional group transformations that we learn later in \textit{2.1 Reaction Mechanisms}.
 
-  \bce{\ce{A$:$B -> A$\cdot$ + $\cdot$B}}
+  \end{core}
 
-  Homolytic cleavage leads to the formation of \textbf{radicals}. The $\Delta H$ of this reaction is the bond dissociation energy ($kcal\,mol^{-1}$) which can be represented as $DH^{\circ}$.
+  \begin{core}{Homolytic vs Heterolytic Cleavage}
 
-  Mind that this process differs from \textbf{heterolytic cleavage}, which leads to the formation of \textbf{ions}.
+    Let us review bond strength. Take a look at the \textbf{homolytic cleavage} of the example compound \ce{AB}.
 
-  \bce{\ce{A$:$B -> A+ + $:$B-}}
+    \bce{\ce{A$:$B -> A$\cdot$ + $\cdot$B}}
 
-  In comparison, $DH^{\circ}$ is almost always significantly higher than ionization energy.
+    Homolytic cleavage leads to the formation of \textbf{radicals}. The $\Delta H$ of this reaction is the bond dissociation energy ($kcal\,mol^{-1}$) which can be represented as $DH^{\circ}$.
 
-  To functionalize alkanes, we need to \textbf{break a C-H bond}. It's important to keep in mind that the $DH^{\circ}$ decreases along the following series.
+    Mind that this process differs from \textbf{heterolytic cleavage}, which leads to the formation of \textbf{ions}.
 
-  \[
+    \bce{\ce{A$:$B -> A+ + $:$B-}}
+
+    In comparison, $DH^{\circ}$ is almost always significantly higher than ionization energy.
+
+  \end{core} 
+
+  \begin{core}{Hydrocarbon C-H Bond Types}
+
+    To functionalize alkanes, we need to \textbf{break a C-H bond}. It's important to keep in mind that the $DH^{\circ}$ decreases along the following series.
+
+    \[
       \ce{H3C-H} \quad > \quad \ce{R_{prim}-H} \quad > \quad \ce{R_{sec}-H} \quad > \quad \ce{R_{tert}-H}
-  \]
+    \]
 
-  $R_{prim}$, $R_{sec}$, and $R_{tert}$ alkanes are refer to carbons that are attached to one, two, and three other carbons, respectively. The following diagram nicely illustrates examples of each scenario.
+    $R_{prim}$, $R_{sec}$, and $R_{tert}$ alkanes are refer to carbons that are attached to one, two, and three other carbons, respectively. The following diagram nicely illustrates examples of each scenario.
 
-  \myfig{0.5}{radical_halogenation_figures/pstq_carbons}{Primary, Secondary, Tertiary, and Quaternary Carbons}{fig:pstq_carbons}
+    \myfig{0.5}{radical_halogenation_figures/pstq_carbons}{Primary, Secondary, Tertiary, and Quaternary Carbons}{fig:pstq_carbons}
 
-  \ce{R_{tert}-H} is the easiest bond to break, making the resulting radical the most stable compared to the other 3 bonds (\ce{H3C-H}, \ce{R_{prim}-H}, and \ce{R_{sec}-H}). The reason behind the increasing stabilty as more adjacent carbons exist is a phenomenon called \textbf{hyperconjugation}.
+    \ce{R_{tert}-H} is the easiest bond to break, making the resulting radical the most stable compared to the other 3 bonds (\ce{H3C-H}, \ce{R_{prim}-H}, and \ce{R_{sec}-H}). The reason behind the increasing stabilty as more adjacent carbons exist is a phenomenon called \textbf{hyperconjugation} (\textit{\autoref{core:hyperconjugation}}).
 
-  \textbf{Hyperconjugation} is the stabilization of a molecule (like a radical or a carbocation) through the interaction of \ce{e^-}s in a $\sigma$ bond (usually C-H or C-C) with an adjacent empty or partially filled p-orbital. In the context of the alkane radical we are currently looking at, the $\sigma$ bond \ce{e^-}s from the neighboring carbons are overlapping with the half filled or empty p orbital of the radical carbon atom. 
+  \end{core}
 
-  \myfig{0.5}{radical_halogenation_figures/hyperconjugation}{Hyperconjugation in Alkane Radicals}{fig:hyperconjugation}
+  \begin{core}[label=core:hyperconjugation]{Hyperconjugation}
 
-  As you can see based on the illustration above, the hyperconjugating effect is the greatest in the case of \ce{R_{tert}-H} because there are more neightboring molecular bonding orbitals to borrow \ce{e^-} density from in order for the p orbital to be more stable.
+    \textbf{Hyperconjugation} is the stabilization of a molecule (like a radical or a carbocation) through the interaction of \ce{e^-}s in a $\sigma$ bond (usually C-H or C-C) with an adjacent empty or partially filled p-orbital. In the context of the alkane radical we are currently looking at, the $\sigma$ bond \ce{e^-}s from the neighboring carbons are overlapping with the half filled or empty p orbital of the radical carbon atom. 
 
-  Now that we have established basic knowledge around alkane radical formation, let's start learning about radical halogenation, which is expressed as the following reaction equation (\textit{using Cl as an example}).
+    \myfig{0.5}{radical_halogenation_figures/hyperconjugation}{Hyperconjugation in Alkane Radicals}{fig:hyperconjugation}
 
-  \bce{\ce{H3C-H + Cl-Cl -> H3C-Cl + HCl}\hspace{5mm}$\Delta H = -25$}
+    As you can see based on the illustration above, the hyperconjugating effect is the greatest in the case of \ce{R_{tert}-H} because there are more neightboring molecular bonding orbitals to borrow \ce{e^-} density from in order for the p orbital to be more stable.
 
-  This reaction is net exothermic, however, it needs a initial input of energy to start the reaction. To study this better, let's split this reaction into parts.
+  \end{core}
 
-  \bce{(1) INITIATION:\hspace{3mm}\ce{Cl2 -> 2Cl$\cdot$}\hspace{5mm}$\Delta H = +58$}
+\section{Mechanism of Radical Halogenation}
 
-  How does the Cl-Cl bond break? \textbf{Thermal energy} can induce sufficiently large enough vibration to cause bond breaking. \textbf{Photochemical energy} via photons can also cause bond breaking by exciting a bonding \ce{e^-} to an antibonding molecular orbital.
+  \begin{core}{Initiation \& Propagation}
 
-  \bce{(2) PROPAGATION}
+    Now that we have established basic knowledge around alkane radical formation, let's start learning about radical halogenation, which is expressed as the following reaction equation (\textit{using Cl as an example}).
 
-  \bce{(2a) \ce{CH4 + Cl$\cdot$ -> $\cdot$CH3 + HCl}\hspace{5mm}$\Delta H = +2$}
-  
-  \bce{(2b) \ce{$\cdot$CH3 + Cl2 -> CH3Cl + Cl$\cdot$}\hspace{5mm}$\Delta H = -27$}
+    \bce{\ce{H3C-H + Cl-Cl -> H3C-Cl + HCl}\hspace{5mm}$\Delta H = -25$}
 
-  When we combine (2a) and (2b), we come back to the original chemical equation.
+    This reaction is net exothermic, however, it needs a initial input of energy to start the reaction. To study this better, let's split this reaction into parts.
 
-  \bce{\ce{CH4 + Cl2 -> CH3-Cl + HCl}\hspace{5mm}$\Delta H = -25$}
+    \bce{(1) INITIATION:\hspace{3mm}\ce{Cl2 -> 2Cl$\cdot$}\hspace{5mm}$\Delta H = +58$}
 
-  It's important to keep in mind that the initiation step does not enter into the equation. Its only purpose is to serve as a catalytic trigger to start reaction (2a). Only a few \ce{Cl$\cdot$} radicals are needed to convert all of the starting material into the desired products because \ce{Cl$\cdot$} is regenerative (\textit{kind of like a chemical relay baton}). 
+    How does the Cl-Cl bond break? \textbf{Thermal energy} can induce sufficiently large enough vibration to cause bond breaking. \textbf{Photochemical energy} via photons can also cause bond breaking by exciting a bonding \ce{e^-} to an antibonding molecular orbital.
 
-  Some reactions that terminate this reaction are the following:
+    \bce{(2) PROPAGATION}
 
-  \bce{(Ta) \ce{2Cl$\cdot$ -> Cl2}}
-  
-  \bce{(Tb) \ce{H3C$\cdot$ + Cl$\cdot$ -> CH3Cl}}
-  
-  \bce{(Tc) \ce{H3C$\cdot$ + H3C$\cdot$ -> H3C-CH3}}
+    \bce{(2a) \ce{CH4 + Cl$\cdot$ -> $\cdot$CH3 + HCl}\hspace{5mm}$\Delta H = +2$}
 
-  (Ta) is quite literally just the reverse of the initiation step so it's pretty self-explanatory. As for (Tb), although it produces the desired product, it does it so in a manner that effectively kills the \ce{Cl$\cdot$} regeneration process (\textit{it kills the "baton" instead of passing it on}). As for (Tc), it simply combines a \ce{H3C$\cdot$} radicals, ridding the propagation process of a nessecary reagent. 
+    \bce{(2b) \ce{$\cdot$CH3 + Cl2 -> CH3Cl + Cl$\cdot$}\hspace{5mm}$\Delta H = -27$}
 
-  At any given time within the reaction, radical species like \ce{Cl$\cdot$} and \ce{H3C$\cdot$} are in extremely low concentrations because they are merely transition states that exist for a short amount of time before reacting with the abundant levels of \ce{CH4} and \ce{Cl2}, respectively. Therefore, all of the above termination reactions are highly unlikely because they require the simultaneous presence of two radical species, which only becomes likely at the end of the reaction timeline within a closed system.
+    When we combine (2a) and (2b), we come back to the original chemical equation.
 
-  The overall orbital interaction of reagents of reaction 2a looks like the following:
+    \bce{\ce{CH4 + Cl2 -> CH3-Cl + HCl}\hspace{5mm}$\Delta H = -25$}
 
-  \myfig{0.9}{radical_halogenation_figures/reagents2a}{Orbital Interaction of Reagents in Step 2a}{fig:reagents2a}
+    It's important to keep in mind that the initiation step does not enter into the equation. Its only purpose is to serve as a catalytic trigger to start reaction (2a). Only a few \ce{Cl$\cdot$} radicals are needed to convert all of the starting material into the desired products because \ce{Cl$\cdot$} is regenerative (\textit{kind of like a chemical relay baton}). 
 
-  Once the reaction finishes, we are left with the cooresponding \ce{H3C$\cdot$} radical (\textit{with a half filled 2p and 3 $sp^2$ hybridized orbitals}) and a \ce{HCl} molecule (\textit{which would float around as aqueous ions because HCl is a strong acid}).
+    The overall orbital interaction of reagents of reaction 2a looks like the following:
 
-  \myfig{0.65}{radical_halogenation_figures/products2a}{Products of Step 2a}{fig:products2a}
+    \myfig{0.9}{radical_halogenation_figures/reagents2a}{Orbital Interaction of Reagents in Step 2a}{fig:reagents2a}
 
-  The PE diagram of the propagation steps gives a nice visual illustration of the energetic "ups and downs" of the reaction.
+    Once the reaction finishes, we are left with the cooresponding \ce{H3C$\cdot$} radical (\textit{with a half filled 2p and 3 $sp^2$ hybridized orbitals}) and a \ce{HCl} molecule (\textit{which would float around as aqueous ions because HCl is a strong acid}).
 
-  \myfig{0.9}{radical_halogenation_figures/PE_diagram_halogenation}{Potential Energy Diagram of Halogenation Propagation}{fig:pe_diagram_halogenation}
+    \myfig{0.65}{radical_halogenation_figures/products2a}{Products of Step 2a}{fig:products2a}
 
-  Just like we have done for Cl, let's take a look at the reactivity of the other halogens (F, Br, and I).
+    The PE diagram of the propagation steps gives a nice visual illustration of the energetic "ups and downs" of the reaction.
 
-  \begin{center}
-  \begin{tabular}{cccc|cccc|cccc}
-  \multicolumn{4}{c|}{$DH^{\circ}$ (all +)} & \multicolumn{4}{c|}{$\Delta H \text{ of \ce{H-X} Formation}$ (all -)} & \multicolumn{4}{c}{$\Delta H \text{ of \ce{H3C-X} Formation}$ (all -)} \\
-  \ce{F2} & \ce{Cl2} & \ce{Br2} & \ce{I2} & \ce{HF} & \ce{HCl} & \ce{HBr} & \ce{HI} & \ce{CH3F} & \ce{CH3Cl} & \ce{CH3Br} & \ce{CH3I} \\
-  \hline
-  38 & 58 & 46 & 36 & 136 & 103 & 87 & 71 & 110 & 85 & 70 & 51 \\
-  \end{tabular}
-  \end{center}
+    \myfig{0.9}{radical_halogenation_figures/PE_diagram_halogenation}{Potential Energy Diagram of Halogenation Propagation}{fig:pe_diagram_halogenation}
 
-  \textbf{LEFT COLUMN:} As you can see, the initiation dissociation energy requirements are OK for all. Seeing that the $DH^{\circ}$ for \ce{Cl2} is the highest and we know that the reaction proceeds, we can assume that initiation would not be a barrier for any of the other halogens.
+  \end{core}
 
-  \textbf{MIDDLE COLUMN:} We see that the energy released from the formation of the cooresponding acid for each halogen decreases as we go down the periodic table. Thus \ce{HF} formation would be the most favorable and \ce{HI} the least.
+  \begin{core}{Termination}
 
-  \textbf{RIGHT COLUMN:} Again, the formation of the desired product is the most favorable for \ce{F} and the least favorable for \ce{I}.
+    Some reactions that terminate this reaction are the following:
 
-  Based on these numbers, we can predict that radical halogenation with F will be the most reactive, followed by Cl, then Br, and finally I. 
+    \bce{(Ta) \ce{2Cl$\cdot$ -> Cl2}}
 
-  In reality, F is actually too reactive to the point that radical halogenation \textbf{using F causes an explosion} because of its high exothermicity. On the opposite side of the spectrum, \textbf{I does not react at all} because the entire reaction is net endothermic. However, \textbf{Cl and Br provide a good middle ground} between the two extremes, with Cl being relatively more reactive than Br.
+    \bce{(Tb) \ce{H3C$\cdot$ + Cl$\cdot$ -> CH3Cl}}
 
-  Here is a PE diagram displaying a side-by-side comparison of each type of radical halogenation.
+    \bce{(Tc) \ce{H3C$\cdot$ + H3C$\cdot$ -> H3C-CH3}}
 
-  \myfig{1.0}{radical_halogenation_figures/halogenation_pe}{Comparison of Radical Halogenation PE Diagrams}{fig:halogenation_pe}
+    (Ta) is quite literally just the reverse of the initiation step so it's pretty self-explanatory. As for (Tb), although it produces the desired product, it does it so in a manner that effectively kills the \ce{Cl$\cdot$} regeneration process (\textit{it kills the "baton" instead of passing it on}). As for (Tc), it simply combines a \ce{H3C$\cdot$} radicals, ridding the propagation process of a nessecary reagent. 
 
-  As you can see, the distance of transition state 1 (TS1) from the starting point increases as step 1 becomes more endothermic. Here, we introduce the \textbf{Hammond Postulate}, a principle used to estimate the structure and energy of a TS. Because TSs exist for only a fraction of a second and cannot be directly observed, this postulate allows chemists to "infer" what they look like based on its energy level.
+    At any given time within the reaction, radical species like \ce{Cl$\cdot$} and \ce{H3C$\cdot$} are in extremely low concentrations because they are merely transition states that exist for a short amount of time before reacting with the abundant levels of \ce{CH4} and \ce{Cl2}, respectively. Therefore, all of the above termination reactions are highly unlikely because they require the simultaneous presence of two radical species, which only becomes likely at the end of the reaction timeline within a closed system.
 
-  When a reaction is exothermic, the TS PE level stands closer to that of the reactants, thus the TS looks more like the reactants than it does the products (\textbf{early transition state}). 
+  \end{core}
 
-  On the flipside, when a reaction is endothermic, the TS PE level stands closer to that of the products, thus the TS looks more like the products than it does the reactants (\textbf{late transition state}).
+\section{Halogen Reactivity and Selectivity}
 
-  Here is a zoomed in snapshot of step 1 of the reactions for F and I.
-  
-  \myfig{0.9}{radical_halogenation_figures/hammond_zoomin}{Zoomed Step 1 PE Diagrams for F and I}{fig:hammond_zoomin}
+  \begin{core}{Reactivity of Other Halogens}
 
-  We can see that the TS1 for F is more reactant-like because the H that is being transfered from the methane to the F is closer to the methyl group than it is to the F. However, in the I reaction, the H is closer to the I than it is to the methyl group.
-  
-  This can also be intuitively conceptualized by seeing how large the activation energies are for this reaction portion. Since the $E_a$ is low for F, there would be less total energy inputed to serparate the H from the methyl group, thus the TS would look like it hadn't shifted much but shifted enough to cross the threshold for the attractive force of F to overcome that of methyl and subsequently steal the H. In the case of the I reaction, since the $E_a$ is high, there would be considerably more energy inputed to serparate the H from the methyl group, thus the TS would look like the H had shifted a lot to cross the threshold for the attractive force of I (\textit{which is weaker than that of F}) to overcome that of methyl and subsequently steal the H.
+    Just like we have done for Cl, let's take a look at the reactivity of the other halogens (F, Br, and I).
 
-  With this in mind, Br would also have a late transition state although not to the degree of I.
+    \begin{center}
+      \begin{tabular}{cccc|cccc|cccc}
+        \multicolumn{4}{c|}{$DH^{\circ}$ (all +)} & \multicolumn{4}{c|}{$\Delta H \text{ of \ce{H-X} Formation}$ (all -)} & \multicolumn{4}{c}{$\Delta H \text{ of \ce{H3C-X} Formation}$ (all -)} \\
+        \ce{F2} & \ce{Cl2} & \ce{Br2} & \ce{I2} & \ce{HF} & \ce{HCl} & \ce{HBr} & \ce{HI} & \ce{CH3F} & \ce{CH3Cl} & \ce{CH3Br} & \ce{CH3I} \\
+        \hline
+        38 & 58 & 46 & 36 & 136 & 103 & 87 & 71 & 110 & 85 & 70 & 51 \\
+      \end{tabular}
+    \end{center}
 
-  Using the Hammond Postulate, we can also explain the \textbf{regioselectivity} of the different halogenation reactions. Let's look at the different versions of isobutyl radical for example. 
+    \textbf{LEFT COLUMN:} As you can see, the initiation dissociation energy requirements are OK for all. Seeing that the $DH^{\circ}$ for \ce{Cl2} is the highest and we know that the reaction proceeds, we can assume that initiation would not be a barrier for any of the other halogens.
 
-  \myfig{0.5}{radical_halogenation_figures/isobutyl_radical}{Isobutyl Radical Variations}{fig:isobutyl_radical}
+    \textbf{MIDDLE COLUMN:} We see that the energy released from the formation of the cooresponding acid for each halogen decreases as we go down the periodic table. Thus \ce{HF} formation would be the most favorable and \ce{HI} the least.
 
-  \textbf{Regioselectivity} refers to the preferences of which carbon (just methyl, primary, secondary, or tertiary) the halogen will replace the H on based on the stability of the semi radical transition state that the C-H develops into.
-  
-  In the case of Cl halogenation, we see an \textbf{early TS where the radical is barely developed}, thus the stability of the primary isobutyl state (left) does not differ much from the tertiary isobutyl state (right). Thus, Cl halogenation is relatively indifferent to which C-H bond is being replaced.
+    \textbf{RIGHT COLUMN:} Again, the formation of the desired product is the most favorable for \ce{F} and the least favorable for \ce{I}.
 
-  As for Br halogenation, we see a \textbf{late TS where the radical is more developed}, thus the stability of the primary isobutyl state (left) is considerably less stable than that of the tertiary isobutyl state (right) due to the presence of more hyperconjugation. Thus, Br halogenation would favor the halogenation of the tertiary over the primary.
+    Based on these numbers, we can predict that radical halogenation with F will be the most reactive, followed by Cl, then Br, and finally I. 
 
-  The ratio numbers we see in the lab for the different halogenation reactions across differently hyperconjugated carbons align with this explanation.
+    In reality, F is actually too reactive to the point that radical halogenation \textbf{using F causes an explosion} because of its high exothermicity. On the opposite side of the spectrum, \textbf{I does not react at all} because the entire reaction is net endothermic. However, \textbf{Cl and Br provide a good middle ground} between the two extremes, with Cl being relatively more reactive than Br.
 
-  \begin{center}
-  \begin{tabular}{cccc}
-  \hline
-  C-H Bond & F ($25^{\circ}C$, gas) & Cl ($25^{\circ}C$, gas) & Br($150^{\circ}C$, gas) \\
-  \hline
-  \ce{CH3-H} & 0.5 & 0.004 & 0.002 \\
-  \ce{RCH2-H} & 1 & 1 & 1 \\
-  \ce{R2CH-H} & 1.2 & 4 & 80 \\
-  \ce{R3C-H} & 1.4 & 5 & 1700 \\
-  \hline
-  \end{tabular}
-  \end{center}
+    Here is a PE diagram displaying a side-by-side comparison of each type of radical halogenation.
+
+    \myfig{1.0}{radical_halogenation_figures/halogenation_pe}{Comparison of Radical Halogenation PE Diagrams}{fig:halogenation_pe}
+
+  \end{core}
+
+  \begin{core}{Hammond Postulate}
+
+    As you can see, the distance of transition state 1 (TS1) from the starting point increases as step 1 becomes more endothermic. Here, we introduce the \textbf{Hammond Postulate}, a principle used to estimate the structure and energy of a TS. Because TSs exist for only a fraction of a second and cannot be directly observed, this postulate allows chemists to "infer" what they look like based on its energy level.
+
+    When a reaction is exothermic, the TS PE level stands closer to that of the reactants, thus the TS looks more like the reactants than it does the products (\textbf{early transition state}). 
+
+    On the flipside, when a reaction is endothermic, the TS PE level stands closer to that of the products, thus the TS looks more like the products than it does the reactants (\textbf{late transition state}).
+
+    Here is a zoomed in snapshot of step 1 of the reactions for F and I.
+
+    \myfig{0.9}{radical_halogenation_figures/hammond_zoomin}{Zoomed Step 1 PE Diagrams for F and I}{fig:hammond_zoomin}
+
+    We can see that the TS1 for F is more reactant-like because the H that is being transfered from the methane to the F is closer to the methyl group than it is to the F. However, in the I reaction, the H is closer to the I than it is to the methyl group.
+
+    This can also be intuitively conceptualized by seeing how large the activation energies are for this reaction portion. Since the $E_a$ is low for F, there would be less total energy inputed to serparate the H from the methyl group, thus the TS would look like it hadn't shifted much but shifted enough to cross the threshold for the attractive force of F to overcome that of methyl and subsequently steal the H. In the case of the I reaction, since the $E_a$ is high, there would be considerably more energy inputed to serparate the H from the methyl group, thus the TS would look like the H had shifted a lot to cross the threshold for the attractive force of I (\textit{which is weaker than that of F}) to overcome that of methyl and subsequently steal the H.
+
+    With this in mind, Br would also have a late transition state although not to the degree of I.
+
+  \end{core}
+
+  \begin{core}{Regioselectivity}
+
+    Using the Hammond Postulate, we can also explain the \textbf{regioselectivity} of the different halogenation reactions. Let's look at the different versions of isobutyl radical for example. 
+
+    \myfig{0.5}{radical_halogenation_figures/isobutyl_radical}{Isobutyl Radical Variations}{fig:isobutyl_radical}
+
+    \textbf{Regioselectivity} refers to the preferences of which carbon (just methyl, primary, secondary, or tertiary) the halogen will replace the H on based on the stability of the semi radical transition state that the C-H develops into.
+
+    In the case of Cl halogenation, we see an \textbf{early TS where the radical is barely developed}, thus the stability of the primary isobutyl state (left) does not differ much from the tertiary isobutyl state (right). Thus, Cl halogenation is relatively indifferent to which C-H bond is being replaced.
+
+    As for Br halogenation, we see a \textbf{late TS where the radical is more developed}, thus the stability of the primary isobutyl state (left) is considerably less stable than that of the tertiary isobutyl state (right) due to the presence of more hyperconjugation. Thus, Br halogenation would favor the halogenation of the tertiary over the primary.
+
+    The ratio numbers we see in the lab for the different halogenation reactions across differently hyperconjugated carbons align with this explanation.
+
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{cccc}
+        \hline
+        C-H Bond & F ($25^{\circ}C$, gas) & Cl ($25^{\circ}C$, gas) & Br($150^{\circ}C$, gas) \\
+        \hline
+        \ce{CH3-H} & 0.5 & 0.004 & 0.002 \\
+        \ce{RCH2-H} & 1 & 1 & 1 \\
+        \ce{R2CH-H} & 1.2 & 4 & 80 \\
+        \ce{R3C-H} & 1.4 & 5 & 1700 \\
+        \hline
+      \end{tabular}
+      \caption{Your caption text here}
+      \label{tab:your_label}
+    \end{table}
+
+  \end{core}
 
 \end{document}

@@ -5,66 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingyu's Notes</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
-  <h1>Ingyu's Notes</h1>
-
-  <p class="intro">A personal collection of notes and projects I've built up over time.</p>
-
-  <h2>Chemistry</h2>
-  <div class="grid">
-    <a href="chemistry/acids_and_bases/acids_and_bases.pdf">Acids and Bases</a>
-    <a href="chemistry/alcohols/alcohols.pdf">Alcohols</a>
-    <a href="chemistry/alkane_alkene_alkyne/alkane_alkene_alkyne.pdf">Alkanes, Alkenes, Alkynes</a>
-    <a href="chemistry/conformational_analysis/conformational_analysis.pdf">Conformational Analysis</a>
-    <a href="chemistry/equilibrium/equilibrium.pdf">Equilibrium</a>
-    <a href="chemistry/ethers/ethers.pdf">Ethers</a>
-    <a href="chemistry/gases/gases.pdf">Gases</a>
-    <a href="chemistry/nomenclature/nomenclature.pdf">Nomenclature</a>
-    <a href="chemistry/nuc_sub_and_elim/nuc_sub_and_elim.pdf">Nucleophilic Substitution and Elimination</a>
-    <a href="chemistry/quantization/quantization.pdf">Quantization</a>
-    <a href="chemistry/radical_halogenation/radical_halogenation.pdf">Radical Halogenation</a>
-    <a href="chemistry/thermodynamics/thermodynamics.pdf">Thermodynamics</a>
+  <nav class="sidebar">
+    <span class="sidebar-label">Sections</span>
+    <a href="#notes" class="active">Notes</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+  </nav>
+  <div class="content">
+    <section id="notes">
+      <div class="intro-block">
+        <div class="intro-label">Personal Archive</div>
+        <h1 class="intro-name">Ingyu Bahng</h1>
+        <p class="intro-text">A collection of things I've studied, built, and written down over the years. No particular theme or system—just a digital commonplace. Feel free to look around.</p>
+      </div>
+      <hr class="section-divider">
+      <h1>Notes</h1>
+      <h2>Chemistry</h2>
+      <div class="grid">
+        <a href="chemistry/acids_and_bases/acids_and_bases.pdf" class="pdf-link"><span class="card-title">Acids and Bases</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/alcohols/alcohols.pdf" class="pdf-link"><span class="card-title">Alcohols</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/alkane_alkene_alkyne/alkane_alkene_alkyne.pdf" class="pdf-link"><span class="card-title">Alkanes, Alkenes, Alkynes</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/conformational_analysis/conformational_analysis.pdf" class="pdf-link"><span class="card-title">Conformational Analysis</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/equilibrium/equilibrium.pdf" class="pdf-link"><span class="card-title">Equilibrium</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/ethers/ethers.pdf" class="pdf-link"><span class="card-title">Ethers</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/gases/gases.pdf" class="pdf-link"><span class="card-title">Gases</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/nomenclature/nomenclature.pdf" class="pdf-link"><span class="card-title">Nomenclature</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/nuc_sub_and_elim/nuc_sub_and_elim.pdf" class="pdf-link"><span class="card-title">Nucleophilic Substitution and Elimination</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/quantization/quantization.pdf" class="pdf-link"><span class="card-title">Quantization</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/radical_halogenation/radical_halogenation.pdf" class="pdf-link"><span class="card-title">Radical Halogenation</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="chemistry/thermodynamics/thermodynamics.pdf" class="pdf-link"><span class="card-title">Thermodynamics</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+      </div>
+      <h2>Biology</h2>
+      <div class="grid">
+        <a href="biology/cytology/cytology.pdf" class="pdf-link"><span class="card-title">Cytology</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="biology/ecology/ecology.pdf" class="pdf-link"><span class="card-title">Ecology</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="biology/evolution/evolution.pdf" class="pdf-link"><span class="card-title">Evolution</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="biology/genetics/genetics.pdf" class="pdf-link"><span class="card-title">Genetics</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="biology/immunology/immunology.pdf" class="pdf-link"><span class="card-title">Immunology</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="biology/oncology/oncology.pdf" class="pdf-link"><span class="card-title">Oncology</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+      </div>
+      <h2>Finance & Markets</h2>
+      <div class="grid">
+        <a href="finance_markets/accounting/accounting.pdf" class="pdf-link"><span class="card-title">Accounting</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/commodity/commodity.pdf" class="pdf-link"><span class="card-title">Commodity</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/corporate_finance/corporate_finance.pdf" class="pdf-link"><span class="card-title">Corporate Finance</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/derivatives/derivatives.pdf" class="pdf-link"><span class="card-title">Derivatives</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/equity/equity.pdf" class="pdf-link"><span class="card-title">Equity</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/fixed_income/fixed_income.pdf" class="pdf-link"><span class="card-title">Fixed Income</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/forex/forex.pdf" class="pdf-link"><span class="card-title">Forex</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/fundamental_analysis/fundamental_analysis.pdf" class="pdf-link"><span class="card-title">Fundamental Analysis</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/macroeconomics/macroeconomics.pdf" class="pdf-link"><span class="card-title">Macroeconomics</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/microeconomics/microeconomics.pdf" class="pdf-link"><span class="card-title">Microeconomics</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/technical_analysis/technical_analysis.pdf" class="pdf-link"><span class="card-title">Technical Analysis</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="finance_markets/valuation/valuation.pdf" class="pdf-link"><span class="card-title">Valuation</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+      </div>
+      <h2>Computer Science</h2>
+      <div class="grid">
+        <a href="computer_science/databases/databases.pdf" class="pdf-link"><span class="card-title">Databases</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="computer_science/html_css/html_css.pdf" class="pdf-link"><span class="card-title">HTML and CSS</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="computer_science/javascript/javascript.pdf" class="pdf-link"><span class="card-title">JavaScript</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="computer_science/operating_systems/operating_systems.pdf" class="pdf-link"><span class="card-title">Operating Systems</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+        <a href="computer_science/python/python.pdf" class="pdf-link"><span class="card-title">Python</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+      </div>
+      <h2>Law</h2>
+      <div class="grid">
+        <a href="law/intellectual_property/intellectual_property.pdf" class="pdf-link"><span class="card-title">Intellectual Property</span><span class="subtopic">subtopic1 &middot; subtopic2 &middot; subtopic3</span></a>
+      </div>
+    </section>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="grid-2">
+        <a href="https://google.com" class="project-card" target="_blank" rel="noopener">
+          <div class="project-head">
+            <span class="project-title">Project One</span>
+            <span class="project-sep">·</span>
+            <span class="project-subject">Subject</span>
+          </div>
+          <p class="card-desc">A brief description of the project, what it does, and what I learned building it.</p>
+        </a>
+        <a href="https://google.com" class="project-card" target="_blank" rel="noopener">
+          <div class="project-head">
+            <span class="project-title">Project Two</span>
+            <span class="project-sep">·</span>
+            <span class="project-subject">Subject</span>
+          </div>
+          <p class="card-desc">A brief description of the project, what it does, and what I learned building it.</p>
+        </a>
+      </div>
+    </section>
+    <section id="publications">
+      <h1>Publications</h1>
+      <p class="in-progress">In progress.</p>
+    </section>
   </div>
-
-  <h2>Biology</h2>
-  <div class="grid">
-    <a href="biology/cytology/cytology.pdf">Cytology</a>
-    <a href="biology/ecology/ecology.pdf">Ecology</a>
-    <a href="biology/evolution/evolution.pdf">Evolution</a>
-    <a href="biology/genetics/genetics.pdf">Genetics</a>
-    <a href="biology/immunology/immunology.pdf">Immunology</a>
-    <a href="biology/oncology/oncology.pdf">Oncology</a>
-  </div>
-
-  <h2>Finance & Markets</h2>
-  <div class="grid">
-    <a href="finance_markets/accounting/accounting.pdf">Accounting</a>
-    <a href="finance_markets/commodity/commodity.pdf">Commodity</a>
-    <a href="finance_markets/corporate_finance/corporate_finance.pdf">Corporate Finance</a>
-    <a href="finance_markets/derivatives/derivatives.pdf">Derivatives</a>
-    <a href="finance_markets/equity/equity.pdf">Equity</a>
-    <a href="finance_markets/fixed_income/fixed_income.pdf">Fixed Income</a>
-    <a href="finance_markets/forex/forex.pdf">Forex</a>
-    <a href="finance_markets/fundamental_analysis/fundamental_analysis.pdf">Fundamental Analysis</a>
-    <a href="finance_markets/macroeconomics/macroeconomics.pdf">Macroeconomics</a>
-    <a href="finance_markets/microeconomics/microeconomics.pdf">Microeconomics</a>
-    <a href="finance_markets/technical_analysis/technical_analysis.pdf">Technical Analysis</a>
-    <a href="finance_markets/valuation/valuation.pdf">Valuation</a>
-  </div>
-
-  <h2>Computer Science</h2>
-  <div class="grid">
-    <a href="computer_science/databases/databases.pdf">Databases</a>
-    <a href="computer_science/html_css/html_css.pdf">HTML and CSS</a>
-    <a href="computer_science/javascript/javascript.pdf">JavaScript</a>
-    <a href="computer_science/operating_systems/operating_systems.pdf">Operating Systems</a>
-    <a href="computer_science/python/python.pdf">Python</a>
-  </div>
-
-  <h2>Law</h2>
-  <div class="grid">
-    <a href="law/intellectual_property/intellectual_property.pdf">Intellectual Property</a>
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
