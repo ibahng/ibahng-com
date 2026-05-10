@@ -17,6 +17,8 @@ async function addPageCount(link) {
     if (title) {
       title.textContent += ` [IP]`;
     }
+    link.classList.add('is-inactive');
+    link.addEventListener('click', e => e.preventDefault());
   }
 }
 
@@ -40,6 +42,14 @@ function updateActiveSection() {
     }
   });
 }
+
+// Project card click handler (avoids nested anchor issues)
+document.querySelectorAll('.project-card[data-href]').forEach(card => {
+  card.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    window.open(card.dataset.href, '_blank');
+  });
+});
 
 // Smooth scroll for sidebar links
 document.querySelectorAll('.sidebar a').forEach(link => {
