@@ -1,0 +1,116 @@
+\usepackage{pgfplots} % for plot creation
+\pgfplotsset{compat=1.18} % setting the version used for pgfplots
+\usepackage{float} % for better figure placement using [h]
+\usepackage{graphicx} % for importing figures into the tex file
+\usepackage{subcaption} % allows for multiple subfigures with individual captions wihtin one figure
+\usepackage{xparse} % allows for more than 9 parameters in commands
+\usepackage{adjustbox} % for valign option
+\captionsetup{font=small} % setting the caption fontsize to small always
+
+\usepackage{silence}
+\WarningsOff[float]  % suppress float package warnings
+
+\newcommand{\myfig}[4]{%
+  \begin{figure}[H]
+    \centering
+    \adjustbox{valign=c}{\includegraphics[width=#1\textwidth]{#2}}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+\newcommand{\sbs}[3]{
+  \begin{minipage}[t]{#1\textwidth}
+    \setlength{\parskip}{0.8em}
+    #2
+    \vspace{4pt}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{\textwidth-#1\textwidth-1em}
+    \vspace{-1.5em}
+    #3
+  \end{minipage}
+}
+
+\newcommand{\itemspace}[0]{
+  \vspace{0.8em}
+}
+
+\newcommand{\mlistpreset}[0]{
+  [itemsep=8pt, leftmargin=1.5em]
+}
+
+\newcommand{\mymultifig}[8]{
+  \begin{figure}[H]%
+    \centering%
+    \begin{subfigure}{#1\textwidth}%
+      \centering%
+      \includegraphics[width=\linewidth]{#2}%
+    \end{subfigure}%
+    \hfill%
+    \begin{subfigure}{#3\textwidth}%
+      \centering%
+      \includegraphics[width=\linewidth]{#4}%
+    \end{subfigure}%
+    \hfill%
+    \begin{subfigure}{#5\textwidth}%
+      \centering%
+      \includegraphics[width=\linewidth]{#6}%
+    \end{subfigure}%
+    \caption{#7}%
+    \label{#8}%
+  \end{figure}%
+}
+
+\newcommand{\pgfig}[4]{%
+  \begin{figure}[H]
+    \centering
+    \scalebox{#4}{
+      \begin{tikzpicture}
+        #1
+      \end{tikzpicture}
+    }
+    \caption{#2}
+    \label{#3}
+  \end{figure}
+}
+
+\newcommand{\doublepgfig}[5]{%
+  \begin{figure}[H]
+    \centering
+    \scalebox{#5}{
+      \begin{tikzpicture}
+        #1
+      \end{tikzpicture}
+      \qquad
+      \qquad
+      \begin{tikzpicture}
+        #2
+      \end{tikzpicture}
+    }
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+\newcommand{\axispresetsone}[0]{
+  clip=false,
+  grid=major,
+  grid style={dashed, gray!30},
+  axis lines=left,
+}
+
+\newcommand{\axispresetstwo}[0]{
+  clip=false,
+  axis lines=left,
+}
+
+\newcommand{\pgfiglabel}[2]{
+  \node at (axis cs:#1) {#2};
+}
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+
+% tcolorbox package
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+\definecolor{Yellow}{HTML}{D9A300} % Optimized Gold/Ochre
+\definecolor{Red}{HTML}{EF5350}    % Material Design Red 400
+\definecolor{Green}{HTML}{008000}  % Office Green
+\definecolor{Blue}{HTML}{0000CD}   % Medium Blue
+\definecolor{Purple}{HTML}{660066} % Deep Grape
+\definecolor{Orange}{HTML}{D35400} % Pumpkin/Burnt Orange
+\definecolor{Black}{HTML}{000000}    % Solid Black
+\definecolor{White}{HTML}{FFFFFF}    % Solid White
+
+\tcbset{ % this is the default design of tcolorboxes
+  colframe = black,
+  colback  = white,
+  coltitle = black,
+  colbacktitle = black!15,
+  breakable, 
+  arc=0mm,
+  boxrule=0.7pt,
+  toptitle=3pt,
+  bottomtitle=3pt,
+  left=8pt,
+  right=8pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=12pt,
+  after skip=12pt,
+  bottomrule at break=-1pt,
+  toprule at break=-1pt,
+  fonttitle=\bfseries,
+  fontupper=\setlength{\parskip}{0.6em}
+}
+
+% Custom Environments
+\newtcolorbox[auto counter, number within=section]{definition}[2][]
+{
+  title = \textbf{Definition \thetcbcounter: ~#2},
+  #1
+}
+
+\newtcolorbox[auto counter, number within=section]{core}[2][]
+{
+  title = \textbf{Core Concept \thetcbcounter: ~#2},
+  #1,
+}
+
+\makeatletter
+\newcommand{\tcb@cnt@coreautorefname}{Core Concept}
+\newcommand{\tcb@cnt@definitionautorefname}{Definition}
+\newcommand{\tcb@cnt@sectautorefname}{Section}
+\makeatother

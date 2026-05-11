@@ -1,0 +1,64 @@
+\usepackage{newverbs} % allows for inline typewriter font via \texttt{}
+\usepackage{fancyvrb} % also code font blocks but has more capabilities than texttt
+\usepackage{listings} % allows for codeblocks - config below
+\usepackage{dirtree}
+
+%BELOW ARE CODE BLOCK DESIGNS (Light Theme)
+\definecolor{gray}{HTML}{707070}
+\definecolor{lightgray}{HTML}{333333}
+\definecolor{codebg}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{0000FF}
+\definecolor{string}{HTML}{A31515}
+\definecolor{number}{HTML}{098658}
+\definecolor{function}{HTML}{795E26}
+\definecolor{comment}{HTML}{008000}
+\definecolor{classname}{HTML}{267F99}
+
+% default options for listings (for code)
+\lstset{
+  frame=ltbr,
+  language=python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=fullflexible,
+  keepspaces=true,
+  basicstyle=\fontsize{9}{10}\ttfamily\color{lightgray},
+  numbers=left,
+  firstnumber=1,
+  numberstyle=\fontsize{7}{10}\ttfamily\color{gray},
+  keywordstyle=\color{keyword},
+  commentstyle=\color{comment},
+  stringstyle=\color{string},
+  backgroundcolor=\color{codebg},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,
+  xleftmargin=3em,
+  numbersep=1em,
+  framexleftmargin=2.5em,
+  framesep=6pt,
+  stepnumber=1,
+}
+
+\renewcommand*\DTstyle{\ttfamily} % Keeps the font monospaced
+\setlist{nosep}                   % Optional: tightens spacing
+
+\definecolor{codefontcolor}{HTML}{822E2A}
+\definecolor{codebgcolor}{HTML}{EEEEEE}
+\definecolor{codeframecolor}{HTML}{D3D3D2}
+
+\newtcbox{\textcode}{
+    on line,
+    boxrule=0.5pt,        % Removes the border thickness
+    boxsep=0pt,
+    left=2pt,           % Horizontal padding
+    right=2pt,
+    top=1pt,            % Vertical padding
+    bottom=1pt,
+    arc=3pt,            % Adjust for more/less rounding
+    colback=codebgcolor,     % Background color
+    colframe=codeframecolor,    % Set frame to match background just in case
+    fontupper=\ttfamily\color{codefontcolor}\strut
+}
+
