@@ -119,9 +119,9 @@
 
           \item \ce{CH4 + Cl$\cdot$ -> $\cdot$CH3 + HCl}\hspace{5mm}$\Delta H = +2\,\text{kcal}\,\text{mol}^{-1}$
 
-          The frontier molecular orbital interactions governing this hydrogen abstraction step are depicted below in \autoref{fig:reagents2a}.
+          The frontier molecular orbital interactions governing this hydrogen abstraction step are depicted in \autoref{fig:reagents2a}.
 
-          \myfig{0.9}{radical_halogenation_figures/reagents2a}{Orbital interaction of reagents in (2a)}{fig:reagents2a}
+          \myfig{0.95}{radical_halogenation_figures/reagents2a}{Orbital interaction of reagents in (2a)}{fig:reagents2a}
 
           This step yields a methyl radical (\ce{H3C$\cdot$}), characterized by a singly occupied 2p orbital and three $sp^2$-hybridized C--H bonds adopting trigonal planar geometry, along with \ce{HCl}. In aqueous or polar environments, HCl, being a strong Brønsted acid, dissociates completely into solvated \ce{H+} and \ce{Cl-} ions.
 
@@ -141,7 +141,67 @@
 
     The PE diagram for the propagation sequence (\textit{\autoref{fig:pe_diagram_halogenation}}) provides a quantitative representation of the energetic profile throughout the reaction coordinate.
 
-    \myfig{0.85}{radical_halogenation_figures/PE_diagram_halogenation}{Potential energy diagram of halogenation propagation}{fig:pe_diagram_halogenation} % change into pgfig
+    \pgfig{
+      \begin{axis}[
+        width=13cm,
+        height=10cm,
+        xmin=-0.5, xmax=11.5,
+        ymin=0, ymax=10,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={Reaction Coordinate},
+        ylabel={Energy},
+        axis line style={thick},
+        \axispresetsone
+      ]
+      
+      % Main reaction curve - two humps with intermediate
+      \addplot[
+        thick,
+        blue,
+        domain=0.5:10.5,
+        samples=300,
+      ] {
+        -0.015*x^4 + 0.32*x^3 - 2.3*x^2 + 6.1*x + 2
+      };
+      
+      % Dashed horizontal line at reactant level
+      \addplot[thick, black, dashed] coordinates {(0.5, 4.5) (2.5, 4.5)};
+      
+      % Dashed horizontal line at intermediate level
+      \addplot[thick, black, dashed] coordinates {(1.5, 5.47) (8, 5.47)};
+      
+      % Dashed horizontal line at product level
+      \addplot[thick, black, dashed] coordinates {(1, 0.59) (10.5, 0.59)};
+      
+      \draw[->, thick] (1.8, 4.5) -- (1.8, 5.47);
+      \draw[->, thick] (2, 4.5) -- (2, 0.59);
+      \draw[->, thick] (2.2, 4.5) -- (2.2, 7.34);
+      \draw[->, thick] (8, 5.47) -- (8, 6);
+      \draw[->, thick] (7.5, 5.47) -- (7.5, 0.59);
+
+      \draw[-{Triangle}] (3, 3.5) -- (1.9, 5);
+      \draw[-{Triangle}] (3.8, 7) -- (2.3, 6.5);
+      \draw[-{Triangle}] (9.7, 6) -- (8.1, 5.7);
+
+      % Labels for species
+      \node[font=\footnotesize] at (axis cs:0.6, 4) {\ce{CH4 + \textcolor{Green}{Cl$\cdot$} + (Cl2)}};
+      \node[font=\footnotesize] at (axis cs:6, 5) {\ce{\textcolor{Green}{$\cdot$CH3} + Cl2 + (HCl)}};
+      \node[font=\footnotesize] at (axis cs:9, 1) {\ce{CH3Cl + HCl + \textcolor{Green}{Cl$\cdot$}}};
+      
+      % Transition state labels
+      \node[font=\small] at (axis cs:2.2, 8) {\ce{[\textcolor{Green}{\ce{H3C$\cdots$H$\cdots$Cl}}]^{\ddagger}}};
+      \node[font=\small] at (axis cs:8, 6.7) {\ce{[\textcolor{Green}{\ce{H3C$\cdots$Cl$\cdots$Cl}}]^{\ddagger}}};
+      
+      % Energy annotations
+      \node[font=\footnotesize, align=left] at (axis cs:4, 3.5) {$E_a$ of step 1 =\\+2 kcal mol$^{-1}$};
+      \node[font=\footnotesize, align=left] at (axis cs:5, 7) {$E_a$ = 4 kcal mol$^{-1}$\\slower};
+      \node[font=\footnotesize, align=left] at (axis cs:11, 6) {$E_a$ < 1 kcal mol$^{-1}$\\faster};
+      \node[font=\footnotesize, align=left] at (axis cs:3.7, 1.5) {$\Delta H^{\circ}$ of overall reaction =\\$-25$ kcal mol$^{-1}$};
+      \node[font=\footnotesize, align=left] at (axis cs:8.6, 2.5) {$\Delta H^{\circ}$ of step 2 =\\$-27$ kcal mol$^{-1}$};
+      
+      \end{axis}
+    }{Potential energy diagram of halogenation propagation}{fig:pe_diagram_halogenation}{0.86}
 
   \end{core}
 
@@ -165,7 +225,7 @@
 
     \end{enumerate}
 
-    Throughout the reaction, radical intermediates such as \ce{Cl$\cdot$} and \ce{H3C$\cdot$} exist at extremely low steady-state concentrations, as these transient species react rapidly with abundant substrate molecules (\textit{\ce{CH4} and \ce{Cl2}, respectively}) rather than persisting in solution. Consequently, termination reactions---which require bimolecular encounters between two radical species---exhibit negligible rates during the early and intermediate stages of the reaction due to the low probability of simultaneous radical--radical interactions. Termination becomes significant only in the late stages of the reaction when substrate depletion reduces propagation rates, or when radical concentrations increase sufficiently within the closed system.
+    Throughout the reaction, radical intermediates such as \ce{Cl$\cdot$} and \ce{H3C$\cdot$} exist at extremely low steady-state concentrations, reacting rapidly with abundant substrate (\textit{\ce{CH4} and \ce{Cl2}, respectively}) rather than persisting in solution. Consequently, termination reactions---requiring bimolecular radical--radical encounters---are negligible during early and intermediate stages. Termination becomes significant only when substrate depletion reduces propagation rates or when radical concentrations increase sufficiently in the closed system.
 
   \end{core}
 
@@ -173,72 +233,100 @@
 
   \begin{core}{Reactivity of Other Halogens}
 
-    Just like we have done for Cl, let's take a look at the reactivity of the other halogens (F, Br, and I).
+    Having examined chlorination in detail, we now extend our analysis to the full halogen series (\textit{F, Br, and I}) to assess their respective reactivities.
 
-    \begin{center}
+    \begin{table}[H]
+      \centering
       \begin{tabular}{cccc|cccc|cccc}
-        \multicolumn{4}{c|}{$DH^{\circ}$ (all +)} & \multicolumn{4}{c|}{$\Delta H \text{ of \ce{H-X} Formation}$ (all -)} & \multicolumn{4}{c}{$\Delta H \text{ of \ce{H3C-X} Formation}$ (all -)} \\
-        \ce{F2} & \ce{Cl2} & \ce{Br2} & \ce{I2} & \ce{HF} & \ce{HCl} & \ce{HBr} & \ce{HI} & \ce{CH3F} & \ce{CH3Cl} & \ce{CH3Br} & \ce{CH3I} \\
+        \multicolumn{4}{c|}{$DH^{\circ}$ (+)} & \multicolumn{4}{c|}{$\Delta H$ of \ce{H-X} Formation ($-$)} & \multicolumn{4}{c}{$\Delta H$ of \ce{H3C-X} Formation ($-$)} \\
+
+        \ce{F2} & \ce{Cl2} & \ce{Br2} & \ce{I2} &
+        \ce{HF} & \ce{HCl} & \ce{HBr} & \ce{HI} &
+        \ce{CH3F} & \ce{CH3Cl} & \ce{CH3Br} & \ce{CH3I} \\
+
         \hline
-        38 & 58 & 46 & 36 & 136 & 103 & 87 & 71 & 110 & 85 & 70 & 51 \\
+
+        38 & 58 & 46 & 36 &
+        136 & 103 & 87 & 71 &
+        110 & 85 & 70 & 51 \\
       \end{tabular}
-    \end{center}
+      \caption{Bond dissociation and formation enthalpies for halogens and halogen-containing compounds}
+      \label{tab:halogen_enthalpies}
+    \end{table}
 
-    \textbf{LEFT COLUMN:} As you can see, the initiation dissociation energy requirements are OK for all. Seeing that the $DH^{\circ}$ for \ce{Cl2} is the highest and we know that the reaction proceeds, we can assume that initiation would not be a barrier for any of the other halogens.
+    \begin{itemize}
 
-    \textbf{MIDDLE COLUMN:} We see that the energy released from the formation of the cooresponding acid for each halogen decreases as we go down the periodic table. Thus \ce{HF} formation would be the most favorable and \ce{HI} the least.
+      \item \textbf{Initiation energetics (left columns):} The bond dissociation energies for \ce{X2} homolysis span a narrow range (36--58 kcal mol$^{-1}$). Since chlorination proceeds efficiently despite having the highest $DH^{\circ}$, initiation is not rate-limiting under typical conditions.
 
-    \textbf{RIGHT COLUMN:} Again, the formation of the desired product is the most favorable for \ce{F} and the least favorable for \ce{I}.
+      \item \textbf{Hydrogen halide formation (middle columns):} The exothermicity of \ce{H-X} bond formation decreases systematically down the halogen group, with $\Delta H$ values ranging from $-136$ kcal mol$^{-1}$ for \ce{HF} to $-71$ kcal mol$^{-1}$ for \ce{HI}. HF formation is the most favorable (\textit{most exothermic}) and HI formation is the least favorable (\textit{least exothermic}) among the hydrogen halides. 
 
-    Based on these numbers, we can predict that radical halogenation with F will be the most reactive, followed by Cl, then Br, and finally I. 
+      \item \textbf{Methyl halide formation (right columns):} An analogous trend is observed for \ce{H3C-X} bond formation, with fluorination ($\Delta H = -110$ kcal mol$^{-1}$) being substantially more exothermic than iodination ($\Delta H = -51$ kcal mol$^{-1}$).
 
-    In reality, F is actually too reactive to the point that radical halogenation \textbf{using F causes an explosion} because of its high exothermicity. On the opposite side of the spectrum, \textbf{I does not react at all} because the entire reaction is net endothermic. However, \textbf{Cl and Br provide a good middle ground} between the two extremes, with Cl being relatively more reactive than Br.
+    \end{itemize}
 
-    Here is a PE diagram displaying a side-by-side comparison of each type of radical halogenation.
+    Based on these thermodynamic data, we can predict that radical halogenation reactivity follows the order: $F > Cl > Br > I$, with fluorination being the most exothermic and iodination the least.
 
-    \myfig{1.0}{radical_halogenation_figures/halogenation_pe}{Comparison of Radical Halogenation PE Diagrams}{fig:halogenation_pe}
+    In practice, fluorination is \textbf{violently exothermic and uncontrollable}, often resulting in explosion. Conversely, \textbf{iodination does not proceed} under standard radical conditions due to its net endothermic character. \textbf{Chlorination and bromination occupy a synthetically useful middle ground}: chlorination is more reactive but less selective, while bromination is less reactive but more regioselective (\textit{\autoref{core:regioselectivity}}).
+
+    \myfig{1}{radical_halogenation_figures/halogenation_pe}{Comparison of Radical Halogenation PE Diagrams}{fig:halogenation_pe}
 
   \end{core}
 
-  \begin{core}{Hammond Postulate}
+  \begin{core}[label=core:hammond_postulate]{Hammond Postulate}
 
-    As you can see, the distance of transition state 1 (TS1) from the starting point increases as step 1 becomes more endothermic. Here, we introduce the \textbf{Hammond Postulate}, a principle used to estimate the structure and energy of a TS. Because TSs exist for only a fraction of a second and cannot be directly observed, this postulate allows chemists to "infer" what they look like based on its energy level.
+    Inspection of \autoref{fig:halogenation_pe} reveals that the position of the first transition state (\textit{TS1}) along the reaction coordinate shifts systematically as the endothermicity of the first propagation step increases. This observation is rationalized by the \textbf{Hammond Postulate}, a fundamental principle that relates transition state structure to reaction thermodynamics. Because transition states are transient, high-energy species that cannot be directly observed, the Hammond Postulate provides a framework for inferring their structures based on energetic considerations.
 
-    When a reaction is exothermic, the TS PE level stands closer to that of the reactants, thus the TS looks more like the reactants than it does the products (\textbf{early transition state}). 
+    The Hammond Postulate states that for exothermic elementary steps, the transition state lies energetically and structurally closer to the reactants, resulting in an \textbf{early transition state} that resembles the starting materials more than the products.
 
-    On the flipside, when a reaction is endothermic, the TS PE level stands closer to that of the products, thus the TS looks more like the products than it does the reactants (\textbf{late transition state}).
+    Conversely, for endothermic elementary steps, the transition state lies closer to the products in both energy and structure, yielding a \textbf{late transition state} that more closely resembles the product species.
 
-    Here is a zoomed in snapshot of step 1 of the reactions for F and I.
+    To illustrate this principle, consider the contrasting cases of fluorination and iodination, shown in magnified detail in \autoref{fig:hammond_zoomin}.
 
     \myfig{0.9}{radical_halogenation_figures/hammond_zoomin}{Zoomed Step 1 PE Diagrams for F and I}{fig:hammond_zoomin}
 
-    We can see that the TS1 for F is more reactant-like because the H that is being transfered from the methane to the F is closer to the methyl group than it is to the F. However, in the I reaction, the H is closer to the I than it is to the methyl group.
+    In the fluorination TS, the transferring hydrogen atom remains significantly closer to the methyl carbon than to the fluorine atom, reflecting the early, reactant-like character of this highly exothermic step. In contrast, the iodination TS exhibits the hydrogen atom positioned much closer to iodine, indicative of a late, product-like TS consistent with the endothermic nature of this step.
 
-    This can also be intuitively conceptualized by seeing how large the activation energies are for this reaction portion. Since the $E_a$ is low for F, there would be less total energy inputed to serparate the H from the methyl group, thus the TS would look like it hadn't shifted much but shifted enough to cross the threshold for the attractive force of F to overcome that of methyl and subsequently steal the H. In the case of the I reaction, since the $E_a$ is high, there would be considerably more energy inputed to serparate the H from the methyl group, thus the TS would look like the H had shifted a lot to cross the threshold for the attractive force of I (\textit{which is weaker than that of F}) to overcome that of methyl and subsequently steal the H.
+    This structural distinction correlates directly with $E_a$ differences. Fluorination exhibits a low $E_a$, requiring minimal C--H bond elongation to reach its TS; consequently, the C--H bond is only slightly weakened when the TS is achieved, and the hydrogen has not yet substantially transferred to fluorine. Iodination, conversely, requires a substantially higher activation energy, necessitating extensive C--H bond elongation and near-complete hydrogen transfer to iodine before the TS is reached. This reflects the weaker H--I bond strength relative to H--F, which requires greater geometric reorganization to compensate for reduced thermodynamic driving force.
 
-    With this in mind, Br would also have a late transition state although not to the degree of I.
+    Bromination, being mildly endothermic, similarly exhibits a late transition state, though less product-like than that of iodination.
 
   \end{core}
 
-  \begin{core}{Regioselectivity}
+  \begin{core}[label=core:regioselectivity]{Regioselectivity}
 
-    Using the Hammond Postulate, we can also explain the \textbf{regioselectivity} of the different halogenation reactions. Let's look at the different versions of isobutyl radical for example. 
+    The Hammond Postulate (\textit{\autoref{core:hammond_postulate}}) also provides a mechanistic basis for understanding the differing \textbf{regioselectivities} exhibited by various halogens. To illustrate this, consider the competing pathways leading to primary versus tertiary isobutyl radicals:
 
-    \myfig{0.5}{radical_halogenation_figures/isobutyl_radical}{Isobutyl Radical Variations}{fig:isobutyl_radical}
+    \reactionfig{
+      \scheme{
+        \chemfig{
+          [:0]
+          -[:-30]
+          (-[:-90])
+          -[:30]\textcolor{Red}{\ce{C$\cdot$}}
+        }
+        \qquad
+        \chemfig{
+          [:0]
+          -[:-30]\textcolor{Red}{\ce{C$\cdot$}}
+          (-[:-90])
+          -[:30]
+        }
+      }
+    }{Isobutyl radical variations}{fig:isobutyl_radical}{1}
 
-    \textbf{Regioselectivity} refers to the preferences of which carbon (just methyl, primary, secondary, or tertiary) the halogen will replace the H on based on the stability of the semi radical transition state that the C-H develops into.
+    \textbf{Regioselectivity} refers to the preferential abstraction of hydrogen from specific carbon centers (\textit{methyl, primary, secondary, or tertiary}) based on the relative stabilities of the radical character developed in the transition state.
 
-    In the case of Cl halogenation, we see an \textbf{early TS where the radical is barely developed}, thus the stability of the primary isobutyl state (left) does not differ much from the tertiary isobutyl state (right). Thus, Cl halogenation is relatively indifferent to which C-H bond is being replaced.
+    For chlorination, the \textbf{early transition state exhibits minimal radical character}, meaning that the differential stabilization between primary and tertiary radicals is not yet fully manifested at the transition state geometry. Consequently, chlorination displays poor regioselectivity, abstracting hydrogen atoms from primary, secondary, and tertiary positions at comparable rates.
 
-    As for Br halogenation, we see a \textbf{late TS where the radical is more developed}, thus the stability of the primary isobutyl state (left) is considerably less stable than that of the tertiary isobutyl state (right) due to the presence of more hyperconjugation. Thus, Br halogenation would favor the halogenation of the tertiary over the primary.
+    Bromination, in contrast, proceeds through a \textbf{late transition state with substantial radical character}, wherein hyperconjugative stabilization of the developing radical center significantly influences the $E_a$. Because tertiary radicals benefit from greater hyperconjugative stabilization than primary radicals, the transition state leading to the tertiary radical is preferentially stabilized, resulting in highly regioselective hydrogen abstraction from tertiary positions.
 
-    The ratio numbers we see in the lab for the different halogenation reactions across differently hyperconjugated carbons align with this explanation.
+    Experimental selectivity data support this mechanistic interpretation, as shown in \autoref{tab:halogen_selectivity}.
 
     \begin{table}[H]
       \centering
       \begin{tabular}{cccc}
         \hline
-        C-H Bond & F ($25^{\circ}C$, gas) & Cl ($25^{\circ}C$, gas) & Br($150^{\circ}C$, gas) \\
+        C--H Bond & F ($25^{\circ}$C, gas) & Cl ($25^{\circ}$C, gas) & Br ($150^{\circ}$C, gas) \\
         \hline
         \ce{CH3-H} & 0.5 & 0.004 & 0.002 \\
         \ce{RCH2-H} & 1 & 1 & 1 \\
@@ -246,8 +334,8 @@
         \ce{R3C-H} & 1.4 & 5 & 1700 \\
         \hline
       \end{tabular}
-      \caption{Your caption text here}
-      \label{tab:your_label}
+      \caption{Relative reactivities of C--H bonds toward halogen radicals (\textit{normalized to primary C--H})}
+      \label{tab:halogen_selectivity}
     \end{table}
 
   \end{core}

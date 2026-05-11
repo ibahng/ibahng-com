@@ -9,6 +9,7 @@
 
 \externaldocument[the-]{../../chemistry/thermodynamics/thermodynamics}[../../chemistry/thermodynamics/thermodynamics.pdf]
 \externaldocument[qua-]{../../chemistry/quantization/quantization}[../../chemistry/quantization/quantization.pdf]
+\externaldocument[gen-]{../genetics/genetics}[../genetics/genetics.pdf]
 
 \begin{document}
 
@@ -1689,25 +1690,29 @@
 
   \subsection{DNA Organization and Replication}
 
-    The ability of organisms to produce more of their own kind is a defining characteristic of living systems. This capacity for reproduction, like all biological functions, has a cellular basis. The continuity of life depends on the reproduction of cells through \textbf{cell division}.
+    \begin{core}{Cell Division}
 
-    For cell division to occur, a cell must first grow and duplicate its cellular contents, effectively preparing two complete sets of materials before splitting. One of the most important components that must be replicated is the cell's genetic material (DNA). To understand this process, we must first examine how genetic material is organized within the cell.
+      The capacity for self-replication constitutes a fundamental defining characteristic of living systems. Like all biological processes, reproduction is ultimately rooted in cellular mechanisms. The continuity of life across generations depends critically on the faithful reproduction of cells through \textbf{cell division}.
+
+      Prior to cell division, cells must undergo growth and complete duplication of their cellular constituents to ensure that each daughter cell receives a complete complement of necessary materials. Among the components requiring faithful replication, the genetic material (\textit{DNA}) is paramount. To comprehend the mechanics of DNA replication and segregation, we must first examine the organizational architecture of genetic material within eukaryotic cells.
+
+    \end{core}
 
     \begin{core}{Chromosomes \& Chromatids}
 
-      In eukaryotic cells, DNA exists as long double-helical molecules that are packaged with histone proteins into compact structures called \textbf{chromosomes}. For a major portion of species, each somatic cell contains two sets of chromosomes--—one inherited from each parent--—resulting in an even chromosome number. In humans, somatic cells contain 46 chromosomes (23 inherited from the father and 23 from the mother).
+      In eukaryotic cells, DNA exists as extended double-helical molecules that associate with \textbf{histone} proteins to form highly compacted nucleoprotein structures termed \textbf{chromosomes}. Most sexually reproducing species are \textbf{diploid}, meaning that each somatic cell harbors two complete sets of chromosomes---one inherited maternally and one paternally---resulting in an even total chromosome number. In humans, somatic cells contain 46 chromosomes, organized as 23 homologous pairs (\textit{23 paternal and 23 maternal chromosomes}).
 
-      \myfig{0.5}{cytology_figures/genome}{caption}{fig:fig104}
+      \myfig{0.5}{cytology_figures/genome}{Human karyotype before replication}{fig:fig104}
 
-      Before DNA replication, a human somatic cell contains 46 chromosomes. After replication, the chromosome number remains 46; however, each chromosome now consists of two identical \textbf{sister chromatids}, meaning there are 92 DNA molecules in total. The two sister chromatids are joined along their lengths by protein complexes called \textbf{cohesins}, a linkage known as sister chromatid cohesion. Each duplicated chromosome contains a single \textbf{centromere}, a region composed of repetitive DNA sequences where the sister chromatids are most tightly connected.
+      Prior to DNA replication, a human somatic cell contains 46 chromosomes, each comprising a single DNA molecule as shown in \autoref{fig:fig104}. Following replication during the S phase (\textit{\autoref{core:m_phases}}), the chromosome count remains 46; however, each chromosome now consists of two identical \textbf{sister chromatids} joined together, yielding a total of 92 DNA molecules as shown in \autoref{fig:fig105}. Sister chromatids are held together along their entire length by multi-subunit protein complexes called \textbf{cohesins}, a physical association termed \textbf{sister chromatid cohesion}. Each replicated chromosome possesses a single \textbf{centromere}---a specialized chromosomal region enriched in repetitive DNA sequences where sister chromatids exhibit their tightest physical association and where kinetochore proteins assemble.
 
-      \myfig{0.5}{cytology_figures/dup_chromo}{caption}{fig:fig105}
+      \myfig{0.5}{cytology_figures/dup_chromo}{Human karyotype after replication}{fig:fig105}
 
-      It is easy to become confused by the terminology. Chromosome number is defined by the \textbf{number of centromeres} present. Chromatid number, in contrast, refers to the number of individual DNA "sticks" visible. 
+      \textit{Precise terminology is essential to avoid confusion. Chromosome number is operationally defined by the \textbf{number of centromeres} present in the cell. Chromatid number, conversely, refers to the total number of individual DNA molecules (visualized as discrete chromatin "arms").}
 
-      Before DNA replication, a human somatic cell has 46 chromosomes and 46 chromatids. After replication, the chromosome number remains 46 (because there are still 46 centromeres), but there are now 92 chromatids, arranged as 46 pairs of sister chromatids joined at each centromere.
+      \textit{Prior to DNA replication, a human somatic cell contains 46 chromosomes and 46 chromatids (a 1:1 ratio). Following replication, the chromosome number remains 46 (as only 46 centromeres are present), but the chromatid number doubles to 92, organized as 46 pairs of sister chromatids joined at their respective centromeres.}
 
-      During cell division, the sister chromatids separate from one another. Once separated, they are no longer called sister chromatids; instead, each is considered an individual chromosome.
+      During mitotic anaphase, sister chromatid cohesion is dissolved, allowing the chromatids to segregate to opposite poles of the dividing cell. Upon separation, each chromatid is reclassified as an independent chromosome, restoring the 1:1 chromosome-to-chromatid ratio in each daughter cell.
 
     \end{core}
 
@@ -1715,101 +1720,105 @@
    
     \begin{core}{Cell Cycle}
 
-      \textbf{The cell cycle} is the ordered sequence of events by which a cell grows, replicates its DNA, and divides into two daughter cells. Mitosis is just one part of the \textbf{cell cycle}, which consists of four distinct phases: \textbf{first gap (G1)}, \textbf{synthesis (S)}, \textbf{second gap (G2)}, and \textbf{mitosis and cytokinesis (M)}. 
+      \textbf{The cell cycle} comprises the ordered sequence of events through which a cell grows, duplicates its genetic material, and divides to produce two daughter cells. Mitosis represents only one component of this cycle, which is partitioned into four discrete phases: \textbf{Gap 1 (G1)}, \textbf{DNA synthesis (S)}, \textbf{Gap 2 (G2)}, and \textbf{mitosis and cytokinesis (M)}.
 
-      \textbf{Interphase} is an umbrella term for all phases except mitosis (G1, S, and G2). Thus, the cell cycle is an alternating sequence of interphase and mitosis.
+      \textbf{Interphase} is a collective term encompassing all non-mitotic phases (\textit{G1, S, and G2}). Consequently, the cell cycle can be conceptualized as an alternating progression between interphase and M phase.
 
-      During all three phases of interphase, the cell grows by producing proteins and cytoplasmic organelles such as mitochondria and the endoplasmic reticulum. Duplication of the chromosomes, which is crucial for eventual cell division, occurs entirely during the S phase. 
+      Throughout all three interphase stages, cells undergo growth through biosynthesis of proteins and biogenesis of cytoplasmic organelles, including mitochondria and endoplasmic reticulum. Chromosomal DNA replication, an absolute prerequisite for subsequent cell division, occurs exclusively during S phase.
 
-      Thus, a cell grows (G1), continues to grow while copying its chromosomes (S), grows further as it completes preparations for division (G2), and then divides (M). The resulting daughter cells may then enter the cycle again.
+      The temporal organization of the cell cycle can therefore be summarized as follows: initial growth and preparation (\textit{G1}), continued growth concurrent with chromosomal DNA replication (\textit{S}), final growth and preparation for mitosis (\textit{G2}), followed by nuclear and cytoplasmic division (\textit{M}). The resulting daughter cells may subsequently re-enter G1 to initiate a new cycle.
 
-      \myfig{0.65}{cytology_figures/cell_cycle}{caption}{fig:fig106}
+      \myfig{0.65}{cytology_figures/cell_cycle}{The cell cycle}{fig:fig106}
 
     \end{core}
 
     \begin{core}{Mitosis}
 
-      The division of genetic material is called \textbf{mitosis}, and it is immediately followed by the division of the cytoplasm, known as \textbf{cytokinesis}. 
+      Nuclear division, termed \textbf{mitosis}, segregates replicated chromosomes into two daughter nuclei and is immediately followed by \textbf{cytokinesis}, the physical partitioning of the cytoplasm to complete cellular division.
 
-      \textit{Note that this process is different from \textbf{meiosis}, a specialized type of cell division that produces gametes (sperm in males and eggs in females). We will learn about meiosis in 5.1 Sexual Life Cycles and Meiosis.}
+      \textit{Mitosis must be distinguished from \textbf{meiosis}, a specialized form of nuclear division that generates \textbf{haploid} gametes (spermatozoa in males and ova in females) through two successive rounds of chromosome segregation. Meiotic division is examined in detail in \autoref{gen-core:meiosis}.}
 
     \end{core}
     
-    Mitosis can be divided into five phases: \textbf{prophase}, \textbf{prometaphase}, \textbf{metaphase}, \textbf{anaphase}, and \textbf{telophase \& cytokinesis}.
+    \begin{core}[label=core:m_phases]{Mitotic Phases}
 
-    \begin{core}{Mitosis (\textit{Prophase})}
+      Mitosis is conventionally subdivided into the following five sequential phases based on characteristic chromosomal and cytoskeletal dynamics.
 
-      (1) \textbf{PROPHASE:} During prophase, chromatin fibers condense into discrete chromosomes, each consisting of two identical sister chromatids joined by cohesins at the centromere. Meanwhile, the \textbf{mitotic spindle} begins to form from two \textbf{centrosomes} (\textit{recall this organelle from 2.1 A Tour of the Cell}), which migrate toward opposite poles of the cell. Although a typical cell contains only one centrosome, it duplicates during interphase in preparation for mitosis. The \textbf{mitotic spindle} is a dynamic structure composed of microtubules and associated proteins. The radial arrays of shorter microtubules extending from each centrosome are called \textbf{asters}.
+      \begin{enumerate}[label=(\arabic*)]
 
-      \textit{For simplicity, we have referred to genetic material as chromosomes throughout these explanations. In reality, during interphase, DNA exists in a less condensed form known as chromatin within the nucleus.}
+        \sbs{0.65}{
+          \item During \textbf{prophase}, dispersed interphase chromatin condenses into discrete, microscopically visible chromosomes, each comprising two identical sister chromatids joined by cohesin complexes at the centromere. Concurrently, the \textbf{mitotic spindle} begins to assemble from two \textbf{centrosomes}, which migrate to opposite cellular poles. Although cells typically harbor a single centrosome during interphase, centrosome duplication occurs during S/G2 phase to provide the two poles required for bipolar spindle formation. The \textbf{mitotic spindle} is a highly dynamic macromolecular machine composed of microtubules and associated motor proteins, regulatory factors, and structural components. Radial arrays of shorter microtubules emanating from each centrosome are termed \textbf{asters}.
+        }{
+          \myfig{0.8}{cytology_figures/prophase}{Prophase}{fig:fig107}
+        }
 
-      \myfig{0.3}{cytology_figures/prophase}{caption}{fig:fig107}
+        \textit{Note: For descriptive simplicity, we have employed the term "chromosomes" throughout the preceding discussion. Strictly speaking, during interphase, DNA exists in a decondensed state as chromatin fibers dispersed throughout the nucleus, only condensing into discrete chromosomal structures during prophase.}
 
-    \end{core}
+        \sbs{0.65}{
+          \item \textbf{Prometaphase} is characterized by nuclear envelope breakdown, which permits spindle microtubules emanating from each centrosome to access the chromosomes. A subset of these microtubules attach to \textbf{kinetochores}---large multiprotein complexes that assemble at the centromere of each sister chromatid---forming \textbf{kinetochore microtubules} that mediate chromosome motility. Other microtubules, termed \textbf{nonkinetochore microtubules} or \textbf{polar microtubules}, extend from opposite poles and join at the spindle midzone, where they contribute to spindle elongation and maintenance of spindle bipolarity.
+        }{
+          \myfig{0.65}{cytology_figures/prometaphase}{Prometaphase}{fig:fig108}
+        }
 
-    \begin{core}{Mitosis (\textit{Prometaphase})}
+        \sbs{0.65}{
+          \item By \textbf{metaphase}, the centrosomes have completed their migration to opposite cellular poles, and all chromosomes have achieved kinetochore-microtubule attachments, resulting in their alignment along the \textbf{metaphase plate}---a conceptual plane equidistant from both spindle poles. 
+        }{
+          \myfig{0.72}{cytology_figures/metaphase}{Metaphase}{fig:fig109}
+        }
 
-      (2) \textbf{PROMETAPHASE:} During prometaphase, the nuclear envelope fragments, allowing microtubules extending from each centrosome to invade the nuclear region. Some microtubules attach to \textbf{kinetochores} (protein structures that form at the centromere of each chromatid); these are called \textbf{kinetochore microtubules}. Other microtubules, known as \textbf{nonkinetochore microtubules}, interact with those from the opposite pole of the spindle, contributing to the elongation of the cell.
+        \sbs{0.65}{
+          \item \textbf{Anaphase} is initiated by proteolytic cleavage of cohesin complexes by the protease \textbf{separase}, which dissolves sister chromatid cohesion and permits chromatid separation. Upon separation, each chromatid is reclassified as an independent daughter chromosome. Poleward chromosome movement (\textit{anaphase A}) is driven by kinetochore-microtubule depolymerization and motor protein activity, while concurrent spindle elongation (\textit{anaphase B}) further separates the chromosome masses.
+        }{
+          \myfig{0.72}{cytology_figures/anaphase}{Anaphase}{fig:fig110}
+        }
 
-      \myfig{0.3}{cytology_figures/prometaphase}{caption}{fig:fig108}
+        \sbs{0.65}{
+          \item During \textbf{telophase}, two daughter nuclei form as nuclear envelope membranes reassemble around each segregated chromosome complement. Chromosomes decondense, reverting to the dispersed chromatin state characteristic of interphase, and mitotic spindle microtubules undergo depolymerization. 
 
-    \end{core}
+          \textbf{Cytokinesis}, which typically initiates during late anaphase and continues through telophase, achieves cytoplasmic partitioning. In animal cells, cytokinesis is mediated by a contractile ring composed of actin and myosin filaments that assembles at the cell equator, forming a \textbf{cleavage furrow} that progressively constricts to physically separate the two daughter cells.
+        }{
+          \myfig{0.7}{cytology_figures/telophase}{Telophase \& cytokinesis}{fig:fig111}
+        }
 
-    \begin{core}{Mitosis (\textit{Metaphase})}
-
-      (3) \textbf{METAPHASE:} By metaphase, the centrosomes are positioned at opposite poles of the cell, and all chromosomes have aligned at the \textbf{metaphase plate}, an imaginary plane equidistant from the two spindle poles.
-
-      \myfig{0.3}{cytology_figures/metaphase}{caption}{fig:fig109}
-
-    \end{core}
-
-    \begin{core}{Mitosis (\textit{Anaphase})}
-
-      (4) \textbf{ANAPHASE:} During anaphase, the cohesin proteins holding the sister chromatids together are cleaved, allowing the sister chromatids to separate. Once separated, they are considered individual daughter chromosomes and move toward opposite poles of the cell as the cell elongates.
-
-      \myfig{0.35}{cytology_figures/anaphase}{caption}{fig:fig110}
-
-    \end{core}
-
-    \begin{core}{Mitosis (\textit{Telophase \& Cytokinesis})}
-
-      (5) \textbf{TELOPHASE \& CYTOKINESIS:} During telophase, two daughter nuclei form as nuclear envelopes reassemble around each set of chromosomes. The chromosomes decondense back into chromatin, and the spindle microtubules depolymerize. Cytokinesis then divides the cytoplasm: in animal cells, a cleavage furrow forms and pinches the cell into two daughter cells.
-
-      \myfig{0.3}{cytology_figures/telophase}{caption}{fig:fig111}
+      \end{enumerate}
 
     \end{core}  
 
   \subsection{Cell Cycle Control and Checkpoints}
     
-    Now that we have learned about mitosis, let us examine how the cell cycle is regulated. The sequential events of the cell cycle are directed by a distinct \textbf{cell cycle control system}, a cyclically operating set of regulatory molecules that both triggers and coordinates the key events of the cell cycle.
+    Having established the mechanistic basis of mitosis, we now examine the regulatory networks governing cell cycle progression. The ordered temporal sequence of cell cycle events is orchestrated by a \textbf{cell cycle control system}---a cyclically operating regulatory network that triggers and coordinates key cell cycle transitions.
 
     \begin{core}{Checkpoints}
 
-      A \textbf{checkpoint} in the cell cycle is a regulatory control point at which stop and go-ahead signals determine whether the cycle proceeds to the next phase. Three major checkpoints occur during the G1, G2, and M phases.
+      \sbs{0.5}{
+        A \textbf{checkpoint} is a regulatory mechanism that monitors critical cell cycle events and integrates signals to determine whether the cell proceeds or arrests. Three major checkpoints occur at the G1/S transition, G2/M transition, and during M phase (\textit{the spindle assembly checkpoint}).
 
-      \myfig{0.6}{cytology_figures/checkpoint}{caption}{fig:fig112}
+        The core molecular machinery governing checkpoint control consists of \textbf{cyclin-dependent kinases (Cdks)}---serine/threonine protein kinases---and their regulatory subunits, \textbf{cyclins}. Cdks require association with a cyclin partner for catalytic activity, hence their nomenclature. Active cyclin-Cdk heterodimers are collectively termed \textbf{maturation-promoting factors (MPFs)}, reflecting their function in promoting cell cycle phase transitions.
+      }{
+        \myfig{1}{cytology_figures/checkpoint}{Cell cycle checkpoints}{fig:fig112}
+      }
 
-      The primary regulators that determine whether a cell passes a checkpoint are \textbf{cyclin-dependent kinases (Cdks)} and their corresponding \textbf{cyclins}. Cdks are only active when bound to a cyclin, which explains their name. The active cyclin-Cdk complexes are often referred to as \textbf{maturation-promoting factors (MPFs)}. 
+      For instance, cyclins that accumulate during G2 phase (\textit{e.g., cyclin B in vertebrates}) bind to Cdk proteins (\textit{Cdk1}), generating an active MPF complex that phosphorylates numerous proteins involved in nuclear envelope breakdown, chromosome condensation, and spindle assembly, thereby triggering mitosis.
 
-      For example, when cyclins that accumulate during G2 bind to Cdk molecules, the resulting MPF complex becomes active and phosphorylates a variety of target proteins, thereby initiating mitosis.
+      \myfig{0.47}{cytology_figures/cdk}{G2 Cdk cycle}{fig:fig113}
 
-      \myfig{0.5}{cytology_figures/cdk}{caption}{fig:fig113}
-
-      For many cells, the G1 checkpoint is the most critical control point. If a cell passes the G1 checkpoint, it will typically proceed through the remaining checkpoints and complete division. However, in the absence of a go-ahead signal, the cell may exit the cycle and enter a nondividing state called \textbf{G0}.
+      For most cell types, the G1 checkpoint represents the primary decision point governing cell cycle commitment. Cells that successfully transit this checkpoint typically proceed irreversibly through S, G2, and M phases to complete division. Conversely, cells lacking appropriate mitogenic signals, nutrients, or exhibiting DNA damage may exit the active cell cycle and enter \textbf{G0}, a quiescent state characterized by indefinite cell cycle arrest.
 
     \end{core}
 
-    It is important to note that the frequency of cell division varies by cell type. For example, skin and hair follicle cells divide continuously throughout life, whereas liver cells retain the capacity to divide but normally remain in a quiescent state unless stimulated by injury.  
+    The frequency of cell division exhibits pronounced tissue-specific variation. For example, epithelial cells in the epidermis and hair follicles undergo continuous proliferation throughout organismal lifespan to maintain tissue homeostasis. In contrast, hepatocytes (\textit{liver cells}) retain proliferative competence but normally reside in G0, re-entering the cell cycle only upon tissue injury or stimulation.
 
     \begin{core}{Growth Factors}
 
-      An important class of signaling molecules that promote cell division are \textbf{growth factors}. Some mammalian cells divide in culture only in the presence of their specific growth factors. For instance, \textbf{platelet-derived growth factor (PDGF)} is required to stimulate division in fibroblasts, a type of connective tissue cell.
+      Cell cycle entry and progression are regulated by extracellular \textbf{growth factors}---secreted polypeptides that bind cell-surface receptors and activate signaling cascades promoting proliferation. Many primary mammalian cells exhibit strict growth factor dependence, arresting without appropriate mitogenic signals. For example, \textbf{platelet-derived growth factor (PDGF)}, released from activated platelets during wound healing, stimulates fibroblast proliferation in connective tissue.
 
     \end{core}
     
     \begin{core}{Cancer}
 
-      Although most cells that acquire irreversible damage during the cell cycle undergo apoptosis to prevent harm to surrounding tissue, some cells evade apoptotic pathways and continue dividing. This loss of proper cell cycle control underlies the formation of \textbf{cancer} and represents a fundamental difference between normal and cancerous cells. Cancer cells may progress through the cell cycle without appropriate regulatory signals and can divide indefinitely in culture if provided with sufficient nutrients—--a property known as \textbf{transformation}.
+      While most cells with irreparable damage activate apoptosis, certain cells acquire mutations that disable apoptotic pathways and checkpoint controls, permitting continued proliferation despite genomic instability. This breakdown of cell cycle regulation constitutes a hallmark of \textbf{cancer}. Cancer cells exhibit autonomy from normal growth controls, proliferating without mitogenic signals and evading contact inhibition. When cultured with adequate nutrients, cancer cells display unlimited replicative potential---termed \textbf{transformation}---unlike normal somatic cells, which undergo senescence after finite divisions.
+
+      \textit{For a comprehensive discussion of oncogenic mechanisms and cancer biology, see \href{../oncology/oncology.pdf}{Oncology}.}
 
     \end{core}
  
