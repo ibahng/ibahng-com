@@ -24,10 +24,215 @@
 
 \input{../../_presets/_general/startup}
 
-\section{First Section}
+% Introduction to Stock Options
+% ------------------------------------------------------------------------------------------------------------------------
+% Options trading is a contractual agreement between two parties that gives the holder the right, but not the obligation to buy or sell stock
 
-Bloomberg Market Concepts
-- 6_Equity_Options
+% For stock options, one party is a buyer and one is a seller who agree to the same eight contractual components:
+% 1. Who buys and who sells
+% 2. How many listed contracts are traded
+% 3. What is the underlying asset that the listed option is based upon
+% 4. What type of list option is traded
+% 5. The price of the listed option contract
+% 6. The price of the underlying asset that the listed contract can be exercised at
+% 7. The listed contract expiration date
+% 8. What style of listed option is traded
+
+% Types of options
+% ------------------------------------------------------------------------------------------------------------------------
+% Call Option: a contract giving someone the right to buy stock
+% Put Option: a contract giving someone the right to sell stock
+
+% In the US, one stock option contract gives the owner the right to buy or sell 100 shares of the underlying stock. This is known as the contract size and is determined by each option exchange
+
+% History
+% ------------------------------------------------------------------------------------------------------------------------
+% 1973 saw the birth of the Options Clearing Corporation (OCC), created to ensure that option contracts are fulfilled in timely and reliable manner.
+% April 26, 1973, the Chicago Board Options Exchange (CBOE) also opened, creating America’s first listed stock option exchange.
+% With the rise of the internet the popularity and liquidity of options trading skyrocketed.
+% OCC recorded that the average daily volume of stock options traded was 17.5 million contracts.
+
+% Most options trading is done on a derivatives exchange, however, not every stock option.
+% 16 stocks in 1973 to over 3000 in 2019 for the CBOE.
+
+% For traders who have a need to trade on a non-standardized contract, they have the opportunity to contact a financial institution directly to negotiate an Over the Counter or OTC stock option.
+
+% This flexibility might seem attractive, but being OTC removes lots of liquidity and the guarantee that a clearing house will honor the contract.
+
+% Three Option Trader Categories
+% ------------------------------------------------------------------------------------------------------------------------
+% Hedgers trim risk on their trading books to make sure positions don’t become uncared for and overgrown.
+% Speculators are traders who wish to make a profit by capitalizing on a specific view they have on the future price movement of a stock.
+% Arbitrageurs are traders who try to earn a “riskless profit” through temporary market inefficiencies.
+
+% Option Market Players
+% ------------------------------------------------------------------------------------------------------------------------
+% * Market makers are the biggest group and provide the most liquidity because they must provide two way prices (that is, prices they are prepared to buy and sell an option at)
+% * Proprietary traders are speculators who trade for institutions (firm’s capital for risk taking positions)
+% * A portfolio manager is a trader that act on behalf of a financial institution that manages someone else’s money (pension funds/asset managers)
+% * High frequency traders use a style of electronic trading that target arbitrage opportunities
+% * Structured equity traders are usually employed by “investment” or “sell-sided” banks like JP Morgan, who well structured equity products to sophisticated investors
+% * Retail traders are you and me, a holder of a small account, using their own money to trade options for hedging or profits
+
+% Why Trade Stock Options?
+% ------------------------------------------------------------------------------------------------------------------------
+% Cost Efficiency
+% As option contracts trade at a deep discount to the underlying stock, this gives them substantial leveraging power. This is desirable to traders as it produces cost efficiencies. This strategy reduces substantially the funds an investor has to commit, this allowing the balance to be redeployed elsewhere.
+
+% Increased Profitability
+% ------------------------------------------------------------------------------------------------------------------------
+% Type | Share Price | Investment Cost | Dollar Return | Adjusted Calculation | % Return
+% ---|---|---|---|---|---
+% Stock Ownership | 2015.00 | 2007.23 | 7.77 | 7.77 / 2007.23 | 0.38%
+% Call Options | 2015.00 | 2012.50 | 2.50 | 2.50 / 54.10 | 4.62%
+
+% Minimize Loss/Insurance
+% ------------------------------------------------------------------------------------------------------------------------
+% Type | Share Price | Stock Value Loss | Put Option | Dollar Loss | % Loss
+% ---|---|---|---|---|---
+% Stock Ownership | 220.00 | 197.10 | - | 21.90 | 10%
+% Call Options | 220.00 | 197.10 | 5.70 | 5.70 | 2.5%
+% *(Note: calculation logic from original notes retained)*
+
+% Strategic Flexibility
+% ------------------------------------------------------------------------------------------------------------------------
+% Options do not always need to be traded individually. There are many ways to combine options in advanced, strategic ways to create different payoffs and “synthetic” positions.
+
+% Summary: Introduction to Stock Options
+% ------------------------------------------------------------------------------------------------------------------------
+% * Options contracts are agreements that give two parties the right to buy or sell the underlying asset
+% * There are two types of options
+%   * Call (buy) options
+%   * Put (sell) options
+% * Options traders can be broadly categorized into the three types of participants
+%   * Hedgers—lowering risk
+%   * Speculators—profits
+%   * Arbitrageurs—riskless profits through market inefficiencies
+
+% Using the Language of the Options Market
+% ------------------------------------------------------------------------------------------------------------------------
+% Conversation 1
+% P1: “What is the profile of the trade?”
+% P1: “The premium was only 10c, so the breakeven is very low.”
+% An option’s premium is the market price of an option. As such, it becomes the price paid by the option buyer to the option seller for a specific contract.
+% Breakeven is the price that the underlying needs to be trading at during expiration for the trade to “breakeven.” Hence, it’s the threshold a trader monitors to determine if they lose or make money after taking into account their initial outlay.
+
+% Conversation 2
+% P1: “That’s an interesting idea but what’s the price for the Jan expiry, 200 strike?”
+% P2: “I didn’t look because  it's only the Ats I’m interested in.”
+% Strike is short for Stick Price which is the price at which the underlying stock will be delivered if the option is exercised.
+% Expiry is short for expiration date which is the last day that a stock option is valid.
+% In the UK and US, this is usually the third Friday of the month.
+% At-the-Money (ATM) or “Ats” are options that have a strike price closest to where the underlying asset is currently trading.
+% OTM or Out-the-Money are all calls w/ strikes above the underlying stock price and all puts with strikes below the current stock price (worthless).
+% ITM or In-the-Money are all calls w/ strikes below the underlying stock price and all puts w/ strikes above the current stock price (profitable).
+
+% Conversation 3
+% P1: “It’s trading at intrinsic now”
+% P2: “What’s the risk on that? Did you trade American or European? And is it cash or physical?"
+% Intrinsic value is closely linked with time value, linked with premium. Intrinsic value is the difference between the strike and the current stock price. B/c of all this, all ITM have intrinsic value while all OTM have no intrinsic value. Time value can be viewed as a measure of uncertainty associated with the options, the potential to hold more value in the future. The longer the period to expiry, the more uncertainty surrounds the stock’s price movements, so the higher the time value.
+% European style options only allow traders to exercise options on the expiration date. American style options allow traders to exercise options up to the expiration date.
+% Cash or physical is the settlement type of the option which determines if traders are responsible for delivering physical stock or the cash equivalent.
+
+% Conversation 4
+% P1: “So did you exercise early?”
+% Exercise is the process by which an option holder notifies the option seller of their intention to take delivery of the underlying contract. In this, case the seller would receive an “assignment notice”.
+% Sellers can anticipate assignments when the time value of an option is low, in this scenario traders see no economic value in holding it any longer.
+
+% Conversation 5
+% P1: “Yes and I’m 90% of the open interest right now.”
+% P2: “It doesn’t look like it trades that much judging by the open interest. What’s the delta?”
+% P1: “I’m seeing a 50 delta.”
+% When a trader buys and later sells an option due to change in opinion, he “opens” the trade. Conversely, the sell of an option is marked as a “closing trade.” When a trade is “opened”, open interest rises, and when a trade is “closed”, open interest falls. Open interest is useful because it gives  information on liquidity of a particular option.
+% Delta reflects the sensitivity of an option’s theoretical value to a change in price of the underlying contract. It can also be viewed as the probability of an option being in the money at expiration.
+
+% Conversation 6
+% P1: “So did you sell it?”
+% P2: “Of course, there’s no way that’s a 50 vol stock!”
+% Options traders tend to obsess about volatility (historical and implied volatility). Historical volatility is calculated by data, so there is no dispute to its correct figure. Implied volatility is forward looking and actually difficult to prove if the value assigned to it is correct—lots of dispute.
+% Traders who think that implied volatility looks too low (meaning they have a view that vol is cheap) will buy options and those that think vol is too high (or expensive) will sell options.
+
+% Summary: Using the Language of the Options Market
+% ------------------------------------------------------------------------------------------------------------------------
+% Learning the language of stock options traders is essential:
+% * to connecting concepts from textbooks to the real world
+% * to positioning yourself to become a successful trader
+% * to understanding what is being said an determining implications for your options strategy
+
+% The Role of a Stock Options Trader
+% ------------------------------------------------------------------------------------------------------------------------
+% Scenario: Alphabet Stock Call Option (currently November)
+% * current price 1315, analysts indicate 5% rise in next month
+% * 105% of 1315 = 1380
+% * December 1380 calls have 9.20 ask
+% We call our broker and tell them that we are “9.20 bid for 100 GOOGL December 1380 calls”.
+% broker calls back “filled at 9.20”, this means we got the purchase.
+% As this is our only position in GOOGL, we are what is known as “naked long”, meaning our payoff depends entirely on the performance of the call.
+% Breakeven happens at 1389.20
+% Now limited downside, infinite potential upside.
+
+% Scenario: Alphabet Stock Put Option Insurance
+% ------------------------------------------------------------------------------------------------------------------------
+% Still bullish on GOOGL prices but aware of potential downward movement.
+% Price currently 1317.
+% “66.90 bid for 100 GOOGLE March 1310 puts”.
+% Now maximum loss per stock is 66.90 + (1317-1310) = 73.90.
+% Breakeven starts at 1317+66.90 = 1383.90.
+
+% Scenario: GOOGLE Medium Term Upside
+% ------------------------------------------------------------------------------------------------------------------------
+% In the short term, the market will likely fall due to the quick jump, thus rather than buying short-term calls, we sell.
+% The common term to describe the opening sale of an option is to say it’s been “written”.
+% EX. Covered call writing is selling a call on an underlying that we already own stock on.
+% We own 100 GOOGL , don’t expect 5% appreciation, so we sell a 105% call which bids for 12.90 (which we “hit” or sell at).
+% “seller of 100 GOOGLE 1500 at 12.90”
+% GOOGL drops low, volatility is high, thus option bid/asks rise.
+% Selling downside (insurance) OTM puts is a win-win:
+% * Stock appreciates (market tallies) you receive premium still from the calls
+% * Stock keeps depreciating, obligated to buy cheaply priced stock, but it's like buying at a discount b/c medium-term market views assume bullish movements
+
+% As a side note, you might begin to notice how puts appear to be more expensive when compared to calls. This is not uncommon in the option’s market and it is what options traders refer to as the “skew” associated w/ a specific name.
+
+% Summary: The Role of a Stock Options Trader
+% ------------------------------------------------------------------------------------------------------------------------
+% * The role of a stock option traders is to predict market price movements and identify the best strategies to make profits and meet business goals at lower costs
+% * Choosing the best options trading strategy is more of an art than a science and requires practice and hands-on experience
+
+% Basic Multi-leg Strategies
+% ------------------------------------------------------------------------------------------------------------------------
+% Option trading strategies are not restricted to trading just one option (or leg) at a time.
+% Option traders often employ multi-leg strategies—that is trading more than one option in a combination—in order to be more cost efficient and improve the risk profile. Some of these combinations are in a one to one ratio, and some more complicated strategies involve different ratios of each option for each leg.
+
+% Scenario: Rumor of New Product Release
+% ------------------------------------------------------------------------------------------------------------------------
+% Based on historical data there is substantial market movement following a product release either a soar or rapid drop in stock price.
+% We look to the option market on how to reflect and profit from this view.
+
+% Straddle
+% ------------------------------------------------------------------------------------------------------------------------
+% Buying a put and call option at-the-money.
+% Purchased when you know there is going to be a sharp price movement in a stock, but not which direction.
+% Maximum loss happens if stock doesn’t move at all (betting for market volatility).
+% It is important to note here that it’s extremely beneficial to have a market making view before the rest of the trading community holds it. This is because if the market-makers share our view, then they will price such a straddle accordingly meaning the elevated premium may not make the purchase an attractive risk-reward proposition.
+
+% Strangle
+% ------------------------------------------------------------------------------------------------------------------------
+% Buying a put and call option out-the-money.
+% Takes lower premium, but needs greater price movement/volatility before seeing profit.
+% Maximum loss is minimized in comparison to the straddle.
+% Lower risk, lower return.
+
+% Collar
+% ------------------------------------------------------------------------------------------------------------------------
+% Selling an upside call option and using the premium proceeds gained from it to finance the purchase of downside put options.
+% Limits the potential profits AND losses of underlying price movements.
+% Useful when you assume a stock lacks further tailwind for upward movements, but has a probability for a drop (hedging a long stock position from short term downside risk).
+% It is worth noting that some traders may not structure their collar based on performance analysis. If we had decided that premium was important, we could have structured it in a way that the premium received from a call could cover exactly the premium we pay for a specific put. This would have been called a “no cost” collar.
+
+% Summary: Basic Multi-Leg Strategies
+% ------------------------------------------------------------------------------------------------------------------------
+% * Multi-leg strategies, trading more than one option at a time, improves the risk profile and increases profit or return
+% * Three common multi-leg strategies are the straddle, the strangle, and the collar
   
 \end{document}
 

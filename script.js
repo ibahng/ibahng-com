@@ -15,7 +15,7 @@ async function addPageCount(link) {
     console.error(`Failed to load PDF: ${link.href}`, error);
     const title = link.querySelector('.card-title');
     if (title) {
-      title.textContent += ` [IP]`;
+      title.textContent += ` [TBD]`;
     }
     link.classList.add('is-inactive');
     link.addEventListener('click', e => e.preventDefault());
