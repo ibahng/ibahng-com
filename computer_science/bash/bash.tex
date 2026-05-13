@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+\usepackage{titling}
+
+\title{Bash}
+\date{\today}
+\author{Ingyu Bahng}
+
+\input{../../_presets/computer_science/preamble}
+
+\begin{document}
+
+\input{../../_presets/_general/startup}
+
+\section{Pure Terminal Commands}
+
+  ls              List directory contents
+  ls -a           List all files (including hidden)
+  cd              Go to home directory
+  cd .            Stay in current directory
+  cd ..           Go up one directory level
+  clear           Clear terminal screen
+  pwd             Print working directory path
+  history         Show command history
+  which python    Show path to Python interpreter
+  open            Open Finder
+  open .          Open current directory in Finder
+  code .          Open VSCode in current directory
+  cat <file>      Display file contents
+  mkdir <name>    Create directory
+  rmdir <name>    Remove directory
+  touch <file>    Create empty file
+  rm <file>       Remove file
+  mv <src> <dst>  Move or rename file/directory
+  grep -r "text"  Search recursively for text in directory
+  | grep "text"   Filter command output (pipe to grep)
+  top             Show running processes
+
+\section{Git Specific Commands}
+
+  git add --all                        Create new node (stage all changes)
+  git commit -m "message"              Add the new node (commit with message)
+  git push                             Push the new node upstream
+  git clone <url>                      Copy remote repo with all history and nodes
+  git pull                             Update local from remote changes
+  git log                              Show commit history
+
+\section{Conda Specific Commands}
+
+  conda env list                       List all virtual environments
+  conda create -n <name>               Create new virtual environment
+  conda activate <name>                Activate a virtual environment
+  conda list                           List packages in current VE
+  conda install <package>              Install package with dependencies
+  conda remove <package>               Remove package with dependencies
+  conda deactivate                     Deactivate current VE (return to BASE)
+
+\section{Package Updating Specific Commands}
+
+  make html                            Build Sphinx docs from .rst files (updates rtd when pushed)
+  python -m build                      Build tar.gz and .whl distribution files
+  python -m twine upload dist/*        Upload to PyPI (requires API key)
+
+ 
+\end{document}
+
+
