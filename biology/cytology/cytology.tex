@@ -1802,7 +1802,7 @@
 
       \myfig{0.47}{cytology_figures/cdk}{G2 Cdk cycle}{fig:fig113}
 
-      For most cell types, the G1 checkpoint represents the primary decision point governing cell cycle commitment. Cells that successfully transit this checkpoint typically proceed irreversibly through S, G2, and M phases to complete division. Conversely, cells lacking appropriate mitogenic signals, nutrients, or exhibiting DNA damage may exit the active cell cycle and enter \textbf{G0}, a quiescent state characterized by indefinite cell cycle arrest.
+      For most cell types, the G1 checkpoint represents the primary decision point governing cell cycle commitment. Cells that successfully pass this checkpoint typically proceed irreversibly through S, G2, and M phases to complete division. Conversely, cells lacking appropriate mitogenic signals, nutrients, or exhibiting DNA damage may exit the cell cycle and enter \textbf{G0}, a quiescent state characterized by indefinite cell cycle arrest.
 
     \end{core}
 
@@ -1833,45 +1833,47 @@
  
       \textbf{RNA polymerase} catalyzes the synthesis of RNA transcripts by reading the template DNA strand in the $3' \to 5'$ direction while synthesizing the complementary RNA strand in the $5' \to 3'$ direction (\textit{the downstream direction}).
 
-      % \myfig{0.5}{cytology_figures/transcription}{RNA polymerase transcribing across the template DNA strand in the $3' \to 5'$ direction}{fig:fig114} 
-
       \textit{In the context of general protein transcription, the relevent RNA polymerase is RNA polymerase II. RNA polymerase I, on the other hand, primarily participates in the synthesis of ribosomal RNA (rRNA).}
 
     \end{core}
 
     \begin{core}[label=core:transcription]{Synthesis of RNA Transcript}
 
-      Transcription proceeds through three distinct phases: initiation, elongation, and termination. Each phase is characterized by specific molecular events and regulatory mechanisms.
+      Transcription proceeds through the following phases, each characterized by specific molecular events and regulatory mechanisms.
 
       \begin{enumerate}
 
         \item \textbf{Initiation}
 
-        % \myfig{0.5}{cytology_figures/initiation}{Initiation}{fig:fig115} 
+        \myfig{0.55}{cytology_figures/initiation}{Transcription nitiation}{fig:fig115} 
 
-        Transcription initiation in eukaryotes requires the assembly of a multi-protein complex at the \textbf{promoter region}. A critical recognition element within this region is the \textbf{TATA box} (\textit{\autoref{fig:116}}), a highly conserved DNA sequence located approximately $-25$ to $-30$ nucleotides upstream of the transcription start site. This sequence is recognized by \textbf{transcription factors}, a diverse collection of proteins that facilitate RNA polymerase recruitment and positioning.
+        Transcription initiation in eukaryotes requires the assembly of a multi-protein complex at the \textbf{promoter region}. A critical recognition element within this region is the \textbf{TATA box} (\textit{\autoref{fig:fig116}}), a highly conserved DNA sequence located approximately $-25$ to $-30$ nucleotides upstream of the transcription start site. This sequence is recognized by \textbf{transcription factors}, a diverse collection of proteins that facilitate RNA polymerase recruitment and positioning.
 
-        % \myfig{0.5}{cytology_figures/tata}{TATA box}{fig:fig116}
+        \myfig{0.55}{cytology_figures/tata}{TATA box}{fig:fig116}
         
         The complete assembly of RNA polymerase II and all requisite transcription factors at the promoter constitutes the \textbf{transcription initiation complex} (\textit{also termed the pre-initiation complex, or PIC}). Formation of this complex positions RNA polymerase at the \textbf{transcription start site} (\textit{$+1$ position}), the precise nucleotide where RNA synthesis commences.
 
         \item \textbf{Elongation}
 
-        % \myfig{0.5}{cytology_figures/elongation}{Elongation}{fig:fig117}
+        \myfig{0.55}{cytology_figures/elongation}{Transcription elongation}{fig:fig117}
         
         During elongation, RNA polymerase translocates along the template DNA strand, catalyzing the addition of ribonucleotides complementary to the DNA template sequence. As the polymerase advances, it continuously unwinds the double helix ahead of the transcription bubble while rewinding the duplex behind it.         
 
         \item \textbf{Termination}
 
-        % \myfig{0.5}{cytology_figures/termination}{Termination}{fig:fig118}
+        The \textbf{terminator} is a DNA sequence located downstream of the coding region that signals transcription termination. Upon transcription of this sequence, RNA polymerase ceases synthesis and dissociates from the DNA template, releasing the completed RNA transcript.
 
-        \textbf{Terminator}: A DNA sequence located downstream of the coding region that signals transcription termination. Upon transcription of this sequence, RNA polymerase ceases synthesis and dissociates from the DNA template, releasing the completed RNA transcript.
+        \myfig{0.55}{cytology_figures/termination}{Transcription termination}{fig:fig118}
         
         Transcription termination mechanisms differ markedly between prokaryotes and eukaryotes, reflecting fundamental differences in cellular organization and RNA processing requirements.
-        
-        \textbf{Prokaryotic termination}: In bacteria, transcription terminates when RNA polymerase encounters a terminator sequence in the DNA template, destabilizing the RNA-DNA hybrid and causing the transcript to release. The resulting bacterial mRNA is immediately translation-competent, requiring no further processing.
-        
-        \textbf{Eukaryotic termination}: In eukaryotes, RNA polymerase II termination is coupled to $3'$-end processing of the pre-mRNA. The polymerase transcribes through a \textbf{polyadenylation signal sequence (AAUAAA)} in the DNA, which serves as a recognition element for cleavage and $3'$-end processing factors. These proteins bind to the AAUAAA sequence in the nascent pre-mRNA as it emerges from the polymerase and endonucleolytic cleavage occurs $10-35$ nucleotides downstream of the AAUAAA signal.
+
+        \begin{itemize}
+
+          \item \textbf{Prokaryotic termination}: In bacteria, transcription terminates when RNA polymerase encounters a terminator sequence in the DNA template, destabilizing the RNA-DNA hybrid and causing the transcript to release. The resulting bacterial mRNA is immediately translation-competent, requiring no further processing.
+
+          \item \textbf{Eukaryotic termination}: In eukaryotes, RNA polymerase II termination is coupled to $3'$-end processing of the pre-mRNA. The polymerase transcribes through a \textbf{polyadenylation signal sequence (AAUAAA)} in the DNA, which serves as a recognition element for cleavage and $3'$-end processing factors. These proteins bind to the AAUAAA sequence in the nascent pre-mRNA as it emerges from the polymerase and endonucleolytic cleavage occurs $10-35$ nucleotides downstream of the AAUAAA signal.
+
+        \end{itemize}
 
       \end{enumerate}
         
@@ -1881,229 +1883,233 @@
 
     \begin{core}{RNA Processing}
 
-      % ORIGINAL: RNA processing: the processing pre-mRNA goes through in eukaryotes because translation
-      
-      In eukaryotes, primary transcripts termed \textbf{pre-mRNA} (precursor mRNA) undergo extensive co-transcriptional and post-transcriptional modifications before export to the cytoplasm for translation. This \textbf{RNA processing} is essential because eukaryotic genes contain both coding and non-coding sequences that must be distinguished and appropriately processed to generate mature, translation-competent mRNA. These modifications serve multiple functions: protecting the transcript from degradation, facilitating nuclear export, enhancing translation efficiency, and enabling regulatory control of gene expression. The three principal RNA processing events are $5'$ cap addition, $3'$ polyadenylation, and splicing.
+      In eukaryotes, primary transcripts termed \textbf{pre-mRNA} (\textit{precursor mRNA}) undergo extensive modifications before export to the cytoplasm for \textbf{translation} (\textit{\autoref{core:translation}}). This \textbf{RNA processing} is essential because eukaryotic genes contain both coding and non-coding sequences (\textit{\autoref{core:rna_splicing}}) that must be distinguished and appropriately processed to generate mature, translation-competent mRNA. 
 
     \end{core}
     
     \begin{core}{Alteration of mRNA Ends}
-
-      % ORIGINAL: Alteration of mRNA ends: adds 5 cap and poly A tail to 5 and 3 ends respectively
-      % 5 cap: modifed guanine nucleotide added to the 5 end
-      % poly-A-tail: 50-250 adenine nucleotides added to the 3 end
-      % UTR = untranslated region
-      % 5 cap --- 5 UTR --- start codon --- protein-coding segments --- stop codon --- 3 UTR (includes polyadenylation signal) --- poly-A-tail
       
       Both termini of eukaryotic pre-mRNA undergo enzymatic modification shortly after transcription initiation, yielding a mature mRNA with distinctive structural features at each end.
+
+      \myfig{0.9}{cytology_figures/mrna_ends}{5'cap (\textit{left}) and poly-A tail (\textit{right})}{fig:fig119} 
+
+      \begin{itemize}
+
+        \item \textbf{$5'$ cap}: A modified guanosine nucleotide is added to the $5'$ end of the nascent transcript via an unusual $5'-5'$ triphosphate linkage. This capping occurs when the transcript is only $20-40$ nucleotides long.
+
+        \item \textbf{Poly-A tail}: Following transcription termination and cleavage at the polyadenylation signal (AAUAAA), an enzyme adds approximately $50-250$ adenine nucleotides to the $3'$ end of the pre-mRNA.
+
+      \end{itemize}
       
-      \textbf{$5'$ cap}: A modified guanosine nucleotide (7-methylguanosine, or m$^7$G) is added to the $5'$ end of the nascent transcript via an unusual $5'-5'$ triphosphate linkage. This capping occurs when the transcript is only $20-30$ nucleotides long. The $5'$ cap serves multiple critical functions: it protects the mRNA from exonuclease degradation, facilitates ribosome recognition and translation initiation, and promotes nuclear export. Cap-binding proteins recognize this structure and mediate subsequent mRNA processing and localization events.
-      
-      \textbf{Poly-A tail}: Following transcription termination and cleavage at the polyadenylation signal (discussed in Section \ref{core:transcription}), the enzyme poly(A) polymerase adds approximately $50-250$ adenine nucleotides to the $3'$ end of the pre-mRNA without requiring a template. This poly-A tail enhances mRNA stability by protecting against $3' \to 5'$ exonucleolytic degradation, facilitates nuclear export, and promotes translation initiation through interactions with poly(A)-binding proteins (PABPs).
-      
-      The mature mRNA structure comprises the following elements in order:
+      The resulting mature mRNA structure comprises the following elements in order.
+
       \begin{center}
-      $5'$ cap --- $5'$ UTR --- start codon (AUG) --- coding sequence --- stop codon --- $3'$ UTR --- poly-A tail
+
+        5' cap --- $5'$ UTR --- start codon (AUG) --- coding sequence --- stop codon --- $3'$ UTR --- poly-A tail
+
       \end{center}
-      
-      The \textbf{untranslated regions} (UTRs) flanking the coding sequence contain regulatory elements that influence mRNA stability, localization, and translation efficiency. The $3'$ UTR harbors the polyadenylation signal sequence (typically AAUAAA) recognized during $3'$-end processing.
+
+      The $5'$ cap, poly-A tail, and untranslated regions (UTR) contribute to mRNA stability and function through several mechanisms: promoting nuclear export of mature transcripts, conferring resistance to exonucleolytic degradation, and facilitating ribosome recruitment during cap-dependent translation initiation.
 
     \end{core}
 
     \begin{core}[label=core:rna_splicing]{RNA Splicing}
+      
+      \textbf{RNA splicing} is the process by which non-coding sequences are excised from pre-mRNA and the remaining coding sequences are ligated to form mature mRNA, catalyzed by a protein complex called the \textbf{spliceosome}.
 
-      % ORIGINAL: RNA Splicing: large portions of RNA transcript molecules are remove and the remaining portions reconnected
-      % introns: noncoding segments of nucleic acid (INTervening sequences)
-      % exons: eventually EXpressed sequences
-      % Spliceosome: the large complex of proteins and small RNAs that remove the introns
-      % ribozymes: RNA molecules that function also as enzymes (part of the splicosome)
-      
-      \textbf{RNA splicing} is the process by which non-coding sequences are excised from pre-mRNA and the remaining coding sequences are ligated to form mature mRNA. This mechanism resolves the mosaic structure of eukaryotic genes, which are interrupted by intervening sequences.
-      
-      \textbf{Introns} (intervening sequences) are non-coding segments that are transcribed but subsequently removed during RNA processing. These sequences can be extensive, sometimes constituting $>90\%$ of a gene's length. \textbf{Exons} (expressed sequences) are the coding segments that are retained in mature mRNA and ultimately translated into protein. The term "exon" reflects that these sequences are expressed in the final gene product.
-      
-      The \textbf{spliceosome} catalyzes the splicing reaction. This massive ribonucleoprotein complex ($\sim 6$ MDa) assembles de novo on each intron through the sequential recruitment of five small nuclear ribonucleoproteins (snRNPs, pronounced "snurps": U1, U2, U4, U5, and U6) and numerous accessory proteins. The spliceosome recognizes conserved sequences at intron-exon boundaries: the $5'$ splice site (GU), the $3'$ splice site (AG), and the branch point sequence (typically an adenine residue $20-50$ nucleotides upstream of the $3'$ splice site).
-      
-      Splicing proceeds through two sequential transesterification reactions: (1) the $2'$-OH of the branch point adenine attacks the $5'$ splice site, forming a lariat-shaped intermediate and releasing the upstream exon; (2) the free $3'$-OH of the upstream exon attacks the $3'$ splice site, ligating the two exons and releasing the intron lariat for degradation.
-      
-      Remarkably, the catalytic activity resides in the RNA components of the spliceosome, not the protein components. These catalytic RNAs, termed \textbf{ribozymes}, demonstrate that RNA can function enzymatically—a discovery that fundamentally altered our understanding of biological catalysis and supported the RNA world hypothesis for the origin of life.
+      \myfig{0.9}{cytology_figures/intron_exon}{Introns \& exons}{fig:fig120} 
 
-    \end{core}
+      \begin{itemize}
 
-    \begin{core}{Alternative RNA Splicing}
+        \item \textbf{Introns} (\textit{intervening sequences}) are non-coding segments that are transcribed but subsequently removed during RNA processing. These sequences can be extensive, sometimes constituting $>90\%$ of a gene's length.
 
-      % ORIGINAL: Alternative RNA splicing: many genes are known to give rise to two or more different polypeptides, depending on which segments are treated as exons during RNA processing
-      
-      \textbf{Alternative splicing} enables a single gene to encode multiple distinct protein isoforms by varying which exons are retained or excluded during RNA processing. This mechanism dramatically expands proteomic diversity without proportionally increasing genome size—humans possess only $\sim 20,000$ protein-coding genes but produce $>100,000$ different proteins, largely through alternative splicing.
-      
-      Several alternative splicing patterns exist: (1) exon skipping/inclusion, where specific exons may be retained or excluded; (2) alternative $5'$ or $3'$ splice site selection, producing exons of variable length; (3) intron retention, where an intron remains in the mature mRNA; and (4) mutually exclusive exons, where only one of several possible exons is included. Tissue-specific splicing factors and RNA-binding proteins regulate these decisions, enabling developmental stage-specific and cell-type-specific protein expression patterns.
-      
-      Alternative splicing can alter protein function, localization, stability, or regulatory properties. Dysregulation of splicing contributes to numerous diseases, including cancer and neurodegenerative disorders, making the spliceosome an important therapeutic target.
+        \item \textbf{Exons} (\textit{expressed sequences}) are the coding segments that are retained in mature mRNA and ultimately translated into protein. 
+
+      \end{itemize} 
+             
+      \textit{Remarkably, the spliceosome's catalytic activity resides in its RNA components rather than its proteins. These \textbf{ribozymes} demonstrate RNA's enzymatic capacity, a discovery that fundamentally altered our understanding of catalysis and supported the RNA world hypothesis.}
+
+      While constitutive splicing removes all introns and retains all exons in a predetermined pattern, \textbf{alternative splicing} enables a single gene to encode multiple distinct protein isoforms by varying which exons are retained or excluded during RNA processing. This mechanism dramatically expands proteomic diversity.
 
     \end{core}
 
     \begin{core}{Domains}
 
-      % ORIGINAL: Domains: discrete structural and functional regions of a protein (in many cases, different exons code for different domains of a protein)
-      
-      \textbf{Protein domains} are discrete structural and functional units within a polypeptide chain, typically $50-200$ amino acids in length, that fold independently and often retain function when isolated from the full-length protein. Domains represent evolutionary units that can be mixed and matched across different proteins, enabling functional modularity.
-      
-      The exon-intron architecture of eukaryotic genes often mirrors protein domain organization, with individual exons or exon groups encoding discrete domains. This correspondence suggests that introns facilitate domain shuffling during evolution—recombination within introns can transfer functional domains between genes without disrupting coding sequences, accelerating the evolution of new protein functions. Alternative splicing of domain-encoding exons provides an additional mechanism for generating protein diversity while maintaining modular domain structure.
+      \sbs{0.4}{
+        \textbf{Protein domains} are discrete structural and functional units within a polypeptide chain, typically $50-200$ amino acids in length, that fold independently and often retain function when isolated from the full protein.
 
+        \textit{The exon-intron architecture of eukaryotic genes often mirrors protein domain organization, with individual exons or exon groups encoding discrete domains.}
+      }{
+        \myfig{1}{cytology_figures/domains}{Domains}{fig:fig121} 
+      }
+      
     \end{core}
 
   \subsection{Translation}
 
-    \begin{core}{Translation}
+    \begin{core}[label=core:translation]{Translation}
 
-      % ORIGINAL: Translation: the process of translating an RNA into a protein
-      
-      \textbf{Translation} is the process by which the nucleotide sequence of mRNA is decoded to direct the synthesis of a polypeptide chain with a specific amino acid sequence. This process represents the second major step of gene expression and constitutes the critical link between the nucleic acid language of genes and the amino acid language of proteins. Translation occurs on ribosomes, which coordinate the interactions between mRNA, transfer RNAs (tRNAs), and various translation factors to catalyze peptide bond formation with high fidelity and efficiency.
+      \textbf{Translation} is the process by which the nucleotide sequence of mRNA is decoded to direct the synthesis of a polypeptide chain with a specific amino acid sequence. Translation occurs on \textbf{ribosomes} (\textit{\autoref{core:ribosome_structure}}), which coordinate the interactions between mRNA, transfer RNAs (\textit{tRNAs; \autoref{core:trna}}), and various translation factors to catalyze peptide bond formation.
 
     \end{core}
 
-    \begin{core}{The Genetic Code: Codons}
+    \begin{core}{Codons}
+      
+      The genetic code defines the correspondence between nucleotide triplets in mRNA and amino acids in proteins. Each three-nucleotide sequence, termed a \textbf{codon}, specifies a particular amino acid or translation termination signal. With four possible nucleotides (\textit{A, U, G, C}) at each of three positions, 64 possible codons exist. Since only 20 standard amino acids are incorporated into proteins, the genetic code is \textbf{degenerate} (\textit{or redundant})---most amino acids are specified by multiple codons.
 
-      % ORIGINAL: codon: a sequence of 3 RNA molcules that code for a specific amino acid
-      % LOOK AT TABLE FOR CODON TO AMINO ACID
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|cccc|c|}
+          \hline
+          \textbf{1st} & \multicolumn{4}{c|}{\textbf{2nd Base}} & \textbf{3rd} \\
+          \textbf{Base} & \textbf{U} & \textbf{C} & \textbf{A} & \textbf{G} & \textbf{Base} \\
+          \hline
+          \multirow{4}{*}{\textbf{U}} & UUU Phe & UCU Ser & UAU Tyr & UGU Cys & \textbf{U} \\
+          & UUC Phe & UCC Ser & UAC Tyr & UGC Cys & \textbf{C} \\
+          & UUA Leu & UCA Ser & \textcolor{Red}{\textbf{UAA Stop}} & \textcolor{Red}{\textbf{UGA Stop}} & \textbf{A} \\
+          & UUG Leu & UCG Ser & \textcolor{Red}{\textbf{UAG Stop}} & UGG Trp & \textbf{G} \\
+          \hline
+          \multirow{4}{*}{\textbf{C}} & CUU Leu & CCU Pro & CAU His & CGU Arg & \textbf{U} \\
+          & CUC Leu & CCC Pro & CAC His & CGC Arg & \textbf{C} \\
+          & CUA Leu & CCA Pro & CAA Gln & CGA Arg & \textbf{A} \\
+          & CUG Leu & CCG Pro & CAG Gln & CGG Arg & \textbf{G} \\
+          \hline
+          \multirow{4}{*}{\textbf{A}} & AUU Ile & ACU Thr & AAU Asn & AGU Ser & \textbf{U} \\
+          & AUC Ile & ACC Thr & AAC Asn & AGC Ser & \textbf{C} \\
+          & AUA Ile & ACA Thr & AAA Lys & AGA Arg & \textbf{A} \\
+          & \textcolor{Green}{\textbf{AUG Met/Start}} & ACG Thr & AAG Lys & AGG Arg & \textbf{G} \\
+          \hline
+          \multirow{4}{*}{\textbf{G}} & GUU Val & GCU Ala & GAU Asp & GGU Gly & \textbf{U} \\
+          & GUC Val & GCC Ala & GAC Asp & GGC Gly & \textbf{C} \\
+          & GUA Val & GCA Ala & GAA Glu & GGA Gly & \textbf{A} \\
+          & GUG Val & GCG Ala & GAG Glu & GGG Gly & \textbf{G} \\
+          \hline
+        \end{tabular}
+        \caption{The codon table for mRNA}
+        \label{tab:genetic_code}
+      \end{table}
       
-      The genetic code defines the correspondence between nucleotide triplets in mRNA and amino acids in proteins. Each three-nucleotide sequence, termed a \textbf{codon}, specifies a particular amino acid or translation termination signal. With four possible nucleotides (A, U, G, C) at each of three positions, $4^3 = 64$ possible codons exist. Since only 20 standard amino acids are incorporated into proteins, the genetic code is \textbf{degenerate} (or redundant)—most amino acids are specified by multiple codons.
-      
-      Three codons function as stop signals: UAA, UAG, and UGA. These \textbf{nonsense codons} or \textbf{stop codons} do not correspond to any amino acid but instead signal translation termination. The codon AUG serves dual functions: it specifies methionine and, in particular contexts, functions as the \textbf{start codon} that initiates translation.
-      
-      The genetic code exhibits several notable properties: (1) it is nearly universal across all domains of life, indicating a single evolutionary origin; (2) it is unambiguous—each codon specifies only one amino acid; (3) it is non-overlapping—consecutive codons are read sequentially without sharing nucleotides; and (4) it lacks punctuation between codons—the reading frame is established by the start codon and maintained throughout translation. The code's degeneracy is non-random: synonymous codons (those encoding the same amino acid) typically differ only in the third position, providing some protection against mutation effects.
+      As shown in \autoref{tab:genetic_code}, three codons (\textit{UAA, UAG, and UGA}) function as stop signals. These \textbf{nonsense codons} or \textbf{stop codons} do not correspond to any amino acid but instead signal translation \textbf{termination}. Conversely, the AUG codon serves dual functions: it specifies methionine and, in particular contexts, functions as the \textbf{start codon} that initiates translation.      
 
     \end{core}
 
-    \begin{core}{Transfer RNA}
+    \begin{core}[label=core:trna]{Transfer RNA}
 
-      % ORIGINAL: tRNA: the RNA molecule that holds the cooresponding amino acid for a given codon
-      % Amino acid attachment site
-      % Anticodon for relevant 3 nucleotide sequence
-      % aminoacyl-tRNA synthetases: a family of related enzymes that correctly match up tRNA molecules with thier amino acid
-      % wobble: flexible base pairing at the third base of the codon allows some tRNAs to bind to more than one codon
+      \sbs{0.65}{
+        \textbf{Transfer RNAs (tRNAs)} are small RNA molecules (\textit{~75-95 nucleotides}) that serve as adaptors, physically linking codons in mRNA to the corresponding amino acids. Each tRNA molecule exhibits a characteristic cloverleaf secondary structure that folds into an L-shaped three-dimensional conformation with two critical functional regions.
+
+        \begin{itemize}
+
+          \item The \textbf{amino acid attachment site} is the $3'$ terminus of all tRNAs that terminates in the sequence CCA, where the amino acid is covalently attached to the $3'$-OH of the terminal adenosine via an ester bond.
+
+          \item The \textbf{anticodon} is a three-nucleotide sequence located in the anticodon loop that base-pairs with the complementary codon in mRNA through Watson-Crick and \textbf{wobble base pairing}. The anticodon determines which codon(s) a given tRNA recognizes.
+
+          \textit{The third codon position exhibits relaxed base-pairing specificity, a phenomenon termed \textbf{wobble} that permits a single tRNA to recognize multiple synonymous codons differing in the third position. This flexibility explains why cells require fewer than 61 distinct tRNAs despite 61 sense codons---humans possess only ~45 tRNA genes.}
+
+        \end{itemize}
+      }{
+        \myfig{0.95}{cytology_figures/trna}{Transfer RNA structure}{fig:fig122} 
+      }
       
-      \textbf{Transfer RNAs (tRNAs)} are small RNA molecules ($\sim 75-95$ nucleotides) that serve as adaptors, physically linking codons in mRNA to the corresponding amino acids. Each tRNA molecule exhibits a characteristic cloverleaf secondary structure that folds into an L-shaped three-dimensional conformation.
-      
-      Two critical regions define tRNA function:
-      
-      \textbf{Amino acid attachment site}: The $3'$ terminus of all tRNAs terminates in the sequence CCA, where the amino acid is covalently attached to the $3'$-OH of the terminal adenosine via an ester bond. This aminoacyl linkage is high-energy, and its hydrolysis drives peptide bond formation.
-      
-      \textbf{Anticodon}: A three-nucleotide sequence located in the anticodon loop that base-pairs with the complementary codon in mRNA through Watson-Crick and wobble base pairing. The anticodon determines which codon(s) a given tRNA recognizes.
-      
-      \textbf{Aminoacyl-tRNA synthetases} ensure translation fidelity by correctly matching tRNAs with their cognate amino acids. This family of 20 enzymes (one per amino acid) catalyzes a two-step aminoacylation reaction: (1) activation of the amino acid with ATP to form aminoacyl-AMP, releasing pyrophosphate; (2) transfer of the activated amino acid to the tRNA's $3'$ terminus, releasing AMP. Each synthetase recognizes specific structural features of its cognate tRNA(s), achieving error rates below $10^{-4}$. Many synthetases possess editing active sites that hydrolyze incorrectly charged amino acids, further enhancing fidelity.
-      
-      \textbf{Wobble base pairing}: The third codon position (3' end of codon, 5' end of anticodon) exhibits relaxed base-pairing specificity, allowing non-Watson-Crick pairs. This flexibility, termed wobble, permits a single tRNA to recognize multiple synonymous codons differing in the third position. Wobble explains why cells require fewer than 61 distinct tRNAs despite 61 sense codons—humans possess $\sim 45$ distinct tRNA genes. The wobble position typically follows these pairing rules: G pairs with U or C; I (inosine, a modified nucleotide) pairs with U, C, or A.
+      \textbf{Aminoacyl-tRNA synthetases} ensure translation fidelity by correctly matching tRNAs with their cognate amino acids. This family of 20 enzymes (\textit{one per amino acid}) catalyzes aminoacylation, enabling tRNA reuse following amino acid release during protein synthesis (\textit{\autoref{core:polypeptide_synthesis}}.
 
     \end{core}
 
-    \begin{core}{Ribosome Structure}
+    \begin{core}[label=core:ribosome_structure]{Ribosome Structure}
 
-      % ORIGINAL: ribosome: the organelle that translates the mRNA by pairing its codons with the cooresponding tRNA-amino acid molecule; consists of a large subunit and a small subunit
-      % ribosomal RNA (rRNA): a component of each ribosomal subunit 
-      % A site: holds the tRNA carrying the next amino acid to be added to the chain
-      % P site: hold the tRNA carrying the growing polypeptide chain
-      % E site: discharged tRNAs leave the ribosome from this site
+      \sbs{0.55}{
+        \textbf{Ribosomes} are large ribonucleoprotein complexes (\textit{molecular machines}) composed of small and large subunits that catalyze polypeptide synthesis, with each subunit comprising proteins and \textbf{ribosomal RNAs (rRNAs)}. Three tRNA-binding sites with distinct functions coordinate translation.
+
+        \begin{itemize}
+
+          \item The \textbf{A site} (\textit{aminoacyl-tRNA site}) binds incoming aminoacyl-tRNA carrying the next amino acid to be incorporated. Codon recognition and initial binding occur here.
+
+        \end{itemize}
+      }{
+        \myfig{0.87}{cytology_figures/ribosome_structure}{Ribosome structure}{fig:fig123}
+      }
+
+      \begin{itemize}
+
+        \item The \textbf{P site} (\textit{peptidyl-tRNA site}) holds the tRNA attached to the growing polypeptide chain. During each elongation cycle, the peptide is transferred from the P-site tRNA to the amino acid on the A-site tRNA.
+
+        \item The \textbf{E site} (\textit{exit site}) binds deacylated tRNA (\textit{tRNA without amino acid}) immediately before its release from the ribosome.
+
+      \end{itemize}
       
-      \textbf{Ribosomes} are large ribonucleoprotein complexes (molecular machines) that catalyze polypeptide synthesis. Prokaryotic ribosomes (70S) are smaller than eukaryotic ribosomes (80S), reflecting differences in both protein and RNA content. Each ribosome comprises two subunits:
-      
-      The \textbf{small subunit} (30S in prokaryotes, 40S in eukaryotes) binds mRNA and monitors codon-anticodon pairing fidelity. The \textbf{large subunit} (50S in prokaryotes, 60S in eukaryotes) catalyzes peptide bond formation through its peptidyl transferase center.
-      
-      \textbf{Ribosomal RNA (rRNA)} constitutes the structural and catalytic core of each subunit. In prokaryotes, the small subunit contains 16S rRNA, while the large subunit contains 23S and 5S rRNAs. The 23S rRNA catalyzes peptide bond formation, making the ribosome a ribozyme. Dozens of ribosomal proteins stabilize rRNA structure and contribute to ribosome assembly and function.
-      
-      The ribosome contains three tRNA-binding sites with distinct functions:
-      
-      \textbf{A site} (aminoacyl-tRNA site): Binds incoming aminoacyl-tRNA carrying the next amino acid to be incorporated. Codon recognition and initial binding occur here.
-      
-      \textbf{P site} (peptidyl-tRNA site): Holds the tRNA attached to the growing polypeptide chain. During each elongation cycle, the peptide is transferred from the P-site tRNA to the amino acid on the A-site tRNA.
-      
-      \textbf{E site} (exit site): Binds deacylated tRNA (tRNA without amino acid) immediately before its release from the ribosome.
-      
-      During translation, tRNAs move sequentially through these sites: A → P → E, with each translocation advancing the ribosome three nucleotides along the mRNA.
+      During translation, tRNAs move sequentially through these sites: $A \rightarrow P \rightarrow E$, with each translocation advancing the ribosome three nucleotides along the mRNA.
 
     \end{core}    
 
-    \begin{core}{Polypeptide Synthesis}
+    \begin{core}[label=core:polypeptide_synthesis]{Polypeptide Synthesis}
 
-      % ORIGINAL: INITIATION, ELONGATION, TERMINATION content
-      
-      Translation proceeds through three phases—initiation, elongation, and termination—each orchestrated by specific protein factors and powered by GTP hydrolysis.
+      Like transcription (\textit{\autoref{core:transcription}}), \textbf{translation} proceeds through the same three phases, each orchestrated by specific protein factors and powered by GTP hydrolysis.
       
       \begin{enumerate}
 
         \item \textbf{Initiation}
-        
-        % ORIGINAL: small ribosomal subunit binds to mRNA molecule and the inititor tRNA (anticodon UAC for the start codon AUG) binds to the corresponding mRNA codon
-        % large ribosomal subunit binds to small subunit with the help of initiation factors and GTP (energy)
-        
-        Translation initiation establishes the correct reading frame and positions the ribosome at the start codon. In eukaryotes, the small ribosomal subunit (40S) binds to the $5'$ cap of mRNA in complex with initiation factors (eIFs) and the initiator tRNA (Met-tRNA$_i^{\text{Met}}$, carrying methionine with anticodon 3'-UAC-5' complementary to the start codon 5'-AUG-3'). This complex scans downstream until encountering the start codon, typically the first AUG in favorable context (Kozak sequence in eukaryotes).
-        
-        Upon start codon recognition, the large ribosomal subunit (60S) joins the complex through a GTP-dependent mechanism requiring multiple initiation factors. GTP hydrolysis by eIF2 and eIF5B drives conformational changes that stabilize subunit association and position the Met-tRNA$_i^{\text{Met}}$ in the P site, with the A site vacant and ready for the next aminoacyl-tRNA. Initiation factors dissociate, yielding an elongation-competent 80S ribosome.
-        
-        Prokaryotic initiation differs: the small subunit binds directly to the Shine-Dalgarno sequence (ribosome binding site) in the mRNA, eliminating the need for $5'$ cap recognition and scanning.
-        
+
+        \myfig{0.65}{cytology_figures/translation_initiation}{Translation initiation}{fig:fig124}
+
+        Translation initiation establishes the correct \textbf{reading frame} and positions the ribosome at the start codon through mechanisms that differ fundamentally between prokaryotes and eukaryotes.
+
+        \begin{itemize}
+
+          \item \textbf{Prokaryotic initiation}: The small ribosomal subunit binds directly to the \textbf{Shine-Dalgarno sequence} (\textit{ribosome binding site}) in the mRNA, located just upstream of the AUG start codon. The initiator tRNA can associate either before or after mRNA binding, providing flexibility in assembly order.
+          
+          \item \textbf{Eukaryotic initiation}: The small ribosomal subunit, pre-bound with initiator tRNA, recognizes the $5'$ cap of the mRNA and scans downstream until encountering the AUG start codon, typically the first AUG in favorable context (\textbf{Kozak sequence}).
+
+        \end{itemize}
+
+        Upon start codon recognition, the large ribosomal subunit joins the complex to form the \textbf{translation initiation complex}. Throughout this process, \textbf{initiation factors}---proteins that coordinate assembly of ribosomal subunits, mRNA, and initiator tRNA---facilitate these events through GTP-dependent mechanisms.
+ 
         \item \textbf{Elongation}
-        
-        % ORIGINAL: the next tRNA comes in to the A site
-        % the peptide chain from the P site tRNA is tranfered to the A site tRNA
-        % P shifts to E, A shifts to P
-        % E tRNA exits
-        % throughout this process GTP is used to push this progress forward
-        
-        Elongation is a cyclical process that adds amino acids to the growing polypeptide one residue at a time. Each elongation cycle comprises three steps:
-        
-        (1) \textbf{Aminoacyl-tRNA delivery}: Elongation factor EF-Tu (eEF1A in eukaryotes) binds aminoacyl-tRNA and GTP, escorting the ternary complex to the A site. When the anticodon correctly pairs with the mRNA codon, GTP hydrolysis induces a conformational change that releases EF-Tu•GDP, allowing the aminoacyl-tRNA to accommodate fully into the A site. This proofreading mechanism enhances translation fidelity—incorrect codon-anticodon pairs trigger EF-Tu dissociation before GTP hydrolysis, rejecting the wrong tRNA.
-        
-        (2) \textbf{Peptide bond formation}: The peptidyl transferase center of the large subunit catalyzes nucleophilic attack by the α-amino group of the A-site amino acid on the ester carbonyl linking the P-site amino acid to its tRNA. This reaction transfers the growing polypeptide from the P-site tRNA to the A-site tRNA, extending the chain by one residue and leaving a deacylated tRNA in the P site. Remarkably, no energy input is required—the reaction is driven by the high-energy aminoacyl ester bond.
-        
-        (3) \textbf{Translocation}: Elongation factor EF-G (eEF2 in eukaryotes) binds the ribosome in a GTP-dependent manner and induces a large-scale conformational change that advances the ribosome exactly three nucleotides (one codon) in the $5' \to 3'$ direction. This movement shifts the deacylated tRNA from the P site to the E site, the peptidyl-tRNA from the A site to the P site, and positions the next codon in the vacant A site. GTP hydrolysis by EF-G powers this movement. The E-site tRNA then dissociates, completing the cycle.
-        
-        Elongation factors are recycled through nucleotide exchange: EF-Tu•GDP is recharged to EF-Tu•GTP by EF-Ts (eEF1B), enabling subsequent rounds of aminoacyl-tRNA delivery. Typical elongation rates are $15-20$ amino acids per second in eukaryotes.
-        
+
+        Elongation is a cyclical process that adds amino acids to the growing polypeptide one residue at a time. Each elongation cycle comprises three steps coordinated by \textbf{elongation factors} (\textit{not shown in \autoref{fig:fig125}}.
+
+        \begin{enumerate}[label=(\arabic*)]
+
+          \item \textbf{Codon recognition}: The anticodon of an incoming aminoacyl-tRNA pairs with the complementary mRNA codon in the A site.
+
+          \item \textbf{Peptide bond formation}: An rRNA molecule of the large ribosomal subunit catalyzes peptide bond formation between the carboxyl terminus of the growing polypeptide in the P site and the amino group of the incoming amino acid in the A site. This reaction transfers the polypeptide from the P-site tRNA to the A-site tRNA, leaving a deacylated tRNA in the P site.
+
+          \item \textbf{Translocation}: The ribosome translocates the peptidyl-tRNA from the A site to the P site while simultaneously moving the deacylated tRNA from the P site to the E site, where it dissociates. This movement advances the mRNA exactly three nucleotides, placing the next codon in the vacant A site.
+
+        \end{enumerate}
+
+        \myfig{0.9}{cytology_figures/translation_elongation}{Translation elongation}{fig:fig125}
+
         \item \textbf{Termination}
+
+        \myfig{0.9}{cytology_figures/translation_termination}{Translation termination}{fig:fig126}
         
-        % ORIGINAL: When a ribosome reaches a stop codon on mRNA, the A site of ribosome accepts a release factor---a protein shaped like a tRNA
-        % Release factor promotes hydrolysis of the bond between the tRNA in the P site and the last amino acids of the polypeptide
-        % ribosomal subunits dissociates via hydrolysis
-        
-        Translation terminates when the A site encounters a stop codon (UAA, UAG, or UGA), for which no corresponding aminoacyl-tRNA exists. Instead, \textbf{release factors}—proteins that structurally mimic tRNAs—recognize stop codons and bind the A site. In eukaryotes, eRF1 recognizes all three stop codons through a flexible tripeptide motif.
-        
-        Release factor binding triggers the peptidyl transferase center to catalyze hydrolysis rather than aminoacyl transfer: a water molecule attacks the ester bond linking the polypeptide to the P-site tRNA, releasing the completed polypeptide with a free carboxyl terminus. A second release factor, eRF3, provides GTP-dependent stimulation of this process.
-        
-        Following polypeptide release, ribosome recycling factors promote dissociation of the ribosomal subunits from the mRNA and from each other, powered by additional GTP hydrolysis. The separated subunits, mRNA, and deacylated tRNA are released and can participate in new rounds of translation. The nascent polypeptide undergoes folding, often assisted by molecular chaperones, and may be subject to post-translational modifications.
+        Translation terminates when the A site encounters a stop codon (\textit{UAA, UAG, or UGA}), for which no corresponding aminoacyl-tRNA exists. Instead, \textbf{release factors}---proteins that structurally mimic tRNAs---recognize stop codons and bind the A site, triggering the hydrolytic breakdown process of the translation process by other protein factors.
 
       \end{enumerate}
 
     \end{core}
 
-    \begin{core}{Protein Targeting}
+    \begin{core}{Signal Peptides}
 
-      % ORIGINAL: Signal peptide: the singal that polypeptides destined for the ER are marked by 
-      % Signal-recognition particle: a protein-RNA complex that escorts the signal peptide marked polypeptide to the ER
-      
-      Eukaryotic cells must direct nascent polypeptides to appropriate subcellular destinations—the cytosol, nucleus, mitochondria, endoplasmic reticulum (ER), or other organelles. Protein targeting is accomplished through \textbf{signal sequences}: short amino acid sequences (typically $15-60$ residues) that specify cellular localization.
-      
-      Proteins destined for the ER and secretory pathway bear an \textbf{N-terminal signal peptide} comprising a positively charged N-terminal region, a hydrophobic core ($10-15$ nonpolar amino acids), and a polar C-terminal region with a signal peptidase cleavage site. This signal emerges from the ribosome early during translation.
-      
-      The \textbf{signal recognition particle (SRP)} is a ribonucleoprotein complex consisting of six proteins and one RNA molecule (7SL RNA in mammals) that recognizes the emerging signal peptide. SRP binding to the signal peptide and ribosome causes translational arrest, preventing complete synthesis in the cytosol. The SRP-ribosome-nascent chain complex then diffuses to the ER membrane, where SRP binds its receptor (SR) in a GTP-dependent interaction.
-      
-      This binding event positions the ribosome at a protein-conducting channel (translocon) in the ER membrane. GTP hydrolysis releases SRP and SR, translation resumes, and the growing polypeptide is threaded through the translocon into the ER lumen (for secreted and membrane proteins) or integrated into the membrane (for transmembrane proteins). Signal peptidase cleaves the signal peptide during or shortly after translocation. This co-translational targeting mechanism ensures that secretory and membrane proteins never fully enter the cytosol, preventing aggregation and misfolding.
+      Eukaryotic cells direct nascent polypeptides to specific subcellular destinations through \textbf{signal peptides}—short amino acid sequences that specify localization to the cytosol, nucleus, mitochondria, endoplasmic reticulum (ER), or other organelles.
+
+      \myfig{0.95}{cytology_figures/signal_peptide}{Protein targeting to the endoplasmic reticulum by signal peptides and signal recognition particles}{fig:fig127}
+
+      The \textbf{signal recognition particle (SRP)}, a ribonucleoprotein complex, recognizes ER-targeting signal peptides and escorts the ribosome-nascent chain complex to the ER membrane, where the polypeptide is translocated into the lumen or integrated into the membrane.
 
     \end{core}
 
     \begin{core}{Polyribosomes}
 
-      % ORIGINAL: Polyribosomes (polysomes): when one mRNA molcule has several ribosomes attached to it simultaneously to translate into polypeptidesA
-      % this can happen in more bacteria and eukaryotes
-      % Bacteria lack compartmental organization, thus the poly ribosome can also be formed as the RNA is getting transcribed from the template DNA strand
+      \textbf{Polyribosomes} (\textit{or \textbf{polysomes}}) are clusters of multiple ribosomes simultaneously translating a single mRNA molecule. Because ribosomes are relatively small compared to mRNA length, multiple ribosomes can bind and translate an mRNA concurrently, each synthesizing an independent polypeptide copy.
+
+      \myfig{0.55}{cytology_figures/polyribosome}{Polyribosome}{fig:fig128}
       
-      \textbf{Polyribosomes} (or \textbf{polysomes}) are clusters of multiple ribosomes simultaneously translating a single mRNA molecule. Because ribosomes are relatively small compared to mRNA length, multiple ribosomes can bind and translate an mRNA concurrently, each synthesizing an independent polypeptide copy. Polyribosomes typically contain $5-10$ ribosomes spaced $\sim 80-100$ nucleotides apart, though highly expressed mRNAs may accommodate more.
+      Polyribosome formation dramatically amplifies protein production from a single mRNA template---with ten ribosomes per mRNA, protein synthesis rates increase tenfold compared to monoribosome translation. This mechanism enables cells to rapidly respond to changing protein demands without proportionally increasing mRNA levels.
       
-      Polyribosome formation dramatically amplifies protein production from a single mRNA template—with ten ribosomes per mRNA, protein synthesis rates increase tenfold compared to monoribosome translation. This mechanism enables cells to rapidly respond to changing protein demands without proportionally increasing mRNA levels.
-      
-      In prokaryotes, the lack of nuclear compartmentalization permits \textbf{coupled transcription-translation}: ribosomes bind nascent mRNA and initiate translation while RNA polymerase continues transcribing the downstream gene sequence. This coupling creates extended polyribosome-RNA polymerase complexes visible in electron micrographs. Coupled transcription-translation also provides a quality control mechanism—ribosomes stalled at premature stop codons (nonsense mutations) can signal transcription termination, preventing synthesis of truncated mRNAs (polarity effect).
-      
-      Eukaryotic polyribosomes occur in both cytoplasm (free polyribosomes synthesizing cytosolic proteins) and associated with the ER membrane (membrane-bound polyribosomes synthesizing secretory and membrane proteins). However, eukaryotic transcription and translation are spatially and temporally separated, precluding direct coupling.
+      In prokaryotes, the lack of nuclear compartmentalization permits \textbf{coupled transcription-translation}: ribosomes bind nascent mRNA and initiate translation while RNA polymerase continues transcribing the downstream gene sequence. 
+
+      \myfig{0.55}{cytology_figures/coupled_transtrans}{Coupled transcription-translation}{fig:fig129}
 
     \end{core}
   
