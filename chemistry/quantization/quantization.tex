@@ -7,18 +7,13 @@
 
 \input{../../_presets/chemistry/preamble}
 
-\externaldocument[gas-]{../gases/gases}[../gases/gases.pdf]
-\externaldocument[aci-]{../acids_and_bases/acids_and_bases}[../acids_and_bases/acids_and_bases.pdf]
-\externaldocument[equ-]{../equilibrium/equilibrium}[../equilibrium/equilibrium.pdf]
+% \externaldocument[gen-]{../gen_chem/gen_chem}[../gen_chem/gen_chem.pdf]
 \externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
-\externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
-\externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
-\externaldocument[nom-]{../nomenclature/nomenclature}[../nomenclature/nomenclature.pdf]
-\externaldocument[rad-]{../radical_halogenation/radical_halogenation}[../radical_halogenation/radical_halogenation.pdf]
-\externaldocument[con-]{../conformational_analysis/conformational_analysis}[../conformational_analysis/conformational_analysis.pdf]
-\externaldocument[alk-]{../alkane_alkene_alkyne/alkane_alkene_alkyne}[../alkane_alkene_alkyne/alkane_alkene_alkyne.pdf]
-\externaldocument[nuc-]{../nuc_sub_and_elim/nuc_sub_and_elim}[../nuc_sub_and_elim/nuc_sub_and_elim.pdf]
-%\externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
+% \externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
+% \externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
+% \externaldocument[alk-]{../alkene_alkyne/alkene_alkyne}[../alkene_alkyne/alkene_alkyne.pdf]
+% \externaldocument[org-]{../org_chem/org_chem}[../org_chem/org_chem.pdf]
+% \externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
 
 \begin{document}
 
@@ -31,7 +26,7 @@
 
     \begin{core}{Light}
 
-      \textbf{Light} consists of oscillations of electric and magnetic fields --- or \textbf{electromagnatic waves} --- that travel together at the speed of light ($c \approx 3.0 \times 10^8\,m\,s^{-1}$)
+      \textbf{Light} consists of oscillations of electric and magnetic fields---or \textbf{electromagnatic waves}---that travel together at the speed of light ($c \approx 3.0 \times 10^8\,m\,s^{-1}$)
 
       \myfig{0.75}{quantization_figures/light.png}{The respective electric and magnetic field oscillations of an electromagnetic wave}{fig:placeholder1}
 
@@ -279,7 +274,7 @@
         E = -\frac{hcRZ^2}{n^2}
       \]
 
-      where $h$ is Planck's constant ($6.626 \times 10^{-34}\,\text{J\,s}$), $c$ is the speed of light ($2.998 \times 10^8\,\text{m\,s}^{-1}$), $R$ is the Rydberg constant ($1.097 \times 10^7\,\text{m}^{-1}$), $Z$ is the atomic number, and $n$ is the principal quantum number. The negative sign reflects the fact that the electron sits in an energy well relative to a free electron---consistent with our discussion of potential energy and bond energies in EXTERNAL REFERENCE.
+      where $h$ is Planck's constant ($6.626 \times 10^{-34}\,\text{J\,s}$), $c$ is the speed of light ($2.998 \times 10^8\,\text{m\,s}^{-1}$), $R$ is the Rydberg constant ($1.097 \times 10^7\,\text{m}^{-1}$), $Z$ is the atomic number, and $n$ is the principal quantum number. The negative sign reflects the fact that the electron sits in an energy well relative to a free electron---consistent with our discussion of potential energy and bond energies in \autoref{the-core:pe}.
 
       Two trends follow directly from this expression. First, \textbf{energy decreases as $Z$ increases}, reflecting the stronger attractive pull of a more positively charged nucleus on the single \ce{e^-}. Second, energy increases with $n$, consistent with the wave-like nature of the electron and the role of nodes in determining frequency. \autoref{fig:placeholder17} below illustrates these energy levels across different principal quantum numbers for a hydrogenic atom.
 
@@ -406,13 +401,13 @@
 
       \myfig{0.25}{quantization_figures/coordination_compound.png}{Coordination compound example}{fig:placeholder23}
 
-      In the above mole, \ce{NH3} and \ce{NO2} act as ligands donating \ce{e^-} density into the d orbitals of \ce{Co}. This incoming \ce{e^-} density repels the existing \ce{e^-} density on the metal ion---the same \ce{e^-} \ce{e^-} repulsion discussed earlier in EXTERNAL REFERENCE---and just as that repulsion caused orbital energy levels to depend on both $n$ and $l$ rather than $n$ alone (\autoref{core:hydrogenic}), here it \textbf{unevenly distributes energy across the five d orbitals}, pushing some to higher energy levels than others.
+      In the above mole, \ce{NH3} and \ce{NO2} act as ligands donating \ce{e^-} density into the d orbitals of \ce{Co}. This incoming \ce{e^-} density repels the existing \ce{e^-} density on the metal ion---the same \ce{e^-} \ce{e^-} repulsion discussed earlier in \autoref{core:hydrogenic}---and just as that repulsion caused orbital energy levels to depend on both $n$ and $l$ rather than $n$ alone, here it \textbf{unevenly distributes energy across the five d orbitals}, pushing some to higher energy levels than others.
 
       \myfig{0.6}{quantization_figures/cft.png}{Crystal Field Theory d orbital energy level splitting}{fig:placeholder24}
 
       Crucially, the magnitude of this d orbital energy splitting in transition metals generally falls \textbf{within the energy range corresponding to visible light wavelengths}. This is not the case for non-transition metals, where electronic transitions span distinct orbital shells and subshells, producing energy differences far too large to fall within the visible spectrum and corresponding instead to much shorter wavelengths.
 
-      Underlying all of these interactions is the concept of \textbf{effective nuclear charge} ($Z_{eff}$), introduced briefly in EXTERNAL REFERENCE in the context of electronegativity. It also governs the shielding effect, whereby inner electrons occupy the space between the nucleus and outer electrons, repelling the outer ones and reducing the net nuclear attraction they experience---contributing directly to the skewing of orbital energy levels shown in \autoref{fig:placeholder24}.
+      Underlying all of these interactions is the concept of \textbf{effective nuclear charge} ($Z_{eff}$). It also governs the shielding effect, whereby inner electrons occupy the space between the nucleus and outer electrons, repelling the outer ones and reducing the net nuclear attraction they experience---contributing directly to the skewing of orbital energy levels shown in \autoref{fig:placeholder24}.
 
       It should be noted that the treatment above is a simplified overview of Crystal Field Theory. A more complete picture accounts for the nature of the specific ligands present and the geometry of the coordination compound, both of which influence the magnitude and ordering of d orbital splitting.
 
@@ -424,7 +419,7 @@
 
     \begin{core}{Orbital Wave Overlap}
 
-      Bonding is favorable because it results in a lower energy state, as discussed in EXTERNAL REFERENCE. Now that we have established that orbitals represent electron density, we can explain the physical origin of this energy drop from both an electrostatic and a wave mechanical perspective.
+      Bonding is favorable because it results in a lower energy state, as discussed in \autoref{the-core:pe}. Now that we have established that orbitals represent electron density, we can explain the physical origin of this energy drop from both an electrostatic and a wave mechanical perspective.
 
       \begin{enumerate}
 

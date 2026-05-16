@@ -7,18 +7,13 @@
 
 \input{../../_presets/chemistry/preamble}
 
-\externaldocument[gas-]{../gases/gases}[../gases/gases.pdf]
-\externaldocument[aci-]{../acids_and_bases/acids_and_bases}[../acids_and_bases/acids_and_bases.pdf]
-\externaldocument[equ-]{../equilibrium/equilibrium}[../equilibrium/equilibrium.pdf]
-\externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
-\externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
-\externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
-\externaldocument[nom-]{../nomenclature/nomenclature}[../nomenclature/nomenclature.pdf]
-\externaldocument[rad-]{../radical_halogenation/radical_halogenation}[../radical_halogenation/radical_halogenation.pdf]
-\externaldocument[con-]{../conformational_analysis/conformational_analysis}[../conformational_analysis/conformational_analysis.pdf]
-\externaldocument[alk-]{../alkane_alkene_alkyne/alkane_alkene_alkyne}[../alkane_alkene_alkyne/alkane_alkene_alkyne.pdf]
-\externaldocument[nuc-]{../nuc_sub_and_elim/nuc_sub_and_elim}[../nuc_sub_and_elim/nuc_sub_and_elim.pdf]
-%\externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
+% \externaldocument[gen-]{../gen_chem/gen_chem}[../gen_chem/gen_chem.pdf]
+% \externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
+% \externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
+% \externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
+% \externaldocument[alk-]{../alkene_alkyne/alkene_alkyne}[../alkene_alkyne/alkene_alkyne.pdf]
+% \externaldocument[org-]{../org_chem/org_chem}[../org_chem/org_chem.pdf]
+% \externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
 
 \begin{document}
 
@@ -69,7 +64,9 @@
 
     As a result, compound 7 (\ce{CF3CH2OH}) has a smaller $pK_a$ value compared to compound 6 (\ce{ClCH2CH2OH}). This acidic pattern also occurs with increasing distance between the \ce{-O-} and halogen species, an observation we see in the $pK_a$ differences between compound 7 and 8.
 
-  \end{core}\section{Alcohol Synthesis}
+  \end{core}
+
+\section{Alcohol Synthesis}
 
   Alcohol is synthesized primarily through one of three different methods. We will go through each method in turn. 
 
@@ -77,7 +74,7 @@
 
     Our goal can be summarized by the following chemical equation: \ce{R-L + OH- -> R-OH + L-}.
 
-    In the general absence of steric hinderance around the electrophile --- such as \ce{H3C-L} or \ce{R_{prim}-L} --- we can accomplish this reaction purely via \snt. However, the possibility of undesired E2 reactions increases as steric hinderance becomes more present --- such as in β branched compounds.
+    In the general absence of steric hinderance around the electrophile---such as \ce{H3C-L} or \ce{R_{prim}-L}---we can accomplish this reaction purely via \snt. However, the possibility of undesired E2 reactions increases as steric hinderance becomes more present---such as in β branched compounds.
   
     \reactionfig{
       \scheme{
@@ -265,7 +262,7 @@
 
     \bce{\ce{Li^{+}AlH4- ->[H2O] 4H2 + Li^{+}Al(OH)4-}\hspace{5mm} \textit{violent}}
 
-    The donated \ce{H-} will thus attack the central carbon of the ketone or aldehyde, resulting in an alkoxide, which is then protonated by an alcohol solvent (for \ce{Na^{+}BH4-}) or aqueous work up (for \ce{Li^{+}AlH4-}). \textit{Mind that the aqueous work up is in a separate step after purification. test change}
+    The donated \ce{H-} will thus attack the central carbon of the ketone or aldehyde, resulting in an alkoxide, which is then protonated by an alcohol solvent (for \ce{Na^{+}BH4-}) or aqueous work up (for \ce{Li^{+}AlH4-}). \textit{Mind that the aqueous work up is in a separate step after purification.}
 
     \triplereactionfig{
       \scheme{
@@ -504,7 +501,7 @@
       }
     }{Solvation of grignard reagent in ether}{fig:filler11}{0.8}
 
-    The resulting \ce{R-M(X)} bond is highly polarized due to the EN difference between the organic R group and metal. Unlike most organic molecules --- where carbon is bonded to more EN elements and bears a partial positive charge --- the carbon in \ce{R-M(X)} is more EN than its metallic partner. This reversal of typical polarity, or \textbf{umpolung}, renders the R group carbon both strongly basic and nucleophilic, making them extremely easy to protonate via hydrolysis.
+    The resulting \ce{R-M(X)} bond is highly polarized due to the EN difference between the organic R group and metal. Unlike most organic molecules---where carbon is bonded to more EN elements and bears a partial positive charge---the carbon in \ce{R-M(X)} is more EN than its metallic partner. This reversal of typical polarity, or \textbf{umpolung}, renders the R group carbon both strongly basic and nucleophilic, making them extremely easy to protonate via hydrolysis.
 
     \reactionfig{
       \scheme{
@@ -623,7 +620,9 @@
       }
     }{Alcohol synthesis via grignard addition to carbonyls}{fig:filler14}{0.9}
 
-  \end{core}\section{Alcohol Reactions}
+  \end{core}
+
+\section{Alcohol Reactions}
 
   Deprotonating alcohol requires a stronger base than \ce{RO-}. In other words, the base must have a stronger affinity to the \ce{H^+} than the alkoxide (\ce{RO-}). If the alcohol is acidic, water will usually suffice in this matter. However, in cases where water is more acidic than the alcohol itself, \ce{H^+} can be donated to the alcohol and a subsequent \ce{H2O} L group will be formed, leaving the resulting product to have a highly reactive, empty atomic orbital on the relevant C after the \ce{H2O} L group departs.
 
@@ -905,7 +904,7 @@
  
   \end{core}
 
-  \begin{core}{Alkyl Shifts} % ====================================================================
+  \begin{core}{Alkyl Shifts}
    
     Additionally, entire alkyl or R shifts can occur, although not as commonly as hydride shifts because of the greater $E_a$. These shift can occur even in \ce{R_{prim}-OH}s.
 
@@ -986,7 +985,7 @@
 
   So, how do we actually turn an ROH into RNu without all of these potential issues that are bound to happen? The solution is to use inorganic derivatives as reactive or isolable intermediates.
  
-  \begin{core}{Substituting OH with Br} % ============================================================
+  \begin{core}{Substituting OH with Br}
     
     Chemists use \ce{PBr3} to replace OH groups with Br: \ce{3ROH + PBr3 -> 3RBr + H3PO3}. The mechanism for this reaction is as follows.
 
@@ -1052,7 +1051,7 @@
 
   \end{core}
 
-  \begin{core}[label=core:socl2]{Substituting OH with Cl} % ============================================================
+  \begin{core}[label=core:socl2]{Substituting OH with Cl}
     
     Chemists use \ce{SOCl2} to replace OH groups with Cl: \ce{ROH + SOCl2 -> RCl + SO2 + HCl}. The mechanism for this reaction is as follows.
 
@@ -1183,7 +1182,7 @@
 
   \end{core}
 
-  \begin{core}{Substituting OH with Good Leaving Groups} % ===========================================
+  \begin{core}{Substituting OH with Good Leaving Groups}
    
     To substitute OH with a good leaving group, chemists use isolable sulfonates such as the following molecules and cooresponding reactions.
 

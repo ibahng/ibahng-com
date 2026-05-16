@@ -7,18 +7,13 @@
 
 \input{../../_presets/chemistry/preamble}
 
-\externaldocument[gas-]{../gases/gases}[../gases/gases.pdf]
-\externaldocument[aci-]{../acids_and_bases/acids_and_bases}[../acids_and_bases/acids_and_bases.pdf]
-\externaldocument[equ-]{../equilibrium/equilibrium}[../equilibrium/equilibrium.pdf]
-\externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
-\externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
-\externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
-\externaldocument[nom-]{../nomenclature/nomenclature}[../nomenclature/nomenclature.pdf]
-\externaldocument[rad-]{../radical_halogenation/radical_halogenation}[../radical_halogenation/radical_halogenation.pdf]
-\externaldocument[con-]{../conformational_analysis/conformational_analysis}[../conformational_analysis/conformational_analysis.pdf]
-\externaldocument[alk-]{../alkane_alkene_alkyne/alkane_alkene_alkyne}[../alkane_alkene_alkyne/alkane_alkene_alkyne.pdf]
-\externaldocument[nuc-]{../nuc_sub_and_elim/nuc_sub_and_elim}[../nuc_sub_and_elim/nuc_sub_and_elim.pdf]
-%\externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
+% \externaldocument[gen-]{../gen_chem/gen_chem}[../gen_chem/gen_chem.pdf]
+% \externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
+% \externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
+% \externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
+% \externaldocument[alk-]{../alkene_alkyne/alkene_alkyne}[../alkene_alkyne/alkene_alkyne.pdf]
+\externaldocument[org-]{../org_chem/org_chem}[../org_chem/org_chem.pdf]
+% \externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
 
 \begin{document}
 
@@ -38,7 +33,7 @@
           -[:-30]\ce{CH3^{\textcolor{Blue}{δ^+}}}
         }
       }
-    }{Dimethyl ether structure}{filler1}{1.3}
+    }{Dimethyl ether structure}{filler1}{1.2}
 
   \end{core}
 
@@ -102,7 +97,7 @@
           \text{\textit{E2 Reaction}}
         }
       }
-    }{Williamson ether syntehsis retrosynthesis; \textit{unsymmetrical ethers have two retrosynthetic choices, one is usually favorable over the other}}{filler3}{0.8}
+    }{Williamson ether retrosynthesis; \textit{unsymmetrical ethers have two choices, one is usually favorable over the other}}{filler3}{0.8}
 
   \end{core}
   
@@ -323,7 +318,7 @@
         \reactionfigarrow{o2}{-90}{c2}{90}{Red}
         \reactionfigarrow{b2}{120}{l2}{150}{Red}
       }
-    }{Relative rates of ring closure}{fig:filler7}{1}
+    }{Relative rates of ring closure}{fig:filler7}{0.9}
 
   \end{core} 
 
@@ -355,7 +350,7 @@
         \reactionfigarrow{oxygen1}{45}{rgroup}{90}{Red}
         \reactionfigarrow{bond}{-120}{oxygen2}{-100}{Red}
       }
-    }{Symmetrical ether formation via \snt}{fig:filler8}{1}
+    }{Symmetrical ether formation via \snt}{fig:filler8}{0.9}
 
     When dealing with \ce{R_{sec/tert}-OH}, this mechanism shifts to \sno.
 
@@ -406,7 +401,7 @@
         \reactionfigarrow{bond2}{-135}{oxygen2}{-150}{Red}
         \reactionfigarrow{oxygen2}{30}{carbon1}{180}{Red}
       }
-    }{Symmetrical ether formation via \sno}{fig:filler9}{0.95}
+    }{Symmetrical ether formation via \sno}{fig:filler9}{0.9}
 
   \end{core} 
 
@@ -775,7 +770,7 @@
       }
     }{Acid-activated ether ring opening with neutral nucleophile}{fig:filler17}{1}
     
-    One important distinction in the neutral nucleophile mechanism is regioselectivity towards the more hindered carbon. In asymmetrical ethers, the nucleophile preferentially attacks the more substituted carbon, as it better stabilizes the partial positive charge (δ$^+$) that develops through hyperconjugation and inductive effects --- causing the C-O bond on that side to stretch and weaken. This gives the mechanism a hybrid \sno/\snt character: it resembles \snt in that nucleophile attack and leaving group departure occur simultaneously, yet resembles \sno in that the partial positive charge mimics a carbocation.
+    One important distinction in the neutral nucleophile mechanism is regioselectivity towards the more hindered carbon. In asymmetrical ethers, the nucleophile preferentially attacks the more substituted carbon, as it better stabilizes the partial positive charge (δ$^+$) that develops through hyperconjugation and inductive effects---causing the C-O bond on that side to stretch and weaken. This gives the mechanism a hybrid \sno/\snt character: it resembles \snt in that nucleophile attack and leaving group departure occur simultaneously, yet resembles \sno in that the partial positive charge mimics a carbocation.
 
     \reactionfig{
       \scheme{
@@ -818,7 +813,7 @@
 
     Thiols (\ce{RSH}) are \textbf{more acidic than alcohols} because the \ce{S-H} bond is weaker due to sulfur's higher-energy molecular orbitals. The lower electronegativity difference in \ce{S-H} compared to \ce{O-H} also results in \textbf{weaker hydrogen bonding}, making thiols less polar overall. \textit{This is illustrated by \ce{H2S}, which is a gas at 25$^\circ$C with a boiling point of $-60^\circ$C, in stark contrast to \ce{H2O}.} 
 
-    Despite being less basic than \ce{RO-}, \ce{RS-} is a stronger nucleophile due to its greater \textbf{polarizability} --- note that polarizability is distinct from polarity. Polarizability describes how easily an electron cloud can be distorted by an external force (covered in EXTERNAL LABEL PLACEHOLDER TO NUC SUB AND ELIM FILE). Larger atoms like sulfur are more polarizable than oxygen because their diffuse, loosely-held electron clouds are more easily deformed. This allows \ce{RS-} to stretch and distort toward an electrophile, enhancing its nucleophilicity despite its lower basicity.
+    Despite being less basic than \ce{RO-}, \ce{RS-} is a stronger nucleophile due to its greater \textbf{polarizability}---note that polarizability is distinct from polarity. Polarizability describes how easily an electron cloud can be distorted by an external force (\textit{\autoref{org-core:nuc_quality}}). Larger atoms like sulfur are more polarizable than oxygen because their diffuse, loosely-held electron clouds are more easily deformed. This allows \ce{RS-} to stretch and distort toward an electrophile, enhancing its nucleophilicity despite its lower basicity.
 
   \end{core} 
 

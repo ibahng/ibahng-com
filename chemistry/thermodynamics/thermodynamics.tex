@@ -7,17 +7,12 @@
 
 \input{../../_presets/chemistry/preamble}
 
-\externaldocument[gas-]{../gases/gases}[../gases/gases.pdf]
-\externaldocument[aci-]{../acids_and_bases/acids_and_bases}[../acids_and_bases/acids_and_bases.pdf]
-\externaldocument[equ-]{../equilibrium/equilibrium}[../equilibrium/equilibrium.pdf]
-\externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
-\externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
-\externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
-\externaldocument[nom-]{../nomenclature/nomenclature}[../nomenclature/nomenclature.pdf]
-\externaldocument[rad-]{../radical_halogenation/radical_halogenation}[../radical_halogenation/radical_halogenation.pdf]
-\externaldocument[con-]{../conformational_analysis/conformational_analysis}[../conformational_analysis/conformational_analysis.pdf]
-\externaldocument[alk-]{../alkane_alkene_alkyne/alkane_alkene_alkyne}[../alkane_alkene_alkyne/alkane_alkene_alkyne.pdf]
-\externaldocument[nuc-]{../nuc_sub_and_elim/nuc_sub_and_elim}[../nuc_sub_and_elim/nuc_sub_and_elim.pdf]
+\externaldocument[gen-]{../gen_chem/gen_chem}[../gen_chem/gen_chem.pdf]
+% \externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
+% \externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
+% \externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
+% \externaldocument[alk-]{../alkene_alkyne/alkene_alkyne}[../alkene_alkyne/alkene_alkyne.pdf]
+% \externaldocument[org-]{../org_chem/org_chem}[../org_chem/org_chem.pdf]
 %\externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
 
 \begin{document}
@@ -423,7 +418,7 @@
 
       \myfig{0.95}{thermodynamics_figures/gas_KE.png}{Gas kinetic energy distribution}{fig:gas_ke}
 
-      \autoref{fig:gas_ke} plots the number of possible 5-integer permutations that sum to 125 (\textit{and thus average to 25}), partitioned by the maximum permitted deviation from the mean. Even in this highly simplified model, the number of accessible microstates increases dramatically as the permitted spread in KE widens---vastly outnumbering the single microstate in which all values equal 25, such as the permutation $(25, 25, 25, 25, 25)$. This statistical tendency for KE to be broadly and randomly distributed among gas molecules, while the ensemble average remains fixed, is the basis of the \textbf{Maxwell--Boltzmann Distribution} (\autoref{gas-core:max_boltz_dis}).
+      \autoref{fig:gas_ke} plots the number of possible 5-integer permutations that sum to 125 (\textit{and thus average to 25}), partitioned by the maximum permitted deviation from the mean. Even in this highly simplified model, the number of accessible microstates increases dramatically as the permitted spread in KE widens---vastly outnumbering the single microstate in which all values equal 25, such as the permutation $(25, 25, 25, 25, 25)$. This statistical tendency for KE to be broadly and randomly distributed among gas molecules, while the ensemble average remains fixed, is the basis of the \textbf{Maxwell--Boltzmann Distribution} (\autoref{gen-core:max_boltz_dis}).
 
     \end{core}
 
@@ -698,7 +693,7 @@
 
     \begin{core}[label=core:G_eq]{Gibbs Free Energy \& Equilibrium}
 
-      We have established that a negative $\Delta G$ indicates a thermodynamically favorable reaction, while a positive $\Delta G$ indicates an unfavorable one. However, as seen in \href{../equilibrium/equilibrium.pdf}{Equilibrium}, a favorable reaction does not necessarily proceed to completion. Many reactions reach an equilibrium state in which both reactants and products coexist, regardless of the sign of $\Delta G$ under standard conditions. This implies a quantitative relationship between $\Delta G$ and the equilibrium constant $K$, given by the \textbf{Van't Hoff isotherm}.
+      We have established that a negative $\Delta G$ indicates a thermodynamically favorable reaction, while a positive $\Delta G$ indicates an unfavorable one. However, as seen in \autoref{gen-sec:equilibrium}, a favorable reaction does not necessarily proceed to completion. Many reactions reach an equilibrium state in which both reactants and products coexist, regardless of the sign of $\Delta G$ under standard conditions. This implies a quantitative relationship between $\Delta G$ and the equilibrium constant $K$, given by the \textbf{Van't Hoff isotherm}.
       \[
         \Delta G^{\circ} = -RT\ln{K}
       \]
@@ -710,7 +705,7 @@
         \frac{d}{dt}\text{ln}\,K_{eq} = \frac{ΔH}{RT}
       \]
 
-      Through a simplier lense, this dependence can also be explained via the \textbf{Le Chatelier's principle} (\textit{\autoref{equ-core:lecha}}). The temperature at which $K = 1$ marks the point where neither the forward nor reverse reaction is thermodynamically preferred, corresponding to an equal ratio of reactants to products at equilibrium.
+      Through a simplier lense, this dependence can also be explained via the \textbf{Le Chatelier's principle} (\textit{\autoref{gen-core:lecha}}). The temperature at which $K = 1$ marks the point where neither the forward nor reverse reaction is thermodynamically preferred, corresponding to an equal ratio of reactants to products at equilibrium.
 
       Under non-standard conditions, the free energy available to drive a reaction depends on the reaction quotient $Q$, which describes the current ratio of products to reactants. The free energy change under these conditions is given by:
       \[

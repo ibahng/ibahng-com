@@ -1,0 +1,1892 @@
+\documentclass[10pt]{article}
+\usepackage{titling}
+
+\title{Organic Chemistry Foundations}
+\date{\today}
+\author{Ingyu Bahng}
+
+\input{../../_presets/chemistry/preamble}
+
+% \externaldocument[gen-]{../gen_chem/gen_chem}[../gen_chem/gen_chem.pdf]
+% \externaldocument[the-]{../thermodynamics/thermodynamics}[../thermodynamics/thermodynamics.pdf]
+% \externaldocument[qua-]{../quantization/quantization}[../quantization/quantization.pdf]
+% \externaldocument[alc-]{../alcohols/alcohols}[../alcohols/alcohols.pdf]
+% \externaldocument[eth-]{../ethers/ethers}[../ethers/ethers.pdf]
+% \externaldocument[alk-]{../alkene_alkyne/alkene_alkyne}[../alkene_alkyne/alkene_alkyne.pdf]
+% \externaldocument[org-]{../org_chem/org_chem}[../org_chem/org_chem.pdf]
+
+\begin{document}
+
+\input{../../_presets/_general/startup}
+
+\section{Radical Halogenation}
+  \label{sec:rad_halo}
+
+  \subsection{Foundations}
+    \label{sec:foundations}
+
+    \begin{core}{Radical Halogenation}
+
+      \textbf{Radical halogenation} is a substitution reaction in which a hydrogen atom of an alkane is replaced by a halogen atom, most commonly chlorine or bromine. Unlike conventional organic reactions that proceed through ionic intermediates, radical halogenation is mediated by \textbf{free radicals}---transient, highly reactive species characterized by the presence of an unpaired valence electron.
+
+      In synthetic organic chemistry, selective atomic substitution within molecular frameworks is a fundamental objective. However, alkanes present a significant challenge due to their chemical \textbf{inertness}; comprising exclusively strong, nonpolar C--C and C--H bonds, alkanes lack reactive functional groups that serve as recognition sites for electrophilic or nucleophilic reagents. Radical halogenation addresses this limitation by converting chemically inert alkanes into functionalized \textbf{haloalkanes} (\textit{alkyl halides}), which possess reactive carbon-halogen bonds amenable to subsequent transformations. Consequently, radical halogenation represents a critical entry point into the broader landscape of functional group interconversions.
+
+    \end{core}
+
+    \begin{core}{Homolytic vs. Heterolytic Cleavage}
+
+      To understand radical formation, we must first examine bond cleavage mechanisms. Consider the \textbf{homolytic cleavage} of a generic covalent bond in compound \ce{AB}.
+
+      \bce{\ce{A$:$B -> A$\cdot$ + $\cdot$B}}
+
+      Homolytic cleavage results in symmetric bond fission, wherein each fragment retains one electron from the original bonding pair, yielding two \textbf{radical} species. The enthalpy change ($\Delta H$) for this process corresponds to the bond dissociation energy, typically expressed in units of $kcal\,mol^{-1}$ and denoted as $DH^{\circ}$.
+
+      This mechanism is fundamentally distinct from \textbf{heterolytic cleavage}, in which the bonding electron pair is retained entirely by one fragment, generating a cation-anion pair:
+
+      \bce{\ce{A$:$B -> A+ + $:$B-}}
+
+      Importantly, the energy requirement for homolytic cleavage ($DH^{\circ}$) typically exceeds that of heterolytic processes in polar solvents, as the latter benefit from solvation stabilization of the resulting ionic species.
+
+    \end{core} 
+
+    \begin{core}{Hydrocarbon C--H Bond Types}
+
+      Alkane functionalization requires \textbf{C--H bond cleavage}, and the bond dissociation energy ($DH^{\circ}$) exhibits a systematic decrease across the following homologous series.
+      \[
+        \ce{H3C-H} \quad > \quad \ce{R_{prim}-H} \quad > \quad \ce{R_{sec}-H} \quad > \quad \ce{R_{tert}-H}
+      \]
+
+      The designations $R_{\text{prim}}$, $R_{\text{sec}}$, and $R_{\text{tert}}$ refer to primary, secondary, and tertiary carbon centers, which are bonded to one, two, and three additional carbon atoms, respectively. These structural classifications are illustrated in \autoref{fig:pstq_carbons}.
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]
+            -[:30]\textcolor{Blue}{\ce{C_q}}
+            (
+            -[:120]
+            )
+            (
+            -[:60]
+            )
+            -[:-30]\textcolor{Red}{\ce{C_t}}
+            (
+            -[:-90]
+            )
+            -[:30]\textcolor{Green}{\ce{C_s}}
+            -[:-30]\textcolor{Orange}{\ce{C_p}}
+          }
+        }
+      }{Primary (\textit{orange}), secondary (\textit{green}), tertiary (\textit{red}), and quaternary (\textit{blue}) carbons}{fig:pstq_carbons}{0.9}
+
+      The tertiary \ce{R_{tert}-H} bond exhibits the lowest bond dissociation energy and consequently generates the most thermodynamically stable radical upon cleavage. This stability trend---wherein radical stability increases with increasing alkyl substitution---arises from \textbf{hyperconjugation} (\textit{\autoref{core:hyperconjugation}}).
+      
+    \end{core}
+
+    \begin{core}[label=core:hyperconjugation]{Hyperconjugation}
+
+      \sbs{0.4}{
+        \textbf{Hyperconjugation} is a stereoelectronic stabilization mechanism wherein \ce{e^-} density from a filled $\sigma$ orbital (\textit{typically a C--H or C--C bond}) delocalizes into an adjacent unfilled or partially filled p-orbital. In alkyl radicals, the bonding \ce{e^-}s of $\sigma$ bonds on substituent carbon atoms interact with the singly occupied p-orbital (\textit{SOMO}) of the radical center, resulting in partial \ce{e^-} delocalization that stabilizes the radical species.
+      }{
+        \myfig{0.9}{org_chem_figures/hyperconjugation}{Hyperconjugation in alkane radicals}{fig:hyperconjugation}
+      }
+
+      As illustrated in \autoref{fig:hyperconjugation}, the magnitude of hyperconjugative stabilization is maximized in tertiary radicals (\ce{$\cdot$R_{tert}}) due to the presence of a greater number of adjacent C--H or C--C $\sigma$ bonds available for orbital overlap with the radical p-orbital. Each additional alkyl substituent provides additional filled $\sigma$ orbitals capable of donating \ce{e^-} density, thereby enhancing radical stability through cumulative hyperconjugative interactions.
+
+    \end{core}
+
+  \subsection{Mechanism of Radical Halogenation}
+
+    \begin{core}[label=core:two_step_prop]{Initiation \& Propagation}
+
+      Having established the fundamental principles of alkane radical formation (\textit{\autoref{sec:foundations}}), we now examine the mechanistic details of radical halogenation. The overall transformation, illustrated here using chlorine as the halogen, proceeds as follows.
+
+      \bce{\ce{H3C-H + Cl-Cl -> H3C-Cl + HCl}\hspace{5mm}$\Delta H = -25\,\text{kcal}\,\text{mol}^{-1}$}
+
+      Although the reaction is net exothermic ($\Delta H < 0$), it requires an initial activation energy to proceed. To elucidate the reaction pathway, we can decompose the overall transformation into the following elementary steps.
+
+      \begin{enumerate}[label=(\arabic*)]
+
+        \item \textbf{Initiation}
+        
+        \ce{Cl2 -> 2Cl$\cdot$}\hspace{5mm}$\Delta H = +58\,\text{kcal}\,\text{mol}^{-1}$
+
+        Homolytic cleavage of the Cl--Cl bond can be induced through two primary mechanisms. \textbf{Thermal energy} elevates molecular vibrational energy to levels sufficient to overcome the bond dissociation energy, resulting in bond scission. Alternatively, \textbf{photochemical activation} via UV radiation promotes a bonding \ce{e^-} to an antibonding molecular orbital (\textit{$\sigma \to \sigma^*$ transition}), weakening the Cl--Cl bond and facilitating homolytic cleavage.
+
+        \item \textbf{Propagation}
+
+          \begin{enumerate}
+
+            \item \ce{CH4 + Cl$\cdot$ -> $\cdot$CH3 + HCl}\hspace{5mm}$\Delta H = +2\,\text{kcal}\,\text{mol}^{-1}$
+
+            The frontier molecular orbital interactions governing this hydrogen abstraction step are depicted in \autoref{fig:reagents2a}.
+
+            \myfig{0.9}{org_chem_figures/reagents2a}{Orbital interaction of reagents in (2a)}{fig:reagents2a}
+
+            This step yields a methyl radical (\ce{H3C$\cdot$}), characterized by a singly occupied 2p orbital and three $sp^2$-hybridized C--H bonds adopting trigonal planar geometry, along with \ce{HCl}. In aqueous or polar environments, HCl, being a strong Brønsted acid, dissociates completely into solvated \ce{H+} and \ce{Cl-} ions.
+
+            \myfig{0.6}{org_chem_figures/products2a}{Products of (2a)}{fig:products2a}
+
+            \item \ce{$\cdot$CH3 + Cl2 -> CH3Cl + Cl$\cdot$}\hspace{5mm}$\Delta H = -27\,\text{kcal}\,\text{mol}^{-1}$
+
+          \end{enumerate}
+
+      \end{enumerate}
+
+      Summing the two propagation steps (2a) and (2b) regenerates the original stoichiometric equation.
+
+      \bce{\ce{CH4 + Cl2 -> CH3-Cl + HCl}\hspace{5mm}$\Delta H = -25\,\text{kcal}\,\text{mol}^{-1}$}
+
+      Notably, the initiation step does not contribute to the net stoichiometry; it functions \textbf{solely to generate the initial radical species required to initiate the propagation cycle}. The chain-propagating nature of this mechanism means that a small initial population of \ce{Cl$\cdot$} radicals can facilitate the conversion of substantial quantities of starting materials, as each propagation cycle regenerates the chlorine radical. This autocatalytic regeneration enables each initiating radical to participate in numerous propagation cycles before termination, analogous to a catalytic turnover process.
+
+      The PE diagram for the propagation sequence (\textit{\autoref{fig:pe_diagram_halogenation}}) provides a quantitative representation of the energetic profile throughout the reaction coordinate.
+
+      \pgfig{
+        \begin{axis}[
+          width=13cm,
+          height=10cm,
+          xmin=-0.5, xmax=11.5,
+          ymin=0, ymax=10,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={Reaction Coordinate},
+          ylabel={Energy},
+          axis line style={thick},
+          \axispresetsone
+        ]
+        
+        % Main reaction curve - two humps with intermediate
+        \addplot[
+          thick,
+          blue,
+          domain=0.5:10.5,
+          samples=300,
+        ] {
+          -0.015*x^4 + 0.32*x^3 - 2.3*x^2 + 6.1*x + 2
+        };
+        
+        % Dashed horizontal line at reactant level
+        \addplot[thick, black, dashed] coordinates {(0.5, 4.5) (2.5, 4.5)};
+        
+        % Dashed horizontal line at intermediate level
+        \addplot[thick, black, dashed] coordinates {(1.5, 5.47) (8, 5.47)};
+        
+        % Dashed horizontal line at product level
+        \addplot[thick, black, dashed] coordinates {(1, 0.59) (10.5, 0.59)};
+        
+        \draw[->, thick] (1.8, 4.5) -- (1.8, 5.47);
+        \draw[->, thick] (2, 4.5) -- (2, 0.59);
+        \draw[->, thick] (2.2, 4.5) -- (2.2, 7.34);
+        \draw[->, thick] (8, 5.47) -- (8, 6);
+        \draw[->, thick] (7.5, 5.47) -- (7.5, 0.59);
+
+        \draw[-{Triangle}] (3, 3.5) -- (1.9, 5);
+        \draw[-{Triangle}] (3.8, 7) -- (2.3, 6.5);
+        \draw[-{Triangle}] (9.7, 6) -- (8.1, 5.7);
+
+        % Labels for species
+        \node[font=\footnotesize] at (axis cs:0.6, 4) {\ce{CH4 + \textcolor{Green}{Cl$\cdot$} + (Cl2)}};
+        \node[font=\footnotesize] at (axis cs:6, 5) {\ce{\textcolor{Green}{$\cdot$CH3} + Cl2 + (HCl)}};
+        \node[font=\footnotesize] at (axis cs:9, 1) {\ce{CH3Cl + HCl + \textcolor{Green}{Cl$\cdot$}}};
+        
+        % Transition state labels
+        \node[font=\small] at (axis cs:2.2, 8) {\ce{[\textcolor{Green}{\ce{H3C$\cdots$H$\cdots$Cl}}]^{\ddagger}}};
+        \node[font=\small] at (axis cs:8, 6.7) {\ce{[\textcolor{Green}{\ce{H3C$\cdots$Cl$\cdots$Cl}}]^{\ddagger}}};
+        
+        % Energy annotations
+        \node[font=\footnotesize, align=left] at (axis cs:4, 3.5) {$E_a$ of step 1 =\\+2 kcal mol$^{-1}$};
+        \node[font=\footnotesize, align=left] at (axis cs:5, 7) {$E_a$ = 4 kcal mol$^{-1}$\\slower};
+        \node[font=\footnotesize, align=left] at (axis cs:11, 6) {$E_a$ < 1 kcal mol$^{-1}$\\faster};
+        \node[font=\footnotesize, align=left] at (axis cs:3.7, 1.5) {$\Delta H^{\circ}$ of overall reaction =\\$-25$ kcal mol$^{-1}$};
+        \node[font=\footnotesize, align=left] at (axis cs:8.6, 2.5) {$\Delta H^{\circ}$ of step 2 =\\$-27$ kcal mol$^{-1}$};
+        
+        \end{axis}
+      }{Potential energy diagram of halogenation propagation}{fig:pe_diagram_halogenation}{0.87}
+
+    \end{core}
+
+    \begin{core}{Termination}
+
+      Chain termination occurs through the following radical--radical coupling reactions.
+
+      \begin{enumerate}
+
+        \item \ce{2Cl$\cdot$ -> Cl2}
+        
+        This reaction represents the microscopic reverse of the initiation step, regenerating molecular chlorine through recombination of two chlorine radicals.
+
+        \item \ce{H3C$\cdot$ + Cl$\cdot$ -> CH3Cl}
+        
+        While this reaction formally produces the desired chloromethane product, it terminates the chain by consuming a propagating chlorine radical without regeneration, thereby halting further catalytic turnover.
+
+        \item \ce{H3C$\cdot$ + H3C$\cdot$ -> H3C-CH3}
+        
+        This dimerization reaction couples two methyl radicals to yield ethane, depleting the methyl radical pool required for propagation.
+
+      \end{enumerate}
+
+      Throughout the reaction, radical intermediates such as \ce{Cl$\cdot$} and \ce{H3C$\cdot$} exist at extremely low steady-state concentrations, reacting rapidly with abundant substrate (\textit{\ce{CH4} and \ce{Cl2}, respectively}) rather than persisting in solution. Consequently, termination reactions---requiring bimolecular radical--radical encounters---are negligible during early and intermediate stages. Termination becomes significant only when substrate depletion reduces propagation rates or when radical concentrations increase sufficiently in the closed system.
+
+    \end{core}
+
+  \subsection{Halogen Reactivity and Selectivity}
+
+    \begin{core}{Reactivity of Other Halogens}
+
+      Having examined chlorination in detail, we now extend our analysis to the full halogen series (\textit{F, Br, and I}) to assess their respective reactivities.
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{cccc|cccc|cccc}
+          \multicolumn{4}{c|}{$DH^{\circ}$ (+)} & \multicolumn{4}{c|}{$\Delta H$ of \ce{H-X} Formation ($-$)} & \multicolumn{4}{c}{$\Delta H$ of \ce{H3C-X} Formation ($-$)} \\
+
+          \ce{F2} & \ce{Cl2} & \ce{Br2} & \ce{I2} &
+          \ce{HF} & \ce{HCl} & \ce{HBr} & \ce{HI} &
+          \ce{CH3F} & \ce{CH3Cl} & \ce{CH3Br} & \ce{CH3I} \\
+
+          \hline
+
+          38 & 58 & 46 & 36 &
+          136 & 103 & 87 & 71 &
+          110 & 85 & 70 & 51 \\
+        \end{tabular}
+        \caption{Bond dissociation and formation enthalpies for halogens and halogen-containing compounds}
+        \label{tab:halogen_enthalpies}
+      \end{table}
+
+      \begin{itemize}
+
+        \item \textbf{Initiation energetics (left columns):} The bond dissociation energies for \ce{X2} homolysis span a narrow range (36--58 kcal mol$^{-1}$). Since chlorination proceeds efficiently despite having the highest $DH^{\circ}$, initiation is not rate-limiting under typical conditions.
+
+        \item \textbf{Hydrogen halide formation (middle columns):} The exothermicity of \ce{H-X} bond formation decreases systematically down the halogen group, with $\Delta H$ values ranging from $-136$ kcal mol$^{-1}$ for \ce{HF} to $-71$ kcal mol$^{-1}$ for \ce{HI}. HF formation is the most favorable (\textit{most exothermic}) and HI formation is the least favorable (\textit{least exothermic}) among the hydrogen halides. 
+
+        \item \textbf{Methyl halide formation (right columns):} An analogous trend is observed for \ce{H3C-X} bond formation, with fluorination ($\Delta H = -110$ kcal mol$^{-1}$) being substantially more exothermic than iodination ($\Delta H = -51$ kcal mol$^{-1}$).
+
+      \end{itemize}
+
+      Based on these thermodynamic data, we can predict that radical halogenation reactivity follows the order: $F > Cl > Br > I$, with fluorination being the most exothermic and iodination the least.
+
+      In practice, fluorination is \textbf{violently exothermic and uncontrollable}, often resulting in explosion. Conversely, \textbf{iodination does not proceed} under standard radical conditions due to its net endothermic character. \textbf{Chlorination and bromination occupy a synthetically useful middle ground}: chlorination is more reactive but less selective, while bromination is less reactive but more regioselective (\textit{\autoref{core:regioselectivity}}).
+
+      \myfig{1}{org_chem_figures/halogenation_pe}{Comparison of Radical Halogenation PE Diagrams}{fig:halogenation_pe}
+
+    \end{core}
+
+    \begin{core}[label=core:hammond_postulate]{Hammond Postulate}
+
+      Inspection of \autoref{fig:halogenation_pe} reveals that the position of the first transition state (\textit{TS1}) along the reaction coordinate shifts systematically as the endothermicity of the first propagation step increases. This observation is rationalized by the \textbf{Hammond Postulate}, a fundamental principle that relates transition state structure to reaction thermodynamics. Because transition states are transient, high-energy species that cannot be directly observed, the Hammond Postulate provides a framework for inferring their structures based on energetic considerations.
+
+      The Hammond Postulate states that for exothermic elementary steps, the transition state lies energetically and structurally closer to the reactants, resulting in an \textbf{early transition state} that resembles the starting materials more than the products.
+
+      Conversely, for endothermic elementary steps, the transition state lies closer to the products in both energy and structure, yielding a \textbf{late transition state} that more closely resembles the product species.
+
+      To illustrate this principle, consider the contrasting cases of fluorination and iodination, shown in magnified detail in \autoref{fig:hammond_zoomin}.
+
+      \myfig{0.9}{org_chem_figures/hammond_zoomin}{Zoomed Step 1 PE Diagrams for F and I}{fig:hammond_zoomin}
+
+      In the fluorination TS, the transferring hydrogen atom remains significantly closer to the methyl carbon than to the fluorine atom, reflecting the early, reactant-like character of this highly exothermic step. In contrast, the iodination TS exhibits the hydrogen atom positioned much closer to iodine, indicative of a late, product-like TS consistent with the endothermic nature of this step.
+
+      This structural distinction correlates directly with $E_a$ differences. Fluorination exhibits a low $E_a$, requiring minimal C--H bond elongation to reach its TS; consequently, the C--H bond is only slightly weakened when the TS is achieved, and the hydrogen has not yet substantially transferred to fluorine. Iodination, conversely, requires a substantially higher activation energy, necessitating extensive C--H bond elongation and near-complete hydrogen transfer to iodine before the TS is reached. This reflects the weaker H--I bond strength relative to H--F, which requires greater geometric reorganization to compensate for reduced thermodynamic driving force.
+
+      Bromination, being mildly endothermic, similarly exhibits a late transition state, though less product-like than that of iodination.
+
+    \end{core}
+
+    \begin{core}[label=core:regioselectivity]{Regioselectivity}
+
+      The Hammond Postulate (\textit{\autoref{core:hammond_postulate}}) also provides a mechanistic basis for understanding the differing \textbf{regioselectivities} exhibited by various halogens. To illustrate this, consider the competing pathways leading to primary versus tertiary isobutyl radicals:
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]
+            -[:-30]
+            (-[:-90])
+            -[:30]\textcolor{Red}{\ce{C$\cdot$}}
+          }
+          \qquad
+          \chemfig{
+            [:0]
+            -[:-30]\textcolor{Red}{\ce{C$\cdot$}}
+            (-[:-90])
+            -[:30]
+          }
+        }
+      }{Isobutyl radical variations}{fig:isobutyl_radical}{1}
+
+      \textbf{Regioselectivity} refers to the preferential abstraction of hydrogen from specific carbon centers (\textit{methyl, primary, secondary, or tertiary}) based on the relative stabilities of the radical character developed in the transition state.
+
+      For chlorination, the \textbf{early transition state exhibits minimal radical character}, meaning that the differential stabilization between primary and tertiary radicals is not yet fully manifested at the transition state geometry. Consequently, chlorination displays poor regioselectivity, abstracting hydrogen atoms from primary, secondary, and tertiary positions at comparable rates.
+
+      Bromination, in contrast, proceeds through a \textbf{late transition state with substantial radical character}, wherein hyperconjugative stabilization of the developing radical center significantly influences the $E_a$. Because tertiary radicals benefit from greater hyperconjugative stabilization than primary radicals, the transition state leading to the tertiary radical is preferentially stabilized, resulting in highly regioselective hydrogen abstraction from tertiary positions.
+
+      Experimental selectivity data support this mechanistic interpretation, as shown in \autoref{tab:halogen_selectivity}.
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{cccc}
+          \hline
+          C--H Bond & F ($25^{\circ}$C, gas) & Cl ($25^{\circ}$C, gas) & Br ($150^{\circ}$C, gas) \\
+          \hline
+          \ce{CH3-H} & 0.5 & 0.004 & 0.002 \\
+          \ce{RCH2-H} & 1 & 1 & 1 \\
+          \ce{R2CH-H} & 1.2 & 4 & 80 \\
+          \ce{R3C-H} & 1.4 & 5 & 1700 \\
+          \hline
+        \end{tabular}
+        \caption{Relative reactivities of C--H bonds toward halogen radicals (\textit{normalized to primary C--H})}
+        \label{tab:halogen_selectivity}
+      \end{table}
+
+    \end{core}
+
+\section{Nucleophilic Substitution and Elimination}
+
+  \subsection{Nucleophilic Substitution}
+
+    After generating a haloalkane compound via \textbf{radical halogenation} (\textit{\autoref{sec:rad_halo}}), the next step is to substitute that halogen with a different atom/molecule. One of the methods we can use to carry this out is nucleophilic substitution.
+
+    \begin{core}{Nucleophilic Substitution}
+     
+      \textbf{Nucleophilic substitution} is a fundamental class of organic reactions where an \ce{e^-} rich species, called a \textbf{nucleophile (Nu)}, attacks an electron-deficient atom called the \textbf{electrophile (E)}, displacing a specific group known as the \textbf{leaving group (L)}, which departs with the bonding electron pair. Halogens are common leaving groups due to their electronegativity and ability to stabilise the negative charge upon departure.
+
+    \end{core}
+
+    Nucleophilic substitution can be categorized into \snt and \sno.
+
+    \begin{core}{\snt}
+      
+      \snt reactions are \textbf{bimolecular}, meaning that both the leaving group and nucleophile are present in the transition state and making the reaction rate dependent on both [Nu] and [E-L] ($\text{Rate} = k[\ce{CH3Cl}][\ce{^-OH}]$). The following is a chemical reaction of \ce{CH3Cl} undergoing \snt reaction with \ce{OH-}.
+
+      \vspace{15pt}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            @{oxygen}\textcolor{Red}{\ce{HO-}}
+          }
+          \+
+          \chemfig{
+            [:0]@{carbon}\ce{CH3}
+            -[@{bond}:0,,,,Red]@{chlorine}\textcolor{Green}{Cl}
+          }
+          \arrow{->}
+          \chemfig{
+            \ce{CH3OH}
+          }
+          \+
+          \chemfig{
+            \textcolor{Green}{Cl}
+          }
+        }
+        \chemmovearrow{
+          \reactionfigarrow{oxygen}{60}{carbon}{120}{Red}
+          \reactionfigarrow{bond}{100}{chlorine}{80}{Red}
+        }
+      }{\snt equation}{fig:filler1}{1.2}
+
+      Here, Cl is the leaving group and \ce{OH-} is the nucleophile. From a 3D point of view, we see the following outline interaction.
+
+      \reactionfig{
+        \scheme{
+          \chemname{
+            \chemfig{
+              @{nucleophile}\textcolor{Red}{\ce{Nu-}}
+            }
+          }{\textcolor{Red}{\textit{Nucleophile}}}
+          \+
+          \chemname{
+            \chemfig{
+              [:0]@{electrophile}\textcolor{Blue}{C^{δ^+}}
+              (-[:120])
+              (<[:-100])
+              (<:[:-160])
+              -[@{bond}:0,,,,Red]@{leaving}\textcolor{Green}{X^{δ^-}}
+            }
+          }{\textcolor{Blue}{\textit{Electrophile}}---\textcolor{Green}{\textit{Leaving Group}}}
+          \arrow{->}
+          \chemfig{
+            [:0]\textcolor{Red}{Nu}
+            -[:0,,,,Red]\textcolor{Blue}{C}
+            (<[:-80])
+            (<:[:-20])
+            -[:60]
+          }
+          \+
+          \chemfig{
+            \textcolor{Green}{\ce{X-}}
+          }
+        }
+        \chemmovearrow{
+          \reactionfigarrow{nucleophile}{60}{electrophile}{180}{Red}
+          \reactionfigarrow{bond}{100}{leaving}{80}{Red}
+        }
+      }{\snt mechanism reaction}{fig:filler2}{1.0}
+
+      It is important to note that \snt reactions occur in \textbf{one step}, where bond making and breaking occur simultaneously, meaning there are no intermediates---unlike the two-step propagation of radical halogenation (\textit{\autoref{core:two_step_prop}}). Consequently, the energy diagram consists of a single hill and is exothermic when the nucleophile is a more favorable attachment than the leaving group. \textit{L is denoted as X in the figure below.}
+
+      \pgfig{
+        \begin{axis}[
+          width=7cm,
+          height=7cm,
+          xmin=-4, xmax=4,
+          ymin=-0.3, ymax=1.4,
+          xtick=\empty,
+          ytick=\empty,
+          xlabel={},
+          ylabel={},
+          axis line style={thick},
+          \axispresetsone
+        ]
+
+        % energy curve — gaussian-like hill
+        \addplot[
+            thick,
+            black,
+            domain=-1.8:1.5,
+            samples=200,
+        ] {exp(-x^2) - 0.15*x};
+
+        % reactant energy level (left)
+        \addplot[thick, black] coordinates {(-3.5, 0.30916) (-1.8, 0.30916)};
+
+        % product energy level (right) — slightly lower
+        \addplot[thick, black] coordinates {(1.5, -0.1196) (3.5, -0.1196)};
+
+        % transition state dot
+        \addplot[mark=*, mark size=2.5pt, black] coordinates {(-0.075, 1.0056)};
+
+        % transition state structure label
+        \node[cyan!70!blue, font=\small] at (axis cs:0, 1.15) {%
+            $\left[\,\text{Nuc}\cdots\text{C}\cdots\text{X}\,\right]$
+        };
+
+        % reactant label
+        \node[font=\small] at (axis cs:-2.5, 0.23) {$\text{R}{-}\text{X} + \text{Nuc:}^{-}$};
+
+        % product label
+        \node[font=\small] at (axis cs:2.8, -0.2) {$\text{R}{-}\text{Nuc} + \text{X}^{-}$};
+
+        % "single transition state" label
+        \node[cyan!70!blue, font=\small, align=center] at (axis cs:2.8, 0.75) {single\\transition\\state};
+
+        \end{axis}
+      }{\snt energy diagram}{fig:filler3}{0.8}
+
+      A result of the reaction being one step is \textbf{stereospecificity}---there is \textit{always} an inversion. A few key consequences of this are worth keeping in mind:
+
+      \begin{enumerate}
+
+        \item Inversion does not always imply a shift between the R and S configuration (\textit{\autoref{core:abs_config}})
+
+        \item Two successive \snt reactions result in structural retention (double inversion)
+
+        \item Performing \snt on only one chiral center of a molecule with two chiral centers yields a diastereoisomer (a non-mirror-image stereoisomer)
+
+        \item Starting with a \textbf{racemate} (a 50/50 mix of R and S enantiomers) will still yield a racemate, as all configurations are inverted
+          
+      \end{enumerate}
+
+      All of these points follow intuitively from the structural consequences of the \snt mechanism, though they may not be immediately obvious.
+
+    \end{core}  
+
+    Before exploring \sno reactions, it is worth establishing what defines a \textbf{"good" leaving group and nucleophile}, as this governs the outcome of both mechanisms.
+
+    \begin{core}{Leaving Group Quality}
+
+      There are two factors that determine whether a leaving group is good: \textbf{electronegativity} and \textbf{orbital size}. Regarding electronegativity, a good leaving group is also a weak base \ce{A-}---one that is stable with an extra \ce{e^-} due to its high electronegativity. Regarding orbital size, a larger orbital size element forms relatively weaker bonds, as its molecular bonding orbitals occur at higher energy levels compared to smaller elements, making it more inclined to dissociate. Together, these two factors mean that better leaving groups appear moving left to right ($\rightarrow$) and top to bottom ($\downarrow$) across the periodic table.
+
+      \pgfig{
+        \miniptable
+
+        % PT label
+        \node[font=\small] at (2.5, 1.4) {Periodic Table};
+
+        % EN > OS arrow (left to right, along top)
+        \draw[->, thick] (0.8, 3.5) -- (4.8, 3.5);
+        \node[font=\small] at (2.8, 3.8) {EN $>$ OS};
+
+        % OS > EN arrow (top to bottom, right side)
+        \draw[->, thick] (5.5, 3.2) -- (5.5, 0.2);
+        \node[font=\small] at (6.2, 1.7) {OS $>$ EN};
+      }{Leaving group ability within the periodic table}{fig:filler4}{0.9}
+
+      Comparing down the periodic table for halogens:
+      \[
+        \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
+      \]
+
+      \ce{I-} is the best leaving group due to its large orbital size and correspondingly weak bond. Notably, \ce{I-} is such a great leaving group that it does not even participate in radical halogenation, making it impractical in that context. \ce{F-}, on the other hand, has the smallest orbital size, forming much stronger bonds through lower energy orbitals, making it the poorest leaving group of the halogens.
+
+      Comparing across the periodic table (\textit{row 2}):
+      \[
+        \ce{-CH3} < \ce{-NH2} < \ce{-OH} < \ce{-F}
+      \]
+
+      Here, \ce{F-} is the best leaving group due to its greater electronegativity relative to O, N, and C, allowing it to better stabilise the extra \ce{e^-} upon departure. In practice, however, \ce{F-} remains a poor leaving group relative to the broader periodic table, \ce{HO-} is exceedingly poor, and \ce{NH2-} and \ce{CH3-} do not leave at all.
+
+      For \textbf{polyatomic} leaving groups, \textbf{resonance} (π conjugation) plays an important additional role. The ability to delocalise \ce{e^-}s across an adjacent p orbital system allows the leaving group to absorb excess charge more effectively---a larger delocalization system not only stabilises the extra charge but also weakens the leaving group's basicity, making it a better leaving group overall.
+
+      \reactionfig{
+        \scheme{
+          \chemname{
+            \chemfig{
+              \textcolor{Green}{\ce{CH3O}}\textcolor{Red}{\ce{^-}}
+            }
+          }{\textcolor{Blue}{15.5} \quad \textcolor{Green}{\textit{poor}}}
+          \qquad
+          \chemfig{
+            \text{\large<}
+          }
+          \qquad
+          \chemname{
+            \chemfig{
+              [:0,0.8,,,Green]\textcolor{Green}{\ce{CH3}}
+              -[:0]\textcolor{Green}{C}
+              (=[:90]\textcolor{Green}{O})
+              -[:0]\textcolor{Green}{O}\textcolor{Red}{\ce{^-}}
+            }
+          }{\textcolor{Blue}{4.7} \quad \textcolor{Green}{\textit{reasonable}}}
+          \qquad
+          \chemfig{
+            \text{\large<}
+          }
+          \qquad
+          \chemname{
+            \chemfig{
+              [:0,0.8,,,Green]\textcolor{Green}{\ce{CH3}}
+              -[:0]\textcolor{Green}{S}
+              (=[:90]\textcolor{Green}{O})
+              (=[:-90]\textcolor{Green}{O})
+              -[:0]\textcolor{Green}{O}\textcolor{Red}{\ce{^-}}
+            }
+          }{\textcolor{Blue}{-1.2} \quad \textcolor{Green}{\textit{excellent}}}
+        }
+      }{Polyatomic leaving groups; \textit{corresponding numbers are $pK_a$ values}}{fig:filler5}{1.0}
+
+    \end{core}
+
+    \begin{core}[label=core:nuc_quality]{Nucleophile Quality}
+
+      Nucleophilicity depends on four factors: \textbf{charge-basicity}, \textbf{basicity}, \textbf{solvation}, and \textbf{polarizability}.
+
+      \begin{enumerate}
+
+        \item \textbf{Charge-basicity} refers to the greater tendency of an anion, relative to its neutral counterpart, to form a bond with a cation in order to delocalise its net negative charge.
+        \[
+          \ce{OH-} > \ce{H2O}\qquad\qquad\ce{NH2-} > \ce{NH3}\qquad\qquad\ce{SO4^{2-}} > \ce{ROSO3-}
+        \]
+
+        \item \textbf{Basicity} refers to how readily the nucleophile donates \ce{e^-} density to the electrophile---analogous to how it would donate to \ce{H+}. As electronegativity decreases moving right to left across the periodic table, nucleophilicity increases accordingly.
+        \[
+          \ce{H3N} > \ce{H2O}\qquad\qquad\ce{H2N-} > \ce{HO-}\qquad\qquad\ce{HO-} > \ce{F-}
+        \]
+
+        \item \textbf{Solvation} refers to the ability of the surrounding solvent to impede the nucleophile's ability to attack the electrophile. In \textbf{polar protic solvents} (\textit{such as water or ethanol, which contain O-H and N-H bonds}), strong hydrogen bonds effectively "handcuff" the nucleophile. Larger nucleophiles are less susceptible to this because their diffuse \ce{e^-} clouds result in lower charge densities, weakening the solvent's grip.
+        \[
+          \ce{F-} < \ce{Cl-} < \ce{Br-} < \ce{I-}
+        \]
+
+        In \textbf{polar aprotic solvents} (\textit{polar solvents lacking O-H and N-H bonds}), hydrogen bonding is absent and the nucleophile is largely unimpeded. The trend therefore reverses to reflect intrinsic basicity.
+        \[
+          \ce{I-} < \ce{Br-} < \ce{Cl-} < \ce{F-}
+        \]
+
+        \textit{Note that \ce{F-} remains a weak base in the grand scheme---it is simply less solvated than \ce{I-} in protic solvents, and does not compare to stronger bases such as \ce{OH-} or \ce{NH2-}.}
+
+        \item \textbf{Polarizability} refers to the large, diffuse \ce{e^-} clouds of heavier elements, which allow for more effective orbital overlap in the \snt transition state.
+        \[
+          \ce{H2O} < \ce{H2S} < \ce{H2Se} \qquad\text{or}\qquad \ce{(CH3)3N} < \ce{(CH3)3P}
+        \]
+      
+      \end{enumerate}
+
+      Nucleophilicity arises from a complex interplay of these factors. At its core, it is driven by \textbf{basicity}, which governs the horizontal periodic trend---atoms become less electronegative and more willing to donate \ce{e^-} density moving left. The vertical trend, however, is governed by the solvent. In \textbf{polar protic solvents}, smaller nucleophiles such as \ce{F-} are heavily solvated, making larger, less-impeded ions like \ce{I-} the stronger attackers. In \textbf{polar aprotic solvents}, these hydrogen-bonding impediments are absent, allowing the intrinsically more basic smaller ions to reassert themselves as the stronger nucleophiles. \textbf{Polarizability} provides larger elements an additional advantage in \snt transition states, as their more diffuse \ce{e^-} clouds can begin overlapping with the electrophilic carbon's orbital from a greater distance.
+
+      \pgfig{
+
+        \miniptable
+        \node[font=\small] at (2.5, 1.4) {Periodic Table};
+
+        \draw[->, thick] (4.8, 3.5) -- (0.8, 3.5);
+        \node[font=\small] at (2.8, 3.8) {More Basic};
+
+        \draw[->, thick] (5.5, 3.2) -- (5.5, 0.2);
+        \node[font=\small, rotate=-90] at (5.8, 1.7) {protic/polarizability};
+
+        \draw[->, thick] (6.4, 0.2) -- (6.4, 3.2);
+        \node[font=\small, rotate=-90] at (6.7, 1.7) {aprotic};
+
+      }{Nucleophilic ability within the periodic table}{fig:filler6}{0.9}
+
+    \end{core}
+
+    \begin{core}{Steric Effects on Nucleophilic and Leaving Group Ability}
+      
+      \textbf{Steric effects} must be considered for both the nucleophile and leaving group. Steric effects arise from \ce{e^-} repulsion between the nucleophile or leaving group and the three substituents bonded to the target electrophile.
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]@{ho1}\ce{HO-}
+          }
+          \quad
+          \chemname{
+            \chemfig{
+              [:0]\textcolor{Blue}{\ce{CH3}}
+              -[:-60]@{carbon1}C
+              (<[:-100]H)
+              (<:[:-150]H)
+              -[:0]\textcolor{Green}{Br}
+            }
+          }{\textit{PRIMARY attack is easy}}
+          \qquad
+          \chemfig{
+            [:0]@{ho2}\ce{HO-}
+          }
+          \quad
+          \chemname{
+            \chemfig{
+              [:0]\textcolor{Blue}{\ce{CH3}}
+              -[:-60]@{carbon2}C
+              (<[:-100]\textcolor{Blue}{\ce{CH3}})
+              (<:[:-150]H)
+              -[:0]\textcolor{Green}{Br}
+            }
+          }{\textit{SECONDARY attack is possible}}
+          \qquad
+          \chemfig{
+            [:0]@{ho3}\ce{HO-}
+          }
+          \quad
+          \chemname{
+            \chemfig{
+              [:0]\textcolor{Blue}{\ce{CH3}}
+              -[:-60]@{carbon3}C
+              (<[:-100]\textcolor{Blue}{\ce{CH3}})
+              (<:[:-150]\textcolor{Blue}{\ce{CH3}})
+              -[:0]\textcolor{Green}{Br}
+            }
+          }{\textcolor{Red}{\textit{TERTIARY attack is impossible}}}
+        }
+        \chemmovearrow{
+          \reactionfigarrow{ho1}{0}{carbon1}{180}{Red}
+          \reactionfigarrow{ho2}{0}{carbon2}{180}{Red}
+        }
+      }{Steric effects in the context of \snt reactions}{fig:filler7}{0.8}
+
+      \sbs{0.5}{
+        As a consequence, \textbf{leaving groups are better when larger}, as the repulsion assists their departure, while \textbf{nucleophiles are better when smaller}, as bulk impedes their approach. This steric hindrance is greatest when substituents are directly on the electrophilic carbon (α) and diminishes with distance (β, γ, δ, etc.).
+      }{
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]
+              -[:-30]C\textcolor{Red}{\ce{^δ}}
+              (<[:-75])
+              (<:[:-105])
+              -[:30]C\textcolor{Red}{\ce{^γ}}
+              (<[:75])
+              (<:[:105])
+              -[:-30]C\textcolor{Red}{\ce{^β}}
+              (<[:-75])
+              (<:[:-105])
+              -[:30]\textcolor{Blue}{C}\textcolor{Red}{\ce{^α}}
+              (<[:75])
+              (<:[:105])
+              -[:-30,,,,Green]\textcolor{Green}{L}
+            }
+          }
+        }{Carbon branching}{fig:filler8}{0.9}
+      }
+
+      \begin{table}[H]
+      \centering
+      \begin{tabular}{ccccc}
+      \hline
+      \textbf{Branch} & \multicolumn{4}{c}{\textbf{Structure \& Relative Rate}} \\
+      \hline
+       & Hydrogens & Primary & Secondary & Tertiary \\
+      α & 145 & 1 & 0.028 & 0 \\
+      β & 1 & 0.8 & 0.05 & $10^{-5}$ \\
+      \hline
+      \end{tabular}
+      \caption{Rate of \snt reactions across different branching patterns}
+      \label{tab:filler9}
+      \end{table} 
+
+    \end{core}
+
+    \begin{core}{\sno}
+
+      \sno reactions are \textbf{unimolecular}, meaning the reaction rate is solely determined by [\ce{R-L}].
+      \[
+        \text{reaction rate} = k[\ce{R-L}]
+      \]
+
+      Unlike \snt, \sno proceeds through a series of distinct steps.
+      
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]X
+            -[:-60]C
+            (<[:-100]Z)
+            (<:[:-150]Y)
+            -[@{bond}:0]@{leaving}L
+          }
+          \arrow{->[slow][]}
+          \chemfig{
+            @{nucleophile}\ce{Nu-}
+          }
+          \+
+          \chembrackets{
+            \chemfig{
+              [:0]X
+              -[:-90]@{carbon}\pcharge{45}{C}
+              (<[:-60]Z)
+              (<:[:-120]Y)
+            }
+          }
+          \arrow{->[fast][]}
+          \chemfig{
+            [:0]X
+            -[:-60]C
+            (<[:-100]Z)
+            (<:[:-150]Y)
+            -[:0,,,,Blue]\textcolor{Blue}{Nu}
+          }
+          \+
+          \chemfig{
+            [:0]\textcolor{Red}{Nu}
+            -[:0,,,,Red]C
+            (<[:-80]Z)
+            (<:[:-30]Y)
+            -[:60]X
+          }
+        }
+        \chemmovearrow{
+          \reactionfigarrow{nucleophile}{-45}{carbon}{180}{Red}
+          \reactionfigarrow{nucleophile}{45}{carbon}{0}{Blue}
+        }
+      }{\sno mechanism}{fig:filler10}{0.8}
+
+      The first step---spontaneous dissociation of the leaving group from the electrophile---is the \textbf{rate limiting step}, as it is highly unfavourable, forming only trace amounts of carbocations at equilibrium. This makes it the bottleneck of the reaction, after which the nucleophile attacks either face of the $sp^2$-hybridised electrophile's perpendicular p orbitals.
+
+      Several important consequences follow from this mechanism.
+
+      \begin{enumerate}
+
+        \item \sno nucleophilic attack is \textbf{not stereospecific}. A stereochemically pure reactant pool will yield a mixture of stereoisomers upon \sno. In practice, \textbf{slight inversion} is observed due to the transient physical blockade created by the lingering leaving group, which remains in proximity to the carbocation p orbital through ionic attraction.
+
+        \item Because the rate is limited solely by carbocation formation, the \textbf{rate increases with a better leaving group}.
+        \[
+          \ce{-Cl} < \ce{-Br} < \ce{-I} < \ce{-O3SR}
+        \]
+
+        \sbs{0.45}{
+          \item \textbf{\sno is accelerated by increasingly polar solvents}, particularly polar protic solvents. As the leaving group begins to depart, polar solvent molecules stabilise it through hydrogen bonding, effectively lowering the energy barrier for its departure.
+        }{
+          \doublereactionfig{
+            \scheme{
+              \chemfig{
+                \ce{(CH3)3CBr}
+              }
+              \quad
+              \arrow{->[\textcolor{Red}{100\% \ce{H2O}}][]}
+              \quad
+              \chemfig{
+                \ce{(CH3)3COH}
+              }
+              \+
+              \chemfig{
+                \ce{HBr}
+              }
+              \qquad
+              \chemfig{
+                \textcolor{Red}{400,000}
+              }
+            }
+          }{
+            \scheme{
+              \chemfig{
+                \ce{(CH3)3CBr}
+              }
+              \quad
+              \qquad
+              \arrow{->[\textcolor{Blue}{90\% acetone}][\textcolor{Blue}{10\% \ce{H2O}}]}
+              \quad
+              \chemfig{
+                \ce{(CH3)3COH}
+              }
+              \+
+              \chemfig{
+                \ce{HBr}
+              }
+              \qquad
+              \chemfig{
+                \textcolor{Blue}{1}
+              }
+            }
+          }{Relative \sno reaction rates in polar solvents}{fig:filler11}{0.85}      
+        }
+
+        \item \textbf{Product-determining steps occur after the bottleneck}. Once the carbocation intermediate forms, the dominant product is determined by nucleophilic competition---the strongest nucleophile in solution will attack preferentially. Consider, for instance, a mixture of NaCl and NaI in acetone.
+
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]A
+              -[:30]\textcolor{Blue}{C}
+              (<[:-80]B)
+              (<:[:-30]C)
+              -[@{bond}:90,,,,Green]@{bromine}\textcolor{Green}{Br}
+            }
+            \arrow{->[][\textcolor{Blue}{$k_1$}]}
+            \chemfig{
+              [:0]A
+              -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+              (<:[:30]C)
+              <[:-30]B
+            }
+            \arrow(bb--xx)[45]
+            \chemfig{
+              [:0]A
+              -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+              (<:[:30]C)
+              <[:-30]B
+            }
+            \arrow{->[Na\textcolor{Red}{Cl}][acetone]}
+            \chemfig{
+              [:0]A
+              -[:30]\textcolor{Blue}{C}
+              (<[:-80]B)
+              (<:[:-30]C)
+              -[:90,,,,Red]\textcolor{Red}{Cl}
+            }
+            \qquad
+            \textcolor{Blue}{$k_1$}
+            \arrow(@bb--yy)
+            \chemfig{
+              [:0]A
+              -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+              (<:[:30]C)
+              <[:-30]B
+            }
+            \arrow{->[Na\textcolor{Red}{I}][acetone]}
+            \chemfig{
+              [:0]A
+              -[:30]\textcolor{Blue}{C}
+              (<[:-80]B)
+              (<:[:-30]C)
+              -[:90,,,,Red]\textcolor{Red}{I}
+            }
+            \qquad
+            \textcolor{Blue}{$k_1$}
+            \arrow(@bb--zz)[-45]
+            \chemfig{
+              [:0]A
+              -[:0]\textcolor{Blue}{\pcharge{90}{C}}
+              (<:[:30]C)
+              <[:-30]B
+            }
+            \arrow{->[Na\textcolor{Red}{Cl} \& Na\textcolor{Red}{I}][acetone]}
+            \chemfig{
+              [:0]A
+              -[:30]\textcolor{Blue}{C}
+              (<[:-80]B)
+              (<:[:-30]C)
+              -[:90,,,,Red]\textcolor{Red}{Cl}
+            }
+            \qquad
+            \textcolor{Blue}{$k_1$}
+          }
+          \chemmovearrow{
+            \reactionfigarrow{bond}{10}{bromine}{30}{Red}
+          }
+        }{\sno nucleophile competition; \textit{Cl is a better nucleophile than I, thus a mixture will result in the Cl product (bottom reaction)}}{fig:filler12}{0.85}
+      
+      \end{enumerate}
+
+      Here, the overall reaction rate is identical across all paths, as it depends solely on the departure of the leaving group (\textit{regardless of the nucleophile identity}). Because acetone is a polar aprotic solvent, the \ce{Cl-} product will be favored under a mixture of \ce{Cl-} and \ce{I-} because \ce{Cl-} is a stronger nucleophile than \ce{I-} is.
+
+    \end{core}
+
+    \begin{core}{Competition between \snt and \sno}
+      
+      This raises an important question---if \sno and \snt ultimately achieve the same outcome, what drives a system to favour one over the other? Two factors determine this.
+
+      \begin{enumerate}
+
+        \item α-branching disfavours \snt by sterically impeding nucleophilic approach, making it virtually impossible for a nucleophile to attack a tertiary electrophile in an \snt fashion.
+
+        \item α-branched carbocations are stabilised by hyperconjugation with neighbouring molecular orbitals, lowering the energy of the rate-limiting step and making \sno viable.
+          
+      \end{enumerate}
+
+      \[
+        \underbrace{\ce{H3C+ (methyl)} < \ce{H3CH2C+ (primary)}}_{\text{energetically inaccessible in solution}} < \underbrace{\ce{(H3C)2HC+ (secondary)} < \ce{(H3C)3C+ (tertiary)}}_{\text{only cations feasible in solution}}
+      \]
+
+      The table below summarises the conditions favouring \sno and \snt across different substrate classes. \textit{Note that secondary R substrates do not inherently favour either mechanism---the outcome depends heavily on solvent and the nature of the nucleophile and leaving group.}
+
+      \begin{center}
+        \begin{tabularx}{\textwidth}{lXX}
+          \hline
+          R & \sno & \snt \\
+          \hline
+          \ce{CH3} & \textbf{Not observed} (methyl cation too high energy) & \textbf{Frequent} (fast with good Nu/L) \\
+          Primary & \textbf{Not observed} (primary carbocation too high energy) & \textbf{Frequent} (fast with good Nu/L, slow when $\beta$ branching present) \\
+          Secondary & \textbf{Relatively slow} (best with good L in polar protic solvents) & \textbf{Relatively slow} (best with high concentrations of good Nu in polar aprotic solvents) \\
+          Tertiary & \textbf{Frequent} (particularly fast in polar, protic solvents and good L) & \textbf{Extremely slow} \\
+          \hline
+        \end{tabularx}
+      \end{center}
+
+    \end{core}
+
+  \subsection{Elimination}
+    
+    \begin{core}{Elimination} 
+
+      While substitution reactions involve replacing one group with another, \textbf{elimination} reactions involve \textbf{removal}---specifically, the loss of a leaving group and an adjacent hydrogen to form a new π bond, yielding an alkene. Like nucleophilic substitution, elimination reactions are classified into two types: E1 and E2.
+
+    \end{core}
+
+    \begin{core}{Elimination 1 (E1)}
+
+      Following carbocation formation in \sno, the nucleophile can alternatively act as a base (\ce{B-}), deprotonating a neighbouring alkyl group to yield a π bonded alkene over two distinct steps. \textit{Note that this pathway requires a neighbouring alkyl group and is therefore not possible for methane.}
+
+      \vspace{10pt}
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]H
+            -[:60]C
+            (<[:135])
+            (<:[:100])
+            -[:0]C
+            (<[:-80])
+            (<:[:-45])
+            -[@{bond}:60]@{leaving}\textcolor{Green}{L}
+          }
+          \arrow{->[][-\textcolor{Green}{\ce{L-}}]}
+          \chemfig{
+            [:0]@{hydrogen}\textcolor{Blue}{H}
+            -[:60,,,,Red]C
+            (<[:135])
+            (<:[:100])
+            -[:0]\pcharge{90}{C}
+            (<[:-30])
+            (<:[:30])
+          }
+          \arrow{->[
+            \chemfig{
+              @{base}\textcolor{Red}{\ce{B-}}
+            }
+          ][-\textcolor{Red}{B}\textcolor{Blue}{H}]}
+          \chemfig{
+            [:0]C
+            (<[:-150])
+            (<:[:150])
+            =[:0]C
+            (<[:-30])
+            (<:[:30])
+          }
+        }
+        \chemmovearrow{
+          \reactionfigarrow{bond}{150}{leaving}{100}{Red}
+          \reactionfigarrow{base}{180}{hydrogen}{-30}{Red}
+        }
+      }{E1 mechanism}{fig:filler13}{0.9}
+
+      The rate-determining step is identical to that of \sno, making E1 a first-order reaction whose rate depends solely on \ce{[R-L]}. A closer look at the deprotonation step is provided below.
+
+      \myfig{0.85}{org_chem_figures/e1_deprotonation}{E1 deprotonation}{fig:e1depro} % KEEP
+
+      Since deprotonation can occur at any neighbouring β C-H, E1 generally yields a mixture of alkenes across all possible pathways. Rotation around the resulting π bond gives rise to different stereoisomers.
+
+      \triplereactionfig{
+        \scheme{
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            (-[:-120,,,,Red]\textcolor{Green}{Cl})
+            (-[:-60]\ce{CH3})
+            -[:30]
+            -[:-30]
+          }
+          \arrow{->[\ce{CH3}\textcolor{Red}{O}H][-\textcolor{Green}{\ce{Cl-}}]}
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]\textcolor{Blue}{C}
+            -[:-30]\pcharge{90}{}
+            (-[:-90]\textcolor{Blue}{C})
+            -[:30]\textcolor{Blue}{C}
+            -[:-30]
+          }
+          \arrow{->[\ce{CH3}\textcolor{Red}{O}H][
+            \scriptsize\chemfig{
+              [:0]\ce{H3C}
+              -[:0]\pcharge{120}{O}
+              (-[:30,,,,Red]\textcolor{Blue}{H})
+              -[:-30]H
+            }
+          ]}
+        }
+      }{
+        \scheme{
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            (=[:-90])
+            -[:30]
+            -[:-30]
+          }
+          \+
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            (-[:-90])
+            =[:30]
+            -[:90]
+          }
+          \+
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            -[:-30]
+            (-[:-90])
+            =[:30]
+            -[:-30]
+          }
+        }
+      }{
+        \scheme{
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            =[:-30]
+            (
+            -[:-90]
+            -[:-30]
+            )
+            -[:30]
+          }
+          \+
+          \chemfig{
+            [:0]
+            -[:-30]
+            -[:30]
+            =[:-30]
+            (-[:-90])
+            -[:30]
+            -[:-30]
+          }
+        }
+      }{E1 regioisomeric distribution attributable to alternative deprotonation mechanisms}{fig:filler14}{0.9}
+
+      Crucially, \sno and E1 share the exact same rate-determining step---spontaneous departure of the leaving group to form a carbocation. Since the leaving group has already departed by the time the carbocation partitions between substitution and elimination, the \textbf{\sno to E1 product ratio is independent of L}.
+
+      The ratio between E1 and \sno products is difficult to predict precisely, but E1 is generally favoured under two conditions.
+
+      \begin{enumerate}
+
+        \item \textbf{Higher temperature}, as elimination carries a positive entropy change: \ce{HRL + B -> R + L + BH}.
+
+        \item A \textbf{poor nucleophile}, as \sno requires the reagent to form a new C-Nu bond, demanding greater nucleophilic strength. E1 is less sensitive to this since the reagent acts purely as a base, abstracting a surface \ce{H+} rather than integrating into the molecular framework.
+          
+      \end{enumerate}
+
+      But what about \textbf{strong bases}?
+
+    \end{core}
+
+    \begin{core}{Elimination 2 (E2)}
+
+      Strong bases attack \ce{R-L} \textbf{directly} at the β C-H, constituting the E2 mechanism. E2 is faster than \sno/E1 and faster than \snt when sterically hindered by α or β branching, as it condenses the distinct steps of E1 into a single concerted process.
+
+      \myfig{0.9}{org_chem_figures/e2_ts}{E2 transition state}{fig:e2ts} % KEEP
+
+      Unlike E1, E2 is \textbf{second order} because the transition state involves both the substrate and the base.
+      \[
+        Rate = k[\ce{R-L}][\ce{B-}]
+      \]
+
+      Consequently, a better leaving group and a stronger base both accelerate the reaction.
+      \[
+        \ce{RCl} < \ce{RBr} < \ce{RI}
+      \]
+
+      Additionally, electron-withdrawing substituents within the substrate accelerate E2 by increasing the acidity of the target β C-H through withdrawal of its \ce{e^-} density.
+
+      \reactionfig{
+        \scheme{
+          \text{the EN from F makes \textcolor{Blue}{H} more acidic}
+          \qquad
+          \chemfig{
+            [:0]\textcolor{Blue}{\ce{H^{\textcolor{Red}{δ-}}}}
+            -[:-60]C
+            (<[:-100]\ce{F^{\textcolor{Red}{δ-}}})
+            (<:[:-150]\ce{F^{\textcolor{Red}{δ-}}})
+            -[:0]C
+            (<:[:80]R)
+            (<[:30]R)
+            -[:-60]\textcolor{Green}{Br}
+          }
+        }
+      }{E2 hydrogen acidity amplification}{fig:filler15}{0.9}
+
+      E2 is also \textbf{stereospecific}---a given diastereomer of \ce{R-L} yields only one stereoisomer of the alkene product. For instance, an RR/SS mixture yields exclusively one product, while an RS/SR mixture yields exclusively another.
+
+      \doublereactionfig{
+        \scheme{
+          \raisebox{1cm}{
+            \chemfig{
+              [:0]\textcolor{Blue}{H}
+              -[:-60]
+              (<[:-100])
+              (
+              <:[:-150,,,,Red]
+              -[:150,,,,Red]
+              )
+              -[:0]
+              (<[:30,,,,Red])
+              (<:[:80]H)
+              -[:-60]\textcolor{Green}{Br}
+            }
+          }
+          \quad
+          \text{OR}
+          \quad
+          \raisebox{-1cm}{
+            \chemfig{
+              [:0]\textcolor{Blue}{H}
+              -[:60]
+              (<[:100])
+              (
+              <:[:150,,,,Red]
+              -[:-150,,,,Red]
+              )
+              -[:0]
+              (<:[:-80]H)
+              (<[:-30,,,,Red])
+              -[:60]\textcolor{Green}{Br}
+            }
+          }
+          \arrow{->[Base][-\textcolor{Blue}{H}\textcolor{Green}{Br}]}
+          \chemfig{
+            [:0]
+            (
+            <:[:150,,,,Red]
+            -[:180,,,,Red]
+            )
+            (<[:-150])
+            =[:0]
+            (<:[:30]H)
+            (<[:-30,,,,Red])
+          }
+        }
+      }{
+        \scheme{
+          \raisebox{1cm}{
+            \chemfig{
+              [:0]\textcolor{Blue}{H}
+              -[:-60]
+              (<:[:-150])
+              (
+              <[:-100,,,,Red]
+              -[:-150,,,,Red]
+              )
+              -[:0]
+              (<[:30,,,,Red])
+              (<:[:80]H)
+              -[:-60]\textcolor{Green}{Br}
+            }
+          }
+          \quad
+          \text{OR}
+          \quad
+          \raisebox{-1cm}{
+            \chemfig{
+              [:0]\textcolor{Blue}{H}
+              -[:60]
+              (<:[:150])
+              (
+              <[:100,,,,Red]
+              -[:150,,,,Red]
+              )
+              -[:0]
+              (<:[:-80]H)
+              (<[:-30,,,,Red])
+              -[:60]\textcolor{Green}{Br}
+            }
+          }
+          \arrow{->[Base][-\textcolor{Blue}{H}\textcolor{Green}{Br}]}
+          \chemfig{
+            [:0]
+            (
+            <[:-150,,,,Red]
+            -[:180,,,,Red]
+            )
+            (<:[:150])
+            =[:0]
+            (<:[:30]H)
+            (<[:-30,,,,Red])
+          }
+        }
+      }{Stereospecific E2 outcomes; \textit{RR (top left), SS (top right), SR (bottom left), RS (bottom right)}}{fig:filler16}{0.8}
+
+      This stereospecificity arises because \ce{H+} and L depart simultaneously, requiring their initial positions to be coplanar to permit proper p orbital alignment in the forming $\pi$ bond. This coplanarity can be achieved through either \textbf{anti}-periplanar (\textit{trans}) or \textbf{syn}-periplanar (\textit{cis}) geometry. When the relevant C-C bond can rotate freely, anti-periplanar geometry is strongly preferred as it minimises steric repulsion between the leaving group and the \ce{H-B} transition complex.
+
+      In cases where free rotation is restricted---such as in cycloalkanes---syn-periplanar geometry must be adopted instead. This proceeds at a slower rate due to the increased steric hindrance between the leaving group and the \ce{H-B} transition complex. 
+
+      \doublereactionfig{
+        \scheme{
+          \chemfig{
+            *4(-
+            (<[:-10]\ce{CH3})
+            (<:[:-40,,,,Blue]\textcolor{Blue}{H})
+            -
+            (<[:10,,,,Green]\textcolor{Green}{Br})
+            (<:[:40]H)
+            --)
+          }
+          \arrow{->[\textcolor{Purple}{anti E2}][\textcolor{Red}{fast}]}
+          \chemfig{
+            *4(-
+            (-[:-45]\ce{CH3})
+            =--)
+          }
+        }
+      }{
+        \scheme{
+          \chemfig{
+            *4(-
+            (<[:-10,,,,Blue]\textcolor{Blue}{H})
+            (<:[:-40]\ce{CH3})
+            -
+            (<[:10,,,,Green]\textcolor{Green}{Br})
+            (<:[:40]H)
+            --)
+          }
+          \arrow{->[\textcolor{Purple}{syn E2}][\textcolor{Red}{slow}]}
+          \chemfig{
+            *4(-
+            (-[:-45]\ce{CH3})
+            =--)
+          }
+        }
+      }{Anti and syn-periplaner E2 reaction rates}{fig:filler18}{0.9}
+
+    \end{core}
+    
+  \subsection{Competition}
+
+    Having established the mechanics and characteristics of \snt, \sno, E1, and E2 reactions, it is important to recognise that all four pathways can be simultaneously possible across many overlapping conditions---and thus compete with one another in a given reaction environment. The table below organises these competing factors.
+
+    \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{lXXXX}
+    \hline
+    \textbf{Type of haloalkane} & \textbf{Poor Nu (e.g. \ce{H2O})} & \textbf{Weakly basic, good Nu} & \textbf{Strongly basic, unhindered Nu} & \textbf{Strongly basic, hindered Nu} \\
+    \hline
+    Methyl & N/A & S$_N$2 & S$_N$2 & S$_N$2 \\
+    Primary & & & & \\
+    \quad Unhindered & N/A & S$_N$2 & S$_N$2 & E2 \\
+    \quad Branched & N/A & S$_N$2 & E2 & E2 \\
+    Secondary & Slow S$_N$1, E1 & S$_N$2 & E2 & E2 \\
+    Tertiary & S$_N$1, E1 & S$_N$1 & E2 & E2 \\
+    \end{tabularx}
+    \end{table}
+
+    \begin{core}{Factors of Competition between \snt, \sno, E1, and E2}
+
+      Three core factors govern the competition between substitution and elimination.
+
+      \begin{enumerate}
+
+        \item The base strength of the nucleophile
+
+        \item Steric hindrance around the reacting carbon
+
+        \item Steric hindrance around the nucleophile, particularly when it is a strong base
+          
+      \end{enumerate}
+
+      \textbf{Primary substrates:} Under poor nucleophile conditions, neither E1 nor \sno are viable due to insufficient hyperconjugation to sustain a carbocation, and neither \snt nor E2 proceed effectively as both depend on nucleophile strength. Moving from weakly basic to strongly hindered nucleophile conditions, the dominant factor becomes steric hindrance---whether along the haloalkane itself via β branching, or around the nucleophile through size or solvation in protic solvents. As hindrance increases, E2 is progressively favoured over \snt.
+
+      \textbf{Secondary substrates:} Hyperconjugation is sufficient to support carbocation formation, making \sno and E1 viable under poor nucleophile conditions. E1 tends to dominate over \sno here, as abstracting a β \ce{H+} is less demanding than integrating a nucleophile into the molecular framework. For stronger nucleophile conditions, the inherent steric hindrance of the secondary substrate generally drives the system toward E2, though \snt remains competitive when the nucleophile is weakly basic---insufficiently basic to abstract the β \ce{H+} required by the E2 transition state.
+
+      \textbf{Tertiary substrates:} Steric hindrance completely shuts down \snt, making \sno dominant under weakly basic, good nucleophile conditions. E2 dominates under strongly basic conditions, as it does for secondary substrates. Under poor nucleophile conditions, the \sno to E1 ratio becomes more balanced relative to secondary substrates---the greater stability of the tertiary carbocation lowers the activation energy for \sno, allowing it to compete more effectively with E1.
+
+      Generally speaking, rather than memorizing each of these scenarios and their corresponding dominant mechanism, it's helpful to use \snt as a starting point and ask yourself the following questions.
+
+      \begin{enumerate}
+
+        \item Is the nucleophile or haloalkane hindered? \textit{If yes, the \snt reaction is likely not favored.}
+
+        \item Is the nucleophile strongly basic? \textit{If yes, E2. If no, \sno/E1.}
+          
+      \end{enumerate}
+
+      However, keep in mind that there are other nuanced factors to consider such as absence of E1 preference for weakly basic, good nucleophile conditions.
+
+    \end{core}
+
+\section{Conformational Analysis}
+
+  \subsection{Rotamers}
+
+    \begin{core}{Rotamers}
+   
+      \textbf{Rotamers}, or rotational isomers, represent a specific class of conformational isomers characterized by distinct spatial arrangements arising exclusively from rotation about single ($\sigma$) bonds. Consistent with the fundamental principle established throughout \href{../thermodynamics/thermodynamics.pdf}{Thermodynamics}---that matter adopts configurations minimizing potential energy (PE)---molecular conformations similarly favor energetically favorable arrangements.
+
+    \end{core}
+
+    \begin{core}[label=core:rotamer_ethane]{Rotamer Example (\textit{Ethane \& Propane})}
+        
+      The conformational behavior of ethane can be effectively visualized through \textbf{Newman projections}, which reveal distinct rotameric states.
+
+      \myfig{0.66}{org_chem_figures/ethane_rotamer1}{Newman projections of ethane}{fig:fig1}
+
+      Rotation about the C--C $\sigma$ bond generates two principal conformations: \textbf{eclipsed} and \textbf{staggered}. The staggered conformation represents the global energy minimum due to minimized \ce{e^-}--\ce{e^-} repulsions between C--H $\sigma$ bonds. Conversely, the eclipsed conformation constitutes a local energy maximum, characterized by maximized \ce{e^-}--\ce{e^-} repulsions between adjacent C--H bonds. The PE profile for complete rotation about the C--C $\sigma$ bond is depicted below.
+
+      \myfig{0.65}{org_chem_figures/ethane_rotamer2}{Potential energy diagram of ethane Newman projections}{fig:fig2} 
+      
+      The barrier to rotation ($3.0\,\text{kcal}\,\text{mol}^{-1}$) represents the activation energy ($E_a$) required for interconversion between staggered and eclipsed conformations. Notably, all staggered conformations of ethane are energetically degenerate, resulting in no net energy change upon rotation---the process is neither endothermic nor exothermic. This general pattern persists in propane, with a predictable modification.
+
+      \myfig{0.7}{org_chem_figures/propane_rotamer1}{Potential energy diagram of propane Newman projections}{fig:fig3}
+            
+      The rotational barrier in propane increases to $3.4\,\text{kcal}\,\text{mol}^{-1}$, reflecting the enhanced \ce{e^-} density of the methyl substituent relative to hydrogen in ethane. This increase in electron density amplifies \ce{e^-}--\ce{e^-} repulsive interactions, thereby elevating the energy barrier.
+
+    \end{core}
+
+    \begin{core}{Rotamer Example (\textit{Butane})}
+        
+      Butane exhibits a more complex conformational landscape due to the presence of two methyl groups.
+
+      \myfig{0.6}{org_chem_figures/butane_rotamer1}{Newman projections of butane}{fig:fig4}
+       
+      Applying principles derived from propane's conformational analysis, the \textbf{anti} staggered conformation achieves maximum stability by positioning methyl groups at the greatest possible separation ($\theta = 180^{\circ}$). The \textbf{gauche} staggered conformation ($\theta = 60^{\circ}, 300^{\circ}$) represents the next most stable arrangement. Among eclipsed conformations, the fully eclipsed state ($\theta = 0^{\circ}$) exhibits minimum stability due to direct overlap of electron-dense methyl groups, while the half-eclipsed conformation ($\theta = 120^{\circ}, 240^{\circ}$) shows intermediate instability.
+
+      \myfig{0.75}{org_chem_figures/butane_rotamer2}{Potential energy diagram of butane Newman projections}{fig:fig5}
+
+    \end{core}
+
+    \begin{core}{Stereoisomeric Nomenclature}
+
+      \textbf{Stereoisomers} are molecules with identical connectivity but differing three-dimensional spatial arrangements. This broad classification encompasses the following two categories.
+
+      \begin{enumerate}
+
+        \item \textbf{Conformational isomers} arise from bond rotations that occur freely at room temperature, with rotamers serving as the archetypal example. These isomers interconvert rapidly without bond cleavage.
+
+        \item \textbf{Configurational isomers}, in contrast, possess permanent stereochemical arrangements that can only be altered through bond-breaking and bond-forming processes. This category includes geometric isomers (\textit{cis/trans}) and enantiomers (\textit{R/S designations}).
+
+      \end{enumerate}
+        
+    \end{core}
+
+  \subsection{Cycloalkane \& Ring Strain}
+
+    \begin{core}{Cycloalkane Ring Strain}
+   
+      \textbf{Cycloalkanes} exhibit ring strain (\textit{or elevated potential energy}) arising from the following three factors.
+
+        \begin{enumerate}
+
+          \item \textbf{Bond angle strain}, particularly pronounced in smaller rings. Carbon atoms preferentially adopt $sp^3$ hybridization with ideal tetrahedral bond angles of $109.5^{\circ}$. However, geometric constraints imposed by ring closure force deviations from this optimal geometry. 
+
+          \textit{For instance, cyclopropane exhibits internal bond angles of approximately $60^{\circ}$, representing a $49.5^{\circ}$ compression from the ideal value. This substantial angular distortion destabilizes the molecule by increasing orbital overlap inefficiency and raising the overall potential energy.}
+
+          \item \textbf{Eclipsing strain} results from unfavorable torsional interactions between adjacent C--H bonds. As seen in \autoref{core:rotamer_ethane}, eclipsed conformations maximize \ce{e^-}--\ce{e^-} repulsions between proximal $\sigma$ bonds, elevating potential energy relative to staggered arrangements.
+
+          \item \textbf{Transannular strain} is characterized by steric repulsions between atoms positioned across the ring interior. This strain component becomes significant in medium-sized rings (C$_8$--C$_{11}$) where the ring cavity is sufficiently small that non-bonded atoms on opposite sides of the ring approach at shorter distances.
+
+        \end{enumerate} 
+        
+        These strain factors collectively drive cycloalkanes to adopt \textbf{non-planar conformations} that deviate from the intuitively expected flat ring geometry.
+
+        \myfig{1}{org_chem_figures/ring_arrangements}{Non-planar cycloalkane conformations}{fig:fig8}
+
+    \end{core}
+
+    \begin{core}{Cyclohexane Conformational Analysis}
+   
+      \textbf{Cyclohexane} preferentially adopts the chair conformation (\textit{\autoref{fig:fig9}}) as its global energy minimum primarily due to the following reasons.
+
+      \myfig{0.5}{org_chem_figures/cyclohexane_chair}{Cyclohexane chair conformation}{fig:fig9}
+
+      \begin{enumerate}
+
+        \item \textbf{Minimization of eclipsing strain:} The chair conformation's stability comes from the staggered orientation observed along all C--C bonds. Newman projection analysis reveals that each C--C bond maintains a \textbf{staggered} arrangement, thereby eliminating the eclipsing strain felt in planar conformations.
+
+        \myfig{0.6}{org_chem_figures/cyclohexane_newman}{Newman projection analysis of cyclohexane}{fig:fig10}
+         
+        \item \textbf{Minimization of transannular strain:} The chair conformation additionally minimizes steric interactions across the ring. In contrast, the \textbf{boat conformation} (\textit{\autoref{fig:fig13}}) suffers from both heightened transannular strain and increased eclipsing strain.
+
+      \end{enumerate} 
+       
+      As a result, the boat conformation represents instead a \textbf{transition state} in cyclohexane ring inversion and consequently possesses negligible presence at equilibrium. On the other hand, the \textbf{twist (skew) boat conformation}---a geometrically relaxed intermediate---exhibits lower energy while retaining higher energy than the chair form (\textit{\autoref{fig:fig13}}).
+
+      \myfig{0.7}{org_chem_figures/twist_boat_transition}{Cyclohexane twist (skew) boat conformation}{fig:fig12}
+       
+      Similarly to the boat conformation, the \textbf{half-chair conformation}---an additional high-energy transition state---arises from analogous strain considerations during the chair-to-chair interconversion pathway as shown in \autoref{fig:fig13}.
+
+      \myfig{0.8}{org_chem_figures/cyclohexane_pe}{Cyclohexane conformation potential energy diagram}{fig:fig13}
+              
+    \end{core}
+
+    \begin{core}{Monosubstituted Cyclohexanes}
+
+      Whereas unsubstituted cyclohexane exhibits energetic degeneracy between chair conformations, monosubstituted derivatives (\textit{e.g., methylcyclohexane}) demonstrate conformational preference driven by differential transannular strain.
+
+      \myfig{0.65}{org_chem_figures/methylcyclohexane}{Methylcyclohexane chair conformations}{fig:fig14}
+       
+      Specifically, the \textbf{equatorial} methyl conformer predominates over the \textbf{axial} methyl conformer due to reduced 1,3-diaxial interactions as shown in \autoref{fig:fig14}.
+
+    \end{core}
+
+    \begin{core}{Axial vs Equatorial}
+
+      \sbs{0.6}{
+        Cyclohexane substituents occupy one of two geometrically distinct positions, each with characteristic spatial orientations and steric consequences.
+
+        \begin{enumerate}
+
+          \item \textbf{Axial} bonds orient perpendicular to the approximate plane of the cyclohexane ring, extending parallel to the ring's pseudo-axis.
+
+          \item \textbf{Equatorial} bonds, on the other hand, radiate outward approximately within the ring's equatorial plane, directed toward the ring periphery.
+
+        \end{enumerate}
+      }{
+        \myfig{0.7}{org_chem_figures/eq_ax}{Axial (A) and equatorial (E) bonds within cyclohexane}{fig:fig15}
+      }
+        
+    \end{core}
+
+\section{Nomenclature}
+
+  \subsection{Alkanes, Alkenes, and Alkynes}
+
+    \subsubsection{Alkanes}
+      \label{sec:alkane}
+
+      \begin{core}{Alkanes}
+
+        Alkanes are the simplest form of hydrocarbons---compounds composed entirely of C and H atoms in a linear, single-bond chain. Their names are based on the number of carbon atoms in the chain. For instance, the simplest form is methane (\ce{CH4}), then ethane (\ce{C2H6}), and etc. The chemical formula of an alkanes follows a pattern and is expressed as \ce{C_{n}H_{2n+2}}.
+
+        \begin{center}
+          \begin{tabular}{cc}
+            \hline
+            Carbon Count & Alkane Name \\
+            \hline
+            1 & Methane \\
+            2 & Ethane \\
+            3 & Propane \\
+            4 & Butane \\
+            5 & Pentane \\
+            6 & Hexane \\
+            7 & Heptane \\
+            8 & Octane \\
+            9 & Nonane \\
+            10 & Decane \\
+            11 & Undecane \\
+            12 & Dodecane \\
+            13 & Tridecane \\
+            14 & Tetradecane \\
+            \hline
+          \end{tabular}
+        \end{center}
+
+      \end{core}
+
+      \begin{core}{Alkyl Substituents}
+
+        An alkyl substituent is essentially its cooresponding alkane with one H removed at the end. Its chemical formula is expressed as \ce{C_{n-1}H_{2n+1}}, and its naming scheme is identical to that of alkanes except that the end "-ane" is replaced with "-yl" (e.g. ethyl (\ce{C2H5})). Propyl is shown as an example below.
+
+        \myfig{0.25}{org_chem_figures/propyl}{Propyl Substituent}{fig:propyl}
+        
+      \end{core}
+
+      \begin{core}{Alkane IUPAC System}
+
+        When naming organic molecules, chemists follow a standardized nomenclature system made by the \textbf{International Union of Pure and Applied Chemistry (IUPAC)}. The process of naming an organic molecule is done in the following steps.
+
+        (1) Find the longest alkane chain (stem) and name it based on its number of carbon atoms as we have done above. When there are two \textbf{equal longest} chains, choose the one with \textbf{more substituents}.
+
+        \myfig{0.7}{org_chem_figures/iupac_1}{Longest Chain Selection}{fig:iupac_1}
+
+        In the example above, the longest chain has 6 carbons, thus we name it \textbf{hexane}. Recognize that the left chain has more substituents than the right chain, thus the left chain is chosen in the context of naming.
+
+        (2) Name the substituents as either \textbf{alkyl} (ethyl, propyl, butyl, etc.) or \textbf{halo} (bromo, fluoro, chloro, iodo). We will refer to substituents as \textit{R} in this section.
+
+        (2a) For a \textbf{straight chain R}, we simply name the R as we have defined in (2).
+
+        \myfig{0.3}{org_chem_figures/iupac_2a}{Straight Chain Substituent}{fig:iupac_2a}
+
+        (2B) For a \textbf{branched chain R}, we again find the longest chain within R and also name the substituents of this chain within R. 
+
+        \myfig{0.35}{org_chem_figures/iupac_2b}{Branched Chain Substituent}{fig:iupac_2b}
+
+        The branched R group above would be named methylpropyl.
+
+        (2c) When we face multiple of the same substituents, we simply use the prefixes di-, tri-, tetra-, etc. for straight chain R groups and bis-, tris-, tetrakis-, etc. for branched chain R groups.
+
+        Here is an example of naming multiple straight chain R groups.
+        
+        \myfig{0.45}{org_chem_figures/iupac_2ca}{Multiple Straight Chain Substituents}{fig:iupac_2ca}
+        
+        Here is an example of naming multiple branched chain R groups.
+
+        \myfig{0.45}{org_chem_figures/iupac_2cb}{Multiple Branched Chain Substituents}{fig:iupac_2cb}
+
+        (2d) Although there is a systematic name for every type of alkyl substituent, there are some colloquially used names for certain alkyl substituents that can only be learned through memorization.
+
+        \myfig{0.5}{org_chem_figures/iupac_2d}{Common Alkyl Substituent Names}{fig:iupac_2d}
+
+        (3) Now we have to number the carbons along the stem alkane in order to express the positions of the substituents. The numbering scheme starts from the end that is \textbf{closest to a substituent}.
+        
+        \myfig{0.5}{org_chem_figures/iupac_3a}{Numbering Closest to Substituent}{fig:iupac_3a}
+        
+        It both ends are equidistant to the first substituent, proceed until the \textbf{first point of difference}.
+        
+        \myfig{0.35}{org_chem_figures/iupac_3b}{First Point of Difference Rule}{fig:iupac_3b}
+        
+        And if the positioning of the substituents are exactly the same, the numbering begins in the end where the first substituent's name is \textbf{alphabetically first}.
+
+        \myfig{0.35}{org_chem_figures/iupac_3c}{Alphabetical Numbering Rule}{fig:iupac_3c}
+
+        As you can see above, the positioning of the substituents are identical from both ends, however ethyl comes alphabetically first relative to methyl, thus the numbering starts from the right end. 
+
+        This same numbering scheme is used in numbering the stem of a branched chain R group. However, we always start from the carbon of attachment in this case. 
+
+        \myfig{0.3}{org_chem_figures/iupac_3d}{Branched Chain Numbering}{fig:iupac_3d}
+
+        (4) Now that we have determined the names and positions of the substituents, we can name the alkane. Keep in mind that we order the substituent names \textbf{alphabetically} (not numerically). The locations are given by a number prefix coorespondingly.
+
+        \myfig{0.4}{org_chem_figures/iupac_4a}{Alphabetical Ordering of Substituents}{fig:iupac_4a}
+
+        Also keep in mind that the alphabetical order contribution of prefixes di-, tri-, bis-, etc. are \textbf{not counted} for the main stem R groups, but \textbf{are counted} when in branched R groups.
+
+        \myfig{0.75}{org_chem_figures/iupac_4b}{Alphabetical Counting of Prefixes}{fig:iupac_4b}
+
+      \end{core}
+
+      \begin{core}{Alkane IUPAC Example}
+
+        Let's take a look at one final large example.
+
+        \myfig{0.6}{org_chem_figures/iupac_final}{Complex Nomenclature Example}{fig:iupac_final}
+
+        The name of the compound above would be the following:
+        \[
+          \text{12-bromo-3-ethyl-6-iodo-5,13-dimethyl-8-(2-methylpentyl)-14-(2-methylpropyl)octadecane}
+        \]
+
+      \end{core}
+
+    \subsubsection{Alkenes}
+
+      content
+
+    \subsubsection{Alkynes}
+
+      content
+
+    \subsubsection{Cycloalkanes}
+
+      \begin{core}{Cycloalkanes}
+
+        Cycloalkanes are alkane rings that are named according to the number of carbons with a "cyclo-" prefix.
+
+        \myfig{0.45}{org_chem_figures/cycloalkanes}{Cycloalkane Examples}{fig:cycloalkanes}
+
+        \textit{In order to understand this section, pleaes make sure to understand \autoref{sec:alkane}}
+
+      \end{core}
+
+      \begin{core}{Cycloalkane vs Alkane Stem}
+
+        Within a compound that contains both a cycloalkane and a chain alkane, the stem alkane is still chosen as the one with the most carbons. 
+
+        \myfig{0.5}{org_chem_figures/iupac_ca}{Cycloalkane as Substituent}{fig:iupac_ca}
+
+        For instance the compound above would be called \textbf{1-cyclopentylhexane}.
+
+        Under the case of a cycloalkane having more carbons than the chain alkane, the stem is the cycloalkane.
+
+        \myfig{0.4}{org_chem_figures/iupac_cb}{Chain Alkane as Substituent}{fig:iupac_cb}
+
+        The compound above would be called \textbf{propylcyclopentane}. Notice that we do not need a number prefix for the propyl because there is only one substituent to the stem cycloalkane and the numbering of cycloalkane carbons would be arbitrary in this case.
+
+      \end{core}
+
+      \begin{core}{Cycloalkane Substituents}
+
+        When there are multiple substituents to the cycloalkane, we (1) number the carbons in a way that requires the lowest digit sequence and (2) name the substituents alphabetically in the compound name.
+
+        \myfig{0.7}{org_chem_figures/iupac_cc}{Multiple Substituents on Cycloalkane}{fig:iupac_cc}
+
+        In a scenario where multiple cycloalkanes are present in a compound, the smaller unit is substituent to the larger. Below is an example of \textbf{cyclopentylcyclohexane}.
+
+        \myfig{0.25}{org_chem_figures/iupac_cd}{Nested Cycloalkanes}{fig:iupac_cd}
+
+      \end{core}
+
+  \subsection{Alcohol}
+
+    \begin{core}{Alcohol}
+
+      \textbf{Alcohols} are a fundamental class of compounds characterized by the presence of one or more hydroxyl (\ce{-OH}) groups attached to a carbon atom.
+
+    \end{core}
+
+    \begin{core}{Alcohol IUPAC System}
+
+      Naming alcohol is done through the following steps.
+
+      (1) Find the longest chain \textbf{containing} the \ce{-OH} group and switch the suffix of alkan\textbf{e} to alkan\textbf{ol}. When there are multiple \ce{-OH} groups, the the suffix -ol becomes -diol, triol, etc. \textit{Mind that the chosen chain may not be the longest chain in the molecule.}
+
+      (2) Number from the end \textbf{closest} to the \ce{-OH} group.
+
+      (3) Follow the rest of the naming conventions in alkanes.
+
+    \end{core}
+
+    \begin{core}{Alcohol IUPAC Example}
+
+      Here are some examples of alcohol names using the nomenclature steps above.
+
+      \myfig{0.6}{org_chem_figures/alc_nomenclature}{Alcohol Nomenclature Examples}{fig:alc_nomenclature}
+
+    \end{core}
+
+    \begin{core}{Cycloalkanols}
+
+      Cyclic alcohols are called \textbf{cycloalkanols} and follow the same nomenclature system as cycloalkanes. 
+
+      \myfig{0.6}{org_chem_figures/cycloalkanes2}{Cycloalkanol Nomenclature Examples}{fig:cycloalkanol_nomenclature}
+
+      The names of the cycloalkanols above are 
+      \[
+          \text{cyclohexan-1-ol}\qquad\text{cis-3-methyl-cyclohexan-1-ol}\qquad\text{1-ethyl-cyclopentan-1-ol}
+      \]
+
+    \end{core}
+
+    \begin{core}{Alcohol Substituents}
+
+      Also, in cases where \ce{-OH} or \ce{-OR} groups are defined as substituents, they are called hydroxy- and alkoxy-, respectively. \textit{This is analogous to alkanes being called alkyl-.}
+
+    \end{core}
+
+    \begin{core}{Primary, Secondary, and Tertiary Alcohols}
+
+      Just like we have learned about primary, secondary, and tertiary halogen reactions, we also use the same system to define alcohol molecules as well.
+
+      \myfig{0.65}{org_chem_figures/pst_alcohols}{Primary, Secondary, and Tertiary Alcohols}{fig:pst_alcohols}
+
+    \end{core}
+
+  \subsection{Ethers}
+
+    \begin{core}{Ethers}
+
+      define ethers briefly here
+
+    \end{core}
+
+    \begin{core}{Ether IUPAC System}
+
+      In the context of nomenclature, the larger group is defined as the stem and other half is called an alkoxy substituent. Take a look at the following compounds.
+
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]\ce{H3C}
+            -[:30]
+            -[:-30]
+            -[:30]\textcolor{Red}{O}
+            -[:-30]
+            -[:30]\ce{CH3}
+          }
+          \qquad\qquad
+          \chemfig{
+            [:30]*6(-----
+            (
+            -[:180]\textcolor{Red}{O}
+            -[:120]
+            -[:180]
+            (-[:120]\ce{H3C})
+            -[:-135]
+            -[:180]\ce{H3C}
+            )
+            -)
+          }
+        }
+      }{Ether nomenclature examples}{filler2}{0.8}
+
+      The respective names of each compound are the following
+
+      \[
+        \text{1-Ethoxypropane}\qquad\qquad\text{(2-Methylbutoxy)cyclohexane}
+      \]
+
+    \end{core}
+
+  \subsection{Thiols}
+
+    \begin{core}{Thiols}
+
+      The sulfur analogs of ROH are called alkane \textbf{thiols}. 
+
+      % a brief definition of thiols
+
+    \end{core}
+
+    \begin{core}{Sulfur IUPAC Nomenclature}
+
+      \myfig{0.4}{org_chem_figures/sulfur_nomenclature1}{sulfer nomenclature 1}{fig:sulfur_nomenclature1}
+
+      The respective names of the above compounds are
+      \[
+        \text{methanethiol}\qquad\qquad\text{2-methyl-1-butanthiol}
+      \]
+
+      As substituients, sulfurs are called either mercapto (\ce{-SH}) or alkylthio (\ce{-SR}) groups. Keep in mind that the \ce{-OH} has priority over the \ce{-SH} when both are present in the same molecule.
+
+      \myfig{0.6}{org_chem_figures/sulfur_nomenclature2}{sulfer nomenclature 2}{fig:sulfur_nomenclature2}
+
+      The respective names of the above compounds are
+      \[
+        \text{2-mercaptoethan-1-ol}\qquad\qquad\text{methylthioethane}
+      \]
+
+    \end{core}
+
+  \subsection{Isomer Configurations}
+
+    \subsubsection{Cis \& Trans}
+
+      \begin{core}{Cis \& Trans}
+
+        Now we introduce \textbf{stereoisomers}, which are molecules that have the same molecular formula and the same sequence of bonded atoms (constitution), but differ in the 3D orientation of those atoms in space. In cycloalkanes, we have two sides: "up" and "down". With two (or more) substituents, we define substituents bonding towards the same side as \textbf{cis} and opposite sides as \textbf{trans}.
+
+        \myfig{0.7}{org_chem_figures/cis_trans}{Cis and Trans Isomers}{fig:cis_trans}
+
+        Pointing away from you (below the plane of the ring) is represented by \textbf{dashes} and pointing towards you (above the plane of the ring) is represented by \textbf{wedges} as shown above.
+
+      \end{core}
+
+    \subsubsection{Absolute Configuration: The Gold Standard}
+
+      \begin{core}[label=core:abs_config]{Absolute Configuration}
+
+        While the cis and trans system is convienent and sufficient in the context of naming simple cycloalkanes, there are more complex cases that require us to use another naming convention: \textbf{absolute configuration}.
+
+        The \textbf{absolute configuration} system is a universal language that allows us to describe the orientation of a substituent of either a chain alkane or a cycloalkane in the context of the carbon it is attached to (a.k.a. its \textbf{chiral center})
+
+      \end{core}
+
+      \begin{core}{Chiral Center}
+
+        A \textbf{chiral center} is usually a carbon atom that has four different groups attached to it in a tetrahedral manner. 
+
+        \myfig{0.45}{org_chem_figures/chiral_center}{Chiral Center Examples}{fig:chiral_center}
+
+        As you can see above, the chiral centers have four distinct groups attached to it defined as the following:
+
+        \bce{Left chiral center $\rightarrow$ ethyl, methyl, hydrogen, \textit{rest of the molecule}}
+
+        \bce{Right chiral center $\rightarrow$ Chloro, isopropyl, hydrogen, \textit{rest of the molecule}}
+
+        On the other hand, the non-chiral center is not chiral because it has two methyl groups attached to it simultaneously.
+
+        \bce{Non-chiral center $\rightarrow$ methyl, methyl, hydrogen, \textit{rest of the molecule}}
+
+        Once we have defined the chiral center, we can now move onto ranking the order of the attached groups based on the atomic mass of the adjacent atom.
+
+        Let's focus in on the left chiral center. it is attached to three carbons and one hydrogen. Since we know that hydrogen is lighter than carbon, we can already rank the hydrogen atom at the bottom (or a rank of 4). Next, when we are given a scenario where the adjacent atoms are identical, we simply go further down the chain until we reach a \textbf{point of difference}. 
+
+        \bce{Ethyl $\rightarrow$ C, H, H}
+
+        \bce{Methyl $\rightarrow$ H, H, H}
+
+        \bce{Rest of the molecule $\rightarrow$ C, H, H}
+
+        Based on the above assessment of the atoms attached to the adjacent carbons, we can now rank the methyl group as 3.
+
+        Skipping the rest of the explicit explanation, we can see that the rest of the molecule (ROM) would rank 1 and the ethyl would rank 2.
+
+        \bce{[1] ROM}
+
+        \bce{[2] Ethyl}
+
+        \bce{[3] Methyl}
+
+        \bce{[4] Hydrogen}
+
+        R and S is defined as whether the ordering of the rank 1, 2, and 3 groups is \textbf{clockwise} (R) or \textbf{counterclockwise} (S) when \textbf{looking at the chiral center with the rank 4 group sitting exactly behind it}.
+
+        \myfig{0.25}{org_chem_figures/ac_pov}{Absolute Configuration Perspective}{fig:ac_pov}
+
+      \end{core}
+
+      \begin{core}{Absolute Configuration Example (\textit{Alkane})}
+
+        Now, since the original figure does not actually define the orientation (wedge or dash) of the methyl group relative to the stem alkane, we cannot actually define its R/S orientation. Thus let's go through both potential cases.
+
+        First, the wedge case:
+
+        \myfig{0.45}{org_chem_figures/wedge}{Chiral Center with Wedge}{fig:wedge}
+
+        Here, the molecule is already oriented in a manner that shows it already from the angle we must analyze it from because the rank 4 group (hydrogen) sits behind the chiral center. the arrows from the rank 1 (ROM) to the rank 2 (Ethyl) to the rank 3 (methyl) follow a clockwise path, thus we define this chiral center as R.
+
+        \myfig{0.25}{org_chem_figures/R}{R Configuration}{fig:R}
+
+        When we move to the dash case, 
+
+        \myfig{0.45}{org_chem_figures/dash}{Chiral Center with Dash}{fig:dash}
+
+        we will find the orientation to be counterclockwise following the same procedure as above, thus we define this case of the chiral center as S.
+
+        Within the context of nomenclature, the R/S is written in parentheses at the beginning of the molecule name alongside the cooresponding carbon number that represents its chiral center.
+
+        \myfig{0.4}{org_chem_figures/full_molecule}{Absolute Configuration in Complex Molecule}{fig:full_molecule}
+
+        Combining all of these rules, we can define the compound shown above as
+        \[
+          \text{(3S,6R)-3-chloro-2,6-dimethyloctane}
+        \]
+
+      \end{core}
+
+      \begin{core}{Absolute Configuration Example (\textit{Cycloalkane})}
+
+        The same process can be applied to cycloalkanes as well.
+
+        \myfig{0.23}{org_chem_figures/rs_hexane}{Absolute Configuration in Cycloalkanes}{fig:rs_hexane}
+
+        The name of the cycloalkane above is:
+        \[
+          \text{(1R,2S)-1-ethyl-2-methylcyclohexane}
+        \]
+
+      \end{core}
+   
+\end{document}
+
+
+
