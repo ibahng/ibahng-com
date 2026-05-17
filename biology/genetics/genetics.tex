@@ -7,6 +7,14 @@
 
 \input{../../_presets/biology/preamble}
 
+\externaldocument[cyt-]{../cytology/cytology}[../cytology/cytology.pdf]
+% \externaldocument[eco-]{../ecology/ecology}[../ecology/ecology.pdf]
+% \externaldocument[evo-]{../evolution/evolution}[../evolution/evolution.pdf]
+% \externaldocument[imm-]{../immunology/immunology}[../immunology/immunology.pdf]
+% \externaldocument[onc-]{../oncology/oncology}[../oncology/oncology.pdf]
+% \externaldocument[bin-]{../bioinformatics/bioinformatics}[../bioinformatics/bioinformatics.pdf]
+% \externaldocument[gen-]{../genetics/genetics}[../genetics/genetics.pdf]
+
 \begin{document}
 
 \input{../../_presets/_general/startup}
@@ -15,119 +23,155 @@
 
   \subsection{Sexual Life Cycles}
 
-    The transmission of traits from one generation to the next is called inheritance, or \textbf{heredity}. However, offspring are not identical copies of their parents or of one another. Along with inherited similarity, there is also \textbf{variation}. The study of both heredity and inherited variation is called \textbf{genetics}. Parents pass on coded biological information to their offspring in the form of hereditary units called \textbf{genes}, which are distinct segments of DNA that encode specific functional products.
+    The transmission of heritable traits from one generation to the next constitutes \textbf{heredity}, a process through which genetic information is passed across lineages. Offspring exhibit inherited similarities yet also demonstrate \textbf{variation}, reflecting differences in the specific genetic information transmitted. The discipline of \textbf{genetics} encompasses the study of both hereditary mechanisms and variation. Genetic information is transmitted via \textbf{genes}, discrete DNA segments that encode specific functional products and serve as the fundamental units of heredity.
 
     \begin{core}{Organization of Chromosomes}
 
-      Let us first revisit somatic cells and their chromosomes. In humans, somatic cells contain two sets of chromosomes—one inherited from the father and one from the mother—for a total of 46 chromosomes. Cells with this two-set (2n) chromosome complement are called \textbf{diploid}. \textit{Note that the diploid chromosome number varies among species.} Below is a chromosome diagram of a human somatic cell called a \textbf{karyotype}.
+      \sbs{0.5}{
+        Human \textbf{somatic cells} (\textit{non-reproductive cells}) are characterized by their possession of two complete chromosome sets---one of maternal origin and one of paternal origin---yielding a total of 46 chromosomes. Such cells, containing two chromosome sets (\textit{2n}), are designated \textbf{diploid}. \textit{It should be noted that the diploid chromosome number exhibits considerable variation across species.} The chromosomal composition of a human somatic cell can be visualized through a \textbf{karyotype}, as illustrated to the right.
+      }{
+        \myfig{0.7}{genetics_figures/karyotype}{Human karyotype}{fig:fig1}
+      }
 
-      \myfig{0.4}{genetics_figures/karyotype}{caption}{fig:fig1}
-
-      As shown, the two chromosomes in each pair have the same length, centromere position, and overall gene arrangement. These are called \textbf{homologous chromosomes}. Both chromosomes of a pair carry genes that control the same inherited characteristics, although the specific versions of those genes (alleles) may differ. This pattern applies to 22 of the 23 chromosome pairs. The remaining pair consists of the \textbf{sex chromosomes}, which are typically XX in females and XY in males. The other 22 chromosome pairs are called the \textbf{autosomes}.
+      As demonstrated \autoref{fig:fig1}, paired chromosomes share identical length, centromere position, and gene arrangement. These matched pairs are termed \textbf{homologous chromosomes}. Although both members of a homologous pair carry genes governing the same inherited traits, the specific allelic variants may differ between these \textbf{homologs}. This pattern of homology characterizes 22 of the 23 chromosome pairs in humans. The twenty-third pair comprises the \textbf{sex chromosomes} (\textit{\autoref{core:sex_chromosomes}}), which typically manifest as XX in females and XY in males, while the remaining 22 pairs are collectively designated \textbf{autosomes}.
 
     \end{core}
 
-    \begin{core}{Sexual vs Asexual Reproduction}
+    \begin{core}[label=core:sexual_asexual]{Sexual vs Asexual Reproduction}
 
-      In the context of \textbf{sexual reproduction}, \textbf{gametes} are the cells that transmit genes from one generation to the next. Gametes are \textbf{haploid} (n), meaning they contain one set of chromosomes, and are produced by a process called \textbf{meiosis}. An offspring is formed through the fusion of a male gamete (sperm) and a female gamete (egg), restoring the diploid (2n) chromosome number. This fusion process is called \textbf{fertilization}.
+      \sbs{0.58}{
+        \textbf{Sexual reproduction} proceeds through the transmission of genetic material via specialized reproductive cells termed \textbf{gametes}. These gametes are \textbf{haploid} (\textit{n}), containing a single chromosome set, and arise through the specialized cell division process of \textbf{meiosis} (\textit{\autoref{core:meiosis}}). Offspring formation occurs when male and female gametes---sperm and egg, respectively---undergo fusion through \textbf{fertilization}, thereby reconstituting the diploid (\textit{2n}) chromosome complement.
 
-      \myfig{0.5}{genetics_figures/sexual_life_cycle}{caption}{fig:fig2}
-
-      This differs from \textbf{asexual reproduction}, in which offspring arise from a single individual through mitotic cell division, producing genetically identical daughter cells, or \textbf{clones}.
+        This reproductive mode contrasts fundamentally with \textbf{asexual reproduction}, wherein offspring derive from a single parent organism through \textbf{mitosis} (\textit{\autoref{cyt-core:mitosis}}), yielding genetically identical \textbf{clones}.
+      }{
+        \myfig{1}{genetics_figures/sexual_life_cycle}{Human sexual life cycle}{fig:fig2}
+      }
 
     \end{core}
 
     \begin{core}{Sexual Life Cycles}
 
-      This pattern of reproduction is called a \textbf{sexual life cycle}. While we are most familiar with the human life cycle, many organisms exhibit different forms of sexual life cycles.
+      The temporal sequence of reproductive events described in \autoref{core:sexual_asexual} constitutes a \textbf{sexual life cycle}. Although the human life cycle exemplifies this pattern, considerable diversity in sexual life cycle organization exists among organisms.
 
-      Plants and some algae exhibit a life cycle called \textbf{alternation of generations}, which includes multicellular diploid and haploid stages. The diploid \textbf{sporophyte} undergoes meiosis to produce haploid \textbf{spores}. Unlike gametes, spores do not fuse but divide by mitosis to form a multicellular haploid \textbf{gametophyte}. The gametophyte produces gametes by mitosis, and fertilization between two gametes forms a diploid zygote that develops into the next sporophyte. Thus, the sporophyte gives rise to the gametophyte, and the gametophyte gives rise to the sporophyte, \textit{alternating between generations}.
+      \sbs{0.5}{
+        Plants and certain algae exhibit \textbf{alternation of generations}, a life cycle characterized by multicellular diploid and haploid stages. The diploid generation, termed the \textbf{sporophyte}, undergoes meiosis to generate haploid \textbf{spores}. In contrast to gametes, spores do not undergo fusion but rather proliferate mitotically to establish a multicellular haploid \textbf{gametophyte}. Subsequently, the gametophyte produces gametes through mitosis. Fertilization of these gametes yields a diploid zygote that develops into the succeeding sporophyte generation. This cyclical pattern---wherein sporophytes generate gametophytes, which in turn produce sporophytes---constitutes the \textit{alternation between generations}.
+      }{
+        \myfig{0.75}{genetics_figures/alt_cycle1}{Alternation of generations sexual life cycle}{fig:fig3}
+      }
 
-      \myfig{0.4}{genetics_figures/alt_cycle1}{caption}{fig:fig3}
-
-      Most fungi and some protists, including certain algae, exhibit a life cycle in which the \textbf{only diploid stage is the single-celled zygote}. After gametes fuse to form a diploid zygote, \textbf{meiosis occurs immediately}, producing haploid cells rather than a multicellular diploid organism. These haploid cells divide by mitosis to form either unicellular descendants or a multicellular haploid adult. The haploid organism then produces gametes by mitosis, completing the cycle.
-
-      \myfig{0.4}{genetics_figures/alt_cycle2}{caption}{fig:fig4}
+      \sbs{0.5}{
+        Most fungi and certain protists, including some algal species, demonstrate a life cycle in which \textbf{the diploid phase is restricted to the unicellular zygote stage}. Following gametic fusion to form a diploid zygote, \textbf{meiosis proceeds immediately}, generating haploid cells rather than permitting development of a multicellular diploid organism. These haploid cells subsequently undergo mitotic divisions, establishing either unicellular populations or multicellular haploid organisms. Gamete production then occurs mitotically within the haploid organism, thereby completing the reproductive cycle.
+      }{
+        \myfig{0.75}{genetics_figures/alt_cycle2}{Life cycle with zygotic meiosis; \textit{characteristic of most fungi and some protists}}{fig:fig4}
+      }
 
     \end{core}
-  
+
   \subsection{Meiosis}
 
     \begin{core}[label=core:meiosis]{Meiosis}
 
-      \textbf{Meiosis} is the process by which specialized cells called \textbf{germ cells} in the gonads (ovaries in females and testes in males) produce gametes. Like mitosis, meiosis is preceded by interphase, which includes the S phase during which chromosomes are replicated. However, meiosis consists of two consecutive cell divisions—meiosis I and meiosis II—resulting in four haploid daughter cells rather than two diploid daughter cells.
+      \textbf{Meiosis} constitutes the specialized cell division process through which \textbf{germ cells} within the gonads---ovaries in females and testes in males---generate gametes. Similar to \textbf{mitosis} (\textit{\autoref{cyt-core:mitosis}}), meiosis is preceded by an interphase period that encompasses S phase, during which chromosomal replication occurs. Meiosis diverges from mitosis, however, in comprising two successive division events---meiosis I (\textit{\autoref{core:meiosis_1}}) and meiosis II (\textit{\autoref{core:meiosis_2}})---that collectively yield four haploid daughter cells.
 
-      Each meiotic division includes prophase, metaphase, anaphase, and telophase (followed by cytokinesis). These stages are designated with Roman numerals (I or II) to indicate whether they occur during meiosis I or meiosis II.
+      Each meiotic division encompasses the canonical phases of prophase, metaphase, anaphase, and telophase, with cytokinesis ensuing. These phases are distinguished by Roman numeral designations (\textit{I or II}) to denote their occurrence within either meiosis I or meiosis II.
 
     \end{core}
 
-    \begin{core}{Meiosis I}
-
-      \myfig{1}{genetics_figures/meiosis1}{caption}{fig:fig5}
+    \begin{core}[label=core:meiosis_1]{Meiosis I}
 
       \begin{enumerate}[label=(\arabic*)]
 
-        \item \textbf{PROPHASE I:} The centrosomes move apart, the spindle forms, the nuclear envelope breaks down, and kinetochores develop. \textbf{Crossing over}—the exchange of DNA between nonsister chromatids of homologous chromosomes—occurs, resulting in the formation of visible structures called \textbf{chiasmata}.
+        \sbs{0.65}{
+          \item \textbf{Prophase I:} Centrosome separation initiates spindle apparatus assembly, concurrent with nuclear envelope disintegration and kinetochore formation. During this phase, \textbf{crossing over} (\textit{\autoref{core:crossing_over}}) occurs generating cytologically visible structures termed \textbf{chiasmata}.
+        }{
+          \myfig{0.65}{genetics_figures/m1_1}{Prophase I}{fig:prophase1}
+        }
 
-        \item \textbf{METAPHASE I:} Pairs of \textbf{homologous chromosomes} align at the metaphase plate. Each homologous pair aligns independently of the other pairs, contributing to \textbf{independent assortment}.
+        \sbs{0.65}{
+          \item \textbf{Metaphase I:} \textbf{Homologous chromosome} pairs align at the metaphase plate, with each pair orienting independently of all other pairs, thereby facilitating \textbf{independent assortment}.
+        }{
+          \myfig{0.65}{genetics_figures/m1_2}{Metaphase I}{fig:metaphase1}
+        }
 
-        \item \textbf{ANAPHASE I:} Proteins responsible for sister chromatid cohesion along the chromosome arms are cleaved, allowing homologous chromosomes to separate. However, sister chromatids remain attached at their centromeres.
+        \sbs{0.65}{
+          \item \textbf{Anaphase I:} Cleavage of cohesin proteins along chromosome arms permits homologous chromosome separation, while sister chromatids maintain attachment at their centromeric regions.
+        }{
+          \myfig{0.6}{genetics_figures/m1_3}{Anaphase I}{fig:anaphase1}
+        }
 
-        \item \textbf{TELOPHASE I/CYTOKINESIS:} A cleavage furrow forms in animal cells, dividing the cell into two daughter cells, each containing a haploid set of duplicated chromosomes.
+        \sbs{0.65}{
+          \item \textbf{Telophase I \& Cytokinesis:} Cleavage furrow formation in animal cells partitions the cytoplasm, yielding two daughter cells, each possessing a haploid complement of duplicated chromosomes.
+        }{
+          \myfig{0.55}{genetics_figures/m1_4}{Telophase I}{fig:telophase1}
+        }
 
       \end{enumerate}
 
     \end{core}
 
-    \begin{core}{Meiosis II}
-
-      \myfig{1}{genetics_figures/meiosis2}{caption}{fig:fig6}
+    \begin{core}[label=core:meiosis_2]{Meiosis II}
 
       \begin{enumerate}[label=(\arabic*)]
 
-        \item \textbf{PROPHASE II:} The spindle apparatus forms, the nuclear envelope breaks down if it has re-formed, and kinetochores attach to spindle microtubules.
+        \sbs{0.65}{
+          \item \textbf{Prophase II:} Spindle apparatus assembly proceeds, nuclear envelope disintegration occurs if reformation had ensued following meiosis I, and kinetochores establish connections with spindle microtubules.
+        }{
+          \myfig{0.65}{genetics_figures/m2_1}{Prophase II}{fig:prophase2}
+        }
 
-        \item \textbf{METAPHASE II:} Chromosomes align at the metaphase plate. Due to crossing over in meiosis I, the two sister chromatids of each chromosome are not genetically identical. Kinetochores of sister chromatids attach to microtubules extending from opposite poles.
+        \sbs{0.65}{
+          \item \textbf{Metaphase II:} Chromosomes achieve metaphase plate alignment. Due to crossing over in meiosis I, the two sister chromatids of each chromosome are no longer genetically identical. Sister chromatid kinetochores form attachments to microtubules emanating from opposing spindle poles.
+        }{
+          \myfig{0.65}{genetics_figures/m2_2}{Metaphase II}{fig:metaphase2}
+        }
 
-        \item \textbf{ANAPHASE II:} Proteins holding the sister chromatids together at the centromere are cleaved, allowing the chromatids to separate and move toward opposite poles. Each separated chromatid is now considered an individual chromosome.
+        \sbs{0.65}{
+          \item \textbf{Anaphase II:} Cleavage of centromeric cohesin proteins liberates sister chromatids, enabling their poleward migration. Each segregated chromatid now constitutes an individual chromosome.
+        }{
+          \myfig{0.65}{genetics_figures/m2_3}{Anaphase II}{fig:anaphase2}
+        }
 
-        \item \textbf{TELOPHASE II/CYTOKINESIS:} Nuclear envelopes re-form around each set of chromosomes, which begin to decondense. Cytokinesis then occurs.
+        \sbs{0.65}{
+          \item \textbf{Telophase II \& Cytokinesis:} Nuclear envelope reformation encompasses each chromosome set, which initiates decondensation. Cytokinesis subsequently ensues.
+        }{
+          \myfig{0.65}{genetics_figures/m2_4}{Telophase II}{fig:telophase2}
+        }
 
       \end{enumerate}
 
+      \textit{Note that the events depicted above occur in both daughter cells generated during meiosis I.}
+
     \end{core}
 
-    This entire process produces four daughter cells, each containing a haploid set of unduplicated chromosomes that are genetically distinct from one another and from the original parent cell.
+    The complete meiotic process yields four daughter cells, each harboring a haploid complement of unduplicated chromosomes that are genetically distinct both from one another and from the parental cell.
 
-    \begin{core}{Crossing Over}
+    \begin{core}[label=core:crossing_over]{Crossing Over}
 
-      One key distinction between meiosis and mitosis is the occurrence of \textbf{crossing over} during prophase I. Crossing over is the reciprocal exchange of corresponding DNA segments between nonsister chromatids of homologous chromosomes.
+      A fundamental distinction between meiosis and mitosis resides in the occurrence of \textbf{crossing over} during prophase I of meiosis. This process entails the reciprocal exchange of homologous DNA segments between nonsister chromatids of homologous chromosome pairs.
 
-      \myfig{0.6}{genetics_figures/crossing_over}{caption}{fig:fig7}
+      \myfig{0.55}{genetics_figures/crossing_over}{Crossing over}{fig:fig7}
 
-      The visible sites where crossing over has occurred are called \textbf{chiasmata}. At least one crossover event per homologous chromosome pair is typically required to ensure proper alignment and separation during meiosis I, as chiasmata help hold homologous chromosomes together until they are pulled apart at anaphase I.
+      The cytologically visible sites of crossing over are designated \textbf{chiasmata}. Proper chromosomal alignment and segregation during meiosis I typically requires at least one crossover event per homologous pair, as chiasmata function to maintain homolog association until their disjunction during anaphase I.
 
     \end{core}
 
     \begin{core}{Genetic Variation}
 
-      High degrees of genetic variation result from meiosis and sexual reproduction due to the following three mechanisms.
+      Meiosis and sexual reproduction generate substantial genetic variation through three distinct mechanisms.
 
       \begin{enumerate}
 
-        \item The \textbf{independent assortment of chromosomes} refers to the random orientation of pairs of \textbf{homologous chromosomes} at the metaphase plate during \textbf{metaphase I} of meiosis.
+        \item \textbf{Independent assortment of chromosomes} describes the random orientation of \textbf{homologous chromosome} pairs at the metaphase plate during \textbf{metaphase I} of meiosis.
 
-        \myfig{0.6}{genetics_figures/metaphase1}{caption}{fig:fig8}
+        \myfig{0.7}{genetics_figures/metaphase1}{Independent assortment of chromosomes}{fig:fig8}
 
-        Each homologous pair can orient with either the maternal homolog or the paternal homolog facing a given pole. Thus, there is a 50\% probability that a daughter cell of meiosis I will receive the maternal chromosome of a particular pair and a 50\% probability that it will receive the paternal chromosome.
+        Each homologous pair may orient such that either the maternal or paternal homolog faces a given spindle pole. Consequently, a 50\% probability exists that any daughter cell resulting from meiosis I will receive the maternal chromosome of a given pair, with an equivalent probability for paternal chromosome inheritance.
 
-        Because each of the 23 homologous chromosome pairs in humans assort independently of the others, this mechanism produces $2^{23}$ (over 8 million) possible combinations of maternal and paternal chromosomes in a single gamete—even before the next two factors are considered.
+        Given that each of the 23 homologous chromosome pairs in humans assorts independently, this mechanism alone generates $2^{23}$ (\textit{exceeding 8 million}) possible combinations of maternal and paternal chromosomes within a single gamete---a figure that precedes consideration of the subsequent two mechanisms.
 
-        \item The \textbf{random nature of fertilization} further increases genetic variation. Since any one of the $2^{23}$ different chromosomal combinations in a male gamete can fuse with any one of the $2^{23}$ different chromosomal combinations in a female gamete, the resulting zygote can have $2^{46}$ (over 70 trillion) possible combinations of maternal and paternal chromosomes.
+        \item The \textbf{random nature of fertilization} amplifies genetic variation. Because any of the $2^{23}$ possible chromosomal combinations in a male gamete may unite with any of the $2^{23}$ combinations in a female gamete, the resultant zygote may exhibit $2^{46}$ (\textit{exceeding 70 trillion}) possible configurations of maternal and paternal chromosomes.
 
-        Importantly, this calculation considers only independent assortment and random fertilization.
-
-        \item \textbf{Crossing over} during prophase I of meiosis I produces \textbf{recombinant chromosomes} that are genetically distinct from the original maternal and paternal homologs. During this process, nonsister chromatids of homologous chromosomes exchange corresponding DNA segments at sites called chiasmata. Because crossing over can occur at many different positions along each homologous pair—and may occur multiple times per pair—the number of possible genetic combinations increases dramatically.
+        \item \textbf{Crossing over} during prophase I of meiosis I generates \textbf{recombinant chromosomes} that exhibit genetic configurations distinct from the parental maternal and paternal homologs. Given that crossing over may occur at numerous positions along each homologous pair and may transpire multiple times per pair, the spectrum of possible genetic combinations expands dramatically.
 
       \end{enumerate}
 
@@ -317,7 +361,7 @@
 
     \end{core}
 
-    \begin{core}{Sex Chromosomes}
+    \begin{core}[label=core:sex_chromosomes]{Sex Chromosomes}
 
       Humans and other mammals possess two sex chromosomes, X and Y. Females typically inherit two X chromosomes (XX), whereas males inherit one X and one Y (XY). The Y chromosome is considerably smaller than the X chromosome, and only short regions at their ends are homologous. These homologous regions allow the X and Y chromosomes to pair and properly segregate during meiosis in males.
 
