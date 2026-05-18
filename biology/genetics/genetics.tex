@@ -215,7 +215,6 @@
 
       Because different allelic combinations can produce identical observable traits, appearance does not necessarily reveal genetic composition. We therefore distinguish between an organism's \textbf{phenotype} (\textit{observable traits}) and its \textbf{genotype} (\textit{genetic makeup}).
 
-
       \sbs{0.48}{
         Using these definitions: \textit{PP} represents a homozygous dominant genotype expressing the dominant phenotype; \textit{Pp} represents a heterozygous genotype also expressing the dominant phenotype; and \textit{pp} represents a homozygous recessive genotype expressing the recessive phenotype. Importantly, identical phenotypes need not correspond to identical genotypes.
 
@@ -351,7 +350,7 @@
 
     \end{core}
 
-    \begin{core}{Pedigree Analysis of Disorders}
+    \begin{core}[label=core:pedigree_disorders]{Pedigree Analysis of Disorders}
 
       Pedigree analysis is particularly valuable for studying disease-causing alleles. In \textbf{recessive disorders}, heterozygous individuals (\textit{Aa}) exhibit normal phenotypes because one functional allele produces sufficient protein. These \textbf{carriers} can transmit the recessive allele to offspring, though only homozygous recessive individuals (\textit{aa}) express the disorder. Most affected individuals are born to phenotypically normal carrier parents, and lethal recessive alleles remain rare because affected individuals typically do not reproduce.
       
@@ -369,123 +368,129 @@
     
   \subsection{Sex-Linked Genes}
 
-    When Mendel described the laws of inheritance in 1866, chromosomes had not yet been identified as the carriers of genetic information. It was not until 1902 that scientists began to formulate the \textbf{chromosome theory of inheritance}. This theory states that Mendelian genes occupy specific loci (sites) on chromosomes, and that the behavior of chromosomes during meiosis—specifically segregation and independent assortment—accounts for the inheritance patterns Mendel observed.
+    When Mendel formulated the laws of inheritance in 1866, the physical basis of heredity remained unknown. The \textbf{chromosome theory of inheritance}, proposed in 1902, established that Mendelian genes occupy specific loci on chromosomes and that chromosomal behavior during meiosis accounts for observed inheritance patterns.
 
-    \begin{core}{Hunt's Fruit Fly Experiment}
+    \begin{core}{Morgan's Fruit Fly Experiment}
 
-      The first strong evidence linking a specific gene to a specific chromosome came in the early 1900s from the work of Thomas Hunt Morgan. Morgan studied a species of fruit fly, \textit{Drosophila melanogaster}, focusing on inheritance of eye color.
+      \sbs{0.5}{
+        The first compelling evidence linking a specific gene to a specific chromosome came from Thomas Hunt Morgan's early 1900s work on eye color inheritance in \textit{Drosophila melanogaster}.
 
-      \myfig{0.5}{genetics_figures/fly_eye_color}{caption}{fig:fig19}
+        The prevalent phenotype in wild populations is red eye color, termed the \textbf{wild-type} ($w^+$). After two years of breeding, Morgan discovered a single white-eyed male, representing the \textbf{mutant phenotype} ($w$).
 
-      In wild populations, the most common eye color is red, referred to as the \textbf{wild-type} phenotype and denoted as $w^+$. After two years of breeding flies, Morgan discovered a single male with white eyes instead of red. This trait was designated the \textbf{mutant phenotype} and denoted as $w$.
+        Crossing the white-eyed male with red-eyed females produced all red-eyed F1 offspring, indicating dominance of the wild-type allele. F1 intercrosses yielded an overall 3:1 red-to-white F2 ratio. However, the white-eye phenotype appeared exclusively in males---approximately half of F2 males were white-eyed while all females were red-eyed. This sex-specific pattern led Morgan to conclude that the eye-color gene resides on the X chromosome.
+      }{
+        \myfig{0.9}{genetics_figures/fly_eye_color}{Morgan's fruit fly experiment crosses}{fig:fig19}
+      }
 
-      When Morgan crossed his white-eyed male fly with red-eyed females, all of the F1 offspring had red eyes, indicating that the wild-type allele is dominant over the white-eye allele. When the F1 flies were interbred, the F2 generation displayed an overall 3:1 red-to-white phenotypic ratio. However, a closer look revealed that the white-eye phenotype appeared only in males: approximately half of the males were white-eyed and half were red-eyed, while all females had red eyes. This sex-specific pattern led Morgan to conclude that the eye-color gene is located on the X chromosome.
-
-      Because all F1 offspring were phenotypically wild type, the F1 males (XY) must have carried a wild-type allele on their single X chromosome. The F1 females, however, must have been heterozygous, carrying one wild-type allele and one mutant allele. The appearance of white-eyed males in the F2 generation confirms this: sons inherit their single X chromosome exclusively from their mother. Therefore, any white-eyed male must have received the mutant allele from a heterozygous F1 female, demonstrating that she was a carrier of the recessive white-eye allele.
+      Because all F1 offspring exhibited the wild-type phenotype, F1 males must have inherited a wild-type allele on their single X chromosome, while F1 females must have been heterozygous ($w^+w$). The appearance of white-eyed F2 males confirmed this: males inherit their X chromosome exclusively from their mother, so white-eyed males received the mutant allele from heterozygous F1 females, establishing them as carriers.
 
     \end{core}
 
     \begin{core}[label=core:sex_chromosomes]{Sex Chromosomes}
 
-      Humans and other mammals possess two sex chromosomes, X and Y. Females typically inherit two X chromosomes (XX), whereas males inherit one X and one Y (XY). The Y chromosome is considerably smaller than the X chromosome, and only short regions at their ends are homologous. These homologous regions allow the X and Y chromosomes to pair and properly segregate during meiosis in males.
+      \sbs{0.45}{
+        Humans and other mammals possess two sex chromosomes, X and Y. Females are typically XX, while males are XY. The Y chromosome is considerably smaller than the X, with homology restricted to short regions at their termini. These homologous regions enable X-Y pairing and proper segregation during male meiosis.
 
-      During gamete formation, the sex chromosomes separate so that every egg carries a single X chromosome, while sperm carry either an X or a Y chromosome. Fertilization by an X-bearing sperm produces an XX zygote (female), whereas fertilization by a Y-bearing sperm produces an XY zygote (male). As a result, sex determination in mammals is typically an approximately 1:1 probability. However, the mammalian X-Y system represents only one of several mechanisms of sex determination found in nature.
-
-      \myfig{0.5}{genetics_figures/alt_systems}{caption}{fig:fig20}
+        During gamete formation, sex chromosomes segregate such that all eggs carry an X chromosome, while sperm carry either X or Y. Fertilization by X-bearing sperm produces XX (\textit{female}) zygotes; Y-bearing sperm produces XY (\textit{male}) zygotes. This mechanism yields an approximate 1:1 sex ratio. However, the mammalian X-Y system represents only one of several sex-determination mechanisms in nature (\textit{\autoref{fig:fig20}}).
+      }{
+        \myfig{0.8}{genetics_figures/alt_systems}{Non-mammalian sex-determination mechanisms}{fig:fig20}
+      }
 
     \end{core}    
 
     \begin{core}{Sex-Linked Genes}
 
-      A gene located on a sex chromosome is called a \textbf{sex-linked gene}. Genes found on the X chromosome are termed \textbf{X-linked}, whereas those on the Y chromosome are \textbf{Y-linked}. The human X chromosome contains approximately 1,100 genes, while the Y chromosome contains about 78 genes that encode roughly 25 distinct proteins, many of which are involved in testis development and sperm production. Because the Y chromosome is transmitted largely unchanged from father to son and carries relatively few genes, comparatively few traits and disorders are inherited in a strictly Y-linked manner.
+      Genes located on sex chromosomes are termed \textbf{sex-linked genes}. Those on the X chromosome are \textbf{X-linked}; those on the Y are \textbf{Y-linked}. The human X chromosome contains approximately 1,100 genes, while the Y chromosome contains roughly 78 genes encoding approximately 25 proteins, many involved in testis development and sperm production. Because the Y chromosome is transmitted essentially unchanged from father to son and carries relatively few genes, Y-linked inheritance is comparatively rare.
 
-      X-linked genes follow the inheritance pattern first observed by Morgan in his fruit fly experiments. A father passes his single X chromosome—and therefore any X-linked alleles—exclusively to his daughters, not to his sons. Mothers, who possess two X chromosomes, can pass X-linked alleles to both sons and daughters.
+      \myfig{1}{genetics_figures/sex_chromo}{Inheritance patterns of sex-linked genes}{fig:fig21}
 
-      \myfig{1}{genetics_figures/sex_chromo}{caption}{fig:fig21}
+      X-linked genes exhibit the inheritance pattern Morgan first observed in \textit{Drosophila}. Fathers transmit their single X chromosome---and all X-linked alleles---exclusively to daughters. Mothers, possessing two X chromosomes, can transmit X-linked alleles to offspring of either sex.
 
-      The phenotypic expression of an X-linked trait in females depends on whether the allele is dominant or recessive. Because males possess only one X chromosome, the terms homozygous and heterozygous do not apply to them. Instead, males are described as hemizygous for X-linked genes and will express whatever allele is present on the single X chromosome inherited from their mother.
+      Phenotypic expression of X-linked traits in females depends on allele dominance. Because males possess only one X chromosome, the terms homozygous and heterozygous do not apply. Instead, males are \textbf{hemizygous} for X-linked genes, expressing whichever allele is present on their single maternal X chromosome.
 
     \end{core}
 
-    \begin{core}{Barr Bodies}
+    \begin{core}{X Inactivation and Barr Bodies}
 
-      Although female mammals inherit two X chromosomes, one is largely inactivated early in embryonic development. This process ensures that males and females have a similar dosage of most X-linked gene products. The inactivated X chromosome condenses into a \textbf{Barr body} at the nuclear periphery, and most of its genes are transcriptionally silent. In the germline cells that give rise to eggs, however, the inactive X is reactivated prior to meiosis so that each egg ultimately contains one active X chromosome.
+      Although female mammals inherit two X chromosomes, one undergoes \textbf{inactivation} early in embryonic development, ensuring dosage compensation between sexes for most X-linked gene products. The inactivated X chromosome condenses into a \textbf{Barr body} at the nuclear periphery, rendering most of its genes transcriptionally silent. In germline cells, the inactive X is reactivated prior to meiosis, ensuring each egg contains one active X chromosome.
 
-      As a result of X inactivation, females are genetic \textbf{mosaics}, composed of two populations of cells: those in which the maternal X chromosome is active and those in which the paternal X chromosome is active. Once an X chromosome is inactivated in a particular cell, all of its mitotic descendants maintain the same inactive X. Consequently, a heterozygous female for an X-linked trait will typically have a mixture of cells expressing one allele and cells expressing the alternate allele.
+      X inactivation renders females genetic \textbf{mosaics} composed of two cell populations: those expressing the maternal X and those expressing the paternal X. Once an X chromosome is inactivated in a cell, all mitotic descendants maintain the same inactivation pattern. Consequently, females heterozygous for an X-linked trait exhibit a mosaic phenotype with patches of cells expressing alternate alleles.
 
-      \myfig{0.52}{genetics_figures/barr_body}{caption}{fig:fig22}
+      \myfig{0.43}{genetics_figures/barr_body}{Fur color genetic mosaic in female cat due to Barr body development}{fig:fig22}
 
-      This phenomenon is also observed in women who are heterozygous for an X-linked mutation that prevents the development of sweat glands, resulting in distinct patches of normal skin interspersed with patches lacking sweat glands.
+      \textit{This mosaicism is evident in women heterozygous for X-linked mutations affecting sweat gland development, who exhibit distinct patches of normal skin interspersed with regions lacking sweat glands.}
 
     \end{core}
 
   \subsection{Linked Genes}
 
-    \begin{core}{Linked Genes}
+    \begin{core}{Gene Linkage}
 
-      Genes located near one another on the same chromosome tend to be inherited together during genetic crosses; such genes are described as \textbf{genetically linked} and are referred to as \textbf{linked genes}. Consider the following experiment in which true-breeding flies that are double wild type are crossed with true-breeding flies that are double mutant.
+      Genes located proximally on the same chromosome tend to be inherited together; such genes are \textbf{genetically linked}. Consider Morgan's experiment crossing true-breeding double wild-type flies with true-breeding double mutant flies.
 
-      \myfig{0.85}{genetics_figures/linked_flies}{caption}{fig:fig23}
+      \myfig{0.8}{genetics_figures/linked_flies}{True-breeding double wild-type and mutant cross showing evidence of linkage between genes}{fig:fig23}
 
-      If the two genes are located on different chromosomes, independent assortment predicts a 1:1:1:1 phenotypic ratio in the testcross progeny. If the genes are located on the same chromosome and the parental alleles are always inherited together (complete linkage), the expected ratio would be 1:1:0:0, with only parental phenotypes observed. However, the actual data from Morgan's experiment yielded a ratio of 965:944:206:185---an intermediate result between these two expectations. We now understand that this deviation is due to \textbf{crossing over}, although the precise mechanism was not yet known at the time.
+      If genes reside on different chromosomes, independent assortment predicts a 1:1:1:1 testcross ratio. Complete linkage (\textit{genes on the same chromosome with no recombination}) predicts a 1:1:0:0 ratio, yielding only parental phenotypes. Morgan's actual data---965:944:206:185---fell between these extremes. This intermediate pattern results from \textbf{crossing over}, though the molecular mechanism remained unknown at the time.
 
     \end{core}    
 
     \begin{core}{Parental Types vs Recombinants}
 
-      Before proceeding, it is helpful to clarify key terminology. \textbf{Genetic recombination} refers to the production of offspring with combinations of traits that differ from those present in either parent of the P generation. The trait combinations that match the original parental combinations are called \textbf{parental types}, whereas those that differ are called \textbf{recombinant types}, or simply \textbf{recombinants}.
+      \textbf{Genetic recombination} produces offspring with trait combinations differing from either P generation parent. Trait combinations matching the original parental combinations are \textbf{parental types}; those differing are \textbf{recombinant types} (\textit{or \textbf{recombinants}}).
 
     \end{core}
 
     \begin{core}{Linkage Maps}
 
-      Crossing over occurs randomly along homologous chromosomes during prophase I of meiosis. The probability of a crossover occurring between two genes increases with the physical distance separating them. Therefore, the farther apart two genes are on the same chromosome, the greater the likelihood that a crossover will occur between them, resulting in a higher recombination frequency. This frequency approaches 50\%, the value expected for genes that assort independently (as if located on different chromosomes).
+      Crossing over occurs randomly along homologous chromosomes during prophase I. The probability of crossover between two genes increases with their physical separation. Thus, more distantly spaced genes exhibit higher recombination frequencies, approaching 50\%---the value expected for independent assortment on different chromosomes.
 
-      Using recombination frequencies, one of Morgan's student, Alfred H. Sturtevant, constructed the first genetic maps by assigning relative positions to genes on the same chromosome. These maps, based on recombination data observed in the fruit fly species, are known as \textbf{linkage maps}.
+      Using recombination frequencies, Alfred H. Sturtevant, Morgan's student, constructed the first \textbf{linkage maps} by assigning relative positions to genes on chromosomes based on \textit{Drosophila} recombination data (\textit{\autoref{fig:fig24}}).
 
-      \myfig{0.7}{genetics_figures/linkage_map}{caption}{fig:fig24}
+      Genetic linkage is not binary but continuous, determined by physical distance between genes: closer genes are more tightly linked and exhibit lower recombination frequencies.
 
-      Thus, genetic linkage is not a strictly binary property that classifies a pair of genes as simply "linked" or "not linked." Rather, linkage exists along a continuum and is determined by the physical distance between genes on a chromosome: the closer two genes are, the more tightly linked they are, and the lower their recombination frequency.
+      \myfig{0.55}{genetics_figures/linkage_map}{Linkage map}{fig:fig24}
 
     \end{core}
   
   \subsection{Chromosomal Disorders}
 
-    So far, we have focused on relatively small-scale genetic changes involving individual genes. However, large-scale chromosomal alterations can also significantly affect an organism's phenotype and may result in miscarriage or developmental disorders.
+    Thus far, discussion has focused on single-gene alterations (\textit{\autoref{core:pedigree_disorders}}). However, large-scale chromosomal abnormalities can also profoundly affect phenotype and may cause miscarriage or developmental disorders.
 
-    \begin{core}{Abnormal Chromosome Counts}
+    \begin{core}{Abnormal Chromosome Count}
 
-      First, consider \textit{abnormal chromosome numbers}. These typically arise from an occasional error called \textbf{nondisjunction}, in which homologous chromosomes fail to separate properly during meiosis I or sister chromatids fail to separate during meiosis II. As a result, some gametes receive an abnormal number of chromosomes.
+      \sbs{0.45}{
+        Abnormal chromosome numbers typically arise from \textbf{nondisjunction}, wherein homologous chromosomes fail to separate during meiosis I or sister chromatids fail to separate during meiosis II, producing gametes with abnormal chromosome counts.
 
-      \myfig{0.65}{genetics_figures/nondisjunction}{caption}{fig:fig25}
+        Fertilization involving an \textbf{aneuploid} (\textit{abnormal chromosome count}) gamete produces an aneuploid zygote. Loss of one chromosome yields a \textbf{monosomic} zygote ($2n - 1$); gain of one produces a \textbf{trisomic} zygote ($2n + 1$). This chromosomal abnormality propagates to all somatic cells through mitotic divisions.
 
-      If an abnormal gamete fuses with a normal one during fertilization, the resulting zygote will have an abnormal chromosome number—a condition known as \textbf{aneuploidy}. The loss of a single chromosome produces a \textbf{monosomic} zygote ($2n - 1$), whereas the gain of an extra chromosome produces a \textbf{trisomic} zygote ($2n + 1$). Once formed, this chromosomal abnormality is propagated to all somatic cells of the developing embryo through mitotic divisions.
-
-      In contrast, some organisms possess more than two complete chromosome \textbf{sets} (not merely individual extra chromosomes) in their somatic cells. This condition is called \textbf{polyploidy} and includes forms such as \textit{triploidy} ($3n$) and \textit{tetraploidy} ($4n$).    
+        In contrast, \textbf{polyploidy} describes organisms possessing more than two complete chromosome sets, including \textit{triploidy} ($3n$) and \textit{tetraploidy} ($4n$).
+      }{
+        \myfig{0.95}{genetics_figures/nondisjunction}{Nondisjunction}{fig:fig25}
+      }
 
     \end{core}
 
     \begin{core}{Abnormal Chromosome Structure}
 
-      In addition to changes in chromosome number, errors during meiosis or exposure to damaging agents such as radiation can \textbf{alter chromosome structure}. These structural abnormalities fall into four major categories:
+      Beyond numerical abnormalities, meiotic errors or exposure to mutagens such as radiation can alter chromosome structure. Structural abnormalities comprise four major categories.
 
       \begin{enumerate}
 
-        \item \textbf{Deletion} occurs when a chromosomal fragment is lost, leaving the affected chromosome missing certain genes.
+        \item \textbf{Deletion}: Loss of a chromosomal fragment, eliminating specific genes.
 
-        \myfig{0.5}{genetics_figures/deletion}{caption}{fig:fig26}
+        \myfig{0.5}{genetics_figures/deletion}{Chromosomal fragment deletion}{fig:fig26}
 
-        \item \textbf{Duplication} occurs when a chromosomal fragment becomes attached as an extra segment to a sister chromatid or to a non-sister chromatid, resulting in repeated gene sequences.
+        \item \textbf{Duplication}: Attachment of a chromosomal fragment as an additional segment to a sister or non-sister chromatid, producing repeated gene sequences.
 
-        \myfig{0.5}{genetics_figures/duplication}{caption}{fig:fig27}
+        \myfig{0.5}{genetics_figures/duplication}{Chromosomal fragment duplication}{fig:fig27}
 
-        \item \textbf{Inversion} occurs when a chromosomal fragment breaks off and reattaches to the original chromosome in the reverse orientation, thereby reversing the gene order within that segment.
+        \item \textbf{Inversion}: Reattachment of a chromosomal fragment in reverse orientation, inverting gene order within that segment.
 
-        \myfig{0.5}{genetics_figures/inversion}{caption}{fig:fig28}
+        \myfig{0.5}{genetics_figures/inversion}{Chromosomal fragment inversion}{fig:fig28}
 
-        \item \textbf{Translocation} occurs when a chromosomal fragment breaks off and attaches to a nonhomologous chromosome. In some cases, two nonhomologous chromosomes exchange segments, a process known as a reciprocal translocation.
+        \item \textbf{Translocation}: Attachment of a chromosomal fragment to a nonhomologous chromosome. Reciprocal translocation involves segment exchange between two nonhomologous chromosomes.
 
-        \myfig{0.5}{genetics_figures/translocation}{caption}{fig:fig29}
+        \myfig{0.5}{genetics_figures/translocation}{Chromosomal fragment translocation}{fig:fig29}
 
       \end{enumerate}
 
@@ -493,19 +498,19 @@
 
     \begin{core}{Notable Chromosomal Abnormalities}
 
+      Certain aneuploidies produce recognizable clinical syndromes in humans.
+
       \begin{enumerate}
 
-        \item \textbf{Down syndrome}, also known as \textit{trisomy 21}, is a chromosomal disorder caused by the presence of an extra copy of chromosome 21.
+        \item \textbf{Down syndrome} (\textit{trisomy 21}) results from an extra copy of chromosome 21.
 
-        \myfig{0.5}{genetics_figures/down_syndrome}{caption}{fig:fig30}
+        \textit{Sex chromosome aneuploidies typically cause less severe phenotypic disruption than autosomal aneuploidies. This reflects the Y chromosome's limited gene content and the inactivation of additional X chromosomes as Barr bodies.}
 
-        Aneuploid conditions involving the sex chromosomes tend to disrupt genetic balance less severely than those involving autosomes. This is partly because the Y chromosome contains relatively few genes, and additional X chromosomes are largely inactivated as Barr bodies, reducing their impact on gene expression.
+        \item \textbf{Klinefelter syndrome} (\textit{XXY}) affects phenotypic males who may exhibit small testes, reduced testosterone, tall stature, decreased muscle mass, sparse body hair, and gynecomastia. Many affected individuals are infertile.
 
-        \item \textbf{Klinefelter syndrome} is a chromosomal disorder in which individuals possess an extra X chromosome (XXY). Affected individuals are phenotypically male and may exhibit features such as small testes, reduced testosterone levels, taller-than-average height, decreased muscle mass, sparse facial and body hair, and gynecomastia (enlarged breast tissue). Many individuals are infertile.
+        \item \textbf{Trisomy X} (\textit{XXX}) females are generally healthy with few unusual physical features beyond slightly above-average height, though learning disabilities and mild developmental delays occur at increased frequency.
 
-        Females with \textbf{trisomy X} (XXX) are generally healthy and often have no unusual physical features other than slightly above-average height. However, there is an increased risk of learning disabilities and mild developmental delays.
-
-        \item \textbf{Turner syndrome} (monosomy X, XO) is the only known viable full monosomy in humans. Individuals with Turner syndrome are phenotypically female but are typically sterile due to underdeveloped ovaries and incomplete sexual maturation.
+        \item \textbf{Turner syndrome} (\textit{monosomy X, XO}) represents the only viable human monosomy. Affected individuals are phenotypically female but typically sterile due to ovarian dysgenesis and incomplete sexual maturation.
 
       \end{enumerate}
 
@@ -513,21 +518,23 @@
   
   \subsection{Exceptions to Mendelian Inheritance}
 
-    In the previous section, we examined deviations from typical chromosomal inheritance patterns. However, there are also two naturally occurring exceptions to classical Mendelian inheritance: \textbf{genomic imprinting} and \textbf{inheritance of organelle genes}.
+    Beyond chromosomal abnormalities, two naturally occurring phenomena deviate from classical Mendelian inheritance.
 
     \begin{core}{Genomic Imprinting}
 
-      \textbf{Genomic imprinting} refers to a phenomenon in which the phenotypic effect of an allele depends on whether it was inherited from the mother or the father. For a given imprinted gene, either the maternal or the paternal allele is consistently silenced across individuals of a species, while the other allele is expressed. This parent-specific expression is typically regulated by epigenetic modifications such as DNA methylation established during gamete formation. An example of genomic imprinting is the \textit{insulin-like growth factor 2} (\textit{Igf2}) gene in mice, in which only the paternal allele is expressed.
-
-      \myfig{0.6}{genetics_figures/imprinting}{caption}{fig:fig31}
+      \sbs{0.4}{
+        \textbf{Genomic imprinting} describes parent-of-origin-dependent allele expression. For imprinted genes, either the maternal or paternal allele is consistently silenced while the other is expressed. This parent-specific expression pattern is regulated by epigenetic modifications such as DNA methylation established during gamete formation. For example, only the paternal allele of the mouse \textit{insulin-like growth factor 2} (\textit{Igf2}) gene is expressed.
+      }{
+        \myfig{0.95}{genetics_figures/imprinting}{Genomic imprinting of \textit{Igf2} gene in mice}{fig:fig31}
+      }
 
     \end{core}
 
     \begin{core}{Inheritance of Organelle Genes}
 
-      \textbf{Inheritance of organelle genes} refers to the transmission of genes located outside the nucleus, specifically the small circular DNA molecules found in mitochondria (and in chloroplasts in plants).
+      \textbf{Extranuclear inheritance} involves transmission of genes located in organellar genomes---the circular DNA molecules in mitochondria and (\textit{in plants}) chloroplasts.
 
-      In most animals—and in plants with respect to chloroplast DNA—a zygote receives nearly all of its cytoplasm and organelles from the egg. The sperm typically contributes little more than a haploid set of nuclear chromosomes. As a result, mitochondrial DNA (and chloroplast DNA in plants) is usually inherited exclusively from the mother, a pattern known as \textit{maternal inheritance}.    
+      In most animals, zygotes receive nearly all cytoplasm and organelles from the egg; sperm contribute primarily nuclear chromosomes. Consequently, mitochondrial DNA (\textit{and chloroplast DNA in plants}) exhibits \textbf{maternal inheritance}.
 
     \end{core}
 
