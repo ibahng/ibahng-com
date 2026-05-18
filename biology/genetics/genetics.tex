@@ -181,103 +181,133 @@
 
   \subsection{Inheritance and Mendel's Peas}
 
-    \begin{core}{Mendel's Pea Experiments}
+    \begin{core}{Mendel's Experiments}
 
-      Around 1857, Gregor Mendel, an Austrian monk, began conducting experiments on garden peas in the monastery garden in Brno. He focused on traits that existed in two distinct forms and began with \textbf{true-breeding} plants, which produce identical offspring through repeated self-pollination. He then performed \textbf{hybridization} by crossing two contrasting true-breeding varieties, designating them as the \textbf{P generation} (parental generation). Their offspring constituted the \textbf{F1 generation}. Mendel allowed the F1 plants to self-pollinate, producing the \textbf{F2 generation}. By analyzing patterns across the P, F1, and especially the F2 generations, Mendel deduced the fundamental principles of inheritance which we will discuss shortly.
+      Beginning around 1857, Gregor Mendel conducted systematic experiments on plant species in Brno, focusing on traits exhibiting discrete alternative forms. His experimental design employed \textbf{true-breeding} plants---lines producing identical offspring through repeated self-pollination---as the \textbf{P generation} (\textit{parental generation}). \textbf{Hybridization} between contrasting true-breeding varieties yielded the \textbf{F1 generation}, which upon self-pollination produced the \textbf{F2 generation}. Analysis of phenotypic ratios across these generations enabled Mendel to deduce the fundamental principles of inheritance.
 
-      \myfig{0.8}{genetics_figures/mendel_flowers}{caption}{fig:fig9}
+      \myfig{0.8}{genetics_figures/mendel_flowers}{Mendel's experiments examining flower color}{fig:fig9}
 
-      Shown above are the results of one of Mendel's experiments examining flower color.
-
-      At the time, the prevailing \textit{blending hypothesis} proposed that parental traits mix like paint, predicting uniform intermediate offspring that would persist across generations. However, Mendel's experiments contradicted this idea. Crossing true-breeding purple- and white-flowered plants produced all-purple F1 offspring rather than an intermediate color. When the F1 plants self-pollinated, white flowers reappeared in the F2 generation in an approximate 3:1 ratio (purple:white). These results demonstrated that traits are inherited as discrete units (now known as genes), with \textbf{dominant} units masking the expression of \textbf{recessive} units rather than blending with them.    
+      The prevailing \textit{blending hypothesis} predicted that parental traits would blend uniformly in offspring, producing intermediate phenotypes that would persist across generations. Mendel's crosses of true-breeding purple- and white-flowered plants contradicted this model: F1 offspring displayed exclusively purple flowers rather than an intermediate color, and white flowers reappeared in the F2 generation at an approximate 3:1 ratio (\textit{purple:white}). These results established that hereditary factors are transmitted as discrete units (\textit{now recognized as genes}), in which \textbf{dominant} alleles mask the phenotypic expression of \textbf{recessive} alleles.
 
     \end{core}
 
     \begin{core}{Mendel's Model of Inheritance}
 
-      Let us now examine four related concepts Mendel used to explain his model of inheritance.
+      Mendel's model of inheritance rests on four foundational principles.
 
       \begin{enumerate}
 
-        \item Alternative versions of genes account for variations in inherited characters.
+        \item Alternative versions of genes (\textit{alleles}) account for variations in inherited characters.
 
-        \item For each character, an organism inherits two versions (that is, two \textbf{alleles}) of a gene, one from each parent.
+        \item For each character, an organism inherits two \textbf{alleles} of a gene, one from each parent.
 
-        \item If the two alleles at a given locus differ, one—the \textbf{dominant} allele (denoted by an uppercase letter, e.g., purple or \textit{P})—determines the organism's phenotype. The other—the \textbf{recessive} allele (denoted by a lowercase letter, e.g., white or \textit{p})—does not affect the phenotype in the presence of the dominant allele.
+        \item When alleles at a given locus differ, the \textbf{dominant} allele (\textit{denoted by uppercase notation, e.g., P}) determines the phenotype, whereas the \textbf{recessive} allele (\textit{lowercase notation, e.g., p}) has no phenotypic effect in the presence of the dominant allele.
 
-        \item The two alleles for a heritable character segregate during gamete formation and end up in different gametes. Or the law of segregation (\textit{\autoref{core:segregation}})
+        \item The two alleles for a heritable character segregate during gamete formation, such that each gamete receives only one allele (\textit{the law of segregation; \autoref{core:segregation}}).
 
       \end{enumerate}
 
     \end{core}
 
+    \begin{core}[label=core:pheno_geno]{Phenotypes \& Genotypes}
+
+      Organisms possessing two identical alleles for a gene are \textbf{homozygous} (\textit{PP or pp}), whereas those with two different alleles are \textbf{heterozygous} (\textit{Pp}).
+
+      Because different allelic combinations can produce identical observable traits, appearance does not necessarily reveal genetic composition. We therefore distinguish between an organism's \textbf{phenotype} (\textit{observable traits}) and its \textbf{genotype} (\textit{genetic makeup}).
+
+
+      \sbs{0.48}{
+        Using these definitions: \textit{PP} represents a homozygous dominant genotype expressing the dominant phenotype; \textit{Pp} represents a heterozygous genotype also expressing the dominant phenotype; and \textit{pp} represents a homozygous recessive genotype expressing the recessive phenotype. Importantly, identical phenotypes need not correspond to identical genotypes.
+
+        Organisms displaying a dominant phenotype may be either homozygous dominant (\textit{PP}) or heterozygous (\textit{Pp}). To determine the genotype, a \textbf{testcross} is performed by crossing the unknown individual with a homozygous recessive individual (\textit{pp}). If any offspring exhibit the recessive phenotype, the unknown parent must be heterozygous (\textit{Pp}). If all offspring exhibit the dominant phenotype, the unknown parent is most likely homozygous dominant (\textit{PP}).
+      }{
+        \myfig{1}{genetics_figures/testcross}{Test cross}{fig:fig11}
+      }
+
+    \end{core}
+
     \begin{core}[label=core:segregation]{Law of Segregation}
 
-      This fourth point is known as the \textbf{law of segregation}. It can be illustrated using a \textbf{Punnett square}, which shows all possible allele combinations in the offspring of two parents for a given character, assuming their genotypes are known.
+      \sbs{0.6}{
+        The \textbf{law of segregation} states that the two alleles for each gene separate during gamete formation, such that each gamete receives only one allele.
+        
+        The law of segregation can be illustrated using a \textbf{Punnett square} (\textit{\autoref{fig:punnett_example}}), which displays all possible allele combinations in offspring given parental \textbf{genotypes} (\textit{\autoref{core:pheno_geno}}). Each cell in the grid represents an equally likely fertilization event, and the relative frequencies of different genotypes can be predicted from the number of cells showing each combination. 
 
-      \myfig{0.5}{genetics_figures/punnett}{caption}{fig:fig10}
+        The predictive power of the law of segregation rests on probability. While the Punnett square shows all possible outcomes, each individual offspring results from a single random fertilization. 
+      }{
+        \pgfig{
+            % Define colors
+            \definecolor{fatherblue}{RGB}{70, 130, 180}
+            \definecolor{motherred}{RGB}{200, 50, 50}
+            
+            % Punnett square grid
+            \draw[thick] (0, 0) rectangle (4, 4);
+            \draw[thick] (2, 0) -- (2, 4);
+            \draw[thick] (0, 2) -- (4, 2);
+            
+            % Column headers (Father's alleles)
+            \node[fatherblue, font=\Large\bfseries] at (1, 4.5) {R};
+            \node[fatherblue, font=\Large] at (3, 4.5) {r};
+            
+            % Row headers (Mother's alleles)
+            \node[motherred, font=\Large\bfseries] at (-0.5, 3) {R};
+            \node[motherred, font=\Large\bfseries] at (-0.5, 1) {R};
+            
+            % Genotypes in cells
+            \node[font=\Large\bfseries] at (1, 3) {RR};
+            \node[font=\Large\bfseries] at (3, 3) {Rr};
+            \node[font=\Large\bfseries] at (1, 1) {RR};
+            \node[font=\Large\bfseries] at (3, 1) {Rr};
+        }{Punnett square showing cross between heterozygous father (\textit{Rr}) and homozygous dominant mother (\textit{RR})}{fig:punnett_example}{0.8}
+      }
 
     \end{core}
 
-    \begin{core}{Phenotypes \& Genotypes}
+    \begin{core}{Law of Independent Assortment \& Dihybrid Crosses}
 
-      An organism that has two identical alleles for a gene is called a \textbf{homozygote} and is said to be \textbf{homozygous} for that gene (\textit{PP} or \textit{pp}). In contrast, an organism that has two different alleles for a gene is called a \textbf{heterozygote} and is said to be \textbf{heterozygous} (\textit{Pp}).
+      Mendel's \textbf{law of independent assortment} states that alleles of different genes assort independently during gamete formation.
 
-      Because dominant and recessive alleles can produce the same observable trait in different genetic combinations, an organism's appearance does not always reveal its genetic composition. We therefore distinguish between an organism's observable traits, its \textbf{phenotype}, and its genetic makeup, its \textbf{genotype}.
+      \myfig{0.82}{genetics_figures/dihybrid}{Dihybrid cross examining seed color and shape}{fig:fig12}
 
-      Using these definitions: \textit{PP} represents a homozygous dominant genotype with a dominant phenotype; \textit{Pp} represents a heterozygous genotype with a dominant phenotype; and \textit{pp} represents a homozygous recessive genotype with a recessive phenotype. Notice that the same phenotype does not necessarily correspond to the same genotype.
+      In order to derive this law, Mendel also examined two characters simultaneously, such as seed color (\textit{yellow/Y or green/y}) and seed shape (\textit{round/R or wrinkled/r}). Crossing true-breeding parents differing in both traits (\textit{YYRR × yyrr}) produced F1 \textbf{dihybrids} heterozygous for both characters (\textit{YyRr}).
 
-      If an organism displays a dominant phenotype, we cannot determine whether its genotype is homozygous dominant (\textit{PP}) or heterozygous (\textit{Pp}) based on appearance alone. To determine its genotype, we can perform a \textbf{testcross} by mating it with an organism that is homozygous recessive (\textit{pp}), which always donates the recessive phenotype.
-
-      If any offspring display the recessive phenotype, the unknown parent must be heterozygous (\textit{Pp}), since it contributed the recessive allele. If all offspring display the dominant phenotype, the unknown parent is most likely homozygous dominant (\textit{PP}).
-
-      \myfig{0.6}{genetics_figures/testcross}{caption}{fig:fig11}
-
-    \end{core}
-
-    \begin{core}{Law of Independent Assortment}
-
-      The second law Mendel derived from his experiments is the \textbf{law of independent assortment}, which states that alleles of different genes assort independently of one another during gamete formation.
-
-      So far, we have discussed crosses involving only a single character. The F1 offspring from two contrasting true-breeding parents are called \textbf{monohybrids}, meaning they are heterozygous for the one specific character being studied.
-
-      Mendel also examined two characters simultaneously, such as seed color (yellow/\textit{Y} or green/\textit{y}) and seed shape (round/\textit{R} or wrinkled/\textit{r}). When he crossed true-breeding parents for both traits (\textit{YYRR} x \textit{yyrr}), the F1 offspring were \textbf{dihybrids}, individuals heterozygous for both characters (\textit{YyRr}).
-
-      If the two genes were inherited together (i.e., did not assort independently), the F2 offspring from crossing F1 heterozygotes would show a 3:1 phenotypic ratio for each combined trait pattern. However, when genes assort independently, the F2 phenotypic ratio follows the characteristic 9:3:3:1 pattern observed in a \textbf{dihybrid cross}.
-
-      The actual results of the experiment supported the independent over the dependent assortment hypothesis.
-
-      \myfig{0.8}{genetics_figures/dihybrid}{caption}{fig:fig12}
+      If genes were inherited together (\textit{dependent assortment}), F2 offspring would exhibit a 3:1 phenotypic ratio. However, independent assortment produces the characteristic 9:3:3:1 ratio observed in \textbf{dihybrid crosses}. Mendel's experimental results supported independent assortment.
 
     \end{core}
   
   \subsection{Complex Inheritance Patterns}
 
-    Although Mendel laid a foundational explanation for inheritance patterns observed for simple traits, not all heritable characteristics were determined so simply, and the relationship between genotype and phenotype is rarely so straightforward. In this section, we will cover the more complex inheritance patterns that are observed in nature.
+    While Mendel established foundational principles for simple traits, many heritable characteristics exhibit more complex patterns, and the genotype-phenotype relationship is often not straightforward.
 
     \begin{core}{Single Gene Abnormal Inheritance Patterns}
 
-      First we will consider extensions of Mendelian genetics for a single gene.
+      We first consider non-Mendelian patterns involving a single gene.
 
       \begin{enumerate}
 
-        \item \textbf{Complete dominance:} In Mendel's classic pea crosses, the F1 offspring always looks like one of the two parental varieties because one allele in a pair showed complete complete dominance over the other
+        \item \textbf{Complete dominance:} In Mendel's classic pea crosses, F1 offspring always resembled one parental variety because one allele exhibited complete dominance over the other.
 
-        \item \textbf{incomplete dominance:} for some genes, neither allele is completely dominant over the other, and thus the f1 hybrids would have a phenotype that is a blend of the two parental phenotypes. for example, true-breeding red and white peas would have an f1 hybrid that is phenotypically pink.
+        \sbs{0.55}{
+          \item \textbf{Incomplete dominance:} For some genes, neither allele is completely dominant, and F1 hybrids exhibit an intermediate phenotype. For example, crossing true-breeding red and white flowers produces F1 offspring with pink flowers.
+        }{
+          \myfig{0.9}{genetics_figures/incomplete_dominance}{Incomplete dominance of flower color}{fig:fig13}
+        }
 
-        \myfig{0.4}{genetics_figures/incomplete_dominance}{caption}{fig:fig13}
+        \sbs{0.55}{
+          \item \textbf{Codominance:} Both alleles independently affect the phenotype in distinguishable ways. For example, the human MN blood group is determined by codominant alleles encoding M and N surface molecules on red blood cells. Homozygous individuals express only one molecule type, whereas heterozygous individuals express both.
+        }{
+          \myfig{0.7}{genetics_figures/codominance}{Codominance of flower color}{fig:fig14}
+        }
 
-        \item \textbf{Codominance:} In this variation, the two alleles each affect the phenotype in separate, distinguishable ways. For example, the human MN blood group is determined by codominant alleles for two specific molecules locaed on the surface of red blood cells, the M and N moleucules. While a homozygous individual would only express the M or N molecule, a heterozygous individual would express both molecules. Below is an example of codominance using the same flower color trait.
+        \textbf{Whether a gene displays incomplete dominance or codominance depends on the level of phenotypic analysis.} The heterozygous pink flower in \autoref{fig:fig13}, for instance, appears uniformly pink macroscopically (\textit{incomplete dominance}), yet molecular analysis may reveal a mixture of red and white pigment molecules (\textit{codominance}). Classification therefore depends on observational scale.
 
-        \myfig{0.3}{genetics_figures/codominance}{caption}{fig:fig14}
+        \sbs{0.35}{
+          \item \textbf{Multiple Alleles:} Most genes exist in more than two allelic forms within a population. The human ABO blood group, for instance, is determined by three alleles: $I^A$, $I^B$, and $i$, with each individual possessing any two of these.
+        }{
+          \myfig{0.9}{genetics_figures/multiple_alleles}{Multiple alleles of human blood groups}{fig:fig15}
+        }
 
-        It's important to note here that \textbf{whether a certain gene displays incomplete dominance or codominance is also dependent on the level at which the phenotype is analyzed}. Take the heterozygous pink flower for example shown in incomplete dominance. While from afar it may look uniformly pink, actual pigment molecules that are present may be just a uniform mix of both red and white which would indicate codominance. From a simple visual level, this gene shows incomplete dominance, but from a molecular level it shows codominance.
-
-        \item \textbf{Multiple Alleles:} Most genes have more than two alleles. The ABO blood group in humans, for instance, are determined by the two alleles a person has of the blood group gene; the three possible alleles are $I^A$, $I^B$, and $i$.
-
-        \myfig{0.5}{genetics_figures/multiple_alleles}{caption}{fig:fig15}
-
-        \item \textbf{Pleiotropy:} Some genes also have multiple phenotypic effects. For instance. the gene that determines the flower color in the pea also affects the color of the coating on the outer surface of the seed, which can be gray or white.
+        \item \textbf{Pleiotropy:} Single genes may influence multiple phenotypic traits. For instance, the gene determining pea flower color also affects seed coat color (\textit{gray or white}).
 
       \end{enumerate}
 
@@ -285,17 +315,19 @@
 
     \begin{core}{Multi-Gene Abnormal Inheritance Patterns}
 
-      Now let consider extensions of Mendelian genetics for two or more genes.
+      We now consider non-Mendelian patterns involving multiple genes.
 
       \begin{enumerate}
 
-        \item \textbf{Epistasis:} The phenotypic expression of a gene at one \textbf{locus} (the location of the gene on the chromosome) alters that of a gene at a second locus. In Labrador retrievers, black coat color (\textit{B}) is dominant to brown (\textit{b}). A second gene determines whether or not pigment will be deposited in the hair. The dominant allele, symbolized by E, result sin the deposition of either black or brown pigment, depending on the genetype f the first locus. But if the Lab is \textit{ee}, then the coat is yellow, regardless of the genotype at the black/brown locus.
+        \sbs{0.4}{
+          \item \textbf{Epistasis:} The phenotypic expression of one gene modifies the expression of another gene at a different \textbf{locus} (\textit{chromosomal location}). In Labrador retrievers, coat color is determined by two genes: one locus controls pigment type (\textit{black B is dominant to brown b}), while a second locus controls pigment deposition (\textit{dominant E allows deposition}). However, homozygous recessive individuals (\textit{ee}) have yellow coats regardless of genotype at the pigment-type locus.
+        }{
+          \myfig{0.9}{genetics_figures/epistasis}{Epistasis of Labrador retriever coat color}{fig:fig16}
+        }
 
-        \myfig{0.44}{genetics_figures/epistasis}{caption}{fig:fig16}
+        \item \textbf{Polygenic Inheritance:} Many characteristics (\textit{e.g., skin color, height}) exhibit continuous variation rather than discrete alternatives. Such \textbf{quantitative characters} result from the additive effects of multiple genes. Below is a simplified model of skin color determined by three genes.
 
-        \item \textbf{Polygenic Inheritance:} Many characteristics, like skin color and height, are not one of two discrete characters, but instead vary in the population in gradations along a continuum. These are called \textbf{quantitative characters} that depend on the expression of several genes. Below is a simplifed example of skin color uding only three genes.
-
-        \myfig{0.44}{genetics_figures/polygenic_inheritance}{caption}{fig:fig17}
+        \myfig{0.58}{genetics_figures/polygenic_inheritance}{Polygenic inheritance of skin color}{fig:fig17}
 
       \end{enumerate}
 
@@ -303,41 +335,33 @@
 
     \begin{core}{Multifactorial Characteristics}
 
-      Although genes and genotypes are the foundation of an individual's phenotype, certain characteristics like skin color that we've seen just now are also influenced by environmental factors, such as exposure to sun. Geneticits refer to such characters as \textbf{multifactorial}, meaning that many factors, both genetic and environmental, collectively influence phenotype.   
+      While genotype provides the foundation for phenotype, certain characteristics (\textit{such as skin color}) are also influenced by environmental factors (\textit{e.g., sun exposure}). Such traits are termed \textbf{multifactorial}, reflecting the combined influence of multiple genetic and environmental factors on phenotypic expression.
 
     \end{core}
  
   \subsection{Use Cases for Mendelian Patterns of Inheritance}
 
-    \begin{core}{Pedigree}
+    \begin{core}{Pedigrees}
 
-      Rather than performing controlled breeding experiments, geneticists analyze human inheritance patterns by constructing a family tree called a \textbf{pedigree}, which traces the transmission of a particular trait across generations.
-
-      \myfig{0.6}{genetics_figures/pedigree}{caption}{fig:fig18}
-
-      The pedigree shown above illustrates inheritance of a recessive trait (e.g., widow's peak). Although this is a simple example, pedigrees are especially important when studying alleles that cause serious or life-threatening diseases.
-
-    \end{core}
-
-    \begin{core}{Pedigree Analysis (\textit{Recessive Disorders})}
-
-      In \textbf{recessive disorders}, heterozygous individuals (\textit{Aa}) typically have a normal phenotype because one functional allele produces enough protein for normal function. These individuals are called \textbf{carriers} because they can pass the recessive allele to their offspring. Homozygous recessive individuals (\textit{aa}) express the disorder, having inherited a recessive allele from each parent.
-
-      Most individuals with recessive disorders are born to parents who are carriers but phenotypically normal. In contrast, individuals affected by a lethal recessive disorder often do not reproduce, which helps keep such alleles relatively rare in the population.
+      \sbs{0.4}{
+        In lieu of controlled breeding experiments (\textit{infeasible for ethical reasons}), human geneticists analyze inheritance patterns using \textbf{pedigrees}, which are family trees that trace the transmission of a particular trait across generations.
+      }{
+        \myfig{0.95}{genetics_figures/pedigree}{Pedigree analysis of widow's peak (\textit{recessive trait})}{fig:fig18}
+      }
 
     \end{core}
 
-    \begin{core}{Pedigree Analysis (\textit{Dominant Disorders})}
+    \begin{core}{Pedigree Analysis of Disorders}
 
-      In \textbf{dominant disorders}, heterozygous individuals are phenotypically affected. An example is \textbf{achondroplasia}, a form of dwarfism. Individuals without achondroplasia are homozygous recessive. Because this condition is not typically lethal and does not prevent reproduction, the allele can persist in the population.
-
-      For dominant alleles that cause lethal diseases, the phenotype is usually rare because affected individuals often die before reproducing. However, a dominant lethal allele can still be transmitted if symptoms appear after reproductive age. For example, \textbf{Huntington's disease} is a neurodegenerative disorder caused by a dominant allele whose effects typically appear in mid-adulthood.
+      Pedigree analysis is particularly valuable for studying disease-causing alleles. In \textbf{recessive disorders}, heterozygous individuals (\textit{Aa}) exhibit normal phenotypes because one functional allele produces sufficient protein. These \textbf{carriers} can transmit the recessive allele to offspring, though only homozygous recessive individuals (\textit{aa}) express the disorder. Most affected individuals are born to phenotypically normal carrier parents, and lethal recessive alleles remain rare because affected individuals typically do not reproduce.
+      
+      In \textbf{dominant disorders}, heterozygous individuals are phenotypically affected. \textbf{Achondroplasia}, a form of dwarfism caused by a dominant allele, persists in populations because the condition does not prevent reproduction; unaffected individuals are homozygous recessive. Dominant lethal alleles are generally rare because affected individuals die before reproducing. However, such alleles can persist if symptoms manifest after reproductive age, as in \textbf{Huntington's disease}, a neurodegenerative disorder with typical onset in mid-adulthood.
 
     \end{core}
 
     \begin{core}{Multifactorial Diseases}
 
-      Thus far, we have focused on simple Mendelian disorders caused by mutations at a single genetic locus. However, many common diseases have a \textbf{multifactorial} basis, involving both genetic predisposition and environmental influences. For instance, susceptibility to heart disease or stroke depends not only on genotype but also strongly on lifestyle and other environmental factors.
+      While the preceding discussion focused on single-locus Mendelian disorders, many common diseases have a \textbf{multifactorial} basis involving both genetic predisposition and environmental influences. Susceptibility to cardiovascular disease or stroke, for instance, depends on both genotype and lifestyle factors (\textit{smoking, exercise, etc.}).
 
     \end{core}
 
