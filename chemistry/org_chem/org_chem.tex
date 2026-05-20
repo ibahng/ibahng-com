@@ -424,7 +424,7 @@
           \reactionfigarrow{nucleophile}{60}{electrophile}{180}{Red}
           \reactionfigarrow{bond}{100}{leaving}{80}{Red}
         }
-      }{\snt mechanism reaction}{fig:filler2}{1.0}
+      }{\snt mechanism reaction}{fig:snt_mechanism}{1.0}
 
       It is important to note that \snt reactions occur in \textbf{one step}, where bond making and breaking occur simultaneously, meaning there are no intermediates---unlike the two-step propagation of radical halogenation (\textit{\autoref{core:two_step_prop}}). Consequently, the energy diagram consists of a single hill and is exothermic when the nucleophile is a more favorable attachment than the leaving group. \textit{L is denoted as X in the figure below.}
 
@@ -1489,9 +1489,10 @@
 
       \begin{core}{Alkanes}
 
-        Alkanes are the simplest form of hydrocarbons---compounds composed entirely of C and H atoms in a linear, single-bond chain. Their names are based on the number of carbon atoms in the chain. For instance, the simplest form is methane (\ce{CH4}), then ethane (\ce{C2H6}), and etc. The chemical formula of an alkanes follows a pattern and is expressed as \ce{C_{n}H_{2n+2}}.
+        Alkanes are saturated hydrocarbons composed exclusively of carbon and hydrogen atoms connected by single covalent bonds. Nomenclature is determined by the number of carbon atoms in the chain: methane (\ce{CH4}) contains one carbon, ethane (\ce{C2H6}) contains two, and so forth. All alkanes conform to the general molecular formula \ce{C_{n}H_{2n+2}}, where $n$ represents the number of carbon atoms.
 
-        \begin{center}
+        \begin{table}[H]
+          \centering
           \begin{tabular}{cc}
             \hline
             Carbon Count & Alkane Name \\
@@ -1512,92 +1513,83 @@
             14 & Tetradecane \\
             \hline
           \end{tabular}
-        \end{center}
+          \caption{Systematic nomenclature of alkanes by carbon number}
+          \label{tab:alkanes}
+        \end{table}
 
       \end{core}
 
       \begin{core}{Alkyl Substituents}
 
-        An alkyl substituent is essentially its cooresponding alkane with one H removed at the end. Its chemical formula is expressed as \ce{C_{n-1}H_{2n+1}}, and its naming scheme is identical to that of alkanes except that the end "-ane" is replaced with "-yl" (e.g. ethyl (\ce{C2H5})). Propyl is shown as an example below.
+        An alkyl \textbf{substituent} is derived from its corresponding alkane by removal of a terminal hydrogen atom. Its general chemical formula is expressed as \ce{C_{n}H_{2n+1}}, and its nomenclature follows that of alkanes, with the suffix "-ane" replaced by "-yl" (\textit{e.g., ethyl, \ce{C2H5}}). 
 
-        \myfig{0.25}{org_chem_figures/propyl}{Propyl Substituent}{fig:propyl}
+        \myfig{0.25}{org_chem_figures/propyl}{Propyl substituent}{fig:propyl} % change to chemfig
         
       \end{core}
 
-      \begin{core}{Alkane IUPAC System}
+      \begin{core}[label=core:alkane_iupac]{Alkane IUPAC System}
 
-        When naming organic molecules, chemists follow a standardized nomenclature system made by the \textbf{International Union of Pure and Applied Chemistry (IUPAC)}. The process of naming an organic molecule is done in the following steps.
+        The nomenclature of organic molecules adheres to a standardized system established by the \textbf{International Union of Pure and Applied Chemistry (IUPAC)}. The systematic naming of an organic molecule proceeds according to the following steps.
 
-        (1) Find the longest alkane chain (stem) and name it based on its number of carbon atoms as we have done above. When there are two \textbf{equal longest} chains, choose the one with \textbf{more substituents}.
+        \begin{enumerate}[label=(\arabic*)]
 
-        \myfig{0.7}{org_chem_figures/iupac_1}{Longest Chain Selection}{fig:iupac_1}
+          \item \textbf{Parent Chain Identification}: Identify the longest continuous alkane chain (\textit{parent chain}) and assign its name based on the number of carbon atoms, as previously described in \autoref{tab:alkanes}. When two chains of \textbf{equal length} exist, select the chain bearing the \textbf{greater number of substituents}.
 
-        In the example above, the longest chain has 6 carbons, thus we name it \textbf{hexane}. Recognize that the left chain has more substituents than the right chain, thus the left chain is chosen in the context of naming.
+          \myfig{0.7}{org_chem_figures/iupac_1}{Identifying the parent chain}{fig:iupac_1} % change to chemfig
 
-        (2) Name the substituents as either \textbf{alkyl} (ethyl, propyl, butyl, etc.) or \textbf{halo} (bromo, fluoro, chloro, iodo). We will refer to substituents as \textit{R} in this section.
+          In \autoref{fig:iupac_1}, the longest chain contains 6 carbon atoms and is therefore designated \textbf{hexane}. Note that the left chain possesses more substituents than the right chain; consequently, the left chain is selected as the parent chain for nomenclature purposes.
 
-        (2a) For a \textbf{straight chain R}, we simply name the R as we have defined in (2).
+          \item \textbf{Substituents}: Classify and name the substituents as either \textbf{alkyl} groups (\textit{ethyl, propyl, butyl, etc.}) or \textbf{halo} groups (\textit{bromo, fluoro, chloro, iodo}). Substituents will be denoted as \textit{R} throughout this section.
 
-        \myfig{0.3}{org_chem_figures/iupac_2a}{Straight Chain Substituent}{fig:iupac_2a}
+          \begin{enumerate}
 
-        (2B) For a \textbf{branched chain R}, we again find the longest chain within R and also name the substituents of this chain within R. 
+            \item \textbf{Unbranched Substituents}: For an unbranched substituent R, apply the naming convention defined in step (2) directly.
 
-        \myfig{0.35}{org_chem_figures/iupac_2b}{Branched Chain Substituent}{fig:iupac_2b}
+            \myfig{0.3}{org_chem_figures/iupac_2a}{Unbranched substituents}{fig:iupac_2a}
 
-        The branched R group above would be named methylpropyl.
+            \item \textbf{Branched Substituents}: For a branched substituent R, identify the longest carbon chain within R and systematically name any substituents attached to this chain.
 
-        (2c) When we face multiple of the same substituents, we simply use the prefixes di-, tri-, tetra-, etc. for straight chain R groups and bis-, tris-, tetrakis-, etc. for branched chain R groups.
+            \myfig{0.35}{org_chem_figures/iupac_2b}{Methylpropyl branched substituent}{fig:iupac_2b}
 
-        Here is an example of naming multiple straight chain R groups.
-        
-        \myfig{0.45}{org_chem_figures/iupac_2ca}{Multiple Straight Chain Substituents}{fig:iupac_2ca}
-        
-        Here is an example of naming multiple branched chain R groups.
+            \item \textbf{Multiple Identical Substituents}: When multiple identical substituents are present, employ the prefixes di-, tri-, tetra-, etc. for unbranched R groups and bis-, tris-, tetrakis-, etc. for branched R groups.
 
-        \myfig{0.45}{org_chem_figures/iupac_2cb}{Multiple Branched Chain Substituents}{fig:iupac_2cb}
+            \myfig{0.45}{org_chem_figures/iupac_2ca}{Multiple Straight Chain Substituents}{fig:iupac_2ca} % combine with figure below
 
-        (2d) Although there is a systematic name for every type of alkyl substituent, there are some colloquially used names for certain alkyl substituents that can only be learned through memorization.
+            \myfig{0.45}{org_chem_figures/iupac_2cb}{Multiple straight (\textit{left}) and branched (\textit{right}) chain substituents}{fig:iupac_2cb}
 
-        \myfig{0.5}{org_chem_figures/iupac_2d}{Common Alkyl Substituent Names}{fig:iupac_2d}
+            \item \textbf{Common Substituent Names}: While systematic nomenclature exists for all alkyl substituents, certain common names remain in widespread use and must be committed to memory.
 
-        (3) Now we have to number the carbons along the stem alkane in order to express the positions of the substituents. The numbering scheme starts from the end that is \textbf{closest to a substituent}.
-        
-        \myfig{0.5}{org_chem_figures/iupac_3a}{Numbering Closest to Substituent}{fig:iupac_3a}
-        
-        It both ends are equidistant to the first substituent, proceed until the \textbf{first point of difference}.
-        
-        \myfig{0.35}{org_chem_figures/iupac_3b}{First Point of Difference Rule}{fig:iupac_3b}
-        
-        And if the positioning of the substituents are exactly the same, the numbering begins in the end where the first substituent's name is \textbf{alphabetically first}.
+            \myfig{0.5}{org_chem_figures/iupac_2d}{Common Alkyl Substituent Names}{fig:iupac_2d} % change to chemfig
 
-        \myfig{0.35}{org_chem_figures/iupac_3c}{Alphabetical Numbering Rule}{fig:iupac_3c}
+          \end{enumerate}
 
-        As you can see above, the positioning of the substituents are identical from both ends, however ethyl comes alphabetically first relative to methyl, thus the numbering starts from the right end. 
+          \item \textbf{Position Numbering} Number the carbon atoms along the parent chain to indicate substituent positions. The numbering sequence initiates from the terminus \textbf{nearest to a substituent}. If both termini are equidistant from the first substituent, continue comparison until reaching the \textbf{first point of difference}.
 
-        This same numbering scheme is used in numbering the stem of a branched chain R group. However, we always start from the carbon of attachment in this case. 
+          \myfig{0.5}{org_chem_figures/iupac_3a}{Numbering of parent chain in the order of earliest substituent presence}{fig:iupac_3a}
 
-        \myfig{0.3}{org_chem_figures/iupac_3d}{Branched Chain Numbering}{fig:iupac_3d}
+          \myfig{0.35}{org_chem_figures/iupac_3b}{Numbering of parent chain in the order of earliest substituent presence and first point of difference}{fig:iupac_3b} % combine with above figure
 
-        (4) Now that we have determined the names and positions of the substituents, we can name the alkane. Keep in mind that we order the substituent names \textbf{alphabetically} (not numerically). The locations are given by a number prefix coorespondingly.
+          If substituent \textbf{positions remain identical} from either direction, initiate numbering from the terminus where the first substituent's name appears \textbf{alphabetically earliest}.
 
-        \myfig{0.4}{org_chem_figures/iupac_4a}{Alphabetical Ordering of Substituents}{fig:iupac_4a}
+          \myfig{0.35}{org_chem_figures/iupac_3c}{Alphabetical numbering of parent chain when substituent position is mirrored; \textit{ethyl precedes methyal alphabetically, therefore numbering commences from the right terminus}}{fig:iupac_3c}
 
-        Also keep in mind that the alphabetical order contribution of prefixes di-, tri-, bis-, etc. are \textbf{not counted} for the main stem R groups, but \textbf{are counted} when in branched R groups.
+          This numbering protocol applies equally to the parent chain within a branched substituent. However, numbering invariably begins at the carbon atom of attachment to the main chain.
 
-        \myfig{0.75}{org_chem_figures/iupac_4b}{Alphabetical Counting of Prefixes}{fig:iupac_4b}
+          \myfig{0.3}{org_chem_figures/iupac_3d}{Branched chain numbering}{fig:iupac_3d} % change to chemfig
 
-      \end{core}
+          \item \textbf{Alphabetical Substituent Ordering} Having established both the identities and positions of substituents, the complete name of the alkane can now be constructed. Note that substituent names are ordered \textbf{alphabetically} rather than numerically. Positional designations are indicated by numerical prefixes corresponding to each substituent.
 
-      \begin{core}{Alkane IUPAC Example}
+          \myfig{0.4}{org_chem_figures/iupac_4a}{Alphabetical ordering of substituents}{fig:iupac_4a} % change to chemfig
 
-        Let's take a look at one final large example.
+          Note that multiplicative prefixes such as di-, tri-, and bis- are \textbf{disregarded} when alphabetizing substituents on the parent chain, but \textbf{are considered} when alphabetizing within complex branched substituent names.
 
-        \myfig{0.6}{org_chem_figures/iupac_final}{Complex Nomenclature Example}{fig:iupac_final}
+          \myfig{0.75}{org_chem_figures/iupac_4b}{Alphabetical counting of prefixes; \textit{EXPLANATION PLACEHOLDER}}{fig:iupac_4b} % change to chemfig
 
-        The name of the compound above would be the following:
-        \[
-          \text{12-bromo-3-ethyl-6-iodo-5,13-dimethyl-8-(2-methylpentyl)-14-(2-methylpropyl)octadecane}
-        \]
+        \end{enumerate}
+
+        A comprehensive example illustrating these principles is presented below.
+
+        \myfig{0.6}{org_chem_figures/iupac_final}{12-bromo-3-ethyl-6-iodo-5,13-dimethyl-8-(2-methylpentyl)-14-(2-methylpropyl)octadecane}{fig:iupac_final} % change to chemfig
 
       \end{core}
 
@@ -1613,39 +1605,36 @@
 
       \begin{core}{Cycloalkanes}
 
-        Cycloalkanes are alkane rings that are named according to the number of carbons with a "cyclo-" prefix.
+        Cycloalkanes are cyclic alkane structures named systematically according to the number of carbon atoms in the ring, with the prefix "cyclo-" preceding the parent alkane name.
 
-        \myfig{0.45}{org_chem_figures/cycloalkanes}{Cycloalkane Examples}{fig:cycloalkanes}
+        \myfig{0.45}{org_chem_figures/cycloalkanes}{Cycloalkane Examples}{fig:cycloalkanes} % change to chemfig
 
-        \textit{In order to understand this section, pleaes make sure to understand \autoref{sec:alkane}}
+        \textit{A thorough understanding of \autoref{sec:alkane} is prerequisite to this section.}
 
       \end{core}
 
-      \begin{core}{Cycloalkane vs Alkane Stem}
+      \begin{core}[label=core:cycloalkane_iupac]{Cycloalkane vs Alkane Parent Chain}
 
-        Within a compound that contains both a cycloalkane and a chain alkane, the stem alkane is still chosen as the one with the most carbons. 
+        In compounds containing both cycloalkane and acyclic alkane chains, the parent chain is designated as the structural unit possessing the greater number of carbon atoms.
 
-        \myfig{0.5}{org_chem_figures/iupac_ca}{Cycloalkane as Substituent}{fig:iupac_ca}
+        \myfig{0.5}{org_chem_figures/iupac_ca}{Cycloalkane as substituent}{fig:iupac_ca}
 
-        For instance the compound above would be called \textbf{1-cyclopentylhexane}.
+        \myfig{0.4}{org_chem_figures/iupac_cb}{1-cyclopentylhexane (\textit{left; cycloalkane as substituent}) and propylcyclopentane (\textit{right; chain alkane as substituent})}{fig:iupac_cb} % combine with above figure
 
-        Under the case of a cycloalkane having more carbons than the chain alkane, the stem is the cycloalkane.
-
-        \myfig{0.4}{org_chem_figures/iupac_cb}{Chain Alkane as Substituent}{fig:iupac_cb}
-
-        The compound above would be called \textbf{propylcyclopentane}. Notice that we do not need a number prefix for the propyl because there is only one substituent to the stem cycloalkane and the numbering of cycloalkane carbons would be arbitrary in this case.
+        The compound depicted above is designated \textbf{propylcyclopentane}. Note that propylcyclopentane in \autoref{fig:iupac_cb}, a numerical locant for the propyl group is unnecessary, as only one substituent is present on the parent cycloalkane and carbon numbering would therefore be arbitrary.
 
       \end{core}
 
       \begin{core}{Cycloalkane Substituents}
 
-        When there are multiple substituents to the cycloalkane, we (1) number the carbons in a way that requires the lowest digit sequence and (2) name the substituents alphabetically in the compound name.
+        When multiple substituents are attached to a cycloalkane ring, carbon atoms are numbered to yield the lowest possible digit sequence and substituents are cited alphabetically in the systematic name.
 
         \myfig{0.7}{org_chem_figures/iupac_cc}{Multiple Substituents on Cycloalkane}{fig:iupac_cc}
 
-        In a scenario where multiple cycloalkanes are present in a compound, the smaller unit is substituent to the larger. Below is an example of \textbf{cyclopentylcyclohexane}.
+        When a compound contains multiple cycloalkane units, the smaller ring functions as a substituent to the larger ring. 
+        An example of \textbf{cyclopentylcyclohexane} is provided below.
 
-        \myfig{0.25}{org_chem_figures/iupac_cd}{Nested Cycloalkanes}{fig:iupac_cd}
+        \myfig{0.25}{org_chem_figures/iupac_cd}{Cyclopentylcyclohexane}{fig:iupac_cd}
 
       \end{core}
 
@@ -1653,54 +1642,48 @@
 
     \begin{core}{Alcohol}
 
-      \textbf{Alcohols} are a fundamental class of compounds characterized by the presence of one or more hydroxyl (\ce{-OH}) groups attached to a carbon atom.
+      \href{../alcohols/alcohols.pdf}{\textbf{Alcohols}} constitute a fundamental class of organic compounds characterized by the presence of one or more hydroxyl (\ce{-OH}) functional groups bonded to sp$^3$-hybridized carbon atoms.
 
     \end{core}
 
-    \begin{core}{Alcohol IUPAC System}
+    \begin{core}[label=core:alcohol_iupac]{Alcohol IUPAC System}
 
-      Naming alcohol is done through the following steps.
+      The systematic nomenclature of alcohols follows the procedure outlined below.
 
-      (1) Find the longest chain \textbf{containing} the \ce{-OH} group and switch the suffix of alkan\textbf{e} to alkan\textbf{ol}. When there are multiple \ce{-OH} groups, the the suffix -ol becomes -diol, triol, etc. \textit{Mind that the chosen chain may not be the longest chain in the molecule.}
+      \begin{enumerate}[label=(\arabic*)]
 
-      (2) Number from the end \textbf{closest} to the \ce{-OH} group.
+        \item \textbf{Parent Chain Identification}: Identify the longest continuous carbon chain \textbf{containing the \ce{-OH} group} and replace the suffix alkan\textbf{-e} with alkan\textbf{-ol}. When multiple \ce{-OH} groups are present, the suffix -ol is modified to -diol, -triol, etc., accordingly. \textit{Note that the selected chain may not necessarily be the longest carbon chain in the molecule.}
 
-      (3) Follow the rest of the naming conventions in alkanes.
+        \item \textbf{Alcohol Substituents}: When \ce{-OH} or \ce{-OR} groups function as substituents rather than principal functional groups, they are designated as hydroxy- and alkoxy- groups, respectively. \textit{This nomenclature parallels the designation of alkane-derived substituents as alkyl- groups.}
 
-    \end{core}
+        \item \textbf{Position Numbering}: Initiate numbering from the terminus \textbf{nearest} to the \ce{-OH} group.
 
-    \begin{core}{Alcohol IUPAC Example}
+        \item \textit{Apply the remaining nomenclature conventions established for alkanes (\autoref{core:alkane_iupac})}.
 
-      Here are some examples of alcohol names using the nomenclature steps above.
+      \end{enumerate}
 
-      \myfig{0.6}{org_chem_figures/alc_nomenclature}{Alcohol Nomenclature Examples}{fig:alc_nomenclature}
+      Representative examples illustrating the application of the aforementioned nomenclature protocol are provided below.
+
+      \myfig{0.6}{org_chem_figures/alc_nomenclature}{Alcohol nomenclature examples}{fig:alc_nomenclature} % change to chemfig
 
     \end{core}
 
     \begin{core}{Cycloalkanols}
 
-      Cyclic alcohols are called \textbf{cycloalkanols} and follow the same nomenclature system as cycloalkanes. 
+      Cyclic alcohols are designated \textbf{cycloalkanols} and adhere to nomenclature conventions analogous to those of cycloalkanes (\textit{\autoref{core:cycloalkane_iupac}}). However, the carbon attached to the \ce{OH} group is always designated as \ce{C1}. 
 
-      \myfig{0.6}{org_chem_figures/cycloalkanes2}{Cycloalkanol Nomenclature Examples}{fig:cycloalkanol_nomenclature}
-
-      The names of the cycloalkanols above are 
-      \[
-          \text{cyclohexan-1-ol}\qquad\text{cis-3-methyl-cyclohexan-1-ol}\qquad\text{1-ethyl-cyclopentan-1-ol}
-      \]
-
-    \end{core}
-
-    \begin{core}{Alcohol Substituents}
-
-      Also, in cases where \ce{-OH} or \ce{-OR} groups are defined as substituents, they are called hydroxy- and alkoxy-, respectively. \textit{This is analogous to alkanes being called alkyl-.}
+      \myfig{0.6}{org_chem_figures/cycloalkanes2}{Cycloalkanol nomenclature examples}{fig:cycloalkanol_nomenclature} %combine with names below and change to chemfig
+      % \[
+      %     \text{cyclohexan-1-ol}\qquad\text{cis-3-methyl-cyclohexan-1-ol}\qquad\text{1-ethyl-cyclopentan-1-ol}
+      % \]
 
     \end{core}
 
     \begin{core}{Primary, Secondary, and Tertiary Alcohols}
 
-      Just like we have learned about primary, secondary, and tertiary halogen reactions, we also use the same system to define alcohol molecules as well.
+      Analogous to the classification system employed for haloalkanes, alcohols are similarly categorized as primary, secondary, or tertiary based on the degree of substitution at the carbon atom bearing the hydroxyl group.
 
-      \myfig{0.65}{org_chem_figures/pst_alcohols}{Primary, Secondary, and Tertiary Alcohols}{fig:pst_alcohols}
+      \myfig{0.65}{org_chem_figures/pst_alcohols}{Primary, secondary, and tertiary alcohols}{fig:pst_alcohols} % change to chemfig
 
     \end{core}
 
@@ -1708,13 +1691,13 @@
 
     \begin{core}{Ethers}
 
-      define ethers briefly here
+      \href{../ethers/ethers.pdf}{\textbf{Ethers}} constitute a fundamental class of organic compounds characterized by an oxygen atom bonded to two alkyl or aryl groups ($\ce{-O-}$), effectively serving as structural derivatives of water where both hydrogen atoms have been replaced by organic substituents.
 
     \end{core}
 
     \begin{core}{Ether IUPAC System}
 
-      In the context of nomenclature, the larger group is defined as the stem and other half is called an alkoxy substituent. Take a look at the following compounds.
+      In systematic ether nomenclature, the larger carbon-containing group is designated as the parent chain, while the smaller group attached to the oxygen is named as an alkoxy substituent (\textit{briefly mentioned in \autoref{core:alcohol_iupac} as \ce{-OR}}).
 
       \reactionfig{
         \scheme{
@@ -1740,13 +1723,13 @@
             -)
           }
         }
-      }{Ether nomenclature examples}{filler2}{0.8}
+      }{Ether nomenclature examples}{fig:filler2}{0.8} % change to chemfig and put the content below as part of captions
 
-      The respective names of each compound are the following
-
-      \[
-        \text{1-Ethoxypropane}\qquad\qquad\text{(2-Methylbutoxy)cyclohexane}
-      \]
+      % The respective names of each compound are the following
+      % The systematic IUPAC names of these compounds are as follows:
+      % \[
+      %   \text{1-Ethoxypropane}\qquad\qquad\text{(2-Methylbutoxy)cyclohexane}
+      % \]
 
     \end{core}
 
@@ -1754,141 +1737,158 @@
 
     \begin{core}{Thiols}
 
-      The sulfur analogs of ROH are called alkane \textbf{thiols}. 
-
-      % a brief definition of thiols
+      \textbf{Thiols} are organic compounds characterized by the presence of a sulfhydryl (\textit{\ce{-SH}}) functional group bonded to a carbon atom. Structurally, thiols are the sulfur analogues of alcohols, with sulfur replacing the oxygen atom of the hydroxyl group.
 
     \end{core}
 
-    \begin{core}{Sulfur IUPAC Nomenclature}
+    \begin{core}{Thiol IUPAC Nomenclature}
 
-      \myfig{0.4}{org_chem_figures/sulfur_nomenclature1}{sulfer nomenclature 1}{fig:sulfur_nomenclature1}
+      Thiols adhere to nomenclature conventions analogous to those of alcohols, with the principal distinction being the use of the suffix \textbf{-thiol} in place of \textbf{-ol}. Similarly, when sulfur-containing groups function as substituents, they are designated as mercapto- (\ce{-SH}) and alkylthio- (\ce{-SR}) groups, respectively.
 
-      The respective names of the above compounds are
-      \[
-        \text{methanethiol}\qquad\qquad\text{2-methyl-1-butanthiol}
-      \]
+      \myfig{0.4}{org_chem_figures/sulfur_nomenclature1}{sulfer nomenclature 1}{fig:sulfur_nomenclature1} % chemfig and combine caption with below content
 
-      As substituients, sulfurs are called either mercapto (\ce{-SH}) or alkylthio (\ce{-SR}) groups. Keep in mind that the \ce{-OH} has priority over the \ce{-SH} when both are present in the same molecule.
+      % The systematic names of the compounds illustrated above are
+      % \[
+      %   \text{methanethiol}\qquad\qquad\text{2-methyl-1-butanethiol}
+      % \]
 
-      \myfig{0.6}{org_chem_figures/sulfur_nomenclature2}{sulfer nomenclature 2}{fig:sulfur_nomenclature2}
+      Furthermore, when both \ce{-OH} and \ce{-SH} functional groups are present within the same molecule, the hydroxyl group (\ce{-OH}) takes precedence over the sulfhydryl group (\ce{-SH}) in determining the principal functional group, thereby designating the compound as an alcohol rather than a thiol.
 
-      The respective names of the above compounds are
-      \[
-        \text{2-mercaptoethan-1-ol}\qquad\qquad\text{methylthioethane}
-      \]
+      \myfig{0.6}{org_chem_figures/sulfur_nomenclature2}{sulfer nomenclature 2}{fig:sulfur_nomenclature2} % change to chemfig and caption content
+
+      % The respective names of the above compounds are
+      % The systematic names of the compounds depicted above are
+      % \[
+      %   \text{2-mercaptoethan-1-ol}\qquad\qquad\text{methylthioethane}
+      % \]
 
     \end{core}
 
   \subsection{Isomer Configurations}
 
+    \begin{core}{Stereoisomers}
+
+      \textbf{Stereoisomers} are defined as molecules possessing identical molecular formulas and constitutional connectivity of atoms, yet differing in the three-dimensional spatial arrangement of those atoms. Consequently, several distinct nomenclature systems have been developed to unambiguously distinguish among stereoisomers of a given molecular constitution.
+
+    \end{core}
+
     \subsubsection{Cis \& Trans}
 
       \begin{core}{Cis \& Trans}
 
-        Now we introduce \textbf{stereoisomers}, which are molecules that have the same molecular formula and the same sequence of bonded atoms (constitution), but differ in the 3D orientation of those atoms in space. In cycloalkanes, we have two sides: "up" and "down". With two (or more) substituents, we define substituents bonding towards the same side as \textbf{cis} and opposite sides as \textbf{trans}.
+        Cycloalkane rings possess two distinct spatial orientations relative to the plane of the ring: "above" and "below." When two or more substituents are present, those oriented on the same side of the ring are designated \textbf{cis}, while those positioned on opposite sides are designated \textbf{trans}.
 
-        \myfig{0.7}{org_chem_figures/cis_trans}{Cis and Trans Isomers}{fig:cis_trans}
+        \myfig{0.7}{org_chem_figures/cis_trans}{Cis and trans isomers}{fig:cis_trans} % change to chemfig
 
-        Pointing away from you (below the plane of the ring) is represented by \textbf{dashes} and pointing towards you (above the plane of the ring) is represented by \textbf{wedges} as shown above.
+        Substituents projecting away from the observer (\textit{below the plane of the ring}) are represented by \textbf{dashed bonds}, whereas those projecting toward the observer (\textit{above the plane of the ring}) are denoted by \textbf{wedged bonds}, as illustrated in \autoref{fig:cis_trans}.
 
       \end{core}
 
-    \subsubsection{Absolute Configuration: The Gold Standard}
+    \subsubsection{Rectus \& Sinister (R/S)}
 
       \begin{core}[label=core:abs_config]{Absolute Configuration}
 
-        While the cis and trans system is convienent and sufficient in the context of naming simple cycloalkanes, there are more complex cases that require us to use another naming convention: \textbf{absolute configuration}.
+        While the cis-trans nomenclature system is convenient and adequate for describing simple cycloalkane stereoisomers, more complex stereochemical situations necessitate an alternative system: \textbf{absolute configuration}.
 
-        The \textbf{absolute configuration} system is a universal language that allows us to describe the orientation of a substituent of either a chain alkane or a cycloalkane in the context of the carbon it is attached to (a.k.a. its \textbf{chiral center})
+        The \textbf{absolute configuration} system provides a universal framework for unambiguously describing the three-dimensional arrangement of substituents at a stereogenic carbon atom in both acyclic and cyclic compounds.
 
       \end{core}
 
       \begin{core}{Chiral Center}
 
-        A \textbf{chiral center} is usually a carbon atom that has four different groups attached to it in a tetrahedral manner. 
+        A \textbf{chiral center} (\textit{or stereocenter}) is typically a carbon atom bearing four distinct substituents arranged in tetrahedral geometry.
 
-        \myfig{0.45}{org_chem_figures/chiral_center}{Chiral Center Examples}{fig:chiral_center}
+        \myfig{0.45}{org_chem_figures/chiral_center}{Chiral and non-chiral center examples}{fig:chiral_center} % change to chemfig
 
-        As you can see above, the chiral centers have four distinct groups attached to it defined as the following:
+        As illustrated above, each chiral center possesses four distinct substituents, which may be identified as follows.
 
-        \bce{Left chiral center $\rightarrow$ ethyl, methyl, hydrogen, \textit{rest of the molecule}}
+        \begin{itemize}
 
-        \bce{Right chiral center $\rightarrow$ Chloro, isopropyl, hydrogen, \textit{rest of the molecule}}
+          \item Left chiral center $\rightarrow$ ethyl, methyl, hydrogen, \textit{rest of the molecule}
 
-        On the other hand, the non-chiral center is not chiral because it has two methyl groups attached to it simultaneously.
+          \item Right chiral center $\rightarrow$ Chloro, isopropyl, hydrogen, \textit{rest of the molecule}
 
-        \bce{Non-chiral center $\rightarrow$ methyl, methyl, hydrogen, \textit{rest of the molecule}}
+        \end{itemize}
 
-        Once we have defined the chiral center, we can now move onto ranking the order of the attached groups based on the atomic mass of the adjacent atom.
+        Conversely, the non-chiral carbon is achiral due to the presence of two identical methyl substituents.
 
-        Let's focus in on the left chiral center. it is attached to three carbons and one hydrogen. Since we know that hydrogen is lighter than carbon, we can already rank the hydrogen atom at the bottom (or a rank of 4). Next, when we are given a scenario where the adjacent atoms are identical, we simply go further down the chain until we reach a \textbf{point of difference}. 
+        \begin{itemize}
 
-        \bce{Ethyl $\rightarrow$ C, H, H}
+          \item Non-chiral center $\rightarrow$ methyl, methyl, hydrogen, \textit{rest of the molecule}
 
-        \bce{Methyl $\rightarrow$ H, H, H}
+        \end{itemize}
 
-        \bce{Rest of the molecule $\rightarrow$ C, H, H}
+        Having identified the chiral center, the attached substituents must be ranked according to the \textbf{Cahn-Ingold-Prelog priority rules}, which are based on the atomic number of the atoms directly bonded to the stereocenter.
 
-        Based on the above assessment of the atoms attached to the adjacent carbons, we can now rank the methyl group as 3.
+        Consider the left chiral center, which is bonded to three carbon atoms and one hydrogen atom. Since hydrogen has a lower atomic number than carbon, it is immediately assigned the lowest priority (\textit{rank 4}). When directly attached atoms are identical, priority is determined by proceeding outward along each substituent chain until the \textbf{first point of difference} is encountered.
 
-        Skipping the rest of the explicit explanation, we can see that the rest of the molecule (ROM) would rank 1 and the ethyl would rank 2.
+        \begin{itemize}
 
-        \bce{[1] ROM}
+          \item Ethyl $\rightarrow$ C, H, H
 
-        \bce{[2] Ethyl}
+          \item Methyl $\rightarrow$ H, H, H
 
-        \bce{[3] Methyl}
+          \item Rest of the molecule $\rightarrow$ C, H, H
 
-        \bce{[4] Hydrogen}
+        \end{itemize}
 
-        R and S is defined as whether the ordering of the rank 1, 2, and 3 groups is \textbf{clockwise} (R) or \textbf{counterclockwise} (S) when \textbf{looking at the chiral center with the rank 4 group sitting exactly behind it}.
+        Based on this assessment of the atoms bonded to each substituent's first carbon, the methyl group is assigned priority rank 3. Continuing this analysis, the rest of the molecule (ROM) receives priority rank 1, and the ethyl group receives rank 2.
 
-        \myfig{0.25}{org_chem_figures/ac_pov}{Absolute Configuration Perspective}{fig:ac_pov}
+        \begin{enumerate}[label=(\arabic*)]
+
+          \item ROM
+
+          \item Ethyl
+
+          \item Methyl
+
+          \item Hydrogen
+
+        \end{enumerate}
+
+        The designations \textbf{R} (\textit{rectus}) and \textbf{S} (\textit{sinister}) describe the rotational direction from priority 1 to 2 to 3: \textbf{clockwise} rotation corresponds to R, while \textbf{counterclockwise} rotation corresponds to S. This determination is made from a perspective in which the lowest-priority group (\textit{rank 4}) is oriented directly away from the observer.
+
+        \myfig{0.25}{org_chem_figures/ac_pov}{Absolute configuration perspective visualized}{fig:ac_pov}
 
       \end{core}
 
-      \begin{core}{Absolute Configuration Example (\textit{Alkane})}
+      \begin{core}[label=core:abs_example]{Absolute Configuration Example (\textit{Alkane})}
 
-        Now, since the original figure does not actually define the orientation (wedge or dash) of the methyl group relative to the stem alkane, we cannot actually define its R/S orientation. Thus let's go through both potential cases.
+        Since the stereochemistry (\textit{wedge or dash configuration}) of the methyl group is not explicitly defined in \autoref{fig:chiral_center}, the absolute configuration cannot be unambiguously assigned. Therefore, both possible stereochemical scenarios are examined below.
 
-        First, the wedge case:
+        \begin{enumerate}
+          
+          \item \textbf{Methyl group is oriented as a wedge.}
 
-        \myfig{0.45}{org_chem_figures/wedge}{Chiral Center with Wedge}{fig:wedge}
+          \myfig{0.45}{org_chem_figures/wedge}{Left methyl substituent from \autoref{fig:chiral_center} as a wedge}{fig:wedge}
 
-        Here, the molecule is already oriented in a manner that shows it already from the angle we must analyze it from because the rank 4 group (hydrogen) sits behind the chiral center. the arrows from the rank 1 (ROM) to the rank 2 (Ethyl) to the rank 3 (methyl) follow a clockwise path, thus we define this chiral center as R.
+          In this orientation, the molecule is already positioned such that the lowest-priority group (\textit{hydrogen, rank 4}) projects away from the observer. Tracing the path from rank 1 (\textit{ROM}) through rank 2 (\textit{ethyl}) to rank 3 (\textit{methyl}) proceeds in a clockwise direction; consequently, this stereocenter is assigned the R configuration.
 
-        \myfig{0.25}{org_chem_figures/R}{R Configuration}{fig:R}
+          \myfig{0.25}{org_chem_figures/R}{R configuration}{fig:R}
 
-        When we move to the dash case, 
+          \item \textbf{Methyl group is oriented as a dash.}
 
-        \myfig{0.45}{org_chem_figures/dash}{Chiral Center with Dash}{fig:dash}
+          \myfig{0.45}{org_chem_figures/dash}{Left methyl substituent from \autoref{fig:chiral_center} as a dash}{fig:dash}
 
-        we will find the orientation to be counterclockwise following the same procedure as above, thus we define this case of the chiral center as S.
+          Application of the same analytical procedure reveals a counterclockwise progression from rank 1 through rank 2 to rank 3, thereby assigning this stereocenter the \textit{S} configuration.
 
-        Within the context of nomenclature, the R/S is written in parentheses at the beginning of the molecule name alongside the cooresponding carbon number that represents its chiral center.
+        \end{enumerate}
 
-        \myfig{0.4}{org_chem_figures/full_molecule}{Absolute Configuration in Complex Molecule}{fig:full_molecule}
+        In systematic nomenclature, the R/S descriptor is indicated in parentheses at the beginning of the compound name, preceded by the numerical locant designating the position of the chiral center.
 
-        Combining all of these rules, we can define the compound shown above as
-        \[
-          \text{(3S,6R)-3-chloro-2,6-dimethyloctane}
-        \]
+        \myfig{0.4}{org_chem_figures/full_molecule}{(3S,6R)-3-chloro-2,6-dimethyloctane}{fig:full_molecule}
 
       \end{core}
 
       \begin{core}{Absolute Configuration Example (\textit{Cycloalkane})}
 
-        The same process can be applied to cycloalkanes as well.
+        % The same process can be applied to cycloalkanes as well.
+        The absolute configuration assignment procedure went over in \autoref{core:abs_example} is equally applicable to cycloalkane systems.
 
-        \myfig{0.23}{org_chem_figures/rs_hexane}{Absolute Configuration in Cycloalkanes}{fig:rs_hexane}
-
-        The name of the cycloalkane above is:
-        \[
-          \text{(1R,2S)-1-ethyl-2-methylcyclohexane}
-        \]
+        \myfig{0.23}{org_chem_figures/rs_hexane}{(1R,2S)-1-ethyl-2-methylcyclohexane}{fig:rs_hexane} % change to chemfig
 
       \end{core}
-   
+  
+    % \subsubsection{Entgegen \& Zusammen (E/Z)}
 \end{document}
 
