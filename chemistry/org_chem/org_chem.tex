@@ -1523,7 +1523,24 @@
 
         An alkyl \textbf{substituent} is derived from its corresponding alkane by removal of a terminal hydrogen atom. Its general chemical formula is expressed as \ce{C_{n}H_{2n+1}}, and its nomenclature follows that of alkanes, with the suffix "-ane" replaced by "-yl" (\textit{e.g., ethyl, \ce{C2H5}}). 
 
-        \myfig{0.25}{org_chem_figures/propyl}{Propyl substituent}{fig:propyl} % change to chemfig
+        \reactionfig{
+          \scheme{
+            \definecuttoff
+            \chemfig{
+              [:0]H
+              -[:0]C
+              (-[:90]H)
+              (-[:-90]H)
+              -[:0]C
+              (-[:90]H)
+              (-[:-90]H)
+              -[:0]C
+              (-[:90]H)
+              (-[:-90]H)
+              -[:0]!{cuttoff}
+            }
+          }
+        }{Propyl substituent}{fig:propyl}{0.9}
         
       \end{core}
 
@@ -1535,7 +1552,46 @@
 
           \item \textbf{Parent Chain Identification}: Identify the longest continuous alkane chain (\textit{parent chain}) and assign its name based on the number of carbon atoms, as previously described in \autoref{tab:alkanes}. When two chains of \textbf{equal length} exist, select the chain bearing the \textbf{greater number of substituents}.
 
-          \myfig{0.7}{org_chem_figures/iupac_1}{Identifying the parent chain}{fig:iupac_1} % change to chemfig
+          \reactionfig{
+            \scheme{
+              \chemname{
+                \chemfig{
+                  [:0]\ce{CH3}
+                  -[:0]\ce{CH2}
+                  -[:0]\textcolor{Red}{\ce{CH}}
+                  (
+                  -[:-90,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (-[:0]\ce{CH3})
+                  -[:-90,,,,Red]\textcolor{Red}{\ce{CH3}}
+                  )
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (-[:90]\ce{CH3})
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (-[:90]\ce{CH3})
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH3}}
+                }
+              }{Correct chain (\textit{4 subtituents})}
+              \qquad
+              \qquad
+              \chemname{
+                \chemfig{
+                  [:0]\textcolor{Red}{\ce{CH3}}
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH2}}
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (
+                  -[:-90]\ce{CH}
+                  (-[:0]\ce{CH3})
+                  -[:-90]\ce{CH3}
+                  )
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (-[:90]\ce{CH3})
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH}}
+                  (-[:90]\ce{CH3})
+                  -[:0,,,,Red]\textcolor{Red}{\ce{CH3}}
+                }
+              }{Wrong chain (\textit{3 substituents})}
+            }
+          }{Identifying the parent chain}{fig:iupac_1}{0.95}
 
           In \autoref{fig:iupac_1}, the longest chain contains 6 carbon atoms and is therefore designated \textbf{hexane}. Note that the left chain possesses more substituents than the right chain; consequently, the left chain is selected as the parent chain for nomenclature purposes.
 
@@ -1545,51 +1601,360 @@
 
             \item \textbf{Unbranched Substituents}: For an unbranched substituent R, apply the naming convention defined in step (2) directly.
 
-            \myfig{0.3}{org_chem_figures/iupac_2a}{Unbranched substituents}{fig:iupac_2a}
+            \reactionfig{
+              \scheme{
+                \chemfig{
+                  [:0]
+                  -[:30,,,,Red]
+                  -[:-30,,,,Red]
+                  (
+                  -[:-90,,,,line width=2pt]
+                  -[:-150,,,,line width=2pt]
+                  -[:-90,,,,line width=2pt]
+                  )
+                  -[:30,,,,Red]
+                  (
+                  -[:90,,,,line width=2pt]
+                  )
+                  -[:-30,,,,Red]
+                  (
+                  -[:-90,,,,line width=2pt]
+                  -[:-30,,,,line width=2pt]
+                  )
+                  -[:30,,,,Red]
+                }
+              }
+            }{Unbranched substituents; propyl (\textit{left}), methyl (\textit{middle}), ethyl (\textit{right})}{fig:iupac_2a}{0.8}
 
             \item \textbf{Branched Substituents}: For a branched substituent R, identify the longest carbon chain within R and systematically name any substituents attached to this chain.
 
-            \myfig{0.35}{org_chem_figures/iupac_2b}{Methylpropyl branched substituent}{fig:iupac_2b}
+            \reactionfig{
+              \scheme{
+                \chemfig{
+                  [:0]
+                  -[:30,,,,Red]
+                  -[:-30,,,,Red]
+                  -[:30,,,,Red]
+                  (
+                  -[:90,,,,Blue,line width=2pt]
+                  (-[:150,,,,Green,line width=2pt])
+                  -[:30,,,,Blue,line width=2pt]
+                  -[:90,,,,Blue,line width=2pt]
+                  )
+                  -[:-30,,,,Red]
+                  -[:30,,,,Red]
+                }
+              }
+            }{Methyl propyl branched substituent; methyl (\textit{green}), propyl (\textit{blue})}{fig:iupac_2b}{0.8}
 
             \item \textbf{Multiple Identical Substituents}: When multiple identical substituents are present, employ the prefixes di-, tri-, tetra-, etc. for unbranched R groups and bis-, tris-, tetrakis-, etc. for branched R groups.
 
-            \myfig{0.45}{org_chem_figures/iupac_2ca}{Multiple Straight Chain Substituents}{fig:iupac_2ca} % combine with figure below
-
-            \myfig{0.45}{org_chem_figures/iupac_2cb}{Multiple straight (\textit{left}) and branched (\textit{right}) chain substituents}{fig:iupac_2cb}
+            \reactionfig{
+              \scheme{
+                \chemname{
+                  \chemfig{
+                    [:0]
+                    -[:30]
+                    -[:-30]
+                    (-[:-90,,,,Blue, line width=2pt])
+                    -[:30]
+                    (-[:90,,,,Blue, line width=2pt])
+                    -[:-30]
+                  }
+                }{\large\textcolor{Blue}{Dimethyl}hexane}
+                \qquad
+                \chemname{
+                  \chemfig{
+                    [:0]
+                    -[:-30]
+                    -[:30]
+                    -[:-30]
+                    -[:30]
+                    (
+                    -[:90,,,,Blue, line width=2pt]
+                    (-[:150,,,,Blue, line width=2pt])
+                    -[:30,,,,Blue, line width=2pt]
+                    -[:90,,,,Blue, line width=2pt]
+                    )
+                    -[:-30]
+                    (
+                    -[:-90,,,,Blue, line width=2pt]
+                    (-[:-150,,,,Blue, line width=2pt])
+                    -[:-30,,,,Blue, line width=2pt]
+                    -[:-90,,,,Blue, line width=2pt]
+                    )
+                    -[:30]
+                    -[:-30]
+                    -[:30]
+                    -[:-30]
+                  }
+                }{\large\textcolor{Blue}{Bis(methylpropyl)}decane}
+              }
+            }{Multiple straight (\textit{left}) and branched (\textit{right}) chain substituents}{fig:iupac_2c}{0.7}
 
             \item \textbf{Common Substituent Names}: While systematic nomenclature exists for all alkyl substituents, certain common names remain in widespread use and must be committed to memory.
 
-            \myfig{0.5}{org_chem_figures/iupac_2d}{Common Alkyl Substituent Names}{fig:iupac_2d} % change to chemfig
+            \vspace{-1cm}
+            \reactionfig{
+              \scheme{
+                \definecuttoff
+                \chemname{
+                  \raisebox{-2cm}{
+                    \chemfig{
+                      [:0]
+                      -[:-30]
+                      (-[:-90]!{cuttoff})
+                      -[:30]
+                    }
+                  }
+                }{Isopropyl}
+                \qquad
+                \chemname{
+                  \raisebox{-2cm}{
+                    \chemfig{
+                      [:0]
+                      -[:-30]
+                      (-[:-90]!{cuttoff})
+                      (-[:90])
+                      -[:30]
+                    }
+                  }
+                }{Tert-butyl}
+                \qquad
+                \chemname{
+                  \raisebox{-2.5cm}{
+                    \chemfig{
+                      [:0]
+                      -[:30]
+                      -[:-30]
+                      (-[:-90]!{cuttoff})
+                      -[:30]
+                    }
+                  }
+                }{Sec-butyl}
+              }
+            }{Common alkyl substituent names}{fig:iupac_2d}{0.9}
 
           \end{enumerate}
 
           \item \textbf{Position Numbering} Number the carbon atoms along the parent chain to indicate substituent positions. The numbering sequence initiates from the terminus \textbf{nearest to a substituent}. If both termini are equidistant from the first substituent, continue comparison until reaching the \textbf{first point of difference}.
 
-          \myfig{0.5}{org_chem_figures/iupac_3a}{Numbering of parent chain in the order of earliest substituent presence}{fig:iupac_3a}
-
-          \myfig{0.35}{org_chem_figures/iupac_3b}{Numbering of parent chain in the order of earliest substituent presence and first point of difference}{fig:iupac_3b} % combine with above figure
+          \reactionfig{
+            \scheme{
+              \chemfig{
+                [:0]\textcolor{Red}{1}
+                -[:30]\textcolor{Red}{2}
+                (-[:90])
+                -[:-30]\textcolor{Red}{3}
+                -[:30]\textcolor{Red}{4}
+              }
+              \qquad
+              \chemfig{
+                [:0]\textcolor{Red}{1}
+                -[:30]\textcolor{Red}{2}
+                -[:-30]\textcolor{Red}{3}
+                -[:30]\textcolor{Red}{4}
+                (-[:90])
+                -[:-30]\textcolor{Red}{5}
+                (-[:-90])
+                -[:30]\textcolor{Red}{6}
+                -[:-30]\textcolor{Red}{7}
+                -[:30]\textcolor{Red}{8}
+                -[:-30]\textcolor{Red}{9}
+              }
+              \qquad
+              \chemfig{
+                [:0]\textcolor{Red}{1}
+                -[:30]\textcolor{Red}{2}
+                (-[:90])
+                -[:-30]\textcolor{Red}{3}
+                -[:30]\textcolor{Red}{4}
+                (-[:90])
+                -[:-30]\textcolor{Red}{5}
+                (-[:-90])
+                -[:30]\textcolor{Red}{6}
+                -[:-30]\textcolor{Red}{7}
+                -[:30]\textcolor{Red}{8}
+                (-[:90])
+                -[:-30]\textcolor{Red}{9}
+              }
+            }
+          }{Numbering of parent chain in the order of earliest substituent presence (\textit{left \& middle}) and first point of difference (\textit{right})}{fig:iupac_3a}{0.75}
 
           If substituent \textbf{positions remain identical} from either direction, initiate numbering from the terminus where the first substituent's name appears \textbf{alphabetically earliest}.
 
-          \myfig{0.35}{org_chem_figures/iupac_3c}{Alphabetical numbering of parent chain when substituent position is mirrored; \textit{ethyl precedes methyal alphabetically, therefore numbering commences from the right terminus}}{fig:iupac_3c}
+          \reactionfig{
+            \scheme{
+              \chemfig{
+                [:0]\textcolor{Red}{7}
+                -[:-30]\textcolor{Red}{6}
+                -[:30]\textcolor{Red}{5}
+                (-[:90])
+                -[:-30]\textcolor{Red}{4}
+                (-[:-90])
+                -[:30]\textcolor{Red}{3}
+                (
+                -[:90]
+                -[:30]
+                )
+                -[:-30]\textcolor{Red}{2}
+                -[:30]\textcolor{Red}{1}
+              }
+            }
+          }{Alphabetical numbering of parent chain when substituent position is mirrored; \textit{ethyl precedes methyl alphabetically, therefore numbering commences from the right terminus}}{fig:iupac_3b}{0.85}
 
           This numbering protocol applies equally to the parent chain within a branched substituent. However, numbering invariably begins at the carbon atom of attachment to the main chain.
 
-          \myfig{0.3}{org_chem_figures/iupac_3d}{Branched chain numbering}{fig:iupac_3d} % change to chemfig
+          \reactionfig{
+            \scheme{
+              \chemfig{
+                [:0]
+                -[:30]
+                -[:-30]
+                -[:30]
+                -[:-30]
+                (
+                -[:-90]\textcolor{Red}{1}
+                (-[:-150])
+                -[:-30]\textcolor{Red}{2}
+                -[:-90]\textcolor{Red}{3}
+                )
+                -[:30]
+                -[:-30]
+                -[:30]
+                -[:-30]
+              }
+            }
+          }{Branched chain numbering}{fig:iupac_3c}{0.85}
 
           \item \textbf{Alphabetical Substituent Ordering} Having established both the identities and positions of substituents, the complete name of the alkane can now be constructed. Note that substituent names are ordered \textbf{alphabetically} rather than numerically. Positional designations are indicated by numerical prefixes corresponding to each substituent.
 
-          \myfig{0.4}{org_chem_figures/iupac_4a}{Alphabetical ordering of substituents}{fig:iupac_4a} % change to chemfig
+          \reactionfig{
+            \scheme{
+              \chemname{
+                \raisebox{-1.5cm}{
+                  \chemfig{
+                    [:0]\textcolor{Red}{8}
+                    -[:30]\textcolor{Red}{7}
+                    -[:-30]\textcolor{Red}{6}
+                    -[:30]\textcolor{Red}{5}
+                    (
+                    -[:90]
+                    -[:30]
+                    )
+                    -[:-30]\textcolor{Red}{4}
+                    -[:30]\textcolor{Red}{3}
+                    -[:-30]\textcolor{Red}{2}
+                    (-[:-90])
+                    -[:30]\textcolor{Red}{1}
+                  }
+                }
+              }{5-\textcolor{Red}{\underline{E}}thyl-2-\textcolor{Red}{\underline{m}}ethyloctane}
+            }
+          }{Alphabetical ordering of substituents}{fig:iupac_4a}{0.85}
 
           Note that multiplicative prefixes such as di-, tri-, and bis- are \textbf{disregarded} when alphabetizing substituents on the parent chain, but \textbf{are considered} when alphabetizing within complex branched substituent names.
 
-          \myfig{0.75}{org_chem_figures/iupac_4b}{Alphabetical counting of prefixes; \textit{EXPLANATION PLACEHOLDER}}{fig:iupac_4b} % change to chemfig
+          \reactionfig{
+            \scheme{
+              \chemname{
+                \raisebox{-2cm}{
+                  \chemfig{
+                    [:0]\textcolor{Red}{8}
+                    -[:30]\textcolor{Red}{7}
+                    -[:-30]\textcolor{Red}{6}
+                    -[:30]\textcolor{Red}{5}
+                    (
+                    -[:90]
+                    -[:30]
+                    )
+                    -[:-30]\textcolor{Red}{4}
+                    -[:30]\textcolor{Red}{3}
+                    -[:-30]\textcolor{Red}{2}
+                    (-[:-60])
+                    (-[:-120])
+                    -[:30]\textcolor{Red}{1}
+                  }
+                }
+              }{5-\textcolor{Red}{\underline{E}}thyl-2,2-\textcolor{Blue}{\underline{d}}i\textcolor{Red}{\underline{m}}ethyloctane}
+              \qquad
+              \chemname{
+                \raisebox{-2cm}{
+                  \chemfig{
+                    [:0]\textcolor{Red}{8}
+                    -[:30]\textcolor{Red}{7}
+                    -[:-30]\textcolor{Red}{6}
+                    -[:30]\textcolor{Red}{5}
+                    (
+                    -[:90]
+                    (-[:30])
+                    (-[:150])
+                    (-[:80])
+                    )
+                    -[:-30]\textcolor{Red}{4}
+                    -[:30]\textcolor{Red}{3}
+                    (
+                    -[:90]
+                    -[:30]
+                    )
+                    -[:-30]\textcolor{Red}{2}
+                    -[:30]\textcolor{Red}{1}
+                  }
+                }
+              }{5-(1,1-\textcolor{Red}{\underline{D}}imethylethyl)-3-\textcolor{Red}{\underline{e}}thyloctane}
+            }
+          }{Alphabetical counting of prefixes; \textit{the d (blue) in the left compound is disregarded because it refers to parent chain substituents}}{fig:iupac_4b}{0.8}
 
         \end{enumerate}
 
         A comprehensive example illustrating these principles is presented below.
 
-        \myfig{0.6}{org_chem_figures/iupac_final}{12-bromo-3-ethyl-6-iodo-5,13-dimethyl-8-(2-methylpentyl)-14-(2-methylpropyl)octadecane}{fig:iupac_final} % change to chemfig
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]\textcolor{Red}{1}
+              -[:-150]\textcolor{Red}{2}
+              -[:-90]\textcolor{Red}{3}
+              (
+              -[:-30]
+              -[:30]
+              )
+              -[:-150]\textcolor{Red}{4}
+              -[:-90]\textcolor{Red}{5}
+              (-[:-150])
+              -[:-30]\textcolor{Red}{6}
+              (-[:-90]I)
+              -[:30]\textcolor{Red}{7}
+              -[:-30]\textcolor{Red}{8}
+              (
+              -[:-90]
+              -[:-30]
+              (-[:-90])
+              -[:30]
+              -[:-30]
+              -[:-90]
+              )
+              -[:30]\textcolor{Red}{9}
+              -[:-30]\textcolor{Red}{10}
+              -[:30]\textcolor{Red}{11}
+              -[:-30]\textcolor{Red}{12}
+              (-[:-90]Br)
+              -[:30]\textcolor{Red}{13}
+              (-[:-30])
+              -[:90]\textcolor{Red}{14}
+              (
+              -[:150]
+              (-[:90])
+              -[:-150]
+              -[:150]
+              )
+              -[:30]\textcolor{Red}{15}
+              -[:90]\textcolor{Red}{16}
+              -[:30]\textcolor{Red}{17}
+              -[:90]\textcolor{Red}{18}
+            }
+          }
+        }{12-bromo-3-ethyl-6-iodo-5,13-dimethyl-8-(2-methylpentyl)-14-(2-methylpropyl)octadecane}{fig:iupac_final}{0.8}
 
       \end{core}
 
@@ -1607,7 +1972,45 @@
 
         Cycloalkanes are cyclic alkane structures named systematically according to the number of carbon atoms in the ring, with the prefix "cyclo-" preceding the parent alkane name.
 
-        \myfig{0.45}{org_chem_figures/cycloalkanes}{Cycloalkane Examples}{fig:cycloalkanes} % change to chemfig
+        \vspace{-0.9cm}
+        \reactionfig{
+          \scheme{
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *3(---)
+                }
+              }
+            }{Cyclopropane}
+            \qquad
+            \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *4(----)
+                }
+              }
+            }{Cyclobutane}
+            \qquad
+            \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *5(-----)
+                }
+              }
+            }{Cyclopentane}
+            \qquad
+            \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *6(------)
+                }
+              }
+            }{Cyclohexane}
+          }
+        }{Cycloalkanes}{fig:cycloalkanes}{0.9}
 
         \textit{A thorough understanding of \autoref{sec:alkane} is prerequisite to this section.}
 
@@ -1617,9 +2020,32 @@
 
         In compounds containing both cycloalkane and acyclic alkane chains, the parent chain is designated as the structural unit possessing the greater number of carbon atoms.
 
-        \myfig{0.5}{org_chem_figures/iupac_ca}{Cycloalkane as substituent}{fig:iupac_ca}
-
-        \myfig{0.4}{org_chem_figures/iupac_cb}{1-cyclopentylhexane (\textit{left; cycloalkane as substituent}) and propylcyclopentane (\textit{right; chain alkane as substituent})}{fig:iupac_cb} % combine with above figure
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              *5(--
+              (
+              -[:30]
+              -[:-30]
+              -[:30]
+              -[:-30]
+              -[:30]
+              -[:-30]
+              )
+              ---)
+            }
+            \qquad
+            \chemfig{
+              *5(--
+              (
+              -[:30]
+              -[:-30]
+              -[:30]
+              )
+              ---)
+            }
+          }
+        }{1-cyclopentylhexane (\textit{left; cycloalkane as substituent}) and propylcyclopentane (\textit{right; chain alkane as substituent})}{fig:iupac_ca}{0.85}
 
         The compound depicted above is designated \textbf{propylcyclopentane}. Note that propylcyclopentane in \autoref{fig:iupac_cb}, a numerical locant for the propyl group is unnecessary, as only one substituent is present on the parent cycloalkane and carbon numbering would therefore be arbitrary.
 
@@ -1627,14 +2053,92 @@
 
       \begin{core}{Cycloalkane Substituents}
 
-        When multiple substituents are attached to a cycloalkane ring, carbon atoms are numbered to yield the lowest possible digit sequence and substituents are cited alphabetically in the systematic name.
+        When multiple substituents are attached to a cycloalkane ring, carbon atoms are numbered to yield the \textbf{lowest possible digit sequence} and substituents are \textbf{cited alphabetically} in the systematic name.
 
-        \myfig{0.7}{org_chem_figures/iupac_cc}{Multiple Substituents on Cycloalkane}{fig:iupac_cc}
+        \doublereactionfig{
+          \scheme{
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *6(-
+                  (-[:-90])
+                  ---
+                  (-[:90]I)
+                  -
+                  (-[:150]Cl)
+                  -)
+                }
+              }
+            }{\large 2-Chloro-1-iodo-4-methyl-cyclohexane}
+            \qquad \qquad
+            \qquad \qquad
+            \qquad \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *8(-
+                  (-[:-105])
+                  --
+                  (
+                  -[:-15]
+                  -[:-90]
+                  )
+                  -
+                  (-[:15]Cl)
+                  -
+                  (-[:75])
+                  ---)
+                }
+              }
+            }{\large 2-Chloro-3-ethyl-1,5-dimethyl-cyclooctane}
+          }
+        }{
+          \scheme{
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *6(--
+                  (
+                  -[:-30]
+                  -[:30]
+                  )
+                  -
+                  (-[:30])
+                  ---)
+                }
+              }
+            }{\large 1-Ethyl-2-methyl-cyclohexane}
+            \qquad \qquad
+            \qquad \qquad
+            \qquad \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  *6(
+                  (-[:-150]Cl)
+                  -
+                  (-[:-90]Br)
+                  --
+                  (-[:30])
+                  ---
+                  )
+                }
+              }
+            }{2-Bromo-1-chloro-4-methyl-cyclohexane}
+          }
+        }{Cycloalkane nomenclature examples}{fig:iupac_cb}{0.7}
 
-        When a compound contains multiple cycloalkane units, the smaller ring functions as a substituent to the larger ring. 
-        An example of \textbf{cyclopentylcyclohexane} is provided below.
+        When a compound contains multiple cycloalkane units, the smaller ring functions as a substituent to the larger ring. An example of \textbf{cyclopentylcyclohexane} is provided below.
 
-        \myfig{0.25}{org_chem_figures/iupac_cd}{Cyclopentylcyclohexane}{fig:iupac_cd}
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              *5(--
+              (-[:0]*6(------))
+              ---)
+            }
+          }
+        }{Cyclopentylcyclohexane}{fig:iupac_cc}{0.9}
 
       \end{core}
 
@@ -1664,7 +2168,76 @@
 
       Representative examples illustrating the application of the aforementioned nomenclature protocol are provided below.
 
-      \myfig{0.6}{org_chem_figures/alc_nomenclature}{Alcohol nomenclature examples}{fig:alc_nomenclature} % change to chemfig
+      \vspace{-0.9cm}
+      \doublereactionfig{
+        \scheme{
+          \chemname{
+            \raisebox{-2cm}{
+              \chemfig{
+                [:0]3
+                -[:-30]2
+                -[:30]1
+                -[:-30]\textcolor{Red}{\ce{OH}}
+              }
+            }
+          }{1-Propanol}
+          \qquad
+          \chemname{
+            \raisebox{-2cm}{
+              \chemfig{
+                [:0]1
+                -[:-30]2
+                (-[:-90]\textcolor{Red}{OH})
+                -[:30]3
+                -[:-30]4
+              }
+            }
+          }{2-Butanol}
+          \qquad
+          \chemname{
+            \raisebox{-2cm}{
+              \chemfig{
+                [:0]5
+                -[:-30]4
+                (-[:-90])
+                -[:30]3
+                -[:-30]2
+                -[:30]1
+                -[:-30]\textcolor{Red}{OH}
+              }
+            }
+          }{4-Methyl-1-pentanol}
+        }
+      }{
+        \scheme{
+          \chemname{
+            \raisebox{-2cm}{
+              \chemfig{
+                [:0]Cl
+                -[:-30]3
+                -[:30]2
+                -[:-30]1
+                -[:30]\textcolor{Red}{OH}
+              }
+            }
+          }{3-Chloro-1-propanol}
+          \qquad
+          \chemname{
+            \raisebox{-2cm}{
+              \chemfig{
+                [:0]1
+                -[:-30]2
+                (-[:-90]\textcolor{Red}{OH})
+                -[:30]3
+                -[:-30]4
+                (-[:-120])
+                (-[:-60])
+                -[:30]5
+              }
+            }
+          }{4,4-Dimethyl-2-pentanol}
+        }
+      }{Alcohol nomenclature examples}{fig:alc_nomenclature}{0.85}
 
     \end{core}
 
@@ -1672,10 +2245,48 @@
 
       Cyclic alcohols are designated \textbf{cycloalkanols} and adhere to nomenclature conventions analogous to those of cycloalkanes (\textit{\autoref{core:cycloalkane_iupac}}). However, the carbon attached to the \ce{OH} group is always designated as \ce{C1}. 
 
-      \myfig{0.6}{org_chem_figures/cycloalkanes2}{Cycloalkanol nomenclature examples}{fig:cycloalkanol_nomenclature} %combine with names below and change to chemfig
-      % \[
-      %     \text{cyclohexan-1-ol}\qquad\text{cis-3-methyl-cyclohexan-1-ol}\qquad\text{1-ethyl-cyclopentan-1-ol}
-      % \]
+      \reactionfig{
+        \scheme{
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]*6(----
+                (-[:90]\textcolor{Red}{OH})
+                --)
+              }
+            }
+          }{cyclohexan-1-ol}
+          \qquad
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]*6(--
+                (-[:-30])
+                --
+                (-[:90]\textcolor{Red}{OH})
+                --)
+              }
+            }
+          }{cis-3-methyl-cyclohexan-1-ol}
+          \qquad
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:15]*5(---
+                (-[:120]\textcolor{Red}{HO})
+                (
+                -[:60]
+                -[:30]
+                )
+                --)
+              }
+            }
+          }{1-ethyl-cyclopentan-1-ol}
+          \qquad
+        }
+      }{Cycloalkanol nomenclature examples}{fig:cycloalkanol_nomenclature}{0.9}
 
     \end{core}
 
@@ -1683,7 +2294,42 @@
 
       Analogous to the classification system employed for haloalkanes, alcohols are similarly categorized as primary, secondary, or tertiary based on the degree of substitution at the carbon atom bearing the hydroxyl group.
 
-      \myfig{0.65}{org_chem_figures/pst_alcohols}{Primary, secondary, and tertiary alcohols}{fig:pst_alcohols} % change to chemfig
+      \reactionfig{
+        \scheme{
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]
+                -[:30]
+                -[:-30]OH
+              }
+            }
+          }{Primary alcohol}
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]
+                -[:30]
+                (-[:90]OH)
+                -[:-30]
+              }
+            }
+          }{Secondary alcohol}
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]
+                -[:30]
+                (-[:120])
+                (-[:60]OH)
+                -[:-30]
+              }
+            }
+          }{Tertiary alcohol}
+        }
+      }{Primary, secondary, and tertiary alcohols}{fig:pst_alcohols}{0.85}
 
     \end{core}
 
@@ -1701,35 +2347,37 @@
 
       \reactionfig{
         \scheme{
-          \chemfig{
-            [:0]\ce{H3C}
-            -[:30]
-            -[:-30]
-            -[:30]\textcolor{Red}{O}
-            -[:-30]
-            -[:30]\ce{CH3}
-          }
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]\ce{H3C}
+                -[:30]
+                -[:-30]
+                -[:30]\textcolor{Red}{O}
+                -[:-30]
+                -[:30]\ce{CH3}
+              }
+            }
+          }{1-Ethoxypropane}
           \qquad\qquad
-          \chemfig{
-            [:30]*6(-----
-            (
-            -[:180]\textcolor{Red}{O}
-            -[:120]
-            -[:180]
-            (-[:120]\ce{H3C})
-            -[:-135]
-            -[:180]\ce{H3C}
-            )
-            -)
-          }
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:30]*6(-----
+                (
+                -[:180]\textcolor{Red}{O}
+                -[:120]
+                -[:180]
+                (-[:120]\ce{H3C})
+                -[:-135]
+                -[:180]\ce{H3C}
+                )
+                -)
+              }
+            }
+          }{2-Methylbutoxy)cyclohexane}
         }
-      }{Ether nomenclature examples}{fig:filler2}{0.8} % change to chemfig and put the content below as part of captions
-
-      % The respective names of each compound are the following
-      % The systematic IUPAC names of these compounds are as follows:
-      % \[
-      %   \text{1-Ethoxypropane}\qquad\qquad\text{(2-Methylbutoxy)cyclohexane}
-      % \]
+      }{Ether nomenclature examples}{fig:filler2}{0.8}
 
     \end{core}
 
@@ -1745,22 +2393,58 @@
 
       Thiols adhere to nomenclature conventions analogous to those of alcohols, with the principal distinction being the use of the suffix \textbf{-thiol} in place of \textbf{-ol}. Similarly, when sulfur-containing groups function as substituents, they are designated as mercapto- (\ce{-SH}) and alkylthio- (\ce{-SR}) groups, respectively.
 
-      \myfig{0.4}{org_chem_figures/sulfur_nomenclature1}{sulfer nomenclature 1}{fig:sulfur_nomenclature1} % chemfig and combine caption with below content
-
-      % The systematic names of the compounds illustrated above are
-      % \[
-      %   \text{methanethiol}\qquad\qquad\text{2-methyl-1-butanethiol}
-      % \]
+      \vspace{-1cm}
+      \reactionfig{
+        \scheme{
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]\ce{H3C}
+                -[:0]\ce{SH}
+              }
+            }
+          }{Methanethiol}
+          \qquad
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]
+                -[:30]
+                -[:-30]
+                (-[:-90])
+                -[:30]
+                -[:-30]SH
+              }
+            }
+          }{2-Methyl-1-butanethiol}
+          \qquad
+          \qquad
+          \chemname{
+            \raisebox{-2.5cm}{
+              \chemfig{
+                [:0]
+                -[:30]S
+                -[:-30]
+                -[:30]
+              }
+            }
+          }{Methylthioethane}
+        }
+      }{Thiol nomenclature examples}{fig:sulfur_nomenclature1}{0.9}
 
       Furthermore, when both \ce{-OH} and \ce{-SH} functional groups are present within the same molecule, the hydroxyl group (\ce{-OH}) takes precedence over the sulfhydryl group (\ce{-SH}) in determining the principal functional group, thereby designating the compound as an alcohol rather than a thiol.
 
-      \myfig{0.6}{org_chem_figures/sulfur_nomenclature2}{sulfer nomenclature 2}{fig:sulfur_nomenclature2} % change to chemfig and caption content
-
-      % The respective names of the above compounds are
-      % The systematic names of the compounds depicted above are
-      % \[
-      %   \text{2-mercaptoethan-1-ol}\qquad\qquad\text{methylthioethane}
-      % \]
+      \reactionfig{
+        \scheme{
+          \chemfig{
+            [:0]\textcolor{Red}{HO}
+            -[:30]
+            -[:-30]
+            -[:30]SH
+          }
+        }
+      }{2-Mercapto-1-ethanol}{fig:sulfur_nomenclature2}{0.9}
 
     \end{core}
 
@@ -1778,7 +2462,37 @@
 
         Cycloalkane rings possess two distinct spatial orientations relative to the plane of the ring: "above" and "below." When two or more substituents are present, those oriented on the same side of the ring are designated \textbf{cis}, while those positioned on opposite sides are designated \textbf{trans}.
 
-        \myfig{0.7}{org_chem_figures/cis_trans}{Cis and trans isomers}{fig:cis_trans} % change to chemfig
+        \reactionfig{
+          \scheme{
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  [:0]*6(--
+                  (<:[:-90]\textcolor{Red}{H})
+                  (<[:-30]Cl)
+                  -
+                  (<:[:90]\textcolor{Red}{H})
+                  (<[:30]\ce{CH3})
+                  ---)
+                }
+              }
+            }{\textcolor{Red}{cis}-1-Chloro-2-methylcyclohexane}
+            \qquad \qquad \qquad \qquad \qquad
+            \chemname{
+              \raisebox{-2.5cm}{
+                \chemfig{
+                  [:0]*6(--
+                  (<:[:-90]\textcolor{Red}{H})
+                  (<[:-30]Cl)
+                  -
+                  (<[:90]\textcolor{Red}{H})
+                  (<:[:30]\ce{CH3})
+                  ---)
+                }
+              }
+            }{\textcolor{Red}{trans}-1-Chloro-2-methylcyclohexane}
+          }
+        }{Cis and trans isomers}{fig:cis_trans}{0.75}
 
         Substituents projecting away from the observer (\textit{below the plane of the ring}) are represented by \textbf{dashed bonds}, whereas those projecting toward the observer (\textit{above the plane of the ring}) are denoted by \textbf{wedged bonds}, as illustrated in \autoref{fig:cis_trans}.
 
@@ -1798,7 +2512,23 @@
 
         A \textbf{chiral center} (\textit{or stereocenter}) is typically a carbon atom bearing four distinct substituents arranged in tetrahedral geometry.
 
-        \myfig{0.45}{org_chem_figures/chiral_center}{Chiral and non-chiral center examples}{fig:chiral_center} % change to chemfig
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]
+              -[:-30]
+              -[:30]\text{*}
+              (-[:90])
+              -[:-30]
+              -[:30]
+              -[:-30]\text{*}
+              (-[:-90]Cl)
+              -[:30]x
+              (-[:90])
+              -[:-30]
+            }
+          }
+        }{Chiral (*) and non-chiral (\textit{x}) center examples}{fig:chiral_center}{0.9}
 
         As illustrated above, each chiral center possesses four distinct substituents, which may be identified as follows.
 
@@ -1852,7 +2582,7 @@
 
       \end{core}
 
-      \begin{core}[label=core:abs_example]{Absolute Configuration Example (\textit{Alkane})}
+      \begin{core}[label=core:abs_example]{R/S Absolute Configuration Example (\textit{Alkane})}
 
         Since the stereochemistry (\textit{wedge or dash configuration}) of the methyl group is not explicitly defined in \autoref{fig:chiral_center}, the absolute configuration cannot be unambiguously assigned. Therefore, both possible stereochemical scenarios are examined below.
 
@@ -1860,32 +2590,95 @@
           
           \item \textbf{Methyl group is oriented as a wedge.}
 
-          \myfig{0.45}{org_chem_figures/wedge}{Left methyl substituent from \autoref{fig:chiral_center} as a wedge}{fig:wedge}
+          \reactionfig{
+            \scheme{
+              \chemfig{
+                [:0]
+                -[:-30]
+                -[:30]
+                (<[:120]\ce{H3C})
+                (<:[:60]H)
+                -[:-30]
+                -[:30]
+                -[:-30]
+                (-[:-90]Cl)
+                -[:30]
+                (-[:90])
+                -[:-30]
+              }
+            }
+          }{Left methyl substituent from \autoref{fig:chiral_center} as a wedge}{fig:wedge}{0.9}
 
-          In this orientation, the molecule is already positioned such that the lowest-priority group (\textit{hydrogen, rank 4}) projects away from the observer. Tracing the path from rank 1 (\textit{ROM}) through rank 2 (\textit{ethyl}) to rank 3 (\textit{methyl}) proceeds in a clockwise direction; consequently, this stereocenter is assigned the R configuration.
+          In this orientation, the molecule is already positioned such that the lowest-priority group (\textit{hydrogen, rank 4}) projects away from the observer. Tracing the path from rank 1 (\textit{ROM}) through rank 2 (\textit{ethyl}) to rank 3 (\textit{methyl}) proceeds in a clockwise direction; consequently, this stereocenter is assigned the \textbf{R configuration}.
 
           \myfig{0.25}{org_chem_figures/R}{R configuration}{fig:R}
 
           \item \textbf{Methyl group is oriented as a dash.}
 
-          \myfig{0.45}{org_chem_figures/dash}{Left methyl substituent from \autoref{fig:chiral_center} as a dash}{fig:dash}
+          \reactionfig{
+            \scheme{
+              \chemfig{
+                [:0]
+                -[:-30]
+                -[:30]
+                (<:[:120]\ce{H3C})
+                (<[:60]H)
+                -[:-30]
+                -[:30]
+                -[:-30]
+                (-[:-90]Cl)
+                -[:30]
+                (-[:90])
+                -[:-30]
+              }
+            }
+          }{Left methyl substituent from \autoref{fig:chiral_center} as a dash}{fig:dash}{0.9}
 
-          Application of the same analytical procedure reveals a counterclockwise progression from rank 1 through rank 2 to rank 3, thereby assigning this stereocenter the \textit{S} configuration.
+          Application of the same analytical procedure reveals a counterclockwise progression from rank 1 through rank 2 to rank 3, thereby assigning this stereocenter the \textbf{S configuration}.
 
         \end{enumerate}
 
         In systematic nomenclature, the R/S descriptor is indicated in parentheses at the beginning of the compound name, preceded by the numerical locant designating the position of the chiral center.
 
-        \myfig{0.4}{org_chem_figures/full_molecule}{(3S,6R)-3-chloro-2,6-dimethyloctane}{fig:full_molecule}
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]
+              -[:-30]
+              -[:30]
+              (<[:120]\ce{H3C})
+              (<:[:60]H)
+              -[:-30]
+              -[:30]
+              -[:-30]
+              (<[:-90]Cl)
+              -[:30]
+              (-[:90])
+              -[:-30]
+            }
+          }
+        }{(3S,6R)-3-chloro-2,6-dimethyloctane}{fig:full_molecule}{0.9}
 
       \end{core}
 
-      \begin{core}{Absolute Configuration Example (\textit{Cycloalkane})}
+      \begin{core}{R/S Absolute Configuration Example (\textit{Cycloalkane})}
 
-        % The same process can be applied to cycloalkanes as well.
         The absolute configuration assignment procedure went over in \autoref{core:abs_example} is equally applicable to cycloalkane systems.
 
-        \myfig{0.23}{org_chem_figures/rs_hexane}{(1R,2S)-1-ethyl-2-methylcyclohexane}{fig:rs_hexane} % change to chemfig
+        \reactionfig{
+          \scheme{
+            \chemfig{
+              [:0]*6(--
+              (<[:-30])
+              -
+              (
+              <[:30]
+              -[:90]
+              )
+              ---)
+            }
+          }
+        }{(1R,2S)-1-ethyl-2-methylcyclohexane}{fig:rs_hexane}{0.75}
 
       \end{core}
   
