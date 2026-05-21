@@ -33,7 +33,7 @@
 
       Charles Darwin's seminal observations during the voyage of the HMS \textit{Beagle}, particularly his documentation of morphological variation among finch populations across the Galápagos Islands, provided crucial empirical foundations for the theory of evolution by \textbf{natural selection}. 
 
-      < FIGURE OF FINCHES >
+      \myfig{0.9}{evolution_figures/finch}{Galápagos island finch populations with differently evolved beak shapes}{fig:finch}
 
       Central to this theory is the concept of \textbf{adaptations}---inherited characteristics that enhance organismal survival and reproductive success within specific environmental contexts. \textbf{Natural selection} operates as the mechanism through which individuals possessing such adaptive traits exhibit higher rates of survival and reproduction compared to peers lacking those traits. 
 
@@ -75,19 +75,19 @@
 
             \item \textbf{Homologous structures} are anatomical features that represent variations upon a structural theme inherited from a \textit{common ancestor}, such as the underlying skeletal architecture of mammalian forelimbs, avian wings, cetacean flippers, and human arms. 
 
-            % figure of homologous structure 
+            \myfig{0.75}{evolution_figures/homologous}{Homologous structure}{fig:homologous}
 
             \item \textbf{Vestigial structures} are remnants of anatomical features that served functional roles in \textit{ancestral organisms} but have been reduced or modified in descendant lineages, as exemplified by the vestigial pelvic and femoral bones retained in snake species.
 
-            % figure of vestigal structures
+            \myfig{0.5}{evolution_figures/vestigial}{Vestigial structure}{fig:vestigial}
 
             \item \textbf{Evolutionary trees} (\textit{phylogenies}) are diagrammatic representations of evolutionary relationships among groups of organisms, constructed on the basis of homologous character states.
 
-            % figure of evolutionary tree
+            \myfig{0.75}{evolution_figures/tree}{Evolutionary tree}{fig:tree}
 
-            \item \textbf{Convergent evolution} refers to the independent evolution of similar phenotypic features in distinct lineages subjected to comparable selective pressures. Such convergently evolved traits are designated \textbf{analogous structures}, such as the wings of bats (\textit{mammals}) and birds (\textit{avians}).
+            \item \textbf{Convergent evolution} refers to the independent evolution of similar phenotypic features in distinct lineages subjected to comparable selective pressures. Such convergently evolved traits are designated \textbf{analogous structures}, such as the wings of bats, birds, and butterflies.
 
-            % figure of analogous structures
+            \myfig{0.7}{evolution_figures/analogous}{Analogous structure}{fig:analogous}
             
           \end{itemize}
 
@@ -107,7 +107,7 @@
 
       \textbf{Genetic variation} encompasses the genetic differences among individuals within a \textbf{population}. This variation arises through multiple mechanisms, including the formation of new alleles via \textbf{mutation} (\textit{\autoref{cyt-core:mutations}}), alterations in gene number or chromosomal position, and genetic recombination during \textbf{sexual reproduction} (\textit{\autoref{gen-core:sexual_asexual}}). While most mutations are deleterious or neutral, a small fraction confer selective advantages and serve as the raw material for adaptive evolution.
 
-      % figure of horses in textbook
+      \myfig{0.5}{evolution_figures/horses}{Phenotypic variation in horses}{fig:horses}
 
       In evolutionary contexts, a \textbf{population} is defined as a group of individuals of the same species that occupy a common geographic area and interbreed, producing \textbf{fertile} offspring. Collectively, the \textbf{gene pool} represents the complete genetic composition of a population, encompassing all alleles present at all genetic loci.
 
@@ -143,7 +143,7 @@
 
       \textbf{Genetic drift} is a random evolutionary mechanism whereby chance events cause allele frequencies to fluctuate unpredictably from one generation to the next, \textbf{independently of natural selection}. Genetic drift most commonly occurs via the following two events.
 
-      % figure of genetic drift with flower populations
+      \myfig{0.85}{evolution_figures/genetic_drift}{Genetic drift within a theoretical flower population}{fig:genetic_drift}
 
       \begin{enumerate}
 
@@ -153,7 +153,7 @@
 
         \item \textbf{Bottleneck effect}: A sudden environmental perturbation---such as fire, flood, or disease outbreak---may drastically reduce population size, resulting in a corresponding reduction in genetic diversity as only a subset of the original gene pool survives.
 
-        % figure of bottleneck
+        \myfig{0.5}{evolution_figures/bottleneck}{Bottleneck effect}{fig:bottleneck}
 
       \end{enumerate}
 
@@ -191,17 +191,85 @@
 
       \begin{enumerate}
 
-        \item \textbf{Directional selection}: Environmental conditions favor individuals exhibiting one extreme of the phenotypic distribution, resulting in a shift of the population mean toward that extreme (\textit{graphically represented as a shift of the frequency distribution curve in one direction}).
+        \sbs{0.45}{
+          \item \textbf{Directional selection}: Environmental conditions favor individuals exhibiting one extreme of the phenotypic distribution, resulting in a shift of the population mean toward that extreme (\textit{graphically represented as a shift of the frequency distribution curve in one direction}).
+        }{
+          \pgfig{
+            \begin{axis}[
+              width=10cm,
+              height=8cm,
+              xlabel={Phenotype},
+              ylabel={Frequency of Individuals},
+              xmin=0, xmax=10,
+              ymin=0, ymax=10,
+              domain=0.5:9.5,
+              samples=100,
+              xtick=\empty,
+              ytick=\empty,
+              \axispresetstwo
+              ]
 
-        % pgfig
+              \addplot[dashed, thick, smooth] {8*exp(-((x-5)^2)/2)};
+              \draw[->, very thick] (axis cs:5,8.5) -- (axis cs:6.5,8.5);
+              \addplot[thick, smooth] {8*exp(-((x-6.5)^2)/2)};
 
-        \item \textbf{Disruptive selection}: Environmental conditions favor individuals at both extremes of the phenotypic distribution while selecting against intermediate phenotypes, resulting in a bimodal frequency distribution.
+            \end{axis}
+          }{Directional selection}{fig:directional}{0.8}
+        }
 
-        % pgfig
+        \sbs{0.45}{
+          \item \textbf{Disruptive selection}: Environmental conditions favor individuals at both extremes of the phenotypic distribution while selecting against intermediate phenotypes, resulting in a bimodal frequency distribution.
+        }{
+          \pgfig{
+            \begin{axis}[
+              width=10cm,
+              height=8cm,
+              xlabel={Phenotype},
+              ylabel={Frequency of Individuals},
+              xmin=0, xmax=10,
+              ymin=0, ymax=10,
+              domain=0.5:9.5,
+              samples=100,
+              xtick=\empty,
+              ytick=\empty,
+              \axispresetstwo
+              ]
 
-        \item \textbf{Stabilizing selection}: Selection acts against both phenotypic extremes while favoring intermediate variants, thereby reducing phenotypic variance within the population (\textit{graphically represented as a narrowing of the frequency distribution curve}).
+              \addplot[dashed, thick, smooth] {8*exp(-((x-5)^2)/2)};
+              \draw[->, very thick] (axis cs:4.8,8.5) -- (axis cs:3,8.5);
+              \draw[->, very thick] (axis cs:5.2,8.5) -- (axis cs:7,8.5);
+              \addplot[thick, smooth] {5*exp(-((x-3)^2)/1) + 5*exp(-((x-7)^2)/1)};
 
-        % pgfig
+            \end{axis}
+          }{Disruptive selection}{fig:disruptive}{0.8}
+        }
+
+        \sbs{0.45}{
+          \item \textbf{Stabilizing selection}: Selection acts against both phenotypic extremes while favoring intermediate variants, thereby reducing phenotypic variance within the population (\textit{graphically represented as a narrowing of the frequency distribution curve}).
+        }{
+          \pgfig{
+            \begin{axis}[
+              width=10cm,
+              height=8cm,
+              xlabel={Phenotype},
+              ylabel={Frequency of Individuals},
+              xmin=0, xmax=10,
+              ymin=0, ymax=10,
+              domain=0.5:9.5,
+              samples=100,
+              xtick=\empty,
+              ytick=\empty,
+              \axispresetstwo
+              ]
+
+              \addplot[dashed, thick, smooth] {8*exp(-((x-5)^2)/2)};
+              \draw[->, very thick] (axis cs:2,3) -- (axis cs:3.5,6);
+              \draw[->, very thick] (axis cs:8,3) -- (axis cs:6.5,6);
+              \addplot[thick, smooth] {9*exp(-((x-5)^2)/1)};
+
+            \end{axis}
+          }{Stabilizing selection}{fig:stabilizing}{0.8}
+        }
 
       \end{enumerate}
 
@@ -209,21 +277,25 @@
 
     \begin{core}{Types of Sexual Selection}
 
-      \textbf{Sexual selection} is an evolutionary process whereby individuals possessing certain inherited characteristics achieve greater mating success than other individuals of the same sex. This form of selection frequently produces \textbf{sexual dimorphism}, phenotypic differences in secondary sexual characteristics between males and females of the same species. Sexual selection can also be categorized to distinct modes.
+      \textbf{Sexual selection} is an evolutionary process whereby individuals possessing certain inherited characteristics achieve greater mating success than other individuals of the same sex. This form of selection frequently produces \textbf{sexual dimorphism}, phenotypic differences in secondary sexual characteristics between males and females of the same species. Sexual selection can also be categorized into distinct modes.
 
       \begin{enumerate}
 
-        \item \textbf{Intrasexual selection}: Individuals of one sex (\textit{typically males}) compete directly with one another for access to mates of the opposite sex. 
+        \sbs{0.5}{
+          \item \textbf{Intrasexual selection}: Individuals of one sex (\textit{typically males}) compete directly with one another for access to mates of the opposite sex. 
 
-        % figure of lions
+          \textit{For example, male lions exclude rival males from mating opportunities with females in their pride.}
+        }{
+          \myfig{0.9}{evolution_figures/intrasexual}{Intrasexual selection}{fig:intrasexual}
+        }
 
-        \textit{For example, male lions exclude rival males from mating opportunities with females in their pride.}
+        \sbs{0.5}{
+          \item \textbf{Intersexual selection}: Individuals of one sex (\textit{typically females}) exercise mate choice, selectively mating with individuals of the opposite sex based on specific trait preferences. 
 
-        \item \textbf{Intersexual selection}: Individuals of one sex (\textit{typically females}) exercise mate choice, selectively mating with individuals of the opposite sex based on specific trait preferences. 
-
-        % figure of male peacocks
-
-        \textit{This mechanism often drives the evolution of elaborate male ornaments or displays, as exemplified by the ornate plumage patterns exhibited by male peacocks.}
+          \textit{This mechanism often drives the evolution of elaborate male ornaments or displays, as exemplified by the ornate plumage patterns exhibited by male peacocks.}
+        }{
+          \myfig{0.9}{evolution_figures/intersexual}{Intersexual selection}{fig:intersexual}
+        }
 
       \end{enumerate}
 
@@ -235,11 +307,13 @@
 
       \begin{enumerate}
 
-        \item \textbf{Frequency-Dependent Selection}: The fitness of a phenotype is contingent upon its frequency within the population. 
+        \sbs{0.5}{
+          \item \textbf{Frequency-Dependent Selection}: The fitness of a phenotype is contingent upon its frequency within the population. 
 
-        % figure of cichlid fish
-
-        \textit{For example, left-mouthed and right-mouthed morphs of scale-eating cichlid fish maintain approximately equal frequencies because increased prevalence of either morph intensifies intramorph competition, thereby conferring a relative advantage to the rarer morph.}
+          \textit{For example, left-mouthed and right-mouthed morphs of scale-eating cichlid fish maintain approximately equal frequencies because increased prevalence of either morph intensifies intramorph competition, thereby conferring a relative advantage to the rarer morph.}
+        }{
+          \myfig{0.8}{evolution_figures/freq_dep}{Frequency dependent selection}{fig:freq_dep}
+        }
 
         \item \textbf{Heterozygote Advantage}: Heterozygous individuals at a particular locus exhibit higher fitness than either homozygous genotype. 
 
@@ -261,9 +335,9 @@
 
         \item Adaptations frequently represent \textbf{evolutionary compromises} among conflicting selective pressures.
 
-        % figure of frigatebirds
+        \myfig{0.5}{evolution_figures/frigatebird}{Evolutionary compromise of frigatebird gular sac between sexual selection and predatory pressures}{fig:frigatebird}
 
-        \textit{For example, the inflatable red gular sac displayed by male frigatebirds enhances mating success through sexual selection but simultaneously increases exposure to predators.}
+        \textit{For example, the inflatable red gular sac displayed by male frigatebirds (\autoref{fig:frigatebird}) enhances mating success through sexual selection but simultaneously increases exposure to predators.}
 
         \item Evolutionary outcomes reflect \textbf{complex interactions} among random events, natural selection, and environmental variation.
 
@@ -335,7 +409,7 @@
 
           \item \textbf{Reduced hybrid fertility}: Hybrid offspring are partially or completely infertile.
 
-          % figure of mule
+          \myfig{0.5}{evolution_figures/mule}{Reduced hybrid fertility in mules}{fig:mule}
 
           \textit{For example, the hybrid offspring produced by crossing a male donkey with a female horse yields a mule, an organism that exhibits robustness yet remains reproductively sterile.}
 
@@ -353,7 +427,7 @@
 
       \textbf{Allopatric speciation} occurs when gene flow is interrupted by the geographic separation of a population into isolated subpopulations. 
 
-      % figure of allopatric speciation of fish
+      \myfig{0.75}{evolution_figures/allopatric}{Allopatric speciation}{fig:allopatric}
 
       \textit{For example, fish populations originally belonging to a single species may become geographically isolated in separate ponds differing in predator presence. The population subjected to predation evolves morphologies favoring rapid burst swimming, whereas the predator-free population evolves traits conducive to sustained swimming. Even when these populations are subsequently brought into geographic contact, evolved behavioral differences may constitute reproductive barriers, maintaining species boundaries.}
 
@@ -381,7 +455,7 @@
 
       \textbf{Hybrid zones} are geographic regions in which members of distinct species or divergent populations encounter one another and interbreed, producing at least some offspring of mixed ancestry. Hybrid zones may exhibit three distinct evolutionary trajectories over time.
 
-      % figure of evolutionary trajectories of hybrid zones
+      \myfig{0.95}{evolution_figures/hybrid_zones}{Evolutionary trajectories of hybrid zones}{fig:hybrid_zones}
 
       \begin{enumerate}
 
@@ -403,11 +477,11 @@
 
         \item \textbf{Punctuated Equilibrium Model}: Most morphological and genetic divergence occurs during the speciation event itself, with newly formed species exhibiting relatively little evolutionary change throughout the remainder of their existence.
 
-        % figure of pem
+        \myfig{0.5}{evolution_figures/pem}{Punctuated equilibrium model}{fig:pem}
 
-        \item\textbf{Gradualism Model}: Species diverge from one another through the slow, continuous accumulation of evolutionary changes over extended periods, producing a more uniform tempo of morphological change throughout a lineage's history.
+        \item \textbf{Gradualism Model}: Species diverge from one another through the slow, continuous accumulation of evolutionary changes over extended periods, producing a more uniform tempo of morphological change throughout a lineage's history.
 
-        % figure of gm
+        \myfig{0.5}{evolution_figures/gm}{Gradualism model}{fig:gm}
 
       \end{itemize}
 
